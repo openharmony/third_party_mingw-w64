@@ -645,18 +645,18 @@ am__lib32_libmingwex_a_SOURCES_DIST = crt/dllentry.c crt/dllmain.c \
 	misc/wmemcmp.c misc/wmemcpy.c misc/wmemmove.c misc/wmempcpy.c \
 	misc/wmemset.c stdio/mingw_pformat.h stdio/vfscanf2.S \
 	stdio/vfwscanf2.S stdio/vscanf2.S stdio/vsscanf2.S \
-	stdio/vswscanf2.S stdio/vwscanf2.S stdio/_Exit.c \
-	stdio/_findfirst64i32.c stdio/_findnext64i32.c stdio/_fstat.c \
-	stdio/_fstat64i32.c stdio/_ftime.c stdio/_getc_nolock.c \
-	stdio/_getwc_nolock.c stdio/_putc_nolock.c \
-	stdio/_putwc_nolock.c stdio/_stat.c stdio/_stat64i32.c \
-	stdio/_wfindfirst64i32.c stdio/_wfindnext64i32.c \
-	stdio/_wstat.c stdio/_wstat64i32.c stdio/asprintf.c \
-	stdio/atoll.c stdio/fgetpos64.c stdio/fopen64.c \
-	stdio/fseeko32.c stdio/fseeko64.c stdio/fsetpos64.c \
-	stdio/ftello.c stdio/ftello64.c stdio/ftruncate64.c \
-	stdio/lltoa.c stdio/lltow.c stdio/lseek64.c \
-	stdio/mingw_fprintf.c stdio/mingw_fprintfw.c \
+	stdio/vswscanf2.S stdio/vwscanf2.S stdio/strtok_r.c \
+	stdio/_Exit.c stdio/_findfirst64i32.c stdio/_findnext64i32.c \
+	stdio/_fstat.c stdio/_fstat64i32.c stdio/_ftime.c \
+	stdio/_getc_nolock.c stdio/_getwc_nolock.c \
+	stdio/_putc_nolock.c stdio/_putwc_nolock.c stdio/_stat.c \
+	stdio/_stat64i32.c stdio/_wfindfirst64i32.c \
+	stdio/_wfindnext64i32.c stdio/_wstat.c stdio/_wstat64i32.c \
+	stdio/asprintf.c stdio/atoll.c stdio/fgetpos64.c \
+	stdio/fopen64.c stdio/fseeko32.c stdio/fseeko64.c \
+	stdio/fsetpos64.c stdio/ftello.c stdio/ftello64.c \
+	stdio/ftruncate64.c stdio/lltoa.c stdio/lltow.c \
+	stdio/lseek64.c stdio/mingw_fprintf.c stdio/mingw_fprintfw.c \
 	stdio/mingw_fscanf.c stdio/mingw_fwscanf.c \
 	stdio/mingw_pformat.c stdio/mingw_pformatw.c \
 	stdio/mingw_printf.c stdio/mingw_printfw.c stdio/mingw_scanf.c \
@@ -1016,6 +1016,7 @@ am__objects_16 = crt/lib32_libmingwex_a-dllentry.$(OBJEXT) \
 	stdio/lib32_libmingwex_a-vsscanf2.$(OBJEXT) \
 	stdio/lib32_libmingwex_a-vswscanf2.$(OBJEXT) \
 	stdio/lib32_libmingwex_a-vwscanf2.$(OBJEXT) \
+	stdio/lib32_libmingwex_a-strtok_r.$(OBJEXT) \
 	stdio/lib32_libmingwex_a-_Exit.$(OBJEXT) \
 	stdio/lib32_libmingwex_a-_findfirst64i32.$(OBJEXT) \
 	stdio/lib32_libmingwex_a-_findnext64i32.$(OBJEXT) \
@@ -1778,18 +1779,18 @@ am__lib64_libmingwex_a_SOURCES_DIST = crt/dllentry.c crt/dllmain.c \
 	misc/wmemcmp.c misc/wmemcpy.c misc/wmemmove.c misc/wmempcpy.c \
 	misc/wmemset.c stdio/mingw_pformat.h stdio/vfscanf2.S \
 	stdio/vfwscanf2.S stdio/vscanf2.S stdio/vsscanf2.S \
-	stdio/vswscanf2.S stdio/vwscanf2.S stdio/_Exit.c \
-	stdio/_findfirst64i32.c stdio/_findnext64i32.c stdio/_fstat.c \
-	stdio/_fstat64i32.c stdio/_ftime.c stdio/_getc_nolock.c \
-	stdio/_getwc_nolock.c stdio/_putc_nolock.c \
-	stdio/_putwc_nolock.c stdio/_stat.c stdio/_stat64i32.c \
-	stdio/_wfindfirst64i32.c stdio/_wfindnext64i32.c \
-	stdio/_wstat.c stdio/_wstat64i32.c stdio/asprintf.c \
-	stdio/atoll.c stdio/fgetpos64.c stdio/fopen64.c \
-	stdio/fseeko32.c stdio/fseeko64.c stdio/fsetpos64.c \
-	stdio/ftello.c stdio/ftello64.c stdio/ftruncate64.c \
-	stdio/lltoa.c stdio/lltow.c stdio/lseek64.c \
-	stdio/mingw_fprintf.c stdio/mingw_fprintfw.c \
+	stdio/vswscanf2.S stdio/vwscanf2.S stdio/strtok_r.c \
+	stdio/_Exit.c stdio/_findfirst64i32.c stdio/_findnext64i32.c \
+	stdio/_fstat.c stdio/_fstat64i32.c stdio/_ftime.c \
+	stdio/_getc_nolock.c stdio/_getwc_nolock.c \
+	stdio/_putc_nolock.c stdio/_putwc_nolock.c stdio/_stat.c \
+	stdio/_stat64i32.c stdio/_wfindfirst64i32.c \
+	stdio/_wfindnext64i32.c stdio/_wstat.c stdio/_wstat64i32.c \
+	stdio/asprintf.c stdio/atoll.c stdio/fgetpos64.c \
+	stdio/fopen64.c stdio/fseeko32.c stdio/fseeko64.c \
+	stdio/fsetpos64.c stdio/ftello.c stdio/ftello64.c \
+	stdio/ftruncate64.c stdio/lltoa.c stdio/lltow.c \
+	stdio/lseek64.c stdio/mingw_fprintf.c stdio/mingw_fprintfw.c \
 	stdio/mingw_fscanf.c stdio/mingw_fwscanf.c \
 	stdio/mingw_pformat.c stdio/mingw_pformatw.c \
 	stdio/mingw_printf.c stdio/mingw_printfw.c stdio/mingw_scanf.c \
@@ -2149,6 +2150,7 @@ am__objects_48 = crt/lib64_libmingwex_a-dllentry.$(OBJEXT) \
 	stdio/lib64_libmingwex_a-vsscanf2.$(OBJEXT) \
 	stdio/lib64_libmingwex_a-vswscanf2.$(OBJEXT) \
 	stdio/lib64_libmingwex_a-vwscanf2.$(OBJEXT) \
+	stdio/lib64_libmingwex_a-strtok_r.$(OBJEXT) \
 	stdio/lib64_libmingwex_a-_Exit.$(OBJEXT) \
 	stdio/lib64_libmingwex_a-_findfirst64i32.$(OBJEXT) \
 	stdio/lib64_libmingwex_a-_findnext64i32.$(OBJEXT) \
@@ -2825,18 +2827,18 @@ am__libarm32_libmingwex_a_SOURCES_DIST = crt/dllentry.c crt/dllmain.c \
 	misc/wmemcmp.c misc/wmemcpy.c misc/wmemmove.c misc/wmempcpy.c \
 	misc/wmemset.c stdio/mingw_pformat.h stdio/vfscanf2.S \
 	stdio/vfwscanf2.S stdio/vscanf2.S stdio/vsscanf2.S \
-	stdio/vswscanf2.S stdio/vwscanf2.S stdio/_Exit.c \
-	stdio/_findfirst64i32.c stdio/_findnext64i32.c stdio/_fstat.c \
-	stdio/_fstat64i32.c stdio/_ftime.c stdio/_getc_nolock.c \
-	stdio/_getwc_nolock.c stdio/_putc_nolock.c \
-	stdio/_putwc_nolock.c stdio/_stat.c stdio/_stat64i32.c \
-	stdio/_wfindfirst64i32.c stdio/_wfindnext64i32.c \
-	stdio/_wstat.c stdio/_wstat64i32.c stdio/asprintf.c \
-	stdio/atoll.c stdio/fgetpos64.c stdio/fopen64.c \
-	stdio/fseeko32.c stdio/fseeko64.c stdio/fsetpos64.c \
-	stdio/ftello.c stdio/ftello64.c stdio/ftruncate64.c \
-	stdio/lltoa.c stdio/lltow.c stdio/lseek64.c \
-	stdio/mingw_fprintf.c stdio/mingw_fprintfw.c \
+	stdio/vswscanf2.S stdio/vwscanf2.S stdio/strtok_r.c \
+	stdio/_Exit.c stdio/_findfirst64i32.c stdio/_findnext64i32.c \
+	stdio/_fstat.c stdio/_fstat64i32.c stdio/_ftime.c \
+	stdio/_getc_nolock.c stdio/_getwc_nolock.c \
+	stdio/_putc_nolock.c stdio/_putwc_nolock.c stdio/_stat.c \
+	stdio/_stat64i32.c stdio/_wfindfirst64i32.c \
+	stdio/_wfindnext64i32.c stdio/_wstat.c stdio/_wstat64i32.c \
+	stdio/asprintf.c stdio/atoll.c stdio/fgetpos64.c \
+	stdio/fopen64.c stdio/fseeko32.c stdio/fseeko64.c \
+	stdio/fsetpos64.c stdio/ftello.c stdio/ftello64.c \
+	stdio/ftruncate64.c stdio/lltoa.c stdio/lltow.c \
+	stdio/lseek64.c stdio/mingw_fprintf.c stdio/mingw_fprintfw.c \
 	stdio/mingw_fscanf.c stdio/mingw_fwscanf.c \
 	stdio/mingw_pformat.c stdio/mingw_pformatw.c \
 	stdio/mingw_printf.c stdio/mingw_printfw.c stdio/mingw_scanf.c \
@@ -3196,6 +3198,7 @@ am__objects_76 = crt/libarm32_libmingwex_a-dllentry.$(OBJEXT) \
 	stdio/libarm32_libmingwex_a-vsscanf2.$(OBJEXT) \
 	stdio/libarm32_libmingwex_a-vswscanf2.$(OBJEXT) \
 	stdio/libarm32_libmingwex_a-vwscanf2.$(OBJEXT) \
+	stdio/libarm32_libmingwex_a-strtok_r.$(OBJEXT) \
 	stdio/libarm32_libmingwex_a-_Exit.$(OBJEXT) \
 	stdio/libarm32_libmingwex_a-_findfirst64i32.$(OBJEXT) \
 	stdio/libarm32_libmingwex_a-_findnext64i32.$(OBJEXT) \
@@ -5133,7 +5136,7 @@ src_libmingwex = \
   \
   stdio/mingw_pformat.h    \
   stdio/vfscanf2.S         stdio/vfwscanf2.S         stdio/vscanf2.S          stdio/vsscanf2.S          stdio/vswscanf2.S \
-  stdio/vwscanf2.S         \
+  stdio/vwscanf2.S         stdio/strtok_r.c          \
   stdio/_Exit.c            stdio/_findfirst64i32.c   stdio/_findnext64i32.c   stdio/_fstat.c \
   stdio/_fstat64i32.c      stdio/_ftime.c            stdio/_getc_nolock.c     stdio/_getwc_nolock.c     stdio/_putc_nolock.c    \
   stdio/_putwc_nolock.c    stdio/_stat.c             stdio/_stat64i32.c       stdio/_wfindfirst64i32.c  stdio/_wfindnext64i32.c \
@@ -8734,6 +8737,8 @@ stdio/lib32_libmingwex_a-vswscanf2.$(OBJEXT): stdio/$(am__dirstamp) \
 	stdio/$(DEPDIR)/$(am__dirstamp)
 stdio/lib32_libmingwex_a-vwscanf2.$(OBJEXT): stdio/$(am__dirstamp) \
 	stdio/$(DEPDIR)/$(am__dirstamp)
+stdio/lib32_libmingwex_a-strtok_r.$(OBJEXT): stdio/$(am__dirstamp) \
+	stdio/$(DEPDIR)/$(am__dirstamp)
 stdio/lib32_libmingwex_a-_Exit.$(OBJEXT): stdio/$(am__dirstamp) \
 	stdio/$(DEPDIR)/$(am__dirstamp)
 stdio/lib32_libmingwex_a-_findfirst64i32.$(OBJEXT):  \
@@ -10344,6 +10349,8 @@ stdio/lib64_libmingwex_a-vswscanf2.$(OBJEXT): stdio/$(am__dirstamp) \
 	stdio/$(DEPDIR)/$(am__dirstamp)
 stdio/lib64_libmingwex_a-vwscanf2.$(OBJEXT): stdio/$(am__dirstamp) \
 	stdio/$(DEPDIR)/$(am__dirstamp)
+stdio/lib64_libmingwex_a-strtok_r.$(OBJEXT): stdio/$(am__dirstamp) \
+	stdio/$(DEPDIR)/$(am__dirstamp)
 stdio/lib64_libmingwex_a-_Exit.$(OBJEXT): stdio/$(am__dirstamp) \
 	stdio/$(DEPDIR)/$(am__dirstamp)
 stdio/lib64_libmingwex_a-_findfirst64i32.$(OBJEXT):  \
@@ -11828,6 +11835,8 @@ stdio/libarm32_libmingwex_a-vsscanf2.$(OBJEXT): stdio/$(am__dirstamp) \
 stdio/libarm32_libmingwex_a-vswscanf2.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
 stdio/libarm32_libmingwex_a-vwscanf2.$(OBJEXT): stdio/$(am__dirstamp) \
+	stdio/$(DEPDIR)/$(am__dirstamp)
+stdio/libarm32_libmingwex_a-strtok_r.$(OBJEXT): stdio/$(am__dirstamp) \
 	stdio/$(DEPDIR)/$(am__dirstamp)
 stdio/libarm32_libmingwex_a-_Exit.$(OBJEXT): stdio/$(am__dirstamp) \
 	stdio/$(DEPDIR)/$(am__dirstamp)
@@ -15144,6 +15153,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib32_libmingwex_a-snprintf.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib32_libmingwex_a-snwprintf.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib32_libmingwex_a-strtof.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib32_libmingwex_a-strtok_r.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib32_libmingwex_a-truncate.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib32_libmingwex_a-ulltoa.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib32_libmingwex_a-ulltow.Po@am__quote@
@@ -15224,6 +15234,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib64_libmingwex_a-snprintf.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib64_libmingwex_a-snwprintf.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib64_libmingwex_a-strtof.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib64_libmingwex_a-strtok_r.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib64_libmingwex_a-truncate.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib64_libmingwex_a-ulltoa.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib64_libmingwex_a-ulltow.Po@am__quote@
@@ -15304,6 +15315,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/libarm32_libmingwex_a-snprintf.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/libarm32_libmingwex_a-snwprintf.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/libarm32_libmingwex_a-strtof.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/libarm32_libmingwex_a-strtok_r.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/libarm32_libmingwex_a-truncate.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/libarm32_libmingwex_a-ulltoa.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/libarm32_libmingwex_a-ulltow.Po@am__quote@
@@ -23439,6 +23451,20 @@ misc/lib32_libmingwex_a-wmemset.obj: misc/wmemset.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/wmemset.c' object='misc/lib32_libmingwex_a-wmemset.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib32_libmingwex_a-wmemset.obj `if test -f 'misc/wmemset.c'; then $(CYGPATH_W) 'misc/wmemset.c'; else $(CYGPATH_W) '$(srcdir)/misc/wmemset.c'; fi`
+
+stdio/lib32_libmingwex_a-strtok_r.o: stdio/strtok_r.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/lib32_libmingwex_a-strtok_r.o -MD -MP -MF stdio/$(DEPDIR)/lib32_libmingwex_a-strtok_r.Tpo -c -o stdio/lib32_libmingwex_a-strtok_r.o `test -f 'stdio/strtok_r.c' || echo '$(srcdir)/'`stdio/strtok_r.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) stdio/$(DEPDIR)/lib32_libmingwex_a-strtok_r.Tpo stdio/$(DEPDIR)/lib32_libmingwex_a-strtok_r.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/strtok_r.c' object='stdio/lib32_libmingwex_a-strtok_r.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/lib32_libmingwex_a-strtok_r.o `test -f 'stdio/strtok_r.c' || echo '$(srcdir)/'`stdio/strtok_r.c
+
+stdio/lib32_libmingwex_a-strtok_r.obj: stdio/strtok_r.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/lib32_libmingwex_a-strtok_r.obj -MD -MP -MF stdio/$(DEPDIR)/lib32_libmingwex_a-strtok_r.Tpo -c -o stdio/lib32_libmingwex_a-strtok_r.obj `if test -f 'stdio/strtok_r.c'; then $(CYGPATH_W) 'stdio/strtok_r.c'; else $(CYGPATH_W) '$(srcdir)/stdio/strtok_r.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) stdio/$(DEPDIR)/lib32_libmingwex_a-strtok_r.Tpo stdio/$(DEPDIR)/lib32_libmingwex_a-strtok_r.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/strtok_r.c' object='stdio/lib32_libmingwex_a-strtok_r.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/lib32_libmingwex_a-strtok_r.obj `if test -f 'stdio/strtok_r.c'; then $(CYGPATH_W) 'stdio/strtok_r.c'; else $(CYGPATH_W) '$(srcdir)/stdio/strtok_r.c'; fi`
 
 stdio/lib32_libmingwex_a-_Exit.o: stdio/_Exit.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/lib32_libmingwex_a-_Exit.o -MD -MP -MF stdio/$(DEPDIR)/lib32_libmingwex_a-_Exit.Tpo -c -o stdio/lib32_libmingwex_a-_Exit.o `test -f 'stdio/_Exit.c' || echo '$(srcdir)/'`stdio/_Exit.c
@@ -32526,6 +32552,20 @@ misc/lib64_libmingwex_a-wmemset.obj: misc/wmemset.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib64_libmingwex_a-wmemset.obj `if test -f 'misc/wmemset.c'; then $(CYGPATH_W) 'misc/wmemset.c'; else $(CYGPATH_W) '$(srcdir)/misc/wmemset.c'; fi`
 
+stdio/lib64_libmingwex_a-strtok_r.o: stdio/strtok_r.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/lib64_libmingwex_a-strtok_r.o -MD -MP -MF stdio/$(DEPDIR)/lib64_libmingwex_a-strtok_r.Tpo -c -o stdio/lib64_libmingwex_a-strtok_r.o `test -f 'stdio/strtok_r.c' || echo '$(srcdir)/'`stdio/strtok_r.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) stdio/$(DEPDIR)/lib64_libmingwex_a-strtok_r.Tpo stdio/$(DEPDIR)/lib64_libmingwex_a-strtok_r.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/strtok_r.c' object='stdio/lib64_libmingwex_a-strtok_r.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/lib64_libmingwex_a-strtok_r.o `test -f 'stdio/strtok_r.c' || echo '$(srcdir)/'`stdio/strtok_r.c
+
+stdio/lib64_libmingwex_a-strtok_r.obj: stdio/strtok_r.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/lib64_libmingwex_a-strtok_r.obj -MD -MP -MF stdio/$(DEPDIR)/lib64_libmingwex_a-strtok_r.Tpo -c -o stdio/lib64_libmingwex_a-strtok_r.obj `if test -f 'stdio/strtok_r.c'; then $(CYGPATH_W) 'stdio/strtok_r.c'; else $(CYGPATH_W) '$(srcdir)/stdio/strtok_r.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) stdio/$(DEPDIR)/lib64_libmingwex_a-strtok_r.Tpo stdio/$(DEPDIR)/lib64_libmingwex_a-strtok_r.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/strtok_r.c' object='stdio/lib64_libmingwex_a-strtok_r.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/lib64_libmingwex_a-strtok_r.obj `if test -f 'stdio/strtok_r.c'; then $(CYGPATH_W) 'stdio/strtok_r.c'; else $(CYGPATH_W) '$(srcdir)/stdio/strtok_r.c'; fi`
+
 stdio/lib64_libmingwex_a-_Exit.o: stdio/_Exit.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/lib64_libmingwex_a-_Exit.o -MD -MP -MF stdio/$(DEPDIR)/lib64_libmingwex_a-_Exit.Tpo -c -o stdio/lib64_libmingwex_a-_Exit.o `test -f 'stdio/_Exit.c' || echo '$(srcdir)/'`stdio/_Exit.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) stdio/$(DEPDIR)/lib64_libmingwex_a-_Exit.Tpo stdio/$(DEPDIR)/lib64_libmingwex_a-_Exit.Po
@@ -41023,6 +41063,20 @@ misc/libarm32_libmingwex_a-wmemset.obj: misc/wmemset.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/wmemset.c' object='misc/libarm32_libmingwex_a-wmemset.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/libarm32_libmingwex_a-wmemset.obj `if test -f 'misc/wmemset.c'; then $(CYGPATH_W) 'misc/wmemset.c'; else $(CYGPATH_W) '$(srcdir)/misc/wmemset.c'; fi`
+
+stdio/libarm32_libmingwex_a-strtok_r.o: stdio/strtok_r.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/libarm32_libmingwex_a-strtok_r.o -MD -MP -MF stdio/$(DEPDIR)/libarm32_libmingwex_a-strtok_r.Tpo -c -o stdio/libarm32_libmingwex_a-strtok_r.o `test -f 'stdio/strtok_r.c' || echo '$(srcdir)/'`stdio/strtok_r.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) stdio/$(DEPDIR)/libarm32_libmingwex_a-strtok_r.Tpo stdio/$(DEPDIR)/libarm32_libmingwex_a-strtok_r.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/strtok_r.c' object='stdio/libarm32_libmingwex_a-strtok_r.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/libarm32_libmingwex_a-strtok_r.o `test -f 'stdio/strtok_r.c' || echo '$(srcdir)/'`stdio/strtok_r.c
+
+stdio/libarm32_libmingwex_a-strtok_r.obj: stdio/strtok_r.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/libarm32_libmingwex_a-strtok_r.obj -MD -MP -MF stdio/$(DEPDIR)/libarm32_libmingwex_a-strtok_r.Tpo -c -o stdio/libarm32_libmingwex_a-strtok_r.obj `if test -f 'stdio/strtok_r.c'; then $(CYGPATH_W) 'stdio/strtok_r.c'; else $(CYGPATH_W) '$(srcdir)/stdio/strtok_r.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) stdio/$(DEPDIR)/libarm32_libmingwex_a-strtok_r.Tpo stdio/$(DEPDIR)/libarm32_libmingwex_a-strtok_r.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/strtok_r.c' object='stdio/libarm32_libmingwex_a-strtok_r.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/libarm32_libmingwex_a-strtok_r.obj `if test -f 'stdio/strtok_r.c'; then $(CYGPATH_W) 'stdio/strtok_r.c'; else $(CYGPATH_W) '$(srcdir)/stdio/strtok_r.c'; fi`
 
 stdio/libarm32_libmingwex_a-_Exit.o: stdio/_Exit.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/libarm32_libmingwex_a-_Exit.o -MD -MP -MF stdio/$(DEPDIR)/libarm32_libmingwex_a-_Exit.Tpo -c -o stdio/libarm32_libmingwex_a-_Exit.o `test -f 'stdio/_Exit.c' || echo '$(srcdir)/'`stdio/_Exit.c
