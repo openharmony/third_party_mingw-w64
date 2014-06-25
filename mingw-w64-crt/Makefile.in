@@ -587,39 +587,38 @@ am__lib32_libmingwex_a_SOURCES_DIST = crt/dllentry.c crt/dllmain.c \
 	math/atan2l.c math/atanf.c math/atanh.c math/atanhf.c \
 	math/atanhl.c math/atanl.c math/cbrt.c math/cbrtf.c \
 	math/cbrtl.c math/cephes_emath.c math/copysign.c \
-	math/copysignf.c math/cos.c math/cosf.c math/coshf.c \
-	math/coshl.c math/cosl.c math/cossin.c math/erfl.c math/exp.c \
-	math/expf.c math/expl.c math/expm1.c math/expm1f.c \
-	math/expm1l.c math/fabs.c math/fabsf.c math/fabsl.c \
-	math/fdim.c math/fdimf.c math/fdiml.c math/fmal.c math/fmax.c \
-	math/fmaxf.c math/fmaxl.c math/fmin.c math/fminf.c \
-	math/fminl.c math/fmod.c math/fmodf.c math/fmodl.c \
-	math/fp_consts.c math/fp_constsf.c math/fp_constsl.c \
-	math/fpclassify.c math/fpclassifyf.c math/fpclassifyl.c \
-	math/frexpf.c math/fucom.c math/hypotf.c math/hypotl.c \
-	math/isnan.c math/isnanf.c math/isnanl.c math/ldexp.c \
-	math/ldexpf.c math/ldexpl.c math/lgamma.c math/lgammaf.c \
-	math/lgammal.c math/llrint.c math/signgam.c math/llrintf.c \
-	math/llrintl.c math/llround.c math/llroundf.c math/llroundl.c \
-	math/log.c math/log10f.c math/logb.c math/logbf.c math/logbl.c \
-	math/logf.c math/logl.c math/lrint.c math/lrintf.c \
-	math/lrintl.c math/lround.c math/lroundf.c math/lroundl.c \
-	math/modf.c math/modff.c math/modfl.c math/nextafterf.c \
-	math/nextafterl.c math/nexttoward.c math/nexttowardf.c \
-	math/pow.c math/powf.c math/powi.c math/powif.c math/powil.c \
-	math/powl.c math/rint.c math/rintf.c math/rintl.c math/round.c \
-	math/roundf.c math/roundl.c math/s_erf.c math/sf_erf.c \
-	math/signbit.c math/signbitf.c math/signbitl.c math/sin.c \
-	math/sinf.c math/sinhf.c math/sinhl.c math/sinl.c math/sqrt.c \
-	math/sqrtf.c math/sqrtl.c math/tanf.c math/tanhf.c \
-	math/tanhl.c math/tgamma.c math/tgammaf.c math/tgammal.c \
-	math/truncl.c math/acosh.def.h math/cos.def.h math/exp.def.h \
-	math/expm1.def.h math/log.def.h math/pow.def.h math/powi.def.h \
-	math/sin.def.h math/sqrt.def.h math/cephes_emath.h \
-	math/cephes_mconf.h math/fastmath.h math/fp_consts.h \
-	math/abs64.c misc/mb_wc_common.h misc/mingw_getsp.S \
-	misc/alarm.c misc/basename.c misc/btowc.c misc/delay-f.c \
-	misc/delay-n.c misc/delayimp.c misc/difftime.c \
+	math/copysignf.c math/cos.c math/coshf.c math/coshl.c \
+	math/cosl.c math/cossin.c math/erfl.c math/exp.c math/expf.c \
+	math/expl.c math/expm1.c math/expm1f.c math/expm1l.c \
+	math/fabs.c math/fabsf.c math/fabsl.c math/fdim.c math/fdimf.c \
+	math/fdiml.c math/fmal.c math/fmax.c math/fmaxf.c math/fmaxl.c \
+	math/fmin.c math/fminf.c math/fminl.c math/fmod.c math/fmodf.c \
+	math/fmodl.c math/fp_consts.c math/fp_constsf.c \
+	math/fp_constsl.c math/fpclassify.c math/fpclassifyf.c \
+	math/fpclassifyl.c math/frexpf.c math/fucom.c math/hypotf.c \
+	math/hypotl.c math/isnan.c math/isnanf.c math/isnanl.c \
+	math/ldexp.c math/ldexpf.c math/ldexpl.c math/lgamma.c \
+	math/lgammaf.c math/lgammal.c math/llrint.c math/signgam.c \
+	math/llrintf.c math/llrintl.c math/llround.c math/llroundf.c \
+	math/llroundl.c math/log.c math/log10f.c math/logb.c \
+	math/logbf.c math/logbl.c math/logf.c math/logl.c math/lrint.c \
+	math/lrintf.c math/lrintl.c math/lround.c math/lroundf.c \
+	math/lroundl.c math/modf.c math/modff.c math/modfl.c \
+	math/nextafterf.c math/nextafterl.c math/nexttoward.c \
+	math/nexttowardf.c math/pow.c math/powf.c math/powi.c \
+	math/powif.c math/powil.c math/powl.c math/rint.c math/rintf.c \
+	math/rintl.c math/round.c math/roundf.c math/roundl.c \
+	math/s_erf.c math/sf_erf.c math/signbit.c math/signbitf.c \
+	math/signbitl.c math/sin.c math/sinf.c math/sinhf.c \
+	math/sinhl.c math/sinl.c math/sqrt.c math/sqrtf.c math/sqrtl.c \
+	math/tanf.c math/tanhf.c math/tanhl.c math/tgamma.c \
+	math/tgammaf.c math/tgammal.c math/truncl.c math/acosh.def.h \
+	math/cos.def.h math/exp.def.h math/expm1.def.h math/log.def.h \
+	math/pow.def.h math/powi.def.h math/sin.def.h math/sqrt.def.h \
+	math/cephes_emath.h math/cephes_mconf.h math/fastmath.h \
+	math/fp_consts.h math/abs64.c misc/mb_wc_common.h \
+	misc/mingw_getsp.S misc/alarm.c misc/basename.c misc/btowc.c \
+	misc/delay-f.c misc/delay-n.c misc/delayimp.c misc/difftime.c \
 	misc/difftime32.c misc/difftime64.c misc/dirent.c \
 	misc/dirname.c misc/execv.c misc/execve.c misc/execvp.c \
 	misc/execvpe.c misc/feclearexcept.c misc/fegetenv.c \
@@ -674,7 +673,7 @@ am__lib32_libmingwex_a_SOURCES_DIST = crt/dllentry.c crt/dllmain.c \
 	stdio/vscanf.c stdio/vsnprintf.c stdio/vsnprintf_s.c \
 	stdio/vsnwprintf.c stdio/vsscanf.c stdio/vswscanf.c \
 	stdio/vwscanf.c stdio/wtoll.c stdio/mingw_asprintf.c \
-	stdio/mingw_vasprintf.c math/DFP/__fpclassifyd32.c \
+	stdio/mingw_vasprintf.c math/cosf.c math/DFP/__fpclassifyd32.c \
 	math/DFP/__fpclassifyd64.c math/DFP/__fpclassifyd128.c \
 	math/DFP/__isnand32.c math/DFP/__isnand64.c \
 	math/DFP/__isnand128.c math/DFP/__signbitd32.c \
@@ -817,7 +816,6 @@ am__objects_16 = crt/lib32_libmingwex_a-dllentry.$(OBJEXT) \
 	math/lib32_libmingwex_a-copysign.$(OBJEXT) \
 	math/lib32_libmingwex_a-copysignf.$(OBJEXT) \
 	math/lib32_libmingwex_a-cos.$(OBJEXT) \
-	math/lib32_libmingwex_a-cosf.$(OBJEXT) \
 	math/lib32_libmingwex_a-coshf.$(OBJEXT) \
 	math/lib32_libmingwex_a-coshl.$(OBJEXT) \
 	math/lib32_libmingwex_a-cosl.$(OBJEXT) \
@@ -1091,7 +1089,8 @@ am__objects_16 = crt/lib32_libmingwex_a-dllentry.$(OBJEXT) \
 	stdio/lib32_libmingwex_a-wtoll.$(OBJEXT) \
 	stdio/lib32_libmingwex_a-mingw_asprintf.$(OBJEXT) \
 	stdio/lib32_libmingwex_a-mingw_vasprintf.$(OBJEXT)
-@ENABLE_DFP_TRUE@am__objects_17 = math/DFP/lib32_libmingwex_a-__fpclassifyd32.$(OBJEXT) \
+am__objects_17 = math/lib32_libmingwex_a-cosf.$(OBJEXT)
+@ENABLE_DFP_TRUE@am__objects_18 = math/DFP/lib32_libmingwex_a-__fpclassifyd32.$(OBJEXT) \
 @ENABLE_DFP_TRUE@	math/DFP/lib32_libmingwex_a-__fpclassifyd64.$(OBJEXT) \
 @ENABLE_DFP_TRUE@	math/DFP/lib32_libmingwex_a-__fpclassifyd128.$(OBJEXT) \
 @ENABLE_DFP_TRUE@	math/DFP/lib32_libmingwex_a-__isnand32.$(OBJEXT) \
@@ -1104,21 +1103,22 @@ am__objects_16 = crt/lib32_libmingwex_a-dllentry.$(OBJEXT) \
 @ENABLE_DFP_TRUE@	math/DFP/lib32_libmingwex_a-isinfd64.$(OBJEXT) \
 @ENABLE_DFP_TRUE@	math/DFP/lib32_libmingwex_a-isinfd128.$(OBJEXT)
 @LIB32_TRUE@@W32API_FALSE@am_lib32_libmingwex_a_OBJECTS =  \
-@LIB32_TRUE@@W32API_FALSE@	$(am__objects_16) $(am__objects_17)
+@LIB32_TRUE@@W32API_FALSE@	$(am__objects_16) $(am__objects_17) \
+@LIB32_TRUE@@W32API_FALSE@	$(am__objects_18)
 lib32_libmingwex_a_OBJECTS = $(am_lib32_libmingwex_a_OBJECTS)
 lib32_libmingwthrd_a_AR = $(AR) $(ARFLAGS)
 lib32_libmingwthrd_a_LIBADD =
 am__lib32_libmingwthrd_a_SOURCES_DIST = libsrc/mingwthrd_mt.c
-am__objects_18 = libsrc/lib32_libmingwthrd_a-mingwthrd_mt.$(OBJEXT)
+am__objects_19 = libsrc/lib32_libmingwthrd_a-mingwthrd_mt.$(OBJEXT)
 @LIB32_TRUE@@W32API_FALSE@am_lib32_libmingwthrd_a_OBJECTS =  \
-@LIB32_TRUE@@W32API_FALSE@	$(am__objects_18)
+@LIB32_TRUE@@W32API_FALSE@	$(am__objects_19)
 lib32_libmingwthrd_a_OBJECTS = $(am_lib32_libmingwthrd_a_OBJECTS)
 lib32_libmoldname_a_AR = $(AR) $(ARFLAGS)
 lib32_libmoldname_a_LIBADD =
 am__lib32_libmoldname_a_SOURCES_DIST = _libm_dummy.c
-am__objects_19 = lib32_libmoldname_a-_libm_dummy.$(OBJEXT)
+am__objects_20 = lib32_libmoldname_a-_libm_dummy.$(OBJEXT)
 @LIB32_TRUE@@W32API_FALSE@am_lib32_libmoldname_a_OBJECTS =  \
-@LIB32_TRUE@@W32API_FALSE@	$(am__objects_19)
+@LIB32_TRUE@@W32API_FALSE@	$(am__objects_20)
 lib32_libmoldname_a_OBJECTS = $(am_lib32_libmoldname_a_OBJECTS)
 lib32_libmsvcrt_a_LIBADD =
 am__lib32_libmsvcrt_a_SOURCES_DIST = misc/invalid_parameter_handler.c \
@@ -1137,7 +1137,7 @@ am__lib32_libmsvcrt_a_SOURCES_DIST = misc/invalid_parameter_handler.c \
 	secapi/asctime_s.c secapi/memcpy_s.c secapi/rand_s.c \
 	secapi/sprintf_s.c secapi/strerror_s.c secapi/vsprintf_s.c \
 	secapi/wmemcpy_s.c misc/lc_locale_func.c lib32/msvcrt.def.in
-am__objects_20 =  \
+am__objects_21 =  \
 	misc/lib32_libmsvcrt_a-invalid_parameter_handler.$(OBJEXT) \
 	misc/lib32_libmsvcrt_a-output_format.$(OBJEXT) \
 	misc/lib32_libmsvcrt_a-purecall.$(OBJEXT) \
@@ -1177,48 +1177,48 @@ am__objects_20 =  \
 	secapi/lib32_libmsvcrt_a-strerror_s.$(OBJEXT) \
 	secapi/lib32_libmsvcrt_a-vsprintf_s.$(OBJEXT) \
 	secapi/lib32_libmsvcrt_a-wmemcpy_s.$(OBJEXT)
-am__objects_21 = $(am__objects_20) \
+am__objects_22 = $(am__objects_21) \
 	misc/lib32_libmsvcrt_a-lc_locale_func.$(OBJEXT)
 @LIB32_TRUE@@W32API_FALSE@am_lib32_libmsvcrt_a_OBJECTS =  \
-@LIB32_TRUE@@W32API_FALSE@	$(am__objects_21)
+@LIB32_TRUE@@W32API_FALSE@	$(am__objects_22)
 lib32_libmsvcrt_a_OBJECTS = $(am_lib32_libmsvcrt_a_OBJECTS)
 lib32_libportabledeviceguids_a_AR = $(AR) $(ARFLAGS)
 lib32_libportabledeviceguids_a_LIBADD =
 am__lib32_libportabledeviceguids_a_SOURCES_DIST =  \
 	libsrc/portabledeviceguids.c
-am__objects_22 = libsrc/lib32_libportabledeviceguids_a-portabledeviceguids.$(OBJEXT)
+am__objects_23 = libsrc/lib32_libportabledeviceguids_a-portabledeviceguids.$(OBJEXT)
 @LIB32_TRUE@am_lib32_libportabledeviceguids_a_OBJECTS =  \
-@LIB32_TRUE@	$(am__objects_22)
+@LIB32_TRUE@	$(am__objects_23)
 lib32_libportabledeviceguids_a_OBJECTS =  \
 	$(am_lib32_libportabledeviceguids_a_OBJECTS)
 lib32_libscrnsave_a_AR = $(AR) $(ARFLAGS)
 lib32_libscrnsave_a_LIBADD =
 am__lib32_libscrnsave_a_SOURCES_DIST = libsrc/scrnsave.c
-am__objects_23 = libsrc/lib32_libscrnsave_a-scrnsave.$(OBJEXT)
-@LIB32_TRUE@am_lib32_libscrnsave_a_OBJECTS = $(am__objects_23)
+am__objects_24 = libsrc/lib32_libscrnsave_a-scrnsave.$(OBJEXT)
+@LIB32_TRUE@am_lib32_libscrnsave_a_OBJECTS = $(am__objects_24)
 lib32_libscrnsave_a_OBJECTS = $(am_lib32_libscrnsave_a_OBJECTS)
 lib32_libscrnsavw_a_AR = $(AR) $(ARFLAGS)
 lib32_libscrnsavw_a_LIBADD =
 am__lib32_libscrnsavw_a_SOURCES_DIST = libsrc/scrnsave.c
-am__objects_24 = libsrc/lib32_libscrnsavw_a-scrnsave.$(OBJEXT)
-@LIB32_TRUE@am_lib32_libscrnsavw_a_OBJECTS = $(am__objects_24)
+am__objects_25 = libsrc/lib32_libscrnsavw_a-scrnsave.$(OBJEXT)
+@LIB32_TRUE@am_lib32_libscrnsavw_a_OBJECTS = $(am__objects_25)
 lib32_libscrnsavw_a_OBJECTS = $(am_lib32_libscrnsavw_a_OBJECTS)
 lib32_libsensorsapi_a_AR = $(AR) $(ARFLAGS)
 lib32_libsensorsapi_a_LIBADD =
 am__lib32_libsensorsapi_a_SOURCES_DIST = libsrc/sensorsapi.c
-am__objects_25 = libsrc/lib32_libsensorsapi_a-sensorsapi.$(OBJEXT)
-@LIB32_TRUE@am_lib32_libsensorsapi_a_OBJECTS = $(am__objects_25)
+am__objects_26 = libsrc/lib32_libsensorsapi_a-sensorsapi.$(OBJEXT)
+@LIB32_TRUE@am_lib32_libsensorsapi_a_OBJECTS = $(am__objects_26)
 lib32_libsensorsapi_a_OBJECTS = $(am_lib32_libsensorsapi_a_OBJECTS)
 lib32_libshell32_a_LIBADD =
 am__lib32_libshell32_a_SOURCES_DIST = libsrc/shell32.c
-am__objects_26 = libsrc/lib32_libshell32_a-shell32.$(OBJEXT)
-@LIB32_TRUE@am_lib32_libshell32_a_OBJECTS = $(am__objects_26)
+am__objects_27 = libsrc/lib32_libshell32_a-shell32.$(OBJEXT)
+@LIB32_TRUE@am_lib32_libshell32_a_OBJECTS = $(am__objects_27)
 lib32_libshell32_a_OBJECTS = $(am_lib32_libshell32_a_OBJECTS)
 lib32_libstrmiids_a_AR = $(AR) $(ARFLAGS)
 lib32_libstrmiids_a_LIBADD =
 am__lib32_libstrmiids_a_SOURCES_DIST = libsrc/strmiids.c
-am__objects_27 = libsrc/lib32_libstrmiids_a-strmiids.$(OBJEXT)
-@LIB32_TRUE@am_lib32_libstrmiids_a_OBJECTS = $(am__objects_27)
+am__objects_28 = libsrc/lib32_libstrmiids_a-strmiids.$(OBJEXT)
+@LIB32_TRUE@am_lib32_libstrmiids_a_OBJECTS = $(am__objects_28)
 lib32_libstrmiids_a_OBJECTS = $(am_lib32_libstrmiids_a_OBJECTS)
 lib32_libuuid_a_AR = $(AR) $(ARFLAGS)
 lib32_libuuid_a_LIBADD =
@@ -1239,7 +1239,7 @@ am__lib32_libuuid_a_SOURCES_DIST = libsrc/ativscp-uuid.c \
 	libsrc/power-uuid.c libsrc/powrprof-uuid.c \
 	libsrc/usbcamdi-uuid.c libsrc/usbiodef-uuid.c libsrc/uuid.c \
 	libsrc/vds-uuid.c libsrc/virtdisk-uuid.c libsrc/wia-uuid.c
-am__objects_28 = libsrc/lib32_libuuid_a-ativscp-uuid.$(OBJEXT) \
+am__objects_29 = libsrc/lib32_libuuid_a-ativscp-uuid.$(OBJEXT) \
 	libsrc/lib32_libuuid_a-atsmedia-uuid.$(OBJEXT) \
 	libsrc/lib32_libuuid_a-bth-uuid.$(OBJEXT) \
 	libsrc/lib32_libuuid_a-cguid-uuid.$(OBJEXT) \
@@ -1281,28 +1281,28 @@ am__objects_28 = libsrc/lib32_libuuid_a-ativscp-uuid.$(OBJEXT) \
 	libsrc/lib32_libuuid_a-vds-uuid.$(OBJEXT) \
 	libsrc/lib32_libuuid_a-virtdisk-uuid.$(OBJEXT) \
 	libsrc/lib32_libuuid_a-wia-uuid.$(OBJEXT)
-@LIB32_TRUE@am_lib32_libuuid_a_OBJECTS = $(am__objects_28)
+@LIB32_TRUE@am_lib32_libuuid_a_OBJECTS = $(am__objects_29)
 lib32_libuuid_a_OBJECTS = $(am_lib32_libuuid_a_OBJECTS)
 lib32_libwbemuuid_a_AR = $(AR) $(ARFLAGS)
 lib32_libwbemuuid_a_LIBADD =
 am__lib32_libwbemuuid_a_SOURCES_DIST = libsrc/wbemuuid.c
-am__objects_29 = libsrc/lib32_libwbemuuid_a-wbemuuid.$(OBJEXT)
-@LIB32_TRUE@am_lib32_libwbemuuid_a_OBJECTS = $(am__objects_29)
+am__objects_30 = libsrc/lib32_libwbemuuid_a-wbemuuid.$(OBJEXT)
+@LIB32_TRUE@am_lib32_libwbemuuid_a_OBJECTS = $(am__objects_30)
 lib32_libwbemuuid_a_OBJECTS = $(am_lib32_libwbemuuid_a_OBJECTS)
 lib32_libwindowscodecs_a_AR = $(AR) $(ARFLAGS)
 lib32_libwindowscodecs_a_LIBADD =
 am__lib32_libwindowscodecs_a_SOURCES_DIST = libsrc/windowscodecs.c
-am__objects_30 =  \
+am__objects_31 =  \
 	libsrc/lib32_libwindowscodecs_a-windowscodecs.$(OBJEXT)
-@LIB32_TRUE@am_lib32_libwindowscodecs_a_OBJECTS = $(am__objects_30)
+@LIB32_TRUE@am_lib32_libwindowscodecs_a_OBJECTS = $(am__objects_31)
 lib32_libwindowscodecs_a_OBJECTS =  \
 	$(am_lib32_libwindowscodecs_a_OBJECTS)
 lib32_libwmcodecdspuuid_a_AR = $(AR) $(ARFLAGS)
 lib32_libwmcodecdspuuid_a_LIBADD =
 am__lib32_libwmcodecdspuuid_a_SOURCES_DIST = libsrc/wmcodecdspuuid.c
-am__objects_31 =  \
+am__objects_32 =  \
 	libsrc/lib32_libwmcodecdspuuid_a-wmcodecdspuuid.$(OBJEXT)
-@LIB32_TRUE@am_lib32_libwmcodecdspuuid_a_OBJECTS = $(am__objects_31)
+@LIB32_TRUE@am_lib32_libwmcodecdspuuid_a_OBJECTS = $(am__objects_32)
 lib32_libwmcodecdspuuid_a_OBJECTS =  \
 	$(am_lib32_libwmcodecdspuuid_a_OBJECTS)
 lib32_libws2_32_a_LIBADD =
@@ -1340,7 +1340,7 @@ am__lib32_libws2_32_a_SOURCES_DIST = libsrc/ws2_32.c \
 	libsrc/wspiapi/WspiapiGetAddrInfo.c \
 	libsrc/wspiapi/WspiapiGetNameInfo.c \
 	libsrc/wspiapi/WspiapiFreeAddrInfo.c
-am__objects_32 = libsrc/lib32_libws2_32_a-ws2_32.$(OBJEXT) \
+am__objects_33 = libsrc/lib32_libws2_32_a-ws2_32.$(OBJEXT) \
 	libsrc/ws2tcpip/lib32_libws2_32_a-in6_addr_equal.$(OBJEXT) \
 	libsrc/ws2tcpip/lib32_libws2_32_a-in6addr_isany.$(OBJEXT) \
 	libsrc/ws2tcpip/lib32_libws2_32_a-in6addr_isloopback.$(OBJEXT) \
@@ -1375,7 +1375,7 @@ am__objects_32 = libsrc/lib32_libws2_32_a-ws2_32.$(OBJEXT) \
 	libsrc/wspiapi/lib32_libws2_32_a-WspiapiGetAddrInfo.$(OBJEXT) \
 	libsrc/wspiapi/lib32_libws2_32_a-WspiapiGetNameInfo.$(OBJEXT) \
 	libsrc/wspiapi/lib32_libws2_32_a-WspiapiFreeAddrInfo.$(OBJEXT)
-@LIB32_TRUE@am_lib32_libws2_32_a_OBJECTS = $(am__objects_32)
+@LIB32_TRUE@am_lib32_libws2_32_a_OBJECTS = $(am__objects_33)
 lib32_libws2_32_a_OBJECTS = $(am_lib32_libws2_32_a_OBJECTS)
 lib64_libdelayimp_a_AR = $(AR) $(ARFLAGS)
 lib64_libdelayimp_a_LIBADD =
@@ -1385,54 +1385,54 @@ lib64_libdinput_a_LIBADD =
 am__lib64_libdinput_a_SOURCES_DIST = libsrc/dinput_kbd.c \
 	libsrc/dinput_joy.c libsrc/dinput_joy2.c libsrc/dinput_mouse.c \
 	libsrc/dinput_mouse2.c
-am__objects_33 = libsrc/lib64_libdinput_a-dinput_kbd.$(OBJEXT) \
+am__objects_34 = libsrc/lib64_libdinput_a-dinput_kbd.$(OBJEXT) \
 	libsrc/lib64_libdinput_a-dinput_joy.$(OBJEXT) \
 	libsrc/lib64_libdinput_a-dinput_joy2.$(OBJEXT) \
 	libsrc/lib64_libdinput_a-dinput_mouse.$(OBJEXT) \
 	libsrc/lib64_libdinput_a-dinput_mouse2.$(OBJEXT)
-@LIB64_TRUE@am_lib64_libdinput_a_OBJECTS = $(am__objects_33)
+@LIB64_TRUE@am_lib64_libdinput_a_OBJECTS = $(am__objects_34)
 lib64_libdinput_a_OBJECTS = $(am_lib64_libdinput_a_OBJECTS)
 lib64_libdinput8_a_LIBADD =
 am__lib64_libdinput8_a_SOURCES_DIST = libsrc/dinput_private.h \
 	libsrc/dinput_joy.c libsrc/dinput_joy2.c libsrc/dinput_mouse.c \
 	libsrc/dinput_mouse2.c libsrc/dinput_kbd.c
-am__objects_34 = libsrc/lib64_libdinput8_a-dinput_joy.$(OBJEXT) \
+am__objects_35 = libsrc/lib64_libdinput8_a-dinput_joy.$(OBJEXT) \
 	libsrc/lib64_libdinput8_a-dinput_joy2.$(OBJEXT) \
 	libsrc/lib64_libdinput8_a-dinput_mouse.$(OBJEXT) \
 	libsrc/lib64_libdinput8_a-dinput_mouse2.$(OBJEXT) \
 	libsrc/lib64_libdinput8_a-dinput_kbd.$(OBJEXT)
-@LIB64_TRUE@am_lib64_libdinput8_a_OBJECTS = $(am__objects_34)
+@LIB64_TRUE@am_lib64_libdinput8_a_OBJECTS = $(am__objects_35)
 lib64_libdinput8_a_OBJECTS = $(am_lib64_libdinput8_a_OBJECTS)
 lib64_libdmoguids_a_AR = $(AR) $(ARFLAGS)
 lib64_libdmoguids_a_LIBADD =
 am__lib64_libdmoguids_a_SOURCES_DIST = libsrc/dmoguids.c
-am__objects_35 = libsrc/lib64_libdmoguids_a-dmoguids.$(OBJEXT)
-@LIB64_TRUE@am_lib64_libdmoguids_a_OBJECTS = $(am__objects_35)
+am__objects_36 = libsrc/lib64_libdmoguids_a-dmoguids.$(OBJEXT)
+@LIB64_TRUE@am_lib64_libdmoguids_a_OBJECTS = $(am__objects_36)
 lib64_libdmoguids_a_OBJECTS = $(am_lib64_libdmoguids_a_OBJECTS)
 lib64_libdxerr8_a_AR = $(AR) $(ARFLAGS)
 lib64_libdxerr8_a_LIBADD =
 am__lib64_libdxerr8_a_SOURCES_DIST = libsrc/dxerr8.c libsrc/dxerr8w.c
-am__objects_36 = libsrc/lib64_libdxerr8_a-dxerr8.$(OBJEXT) \
+am__objects_37 = libsrc/lib64_libdxerr8_a-dxerr8.$(OBJEXT) \
 	libsrc/lib64_libdxerr8_a-dxerr8w.$(OBJEXT)
-@LIB64_TRUE@am_lib64_libdxerr8_a_OBJECTS = $(am__objects_36)
+@LIB64_TRUE@am_lib64_libdxerr8_a_OBJECTS = $(am__objects_37)
 lib64_libdxerr8_a_OBJECTS = $(am_lib64_libdxerr8_a_OBJECTS)
 lib64_libdxerr9_a_AR = $(AR) $(ARFLAGS)
 lib64_libdxerr9_a_LIBADD =
 am__lib64_libdxerr9_a_SOURCES_DIST = libsrc/dxerr9.c libsrc/dxerr9w.c
-am__objects_37 = libsrc/lib64_libdxerr9_a-dxerr9.$(OBJEXT) \
+am__objects_38 = libsrc/lib64_libdxerr9_a-dxerr9.$(OBJEXT) \
 	libsrc/lib64_libdxerr9_a-dxerr9w.$(OBJEXT)
-@LIB64_TRUE@am_lib64_libdxerr9_a_OBJECTS = $(am__objects_37)
+@LIB64_TRUE@am_lib64_libdxerr9_a_OBJECTS = $(am__objects_38)
 lib64_libdxerr9_a_OBJECTS = $(am_lib64_libdxerr9_a_OBJECTS)
 lib64_libdxguid_a_AR = $(AR) $(ARFLAGS)
 lib64_libdxguid_a_LIBADD =
 am__lib64_libdxguid_a_SOURCES_DIST = libsrc/dxguid.c
-am__objects_38 = libsrc/lib64_libdxguid_a-dxguid.$(OBJEXT)
-@LIB64_TRUE@am_lib64_libdxguid_a_OBJECTS = $(am__objects_38)
+am__objects_39 = libsrc/lib64_libdxguid_a-dxguid.$(OBJEXT)
+@LIB64_TRUE@am_lib64_libdxguid_a_OBJECTS = $(am__objects_39)
 lib64_libdxguid_a_OBJECTS = $(am_lib64_libdxguid_a_OBJECTS)
 lib64_libgdiplus_a_LIBADD =
 am__lib64_libgdiplus_a_SOURCES_DIST = libsrc/gdiplus.c
-am__objects_39 = libsrc/lib64_libgdiplus_a-gdiplus.$(OBJEXT)
-@LIB64_TRUE@am_lib64_libgdiplus_a_OBJECTS = $(am__objects_39)
+am__objects_40 = libsrc/lib64_libgdiplus_a-gdiplus.$(OBJEXT)
+@LIB64_TRUE@am_lib64_libgdiplus_a_OBJECTS = $(am__objects_40)
 lib64_libgdiplus_a_OBJECTS = $(am_lib64_libgdiplus_a_OBJECTS)
 lib64_libgmon_a_AR = $(AR) $(ARFLAGS)
 lib64_libgmon_a_LIBADD =
@@ -1484,7 +1484,7 @@ am__lib64_libkernel32_a_SOURCES_DIST = intrincs/__movsb.c \
 	intrincs/_umul128.c intrincs/__movsq.c intrincs/__stosq.c \
 	intrincs/__shiftright128.c intrincs/bittestci64.c \
 	intrincs/__faststorefence.c intrincs/__shiftleft128.c
-am__objects_40 = intrincs/lib64_libkernel32_a-__movsb.$(OBJEXT) \
+am__objects_41 = intrincs/lib64_libkernel32_a-__movsb.$(OBJEXT) \
 	intrincs/lib64_libkernel32_a-__movsd.$(OBJEXT) \
 	intrincs/lib64_libkernel32_a-__movsw.$(OBJEXT) \
 	intrincs/lib64_libkernel32_a-__stosb.$(OBJEXT) \
@@ -1550,7 +1550,7 @@ am__objects_40 = intrincs/lib64_libkernel32_a-__movsb.$(OBJEXT) \
 	intrincs/lib64_libkernel32_a-writemsr.$(OBJEXT) \
 	intrincs/lib64_libkernel32_a-__int2c.$(OBJEXT) \
 	intrincs/lib64_libkernel32_a-RtlSecureZeroMemory.$(OBJEXT)
-am__objects_41 = intrincs/lib64_libkernel32_a-bittest64.$(OBJEXT) \
+am__objects_42 = intrincs/lib64_libkernel32_a-bittest64.$(OBJEXT) \
 	intrincs/lib64_libkernel32_a-bittestc64.$(OBJEXT) \
 	intrincs/lib64_libkernel32_a-bittestr64.$(OBJEXT) \
 	intrincs/lib64_libkernel32_a-bittestri64.$(OBJEXT) \
@@ -1578,38 +1578,38 @@ am__objects_41 = intrincs/lib64_libkernel32_a-bittest64.$(OBJEXT) \
 	intrincs/lib64_libkernel32_a-bittestci64.$(OBJEXT) \
 	intrincs/lib64_libkernel32_a-__faststorefence.$(OBJEXT) \
 	intrincs/lib64_libkernel32_a-__shiftleft128.$(OBJEXT)
-@LIB64_TRUE@am_lib64_libkernel32_a_OBJECTS = $(am__objects_40) \
-@LIB64_TRUE@	$(am__objects_41)
+@LIB64_TRUE@am_lib64_libkernel32_a_OBJECTS = $(am__objects_41) \
+@LIB64_TRUE@	$(am__objects_42)
 lib64_libkernel32_a_OBJECTS = $(am_lib64_libkernel32_a_OBJECTS)
 lib64_libksguid_a_AR = $(AR) $(ARFLAGS)
 lib64_libksguid_a_LIBADD =
 am__lib64_libksguid_a_SOURCES_DIST = libsrc/ksuser.c
-am__objects_42 = libsrc/lib64_libksguid_a-ksuser.$(OBJEXT)
-@LIB64_TRUE@am_lib64_libksguid_a_OBJECTS = $(am__objects_42)
+am__objects_43 = libsrc/lib64_libksguid_a-ksuser.$(OBJEXT)
+@LIB64_TRUE@am_lib64_libksguid_a_OBJECTS = $(am__objects_43)
 lib64_libksguid_a_OBJECTS = $(am_lib64_libksguid_a_OBJECTS)
 lib64_libksuser_a_LIBADD =
 am__lib64_libksuser_a_SOURCES_DIST = libsrc/ksuser.c
-am__objects_43 = libsrc/lib64_libksuser_a-ksuser.$(OBJEXT)
-@LIB64_TRUE@am_lib64_libksuser_a_OBJECTS = $(am__objects_43)
+am__objects_44 = libsrc/lib64_libksuser_a-ksuser.$(OBJEXT)
+@LIB64_TRUE@am_lib64_libksuser_a_OBJECTS = $(am__objects_44)
 lib64_libksuser_a_OBJECTS = $(am_lib64_libksuser_a_OBJECTS)
 lib64_liblargeint_a_AR = $(AR) $(ARFLAGS)
 lib64_liblargeint_a_LIBADD =
 am__lib64_liblargeint_a_SOURCES_DIST = libsrc/largeint.c
-am__objects_44 = libsrc/lib64_liblargeint_a-largeint.$(OBJEXT)
+am__objects_45 = libsrc/lib64_liblargeint_a-largeint.$(OBJEXT)
 @LIB64_TRUE@@W32API_FALSE@am_lib64_liblargeint_a_OBJECTS =  \
-@LIB64_TRUE@@W32API_FALSE@	$(am__objects_44)
+@LIB64_TRUE@@W32API_FALSE@	$(am__objects_45)
 lib64_liblargeint_a_OBJECTS = $(am_lib64_liblargeint_a_OBJECTS)
 lib64_libm_a_AR = $(AR) $(ARFLAGS)
 lib64_libm_a_LIBADD =
-am__objects_45 = lib64_libm_a-_libm_dummy.$(OBJEXT)
+am__objects_46 = lib64_libm_a-_libm_dummy.$(OBJEXT)
 @LIB64_TRUE@@W32API_FALSE@nodist_lib64_libm_a_OBJECTS =  \
-@LIB64_TRUE@@W32API_FALSE@	$(am__objects_45)
+@LIB64_TRUE@@W32API_FALSE@	$(am__objects_46)
 lib64_libm_a_OBJECTS = $(nodist_lib64_libm_a_OBJECTS)
 lib64_libmfuuid_a_AR = $(AR) $(ARFLAGS)
 lib64_libmfuuid_a_LIBADD =
 am__lib64_libmfuuid_a_SOURCES_DIST = libsrc/mfuuid.c
-am__objects_46 = libsrc/lib64_libmfuuid_a-mfuuid.$(OBJEXT)
-@LIB64_TRUE@am_lib64_libmfuuid_a_OBJECTS = $(am__objects_46)
+am__objects_47 = libsrc/lib64_libmfuuid_a-mfuuid.$(OBJEXT)
+@LIB64_TRUE@am_lib64_libmfuuid_a_OBJECTS = $(am__objects_47)
 lib64_libmfuuid_a_OBJECTS = $(am_lib64_libmfuuid_a_OBJECTS)
 lib64_libmingw32_a_AR = $(AR) $(ARFLAGS)
 lib64_libmingw32_a_LIBADD =
@@ -1623,7 +1623,7 @@ am__lib64_libmingw32_a_SOURCES_DIST = include/oscalls.h \
 	crt/mingw_custom.c crt/mingw_helpers.c crt/pseudo-reloc.c \
 	crt/udll_argv.c crt/xtxtmode.c crt/crt_handler.c crt/tlsthrd.c \
 	crt/tlsmthread.c crt/tlsmcrt.c
-am__objects_47 = crt/lib64_libmingw32_a-atonexit.$(OBJEXT) \
+am__objects_48 = crt/lib64_libmingw32_a-atonexit.$(OBJEXT) \
 	crt/lib64_libmingw32_a-crt0_c.$(OBJEXT) \
 	crt/lib64_libmingw32_a-dll_argv.$(OBJEXT) \
 	crt/lib64_libmingw32_a-gccmain.$(OBJEXT) \
@@ -1654,7 +1654,7 @@ am__objects_47 = crt/lib64_libmingw32_a-atonexit.$(OBJEXT) \
 	crt/lib64_libmingw32_a-tlsmthread.$(OBJEXT) \
 	crt/lib64_libmingw32_a-tlsmcrt.$(OBJEXT)
 @LIB64_TRUE@@W32API_FALSE@am_lib64_libmingw32_a_OBJECTS =  \
-@LIB64_TRUE@@W32API_FALSE@	$(am__objects_47)
+@LIB64_TRUE@@W32API_FALSE@	$(am__objects_48)
 lib64_libmingw32_a_OBJECTS = $(am_lib64_libmingw32_a_OBJECTS)
 lib64_libmingwex_a_AR = $(AR) $(ARFLAGS)
 @ENABLE_DFP_TRUE@am__DEPENDENCIES_2 = lib64/DFP_src_basearith.dfp.obj \
@@ -1721,39 +1721,38 @@ am__lib64_libmingwex_a_SOURCES_DIST = crt/dllentry.c crt/dllmain.c \
 	math/atan2l.c math/atanf.c math/atanh.c math/atanhf.c \
 	math/atanhl.c math/atanl.c math/cbrt.c math/cbrtf.c \
 	math/cbrtl.c math/cephes_emath.c math/copysign.c \
-	math/copysignf.c math/cos.c math/cosf.c math/coshf.c \
-	math/coshl.c math/cosl.c math/cossin.c math/erfl.c math/exp.c \
-	math/expf.c math/expl.c math/expm1.c math/expm1f.c \
-	math/expm1l.c math/fabs.c math/fabsf.c math/fabsl.c \
-	math/fdim.c math/fdimf.c math/fdiml.c math/fmal.c math/fmax.c \
-	math/fmaxf.c math/fmaxl.c math/fmin.c math/fminf.c \
-	math/fminl.c math/fmod.c math/fmodf.c math/fmodl.c \
-	math/fp_consts.c math/fp_constsf.c math/fp_constsl.c \
-	math/fpclassify.c math/fpclassifyf.c math/fpclassifyl.c \
-	math/frexpf.c math/fucom.c math/hypotf.c math/hypotl.c \
-	math/isnan.c math/isnanf.c math/isnanl.c math/ldexp.c \
-	math/ldexpf.c math/ldexpl.c math/lgamma.c math/lgammaf.c \
-	math/lgammal.c math/llrint.c math/signgam.c math/llrintf.c \
-	math/llrintl.c math/llround.c math/llroundf.c math/llroundl.c \
-	math/log.c math/log10f.c math/logb.c math/logbf.c math/logbl.c \
-	math/logf.c math/logl.c math/lrint.c math/lrintf.c \
-	math/lrintl.c math/lround.c math/lroundf.c math/lroundl.c \
-	math/modf.c math/modff.c math/modfl.c math/nextafterf.c \
-	math/nextafterl.c math/nexttoward.c math/nexttowardf.c \
-	math/pow.c math/powf.c math/powi.c math/powif.c math/powil.c \
-	math/powl.c math/rint.c math/rintf.c math/rintl.c math/round.c \
-	math/roundf.c math/roundl.c math/s_erf.c math/sf_erf.c \
-	math/signbit.c math/signbitf.c math/signbitl.c math/sin.c \
-	math/sinf.c math/sinhf.c math/sinhl.c math/sinl.c math/sqrt.c \
-	math/sqrtf.c math/sqrtl.c math/tanf.c math/tanhf.c \
-	math/tanhl.c math/tgamma.c math/tgammaf.c math/tgammal.c \
-	math/truncl.c math/acosh.def.h math/cos.def.h math/exp.def.h \
-	math/expm1.def.h math/log.def.h math/pow.def.h math/powi.def.h \
-	math/sin.def.h math/sqrt.def.h math/cephes_emath.h \
-	math/cephes_mconf.h math/fastmath.h math/fp_consts.h \
-	math/abs64.c misc/mb_wc_common.h misc/mingw_getsp.S \
-	misc/alarm.c misc/basename.c misc/btowc.c misc/delay-f.c \
-	misc/delay-n.c misc/delayimp.c misc/difftime.c \
+	math/copysignf.c math/cos.c math/coshf.c math/coshl.c \
+	math/cosl.c math/cossin.c math/erfl.c math/exp.c math/expf.c \
+	math/expl.c math/expm1.c math/expm1f.c math/expm1l.c \
+	math/fabs.c math/fabsf.c math/fabsl.c math/fdim.c math/fdimf.c \
+	math/fdiml.c math/fmal.c math/fmax.c math/fmaxf.c math/fmaxl.c \
+	math/fmin.c math/fminf.c math/fminl.c math/fmod.c math/fmodf.c \
+	math/fmodl.c math/fp_consts.c math/fp_constsf.c \
+	math/fp_constsl.c math/fpclassify.c math/fpclassifyf.c \
+	math/fpclassifyl.c math/frexpf.c math/fucom.c math/hypotf.c \
+	math/hypotl.c math/isnan.c math/isnanf.c math/isnanl.c \
+	math/ldexp.c math/ldexpf.c math/ldexpl.c math/lgamma.c \
+	math/lgammaf.c math/lgammal.c math/llrint.c math/signgam.c \
+	math/llrintf.c math/llrintl.c math/llround.c math/llroundf.c \
+	math/llroundl.c math/log.c math/log10f.c math/logb.c \
+	math/logbf.c math/logbl.c math/logf.c math/logl.c math/lrint.c \
+	math/lrintf.c math/lrintl.c math/lround.c math/lroundf.c \
+	math/lroundl.c math/modf.c math/modff.c math/modfl.c \
+	math/nextafterf.c math/nextafterl.c math/nexttoward.c \
+	math/nexttowardf.c math/pow.c math/powf.c math/powi.c \
+	math/powif.c math/powil.c math/powl.c math/rint.c math/rintf.c \
+	math/rintl.c math/round.c math/roundf.c math/roundl.c \
+	math/s_erf.c math/sf_erf.c math/signbit.c math/signbitf.c \
+	math/signbitl.c math/sin.c math/sinf.c math/sinhf.c \
+	math/sinhl.c math/sinl.c math/sqrt.c math/sqrtf.c math/sqrtl.c \
+	math/tanf.c math/tanhf.c math/tanhl.c math/tgamma.c \
+	math/tgammaf.c math/tgammal.c math/truncl.c math/acosh.def.h \
+	math/cos.def.h math/exp.def.h math/expm1.def.h math/log.def.h \
+	math/pow.def.h math/powi.def.h math/sin.def.h math/sqrt.def.h \
+	math/cephes_emath.h math/cephes_mconf.h math/fastmath.h \
+	math/fp_consts.h math/abs64.c misc/mb_wc_common.h \
+	misc/mingw_getsp.S misc/alarm.c misc/basename.c misc/btowc.c \
+	misc/delay-f.c misc/delay-n.c misc/delayimp.c misc/difftime.c \
 	misc/difftime32.c misc/difftime64.c misc/dirent.c \
 	misc/dirname.c misc/execv.c misc/execve.c misc/execvp.c \
 	misc/execvpe.c misc/feclearexcept.c misc/fegetenv.c \
@@ -1808,13 +1807,13 @@ am__lib64_libmingwex_a_SOURCES_DIST = crt/dllentry.c crt/dllmain.c \
 	stdio/vscanf.c stdio/vsnprintf.c stdio/vsnprintf_s.c \
 	stdio/vsnwprintf.c stdio/vsscanf.c stdio/vswscanf.c \
 	stdio/vwscanf.c stdio/wtoll.c stdio/mingw_asprintf.c \
-	stdio/mingw_vasprintf.c math/DFP/__fpclassifyd32.c \
+	stdio/mingw_vasprintf.c math/cosf.c math/DFP/__fpclassifyd32.c \
 	math/DFP/__fpclassifyd64.c math/DFP/__fpclassifyd128.c \
 	math/DFP/__isnand32.c math/DFP/__isnand64.c \
 	math/DFP/__isnand128.c math/DFP/__signbitd32.c \
 	math/DFP/__signbitd64.c math/DFP/__signbitd128.c \
 	math/DFP/isinfd32.c math/DFP/isinfd64.c math/DFP/isinfd128.c
-am__objects_48 = crt/lib64_libmingwex_a-dllentry.$(OBJEXT) \
+am__objects_49 = crt/lib64_libmingwex_a-dllentry.$(OBJEXT) \
 	crt/lib64_libmingwex_a-dllmain.$(OBJEXT) \
 	complex/lib64_libmingwex_a-cabs.$(OBJEXT) \
 	complex/lib64_libmingwex_a-cabsf.$(OBJEXT) \
@@ -1951,7 +1950,6 @@ am__objects_48 = crt/lib64_libmingwex_a-dllentry.$(OBJEXT) \
 	math/lib64_libmingwex_a-copysign.$(OBJEXT) \
 	math/lib64_libmingwex_a-copysignf.$(OBJEXT) \
 	math/lib64_libmingwex_a-cos.$(OBJEXT) \
-	math/lib64_libmingwex_a-cosf.$(OBJEXT) \
 	math/lib64_libmingwex_a-coshf.$(OBJEXT) \
 	math/lib64_libmingwex_a-coshl.$(OBJEXT) \
 	math/lib64_libmingwex_a-cosl.$(OBJEXT) \
@@ -2225,7 +2223,8 @@ am__objects_48 = crt/lib64_libmingwex_a-dllentry.$(OBJEXT) \
 	stdio/lib64_libmingwex_a-wtoll.$(OBJEXT) \
 	stdio/lib64_libmingwex_a-mingw_asprintf.$(OBJEXT) \
 	stdio/lib64_libmingwex_a-mingw_vasprintf.$(OBJEXT)
-@ENABLE_DFP_TRUE@am__objects_49 = math/DFP/lib64_libmingwex_a-__fpclassifyd32.$(OBJEXT) \
+am__objects_50 = math/lib64_libmingwex_a-cosf.$(OBJEXT)
+@ENABLE_DFP_TRUE@am__objects_51 = math/DFP/lib64_libmingwex_a-__fpclassifyd32.$(OBJEXT) \
 @ENABLE_DFP_TRUE@	math/DFP/lib64_libmingwex_a-__fpclassifyd64.$(OBJEXT) \
 @ENABLE_DFP_TRUE@	math/DFP/lib64_libmingwex_a-__fpclassifyd128.$(OBJEXT) \
 @ENABLE_DFP_TRUE@	math/DFP/lib64_libmingwex_a-__isnand32.$(OBJEXT) \
@@ -2238,21 +2237,22 @@ am__objects_48 = crt/lib64_libmingwex_a-dllentry.$(OBJEXT) \
 @ENABLE_DFP_TRUE@	math/DFP/lib64_libmingwex_a-isinfd64.$(OBJEXT) \
 @ENABLE_DFP_TRUE@	math/DFP/lib64_libmingwex_a-isinfd128.$(OBJEXT)
 @LIB64_TRUE@@W32API_FALSE@am_lib64_libmingwex_a_OBJECTS =  \
-@LIB64_TRUE@@W32API_FALSE@	$(am__objects_48) $(am__objects_49)
+@LIB64_TRUE@@W32API_FALSE@	$(am__objects_49) $(am__objects_50) \
+@LIB64_TRUE@@W32API_FALSE@	$(am__objects_51)
 lib64_libmingwex_a_OBJECTS = $(am_lib64_libmingwex_a_OBJECTS)
 lib64_libmingwthrd_a_AR = $(AR) $(ARFLAGS)
 lib64_libmingwthrd_a_LIBADD =
 am__lib64_libmingwthrd_a_SOURCES_DIST = libsrc/mingwthrd_mt.c
-am__objects_50 = libsrc/lib64_libmingwthrd_a-mingwthrd_mt.$(OBJEXT)
+am__objects_52 = libsrc/lib64_libmingwthrd_a-mingwthrd_mt.$(OBJEXT)
 @LIB64_TRUE@@W32API_FALSE@am_lib64_libmingwthrd_a_OBJECTS =  \
-@LIB64_TRUE@@W32API_FALSE@	$(am__objects_50)
+@LIB64_TRUE@@W32API_FALSE@	$(am__objects_52)
 lib64_libmingwthrd_a_OBJECTS = $(am_lib64_libmingwthrd_a_OBJECTS)
 lib64_libmoldname_a_AR = $(AR) $(ARFLAGS)
 lib64_libmoldname_a_LIBADD =
 am__lib64_libmoldname_a_SOURCES_DIST = _libm_dummy.c
-am__objects_51 = lib64_libmoldname_a-_libm_dummy.$(OBJEXT)
+am__objects_53 = lib64_libmoldname_a-_libm_dummy.$(OBJEXT)
 @LIB64_TRUE@@W32API_FALSE@am_lib64_libmoldname_a_OBJECTS =  \
-@LIB64_TRUE@@W32API_FALSE@	$(am__objects_51)
+@LIB64_TRUE@@W32API_FALSE@	$(am__objects_53)
 lib64_libmoldname_a_OBJECTS = $(am_lib64_libmoldname_a_OBJECTS)
 lib64_libmsvcrt_a_LIBADD =
 am__lib64_libmsvcrt_a_SOURCES_DIST = misc/invalid_parameter_handler.c \
@@ -2271,7 +2271,7 @@ am__lib64_libmsvcrt_a_SOURCES_DIST = misc/invalid_parameter_handler.c \
 	secapi/asctime_s.c secapi/memcpy_s.c secapi/rand_s.c \
 	secapi/sprintf_s.c secapi/strerror_s.c secapi/vsprintf_s.c \
 	secapi/wmemcpy_s.c lib64/msvcrt.def.in
-am__objects_52 =  \
+am__objects_54 =  \
 	misc/lib64_libmsvcrt_a-invalid_parameter_handler.$(OBJEXT) \
 	misc/lib64_libmsvcrt_a-output_format.$(OBJEXT) \
 	misc/lib64_libmsvcrt_a-purecall.$(OBJEXT) \
@@ -2312,22 +2312,22 @@ am__objects_52 =  \
 	secapi/lib64_libmsvcrt_a-vsprintf_s.$(OBJEXT) \
 	secapi/lib64_libmsvcrt_a-wmemcpy_s.$(OBJEXT)
 @LIB64_TRUE@@W32API_FALSE@am_lib64_libmsvcrt_a_OBJECTS =  \
-@LIB64_TRUE@@W32API_FALSE@	$(am__objects_52)
+@LIB64_TRUE@@W32API_FALSE@	$(am__objects_54)
 lib64_libmsvcrt_a_OBJECTS = $(am_lib64_libmsvcrt_a_OBJECTS)
 lib64_libportabledeviceguids_a_AR = $(AR) $(ARFLAGS)
 lib64_libportabledeviceguids_a_LIBADD =
 am__lib64_libportabledeviceguids_a_SOURCES_DIST =  \
 	libsrc/portabledeviceguids.c
-am__objects_53 = libsrc/lib64_libportabledeviceguids_a-portabledeviceguids.$(OBJEXT)
+am__objects_55 = libsrc/lib64_libportabledeviceguids_a-portabledeviceguids.$(OBJEXT)
 @LIB64_TRUE@am_lib64_libportabledeviceguids_a_OBJECTS =  \
-@LIB64_TRUE@	$(am__objects_53)
+@LIB64_TRUE@	$(am__objects_55)
 lib64_libportabledeviceguids_a_OBJECTS =  \
 	$(am_lib64_libportabledeviceguids_a_OBJECTS)
 lib64_libscrnsave_a_AR = $(AR) $(ARFLAGS)
 lib64_libscrnsave_a_LIBADD =
 am__lib64_libscrnsave_a_SOURCES_DIST = libsrc/scrnsave.c
-am__objects_54 = libsrc/lib64_libscrnsave_a-scrnsave.$(OBJEXT)
-@LIB64_TRUE@am_lib64_libscrnsave_a_OBJECTS = $(am__objects_54)
+am__objects_56 = libsrc/lib64_libscrnsave_a-scrnsave.$(OBJEXT)
+@LIB64_TRUE@am_lib64_libscrnsave_a_OBJECTS = $(am__objects_56)
 lib64_libscrnsave_a_OBJECTS = $(am_lib64_libscrnsave_a_OBJECTS)
 lib64_libscrnsavw_a_AR = $(AR) $(ARFLAGS)
 lib64_libscrnsavw_a_LIBADD =
@@ -2338,19 +2338,19 @@ lib64_libscrnsavw_a_OBJECTS = $(am_lib64_libscrnsavw_a_OBJECTS)
 lib64_libsensorsapi_a_AR = $(AR) $(ARFLAGS)
 lib64_libsensorsapi_a_LIBADD =
 am__lib64_libsensorsapi_a_SOURCES_DIST = libsrc/sensorsapi.c
-am__objects_55 = libsrc/lib64_libsensorsapi_a-sensorsapi.$(OBJEXT)
-@LIB64_TRUE@am_lib64_libsensorsapi_a_OBJECTS = $(am__objects_55)
+am__objects_57 = libsrc/lib64_libsensorsapi_a-sensorsapi.$(OBJEXT)
+@LIB64_TRUE@am_lib64_libsensorsapi_a_OBJECTS = $(am__objects_57)
 lib64_libsensorsapi_a_OBJECTS = $(am_lib64_libsensorsapi_a_OBJECTS)
 lib64_libshell32_a_LIBADD =
 am__lib64_libshell32_a_SOURCES_DIST = libsrc/shell32.c
-am__objects_56 = libsrc/lib64_libshell32_a-shell32.$(OBJEXT)
-@LIB64_TRUE@am_lib64_libshell32_a_OBJECTS = $(am__objects_56)
+am__objects_58 = libsrc/lib64_libshell32_a-shell32.$(OBJEXT)
+@LIB64_TRUE@am_lib64_libshell32_a_OBJECTS = $(am__objects_58)
 lib64_libshell32_a_OBJECTS = $(am_lib64_libshell32_a_OBJECTS)
 lib64_libstrmiids_a_AR = $(AR) $(ARFLAGS)
 lib64_libstrmiids_a_LIBADD =
 am__lib64_libstrmiids_a_SOURCES_DIST = libsrc/strmiids.c
-am__objects_57 = libsrc/lib64_libstrmiids_a-strmiids.$(OBJEXT)
-@LIB64_TRUE@am_lib64_libstrmiids_a_OBJECTS = $(am__objects_57)
+am__objects_59 = libsrc/lib64_libstrmiids_a-strmiids.$(OBJEXT)
+@LIB64_TRUE@am_lib64_libstrmiids_a_OBJECTS = $(am__objects_59)
 lib64_libstrmiids_a_OBJECTS = $(am_lib64_libstrmiids_a_OBJECTS)
 lib64_libuuid_a_AR = $(AR) $(ARFLAGS)
 lib64_libuuid_a_LIBADD =
@@ -2371,7 +2371,7 @@ am__lib64_libuuid_a_SOURCES_DIST = libsrc/ativscp-uuid.c \
 	libsrc/power-uuid.c libsrc/powrprof-uuid.c \
 	libsrc/usbcamdi-uuid.c libsrc/usbiodef-uuid.c libsrc/uuid.c \
 	libsrc/vds-uuid.c libsrc/virtdisk-uuid.c libsrc/wia-uuid.c
-am__objects_58 = libsrc/lib64_libuuid_a-ativscp-uuid.$(OBJEXT) \
+am__objects_60 = libsrc/lib64_libuuid_a-ativscp-uuid.$(OBJEXT) \
 	libsrc/lib64_libuuid_a-atsmedia-uuid.$(OBJEXT) \
 	libsrc/lib64_libuuid_a-bth-uuid.$(OBJEXT) \
 	libsrc/lib64_libuuid_a-cguid-uuid.$(OBJEXT) \
@@ -2413,28 +2413,28 @@ am__objects_58 = libsrc/lib64_libuuid_a-ativscp-uuid.$(OBJEXT) \
 	libsrc/lib64_libuuid_a-vds-uuid.$(OBJEXT) \
 	libsrc/lib64_libuuid_a-virtdisk-uuid.$(OBJEXT) \
 	libsrc/lib64_libuuid_a-wia-uuid.$(OBJEXT)
-@LIB64_TRUE@am_lib64_libuuid_a_OBJECTS = $(am__objects_58)
+@LIB64_TRUE@am_lib64_libuuid_a_OBJECTS = $(am__objects_60)
 lib64_libuuid_a_OBJECTS = $(am_lib64_libuuid_a_OBJECTS)
 lib64_libwbemuuid_a_AR = $(AR) $(ARFLAGS)
 lib64_libwbemuuid_a_LIBADD =
 am__lib64_libwbemuuid_a_SOURCES_DIST = libsrc/wbemuuid.c
-am__objects_59 = libsrc/lib64_libwbemuuid_a-wbemuuid.$(OBJEXT)
-@LIB64_TRUE@am_lib64_libwbemuuid_a_OBJECTS = $(am__objects_59)
+am__objects_61 = libsrc/lib64_libwbemuuid_a-wbemuuid.$(OBJEXT)
+@LIB64_TRUE@am_lib64_libwbemuuid_a_OBJECTS = $(am__objects_61)
 lib64_libwbemuuid_a_OBJECTS = $(am_lib64_libwbemuuid_a_OBJECTS)
 lib64_libwindowscodecs_a_AR = $(AR) $(ARFLAGS)
 lib64_libwindowscodecs_a_LIBADD =
 am__lib64_libwindowscodecs_a_SOURCES_DIST = libsrc/windowscodecs.c
-am__objects_60 =  \
+am__objects_62 =  \
 	libsrc/lib64_libwindowscodecs_a-windowscodecs.$(OBJEXT)
-@LIB64_TRUE@am_lib64_libwindowscodecs_a_OBJECTS = $(am__objects_60)
+@LIB64_TRUE@am_lib64_libwindowscodecs_a_OBJECTS = $(am__objects_62)
 lib64_libwindowscodecs_a_OBJECTS =  \
 	$(am_lib64_libwindowscodecs_a_OBJECTS)
 lib64_libwmcodecdspuuid_a_AR = $(AR) $(ARFLAGS)
 lib64_libwmcodecdspuuid_a_LIBADD =
 am__lib64_libwmcodecdspuuid_a_SOURCES_DIST = libsrc/wmcodecdspuuid.c
-am__objects_61 =  \
+am__objects_63 =  \
 	libsrc/lib64_libwmcodecdspuuid_a-wmcodecdspuuid.$(OBJEXT)
-@LIB64_TRUE@am_lib64_libwmcodecdspuuid_a_OBJECTS = $(am__objects_61)
+@LIB64_TRUE@am_lib64_libwmcodecdspuuid_a_OBJECTS = $(am__objects_63)
 lib64_libwmcodecdspuuid_a_OBJECTS =  \
 	$(am_lib64_libwmcodecdspuuid_a_OBJECTS)
 lib64_libws2_32_a_LIBADD =
@@ -2472,7 +2472,7 @@ am__lib64_libws2_32_a_SOURCES_DIST = libsrc/ws2_32.c \
 	libsrc/wspiapi/WspiapiGetAddrInfo.c \
 	libsrc/wspiapi/WspiapiGetNameInfo.c \
 	libsrc/wspiapi/WspiapiFreeAddrInfo.c
-am__objects_62 = libsrc/lib64_libws2_32_a-ws2_32.$(OBJEXT) \
+am__objects_64 = libsrc/lib64_libws2_32_a-ws2_32.$(OBJEXT) \
 	libsrc/ws2tcpip/lib64_libws2_32_a-in6_addr_equal.$(OBJEXT) \
 	libsrc/ws2tcpip/lib64_libws2_32_a-in6addr_isany.$(OBJEXT) \
 	libsrc/ws2tcpip/lib64_libws2_32_a-in6addr_isloopback.$(OBJEXT) \
@@ -2507,7 +2507,7 @@ am__objects_62 = libsrc/lib64_libws2_32_a-ws2_32.$(OBJEXT) \
 	libsrc/wspiapi/lib64_libws2_32_a-WspiapiGetAddrInfo.$(OBJEXT) \
 	libsrc/wspiapi/lib64_libws2_32_a-WspiapiGetNameInfo.$(OBJEXT) \
 	libsrc/wspiapi/lib64_libws2_32_a-WspiapiFreeAddrInfo.$(OBJEXT)
-@LIB64_TRUE@am_lib64_libws2_32_a_OBJECTS = $(am__objects_62)
+@LIB64_TRUE@am_lib64_libws2_32_a_OBJECTS = $(am__objects_64)
 lib64_libws2_32_a_OBJECTS = $(am_lib64_libws2_32_a_OBJECTS)
 libarm32_libdelayimp_a_AR = $(AR) $(ARFLAGS)
 libarm32_libdelayimp_a_LIBADD =
@@ -2516,35 +2516,35 @@ libarm32_libdelayimp_a_OBJECTS = $(am_libarm32_libdelayimp_a_OBJECTS)
 libarm32_libdmoguids_a_AR = $(AR) $(ARFLAGS)
 libarm32_libdmoguids_a_LIBADD =
 am__libarm32_libdmoguids_a_SOURCES_DIST = libsrc/dmoguids.c
-am__objects_63 = libsrc/libarm32_libdmoguids_a-dmoguids.$(OBJEXT)
-@LIBARM32_TRUE@am_libarm32_libdmoguids_a_OBJECTS = $(am__objects_63)
+am__objects_65 = libsrc/libarm32_libdmoguids_a-dmoguids.$(OBJEXT)
+@LIBARM32_TRUE@am_libarm32_libdmoguids_a_OBJECTS = $(am__objects_65)
 libarm32_libdmoguids_a_OBJECTS = $(am_libarm32_libdmoguids_a_OBJECTS)
 libarm32_libdxerr8_a_AR = $(AR) $(ARFLAGS)
 libarm32_libdxerr8_a_LIBADD =
 am__libarm32_libdxerr8_a_SOURCES_DIST = libsrc/dxerr8.c \
 	libsrc/dxerr8w.c
-am__objects_64 = libsrc/libarm32_libdxerr8_a-dxerr8.$(OBJEXT) \
+am__objects_66 = libsrc/libarm32_libdxerr8_a-dxerr8.$(OBJEXT) \
 	libsrc/libarm32_libdxerr8_a-dxerr8w.$(OBJEXT)
-@LIBARM32_TRUE@am_libarm32_libdxerr8_a_OBJECTS = $(am__objects_64)
+@LIBARM32_TRUE@am_libarm32_libdxerr8_a_OBJECTS = $(am__objects_66)
 libarm32_libdxerr8_a_OBJECTS = $(am_libarm32_libdxerr8_a_OBJECTS)
 libarm32_libdxerr9_a_AR = $(AR) $(ARFLAGS)
 libarm32_libdxerr9_a_LIBADD =
 am__libarm32_libdxerr9_a_SOURCES_DIST = libsrc/dxerr9.c \
 	libsrc/dxerr9w.c
-am__objects_65 = libsrc/libarm32_libdxerr9_a-dxerr9.$(OBJEXT) \
+am__objects_67 = libsrc/libarm32_libdxerr9_a-dxerr9.$(OBJEXT) \
 	libsrc/libarm32_libdxerr9_a-dxerr9w.$(OBJEXT)
-@LIBARM32_TRUE@am_libarm32_libdxerr9_a_OBJECTS = $(am__objects_65)
+@LIBARM32_TRUE@am_libarm32_libdxerr9_a_OBJECTS = $(am__objects_67)
 libarm32_libdxerr9_a_OBJECTS = $(am_libarm32_libdxerr9_a_OBJECTS)
 libarm32_libdxguid_a_AR = $(AR) $(ARFLAGS)
 libarm32_libdxguid_a_LIBADD =
 am__libarm32_libdxguid_a_SOURCES_DIST = libsrc/dxguid.c
-am__objects_66 = libsrc/libarm32_libdxguid_a-dxguid.$(OBJEXT)
-@LIBARM32_TRUE@am_libarm32_libdxguid_a_OBJECTS = $(am__objects_66)
+am__objects_68 = libsrc/libarm32_libdxguid_a-dxguid.$(OBJEXT)
+@LIBARM32_TRUE@am_libarm32_libdxguid_a_OBJECTS = $(am__objects_68)
 libarm32_libdxguid_a_OBJECTS = $(am_libarm32_libdxguid_a_OBJECTS)
 libarm32_libgdiplus_a_LIBADD =
 am__libarm32_libgdiplus_a_SOURCES_DIST = libsrc/gdiplus.c
-am__objects_67 = libsrc/libarm32_libgdiplus_a-gdiplus.$(OBJEXT)
-@LIBARM32_TRUE@am_libarm32_libgdiplus_a_OBJECTS = $(am__objects_67)
+am__objects_69 = libsrc/libarm32_libgdiplus_a-gdiplus.$(OBJEXT)
+@LIBARM32_TRUE@am_libarm32_libgdiplus_a_OBJECTS = $(am__objects_69)
 libarm32_libgdiplus_a_OBJECTS = $(am_libarm32_libgdiplus_a_OBJECTS)
 libarm32_libkernel32_a_LIBADD =
 am__libarm32_libkernel32_a_SOURCES_DIST = intrincs/__movsb.c \
@@ -2574,7 +2574,7 @@ am__libarm32_libkernel32_a_SOURCES_DIST = intrincs/__movsb.c \
 	intrincs/writecr3.c intrincs/writecr4.c intrincs/writecr8.c \
 	intrincs/writemsr.c intrincs/__int2c.c \
 	intrincs/RtlSecureZeroMemory.c
-am__objects_68 = intrincs/libarm32_libkernel32_a-__movsb.$(OBJEXT) \
+am__objects_70 = intrincs/libarm32_libkernel32_a-__movsb.$(OBJEXT) \
 	intrincs/libarm32_libkernel32_a-__movsd.$(OBJEXT) \
 	intrincs/libarm32_libkernel32_a-__movsw.$(OBJEXT) \
 	intrincs/libarm32_libkernel32_a-__stosb.$(OBJEXT) \
@@ -2640,39 +2640,39 @@ am__objects_68 = intrincs/libarm32_libkernel32_a-__movsb.$(OBJEXT) \
 	intrincs/libarm32_libkernel32_a-writemsr.$(OBJEXT) \
 	intrincs/libarm32_libkernel32_a-__int2c.$(OBJEXT) \
 	intrincs/libarm32_libkernel32_a-RtlSecureZeroMemory.$(OBJEXT)
-am__objects_69 =
-@LIBARM32_TRUE@am_libarm32_libkernel32_a_OBJECTS = $(am__objects_68) \
-@LIBARM32_TRUE@	$(am__objects_69)
+am__objects_71 =
+@LIBARM32_TRUE@am_libarm32_libkernel32_a_OBJECTS = $(am__objects_70) \
+@LIBARM32_TRUE@	$(am__objects_71)
 libarm32_libkernel32_a_OBJECTS = $(am_libarm32_libkernel32_a_OBJECTS)
 libarm32_libksguid_a_AR = $(AR) $(ARFLAGS)
 libarm32_libksguid_a_LIBADD =
 am__libarm32_libksguid_a_SOURCES_DIST = libsrc/ksuser.c
-am__objects_70 = libsrc/libarm32_libksguid_a-ksuser.$(OBJEXT)
-@LIBARM32_TRUE@am_libarm32_libksguid_a_OBJECTS = $(am__objects_70)
+am__objects_72 = libsrc/libarm32_libksguid_a-ksuser.$(OBJEXT)
+@LIBARM32_TRUE@am_libarm32_libksguid_a_OBJECTS = $(am__objects_72)
 libarm32_libksguid_a_OBJECTS = $(am_libarm32_libksguid_a_OBJECTS)
 libarm32_libksuser_a_LIBADD =
 am__libarm32_libksuser_a_SOURCES_DIST = libsrc/ksuser.c
-am__objects_71 = libsrc/libarm32_libksuser_a-ksuser.$(OBJEXT)
-@LIBARM32_TRUE@am_libarm32_libksuser_a_OBJECTS = $(am__objects_71)
+am__objects_73 = libsrc/libarm32_libksuser_a-ksuser.$(OBJEXT)
+@LIBARM32_TRUE@am_libarm32_libksuser_a_OBJECTS = $(am__objects_73)
 libarm32_libksuser_a_OBJECTS = $(am_libarm32_libksuser_a_OBJECTS)
 libarm32_liblargeint_a_AR = $(AR) $(ARFLAGS)
 libarm32_liblargeint_a_LIBADD =
 am__libarm32_liblargeint_a_SOURCES_DIST = libsrc/largeint.c
-am__objects_72 = libsrc/libarm32_liblargeint_a-largeint.$(OBJEXT)
+am__objects_74 = libsrc/libarm32_liblargeint_a-largeint.$(OBJEXT)
 @LIBARM32_TRUE@@W32API_FALSE@am_libarm32_liblargeint_a_OBJECTS =  \
-@LIBARM32_TRUE@@W32API_FALSE@	$(am__objects_72)
+@LIBARM32_TRUE@@W32API_FALSE@	$(am__objects_74)
 libarm32_liblargeint_a_OBJECTS = $(am_libarm32_liblargeint_a_OBJECTS)
 libarm32_libm_a_AR = $(AR) $(ARFLAGS)
 libarm32_libm_a_LIBADD =
-am__objects_73 = libarm32_libm_a-_libm_dummy.$(OBJEXT)
+am__objects_75 = libarm32_libm_a-_libm_dummy.$(OBJEXT)
 @LIBARM32_TRUE@@W32API_FALSE@nodist_libarm32_libm_a_OBJECTS =  \
-@LIBARM32_TRUE@@W32API_FALSE@	$(am__objects_73)
+@LIBARM32_TRUE@@W32API_FALSE@	$(am__objects_75)
 libarm32_libm_a_OBJECTS = $(nodist_libarm32_libm_a_OBJECTS)
 libarm32_libmfuuid_a_AR = $(AR) $(ARFLAGS)
 libarm32_libmfuuid_a_LIBADD =
 am__libarm32_libmfuuid_a_SOURCES_DIST = libsrc/mfuuid.c
-am__objects_74 = libsrc/libarm32_libmfuuid_a-mfuuid.$(OBJEXT)
-@LIBARM32_TRUE@am_libarm32_libmfuuid_a_OBJECTS = $(am__objects_74)
+am__objects_76 = libsrc/libarm32_libmfuuid_a-mfuuid.$(OBJEXT)
+@LIBARM32_TRUE@am_libarm32_libmfuuid_a_OBJECTS = $(am__objects_76)
 libarm32_libmfuuid_a_OBJECTS = $(am_libarm32_libmfuuid_a_OBJECTS)
 libarm32_libmingw32_a_AR = $(AR) $(ARFLAGS)
 libarm32_libmingw32_a_LIBADD =
@@ -2686,7 +2686,7 @@ am__libarm32_libmingw32_a_SOURCES_DIST = include/oscalls.h \
 	crt/mingw_custom.c crt/mingw_helpers.c crt/pseudo-reloc.c \
 	crt/udll_argv.c crt/xtxtmode.c crt/crt_handler.c crt/tlsthrd.c \
 	crt/tlsmthread.c crt/tlsmcrt.c
-am__objects_75 = crt/libarm32_libmingw32_a-atonexit.$(OBJEXT) \
+am__objects_77 = crt/libarm32_libmingw32_a-atonexit.$(OBJEXT) \
 	crt/libarm32_libmingw32_a-crt0_c.$(OBJEXT) \
 	crt/libarm32_libmingw32_a-dll_argv.$(OBJEXT) \
 	crt/libarm32_libmingw32_a-gccmain.$(OBJEXT) \
@@ -2717,7 +2717,7 @@ am__objects_75 = crt/libarm32_libmingw32_a-atonexit.$(OBJEXT) \
 	crt/libarm32_libmingw32_a-tlsmthread.$(OBJEXT) \
 	crt/libarm32_libmingw32_a-tlsmcrt.$(OBJEXT)
 @LIBARM32_TRUE@@W32API_FALSE@am_libarm32_libmingw32_a_OBJECTS =  \
-@LIBARM32_TRUE@@W32API_FALSE@	$(am__objects_75)
+@LIBARM32_TRUE@@W32API_FALSE@	$(am__objects_77)
 libarm32_libmingw32_a_OBJECTS = $(am_libarm32_libmingw32_a_OBJECTS)
 libarm32_libmingwex_a_AR = $(AR) $(ARFLAGS)
 @LIBARM32_TRUE@@W32API_FALSE@libarm32_libmingwex_a_DEPENDENCIES =  \
@@ -2769,39 +2769,38 @@ am__libarm32_libmingwex_a_SOURCES_DIST = crt/dllentry.c crt/dllmain.c \
 	math/atan2l.c math/atanf.c math/atanh.c math/atanhf.c \
 	math/atanhl.c math/atanl.c math/cbrt.c math/cbrtf.c \
 	math/cbrtl.c math/cephes_emath.c math/copysign.c \
-	math/copysignf.c math/cos.c math/cosf.c math/coshf.c \
-	math/coshl.c math/cosl.c math/cossin.c math/erfl.c math/exp.c \
-	math/expf.c math/expl.c math/expm1.c math/expm1f.c \
-	math/expm1l.c math/fabs.c math/fabsf.c math/fabsl.c \
-	math/fdim.c math/fdimf.c math/fdiml.c math/fmal.c math/fmax.c \
-	math/fmaxf.c math/fmaxl.c math/fmin.c math/fminf.c \
-	math/fminl.c math/fmod.c math/fmodf.c math/fmodl.c \
-	math/fp_consts.c math/fp_constsf.c math/fp_constsl.c \
-	math/fpclassify.c math/fpclassifyf.c math/fpclassifyl.c \
-	math/frexpf.c math/fucom.c math/hypotf.c math/hypotl.c \
-	math/isnan.c math/isnanf.c math/isnanl.c math/ldexp.c \
-	math/ldexpf.c math/ldexpl.c math/lgamma.c math/lgammaf.c \
-	math/lgammal.c math/llrint.c math/signgam.c math/llrintf.c \
-	math/llrintl.c math/llround.c math/llroundf.c math/llroundl.c \
-	math/log.c math/log10f.c math/logb.c math/logbf.c math/logbl.c \
-	math/logf.c math/logl.c math/lrint.c math/lrintf.c \
-	math/lrintl.c math/lround.c math/lroundf.c math/lroundl.c \
-	math/modf.c math/modff.c math/modfl.c math/nextafterf.c \
-	math/nextafterl.c math/nexttoward.c math/nexttowardf.c \
-	math/pow.c math/powf.c math/powi.c math/powif.c math/powil.c \
-	math/powl.c math/rint.c math/rintf.c math/rintl.c math/round.c \
-	math/roundf.c math/roundl.c math/s_erf.c math/sf_erf.c \
-	math/signbit.c math/signbitf.c math/signbitl.c math/sin.c \
-	math/sinf.c math/sinhf.c math/sinhl.c math/sinl.c math/sqrt.c \
-	math/sqrtf.c math/sqrtl.c math/tanf.c math/tanhf.c \
-	math/tanhl.c math/tgamma.c math/tgammaf.c math/tgammal.c \
-	math/truncl.c math/acosh.def.h math/cos.def.h math/exp.def.h \
-	math/expm1.def.h math/log.def.h math/pow.def.h math/powi.def.h \
-	math/sin.def.h math/sqrt.def.h math/cephes_emath.h \
-	math/cephes_mconf.h math/fastmath.h math/fp_consts.h \
-	math/abs64.c misc/mb_wc_common.h misc/mingw_getsp.S \
-	misc/alarm.c misc/basename.c misc/btowc.c misc/delay-f.c \
-	misc/delay-n.c misc/delayimp.c misc/difftime.c \
+	math/copysignf.c math/cos.c math/coshf.c math/coshl.c \
+	math/cosl.c math/cossin.c math/erfl.c math/exp.c math/expf.c \
+	math/expl.c math/expm1.c math/expm1f.c math/expm1l.c \
+	math/fabs.c math/fabsf.c math/fabsl.c math/fdim.c math/fdimf.c \
+	math/fdiml.c math/fmal.c math/fmax.c math/fmaxf.c math/fmaxl.c \
+	math/fmin.c math/fminf.c math/fminl.c math/fmod.c math/fmodf.c \
+	math/fmodl.c math/fp_consts.c math/fp_constsf.c \
+	math/fp_constsl.c math/fpclassify.c math/fpclassifyf.c \
+	math/fpclassifyl.c math/frexpf.c math/fucom.c math/hypotf.c \
+	math/hypotl.c math/isnan.c math/isnanf.c math/isnanl.c \
+	math/ldexp.c math/ldexpf.c math/ldexpl.c math/lgamma.c \
+	math/lgammaf.c math/lgammal.c math/llrint.c math/signgam.c \
+	math/llrintf.c math/llrintl.c math/llround.c math/llroundf.c \
+	math/llroundl.c math/log.c math/log10f.c math/logb.c \
+	math/logbf.c math/logbl.c math/logf.c math/logl.c math/lrint.c \
+	math/lrintf.c math/lrintl.c math/lround.c math/lroundf.c \
+	math/lroundl.c math/modf.c math/modff.c math/modfl.c \
+	math/nextafterf.c math/nextafterl.c math/nexttoward.c \
+	math/nexttowardf.c math/pow.c math/powf.c math/powi.c \
+	math/powif.c math/powil.c math/powl.c math/rint.c math/rintf.c \
+	math/rintl.c math/round.c math/roundf.c math/roundl.c \
+	math/s_erf.c math/sf_erf.c math/signbit.c math/signbitf.c \
+	math/signbitl.c math/sin.c math/sinf.c math/sinhf.c \
+	math/sinhl.c math/sinl.c math/sqrt.c math/sqrtf.c math/sqrtl.c \
+	math/tanf.c math/tanhf.c math/tanhl.c math/tgamma.c \
+	math/tgammaf.c math/tgammal.c math/truncl.c math/acosh.def.h \
+	math/cos.def.h math/exp.def.h math/expm1.def.h math/log.def.h \
+	math/pow.def.h math/powi.def.h math/sin.def.h math/sqrt.def.h \
+	math/cephes_emath.h math/cephes_mconf.h math/fastmath.h \
+	math/fp_consts.h math/abs64.c misc/mb_wc_common.h \
+	misc/mingw_getsp.S misc/alarm.c misc/basename.c misc/btowc.c \
+	misc/delay-f.c misc/delay-n.c misc/delayimp.c misc/difftime.c \
 	misc/difftime32.c misc/difftime64.c misc/dirent.c \
 	misc/dirname.c misc/execv.c misc/execve.c misc/execvp.c \
 	misc/execvpe.c misc/feclearexcept.c misc/fegetenv.c \
@@ -2856,13 +2855,15 @@ am__libarm32_libmingwex_a_SOURCES_DIST = crt/dllentry.c crt/dllmain.c \
 	stdio/vscanf.c stdio/vsnprintf.c stdio/vsnprintf_s.c \
 	stdio/vsnwprintf.c stdio/vsscanf.c stdio/vswscanf.c \
 	stdio/vwscanf.c stdio/wtoll.c stdio/mingw_asprintf.c \
-	stdio/mingw_vasprintf.c math/DFP/__fpclassifyd32.c \
-	math/DFP/__fpclassifyd64.c math/DFP/__fpclassifyd128.c \
-	math/DFP/__isnand32.c math/DFP/__isnand64.c \
-	math/DFP/__isnand128.c math/DFP/__signbitd32.c \
-	math/DFP/__signbitd64.c math/DFP/__signbitd128.c \
-	math/DFP/isinfd32.c math/DFP/isinfd64.c math/DFP/isinfd128.c
-am__objects_76 = crt/libarm32_libmingwex_a-dllentry.$(OBJEXT) \
+	stdio/mingw_vasprintf.c math/softmath/e_fmodf.c \
+	math/softmath/e_powf.c math/softmath/cosf.c \
+	math/DFP/__fpclassifyd32.c math/DFP/__fpclassifyd64.c \
+	math/DFP/__fpclassifyd128.c math/DFP/__isnand32.c \
+	math/DFP/__isnand64.c math/DFP/__isnand128.c \
+	math/DFP/__signbitd32.c math/DFP/__signbitd64.c \
+	math/DFP/__signbitd128.c math/DFP/isinfd32.c \
+	math/DFP/isinfd64.c math/DFP/isinfd128.c
+am__objects_78 = crt/libarm32_libmingwex_a-dllentry.$(OBJEXT) \
 	crt/libarm32_libmingwex_a-dllmain.$(OBJEXT) \
 	complex/libarm32_libmingwex_a-cabs.$(OBJEXT) \
 	complex/libarm32_libmingwex_a-cabsf.$(OBJEXT) \
@@ -2999,7 +3000,6 @@ am__objects_76 = crt/libarm32_libmingwex_a-dllentry.$(OBJEXT) \
 	math/libarm32_libmingwex_a-copysign.$(OBJEXT) \
 	math/libarm32_libmingwex_a-copysignf.$(OBJEXT) \
 	math/libarm32_libmingwex_a-cos.$(OBJEXT) \
-	math/libarm32_libmingwex_a-cosf.$(OBJEXT) \
 	math/libarm32_libmingwex_a-coshf.$(OBJEXT) \
 	math/libarm32_libmingwex_a-coshl.$(OBJEXT) \
 	math/libarm32_libmingwex_a-cosl.$(OBJEXT) \
@@ -3273,7 +3273,11 @@ am__objects_76 = crt/libarm32_libmingwex_a-dllentry.$(OBJEXT) \
 	stdio/libarm32_libmingwex_a-wtoll.$(OBJEXT) \
 	stdio/libarm32_libmingwex_a-mingw_asprintf.$(OBJEXT) \
 	stdio/libarm32_libmingwex_a-mingw_vasprintf.$(OBJEXT)
-@ENABLE_DFP_TRUE@am__objects_77 = math/DFP/libarm32_libmingwex_a-__fpclassifyd32.$(OBJEXT) \
+am__objects_79 =  \
+	math/softmath/libarm32_libmingwex_a-e_fmodf.$(OBJEXT) \
+	math/softmath/libarm32_libmingwex_a-e_powf.$(OBJEXT) \
+	math/softmath/libarm32_libmingwex_a-cosf.$(OBJEXT)
+@ENABLE_DFP_TRUE@am__objects_80 = math/DFP/libarm32_libmingwex_a-__fpclassifyd32.$(OBJEXT) \
 @ENABLE_DFP_TRUE@	math/DFP/libarm32_libmingwex_a-__fpclassifyd64.$(OBJEXT) \
 @ENABLE_DFP_TRUE@	math/DFP/libarm32_libmingwex_a-__fpclassifyd128.$(OBJEXT) \
 @ENABLE_DFP_TRUE@	math/DFP/libarm32_libmingwex_a-__isnand32.$(OBJEXT) \
@@ -3286,24 +3290,25 @@ am__objects_76 = crt/libarm32_libmingwex_a-dllentry.$(OBJEXT) \
 @ENABLE_DFP_TRUE@	math/DFP/libarm32_libmingwex_a-isinfd64.$(OBJEXT) \
 @ENABLE_DFP_TRUE@	math/DFP/libarm32_libmingwex_a-isinfd128.$(OBJEXT)
 @LIBARM32_TRUE@@W32API_FALSE@am_libarm32_libmingwex_a_OBJECTS =  \
-@LIBARM32_TRUE@@W32API_FALSE@	$(am__objects_76) \
-@LIBARM32_TRUE@@W32API_FALSE@	$(am__objects_77)
+@LIBARM32_TRUE@@W32API_FALSE@	$(am__objects_78) \
+@LIBARM32_TRUE@@W32API_FALSE@	$(am__objects_79) \
+@LIBARM32_TRUE@@W32API_FALSE@	$(am__objects_80)
 libarm32_libmingwex_a_OBJECTS = $(am_libarm32_libmingwex_a_OBJECTS)
 libarm32_libmingwthrd_a_AR = $(AR) $(ARFLAGS)
 libarm32_libmingwthrd_a_LIBADD =
 am__libarm32_libmingwthrd_a_SOURCES_DIST = libsrc/mingwthrd_mt.c
-am__objects_78 =  \
+am__objects_81 =  \
 	libsrc/libarm32_libmingwthrd_a-mingwthrd_mt.$(OBJEXT)
 @LIBARM32_TRUE@@W32API_FALSE@am_libarm32_libmingwthrd_a_OBJECTS =  \
-@LIBARM32_TRUE@@W32API_FALSE@	$(am__objects_78)
+@LIBARM32_TRUE@@W32API_FALSE@	$(am__objects_81)
 libarm32_libmingwthrd_a_OBJECTS =  \
 	$(am_libarm32_libmingwthrd_a_OBJECTS)
 libarm32_libmoldname_a_AR = $(AR) $(ARFLAGS)
 libarm32_libmoldname_a_LIBADD =
 am__libarm32_libmoldname_a_SOURCES_DIST = _libm_dummy.c
-am__objects_79 = libarm32_libmoldname_a-_libm_dummy.$(OBJEXT)
+am__objects_82 = libarm32_libmoldname_a-_libm_dummy.$(OBJEXT)
 @LIBARM32_TRUE@@W32API_FALSE@am_libarm32_libmoldname_a_OBJECTS =  \
-@LIBARM32_TRUE@@W32API_FALSE@	$(am__objects_79)
+@LIBARM32_TRUE@@W32API_FALSE@	$(am__objects_82)
 libarm32_libmoldname_a_OBJECTS = $(am_libarm32_libmoldname_a_OBJECTS)
 libarm32_libmsvcrt_a_LIBADD =
 am__libarm32_libmsvcrt_a_SOURCES_DIST =  \
@@ -3322,7 +3327,7 @@ am__libarm32_libmsvcrt_a_SOURCES_DIST =  \
 	secapi/_wstrdate_s.c secapi/asctime_s.c secapi/memcpy_s.c \
 	secapi/rand_s.c secapi/sprintf_s.c secapi/strerror_s.c \
 	secapi/vsprintf_s.c secapi/wmemcpy_s.c misc/lc_locale_func.c
-am__objects_80 =  \
+am__objects_83 =  \
 	misc/libarm32_libmsvcrt_a-invalid_parameter_handler.$(OBJEXT) \
 	misc/libarm32_libmsvcrt_a-output_format.$(OBJEXT) \
 	misc/libarm32_libmsvcrt_a-purecall.$(OBJEXT) \
@@ -3362,50 +3367,50 @@ am__objects_80 =  \
 	secapi/libarm32_libmsvcrt_a-strerror_s.$(OBJEXT) \
 	secapi/libarm32_libmsvcrt_a-vsprintf_s.$(OBJEXT) \
 	secapi/libarm32_libmsvcrt_a-wmemcpy_s.$(OBJEXT)
-am__objects_81 = $(am__objects_80) \
+am__objects_84 = $(am__objects_83) \
 	misc/libarm32_libmsvcrt_a-lc_locale_func.$(OBJEXT)
 @LIBARM32_TRUE@@W32API_FALSE@am_libarm32_libmsvcrt_a_OBJECTS =  \
-@LIBARM32_TRUE@@W32API_FALSE@	$(am__objects_81)
+@LIBARM32_TRUE@@W32API_FALSE@	$(am__objects_84)
 libarm32_libmsvcrt_a_OBJECTS = $(am_libarm32_libmsvcrt_a_OBJECTS)
 libarm32_libportabledeviceguids_a_AR = $(AR) $(ARFLAGS)
 libarm32_libportabledeviceguids_a_LIBADD =
 am__libarm32_libportabledeviceguids_a_SOURCES_DIST =  \
 	libsrc/portabledeviceguids.c
-am__objects_82 = libsrc/libarm32_libportabledeviceguids_a-portabledeviceguids.$(OBJEXT)
+am__objects_85 = libsrc/libarm32_libportabledeviceguids_a-portabledeviceguids.$(OBJEXT)
 @LIBARM32_TRUE@am_libarm32_libportabledeviceguids_a_OBJECTS =  \
-@LIBARM32_TRUE@	$(am__objects_82)
+@LIBARM32_TRUE@	$(am__objects_85)
 libarm32_libportabledeviceguids_a_OBJECTS =  \
 	$(am_libarm32_libportabledeviceguids_a_OBJECTS)
 libarm32_libscrnsave_a_AR = $(AR) $(ARFLAGS)
 libarm32_libscrnsave_a_LIBADD =
 am__libarm32_libscrnsave_a_SOURCES_DIST = libsrc/scrnsave.c
-am__objects_83 = libsrc/libarm32_libscrnsave_a-scrnsave.$(OBJEXT)
-@LIBARM32_TRUE@am_libarm32_libscrnsave_a_OBJECTS = $(am__objects_83)
+am__objects_86 = libsrc/libarm32_libscrnsave_a-scrnsave.$(OBJEXT)
+@LIBARM32_TRUE@am_libarm32_libscrnsave_a_OBJECTS = $(am__objects_86)
 libarm32_libscrnsave_a_OBJECTS = $(am_libarm32_libscrnsave_a_OBJECTS)
 libarm32_libscrnsavw_a_AR = $(AR) $(ARFLAGS)
 libarm32_libscrnsavw_a_LIBADD =
 am__libarm32_libscrnsavw_a_SOURCES_DIST = libsrc/scrnsave.c
-am__objects_84 = libsrc/libarm32_libscrnsavw_a-scrnsave.$(OBJEXT)
-@LIBARM32_TRUE@am_libarm32_libscrnsavw_a_OBJECTS = $(am__objects_84)
+am__objects_87 = libsrc/libarm32_libscrnsavw_a-scrnsave.$(OBJEXT)
+@LIBARM32_TRUE@am_libarm32_libscrnsavw_a_OBJECTS = $(am__objects_87)
 libarm32_libscrnsavw_a_OBJECTS = $(am_libarm32_libscrnsavw_a_OBJECTS)
 libarm32_libsensorsapi_a_AR = $(AR) $(ARFLAGS)
 libarm32_libsensorsapi_a_LIBADD =
 am__libarm32_libsensorsapi_a_SOURCES_DIST = libsrc/sensorsapi.c
-am__objects_85 = libsrc/libarm32_libsensorsapi_a-sensorsapi.$(OBJEXT)
+am__objects_88 = libsrc/libarm32_libsensorsapi_a-sensorsapi.$(OBJEXT)
 @LIBARM32_TRUE@am_libarm32_libsensorsapi_a_OBJECTS =  \
-@LIBARM32_TRUE@	$(am__objects_85)
+@LIBARM32_TRUE@	$(am__objects_88)
 libarm32_libsensorsapi_a_OBJECTS =  \
 	$(am_libarm32_libsensorsapi_a_OBJECTS)
 libarm32_libshell32_a_LIBADD =
 am__libarm32_libshell32_a_SOURCES_DIST = libsrc/shell32.c
-am__objects_86 = libsrc/libarm32_libshell32_a-shell32.$(OBJEXT)
-@LIBARM32_TRUE@am_libarm32_libshell32_a_OBJECTS = $(am__objects_86)
+am__objects_89 = libsrc/libarm32_libshell32_a-shell32.$(OBJEXT)
+@LIBARM32_TRUE@am_libarm32_libshell32_a_OBJECTS = $(am__objects_89)
 libarm32_libshell32_a_OBJECTS = $(am_libarm32_libshell32_a_OBJECTS)
 libarm32_libstrmiids_a_AR = $(AR) $(ARFLAGS)
 libarm32_libstrmiids_a_LIBADD =
 am__libarm32_libstrmiids_a_SOURCES_DIST = libsrc/strmiids.c
-am__objects_87 = libsrc/libarm32_libstrmiids_a-strmiids.$(OBJEXT)
-@LIBARM32_TRUE@am_libarm32_libstrmiids_a_OBJECTS = $(am__objects_87)
+am__objects_90 = libsrc/libarm32_libstrmiids_a-strmiids.$(OBJEXT)
+@LIBARM32_TRUE@am_libarm32_libstrmiids_a_OBJECTS = $(am__objects_90)
 libarm32_libstrmiids_a_OBJECTS = $(am_libarm32_libstrmiids_a_OBJECTS)
 libarm32_libuuid_a_AR = $(AR) $(ARFLAGS)
 libarm32_libuuid_a_LIBADD =
@@ -3426,7 +3431,7 @@ am__libarm32_libuuid_a_SOURCES_DIST = libsrc/ativscp-uuid.c \
 	libsrc/power-uuid.c libsrc/powrprof-uuid.c \
 	libsrc/usbcamdi-uuid.c libsrc/usbiodef-uuid.c libsrc/uuid.c \
 	libsrc/vds-uuid.c libsrc/virtdisk-uuid.c libsrc/wia-uuid.c
-am__objects_88 = libsrc/libarm32_libuuid_a-ativscp-uuid.$(OBJEXT) \
+am__objects_91 = libsrc/libarm32_libuuid_a-ativscp-uuid.$(OBJEXT) \
 	libsrc/libarm32_libuuid_a-atsmedia-uuid.$(OBJEXT) \
 	libsrc/libarm32_libuuid_a-bth-uuid.$(OBJEXT) \
 	libsrc/libarm32_libuuid_a-cguid-uuid.$(OBJEXT) \
@@ -3468,31 +3473,31 @@ am__objects_88 = libsrc/libarm32_libuuid_a-ativscp-uuid.$(OBJEXT) \
 	libsrc/libarm32_libuuid_a-vds-uuid.$(OBJEXT) \
 	libsrc/libarm32_libuuid_a-virtdisk-uuid.$(OBJEXT) \
 	libsrc/libarm32_libuuid_a-wia-uuid.$(OBJEXT)
-@LIBARM32_TRUE@am_libarm32_libuuid_a_OBJECTS = $(am__objects_88)
+@LIBARM32_TRUE@am_libarm32_libuuid_a_OBJECTS = $(am__objects_91)
 libarm32_libuuid_a_OBJECTS = $(am_libarm32_libuuid_a_OBJECTS)
 libarm32_libwbemuuid_a_AR = $(AR) $(ARFLAGS)
 libarm32_libwbemuuid_a_LIBADD =
 am__libarm32_libwbemuuid_a_SOURCES_DIST = libsrc/wbemuuid.c
-am__objects_89 = libsrc/libarm32_libwbemuuid_a-wbemuuid.$(OBJEXT)
-@LIBARM32_TRUE@am_libarm32_libwbemuuid_a_OBJECTS = $(am__objects_89)
+am__objects_92 = libsrc/libarm32_libwbemuuid_a-wbemuuid.$(OBJEXT)
+@LIBARM32_TRUE@am_libarm32_libwbemuuid_a_OBJECTS = $(am__objects_92)
 libarm32_libwbemuuid_a_OBJECTS = $(am_libarm32_libwbemuuid_a_OBJECTS)
 libarm32_libwindowscodecs_a_AR = $(AR) $(ARFLAGS)
 libarm32_libwindowscodecs_a_LIBADD =
 am__libarm32_libwindowscodecs_a_SOURCES_DIST = libsrc/windowscodecs.c
-am__objects_90 =  \
+am__objects_93 =  \
 	libsrc/libarm32_libwindowscodecs_a-windowscodecs.$(OBJEXT)
 @LIBARM32_TRUE@am_libarm32_libwindowscodecs_a_OBJECTS =  \
-@LIBARM32_TRUE@	$(am__objects_90)
+@LIBARM32_TRUE@	$(am__objects_93)
 libarm32_libwindowscodecs_a_OBJECTS =  \
 	$(am_libarm32_libwindowscodecs_a_OBJECTS)
 libarm32_libwmcodecdspuuid_a_AR = $(AR) $(ARFLAGS)
 libarm32_libwmcodecdspuuid_a_LIBADD =
 am__libarm32_libwmcodecdspuuid_a_SOURCES_DIST =  \
 	libsrc/wmcodecdspuuid.c
-am__objects_91 =  \
+am__objects_94 =  \
 	libsrc/libarm32_libwmcodecdspuuid_a-wmcodecdspuuid.$(OBJEXT)
 @LIBARM32_TRUE@am_libarm32_libwmcodecdspuuid_a_OBJECTS =  \
-@LIBARM32_TRUE@	$(am__objects_91)
+@LIBARM32_TRUE@	$(am__objects_94)
 libarm32_libwmcodecdspuuid_a_OBJECTS =  \
 	$(am_libarm32_libwmcodecdspuuid_a_OBJECTS)
 libarm32_libws2_32_a_LIBADD =
@@ -3530,7 +3535,7 @@ am__libarm32_libws2_32_a_SOURCES_DIST = libsrc/ws2_32.c \
 	libsrc/wspiapi/WspiapiGetAddrInfo.c \
 	libsrc/wspiapi/WspiapiGetNameInfo.c \
 	libsrc/wspiapi/WspiapiFreeAddrInfo.c
-am__objects_92 = libsrc/libarm32_libws2_32_a-ws2_32.$(OBJEXT) \
+am__objects_95 = libsrc/libarm32_libws2_32_a-ws2_32.$(OBJEXT) \
 	libsrc/ws2tcpip/libarm32_libws2_32_a-in6_addr_equal.$(OBJEXT) \
 	libsrc/ws2tcpip/libarm32_libws2_32_a-in6addr_isany.$(OBJEXT) \
 	libsrc/ws2tcpip/libarm32_libws2_32_a-in6addr_isloopback.$(OBJEXT) \
@@ -3565,7 +3570,7 @@ am__objects_92 = libsrc/libarm32_libws2_32_a-ws2_32.$(OBJEXT) \
 	libsrc/wspiapi/libarm32_libws2_32_a-WspiapiGetAddrInfo.$(OBJEXT) \
 	libsrc/wspiapi/libarm32_libws2_32_a-WspiapiGetNameInfo.$(OBJEXT) \
 	libsrc/wspiapi/libarm32_libws2_32_a-WspiapiFreeAddrInfo.$(OBJEXT)
-@LIBARM32_TRUE@am_libarm32_libws2_32_a_OBJECTS = $(am__objects_92)
+@LIBARM32_TRUE@am_libarm32_libws2_32_a_OBJECTS = $(am__objects_95)
 libarm32_libws2_32_a_OBJECTS = $(am_libarm32_libws2_32_a_OBJECTS)
 tests32_libnewcomplextests_a_AR = $(AR) $(ARFLAGS)
 tests32_libnewcomplextests_a_LIBADD =
@@ -3582,7 +3587,7 @@ am__tests32_libnewcomplextests_a_SOURCES_DIST =  \
 	testcases/complex/csin.c testcases/complex/csinh.c \
 	testcases/complex/csqrt.c testcases/complex/ctan.c \
 	testcases/complex/ctanh.c
-am__objects_93 =  \
+am__objects_96 =  \
 	testcases/complex/tests32_libnewcomplextests_a-cabs.$(OBJEXT) \
 	testcases/complex/tests32_libnewcomplextests_a-cacos.$(OBJEXT) \
 	testcases/complex/tests32_libnewcomplextests_a-cacosh.$(OBJEXT) \
@@ -3606,7 +3611,7 @@ am__objects_93 =  \
 	testcases/complex/tests32_libnewcomplextests_a-ctan.$(OBJEXT) \
 	testcases/complex/tests32_libnewcomplextests_a-ctanh.$(OBJEXT)
 @LIB32_TRUE@am_tests32_libnewcomplextests_a_OBJECTS =  \
-@LIB32_TRUE@	$(am__objects_93)
+@LIB32_TRUE@	$(am__objects_96)
 tests32_libnewcomplextests_a_OBJECTS =  \
 	$(am_tests32_libnewcomplextests_a_OBJECTS)
 tests32_libnewcomplextestsf_a_AR = $(AR) $(ARFLAGS)
@@ -3624,7 +3629,7 @@ am__tests32_libnewcomplextestsf_a_SOURCES_DIST =  \
 	testcases/complex/csin.c testcases/complex/csinh.c \
 	testcases/complex/csqrt.c testcases/complex/ctan.c \
 	testcases/complex/ctanh.c
-am__objects_94 = testcases/complex/tests32_libnewcomplextestsf_a-cabs.$(OBJEXT) \
+am__objects_97 = testcases/complex/tests32_libnewcomplextestsf_a-cabs.$(OBJEXT) \
 	testcases/complex/tests32_libnewcomplextestsf_a-cacos.$(OBJEXT) \
 	testcases/complex/tests32_libnewcomplextestsf_a-cacosh.$(OBJEXT) \
 	testcases/complex/tests32_libnewcomplextestsf_a-carg.$(OBJEXT) \
@@ -3647,7 +3652,7 @@ am__objects_94 = testcases/complex/tests32_libnewcomplextestsf_a-cabs.$(OBJEXT) 
 	testcases/complex/tests32_libnewcomplextestsf_a-ctan.$(OBJEXT) \
 	testcases/complex/tests32_libnewcomplextestsf_a-ctanh.$(OBJEXT)
 @LIB32_TRUE@am_tests32_libnewcomplextestsf_a_OBJECTS =  \
-@LIB32_TRUE@	$(am__objects_94)
+@LIB32_TRUE@	$(am__objects_97)
 tests32_libnewcomplextestsf_a_OBJECTS =  \
 	$(am_tests32_libnewcomplextestsf_a_OBJECTS)
 tests32_libnewcomplextestsld_a_AR = $(AR) $(ARFLAGS)
@@ -3665,7 +3670,7 @@ am__tests32_libnewcomplextestsld_a_SOURCES_DIST =  \
 	testcases/complex/csin.c testcases/complex/csinh.c \
 	testcases/complex/csqrt.c testcases/complex/ctan.c \
 	testcases/complex/ctanh.c
-am__objects_95 = testcases/complex/tests32_libnewcomplextestsld_a-cabs.$(OBJEXT) \
+am__objects_98 = testcases/complex/tests32_libnewcomplextestsld_a-cabs.$(OBJEXT) \
 	testcases/complex/tests32_libnewcomplextestsld_a-cacos.$(OBJEXT) \
 	testcases/complex/tests32_libnewcomplextestsld_a-cacosh.$(OBJEXT) \
 	testcases/complex/tests32_libnewcomplextestsld_a-carg.$(OBJEXT) \
@@ -3688,7 +3693,7 @@ am__objects_95 = testcases/complex/tests32_libnewcomplextestsld_a-cabs.$(OBJEXT)
 	testcases/complex/tests32_libnewcomplextestsld_a-ctan.$(OBJEXT) \
 	testcases/complex/tests32_libnewcomplextestsld_a-ctanh.$(OBJEXT)
 @LIB32_TRUE@am_tests32_libnewcomplextestsld_a_OBJECTS =  \
-@LIB32_TRUE@	$(am__objects_95)
+@LIB32_TRUE@	$(am__objects_98)
 tests32_libnewcomplextestsld_a_OBJECTS =  \
 	$(am_tests32_libnewcomplextestsld_a_OBJECTS)
 tests64_libnewcomplextests_a_AR = $(AR) $(ARFLAGS)
@@ -3706,7 +3711,7 @@ am__tests64_libnewcomplextests_a_SOURCES_DIST =  \
 	testcases/complex/csin.c testcases/complex/csinh.c \
 	testcases/complex/csqrt.c testcases/complex/ctan.c \
 	testcases/complex/ctanh.c
-am__objects_96 =  \
+am__objects_99 =  \
 	testcases/complex/tests64_libnewcomplextests_a-cabs.$(OBJEXT) \
 	testcases/complex/tests64_libnewcomplextests_a-cacos.$(OBJEXT) \
 	testcases/complex/tests64_libnewcomplextests_a-cacosh.$(OBJEXT) \
@@ -3730,7 +3735,7 @@ am__objects_96 =  \
 	testcases/complex/tests64_libnewcomplextests_a-ctan.$(OBJEXT) \
 	testcases/complex/tests64_libnewcomplextests_a-ctanh.$(OBJEXT)
 @LIB64_TRUE@am_tests64_libnewcomplextests_a_OBJECTS =  \
-@LIB64_TRUE@	$(am__objects_96)
+@LIB64_TRUE@	$(am__objects_99)
 tests64_libnewcomplextests_a_OBJECTS =  \
 	$(am_tests64_libnewcomplextests_a_OBJECTS)
 tests64_libnewcomplextestsf_a_AR = $(AR) $(ARFLAGS)
@@ -3748,7 +3753,7 @@ am__tests64_libnewcomplextestsf_a_SOURCES_DIST =  \
 	testcases/complex/csin.c testcases/complex/csinh.c \
 	testcases/complex/csqrt.c testcases/complex/ctan.c \
 	testcases/complex/ctanh.c
-am__objects_97 = testcases/complex/tests64_libnewcomplextestsf_a-cabs.$(OBJEXT) \
+am__objects_100 = testcases/complex/tests64_libnewcomplextestsf_a-cabs.$(OBJEXT) \
 	testcases/complex/tests64_libnewcomplextestsf_a-cacos.$(OBJEXT) \
 	testcases/complex/tests64_libnewcomplextestsf_a-cacosh.$(OBJEXT) \
 	testcases/complex/tests64_libnewcomplextestsf_a-carg.$(OBJEXT) \
@@ -3771,7 +3776,7 @@ am__objects_97 = testcases/complex/tests64_libnewcomplextestsf_a-cabs.$(OBJEXT) 
 	testcases/complex/tests64_libnewcomplextestsf_a-ctan.$(OBJEXT) \
 	testcases/complex/tests64_libnewcomplextestsf_a-ctanh.$(OBJEXT)
 @LIB64_TRUE@am_tests64_libnewcomplextestsf_a_OBJECTS =  \
-@LIB64_TRUE@	$(am__objects_97)
+@LIB64_TRUE@	$(am__objects_100)
 tests64_libnewcomplextestsf_a_OBJECTS =  \
 	$(am_tests64_libnewcomplextestsf_a_OBJECTS)
 tests64_libnewcomplextestsld_a_AR = $(AR) $(ARFLAGS)
@@ -3789,7 +3794,7 @@ am__tests64_libnewcomplextestsld_a_SOURCES_DIST =  \
 	testcases/complex/csin.c testcases/complex/csinh.c \
 	testcases/complex/csqrt.c testcases/complex/ctan.c \
 	testcases/complex/ctanh.c
-am__objects_98 = testcases/complex/tests64_libnewcomplextestsld_a-cabs.$(OBJEXT) \
+am__objects_101 = testcases/complex/tests64_libnewcomplextestsld_a-cabs.$(OBJEXT) \
 	testcases/complex/tests64_libnewcomplextestsld_a-cacos.$(OBJEXT) \
 	testcases/complex/tests64_libnewcomplextestsld_a-cacosh.$(OBJEXT) \
 	testcases/complex/tests64_libnewcomplextestsld_a-carg.$(OBJEXT) \
@@ -3812,7 +3817,7 @@ am__objects_98 = testcases/complex/tests64_libnewcomplextestsld_a-cabs.$(OBJEXT)
 	testcases/complex/tests64_libnewcomplextestsld_a-ctan.$(OBJEXT) \
 	testcases/complex/tests64_libnewcomplextestsld_a-ctanh.$(OBJEXT)
 @LIB64_TRUE@am_tests64_libnewcomplextestsld_a_OBJECTS =  \
-@LIB64_TRUE@	$(am__objects_98)
+@LIB64_TRUE@	$(am__objects_101)
 tests64_libnewcomplextestsld_a_OBJECTS =  \
 	$(am_tests64_libnewcomplextestsld_a_OBJECTS)
 @ENABLE_TESTS_UNICODE_TRUE@am__EXEEXT_1 =  \
@@ -5056,6 +5061,8 @@ src_msvcrt32 = \
   $(src_msvcrt) \
   misc/lc_locale_func.c
 
+
+# These mingwex sources are target independent:
 src_libmingwex = \
   crt/dllentry.c        crt/dllmain.c \
   \
@@ -5090,7 +5097,7 @@ src_libmingwex = \
   math/asinh.c          math/asinhf.c      math/asinhl.c         math/asinl.c         math/atan2f.c        math/atan2l.c        \
   math/atanf.c          math/atanh.c       math/atanhf.c         math/atanhl.c        math/atanl.c         math/cbrt.c          \
   math/cbrtf.c          math/cbrtl.c       math/cephes_emath.c   math/copysign.c      math/copysignf.c     math/cos.c           \
-  math/cosf.c           math/coshf.c       math/coshl.c          math/cosl.c          math/cossin.c        math/erfl.c          \
+  math/coshf.c          math/coshl.c       math/cosl.c           math/cossin.c        math/erfl.c          \
   math/exp.c            math/expf.c        math/expl.c           math/expm1.c         math/expm1f.c        math/expm1l.c        \
   math/fabs.c           math/fabsf.c       math/fabsl.c          math/fdim.c          math/fdimf.c         math/fdiml.c         \
   math/fmal.c           math/fmax.c        math/fmaxf.c          math/fmaxl.c         math/fmin.c          math/fminf.c         \
@@ -5152,6 +5159,22 @@ src_libmingwex = \
   stdio/ulltoa.c           stdio/ulltow.c            stdio/vasprintf.c        stdio/vfscanf.c           stdio/vfwscanf.c        \
   stdio/vscanf.c           stdio/vsnprintf.c         stdio/vsnprintf_s.c      stdio/vsnwprintf.c        stdio/vsscanf.c         \
   stdio/vswscanf.c         stdio/vwscanf.c           stdio/wtoll.c            stdio/mingw_asprintf.c    stdio/mingw_vasprintf.c
+
+
+# these only go into the 64 bit version:
+src_libmingwex64 = \
+  math/cosf.c
+
+
+# these only go into the 32 bit version:
+src_libmingwex32 = \
+  math/cosf.c
+
+
+# these only go into the ARM32 version:
+src_libmingwexarm32 = \
+  math/softmath/e_fmodf.c   math/softmath/e_powf.c    \
+  math/softmath/cosf.c
 
 
 # These intrinsics are target independent:
@@ -5320,7 +5343,7 @@ winrtlibs = \
 @LIB32_TRUE@@W32API_FALSE@lib32_libmingw32_a_CPPFLAGS = $(CPPFLAGS32) -D_SYSCRT=1 -DCRTDLL=1 $(extra_include) $(AM_CPPFLAGS)
 @LIB32_TRUE@@W32API_FALSE@lib32_libmingw32_a_SOURCES = $(src_libmingw32)
 @LIB32_TRUE@@W32API_FALSE@lib32_libmingwex_a_CPPFLAGS = $(CPPFLAGS32) $(extra_include) $(AM_CPPFLAGS)
-@LIB32_TRUE@@W32API_FALSE@lib32_libmingwex_a_SOURCES = $(src_libmingwex) $(src_dfp_math)
+@LIB32_TRUE@@W32API_FALSE@lib32_libmingwex_a_SOURCES = $(src_libmingwex) $(src_libmingwex32) $(src_dfp_math)
 @LIB32_TRUE@@W32API_FALSE@lib32_libmingwex_a_LIBADD = $(obj_dfpsrc32)
 @LIB32_TRUE@@W32API_FALSE@lib32_libmoldname_a_CPPFLAGS = $(CPPFLAGS32) $(extra_include) $(AM_CPPFLAGS)
 @LIB32_TRUE@@W32API_FALSE@lib32_libmoldname_a_SOURCES = $(src_libm)
@@ -5604,7 +5627,7 @@ winrtlibs = \
 @LIB64_TRUE@@W32API_FALSE@lib64_libmingw32_a_CPPFLAGS = $(CPPFLAGS64) -D_SYSCRT=1 -DCRTDLL=1 $(extra_include) $(AM_CPPFLAGS)
 @LIB64_TRUE@@W32API_FALSE@lib64_libmingw32_a_SOURCES = $(src_libmingw32)
 @LIB64_TRUE@@W32API_FALSE@lib64_libmingwex_a_CPPFLAGS = $(CPPFLAGS64) $(extra_include) $(AM_CPPFLAGS)
-@LIB64_TRUE@@W32API_FALSE@lib64_libmingwex_a_SOURCES = $(src_libmingwex) $(src_dfp_math)
+@LIB64_TRUE@@W32API_FALSE@lib64_libmingwex_a_SOURCES = $(src_libmingwex) $(src_libmingwex64) $(src_dfp_math)
 @LIB64_TRUE@@W32API_FALSE@lib64_libmingwex_a_LIBADD = $(obj_dfpsrc64)
 @LIB64_TRUE@@W32API_FALSE@lib64_libmoldname_a_CPPFLAGS = $(CPPFLAGS64) $(extra_include) $(AM_CPPFLAGS)
 @LIB64_TRUE@@W32API_FALSE@lib64_libmoldname_a_SOURCES = $(src_libm)
@@ -6304,7 +6327,7 @@ winrtlibs = \
 @LIBARM32_TRUE@@W32API_FALSE@libarm32_libmingw32_a_CPPFLAGS = $(CPPFLAGSARM32) -D_SYSCRT=1 -DCRTDLL=1 $(extra_include) $(AM_CPPFLAGS)
 @LIBARM32_TRUE@@W32API_FALSE@libarm32_libmingw32_a_SOURCES = $(src_libmingw32)
 @LIBARM32_TRUE@@W32API_FALSE@libarm32_libmingwex_a_CPPFLAGS = $(CPPFLAGSARM32) $(extra_include) $(AM_CPPFLAGS)
-@LIBARM32_TRUE@@W32API_FALSE@libarm32_libmingwex_a_SOURCES = $(src_libmingwex) $(src_dfp_math)
+@LIBARM32_TRUE@@W32API_FALSE@libarm32_libmingwex_a_SOURCES = $(src_libmingwex) $(src_libmingwexarm32) $(src_dfp_math)
 @LIBARM32_TRUE@@W32API_FALSE@libarm32_libmingwex_a_LIBADD = $(obj_dfpsrc32)
 @LIBARM32_TRUE@@W32API_FALSE@libarm32_libmoldname_a_CPPFLAGS = $(CPPFLAGSARM32) $(extra_include) $(AM_CPPFLAGS)
 @LIBARM32_TRUE@@W32API_FALSE@libarm32_libmoldname_a_SOURCES = $(src_libm)
@@ -8327,8 +8350,6 @@ math/lib32_libmingwex_a-copysignf.$(OBJEXT): math/$(am__dirstamp) \
 	math/$(DEPDIR)/$(am__dirstamp)
 math/lib32_libmingwex_a-cos.$(OBJEXT): math/$(am__dirstamp) \
 	math/$(DEPDIR)/$(am__dirstamp)
-math/lib32_libmingwex_a-cosf.$(OBJEXT): math/$(am__dirstamp) \
-	math/$(DEPDIR)/$(am__dirstamp)
 math/lib32_libmingwex_a-coshf.$(OBJEXT): math/$(am__dirstamp) \
 	math/$(DEPDIR)/$(am__dirstamp)
 math/lib32_libmingwex_a-coshl.$(OBJEXT): math/$(am__dirstamp) \
@@ -8887,6 +8908,8 @@ stdio/lib32_libmingwex_a-mingw_asprintf.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
 stdio/lib32_libmingwex_a-mingw_vasprintf.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
+math/lib32_libmingwex_a-cosf.$(OBJEXT): math/$(am__dirstamp) \
+	math/$(DEPDIR)/$(am__dirstamp)
 math/DFP/$(am__dirstamp):
 	@$(MKDIR_P) math/DFP
 	@: > math/DFP/$(am__dirstamp)
@@ -9951,8 +9974,6 @@ math/lib64_libmingwex_a-copysignf.$(OBJEXT): math/$(am__dirstamp) \
 	math/$(DEPDIR)/$(am__dirstamp)
 math/lib64_libmingwex_a-cos.$(OBJEXT): math/$(am__dirstamp) \
 	math/$(DEPDIR)/$(am__dirstamp)
-math/lib64_libmingwex_a-cosf.$(OBJEXT): math/$(am__dirstamp) \
-	math/$(DEPDIR)/$(am__dirstamp)
 math/lib64_libmingwex_a-coshf.$(OBJEXT): math/$(am__dirstamp) \
 	math/$(DEPDIR)/$(am__dirstamp)
 math/lib64_libmingwex_a-coshl.$(OBJEXT): math/$(am__dirstamp) \
@@ -10499,6 +10520,8 @@ stdio/lib64_libmingwex_a-mingw_asprintf.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
 stdio/lib64_libmingwex_a-mingw_vasprintf.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
+math/lib64_libmingwex_a-cosf.$(OBJEXT): math/$(am__dirstamp) \
+	math/$(DEPDIR)/$(am__dirstamp)
 math/DFP/lib64_libmingwex_a-__fpclassifyd32.$(OBJEXT):  \
 	math/DFP/$(am__dirstamp) math/DFP/$(DEPDIR)/$(am__dirstamp)
 math/DFP/lib64_libmingwex_a-__fpclassifyd64.$(OBJEXT):  \
@@ -11438,8 +11461,6 @@ math/libarm32_libmingwex_a-copysignf.$(OBJEXT): math/$(am__dirstamp) \
 	math/$(DEPDIR)/$(am__dirstamp)
 math/libarm32_libmingwex_a-cos.$(OBJEXT): math/$(am__dirstamp) \
 	math/$(DEPDIR)/$(am__dirstamp)
-math/libarm32_libmingwex_a-cosf.$(OBJEXT): math/$(am__dirstamp) \
-	math/$(DEPDIR)/$(am__dirstamp)
 math/libarm32_libmingwex_a-coshf.$(OBJEXT): math/$(am__dirstamp) \
 	math/$(DEPDIR)/$(am__dirstamp)
 math/libarm32_libmingwex_a-coshl.$(OBJEXT): math/$(am__dirstamp) \
@@ -11986,6 +12007,21 @@ stdio/libarm32_libmingwex_a-mingw_asprintf.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
 stdio/libarm32_libmingwex_a-mingw_vasprintf.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
+math/softmath/$(am__dirstamp):
+	@$(MKDIR_P) math/softmath
+	@: > math/softmath/$(am__dirstamp)
+math/softmath/$(DEPDIR)/$(am__dirstamp):
+	@$(MKDIR_P) math/softmath/$(DEPDIR)
+	@: > math/softmath/$(DEPDIR)/$(am__dirstamp)
+math/softmath/libarm32_libmingwex_a-e_fmodf.$(OBJEXT):  \
+	math/softmath/$(am__dirstamp) \
+	math/softmath/$(DEPDIR)/$(am__dirstamp)
+math/softmath/libarm32_libmingwex_a-e_powf.$(OBJEXT):  \
+	math/softmath/$(am__dirstamp) \
+	math/softmath/$(DEPDIR)/$(am__dirstamp)
+math/softmath/libarm32_libmingwex_a-cosf.$(OBJEXT):  \
+	math/softmath/$(am__dirstamp) \
+	math/softmath/$(DEPDIR)/$(am__dirstamp)
 math/DFP/libarm32_libmingwex_a-__fpclassifyd32.$(OBJEXT):  \
 	math/DFP/$(am__dirstamp) math/DFP/$(DEPDIR)/$(am__dirstamp)
 math/DFP/libarm32_libmingwex_a-__fpclassifyd64.$(OBJEXT):  \
@@ -13290,6 +13326,7 @@ mostlyclean-compile:
 	-rm -f libsrc/wspiapi/*.$(OBJEXT)
 	-rm -f math/*.$(OBJEXT)
 	-rm -f math/DFP/*.$(OBJEXT)
+	-rm -f math/softmath/*.$(OBJEXT)
 	-rm -f misc/*.$(OBJEXT)
 	-rm -f profile/*.$(OBJEXT)
 	-rm -f secapi/*.$(OBJEXT)
@@ -14529,7 +14566,6 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/libarm32_libmingwex_a-copysignf.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/libarm32_libmingwex_a-copysignl.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/libarm32_libmingwex_a-cos.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/libarm32_libmingwex_a-cosf.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/libarm32_libmingwex_a-coshf.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/libarm32_libmingwex_a-coshl.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/libarm32_libmingwex_a-cosl.Po@am__quote@
@@ -14708,6 +14744,9 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@math/DFP/$(DEPDIR)/libarm32_libmingwex_a-isinfd128.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/DFP/$(DEPDIR)/libarm32_libmingwex_a-isinfd32.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/DFP/$(DEPDIR)/libarm32_libmingwex_a-isinfd64.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@math/softmath/$(DEPDIR)/libarm32_libmingwex_a-cosf.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@math/softmath/$(DEPDIR)/libarm32_libmingwex_a-e_fmodf.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@math/softmath/$(DEPDIR)/libarm32_libmingwex_a-e_powf.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmingwex_a-alarm.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmingwex_a-basename.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmingwex_a-btowc.Po@am__quote@
@@ -20764,20 +20803,6 @@ math/lib32_libmingwex_a-cos.obj: math/cos.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib32_libmingwex_a-cos.obj `if test -f 'math/cos.c'; then $(CYGPATH_W) 'math/cos.c'; else $(CYGPATH_W) '$(srcdir)/math/cos.c'; fi`
 
-math/lib32_libmingwex_a-cosf.o: math/cosf.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib32_libmingwex_a-cosf.o -MD -MP -MF math/$(DEPDIR)/lib32_libmingwex_a-cosf.Tpo -c -o math/lib32_libmingwex_a-cosf.o `test -f 'math/cosf.c' || echo '$(srcdir)/'`math/cosf.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/lib32_libmingwex_a-cosf.Tpo math/$(DEPDIR)/lib32_libmingwex_a-cosf.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/cosf.c' object='math/lib32_libmingwex_a-cosf.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib32_libmingwex_a-cosf.o `test -f 'math/cosf.c' || echo '$(srcdir)/'`math/cosf.c
-
-math/lib32_libmingwex_a-cosf.obj: math/cosf.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib32_libmingwex_a-cosf.obj -MD -MP -MF math/$(DEPDIR)/lib32_libmingwex_a-cosf.Tpo -c -o math/lib32_libmingwex_a-cosf.obj `if test -f 'math/cosf.c'; then $(CYGPATH_W) 'math/cosf.c'; else $(CYGPATH_W) '$(srcdir)/math/cosf.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/lib32_libmingwex_a-cosf.Tpo math/$(DEPDIR)/lib32_libmingwex_a-cosf.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/cosf.c' object='math/lib32_libmingwex_a-cosf.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib32_libmingwex_a-cosf.obj `if test -f 'math/cosf.c'; then $(CYGPATH_W) 'math/cosf.c'; else $(CYGPATH_W) '$(srcdir)/math/cosf.c'; fi`
-
 math/lib32_libmingwex_a-coshf.o: math/coshf.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib32_libmingwex_a-coshf.o -MD -MP -MF math/$(DEPDIR)/lib32_libmingwex_a-coshf.Tpo -c -o math/lib32_libmingwex_a-coshf.o `test -f 'math/coshf.c' || echo '$(srcdir)/'`math/coshf.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/lib32_libmingwex_a-coshf.Tpo math/$(DEPDIR)/lib32_libmingwex_a-coshf.Po
@@ -24501,6 +24526,20 @@ stdio/lib32_libmingwex_a-mingw_vasprintf.obj: stdio/mingw_vasprintf.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/mingw_vasprintf.c' object='stdio/lib32_libmingwex_a-mingw_vasprintf.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/lib32_libmingwex_a-mingw_vasprintf.obj `if test -f 'stdio/mingw_vasprintf.c'; then $(CYGPATH_W) 'stdio/mingw_vasprintf.c'; else $(CYGPATH_W) '$(srcdir)/stdio/mingw_vasprintf.c'; fi`
+
+math/lib32_libmingwex_a-cosf.o: math/cosf.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib32_libmingwex_a-cosf.o -MD -MP -MF math/$(DEPDIR)/lib32_libmingwex_a-cosf.Tpo -c -o math/lib32_libmingwex_a-cosf.o `test -f 'math/cosf.c' || echo '$(srcdir)/'`math/cosf.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/lib32_libmingwex_a-cosf.Tpo math/$(DEPDIR)/lib32_libmingwex_a-cosf.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/cosf.c' object='math/lib32_libmingwex_a-cosf.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib32_libmingwex_a-cosf.o `test -f 'math/cosf.c' || echo '$(srcdir)/'`math/cosf.c
+
+math/lib32_libmingwex_a-cosf.obj: math/cosf.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib32_libmingwex_a-cosf.obj -MD -MP -MF math/$(DEPDIR)/lib32_libmingwex_a-cosf.Tpo -c -o math/lib32_libmingwex_a-cosf.obj `if test -f 'math/cosf.c'; then $(CYGPATH_W) 'math/cosf.c'; else $(CYGPATH_W) '$(srcdir)/math/cosf.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/lib32_libmingwex_a-cosf.Tpo math/$(DEPDIR)/lib32_libmingwex_a-cosf.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/cosf.c' object='math/lib32_libmingwex_a-cosf.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib32_libmingwex_a-cosf.obj `if test -f 'math/cosf.c'; then $(CYGPATH_W) 'math/cosf.c'; else $(CYGPATH_W) '$(srcdir)/math/cosf.c'; fi`
 
 math/DFP/lib32_libmingwex_a-__fpclassifyd32.o: math/DFP/__fpclassifyd32.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/DFP/lib32_libmingwex_a-__fpclassifyd32.o -MD -MP -MF math/DFP/$(DEPDIR)/lib32_libmingwex_a-__fpclassifyd32.Tpo -c -o math/DFP/lib32_libmingwex_a-__fpclassifyd32.o `test -f 'math/DFP/__fpclassifyd32.c' || echo '$(srcdir)/'`math/DFP/__fpclassifyd32.c
@@ -29864,20 +29903,6 @@ math/lib64_libmingwex_a-cos.obj: math/cos.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib64_libmingwex_a-cos.obj `if test -f 'math/cos.c'; then $(CYGPATH_W) 'math/cos.c'; else $(CYGPATH_W) '$(srcdir)/math/cos.c'; fi`
 
-math/lib64_libmingwex_a-cosf.o: math/cosf.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib64_libmingwex_a-cosf.o -MD -MP -MF math/$(DEPDIR)/lib64_libmingwex_a-cosf.Tpo -c -o math/lib64_libmingwex_a-cosf.o `test -f 'math/cosf.c' || echo '$(srcdir)/'`math/cosf.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/lib64_libmingwex_a-cosf.Tpo math/$(DEPDIR)/lib64_libmingwex_a-cosf.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/cosf.c' object='math/lib64_libmingwex_a-cosf.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib64_libmingwex_a-cosf.o `test -f 'math/cosf.c' || echo '$(srcdir)/'`math/cosf.c
-
-math/lib64_libmingwex_a-cosf.obj: math/cosf.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib64_libmingwex_a-cosf.obj -MD -MP -MF math/$(DEPDIR)/lib64_libmingwex_a-cosf.Tpo -c -o math/lib64_libmingwex_a-cosf.obj `if test -f 'math/cosf.c'; then $(CYGPATH_W) 'math/cosf.c'; else $(CYGPATH_W) '$(srcdir)/math/cosf.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/lib64_libmingwex_a-cosf.Tpo math/$(DEPDIR)/lib64_libmingwex_a-cosf.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/cosf.c' object='math/lib64_libmingwex_a-cosf.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib64_libmingwex_a-cosf.obj `if test -f 'math/cosf.c'; then $(CYGPATH_W) 'math/cosf.c'; else $(CYGPATH_W) '$(srcdir)/math/cosf.c'; fi`
-
 math/lib64_libmingwex_a-coshf.o: math/coshf.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib64_libmingwex_a-coshf.o -MD -MP -MF math/$(DEPDIR)/lib64_libmingwex_a-coshf.Tpo -c -o math/lib64_libmingwex_a-coshf.o `test -f 'math/coshf.c' || echo '$(srcdir)/'`math/coshf.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/lib64_libmingwex_a-coshf.Tpo math/$(DEPDIR)/lib64_libmingwex_a-coshf.Po
@@ -33601,6 +33626,20 @@ stdio/lib64_libmingwex_a-mingw_vasprintf.obj: stdio/mingw_vasprintf.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/mingw_vasprintf.c' object='stdio/lib64_libmingwex_a-mingw_vasprintf.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/lib64_libmingwex_a-mingw_vasprintf.obj `if test -f 'stdio/mingw_vasprintf.c'; then $(CYGPATH_W) 'stdio/mingw_vasprintf.c'; else $(CYGPATH_W) '$(srcdir)/stdio/mingw_vasprintf.c'; fi`
+
+math/lib64_libmingwex_a-cosf.o: math/cosf.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib64_libmingwex_a-cosf.o -MD -MP -MF math/$(DEPDIR)/lib64_libmingwex_a-cosf.Tpo -c -o math/lib64_libmingwex_a-cosf.o `test -f 'math/cosf.c' || echo '$(srcdir)/'`math/cosf.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/lib64_libmingwex_a-cosf.Tpo math/$(DEPDIR)/lib64_libmingwex_a-cosf.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/cosf.c' object='math/lib64_libmingwex_a-cosf.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib64_libmingwex_a-cosf.o `test -f 'math/cosf.c' || echo '$(srcdir)/'`math/cosf.c
+
+math/lib64_libmingwex_a-cosf.obj: math/cosf.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib64_libmingwex_a-cosf.obj -MD -MP -MF math/$(DEPDIR)/lib64_libmingwex_a-cosf.Tpo -c -o math/lib64_libmingwex_a-cosf.obj `if test -f 'math/cosf.c'; then $(CYGPATH_W) 'math/cosf.c'; else $(CYGPATH_W) '$(srcdir)/math/cosf.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/lib64_libmingwex_a-cosf.Tpo math/$(DEPDIR)/lib64_libmingwex_a-cosf.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/cosf.c' object='math/lib64_libmingwex_a-cosf.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib64_libmingwex_a-cosf.obj `if test -f 'math/cosf.c'; then $(CYGPATH_W) 'math/cosf.c'; else $(CYGPATH_W) '$(srcdir)/math/cosf.c'; fi`
 
 math/DFP/lib64_libmingwex_a-__fpclassifyd32.o: math/DFP/__fpclassifyd32.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/DFP/lib64_libmingwex_a-__fpclassifyd32.o -MD -MP -MF math/DFP/$(DEPDIR)/lib64_libmingwex_a-__fpclassifyd32.Tpo -c -o math/DFP/lib64_libmingwex_a-__fpclassifyd32.o `test -f 'math/DFP/__fpclassifyd32.c' || echo '$(srcdir)/'`math/DFP/__fpclassifyd32.c
@@ -38376,20 +38415,6 @@ math/libarm32_libmingwex_a-cos.obj: math/cos.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/libarm32_libmingwex_a-cos.obj `if test -f 'math/cos.c'; then $(CYGPATH_W) 'math/cos.c'; else $(CYGPATH_W) '$(srcdir)/math/cos.c'; fi`
 
-math/libarm32_libmingwex_a-cosf.o: math/cosf.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/libarm32_libmingwex_a-cosf.o -MD -MP -MF math/$(DEPDIR)/libarm32_libmingwex_a-cosf.Tpo -c -o math/libarm32_libmingwex_a-cosf.o `test -f 'math/cosf.c' || echo '$(srcdir)/'`math/cosf.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/libarm32_libmingwex_a-cosf.Tpo math/$(DEPDIR)/libarm32_libmingwex_a-cosf.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/cosf.c' object='math/libarm32_libmingwex_a-cosf.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/libarm32_libmingwex_a-cosf.o `test -f 'math/cosf.c' || echo '$(srcdir)/'`math/cosf.c
-
-math/libarm32_libmingwex_a-cosf.obj: math/cosf.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/libarm32_libmingwex_a-cosf.obj -MD -MP -MF math/$(DEPDIR)/libarm32_libmingwex_a-cosf.Tpo -c -o math/libarm32_libmingwex_a-cosf.obj `if test -f 'math/cosf.c'; then $(CYGPATH_W) 'math/cosf.c'; else $(CYGPATH_W) '$(srcdir)/math/cosf.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/libarm32_libmingwex_a-cosf.Tpo math/$(DEPDIR)/libarm32_libmingwex_a-cosf.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/cosf.c' object='math/libarm32_libmingwex_a-cosf.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/libarm32_libmingwex_a-cosf.obj `if test -f 'math/cosf.c'; then $(CYGPATH_W) 'math/cosf.c'; else $(CYGPATH_W) '$(srcdir)/math/cosf.c'; fi`
-
 math/libarm32_libmingwex_a-coshf.o: math/coshf.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/libarm32_libmingwex_a-coshf.o -MD -MP -MF math/$(DEPDIR)/libarm32_libmingwex_a-coshf.Tpo -c -o math/libarm32_libmingwex_a-coshf.o `test -f 'math/coshf.c' || echo '$(srcdir)/'`math/coshf.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/libarm32_libmingwex_a-coshf.Tpo math/$(DEPDIR)/libarm32_libmingwex_a-coshf.Po
@@ -42113,6 +42138,48 @@ stdio/libarm32_libmingwex_a-mingw_vasprintf.obj: stdio/mingw_vasprintf.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/mingw_vasprintf.c' object='stdio/libarm32_libmingwex_a-mingw_vasprintf.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/libarm32_libmingwex_a-mingw_vasprintf.obj `if test -f 'stdio/mingw_vasprintf.c'; then $(CYGPATH_W) 'stdio/mingw_vasprintf.c'; else $(CYGPATH_W) '$(srcdir)/stdio/mingw_vasprintf.c'; fi`
+
+math/softmath/libarm32_libmingwex_a-e_fmodf.o: math/softmath/e_fmodf.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/softmath/libarm32_libmingwex_a-e_fmodf.o -MD -MP -MF math/softmath/$(DEPDIR)/libarm32_libmingwex_a-e_fmodf.Tpo -c -o math/softmath/libarm32_libmingwex_a-e_fmodf.o `test -f 'math/softmath/e_fmodf.c' || echo '$(srcdir)/'`math/softmath/e_fmodf.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/softmath/$(DEPDIR)/libarm32_libmingwex_a-e_fmodf.Tpo math/softmath/$(DEPDIR)/libarm32_libmingwex_a-e_fmodf.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/softmath/e_fmodf.c' object='math/softmath/libarm32_libmingwex_a-e_fmodf.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/softmath/libarm32_libmingwex_a-e_fmodf.o `test -f 'math/softmath/e_fmodf.c' || echo '$(srcdir)/'`math/softmath/e_fmodf.c
+
+math/softmath/libarm32_libmingwex_a-e_fmodf.obj: math/softmath/e_fmodf.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/softmath/libarm32_libmingwex_a-e_fmodf.obj -MD -MP -MF math/softmath/$(DEPDIR)/libarm32_libmingwex_a-e_fmodf.Tpo -c -o math/softmath/libarm32_libmingwex_a-e_fmodf.obj `if test -f 'math/softmath/e_fmodf.c'; then $(CYGPATH_W) 'math/softmath/e_fmodf.c'; else $(CYGPATH_W) '$(srcdir)/math/softmath/e_fmodf.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/softmath/$(DEPDIR)/libarm32_libmingwex_a-e_fmodf.Tpo math/softmath/$(DEPDIR)/libarm32_libmingwex_a-e_fmodf.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/softmath/e_fmodf.c' object='math/softmath/libarm32_libmingwex_a-e_fmodf.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/softmath/libarm32_libmingwex_a-e_fmodf.obj `if test -f 'math/softmath/e_fmodf.c'; then $(CYGPATH_W) 'math/softmath/e_fmodf.c'; else $(CYGPATH_W) '$(srcdir)/math/softmath/e_fmodf.c'; fi`
+
+math/softmath/libarm32_libmingwex_a-e_powf.o: math/softmath/e_powf.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/softmath/libarm32_libmingwex_a-e_powf.o -MD -MP -MF math/softmath/$(DEPDIR)/libarm32_libmingwex_a-e_powf.Tpo -c -o math/softmath/libarm32_libmingwex_a-e_powf.o `test -f 'math/softmath/e_powf.c' || echo '$(srcdir)/'`math/softmath/e_powf.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/softmath/$(DEPDIR)/libarm32_libmingwex_a-e_powf.Tpo math/softmath/$(DEPDIR)/libarm32_libmingwex_a-e_powf.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/softmath/e_powf.c' object='math/softmath/libarm32_libmingwex_a-e_powf.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/softmath/libarm32_libmingwex_a-e_powf.o `test -f 'math/softmath/e_powf.c' || echo '$(srcdir)/'`math/softmath/e_powf.c
+
+math/softmath/libarm32_libmingwex_a-e_powf.obj: math/softmath/e_powf.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/softmath/libarm32_libmingwex_a-e_powf.obj -MD -MP -MF math/softmath/$(DEPDIR)/libarm32_libmingwex_a-e_powf.Tpo -c -o math/softmath/libarm32_libmingwex_a-e_powf.obj `if test -f 'math/softmath/e_powf.c'; then $(CYGPATH_W) 'math/softmath/e_powf.c'; else $(CYGPATH_W) '$(srcdir)/math/softmath/e_powf.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/softmath/$(DEPDIR)/libarm32_libmingwex_a-e_powf.Tpo math/softmath/$(DEPDIR)/libarm32_libmingwex_a-e_powf.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/softmath/e_powf.c' object='math/softmath/libarm32_libmingwex_a-e_powf.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/softmath/libarm32_libmingwex_a-e_powf.obj `if test -f 'math/softmath/e_powf.c'; then $(CYGPATH_W) 'math/softmath/e_powf.c'; else $(CYGPATH_W) '$(srcdir)/math/softmath/e_powf.c'; fi`
+
+math/softmath/libarm32_libmingwex_a-cosf.o: math/softmath/cosf.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/softmath/libarm32_libmingwex_a-cosf.o -MD -MP -MF math/softmath/$(DEPDIR)/libarm32_libmingwex_a-cosf.Tpo -c -o math/softmath/libarm32_libmingwex_a-cosf.o `test -f 'math/softmath/cosf.c' || echo '$(srcdir)/'`math/softmath/cosf.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/softmath/$(DEPDIR)/libarm32_libmingwex_a-cosf.Tpo math/softmath/$(DEPDIR)/libarm32_libmingwex_a-cosf.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/softmath/cosf.c' object='math/softmath/libarm32_libmingwex_a-cosf.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/softmath/libarm32_libmingwex_a-cosf.o `test -f 'math/softmath/cosf.c' || echo '$(srcdir)/'`math/softmath/cosf.c
+
+math/softmath/libarm32_libmingwex_a-cosf.obj: math/softmath/cosf.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/softmath/libarm32_libmingwex_a-cosf.obj -MD -MP -MF math/softmath/$(DEPDIR)/libarm32_libmingwex_a-cosf.Tpo -c -o math/softmath/libarm32_libmingwex_a-cosf.obj `if test -f 'math/softmath/cosf.c'; then $(CYGPATH_W) 'math/softmath/cosf.c'; else $(CYGPATH_W) '$(srcdir)/math/softmath/cosf.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/softmath/$(DEPDIR)/libarm32_libmingwex_a-cosf.Tpo math/softmath/$(DEPDIR)/libarm32_libmingwex_a-cosf.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/softmath/cosf.c' object='math/softmath/libarm32_libmingwex_a-cosf.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/softmath/libarm32_libmingwex_a-cosf.obj `if test -f 'math/softmath/cosf.c'; then $(CYGPATH_W) 'math/softmath/cosf.c'; else $(CYGPATH_W) '$(srcdir)/math/softmath/cosf.c'; fi`
 
 math/DFP/libarm32_libmingwex_a-__fpclassifyd32.o: math/DFP/__fpclassifyd32.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/DFP/libarm32_libmingwex_a-__fpclassifyd32.o -MD -MP -MF math/DFP/$(DEPDIR)/libarm32_libmingwex_a-__fpclassifyd32.Tpo -c -o math/DFP/libarm32_libmingwex_a-__fpclassifyd32.o `test -f 'math/DFP/__fpclassifyd32.c' || echo '$(srcdir)/'`math/DFP/__fpclassifyd32.c
@@ -47732,6 +47799,8 @@ distclean-generic:
 	-rm -f math/$(am__dirstamp)
 	-rm -f math/DFP/$(DEPDIR)/$(am__dirstamp)
 	-rm -f math/DFP/$(am__dirstamp)
+	-rm -f math/softmath/$(DEPDIR)/$(am__dirstamp)
+	-rm -f math/softmath/$(am__dirstamp)
 	-rm -f misc/$(DEPDIR)/$(am__dirstamp)
 	-rm -f misc/$(am__dirstamp)
 	-rm -f profile/$(DEPDIR)/$(am__dirstamp)
@@ -47759,7 +47828,7 @@ clean-am: clean-checkLIBRARIES clean-checkPROGRAMS clean-generic \
 
 distclean: distclean-am
 	-rm -f $(am__CONFIG_DISTCLEAN_FILES)
-	-rm -rf ./$(DEPDIR) complex/$(DEPDIR) crt/$(DEPDIR) gdtoa/$(DEPDIR) intrincs/$(DEPDIR) libsrc/$(DEPDIR) libsrc/ws2tcpip/$(DEPDIR) libsrc/wspiapi/$(DEPDIR) math/$(DEPDIR) math/DFP/$(DEPDIR) misc/$(DEPDIR) profile/$(DEPDIR) secapi/$(DEPDIR) stdio/$(DEPDIR) testcases/$(DEPDIR) testcases/complex/$(DEPDIR)
+	-rm -rf ./$(DEPDIR) complex/$(DEPDIR) crt/$(DEPDIR) gdtoa/$(DEPDIR) intrincs/$(DEPDIR) libsrc/$(DEPDIR) libsrc/ws2tcpip/$(DEPDIR) libsrc/wspiapi/$(DEPDIR) math/$(DEPDIR) math/DFP/$(DEPDIR) math/softmath/$(DEPDIR) misc/$(DEPDIR) profile/$(DEPDIR) secapi/$(DEPDIR) stdio/$(DEPDIR) testcases/$(DEPDIR) testcases/complex/$(DEPDIR)
 	-rm -f Makefile
 distclean-am: clean-am distclean-compile distclean-generic \
 	distclean-hdr distclean-tags
@@ -47812,7 +47881,7 @@ installcheck-am:
 maintainer-clean: maintainer-clean-am
 	-rm -f $(am__CONFIG_DISTCLEAN_FILES)
 	-rm -rf $(top_srcdir)/autom4te.cache
-	-rm -rf ./$(DEPDIR) complex/$(DEPDIR) crt/$(DEPDIR) gdtoa/$(DEPDIR) intrincs/$(DEPDIR) libsrc/$(DEPDIR) libsrc/ws2tcpip/$(DEPDIR) libsrc/wspiapi/$(DEPDIR) math/$(DEPDIR) math/DFP/$(DEPDIR) misc/$(DEPDIR) profile/$(DEPDIR) secapi/$(DEPDIR) stdio/$(DEPDIR) testcases/$(DEPDIR) testcases/complex/$(DEPDIR)
+	-rm -rf ./$(DEPDIR) complex/$(DEPDIR) crt/$(DEPDIR) gdtoa/$(DEPDIR) intrincs/$(DEPDIR) libsrc/$(DEPDIR) libsrc/ws2tcpip/$(DEPDIR) libsrc/wspiapi/$(DEPDIR) math/$(DEPDIR) math/DFP/$(DEPDIR) math/softmath/$(DEPDIR) misc/$(DEPDIR) profile/$(DEPDIR) secapi/$(DEPDIR) stdio/$(DEPDIR) testcases/$(DEPDIR) testcases/complex/$(DEPDIR)
 	-rm -f Makefile
 maintainer-clean-am: distclean-am maintainer-clean-generic
 
