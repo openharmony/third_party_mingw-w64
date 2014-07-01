@@ -590,18 +590,18 @@ am__lib32_libmingwex_a_SOURCES_DIST = crt/dllentry.c crt/dllmain.c \
 	math/expm1l.c math/fabs.c math/fabsf.c math/fabsl.c \
 	math/fdim.c math/fdimf.c math/fdiml.c math/fmal.c math/fmax.c \
 	math/fmaxf.c math/fmaxl.c math/fmin.c math/fminf.c \
-	math/fminl.c math/fmod.c math/fmodf.c math/fmodl.c \
-	math/fp_consts.c math/fp_constsf.c math/fp_constsl.c \
-	math/fpclassify.c math/fpclassifyf.c math/fpclassifyl.c \
-	math/frexpf.c math/fucom.c math/hypotf.c math/hypotl.c \
-	math/isnan.c math/isnanf.c math/isnanl.c math/ldexp.c \
-	math/ldexpf.c math/ldexpl.c math/lgamma.c math/lgammaf.c \
-	math/lgammal.c math/llrint.c math/signgam.c math/llrintf.c \
-	math/llrintl.c math/llround.c math/llroundf.c math/llroundl.c \
-	math/log.c math/log10f.c math/logb.c math/logbl.c math/logf.c \
-	math/logl.c math/lrint.c math/lrintf.c math/lrintl.c \
-	math/lround.c math/lroundf.c math/lroundl.c math/modf.c \
-	math/modff.c math/modfl.c math/nextafterf.c math/nextafterl.c \
+	math/fminl.c math/fmod.c math/fmodl.c math/fp_consts.c \
+	math/fp_constsf.c math/fp_constsl.c math/fpclassify.c \
+	math/fpclassifyf.c math/fpclassifyl.c math/frexpf.c \
+	math/fucom.c math/hypotf.c math/hypotl.c math/isnan.c \
+	math/isnanf.c math/isnanl.c math/ldexp.c math/ldexpf.c \
+	math/ldexpl.c math/lgamma.c math/lgammaf.c math/lgammal.c \
+	math/llrint.c math/signgam.c math/llrintf.c math/llrintl.c \
+	math/llround.c math/llroundf.c math/llroundl.c math/log.c \
+	math/log10f.c math/logb.c math/logbl.c math/logf.c math/logl.c \
+	math/lrint.c math/lrintf.c math/lrintl.c math/lround.c \
+	math/lroundf.c math/lroundl.c math/modf.c math/modff.c \
+	math/modfl.c math/nextafterf.c math/nextafterl.c \
 	math/nexttoward.c math/nexttowardf.c math/pow.c math/powf.c \
 	math/powi.c math/powif.c math/powil.c math/powl.c math/rint.c \
 	math/rintf.c math/rintl.c math/round.c math/roundf.c \
@@ -672,14 +672,14 @@ am__lib32_libmingwex_a_SOURCES_DIST = crt/dllentry.c crt/dllmain.c \
 	stdio/vwscanf.c stdio/wtoll.c stdio/mingw_asprintf.c \
 	stdio/mingw_vasprintf.c math/acosf.c math/asinf.c \
 	math/atan2f.c math/atanf.c math/cosf.c math/exp2f.S \
-	math/expm1f.c math/ilogbf.S math/log1pf.S math/log2f.S \
-	math/logbf.c math/scalbnf.S math/sinf.c math/tanf.c \
-	math/DFP/__fpclassifyd32.c math/DFP/__fpclassifyd64.c \
-	math/DFP/__fpclassifyd128.c math/DFP/__isnand32.c \
-	math/DFP/__isnand64.c math/DFP/__isnand128.c \
-	math/DFP/__signbitd32.c math/DFP/__signbitd64.c \
-	math/DFP/__signbitd128.c math/DFP/isinfd32.c \
-	math/DFP/isinfd64.c math/DFP/isinfd128.c
+	math/expm1f.c math/fmodf.c math/ilogbf.S math/log1pf.S \
+	math/log2f.S math/logbf.c math/scalbnf.S math/sinf.c \
+	math/tanf.c math/DFP/__fpclassifyd32.c \
+	math/DFP/__fpclassifyd64.c math/DFP/__fpclassifyd128.c \
+	math/DFP/__isnand32.c math/DFP/__isnand64.c \
+	math/DFP/__isnand128.c math/DFP/__signbitd32.c \
+	math/DFP/__signbitd64.c math/DFP/__signbitd128.c \
+	math/DFP/isinfd32.c math/DFP/isinfd64.c math/DFP/isinfd128.c
 am__objects_16 = crt/lib32_libmingwex_a-dllentry.$(OBJEXT) \
 	crt/lib32_libmingwex_a-dllmain.$(OBJEXT) \
 	complex/lib32_libmingwex_a-cabs.$(OBJEXT) \
@@ -832,7 +832,6 @@ am__objects_16 = crt/lib32_libmingwex_a-dllentry.$(OBJEXT) \
 	math/lib32_libmingwex_a-fminf.$(OBJEXT) \
 	math/lib32_libmingwex_a-fminl.$(OBJEXT) \
 	math/lib32_libmingwex_a-fmod.$(OBJEXT) \
-	math/lib32_libmingwex_a-fmodf.$(OBJEXT) \
 	math/lib32_libmingwex_a-fmodl.$(OBJEXT) \
 	math/lib32_libmingwex_a-fp_consts.$(OBJEXT) \
 	math/lib32_libmingwex_a-fp_constsf.$(OBJEXT) \
@@ -1084,6 +1083,7 @@ am__objects_17 = math/lib32_libmingwex_a-acosf.$(OBJEXT) \
 	math/lib32_libmingwex_a-cosf.$(OBJEXT) \
 	math/lib32_libmingwex_a-exp2f.$(OBJEXT) \
 	math/lib32_libmingwex_a-expm1f.$(OBJEXT) \
+	math/lib32_libmingwex_a-fmodf.$(OBJEXT) \
 	math/lib32_libmingwex_a-ilogbf.$(OBJEXT) \
 	math/lib32_libmingwex_a-log1pf.$(OBJEXT) \
 	math/lib32_libmingwex_a-log2f.$(OBJEXT) \
@@ -1725,18 +1725,18 @@ am__lib64_libmingwex_a_SOURCES_DIST = crt/dllentry.c crt/dllmain.c \
 	math/expm1l.c math/fabs.c math/fabsf.c math/fabsl.c \
 	math/fdim.c math/fdimf.c math/fdiml.c math/fmal.c math/fmax.c \
 	math/fmaxf.c math/fmaxl.c math/fmin.c math/fminf.c \
-	math/fminl.c math/fmod.c math/fmodf.c math/fmodl.c \
-	math/fp_consts.c math/fp_constsf.c math/fp_constsl.c \
-	math/fpclassify.c math/fpclassifyf.c math/fpclassifyl.c \
-	math/frexpf.c math/fucom.c math/hypotf.c math/hypotl.c \
-	math/isnan.c math/isnanf.c math/isnanl.c math/ldexp.c \
-	math/ldexpf.c math/ldexpl.c math/lgamma.c math/lgammaf.c \
-	math/lgammal.c math/llrint.c math/signgam.c math/llrintf.c \
-	math/llrintl.c math/llround.c math/llroundf.c math/llroundl.c \
-	math/log.c math/log10f.c math/logb.c math/logbl.c math/logf.c \
-	math/logl.c math/lrint.c math/lrintf.c math/lrintl.c \
-	math/lround.c math/lroundf.c math/lroundl.c math/modf.c \
-	math/modff.c math/modfl.c math/nextafterf.c math/nextafterl.c \
+	math/fminl.c math/fmod.c math/fmodl.c math/fp_consts.c \
+	math/fp_constsf.c math/fp_constsl.c math/fpclassify.c \
+	math/fpclassifyf.c math/fpclassifyl.c math/frexpf.c \
+	math/fucom.c math/hypotf.c math/hypotl.c math/isnan.c \
+	math/isnanf.c math/isnanl.c math/ldexp.c math/ldexpf.c \
+	math/ldexpl.c math/lgamma.c math/lgammaf.c math/lgammal.c \
+	math/llrint.c math/signgam.c math/llrintf.c math/llrintl.c \
+	math/llround.c math/llroundf.c math/llroundl.c math/log.c \
+	math/log10f.c math/logb.c math/logbl.c math/logf.c math/logl.c \
+	math/lrint.c math/lrintf.c math/lrintl.c math/lround.c \
+	math/lroundf.c math/lroundl.c math/modf.c math/modff.c \
+	math/modfl.c math/nextafterf.c math/nextafterl.c \
 	math/nexttoward.c math/nexttowardf.c math/pow.c math/powf.c \
 	math/powi.c math/powif.c math/powil.c math/powl.c math/rint.c \
 	math/rintf.c math/rintl.c math/round.c math/roundf.c \
@@ -1807,14 +1807,14 @@ am__lib64_libmingwex_a_SOURCES_DIST = crt/dllentry.c crt/dllmain.c \
 	stdio/vwscanf.c stdio/wtoll.c stdio/mingw_asprintf.c \
 	stdio/mingw_vasprintf.c math/acosf.c math/asinf.c \
 	math/atan2f.c math/atanf.c math/cosf.c math/exp2f.S \
-	math/expm1f.c math/ilogbf.S math/log1pf.S math/log2f.S \
-	math/logbf.c math/scalbnf.S math/sinf.c math/tanf.c \
-	math/DFP/__fpclassifyd32.c math/DFP/__fpclassifyd64.c \
-	math/DFP/__fpclassifyd128.c math/DFP/__isnand32.c \
-	math/DFP/__isnand64.c math/DFP/__isnand128.c \
-	math/DFP/__signbitd32.c math/DFP/__signbitd64.c \
-	math/DFP/__signbitd128.c math/DFP/isinfd32.c \
-	math/DFP/isinfd64.c math/DFP/isinfd128.c
+	math/expm1f.c math/fmodf.c math/ilogbf.S math/log1pf.S \
+	math/log2f.S math/logbf.c math/scalbnf.S math/sinf.c \
+	math/tanf.c math/DFP/__fpclassifyd32.c \
+	math/DFP/__fpclassifyd64.c math/DFP/__fpclassifyd128.c \
+	math/DFP/__isnand32.c math/DFP/__isnand64.c \
+	math/DFP/__isnand128.c math/DFP/__signbitd32.c \
+	math/DFP/__signbitd64.c math/DFP/__signbitd128.c \
+	math/DFP/isinfd32.c math/DFP/isinfd64.c math/DFP/isinfd128.c
 am__objects_49 = crt/lib64_libmingwex_a-dllentry.$(OBJEXT) \
 	crt/lib64_libmingwex_a-dllmain.$(OBJEXT) \
 	complex/lib64_libmingwex_a-cabs.$(OBJEXT) \
@@ -1967,7 +1967,6 @@ am__objects_49 = crt/lib64_libmingwex_a-dllentry.$(OBJEXT) \
 	math/lib64_libmingwex_a-fminf.$(OBJEXT) \
 	math/lib64_libmingwex_a-fminl.$(OBJEXT) \
 	math/lib64_libmingwex_a-fmod.$(OBJEXT) \
-	math/lib64_libmingwex_a-fmodf.$(OBJEXT) \
 	math/lib64_libmingwex_a-fmodl.$(OBJEXT) \
 	math/lib64_libmingwex_a-fp_consts.$(OBJEXT) \
 	math/lib64_libmingwex_a-fp_constsf.$(OBJEXT) \
@@ -2219,6 +2218,7 @@ am__objects_50 = math/lib64_libmingwex_a-acosf.$(OBJEXT) \
 	math/lib64_libmingwex_a-cosf.$(OBJEXT) \
 	math/lib64_libmingwex_a-exp2f.$(OBJEXT) \
 	math/lib64_libmingwex_a-expm1f.$(OBJEXT) \
+	math/lib64_libmingwex_a-fmodf.$(OBJEXT) \
 	math/lib64_libmingwex_a-ilogbf.$(OBJEXT) \
 	math/lib64_libmingwex_a-log1pf.$(OBJEXT) \
 	math/lib64_libmingwex_a-log2f.$(OBJEXT) \
@@ -2774,18 +2774,18 @@ am__libarm32_libmingwex_a_SOURCES_DIST = crt/dllentry.c crt/dllmain.c \
 	math/expm1l.c math/fabs.c math/fabsf.c math/fabsl.c \
 	math/fdim.c math/fdimf.c math/fdiml.c math/fmal.c math/fmax.c \
 	math/fmaxf.c math/fmaxl.c math/fmin.c math/fminf.c \
-	math/fminl.c math/fmod.c math/fmodf.c math/fmodl.c \
-	math/fp_consts.c math/fp_constsf.c math/fp_constsl.c \
-	math/fpclassify.c math/fpclassifyf.c math/fpclassifyl.c \
-	math/frexpf.c math/fucom.c math/hypotf.c math/hypotl.c \
-	math/isnan.c math/isnanf.c math/isnanl.c math/ldexp.c \
-	math/ldexpf.c math/ldexpl.c math/lgamma.c math/lgammaf.c \
-	math/lgammal.c math/llrint.c math/signgam.c math/llrintf.c \
-	math/llrintl.c math/llround.c math/llroundf.c math/llroundl.c \
-	math/log.c math/log10f.c math/logb.c math/logbl.c math/logf.c \
-	math/logl.c math/lrint.c math/lrintf.c math/lrintl.c \
-	math/lround.c math/lroundf.c math/lroundl.c math/modf.c \
-	math/modff.c math/modfl.c math/nextafterf.c math/nextafterl.c \
+	math/fminl.c math/fmod.c math/fmodl.c math/fp_consts.c \
+	math/fp_constsf.c math/fp_constsl.c math/fpclassify.c \
+	math/fpclassifyf.c math/fpclassifyl.c math/frexpf.c \
+	math/fucom.c math/hypotf.c math/hypotl.c math/isnan.c \
+	math/isnanf.c math/isnanl.c math/ldexp.c math/ldexpf.c \
+	math/ldexpl.c math/lgamma.c math/lgammaf.c math/lgammal.c \
+	math/llrint.c math/signgam.c math/llrintf.c math/llrintl.c \
+	math/llround.c math/llroundf.c math/llroundl.c math/log.c \
+	math/log10f.c math/logb.c math/logbl.c math/logf.c math/logl.c \
+	math/lrint.c math/lrintf.c math/lrintl.c math/lround.c \
+	math/lroundf.c math/lroundl.c math/modf.c math/modff.c \
+	math/modfl.c math/nextafterf.c math/nextafterl.c \
 	math/nexttoward.c math/nexttowardf.c math/pow.c math/powf.c \
 	math/powi.c math/powif.c math/powil.c math/powl.c math/rint.c \
 	math/rintf.c math/rintl.c math/round.c math/roundf.c \
@@ -2859,15 +2859,16 @@ am__libarm32_libmingwex_a_SOURCES_DIST = crt/dllentry.c crt/dllmain.c \
 	math/softmath/asinf.c math/softmath/atan2f.c \
 	math/softmath/atanf.c math/softmath/cosf.c \
 	math/softmath/exp2f.c math/softmath/expm1f.c \
-	math/softmath/ilogbf.c math/softmath/log1pf.c \
-	math/softmath/log2f.c math/softmath/logbf.c \
-	math/softmath/scalbnf.c math/softmath/sinf.c \
-	math/softmath/tanf.c math/DFP/__fpclassifyd32.c \
-	math/DFP/__fpclassifyd64.c math/DFP/__fpclassifyd128.c \
-	math/DFP/__isnand32.c math/DFP/__isnand64.c \
-	math/DFP/__isnand128.c math/DFP/__signbitd32.c \
-	math/DFP/__signbitd64.c math/DFP/__signbitd128.c \
-	math/DFP/isinfd32.c math/DFP/isinfd64.c math/DFP/isinfd128.c
+	math/softmath/fmodf.c math/softmath/ilogbf.c \
+	math/softmath/log1pf.c math/softmath/log2f.c \
+	math/softmath/logbf.c math/softmath/scalbnf.c \
+	math/softmath/sinf.c math/softmath/tanf.c \
+	math/DFP/__fpclassifyd32.c math/DFP/__fpclassifyd64.c \
+	math/DFP/__fpclassifyd128.c math/DFP/__isnand32.c \
+	math/DFP/__isnand64.c math/DFP/__isnand128.c \
+	math/DFP/__signbitd32.c math/DFP/__signbitd64.c \
+	math/DFP/__signbitd128.c math/DFP/isinfd32.c \
+	math/DFP/isinfd64.c math/DFP/isinfd128.c
 am__objects_78 = crt/libarm32_libmingwex_a-dllentry.$(OBJEXT) \
 	crt/libarm32_libmingwex_a-dllmain.$(OBJEXT) \
 	complex/libarm32_libmingwex_a-cabs.$(OBJEXT) \
@@ -3020,7 +3021,6 @@ am__objects_78 = crt/libarm32_libmingwex_a-dllentry.$(OBJEXT) \
 	math/libarm32_libmingwex_a-fminf.$(OBJEXT) \
 	math/libarm32_libmingwex_a-fminl.$(OBJEXT) \
 	math/libarm32_libmingwex_a-fmod.$(OBJEXT) \
-	math/libarm32_libmingwex_a-fmodf.$(OBJEXT) \
 	math/libarm32_libmingwex_a-fmodl.$(OBJEXT) \
 	math/libarm32_libmingwex_a-fp_consts.$(OBJEXT) \
 	math/libarm32_libmingwex_a-fp_constsf.$(OBJEXT) \
@@ -3275,6 +3275,7 @@ am__objects_79 =  \
 	math/softmath/libarm32_libmingwex_a-cosf.$(OBJEXT) \
 	math/softmath/libarm32_libmingwex_a-exp2f.$(OBJEXT) \
 	math/softmath/libarm32_libmingwex_a-expm1f.$(OBJEXT) \
+	math/softmath/libarm32_libmingwex_a-fmodf.$(OBJEXT) \
 	math/softmath/libarm32_libmingwex_a-ilogbf.$(OBJEXT) \
 	math/softmath/libarm32_libmingwex_a-log1pf.$(OBJEXT) \
 	math/softmath/libarm32_libmingwex_a-log2f.$(OBJEXT) \
@@ -5106,7 +5107,7 @@ src_libmingwex = \
   math/exp.c            math/expf.c        math/expl.c           math/expm1.c         math/expm1l.c        \
   math/fabs.c           math/fabsf.c       math/fabsl.c          math/fdim.c          math/fdimf.c         math/fdiml.c         \
   math/fmal.c           math/fmax.c        math/fmaxf.c          math/fmaxl.c         math/fmin.c          math/fminf.c         \
-  math/fminl.c          math/fmod.c        math/fmodf.c          math/fmodl.c         math/fp_consts.c     math/fp_constsf.c    \
+  math/fminl.c          math/fmod.c        math/fmodl.c          math/fp_consts.c     math/fp_constsf.c    \
   math/fp_constsl.c     math/fpclassify.c  math/fpclassifyf.c    math/fpclassifyl.c   math/frexpf.c        math/fucom.c         \
   math/hypotf.c         math/hypotl.c      math/isnan.c          math/isnanf.c        math/isnanl.c        math/ldexp.c         \
   math/ldexpf.c         math/ldexpl.c      math/lgamma.c         math/lgammaf.c       math/lgammal.c       math/llrint.c        \
@@ -5169,23 +5170,23 @@ src_libmingwex = \
 # these only go into the 64 bit version:
 src_libmingwex64 = \
   math/acosf.c              math/asinf.c              math/atan2f.c             math/atanf.c              math/cosf.c               \
-  math/exp2f.S              math/expm1f.c             math/ilogbf.S             math/log1pf.S             math/log2f.S              \
-  math/logbf.c              math/scalbnf.S            math/sinf.c               math/tanf.c
+  math/exp2f.S              math/expm1f.c             math/fmodf.c              math/ilogbf.S             math/log1pf.S             \
+  math/log2f.S              math/logbf.c              math/scalbnf.S            math/sinf.c               math/tanf.c
 
 
 # these only go into the 32 bit version:
 src_libmingwex32 = \
   math/acosf.c              math/asinf.c              math/atan2f.c             math/atanf.c              math/cosf.c               \
-  math/exp2f.S              math/expm1f.c             math/ilogbf.S             math/log1pf.S             math/log2f.S              \
-  math/logbf.c              math/scalbnf.S            math/sinf.c               math/tanf.c
+  math/exp2f.S              math/expm1f.c             math/fmodf.c              math/ilogbf.S             math/log1pf.S             \
+  math/log2f.S              math/logbf.c              math/scalbnf.S            math/sinf.c               math/tanf.c
 
 
 # these only go into the ARM32 version:
 src_libmingwexarm32 = \
   math/softmath/e_fmodf.c   math/softmath/e_powf.c    \
   math/softmath/acosf.c     math/softmath/asinf.c     math/softmath/atan2f.c    math/softmath/atanf.c     math/softmath/cosf.c      \
-  math/softmath/exp2f.c     math/softmath/expm1f.c    math/softmath/ilogbf.c    math/softmath/log1pf.c    math/softmath/log2f.c     \
-  math/softmath/logbf.c     math/softmath/scalbnf.c   math/softmath/sinf.c      math/softmath/tanf.c
+  math/softmath/exp2f.c     math/softmath/expm1f.c    math/softmath/fmodf.c     math/softmath/ilogbf.c    math/softmath/log1pf.c    \
+  math/softmath/log2f.c     math/softmath/logbf.c     math/softmath/scalbnf.c   math/softmath/sinf.c      math/softmath/tanf.c
 
 
 # These intrinsics are target independent:
@@ -8391,8 +8392,6 @@ math/lib32_libmingwex_a-fminl.$(OBJEXT): math/$(am__dirstamp) \
 	math/$(DEPDIR)/$(am__dirstamp)
 math/lib32_libmingwex_a-fmod.$(OBJEXT): math/$(am__dirstamp) \
 	math/$(DEPDIR)/$(am__dirstamp)
-math/lib32_libmingwex_a-fmodf.$(OBJEXT): math/$(am__dirstamp) \
-	math/$(DEPDIR)/$(am__dirstamp)
 math/lib32_libmingwex_a-fmodl.$(OBJEXT): math/$(am__dirstamp) \
 	math/$(DEPDIR)/$(am__dirstamp)
 math/lib32_libmingwex_a-fp_consts.$(OBJEXT): math/$(am__dirstamp) \
@@ -8906,6 +8905,8 @@ math/lib32_libmingwex_a-cosf.$(OBJEXT): math/$(am__dirstamp) \
 math/lib32_libmingwex_a-exp2f.$(OBJEXT): math/$(am__dirstamp) \
 	math/$(DEPDIR)/$(am__dirstamp)
 math/lib32_libmingwex_a-expm1f.$(OBJEXT): math/$(am__dirstamp) \
+	math/$(DEPDIR)/$(am__dirstamp)
+math/lib32_libmingwex_a-fmodf.$(OBJEXT): math/$(am__dirstamp) \
 	math/$(DEPDIR)/$(am__dirstamp)
 math/lib32_libmingwex_a-ilogbf.$(OBJEXT): math/$(am__dirstamp) \
 	math/$(DEPDIR)/$(am__dirstamp)
@@ -10015,8 +10016,6 @@ math/lib64_libmingwex_a-fminl.$(OBJEXT): math/$(am__dirstamp) \
 	math/$(DEPDIR)/$(am__dirstamp)
 math/lib64_libmingwex_a-fmod.$(OBJEXT): math/$(am__dirstamp) \
 	math/$(DEPDIR)/$(am__dirstamp)
-math/lib64_libmingwex_a-fmodf.$(OBJEXT): math/$(am__dirstamp) \
-	math/$(DEPDIR)/$(am__dirstamp)
 math/lib64_libmingwex_a-fmodl.$(OBJEXT): math/$(am__dirstamp) \
 	math/$(DEPDIR)/$(am__dirstamp)
 math/lib64_libmingwex_a-fp_consts.$(OBJEXT): math/$(am__dirstamp) \
@@ -10518,6 +10517,8 @@ math/lib64_libmingwex_a-cosf.$(OBJEXT): math/$(am__dirstamp) \
 math/lib64_libmingwex_a-exp2f.$(OBJEXT): math/$(am__dirstamp) \
 	math/$(DEPDIR)/$(am__dirstamp)
 math/lib64_libmingwex_a-expm1f.$(OBJEXT): math/$(am__dirstamp) \
+	math/$(DEPDIR)/$(am__dirstamp)
+math/lib64_libmingwex_a-fmodf.$(OBJEXT): math/$(am__dirstamp) \
 	math/$(DEPDIR)/$(am__dirstamp)
 math/lib64_libmingwex_a-ilogbf.$(OBJEXT): math/$(am__dirstamp) \
 	math/$(DEPDIR)/$(am__dirstamp)
@@ -11502,8 +11503,6 @@ math/libarm32_libmingwex_a-fminl.$(OBJEXT): math/$(am__dirstamp) \
 	math/$(DEPDIR)/$(am__dirstamp)
 math/libarm32_libmingwex_a-fmod.$(OBJEXT): math/$(am__dirstamp) \
 	math/$(DEPDIR)/$(am__dirstamp)
-math/libarm32_libmingwex_a-fmodf.$(OBJEXT): math/$(am__dirstamp) \
-	math/$(DEPDIR)/$(am__dirstamp)
 math/libarm32_libmingwex_a-fmodl.$(OBJEXT): math/$(am__dirstamp) \
 	math/$(DEPDIR)/$(am__dirstamp)
 math/libarm32_libmingwex_a-fp_consts.$(OBJEXT): math/$(am__dirstamp) \
@@ -12023,6 +12022,9 @@ math/softmath/libarm32_libmingwex_a-exp2f.$(OBJEXT):  \
 	math/softmath/$(am__dirstamp) \
 	math/softmath/$(DEPDIR)/$(am__dirstamp)
 math/softmath/libarm32_libmingwex_a-expm1f.$(OBJEXT):  \
+	math/softmath/$(am__dirstamp) \
+	math/softmath/$(DEPDIR)/$(am__dirstamp)
+math/softmath/libarm32_libmingwex_a-fmodf.$(OBJEXT):  \
 	math/softmath/$(am__dirstamp) \
 	math/softmath/$(DEPDIR)/$(am__dirstamp)
 math/softmath/libarm32_libmingwex_a-ilogbf.$(OBJEXT):  \
@@ -14618,7 +14620,6 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/libarm32_libmingwex_a-fminf.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/libarm32_libmingwex_a-fminl.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/libarm32_libmingwex_a-fmod.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/libarm32_libmingwex_a-fmodf.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/libarm32_libmingwex_a-fmodl.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/libarm32_libmingwex_a-fp_consts.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/libarm32_libmingwex_a-fp_constsf.Po@am__quote@
@@ -14764,6 +14765,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@math/softmath/$(DEPDIR)/libarm32_libmingwex_a-e_powf.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/softmath/$(DEPDIR)/libarm32_libmingwex_a-exp2f.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/softmath/$(DEPDIR)/libarm32_libmingwex_a-expm1f.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@math/softmath/$(DEPDIR)/libarm32_libmingwex_a-fmodf.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/softmath/$(DEPDIR)/libarm32_libmingwex_a-ilogbf.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/softmath/$(DEPDIR)/libarm32_libmingwex_a-log1pf.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/softmath/$(DEPDIR)/libarm32_libmingwex_a-log2f.Po@am__quote@
@@ -21037,20 +21039,6 @@ math/lib32_libmingwex_a-fmod.obj: math/fmod.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib32_libmingwex_a-fmod.obj `if test -f 'math/fmod.c'; then $(CYGPATH_W) 'math/fmod.c'; else $(CYGPATH_W) '$(srcdir)/math/fmod.c'; fi`
 
-math/lib32_libmingwex_a-fmodf.o: math/fmodf.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib32_libmingwex_a-fmodf.o -MD -MP -MF math/$(DEPDIR)/lib32_libmingwex_a-fmodf.Tpo -c -o math/lib32_libmingwex_a-fmodf.o `test -f 'math/fmodf.c' || echo '$(srcdir)/'`math/fmodf.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/lib32_libmingwex_a-fmodf.Tpo math/$(DEPDIR)/lib32_libmingwex_a-fmodf.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/fmodf.c' object='math/lib32_libmingwex_a-fmodf.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib32_libmingwex_a-fmodf.o `test -f 'math/fmodf.c' || echo '$(srcdir)/'`math/fmodf.c
-
-math/lib32_libmingwex_a-fmodf.obj: math/fmodf.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib32_libmingwex_a-fmodf.obj -MD -MP -MF math/$(DEPDIR)/lib32_libmingwex_a-fmodf.Tpo -c -o math/lib32_libmingwex_a-fmodf.obj `if test -f 'math/fmodf.c'; then $(CYGPATH_W) 'math/fmodf.c'; else $(CYGPATH_W) '$(srcdir)/math/fmodf.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/lib32_libmingwex_a-fmodf.Tpo math/$(DEPDIR)/lib32_libmingwex_a-fmodf.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/fmodf.c' object='math/lib32_libmingwex_a-fmodf.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib32_libmingwex_a-fmodf.obj `if test -f 'math/fmodf.c'; then $(CYGPATH_W) 'math/fmodf.c'; else $(CYGPATH_W) '$(srcdir)/math/fmodf.c'; fi`
-
 math/lib32_libmingwex_a-fmodl.o: math/fmodl.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib32_libmingwex_a-fmodl.o -MD -MP -MF math/$(DEPDIR)/lib32_libmingwex_a-fmodl.Tpo -c -o math/lib32_libmingwex_a-fmodl.o `test -f 'math/fmodl.c' || echo '$(srcdir)/'`math/fmodl.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/lib32_libmingwex_a-fmodl.Tpo math/$(DEPDIR)/lib32_libmingwex_a-fmodl.Po
@@ -24452,6 +24440,20 @@ math/lib32_libmingwex_a-expm1f.obj: math/expm1f.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/expm1f.c' object='math/lib32_libmingwex_a-expm1f.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib32_libmingwex_a-expm1f.obj `if test -f 'math/expm1f.c'; then $(CYGPATH_W) 'math/expm1f.c'; else $(CYGPATH_W) '$(srcdir)/math/expm1f.c'; fi`
+
+math/lib32_libmingwex_a-fmodf.o: math/fmodf.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib32_libmingwex_a-fmodf.o -MD -MP -MF math/$(DEPDIR)/lib32_libmingwex_a-fmodf.Tpo -c -o math/lib32_libmingwex_a-fmodf.o `test -f 'math/fmodf.c' || echo '$(srcdir)/'`math/fmodf.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/lib32_libmingwex_a-fmodf.Tpo math/$(DEPDIR)/lib32_libmingwex_a-fmodf.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/fmodf.c' object='math/lib32_libmingwex_a-fmodf.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib32_libmingwex_a-fmodf.o `test -f 'math/fmodf.c' || echo '$(srcdir)/'`math/fmodf.c
+
+math/lib32_libmingwex_a-fmodf.obj: math/fmodf.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib32_libmingwex_a-fmodf.obj -MD -MP -MF math/$(DEPDIR)/lib32_libmingwex_a-fmodf.Tpo -c -o math/lib32_libmingwex_a-fmodf.obj `if test -f 'math/fmodf.c'; then $(CYGPATH_W) 'math/fmodf.c'; else $(CYGPATH_W) '$(srcdir)/math/fmodf.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/lib32_libmingwex_a-fmodf.Tpo math/$(DEPDIR)/lib32_libmingwex_a-fmodf.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/fmodf.c' object='math/lib32_libmingwex_a-fmodf.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib32_libmingwex_a-fmodf.obj `if test -f 'math/fmodf.c'; then $(CYGPATH_W) 'math/fmodf.c'; else $(CYGPATH_W) '$(srcdir)/math/fmodf.c'; fi`
 
 math/lib32_libmingwex_a-logbf.o: math/logbf.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib32_libmingwex_a-logbf.o -MD -MP -MF math/$(DEPDIR)/lib32_libmingwex_a-logbf.Tpo -c -o math/lib32_libmingwex_a-logbf.o `test -f 'math/logbf.c' || echo '$(srcdir)/'`math/logbf.c
@@ -30137,20 +30139,6 @@ math/lib64_libmingwex_a-fmod.obj: math/fmod.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib64_libmingwex_a-fmod.obj `if test -f 'math/fmod.c'; then $(CYGPATH_W) 'math/fmod.c'; else $(CYGPATH_W) '$(srcdir)/math/fmod.c'; fi`
 
-math/lib64_libmingwex_a-fmodf.o: math/fmodf.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib64_libmingwex_a-fmodf.o -MD -MP -MF math/$(DEPDIR)/lib64_libmingwex_a-fmodf.Tpo -c -o math/lib64_libmingwex_a-fmodf.o `test -f 'math/fmodf.c' || echo '$(srcdir)/'`math/fmodf.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/lib64_libmingwex_a-fmodf.Tpo math/$(DEPDIR)/lib64_libmingwex_a-fmodf.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/fmodf.c' object='math/lib64_libmingwex_a-fmodf.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib64_libmingwex_a-fmodf.o `test -f 'math/fmodf.c' || echo '$(srcdir)/'`math/fmodf.c
-
-math/lib64_libmingwex_a-fmodf.obj: math/fmodf.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib64_libmingwex_a-fmodf.obj -MD -MP -MF math/$(DEPDIR)/lib64_libmingwex_a-fmodf.Tpo -c -o math/lib64_libmingwex_a-fmodf.obj `if test -f 'math/fmodf.c'; then $(CYGPATH_W) 'math/fmodf.c'; else $(CYGPATH_W) '$(srcdir)/math/fmodf.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/lib64_libmingwex_a-fmodf.Tpo math/$(DEPDIR)/lib64_libmingwex_a-fmodf.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/fmodf.c' object='math/lib64_libmingwex_a-fmodf.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib64_libmingwex_a-fmodf.obj `if test -f 'math/fmodf.c'; then $(CYGPATH_W) 'math/fmodf.c'; else $(CYGPATH_W) '$(srcdir)/math/fmodf.c'; fi`
-
 math/lib64_libmingwex_a-fmodl.o: math/fmodl.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib64_libmingwex_a-fmodl.o -MD -MP -MF math/$(DEPDIR)/lib64_libmingwex_a-fmodl.Tpo -c -o math/lib64_libmingwex_a-fmodl.o `test -f 'math/fmodl.c' || echo '$(srcdir)/'`math/fmodl.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/lib64_libmingwex_a-fmodl.Tpo math/$(DEPDIR)/lib64_libmingwex_a-fmodl.Po
@@ -33552,6 +33540,20 @@ math/lib64_libmingwex_a-expm1f.obj: math/expm1f.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/expm1f.c' object='math/lib64_libmingwex_a-expm1f.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib64_libmingwex_a-expm1f.obj `if test -f 'math/expm1f.c'; then $(CYGPATH_W) 'math/expm1f.c'; else $(CYGPATH_W) '$(srcdir)/math/expm1f.c'; fi`
+
+math/lib64_libmingwex_a-fmodf.o: math/fmodf.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib64_libmingwex_a-fmodf.o -MD -MP -MF math/$(DEPDIR)/lib64_libmingwex_a-fmodf.Tpo -c -o math/lib64_libmingwex_a-fmodf.o `test -f 'math/fmodf.c' || echo '$(srcdir)/'`math/fmodf.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/lib64_libmingwex_a-fmodf.Tpo math/$(DEPDIR)/lib64_libmingwex_a-fmodf.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/fmodf.c' object='math/lib64_libmingwex_a-fmodf.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib64_libmingwex_a-fmodf.o `test -f 'math/fmodf.c' || echo '$(srcdir)/'`math/fmodf.c
+
+math/lib64_libmingwex_a-fmodf.obj: math/fmodf.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib64_libmingwex_a-fmodf.obj -MD -MP -MF math/$(DEPDIR)/lib64_libmingwex_a-fmodf.Tpo -c -o math/lib64_libmingwex_a-fmodf.obj `if test -f 'math/fmodf.c'; then $(CYGPATH_W) 'math/fmodf.c'; else $(CYGPATH_W) '$(srcdir)/math/fmodf.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/lib64_libmingwex_a-fmodf.Tpo math/$(DEPDIR)/lib64_libmingwex_a-fmodf.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/fmodf.c' object='math/lib64_libmingwex_a-fmodf.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib64_libmingwex_a-fmodf.obj `if test -f 'math/fmodf.c'; then $(CYGPATH_W) 'math/fmodf.c'; else $(CYGPATH_W) '$(srcdir)/math/fmodf.c'; fi`
 
 math/lib64_libmingwex_a-logbf.o: math/logbf.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib64_libmingwex_a-logbf.o -MD -MP -MF math/$(DEPDIR)/lib64_libmingwex_a-logbf.Tpo -c -o math/lib64_libmingwex_a-logbf.o `test -f 'math/logbf.c' || echo '$(srcdir)/'`math/logbf.c
@@ -38649,20 +38651,6 @@ math/libarm32_libmingwex_a-fmod.obj: math/fmod.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/libarm32_libmingwex_a-fmod.obj `if test -f 'math/fmod.c'; then $(CYGPATH_W) 'math/fmod.c'; else $(CYGPATH_W) '$(srcdir)/math/fmod.c'; fi`
 
-math/libarm32_libmingwex_a-fmodf.o: math/fmodf.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/libarm32_libmingwex_a-fmodf.o -MD -MP -MF math/$(DEPDIR)/libarm32_libmingwex_a-fmodf.Tpo -c -o math/libarm32_libmingwex_a-fmodf.o `test -f 'math/fmodf.c' || echo '$(srcdir)/'`math/fmodf.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/libarm32_libmingwex_a-fmodf.Tpo math/$(DEPDIR)/libarm32_libmingwex_a-fmodf.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/fmodf.c' object='math/libarm32_libmingwex_a-fmodf.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/libarm32_libmingwex_a-fmodf.o `test -f 'math/fmodf.c' || echo '$(srcdir)/'`math/fmodf.c
-
-math/libarm32_libmingwex_a-fmodf.obj: math/fmodf.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/libarm32_libmingwex_a-fmodf.obj -MD -MP -MF math/$(DEPDIR)/libarm32_libmingwex_a-fmodf.Tpo -c -o math/libarm32_libmingwex_a-fmodf.obj `if test -f 'math/fmodf.c'; then $(CYGPATH_W) 'math/fmodf.c'; else $(CYGPATH_W) '$(srcdir)/math/fmodf.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/libarm32_libmingwex_a-fmodf.Tpo math/$(DEPDIR)/libarm32_libmingwex_a-fmodf.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/fmodf.c' object='math/libarm32_libmingwex_a-fmodf.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/libarm32_libmingwex_a-fmodf.obj `if test -f 'math/fmodf.c'; then $(CYGPATH_W) 'math/fmodf.c'; else $(CYGPATH_W) '$(srcdir)/math/fmodf.c'; fi`
-
 math/libarm32_libmingwex_a-fmodl.o: math/fmodl.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/libarm32_libmingwex_a-fmodl.o -MD -MP -MF math/$(DEPDIR)/libarm32_libmingwex_a-fmodl.Tpo -c -o math/libarm32_libmingwex_a-fmodl.o `test -f 'math/fmodl.c' || echo '$(srcdir)/'`math/fmodl.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/libarm32_libmingwex_a-fmodl.Tpo math/$(DEPDIR)/libarm32_libmingwex_a-fmodl.Po
@@ -42106,6 +42094,20 @@ math/softmath/libarm32_libmingwex_a-expm1f.obj: math/softmath/expm1f.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/softmath/expm1f.c' object='math/softmath/libarm32_libmingwex_a-expm1f.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/softmath/libarm32_libmingwex_a-expm1f.obj `if test -f 'math/softmath/expm1f.c'; then $(CYGPATH_W) 'math/softmath/expm1f.c'; else $(CYGPATH_W) '$(srcdir)/math/softmath/expm1f.c'; fi`
+
+math/softmath/libarm32_libmingwex_a-fmodf.o: math/softmath/fmodf.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/softmath/libarm32_libmingwex_a-fmodf.o -MD -MP -MF math/softmath/$(DEPDIR)/libarm32_libmingwex_a-fmodf.Tpo -c -o math/softmath/libarm32_libmingwex_a-fmodf.o `test -f 'math/softmath/fmodf.c' || echo '$(srcdir)/'`math/softmath/fmodf.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/softmath/$(DEPDIR)/libarm32_libmingwex_a-fmodf.Tpo math/softmath/$(DEPDIR)/libarm32_libmingwex_a-fmodf.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/softmath/fmodf.c' object='math/softmath/libarm32_libmingwex_a-fmodf.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/softmath/libarm32_libmingwex_a-fmodf.o `test -f 'math/softmath/fmodf.c' || echo '$(srcdir)/'`math/softmath/fmodf.c
+
+math/softmath/libarm32_libmingwex_a-fmodf.obj: math/softmath/fmodf.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/softmath/libarm32_libmingwex_a-fmodf.obj -MD -MP -MF math/softmath/$(DEPDIR)/libarm32_libmingwex_a-fmodf.Tpo -c -o math/softmath/libarm32_libmingwex_a-fmodf.obj `if test -f 'math/softmath/fmodf.c'; then $(CYGPATH_W) 'math/softmath/fmodf.c'; else $(CYGPATH_W) '$(srcdir)/math/softmath/fmodf.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/softmath/$(DEPDIR)/libarm32_libmingwex_a-fmodf.Tpo math/softmath/$(DEPDIR)/libarm32_libmingwex_a-fmodf.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/softmath/fmodf.c' object='math/softmath/libarm32_libmingwex_a-fmodf.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/softmath/libarm32_libmingwex_a-fmodf.obj `if test -f 'math/softmath/fmodf.c'; then $(CYGPATH_W) 'math/softmath/fmodf.c'; else $(CYGPATH_W) '$(srcdir)/math/softmath/fmodf.c'; fi`
 
 math/softmath/libarm32_libmingwex_a-ilogbf.o: math/softmath/ilogbf.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/softmath/libarm32_libmingwex_a-ilogbf.o -MD -MP -MF math/softmath/$(DEPDIR)/libarm32_libmingwex_a-ilogbf.Tpo -c -o math/softmath/libarm32_libmingwex_a-ilogbf.o `test -f 'math/softmath/ilogbf.c' || echo '$(srcdir)/'`math/softmath/ilogbf.c
