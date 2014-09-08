@@ -43,41 +43,27 @@
 */
 
 #include "softmath_private.h"
+#include <errno.h>
 
-float sinf(float x)
+long double sinl(long double x)
 {
-    float result = 0.0, neg = (x < 0) ? -1 : 1;
-    int n, quadrant;
-
     int x_class = fpclassify(x);
     if (x_class == FP_NAN)
     {
         errno = EDOM;
-        __mingw_raise_matherr (_DOMAIN, "sinf", x, 0.0, x);
+        __mingw_raise_matherr (_DOMAIN, "sinl", x, 0.0, x);
         return x;
     }
     else if (x_class == FP_INFINITE)
     {
         errno = EDOM;
-        __mingw_raise_matherr (_DOMAIN, "sinf", x, 0.0, NANF);
-        return NANF;
+        __mingw_raise_matherr (_DOMAIN, "sinl", x, 0.0, NANL);
+        return NANL;
     }
 
-    x *= neg;
-    quadrant = (int)(x / M_PI_2) % 4;
-
-    x = bsd__ieee754_fmodf(x, M_PI_2);
-    if (quadrant == 1 || quadrant == 3)
-        x = M_PI_2 - x;
-
-    for(n = 0; n < 5; n++)
-    {
-        float sign = (n % 2 == 0) ? 1 : -1;
-        result += sign * (bsd__ieee754_powf(x, ((2 * n) + 1)) / softmath_fact((2 * n) + 1));
-    }
-
-    if (quadrant == 2 || quadrant == 3)
-        result *= -1;
-
-    return neg * result;
+#if defined(__arm__) || defined(_ARM_)
+    return sin(x);
+#else
+#error Not supported on your platform yet
+#endif
 }
