@@ -5584,10 +5584,8 @@ winrtlibs = \
 @LIB32_TRUE@	lib32/libx3daudio.a lib32/libd3dx9.a \
 @LIB32_TRUE@	lib32/libd3dx10.a lib32/libd3dx11.a \
 @LIB32_TRUE@	lib32/libd3dcsxd.a lib32/libd3dcompiler.a
-@LIBARM32_TRUE@dx32_DATA = libarm32/libxinput.a libarm32/libxapofx.a \
-@LIBARM32_TRUE@	libarm32/libx3daudio.a libarm32/libd3dx9.a \
-@LIBARM32_TRUE@	libarm32/libd3dx10.a libarm32/libd3dx11.a \
-@LIBARM32_TRUE@	libarm32/libd3dcsxd.a libarm32/libd3dcompiler.a
+@LIBARM32_TRUE@dx32_DATA = libarm32/libxinput.a \
+@LIBARM32_TRUE@	libarm32/libd3dcompiler.a
 
 # End 32-bit runtime
 # ##########
@@ -48374,21 +48372,9 @@ lib64/DFP_src_%.dfp.obj: math/DFP/mpdecimal/libmpdec/%.c
 @LIBARM32_TRUE@	$(AR) -M < $<
 @LIBARM32_TRUE@	$(RANLIB) $@
 
-@LIBARM32_TRUE@libarm32/libxinput.a: libarm32/$(xinput).def
+@LIBARM32_TRUE@libarm32/libxinput.a: libarm32/xinput1_4.def
 @LIBARM32_TRUE@	$(DTDEFARM32) $<
-@LIBARM32_TRUE@libarm32/libxapofx.a: libarm32/$(xapofx).def
-@LIBARM32_TRUE@	$(DTDEFARM32) $<
-@LIBARM32_TRUE@libarm32/libx3daudio.a: libarm32/$(x3daudio).def
-@LIBARM32_TRUE@	$(DTDEFARM32) $<
-@LIBARM32_TRUE@libarm32/libd3dx9.a: libarm32/$(d3dx9).def
-@LIBARM32_TRUE@	$(DTDEFARM32) $<
-@LIBARM32_TRUE@libarm32/libd3dx10.a: libarm32/$(d3dx10).def
-@LIBARM32_TRUE@	$(DTDEFARM32) $<
-@LIBARM32_TRUE@libarm32/libd3dx11.a: libarm32/$(d3dx11).def
-@LIBARM32_TRUE@	$(DTDEFARM32) $<
-@LIBARM32_TRUE@libarm32/libd3dcsxd.a: libarm32/$(d3dcsxd).def
-@LIBARM32_TRUE@	$(DTDEFARM32) $<
-@LIBARM32_TRUE@libarm32/libd3dcompiler.a: libarm32/$(d3dcompiler).def
+@LIBARM32_TRUE@libarm32/libd3dcompiler.a: libarm32/d3dcompiler_47.def
 @LIBARM32_TRUE@	$(DTDEFARM32) $<
 
 # End ARM 32-bit runtime
