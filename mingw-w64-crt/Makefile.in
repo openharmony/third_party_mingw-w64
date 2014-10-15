@@ -541,9 +541,9 @@ lib32_libmingwex_a_AR = $(AR) $(ARFLAGS)
 @LIB32_TRUE@@W32API_FALSE@lib32_libmingwex_a_DEPENDENCIES =  \
 @LIB32_TRUE@@W32API_FALSE@	$(am__DEPENDENCIES_1)
 am__lib32_libmingwex_a_SOURCES_DIST = crt/dllentry.c crt/dllmain.c \
-	complex/cabs.c complex/cabsf.c complex/cabsl.c complex/cacos.c \
-	complex/cacosf.c complex/cacosl.c complex/carg.c \
-	complex/cargf.c complex/cargl.c complex/casin.c \
+	complex/_cabs.c complex/cabs.c complex/cabsf.c complex/cabsl.c \
+	complex/cacos.c complex/cacosf.c complex/cacosl.c \
+	complex/carg.c complex/cargf.c complex/cargl.c complex/casin.c \
 	complex/casinf.c complex/casinl.c complex/catan.c \
 	complex/catanf.c complex/catanl.c complex/ccos.c \
 	complex/ccosf.c complex/ccosl.c complex/cexp.c complex/cexpf.c \
@@ -683,6 +683,7 @@ am__lib32_libmingwex_a_SOURCES_DIST = crt/dllentry.c crt/dllmain.c \
 	math/DFP/isinfd64.c math/DFP/isinfd128.c
 am__objects_16 = crt/lib32_libmingwex_a-dllentry.$(OBJEXT) \
 	crt/lib32_libmingwex_a-dllmain.$(OBJEXT) \
+	complex/lib32_libmingwex_a-_cabs.$(OBJEXT) \
 	complex/lib32_libmingwex_a-cabs.$(OBJEXT) \
 	complex/lib32_libmingwex_a-cabsf.$(OBJEXT) \
 	complex/lib32_libmingwex_a-cabsl.$(OBJEXT) \
@@ -1684,9 +1685,9 @@ lib64_libmingwex_a_AR = $(AR) $(ARFLAGS)
 @LIB64_TRUE@@W32API_FALSE@lib64_libmingwex_a_DEPENDENCIES =  \
 @LIB64_TRUE@@W32API_FALSE@	$(am__DEPENDENCIES_2)
 am__lib64_libmingwex_a_SOURCES_DIST = crt/dllentry.c crt/dllmain.c \
-	complex/cabs.c complex/cabsf.c complex/cabsl.c complex/cacos.c \
-	complex/cacosf.c complex/cacosl.c complex/carg.c \
-	complex/cargf.c complex/cargl.c complex/casin.c \
+	complex/_cabs.c complex/cabs.c complex/cabsf.c complex/cabsl.c \
+	complex/cacos.c complex/cacosf.c complex/cacosl.c \
+	complex/carg.c complex/cargf.c complex/cargl.c complex/casin.c \
 	complex/casinf.c complex/casinl.c complex/catan.c \
 	complex/catanf.c complex/catanl.c complex/ccos.c \
 	complex/ccosf.c complex/ccosl.c complex/cexp.c complex/cexpf.c \
@@ -1826,6 +1827,7 @@ am__lib64_libmingwex_a_SOURCES_DIST = crt/dllentry.c crt/dllmain.c \
 	math/DFP/isinfd64.c math/DFP/isinfd128.c
 am__objects_49 = crt/lib64_libmingwex_a-dllentry.$(OBJEXT) \
 	crt/lib64_libmingwex_a-dllmain.$(OBJEXT) \
+	complex/lib64_libmingwex_a-_cabs.$(OBJEXT) \
 	complex/lib64_libmingwex_a-cabs.$(OBJEXT) \
 	complex/lib64_libmingwex_a-cabsf.$(OBJEXT) \
 	complex/lib64_libmingwex_a-cabsl.$(OBJEXT) \
@@ -2741,9 +2743,9 @@ libarm32_libmingwex_a_AR = $(AR) $(ARFLAGS)
 @LIBARM32_TRUE@@W32API_FALSE@libarm32_libmingwex_a_DEPENDENCIES =  \
 @LIBARM32_TRUE@@W32API_FALSE@	$(am__DEPENDENCIES_1)
 am__libarm32_libmingwex_a_SOURCES_DIST = crt/dllentry.c crt/dllmain.c \
-	complex/cabs.c complex/cabsf.c complex/cabsl.c complex/cacos.c \
-	complex/cacosf.c complex/cacosl.c complex/carg.c \
-	complex/cargf.c complex/cargl.c complex/casin.c \
+	complex/_cabs.c complex/cabs.c complex/cabsf.c complex/cabsl.c \
+	complex/cacos.c complex/cacosf.c complex/cacosl.c \
+	complex/carg.c complex/cargf.c complex/cargl.c complex/casin.c \
 	complex/casinf.c complex/casinl.c complex/catan.c \
 	complex/catanf.c complex/catanl.c complex/ccos.c \
 	complex/ccosf.c complex/ccosl.c complex/cexp.c complex/cexpf.c \
@@ -2899,6 +2901,7 @@ am__libarm32_libmingwex_a_SOURCES_DIST = crt/dllentry.c crt/dllmain.c \
 	math/DFP/isinfd32.c math/DFP/isinfd64.c math/DFP/isinfd128.c
 am__objects_78 = crt/libarm32_libmingwex_a-dllentry.$(OBJEXT) \
 	crt/libarm32_libmingwex_a-dllmain.$(OBJEXT) \
+	complex/libarm32_libmingwex_a-_cabs.$(OBJEXT) \
 	complex/libarm32_libmingwex_a-cabs.$(OBJEXT) \
 	complex/libarm32_libmingwex_a-cabsf.$(OBJEXT) \
 	complex/libarm32_libmingwex_a-cabsl.$(OBJEXT) \
@@ -5106,7 +5109,7 @@ src_msvcrt32 = \
 src_libmingwex = \
   crt/dllentry.c        crt/dllmain.c \
   \
-  complex/cabs.c     complex/cabsf.c    complex/cabsl.c   complex/cacos.c    complex/cacosf.c   complex/cacosl.c \
+  complex/_cabs.c  complex/cabs.c     complex/cabsf.c    complex/cabsl.c   complex/cacos.c    complex/cacosf.c   complex/cacosl.c \
   complex/carg.c     complex/cargf.c    complex/cargl.c   complex/casin.c    complex/casinf.c   complex/casinl.c \
   complex/catan.c    complex/catanf.c   complex/catanl.c  complex/ccos.c     complex/ccosf.c    complex/ccosl.c  \
   complex/cexp.c     complex/cexpf.c    complex/cexpl.c   complex/cimag.c    complex/cimagf.c   complex/cimagl.c \
@@ -8142,6 +8145,8 @@ complex/$(am__dirstamp):
 complex/$(DEPDIR)/$(am__dirstamp):
 	@$(MKDIR_P) complex/$(DEPDIR)
 	@: > complex/$(DEPDIR)/$(am__dirstamp)
+complex/lib32_libmingwex_a-_cabs.$(OBJEXT): complex/$(am__dirstamp) \
+	complex/$(DEPDIR)/$(am__dirstamp)
 complex/lib32_libmingwex_a-cabs.$(OBJEXT): complex/$(am__dirstamp) \
 	complex/$(DEPDIR)/$(am__dirstamp)
 complex/lib32_libmingwex_a-cabsf.$(OBJEXT): complex/$(am__dirstamp) \
@@ -9790,6 +9795,8 @@ crt/lib64_libmingwex_a-dllentry.$(OBJEXT): crt/$(am__dirstamp) \
 	crt/$(DEPDIR)/$(am__dirstamp)
 crt/lib64_libmingwex_a-dllmain.$(OBJEXT): crt/$(am__dirstamp) \
 	crt/$(DEPDIR)/$(am__dirstamp)
+complex/lib64_libmingwex_a-_cabs.$(OBJEXT): complex/$(am__dirstamp) \
+	complex/$(DEPDIR)/$(am__dirstamp)
 complex/lib64_libmingwex_a-cabs.$(OBJEXT): complex/$(am__dirstamp) \
 	complex/$(DEPDIR)/$(am__dirstamp)
 complex/lib64_libmingwex_a-cabsf.$(OBJEXT): complex/$(am__dirstamp) \
@@ -11289,6 +11296,8 @@ crt/libarm32_libmingwex_a-dllentry.$(OBJEXT): crt/$(am__dirstamp) \
 	crt/$(DEPDIR)/$(am__dirstamp)
 crt/libarm32_libmingwex_a-dllmain.$(OBJEXT): crt/$(am__dirstamp) \
 	crt/$(DEPDIR)/$(am__dirstamp)
+complex/libarm32_libmingwex_a-_cabs.$(OBJEXT):  \
+	complex/$(am__dirstamp) complex/$(DEPDIR)/$(am__dirstamp)
 complex/libarm32_libmingwex_a-cabs.$(OBJEXT): complex/$(am__dirstamp) \
 	complex/$(DEPDIR)/$(am__dirstamp)
 complex/libarm32_libmingwex_a-cabsf.$(OBJEXT):  \
@@ -13517,6 +13526,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/lib64_libmoldname_a-_libm_dummy.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libarm32_libm_a-_libm_dummy.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libarm32_libmoldname_a-_libm_dummy.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@complex/$(DEPDIR)/lib32_libmingwex_a-_cabs.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@complex/$(DEPDIR)/lib32_libmingwex_a-cabs.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@complex/$(DEPDIR)/lib32_libmingwex_a-cabsf.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@complex/$(DEPDIR)/lib32_libmingwex_a-cabsl.Po@am__quote@
@@ -13565,6 +13575,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@complex/$(DEPDIR)/lib32_libmingwex_a-ctan.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@complex/$(DEPDIR)/lib32_libmingwex_a-ctanf.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@complex/$(DEPDIR)/lib32_libmingwex_a-ctanl.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@complex/$(DEPDIR)/lib64_libmingwex_a-_cabs.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@complex/$(DEPDIR)/lib64_libmingwex_a-cabs.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@complex/$(DEPDIR)/lib64_libmingwex_a-cabsf.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@complex/$(DEPDIR)/lib64_libmingwex_a-cabsl.Po@am__quote@
@@ -13613,6 +13624,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@complex/$(DEPDIR)/lib64_libmingwex_a-ctan.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@complex/$(DEPDIR)/lib64_libmingwex_a-ctanf.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@complex/$(DEPDIR)/lib64_libmingwex_a-ctanl.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@complex/$(DEPDIR)/libarm32_libmingwex_a-_cabs.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@complex/$(DEPDIR)/libarm32_libmingwex_a-cabs.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@complex/$(DEPDIR)/libarm32_libmingwex_a-cabsf.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@complex/$(DEPDIR)/libarm32_libmingwex_a-cabsl.Po@am__quote@
@@ -19312,6 +19324,20 @@ crt/lib32_libmingwex_a-dllmain.obj: crt/dllmain.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='crt/dllmain.c' object='crt/lib32_libmingwex_a-dllmain.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o crt/lib32_libmingwex_a-dllmain.obj `if test -f 'crt/dllmain.c'; then $(CYGPATH_W) 'crt/dllmain.c'; else $(CYGPATH_W) '$(srcdir)/crt/dllmain.c'; fi`
+
+complex/lib32_libmingwex_a-_cabs.o: complex/_cabs.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT complex/lib32_libmingwex_a-_cabs.o -MD -MP -MF complex/$(DEPDIR)/lib32_libmingwex_a-_cabs.Tpo -c -o complex/lib32_libmingwex_a-_cabs.o `test -f 'complex/_cabs.c' || echo '$(srcdir)/'`complex/_cabs.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) complex/$(DEPDIR)/lib32_libmingwex_a-_cabs.Tpo complex/$(DEPDIR)/lib32_libmingwex_a-_cabs.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='complex/_cabs.c' object='complex/lib32_libmingwex_a-_cabs.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o complex/lib32_libmingwex_a-_cabs.o `test -f 'complex/_cabs.c' || echo '$(srcdir)/'`complex/_cabs.c
+
+complex/lib32_libmingwex_a-_cabs.obj: complex/_cabs.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT complex/lib32_libmingwex_a-_cabs.obj -MD -MP -MF complex/$(DEPDIR)/lib32_libmingwex_a-_cabs.Tpo -c -o complex/lib32_libmingwex_a-_cabs.obj `if test -f 'complex/_cabs.c'; then $(CYGPATH_W) 'complex/_cabs.c'; else $(CYGPATH_W) '$(srcdir)/complex/_cabs.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) complex/$(DEPDIR)/lib32_libmingwex_a-_cabs.Tpo complex/$(DEPDIR)/lib32_libmingwex_a-_cabs.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='complex/_cabs.c' object='complex/lib32_libmingwex_a-_cabs.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o complex/lib32_libmingwex_a-_cabs.obj `if test -f 'complex/_cabs.c'; then $(CYGPATH_W) 'complex/_cabs.c'; else $(CYGPATH_W) '$(srcdir)/complex/_cabs.c'; fi`
 
 complex/lib32_libmingwex_a-cabs.o: complex/cabs.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT complex/lib32_libmingwex_a-cabs.o -MD -MP -MF complex/$(DEPDIR)/lib32_libmingwex_a-cabs.Tpo -c -o complex/lib32_libmingwex_a-cabs.o `test -f 'complex/cabs.c' || echo '$(srcdir)/'`complex/cabs.c
@@ -28497,6 +28523,20 @@ crt/lib64_libmingwex_a-dllmain.obj: crt/dllmain.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o crt/lib64_libmingwex_a-dllmain.obj `if test -f 'crt/dllmain.c'; then $(CYGPATH_W) 'crt/dllmain.c'; else $(CYGPATH_W) '$(srcdir)/crt/dllmain.c'; fi`
 
+complex/lib64_libmingwex_a-_cabs.o: complex/_cabs.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT complex/lib64_libmingwex_a-_cabs.o -MD -MP -MF complex/$(DEPDIR)/lib64_libmingwex_a-_cabs.Tpo -c -o complex/lib64_libmingwex_a-_cabs.o `test -f 'complex/_cabs.c' || echo '$(srcdir)/'`complex/_cabs.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) complex/$(DEPDIR)/lib64_libmingwex_a-_cabs.Tpo complex/$(DEPDIR)/lib64_libmingwex_a-_cabs.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='complex/_cabs.c' object='complex/lib64_libmingwex_a-_cabs.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o complex/lib64_libmingwex_a-_cabs.o `test -f 'complex/_cabs.c' || echo '$(srcdir)/'`complex/_cabs.c
+
+complex/lib64_libmingwex_a-_cabs.obj: complex/_cabs.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT complex/lib64_libmingwex_a-_cabs.obj -MD -MP -MF complex/$(DEPDIR)/lib64_libmingwex_a-_cabs.Tpo -c -o complex/lib64_libmingwex_a-_cabs.obj `if test -f 'complex/_cabs.c'; then $(CYGPATH_W) 'complex/_cabs.c'; else $(CYGPATH_W) '$(srcdir)/complex/_cabs.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) complex/$(DEPDIR)/lib64_libmingwex_a-_cabs.Tpo complex/$(DEPDIR)/lib64_libmingwex_a-_cabs.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='complex/_cabs.c' object='complex/lib64_libmingwex_a-_cabs.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o complex/lib64_libmingwex_a-_cabs.obj `if test -f 'complex/_cabs.c'; then $(CYGPATH_W) 'complex/_cabs.c'; else $(CYGPATH_W) '$(srcdir)/complex/_cabs.c'; fi`
+
 complex/lib64_libmingwex_a-cabs.o: complex/cabs.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT complex/lib64_libmingwex_a-cabs.o -MD -MP -MF complex/$(DEPDIR)/lib64_libmingwex_a-cabs.Tpo -c -o complex/lib64_libmingwex_a-cabs.o `test -f 'complex/cabs.c' || echo '$(srcdir)/'`complex/cabs.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) complex/$(DEPDIR)/lib64_libmingwex_a-cabs.Tpo complex/$(DEPDIR)/lib64_libmingwex_a-cabs.Po
@@ -37092,6 +37132,20 @@ crt/libarm32_libmingwex_a-dllmain.obj: crt/dllmain.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='crt/dllmain.c' object='crt/libarm32_libmingwex_a-dllmain.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o crt/libarm32_libmingwex_a-dllmain.obj `if test -f 'crt/dllmain.c'; then $(CYGPATH_W) 'crt/dllmain.c'; else $(CYGPATH_W) '$(srcdir)/crt/dllmain.c'; fi`
+
+complex/libarm32_libmingwex_a-_cabs.o: complex/_cabs.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT complex/libarm32_libmingwex_a-_cabs.o -MD -MP -MF complex/$(DEPDIR)/libarm32_libmingwex_a-_cabs.Tpo -c -o complex/libarm32_libmingwex_a-_cabs.o `test -f 'complex/_cabs.c' || echo '$(srcdir)/'`complex/_cabs.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) complex/$(DEPDIR)/libarm32_libmingwex_a-_cabs.Tpo complex/$(DEPDIR)/libarm32_libmingwex_a-_cabs.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='complex/_cabs.c' object='complex/libarm32_libmingwex_a-_cabs.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o complex/libarm32_libmingwex_a-_cabs.o `test -f 'complex/_cabs.c' || echo '$(srcdir)/'`complex/_cabs.c
+
+complex/libarm32_libmingwex_a-_cabs.obj: complex/_cabs.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT complex/libarm32_libmingwex_a-_cabs.obj -MD -MP -MF complex/$(DEPDIR)/libarm32_libmingwex_a-_cabs.Tpo -c -o complex/libarm32_libmingwex_a-_cabs.obj `if test -f 'complex/_cabs.c'; then $(CYGPATH_W) 'complex/_cabs.c'; else $(CYGPATH_W) '$(srcdir)/complex/_cabs.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) complex/$(DEPDIR)/libarm32_libmingwex_a-_cabs.Tpo complex/$(DEPDIR)/libarm32_libmingwex_a-_cabs.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='complex/_cabs.c' object='complex/libarm32_libmingwex_a-_cabs.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o complex/libarm32_libmingwex_a-_cabs.obj `if test -f 'complex/_cabs.c'; then $(CYGPATH_W) 'complex/_cabs.c'; else $(CYGPATH_W) '$(srcdir)/complex/_cabs.c'; fi`
 
 complex/libarm32_libmingwex_a-cabs.o: complex/cabs.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT complex/libarm32_libmingwex_a-cabs.o -MD -MP -MF complex/$(DEPDIR)/libarm32_libmingwex_a-cabs.Tpo -c -o complex/libarm32_libmingwex_a-cabs.o `test -f 'complex/cabs.c' || echo '$(srcdir)/'`complex/cabs.c
