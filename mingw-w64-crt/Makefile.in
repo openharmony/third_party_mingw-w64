@@ -5466,7 +5466,8 @@ winrtlibs = \
 @LIB32_TRUE@	lib32/libcryptnet.a lib32/libcryptsp.a \
 @LIB32_TRUE@	lib32/libcryptxml.a lib32/libcscapi.a \
 @LIB32_TRUE@	lib32/libctl3d32.a lib32/libd2d1.a lib32/libd3d8.a \
-@LIB32_TRUE@	lib32/libd3d9.a lib32/libd3dcompiler_33.a \
+@LIB32_TRUE@	lib32/libd3d9.a lib32/libd3d11.a \
+@LIB32_TRUE@	lib32/libd3dcompiler_33.a \
 @LIB32_TRUE@	lib32/libd3dcompiler_34.a \
 @LIB32_TRUE@	lib32/libd3dcompiler_35.a \
 @LIB32_TRUE@	lib32/libd3dcompiler_36.a \
@@ -6327,7 +6328,8 @@ winrtlibs = \
 @LIB64_TRUE@	lib64/libxinput1_2.a lib64/libxinput1_3.a \
 @LIB64_TRUE@	lib64/libxinput1_4.a lib64/libxinput9_1_0.a \
 @LIB64_TRUE@	lib64/libxaudio2_8.a lib64/libd3dcompiler_46.a \
-@LIB64_TRUE@	lib64/libd3dcsx_46.a lib64/libwinhttp.a \
+@LIB64_TRUE@	lib64/libd3dcsx_46.a lib64/libd3d11.a \
+@LIB64_TRUE@	lib64/libwinhttp.a \
 @LIB64_TRUE@	lib64/libapi-ms-win-core-winrt-string-l1-1-0.a \
 @LIB64_TRUE@	lib64/libapi-ms-win-core-winrt-l1-1-0.a \
 @LIB64_TRUE@	$(am__append_9)
