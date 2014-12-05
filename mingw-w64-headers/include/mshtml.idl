@@ -2814,7 +2814,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLSTYLE2_DIRECTION), displaybind, bindable] HRESULT direction ([retval, out] BSTR *p);
     [propput, id (DISPID_IHTMLSTYLE2_BEHAVIOR), displaybind, bindable] HRESULT behavior ([in] BSTR v);
     [propget, id (DISPID_IHTMLSTYLE2_BEHAVIOR), displaybind, bindable] HRESULT behavior ([retval, out] BSTR *p);
-    [id (DISPID_IHTMLSTYLE2_SETEXPRESSION)] HRESULT setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLSTYLE2_SETEXPRESSION)] HRESULT setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLSTYLE2_GETEXPRESSION)] HRESULT getExpression ([in] BSTR propname,[retval, out] VARIANT *expression);
     [id (DISPID_IHTMLSTYLE2_REMOVEEXPRESSION)] HRESULT removeExpression ([in] BSTR propname,[retval, out] VARIANT_BOOL *pfSuccess);
     [propput, id (DISPID_IHTMLSTYLE2_POSITION), displaybind, bindable] HRESULT position ([in] BSTR v);
@@ -3467,7 +3467,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLSTYLE2_DIRECTION), displaybind, bindable] BSTR direction ();
     [propput, id (DISPID_IHTMLSTYLE2_BEHAVIOR), displaybind, bindable] void behavior (BSTR v);
     [propget, id (DISPID_IHTMLSTYLE2_BEHAVIOR), displaybind, bindable] BSTR behavior ();
-    [id (DISPID_IHTMLSTYLE2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLSTYLE2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLSTYLE2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLSTYLE2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLSTYLE2_POSITION), displaybind, bindable] void position (BSTR v);
@@ -6113,7 +6113,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] HRESULT onpropertychange ([retval, out] VARIANT *p);
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] HRESULT getClientRects ([retval, out] IHTMLRectCollection **pRectCol);
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] HRESULT getBoundingClientRect ([retval, out] IHTMLRect **pRect);
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] HRESULT setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] HRESULT setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] HRESULT getExpression ([in] BSTR propname,[retval, out] VARIANT *expression);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] HRESULT removeExpression ([in] BSTR propname,[retval, out] VARIANT_BOOL *pfSuccess);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] HRESULT tabIndex ([in] short v);
@@ -6848,7 +6848,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -7753,7 +7753,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -8433,8 +8433,8 @@ library MSHTML {
     [id (DISPID_IHTMLFORMELEMENT3_NAMEDITEM)] HRESULT namedItem ([in] BSTR name,[retval, out] IDispatch **pdisp);
   };
   [odl, oleautomation, dual, uuid (3050f645-98b5-11cf-bb82-00aa00bdce0b)] interface IHTMLSubmitData : IDispatch {
-    [id (DISPID_IHTMLSUBMITDATA_APPENDNAMEVALUEPAIR)] HRESULT appendNameValuePair ([defaultvalue (""), in] BSTR name,[defaultvalue (""), in] BSTR value);
-    [id (DISPID_IHTMLSUBMITDATA_APPENDNAMEFILEPAIR)] HRESULT appendNameFilePair ([defaultvalue (""), in] BSTR name,[defaultvalue (""), in] BSTR filename);
+    [id (DISPID_IHTMLSUBMITDATA_APPENDNAMEVALUEPAIR)] HRESULT appendNameValuePair ([defaultvalue (L""), in] BSTR name,[defaultvalue (L""), in] BSTR value);
+    [id (DISPID_IHTMLSUBMITDATA_APPENDNAMEFILEPAIR)] HRESULT appendNameFilePair ([defaultvalue (L""), in] BSTR name,[defaultvalue (L""), in] BSTR filename);
     [id (DISPID_IHTMLSUBMITDATA_APPENDITEMSEPARATOR)] HRESULT appendItemSeparator ();
   };
   [odl, oleautomation, dual, uuid (3051042c-98b5-11cf-bb82-00aa00bdce0b)] interface IHTMLFormElement4 : IDispatch {
@@ -8569,7 +8569,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -8923,8 +8923,8 @@ library MSHTML {
     [propget, id (DISPID_IHTMLFORMELEMENT2_ACCEPTCHARSET), displaybind, bindable] BSTR acceptCharset ();
     [id (DISPID_IHTMLFORMELEMENT2_URNS)] IDispatch *urns ([in] VARIANT urn);
     [id (DISPID_IHTMLFORMELEMENT3_NAMEDITEM)] IDispatch *namedItem ([in] BSTR name);
-    [id (DISPID_IHTMLSUBMITDATA_APPENDNAMEVALUEPAIR)] void appendNameValuePair ([defaultvalue (""), in] BSTR name,[defaultvalue (""), in] BSTR value);
-    [id (DISPID_IHTMLSUBMITDATA_APPENDNAMEFILEPAIR)] void appendNameFilePair ([defaultvalue (""), in] BSTR name,[defaultvalue (""), in] BSTR filename);
+    [id (DISPID_IHTMLSUBMITDATA_APPENDNAMEVALUEPAIR)] void appendNameValuePair ([defaultvalue (L""), in] BSTR name,[defaultvalue (L""), in] BSTR value);
+    [id (DISPID_IHTMLSUBMITDATA_APPENDNAMEFILEPAIR)] void appendNameFilePair ([defaultvalue (L""), in] BSTR name,[defaultvalue (L""), in] BSTR filename);
     [id (DISPID_IHTMLSUBMITDATA_APPENDITEMSEPARATOR)] void appendItemSeparator ();
     [propput, id (DISPID_IHTMLFORMELEMENT4_IE8_ACTION), displaybind, bindable] void ie8_action (BSTR v);
     [propget, id (DISPID_IHTMLFORMELEMENT4_IE8_ACTION), displaybind, bindable] BSTR ie8_action ();
@@ -9242,7 +9242,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -10105,7 +10105,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -10748,7 +10748,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -11290,7 +11290,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -11971,7 +11971,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -12669,7 +12669,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -13186,7 +13186,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -13674,7 +13674,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -14167,7 +14167,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -14660,7 +14660,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -15157,7 +15157,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -15652,7 +15652,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -16171,7 +16171,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -16656,7 +16656,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -17141,7 +17141,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -17626,7 +17626,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -18121,7 +18121,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -18614,7 +18614,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -19146,7 +19146,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -19823,7 +19823,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -20361,7 +20361,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -20952,7 +20952,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -21480,7 +21480,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -22947,7 +22947,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -23581,7 +23581,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -24118,7 +24118,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -24664,7 +24664,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -25374,7 +25374,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -25972,7 +25972,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -26453,7 +26453,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -26937,7 +26937,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -27418,7 +27418,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -27913,7 +27913,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -28399,7 +28399,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -28884,7 +28884,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -29373,7 +29373,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -29860,7 +29860,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -30756,9 +30756,9 @@ library MSHTML {
     [propget, id (DISPID_IHTMLWINDOW2_STATUS)] HRESULT status ([retval, out] BSTR *p);
     [id (DISPID_IHTMLWINDOW2_SETTIMEOUT)] HRESULT setTimeout ([in] BSTR expression,[in] long msec,[optional, in] VARIANT *language,[retval, out] long *timerID);
     [id (DISPID_IHTMLWINDOW2_CLEARTIMEOUT)] HRESULT clearTimeout ([in] long timerID);
-    [id (DISPID_IHTMLWINDOW2_ALERT)] HRESULT alert ([defaultvalue (""), in] BSTR message);
-    [id (DISPID_IHTMLWINDOW2_CONFIRM)] HRESULT confirm ([defaultvalue (""), in] BSTR message,[retval, out] VARIANT_BOOL *confirmed);
-    [id (DISPID_IHTMLWINDOW2_PROMPT)] HRESULT prompt ([defaultvalue (""), in] BSTR message,[defaultvalue ("undefined"), in] BSTR defstr,[retval, out] VARIANT *textdata);
+    [id (DISPID_IHTMLWINDOW2_ALERT)] HRESULT alert ([defaultvalue (L""), in] BSTR message);
+    [id (DISPID_IHTMLWINDOW2_CONFIRM)] HRESULT confirm ([defaultvalue (L""), in] BSTR message,[retval, out] VARIANT_BOOL *confirmed);
+    [id (DISPID_IHTMLWINDOW2_PROMPT)] HRESULT prompt ([defaultvalue (L""), in] BSTR message,[defaultvalue (L"undefined"), in] BSTR defstr,[retval, out] VARIANT *textdata);
     [propget, id (DISPID_IHTMLWINDOW2_IMAGE)] HRESULT Image ([retval, out] IHTMLImageElementFactory **p);
     [propget, id (DISPID_IHTMLWINDOW2_LOCATION)] HRESULT location ([retval, out] IHTMLLocation **p);
     [propget, id (DISPID_IHTMLWINDOW2_HISTORY)] HRESULT history ([retval, out] IOmHistory **p);
@@ -30769,7 +30769,7 @@ library MSHTML {
     [propput, id (DISPID_IHTMLWINDOW2_NAME)] HRESULT name ([in] BSTR v);
     [propget, id (DISPID_IHTMLWINDOW2_NAME)] HRESULT name ([retval, out] BSTR *p);
     [propget, id (DISPID_IHTMLWINDOW2_PARENT)] HRESULT parent ([retval, out] IHTMLWindow2 **p);
-    [id (DISPID_IHTMLWINDOW2_OPEN)] HRESULT open ([defaultvalue (""), in] BSTR url,[defaultvalue (""), in] BSTR name,[defaultvalue (""), in] BSTR features,[defaultvalue (0), in] VARIANT_BOOL replace,[retval, out] IHTMLWindow2 **pomWindowResult);
+    [id (DISPID_IHTMLWINDOW2_OPEN)] HRESULT open ([defaultvalue (L""), in] BSTR url,[defaultvalue (L""), in] BSTR name,[defaultvalue (L""), in] BSTR features,[defaultvalue (0), in] VARIANT_BOOL replace,[retval, out] IHTMLWindow2 **pomWindowResult);
     [propget, id (DISPID_IHTMLWINDOW2_SELF)] HRESULT self ([retval, out] IHTMLWindow2 **p);
     [propget, id (DISPID_IHTMLWINDOW2_TOP)] HRESULT top ([retval, out] IHTMLWindow2 **p);
     [propget, id (DISPID_IHTMLWINDOW2_WINDOW)] HRESULT window ([retval, out] IHTMLWindow2 **p);
@@ -30796,7 +30796,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLWINDOW2_EVENT)] HRESULT event ([retval, out] IHTMLEventObj **p);
     [propget, id (DISPID_IHTMLWINDOW2__NEWENUM), hidden, restricted] HRESULT _newEnum ([retval, out] IUnknown **p);
     [id (DISPID_IHTMLWINDOW2_SHOWMODALDIALOG)] HRESULT showModalDialog ([in] BSTR dialog,[optional, in] VARIANT *varArgIn,[optional, in] VARIANT *varOptions,[retval, out] VARIANT *varArgOut);
-    [id (DISPID_IHTMLWINDOW2_SHOWHELP)] HRESULT showHelp ([in] BSTR helpURL,[optional, in] VARIANT helpArg,[defaultvalue (""), in] BSTR features);
+    [id (DISPID_IHTMLWINDOW2_SHOWHELP)] HRESULT showHelp ([in] BSTR helpURL,[optional, in] VARIANT helpArg,[defaultvalue (L""), in] BSTR features);
     [propget, id (DISPID_IHTMLWINDOW2_SCREEN)] HRESULT screen ([retval, out] IHTMLScreen **p);
     [propget, id (DISPID_IHTMLWINDOW2_OPTION)] HRESULT Option ([retval, out] IHTMLOptionElementFactory **p);
     [id (DISPID_IHTMLWINDOW2_FOCUS)] HRESULT focus ();
@@ -30808,7 +30808,7 @@ library MSHTML {
     [id (DISPID_IHTMLWINDOW2_CLEARINTERVAL)] HRESULT clearInterval ([in] long timerID);
     [propput, id (DISPID_IHTMLWINDOW2_OFFSCREENBUFFERING)] HRESULT offscreenBuffering ([in] VARIANT v);
     [propget, id (DISPID_IHTMLWINDOW2_OFFSCREENBUFFERING)] HRESULT offscreenBuffering ([retval, out] VARIANT *p);
-    [id (DISPID_IHTMLWINDOW2_EXECSCRIPT)] HRESULT execScript ([in] BSTR code,[defaultvalue ("JScript"), in] BSTR language,[retval, out] VARIANT *pvarRet);
+    [id (DISPID_IHTMLWINDOW2_EXECSCRIPT)] HRESULT execScript ([in] BSTR code,[defaultvalue (L"JScript"), in] BSTR language,[retval, out] VARIANT *pvarRet);
     [id (DISPID_IHTMLWINDOW2_TOSTRING)] HRESULT toString ([retval, out] BSTR *String);
     [id (DISPID_IHTMLWINDOW2_SCROLLBY)] HRESULT scrollBy ([in] long x,[in] long y);
     [id (DISPID_IHTMLWINDOW2_SCROLLTO)] HRESULT scrollTo ([in] long x,[in] long y);
@@ -30831,7 +30831,7 @@ library MSHTML {
     [propput, id (DISPID_IHTMLWINDOW3_ONAFTERPRINT), displaybind, bindable] HRESULT onafterprint ([in] VARIANT v);
     [propget, id (DISPID_IHTMLWINDOW3_ONAFTERPRINT), displaybind, bindable] HRESULT onafterprint ([retval, out] VARIANT *p);
     [propget, id (DISPID_IHTMLWINDOW3_CLIPBOARDDATA)] HRESULT clipboardData ([retval, out] IHTMLDataTransfer **p);
-    [id (DISPID_IHTMLWINDOW3_SHOWMODELESSDIALOG)] HRESULT showModelessDialog ([defaultvalue (""), in] BSTR url,[optional, in] VARIANT *varArgIn,[optional, in] VARIANT *options,[retval, out] IHTMLWindow2 **pDialog);
+    [id (DISPID_IHTMLWINDOW3_SHOWMODELESSDIALOG)] HRESULT showModelessDialog ([defaultvalue (L""), in] BSTR url,[optional, in] VARIANT *varArgIn,[optional, in] VARIANT *options,[retval, out] IHTMLWindow2 **pDialog);
   };
   [odl, oleautomation, dual, uuid (3050f6cf-98b5-11cf-bb82-00aa00bdce0b)] interface IHTMLWindow4 : IDispatch {
     [id (DISPID_IHTMLWINDOW4_CREATEPOPUP)] HRESULT createPopup ([optional, in] VARIANT *varArgIn,[retval, out] IDispatch **ppPopup);
@@ -30857,7 +30857,7 @@ library MSHTML {
   };
   [odl, oleautomation, dual, uuid (305104b7-98b5-11cf-bb82-00aa00bdce0b)] interface IHTMLWindow7 : IDispatch {
     [id (DISPID_IHTMLWINDOW7_GETSELECTION)] HRESULT getSelection ([retval, out] IHTMLSelection **ppIHTMLSelection);
-    [id (DISPID_IHTMLWINDOW7_GETCOMPUTEDSTYLE)] HRESULT getComputedStyle ([in] IHTMLDOMNode *varArgIn,[defaultvalue (""), in] BSTR bstrPseudoElt,[retval, out] IHTMLCSSStyleDeclaration **ppComputedStyle);
+    [id (DISPID_IHTMLWINDOW7_GETCOMPUTEDSTYLE)] HRESULT getComputedStyle ([in] IHTMLDOMNode *varArgIn,[defaultvalue (L""), in] BSTR bstrPseudoElt,[retval, out] IHTMLCSSStyleDeclaration **ppComputedStyle);
     [propget, id (DISPID_IHTMLWINDOW7_STYLEMEDIA)] HRESULT styleMedia ([retval, out] IHTMLStyleMedia **p);
     [propput, id (DISPID_IHTMLWINDOW7_PERFORMANCE)] HRESULT performance ([in] VARIANT v);
     [propget, id (DISPID_IHTMLWINDOW7_PERFORMANCE)] HRESULT performance ([retval, out] VARIANT *p);
@@ -31055,9 +31055,9 @@ library MSHTML {
     [propput, id (DISPID_IHTMLWINDOW2_STATUS)] void status (BSTR v);
     [propget, id (DISPID_IHTMLWINDOW2_STATUS)] BSTR status ();
     [id (DISPID_IHTMLWINDOW2_CLEARTIMEOUT)] void clearTimeout ([in] long timerID);
-    [id (DISPID_IHTMLWINDOW2_ALERT)] void alert ([defaultvalue (""), in] BSTR message);
-    [id (DISPID_IHTMLWINDOW2_CONFIRM)] VARIANT_BOOL confirm ([defaultvalue (""), in] BSTR message);
-    [id (DISPID_IHTMLWINDOW2_PROMPT)] VARIANT prompt ([defaultvalue (""), in] BSTR message,[defaultvalue ("undefined"), in] BSTR defstr);
+    [id (DISPID_IHTMLWINDOW2_ALERT)] void alert ([defaultvalue (L""), in] BSTR message);
+    [id (DISPID_IHTMLWINDOW2_CONFIRM)] VARIANT_BOOL confirm ([defaultvalue (L""), in] BSTR message);
+    [id (DISPID_IHTMLWINDOW2_PROMPT)] VARIANT prompt ([defaultvalue (L""), in] BSTR message,[defaultvalue (L"undefined"), in] BSTR defstr);
     [propget, id (DISPID_IHTMLWINDOW2_LOCATION)] IHTMLLocation *location ();
     [propget, id (DISPID_IHTMLWINDOW2_HISTORY)] IOmHistory *history ();
     [id (DISPID_IHTMLWINDOW2_CLOSE)] void close ();
@@ -31067,7 +31067,7 @@ library MSHTML {
     [propput, id (DISPID_IHTMLWINDOW2_NAME)] void name (BSTR v);
     [propget, id (DISPID_IHTMLWINDOW2_NAME)] BSTR name ();
     [propget, id (DISPID_IHTMLWINDOW2_PARENT)] IHTMLWindow2 *parent ();
-    [id (DISPID_IHTMLWINDOW2_OPEN)] IHTMLWindow2 *open ([defaultvalue (""), in] BSTR url,[defaultvalue (""), in] BSTR name,[defaultvalue (""), in] BSTR features,[defaultvalue (0), in] VARIANT_BOOL replace);
+    [id (DISPID_IHTMLWINDOW2_OPEN)] IHTMLWindow2 *open ([defaultvalue (L""), in] BSTR url,[defaultvalue (L""), in] BSTR name,[defaultvalue (L""), in] BSTR features,[defaultvalue (0), in] VARIANT_BOOL replace);
     [propget, id (DISPID_IHTMLWINDOW2_SELF)] IHTMLWindow2 *self ();
     [propget, id (DISPID_IHTMLWINDOW2_TOP)] IHTMLWindow2 *top ();
     [propget, id (DISPID_IHTMLWINDOW2_WINDOW)] IHTMLWindow2 *window ();
@@ -31094,7 +31094,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLWINDOW2_EVENT)] IHTMLEventObj *event ();
     [propget, id (DISPID_IHTMLWINDOW2__NEWENUM), hidden, restricted] IUnknown *_newEnum ();
     [id (DISPID_IHTMLWINDOW2_SHOWMODALDIALOG)] VARIANT showModalDialog ([in] BSTR dialog,[optional, in] VARIANT *varArgIn,[optional, in] VARIANT *varOptions);
-    [id (DISPID_IHTMLWINDOW2_SHOWHELP)] void showHelp ([in] BSTR helpURL,[optional, in] VARIANT helpArg,[defaultvalue (""), in] BSTR features);
+    [id (DISPID_IHTMLWINDOW2_SHOWHELP)] void showHelp ([in] BSTR helpURL,[optional, in] VARIANT helpArg,[defaultvalue (L""), in] BSTR features);
     [propget, id (DISPID_IHTMLWINDOW2_SCREEN)] IHTMLScreen *screen ();
     [id (DISPID_IHTMLWINDOW2_FOCUS)] void focus ();
     [propget, id (DISPID_IHTMLWINDOW2_CLOSED)] VARIANT_BOOL closed ();
@@ -31104,7 +31104,7 @@ library MSHTML {
     [id (DISPID_IHTMLWINDOW2_CLEARINTERVAL)] void clearInterval ([in] long timerID);
     [propput, id (DISPID_IHTMLWINDOW2_OFFSCREENBUFFERING)] void offscreenBuffering (VARIANT v);
     [propget, id (DISPID_IHTMLWINDOW2_OFFSCREENBUFFERING)] VARIANT offscreenBuffering ();
-    [id (DISPID_IHTMLWINDOW2_EXECSCRIPT)] VARIANT execScript ([in] BSTR code,[defaultvalue ("JScript"), in] BSTR language);
+    [id (DISPID_IHTMLWINDOW2_EXECSCRIPT)] VARIANT execScript ([in] BSTR code,[defaultvalue (L"JScript"), in] BSTR language);
     [id (DISPID_IHTMLWINDOW2_TOSTRING)] BSTR toString ();
     [id (DISPID_IHTMLWINDOW2_SCROLLBY)] void scrollBy ([in] long x,[in] long y);
     [id (DISPID_IHTMLWINDOW2_SCROLLTO)] void scrollTo ([in] long x,[in] long y);
@@ -31125,7 +31125,7 @@ library MSHTML {
     [propput, id (DISPID_IHTMLWINDOW3_ONAFTERPRINT), displaybind, bindable] void onafterprint (VARIANT v);
     [propget, id (DISPID_IHTMLWINDOW3_ONAFTERPRINT), displaybind, bindable] VARIANT onafterprint ();
     [propget, id (DISPID_IHTMLWINDOW3_CLIPBOARDDATA)] IHTMLDataTransfer *clipboardData ();
-    [id (DISPID_IHTMLWINDOW3_SHOWMODELESSDIALOG)] IHTMLWindow2 *showModelessDialog ([defaultvalue (""), in] BSTR url,[optional, in] VARIANT *varArgIn,[optional, in] VARIANT *options);
+    [id (DISPID_IHTMLWINDOW3_SHOWMODELESSDIALOG)] IHTMLWindow2 *showModelessDialog ([defaultvalue (L""), in] BSTR url,[optional, in] VARIANT *varArgIn,[optional, in] VARIANT *options);
     [id (DISPID_IHTMLWINDOW4_CREATEPOPUP)] IDispatch *createPopup ([optional, in] VARIANT *varArgIn);
     [propget, id (DISPID_IHTMLWINDOW4_FRAMEELEMENT)] IHTMLFrameBase *frameElement ();
     [propget, id (DISPID_IHTMLWINDOW6_SESSIONSTORAGE)] IHTMLStorage *sessionStorage ();
@@ -31139,7 +31139,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLWINDOW6_ONMESSAGE), displaybind, bindable] VARIANT onmessage ();
     [id (DISPID_IHTMLWINDOW6_MSWRITEPROFILERMARK)] void msWriteProfilerMark ([in] BSTR bstrProfilerMarkName);
     [id (DISPID_IHTMLWINDOW7_GETSELECTION)] IHTMLSelection *getSelection ();
-    [id (DISPID_IHTMLWINDOW7_GETCOMPUTEDSTYLE)] IHTMLCSSStyleDeclaration *getComputedStyle ([in] IHTMLDOMNode *varArgIn,[defaultvalue (""), in] BSTR bstrPseudoElt);
+    [id (DISPID_IHTMLWINDOW7_GETCOMPUTEDSTYLE)] IHTMLCSSStyleDeclaration *getComputedStyle ([in] IHTMLDOMNode *varArgIn,[defaultvalue (L""), in] BSTR bstrPseudoElt);
     [propget, id (DISPID_IHTMLWINDOW7_STYLEMEDIA)] IHTMLStyleMedia *styleMedia ();
     [propput, id (DISPID_IHTMLWINDOW7_PERFORMANCE)] void performance (VARIANT v);
     [propget, id (DISPID_IHTMLWINDOW7_PERFORMANCE)] VARIANT performance ();
@@ -31320,9 +31320,9 @@ library MSHTML {
     [propput, id (DISPID_IHTMLWINDOW2_STATUS)] void status (BSTR v);
     [propget, id (DISPID_IHTMLWINDOW2_STATUS)] BSTR status ();
     [id (DISPID_IHTMLWINDOW2_CLEARTIMEOUT)] void clearTimeout ([in] long timerID);
-    [id (DISPID_IHTMLWINDOW2_ALERT)] void alert ([defaultvalue (""), in] BSTR message);
-    [id (DISPID_IHTMLWINDOW2_CONFIRM)] VARIANT_BOOL confirm ([defaultvalue (""), in] BSTR message);
-    [id (DISPID_IHTMLWINDOW2_PROMPT)] VARIANT prompt ([defaultvalue (""), in] BSTR message,[defaultvalue ("undefined"), in] BSTR defstr);
+    [id (DISPID_IHTMLWINDOW2_ALERT)] void alert ([defaultvalue (L""), in] BSTR message);
+    [id (DISPID_IHTMLWINDOW2_CONFIRM)] VARIANT_BOOL confirm ([defaultvalue (L""), in] BSTR message);
+    [id (DISPID_IHTMLWINDOW2_PROMPT)] VARIANT prompt ([defaultvalue (L""), in] BSTR message,[defaultvalue (L"undefined"), in] BSTR defstr);
     [propget, id (DISPID_IHTMLWINDOW2_LOCATION)] IHTMLLocation *location ();
     [propget, id (DISPID_IHTMLWINDOW2_HISTORY)] IOmHistory *history ();
     [id (DISPID_IHTMLWINDOW2_CLOSE)] void close ();
@@ -31332,7 +31332,7 @@ library MSHTML {
     [propput, id (DISPID_IHTMLWINDOW2_NAME)] void name (BSTR v);
     [propget, id (DISPID_IHTMLWINDOW2_NAME)] BSTR name ();
     [propget, id (DISPID_IHTMLWINDOW2_PARENT)] IHTMLWindow2 *parent ();
-    [id (DISPID_IHTMLWINDOW2_OPEN)] IHTMLWindow2 *open ([defaultvalue (""), in] BSTR url,[defaultvalue (""), in] BSTR name,[defaultvalue (""), in] BSTR features,[defaultvalue (0), in] VARIANT_BOOL replace);
+    [id (DISPID_IHTMLWINDOW2_OPEN)] IHTMLWindow2 *open ([defaultvalue (L""), in] BSTR url,[defaultvalue (L""), in] BSTR name,[defaultvalue (L""), in] BSTR features,[defaultvalue (0), in] VARIANT_BOOL replace);
     [propget, id (DISPID_IHTMLWINDOW2_SELF)] IHTMLWindow2 *self ();
     [propget, id (DISPID_IHTMLWINDOW2_TOP)] IHTMLWindow2 *top ();
     [propget, id (DISPID_IHTMLWINDOW2_WINDOW)] IHTMLWindow2 *window ();
@@ -31359,7 +31359,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLWINDOW2_EVENT)] IHTMLEventObj *event ();
     [propget, id (DISPID_IHTMLWINDOW2__NEWENUM), hidden, restricted] IUnknown *_newEnum ();
     [id (DISPID_IHTMLWINDOW2_SHOWMODALDIALOG)] VARIANT showModalDialog ([in] BSTR dialog,[optional, in] VARIANT *varArgIn,[optional, in] VARIANT *varOptions);
-    [id (DISPID_IHTMLWINDOW2_SHOWHELP)] void showHelp ([in] BSTR helpURL,[optional, in] VARIANT helpArg,[defaultvalue (""), in] BSTR features);
+    [id (DISPID_IHTMLWINDOW2_SHOWHELP)] void showHelp ([in] BSTR helpURL,[optional, in] VARIANT helpArg,[defaultvalue (L""), in] BSTR features);
     [propget, id (DISPID_IHTMLWINDOW2_SCREEN)] IHTMLScreen *screen ();
     [id (DISPID_IHTMLWINDOW2_FOCUS)] void focus ();
     [propget, id (DISPID_IHTMLWINDOW2_CLOSED)] VARIANT_BOOL closed ();
@@ -31369,7 +31369,7 @@ library MSHTML {
     [id (DISPID_IHTMLWINDOW2_CLEARINTERVAL)] void clearInterval ([in] long timerID);
     [propput, id (DISPID_IHTMLWINDOW2_OFFSCREENBUFFERING)] void offscreenBuffering (VARIANT v);
     [propget, id (DISPID_IHTMLWINDOW2_OFFSCREENBUFFERING)] VARIANT offscreenBuffering ();
-    [id (DISPID_IHTMLWINDOW2_EXECSCRIPT)] VARIANT execScript ([in] BSTR code,[defaultvalue ("JScript"), in] BSTR language);
+    [id (DISPID_IHTMLWINDOW2_EXECSCRIPT)] VARIANT execScript ([in] BSTR code,[defaultvalue (L"JScript"), in] BSTR language);
     [id (DISPID_IHTMLWINDOW2_TOSTRING)] BSTR toString ();
     [id (DISPID_IHTMLWINDOW2_SCROLLBY)] void scrollBy ([in] long x,[in] long y);
     [id (DISPID_IHTMLWINDOW2_SCROLLTO)] void scrollTo ([in] long x,[in] long y);
@@ -31390,7 +31390,7 @@ library MSHTML {
     [propput, id (DISPID_IHTMLWINDOW3_ONAFTERPRINT), displaybind, bindable] void onafterprint (VARIANT v);
     [propget, id (DISPID_IHTMLWINDOW3_ONAFTERPRINT), displaybind, bindable] VARIANT onafterprint ();
     [propget, id (DISPID_IHTMLWINDOW3_CLIPBOARDDATA)] IHTMLDataTransfer *clipboardData ();
-    [id (DISPID_IHTMLWINDOW3_SHOWMODELESSDIALOG)] IHTMLWindow2 *showModelessDialog ([defaultvalue (""), in] BSTR url,[optional, in] VARIANT *varArgIn,[optional, in] VARIANT *options);
+    [id (DISPID_IHTMLWINDOW3_SHOWMODELESSDIALOG)] IHTMLWindow2 *showModelessDialog ([defaultvalue (L""), in] BSTR url,[optional, in] VARIANT *varArgIn,[optional, in] VARIANT *options);
     [id (DISPID_IHTMLWINDOW4_CREATEPOPUP)] IDispatch *createPopup ([optional, in] VARIANT *varArgIn);
     [propget, id (DISPID_IHTMLWINDOW4_FRAMEELEMENT)] IHTMLFrameBase *frameElement ();
     [propget, id (DISPID_IHTMLWINDOW6_SESSIONSTORAGE)] IHTMLStorage *sessionStorage ();
@@ -31404,7 +31404,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLWINDOW6_ONMESSAGE), displaybind, bindable] VARIANT onmessage ();
     [id (DISPID_IHTMLWINDOW6_MSWRITEPROFILERMARK)] void msWriteProfilerMark ([in] BSTR bstrProfilerMarkName);
     [id (DISPID_IHTMLWINDOW7_GETSELECTION)] IHTMLSelection *getSelection ();
-    [id (DISPID_IHTMLWINDOW7_GETCOMPUTEDSTYLE)] IHTMLCSSStyleDeclaration *getComputedStyle ([in] IHTMLDOMNode *varArgIn,[defaultvalue (""), in] BSTR bstrPseudoElt);
+    [id (DISPID_IHTMLWINDOW7_GETCOMPUTEDSTYLE)] IHTMLCSSStyleDeclaration *getComputedStyle ([in] IHTMLDOMNode *varArgIn,[defaultvalue (L""), in] BSTR bstrPseudoElt);
     [propget, id (DISPID_IHTMLWINDOW7_STYLEMEDIA)] IHTMLStyleMedia *styleMedia ();
     [propput, id (DISPID_IHTMLWINDOW7_PERFORMANCE)] void performance (VARIANT v);
     [propget, id (DISPID_IHTMLWINDOW7_PERFORMANCE)] VARIANT performance ();
@@ -31764,7 +31764,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLDOCUMENT2_NAMEPROP)] HRESULT nameProp ([retval, out] BSTR *p);
     [vararg, id (DISPID_IHTMLDOCUMENT2_WRITE)] HRESULT write ([in] SAFEARRAY (VARIANT) psarray);
     [vararg, id (DISPID_IHTMLDOCUMENT2_WRITELN)] HRESULT writeln ([in] SAFEARRAY (VARIANT) psarray);
-    [id (DISPID_IHTMLDOCUMENT2_OPEN)] HRESULT open ([defaultvalue ("text/html"), in] BSTR url,[optional, in] VARIANT name,[optional, in] VARIANT features,[optional, in] VARIANT replace,[retval, out] IDispatch **pomWindowResult);
+    [id (DISPID_IHTMLDOCUMENT2_OPEN)] HRESULT open ([defaultvalue (L"text/html"), in] BSTR url,[optional, in] VARIANT name,[optional, in] VARIANT features,[optional, in] VARIANT replace,[retval, out] IDispatch **pomWindowResult);
     [id (DISPID_IHTMLDOCUMENT2_CLOSE)] HRESULT close ();
     [id (DISPID_IHTMLDOCUMENT2_CLEAR)] HRESULT clear ();
     [id (DISPID_IHTMLDOCUMENT2_QUERYCOMMANDSUPPORTED)] HRESULT queryCommandSupported ([in] BSTR cmdID,[retval, out] VARIANT_BOOL *pfRet);
@@ -31818,7 +31818,7 @@ library MSHTML {
     [propput, id (DISPID_IHTMLDOCUMENT2_ONERRORUPDATE), displaybind, bindable] HRESULT onerrorupdate ([in] VARIANT v);
     [propget, id (DISPID_IHTMLDOCUMENT2_ONERRORUPDATE), displaybind, bindable] HRESULT onerrorupdate ([retval, out] VARIANT *p);
     [id (DISPID_IHTMLDOCUMENT2_TOSTRING)] HRESULT toString ([retval, out] BSTR *String);
-    [id (DISPID_IHTMLDOCUMENT2_CREATESTYLESHEET)] HRESULT createStyleSheet ([defaultvalue (""), in] BSTR bstrHref,[defaultvalue (-1), in] long lIndex,[retval, out] IHTMLStyleSheet **ppnewStyleSheet);
+    [id (DISPID_IHTMLDOCUMENT2_CREATESTYLESHEET)] HRESULT createStyleSheet ([defaultvalue (L""), in] BSTR bstrHref,[defaultvalue (-1), in] long lIndex,[retval, out] IHTMLStyleSheet **ppnewStyleSheet);
   };
   [odl, oleautomation, dual, uuid (3050f485-98b5-11cf-bb82-00aa00bdce0b)] interface IHTMLDocument3 : IDispatch {
     [id (DISPID_IHTMLDOCUMENT3_RELEASECAPTURE)] HRESULT releaseCapture ();
@@ -32125,7 +32125,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLDOCUMENT2_NAMEPROP)] BSTR nameProp ();
     [vararg, id (DISPID_IHTMLDOCUMENT2_WRITE)] void write ([in] SAFEARRAY (VARIANT) psarray);
     [vararg, id (DISPID_IHTMLDOCUMENT2_WRITELN)] void writeln ([in] SAFEARRAY (VARIANT) psarray);
-    [id (DISPID_IHTMLDOCUMENT2_OPEN)] IDispatch *open ([defaultvalue ("text/html"), in] BSTR url,[optional, in] VARIANT name,[optional, in] VARIANT features,[optional, in] VARIANT replace);
+    [id (DISPID_IHTMLDOCUMENT2_OPEN)] IDispatch *open ([defaultvalue (L"text/html"), in] BSTR url,[optional, in] VARIANT name,[optional, in] VARIANT features,[optional, in] VARIANT replace);
     [id (DISPID_IHTMLDOCUMENT2_CLOSE)] void close ();
     [id (DISPID_IHTMLDOCUMENT2_CLEAR)] void clear ();
     [id (DISPID_IHTMLDOCUMENT2_QUERYCOMMANDSUPPORTED)] VARIANT_BOOL queryCommandSupported ([in] BSTR cmdID);
@@ -32179,7 +32179,7 @@ library MSHTML {
     [propput, id (DISPID_IHTMLDOCUMENT2_ONERRORUPDATE), displaybind, bindable] void onerrorupdate (VARIANT v);
     [propget, id (DISPID_IHTMLDOCUMENT2_ONERRORUPDATE), displaybind, bindable] VARIANT onerrorupdate ();
     [id (DISPID_IHTMLDOCUMENT2_TOSTRING)] BSTR toString ();
-    [id (DISPID_IHTMLDOCUMENT2_CREATESTYLESHEET)] IHTMLStyleSheet *createStyleSheet ([defaultvalue (""), in] BSTR bstrHref,[defaultvalue (-1), in] long lIndex);
+    [id (DISPID_IHTMLDOCUMENT2_CREATESTYLESHEET)] IHTMLStyleSheet *createStyleSheet ([defaultvalue (L""), in] BSTR bstrHref,[defaultvalue (-1), in] long lIndex);
     [id (DISPID_IHTMLDOCUMENT3_RELEASECAPTURE)] void releaseCapture ();
     [id (DISPID_IHTMLDOCUMENT3_RECALC)] void recalc ([defaultvalue (0), in] VARIANT_BOOL fForce);
     [id (DISPID_IHTMLDOCUMENT3_CREATETEXTNODE)] IHTMLDOMNode *createTextNode ([in] BSTR text);
@@ -32674,7 +32674,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -33358,7 +33358,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -34017,7 +34017,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -34552,7 +34552,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -35059,7 +35059,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -35570,7 +35570,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -36056,7 +36056,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -36952,7 +36952,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -37524,7 +37524,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -38021,7 +38021,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -38523,7 +38523,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -39035,7 +39035,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -39722,7 +39722,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -40223,7 +40223,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -40824,7 +40824,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -41389,7 +41389,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -42054,7 +42054,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -42580,7 +42580,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -43162,7 +43162,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -43735,7 +43735,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -44246,7 +44246,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -44731,7 +44731,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -45248,7 +45248,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -45799,7 +45799,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -46323,7 +46323,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -47006,7 +47006,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -48418,7 +48418,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -52652,7 +52652,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -53212,7 +53212,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -53725,7 +53725,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -54290,7 +54290,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -55893,7 +55893,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -56379,7 +56379,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE), displaybind, bindable] VARIANT onpropertychange ();
     [id (DISPID_IHTMLELEMENT2_GETCLIENTRECTS)] IHTMLRectCollection *getClientRects ();
     [id (DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)] IHTMLRect *getBoundingClientRect ();
-    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (""), in] BSTR language);
+    [id (DISPID_IHTMLELEMENT2_SETEXPRESSION)] void setExpression ([in] BSTR propname,[in] BSTR expression,[defaultvalue (L""), in] BSTR language);
     [id (DISPID_IHTMLELEMENT2_GETEXPRESSION)] VARIANT getExpression ([in] BSTR propname);
     [id (DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)] VARIANT_BOOL removeExpression ([in] BSTR propname);
     [propput, id (DISPID_IHTMLELEMENT2_TABINDEX), displaybind, bindable] void tabIndex (short v);
@@ -56920,10 +56920,10 @@ library MSHTML {
     [propget, id (DISPID_ICLIENTCAPS_AVAILHEIGHT)] HRESULT availHeight ([retval, out] long *p);
     [propget, id (DISPID_ICLIENTCAPS_AVAILWIDTH)] HRESULT availWidth ([retval, out] long *p);
     [propget, id (DISPID_ICLIENTCAPS_CONNECTIONTYPE)] HRESULT connectionType ([retval, out] BSTR *p);
-    [id (DISPID_ICLIENTCAPS_ISCOMPONENTINSTALLED)] HRESULT isComponentInstalled ([in] BSTR bstrName,[in] BSTR bstrUrl,[defaultvalue (""), in] BSTR bStrVer,[retval, out] VARIANT_BOOL *p);
+    [id (DISPID_ICLIENTCAPS_ISCOMPONENTINSTALLED)] HRESULT isComponentInstalled ([in] BSTR bstrName,[in] BSTR bstrUrl,[defaultvalue (L""), in] BSTR bStrVer,[retval, out] VARIANT_BOOL *p);
     [id (DISPID_ICLIENTCAPS_GETCOMPONENTVERSION)] HRESULT getComponentVersion ([in] BSTR bstrName,[in] BSTR bstrUrl,[retval, out] BSTR *pbstrVer);
     [id (DISPID_ICLIENTCAPS_COMPAREVERSIONS)] HRESULT compareVersions ([in] BSTR bstrVer1,[in] BSTR bstrVer2,[retval, out] long *p);
-    [id (DISPID_ICLIENTCAPS_ADDCOMPONENTREQUEST)] HRESULT addComponentRequest ([in] BSTR bstrName,[in] BSTR bstrUrl,[defaultvalue (""), in] BSTR bStrVer);
+    [id (DISPID_ICLIENTCAPS_ADDCOMPONENTREQUEST)] HRESULT addComponentRequest ([in] BSTR bstrName,[in] BSTR bstrUrl,[defaultvalue (L""), in] BSTR bStrVer);
     [id (DISPID_ICLIENTCAPS_DOCOMPONENTREQUEST)] HRESULT doComponentRequest ([retval, out] VARIANT_BOOL *p);
     [id (DISPID_ICLIENTCAPS_CLEARCOMPONENTREQUEST)] HRESULT clearComponentRequest ();
   };
