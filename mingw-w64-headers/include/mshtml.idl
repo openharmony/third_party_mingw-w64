@@ -2799,8 +2799,8 @@ library MSHTML {
     [propput, id (DISPID_IHTMLSTYLE_FILTER), displaybind, bindable] HRESULT filter ([in] BSTR v);
     [propget, id (DISPID_IHTMLSTYLE_FILTER), displaybind, bindable] HRESULT filter ([retval, out] BSTR *p);
     [id (DISPID_IHTMLSTYLE_SETATTRIBUTE)] HRESULT setAttribute ([in] BSTR strAttributeName,[in] VARIANT AttributeValue,[defaultvalue (1), in] LONG lFlags);
-    [id (DISPID_IHTMLSTYLE_GETATTRIBUTE)] HRESULT getAttribute ([in] BSTR strAttributeName,[defaultvalue (0), in] LONG lFlags,[retval, out] VARIANT *AttributeValue);
-    [id (DISPID_IHTMLSTYLE_REMOVEATTRIBUTE)] HRESULT removeAttribute ([in] BSTR strAttributeName,[defaultvalue (1), in] LONG lFlags,[retval, out] VARIANT_BOOL *pfSuccess);
+    [id (DISPID_IHTMLSTYLE_GETATTRIBUTE)] HRESULT getAttribute ([in] BSTR strAttributeName,[defaultvalue (0), in] LONG lFlags,[defaultvalue (0), retval, out] VARIANT *AttributeValue);
+    [id (DISPID_IHTMLSTYLE_REMOVEATTRIBUTE)] HRESULT removeAttribute ([in] BSTR strAttributeName,[defaultvalue (1), in] LONG lFlags,[defaultvalue (0), retval, out] VARIANT_BOOL *pfSuccess);
     [id (DISPID_IHTMLSTYLE_TOSTRING)] HRESULT toString ([retval, out] BSTR *String);
   };
 
@@ -3121,8 +3121,8 @@ library MSHTML {
     [propput, id (DISPID_IHTMLRULESTYLE_FILTER), displaybind, bindable] HRESULT filter ([in] BSTR v);
     [propget, id (DISPID_IHTMLRULESTYLE_FILTER), displaybind, bindable] HRESULT filter ([retval, out] BSTR *p);
     [id (DISPID_IHTMLRULESTYLE_SETATTRIBUTE)] HRESULT setAttribute ([in] BSTR strAttributeName,[in] VARIANT AttributeValue,[defaultvalue (1), in] LONG lFlags);
-    [id (DISPID_IHTMLRULESTYLE_GETATTRIBUTE)] HRESULT getAttribute ([in] BSTR strAttributeName,[defaultvalue (0), in] LONG lFlags,[retval, out] VARIANT *AttributeValue);
-    [id (DISPID_IHTMLRULESTYLE_REMOVEATTRIBUTE)] HRESULT removeAttribute ([in] BSTR strAttributeName,[defaultvalue (1), in] LONG lFlags,[retval, out] VARIANT_BOOL *pfSuccess);
+    [id (DISPID_IHTMLRULESTYLE_GETATTRIBUTE)] HRESULT getAttribute ([in] BSTR strAttributeName,[defaultvalue (0), in] LONG lFlags,[defaultvalue (0), retval, out] VARIANT *AttributeValue);
+    [id (DISPID_IHTMLRULESTYLE_REMOVEATTRIBUTE)] HRESULT removeAttribute ([in] BSTR strAttributeName,[defaultvalue (1), in] LONG lFlags,[defaultvalue (0), retval, out] VARIANT_BOOL *pfSuccess);
   };
 
   [odl, oleautomation, dual, uuid (3050f4ac-98b5-11cf-bb82-00aa00bdce0b)]
@@ -4453,7 +4453,7 @@ library MSHTML {
     [id (DISPID_IHTMLCSSMEDIARULE_MEDIA), propput] HRESULT media ([in] VARIANT v);
     [id (DISPID_IHTMLCSSMEDIARULE_MEDIA), propget] HRESULT media ([retval, out] VARIANT *p);
     [id (DISPID_IHTMLCSSMEDIARULE_CSSRULES), propget] HRESULT cssRules ([retval, out] IHTMLStyleSheetRulesCollection **p);
-    [id (DISPID_IHTMLCSSMEDIARULE_INSERTRULE)] HRESULT insertRule ([in] BSTR bstrRule,[defaultvalue (-1), in] long lIndex,[retval, out] long *plNewIndex);
+    [id (DISPID_IHTMLCSSMEDIARULE_INSERTRULE)] HRESULT insertRule ([in] BSTR bstrRule,[defaultvalue (-1), in] long lIndex,[defaultvalue (0), retval, out] long *plNewIndex);
     [id (DISPID_IHTMLCSSMEDIARULE_DELETERULE)] HRESULT deleteRule ([defaultvalue (-1), in] long lIndex);
   };
   
@@ -4800,7 +4800,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLCURRENTSTYLE_BORDERCOLLAPSE), displaybind, bindable] HRESULT borderCollapse ([retval, out] BSTR *p);
     [propget, id (DISPID_IHTMLCURRENTSTYLE_DIRECTION), displaybind, bindable] HRESULT direction ([retval, out] BSTR *p);
     [propget, id (DISPID_IHTMLCURRENTSTYLE_BEHAVIOR), displaybind, bindable] HRESULT behavior ([retval, out] BSTR *p);
-    [id (DISPID_IHTMLCURRENTSTYLE_GETATTRIBUTE)] HRESULT getAttribute ([in] BSTR strAttributeName,[defaultvalue (0), in] LONG lFlags,[retval, out] VARIANT *AttributeValue);
+    [id (DISPID_IHTMLCURRENTSTYLE_GETATTRIBUTE)] HRESULT getAttribute ([in] BSTR strAttributeName,[defaultvalue (0), in] LONG lFlags,[defaultvalue (0), retval, out] VARIANT *AttributeValue);
     [propget, id (DISPID_IHTMLCURRENTSTYLE_UNICODEBIDI), displaybind, bindable] HRESULT unicodeBidi ([retval, out] BSTR *p);
     [propget, id (DISPID_IHTMLCURRENTSTYLE_RIGHT), displaybind, bindable] HRESULT right ([retval, out] VARIANT *p);
     [propget, id (DISPID_IHTMLCURRENTSTYLE_BOTTOM), displaybind, bindable] HRESULT bottom ([retval, out] VARIANT *p);
@@ -5293,7 +5293,7 @@ library MSHTML {
     [id (DISPID_IHTMLDOMNODE_REMOVECHILD)] HRESULT removeChild ([in] IHTMLDOMNode *oldChild,[retval, out] IHTMLDOMNode **node);
     [id (DISPID_IHTMLDOMNODE_REPLACECHILD)] HRESULT replaceChild ([in] IHTMLDOMNode *newChild,[in] IHTMLDOMNode *oldChild,[retval, out] IHTMLDOMNode **node);
     [id (DISPID_IHTMLDOMNODE_CLONENODE)] HRESULT cloneNode ([in] VARIANT_BOOL fDeep,[retval, out] IHTMLDOMNode **clonedNode);
-    [id (DISPID_IHTMLDOMNODE_REMOVENODE)] HRESULT removeNode ([defaultvalue (0), in] VARIANT_BOOL fDeep,[retval, out] IHTMLDOMNode **removed);
+    [id (DISPID_IHTMLDOMNODE_REMOVENODE)] HRESULT removeNode ([defaultvalue (0), in] VARIANT_BOOL fDeep,[defaultvalue (0), retval, out] IHTMLDOMNode **removed);
     [id (DISPID_IHTMLDOMNODE_SWAPNODE)] HRESULT swapNode ([in] IHTMLDOMNode *otherNode,[retval, out] IHTMLDOMNode **swappedNode);
     [id (DISPID_IHTMLDOMNODE_REPLACENODE)] HRESULT replaceNode ([in] IHTMLDOMNode *replacement,[retval, out] IHTMLDOMNode **replaced);
     [id (DISPID_IHTMLDOMNODE_APPENDCHILD)] HRESULT appendChild ([in] IHTMLDOMNode *newChild,[retval, out] IHTMLDOMNode **node);
@@ -5985,8 +5985,8 @@ library MSHTML {
   [odl, oleautomation, dual, uuid (3050f1ff-98b5-11cf-bb82-00aa00bdce0b)]
   interface IHTMLElement : IDispatch {
     [id (DISPID_IHTMLELEMENT_SETATTRIBUTE)] HRESULT setAttribute ([in] BSTR strAttributeName,[in] VARIANT AttributeValue,[defaultvalue (1), in] LONG lFlags);
-    [id (DISPID_IHTMLELEMENT_GETATTRIBUTE)] HRESULT getAttribute ([in] BSTR strAttributeName,[defaultvalue (0), in] LONG lFlags,[retval, out] VARIANT *AttributeValue);
-    [id (DISPID_IHTMLELEMENT_REMOVEATTRIBUTE)] HRESULT removeAttribute ([in] BSTR strAttributeName,[defaultvalue (1), in] LONG lFlags,[retval, out] VARIANT_BOOL *pfSuccess);
+    [id (DISPID_IHTMLELEMENT_GETATTRIBUTE)] HRESULT getAttribute ([in] BSTR strAttributeName,[defaultvalue (0), in] LONG lFlags,[defaultvalue (0), retval, out] VARIANT *AttributeValue);
+    [id (DISPID_IHTMLELEMENT_REMOVEATTRIBUTE)] HRESULT removeAttribute ([in] BSTR strAttributeName,[defaultvalue (1), in] LONG lFlags,[defaultvalue (0), retval, out] VARIANT_BOOL *pfSuccess);
     [propput, id (DISPID_IHTMLELEMENT_CLASSNAME), bindable] HRESULT className ([in] BSTR v);
     [id (DISPID_IHTMLELEMENT_CLASSNAME), propget, bindable] HRESULT className ([retval, out] BSTR *p);
     [propput, id (DISPID_IHTMLELEMENT_ID), bindable] HRESULT id ([in] BSTR v);
@@ -7344,8 +7344,8 @@ library MSHTML {
     [propget, id (DISPID_IHTMLSTYLESHEET_HREF)] HRESULT href ([retval, out] BSTR *p);
     [propget, id (DISPID_IHTMLSTYLESHEET_TYPE)] HRESULT type ([retval, out] BSTR *p);
     [propget, id (DISPID_IHTMLSTYLESHEET_ID)] HRESULT id ([retval, out] BSTR *p);
-    [id (DISPID_IHTMLSTYLESHEET_ADDIMPORT)] HRESULT addImport ([in] BSTR bstrURL,[defaultvalue (-1), in] long lIndex,[retval, out] long *plIndex);
-    [id (DISPID_IHTMLSTYLESHEET_ADDRULE)] HRESULT addRule ([in] BSTR bstrSelector,[in] BSTR bstrStyle,[defaultvalue (-1), in] long lIndex,[retval, out] long *plNewIndex);
+    [id (DISPID_IHTMLSTYLESHEET_ADDIMPORT)] HRESULT addImport ([in] BSTR bstrURL,[defaultvalue (-1), in] long lIndex,[defaultvalue (0), retval, out] long *plIndex);
+    [id (DISPID_IHTMLSTYLESHEET_ADDRULE)] HRESULT addRule ([in] BSTR bstrSelector,[in] BSTR bstrStyle,[defaultvalue (-1), in] long lIndex,[defaultvalue (0), retval, out] long *plNewIndex);
     [id (DISPID_IHTMLSTYLESHEET_REMOVEIMPORT)] HRESULT removeImport ([in] long lIndex);
     [id (DISPID_IHTMLSTYLESHEET_REMOVERULE)] HRESULT removeRule ([in] long lIndex);
     [propput, id (DISPID_IHTMLSTYLESHEET_MEDIA)] HRESULT media ([in] BSTR v);
@@ -7356,7 +7356,7 @@ library MSHTML {
   };
   [odl, oleautomation, dual, uuid (3050f3d1-98b5-11cf-bb82-00aa00bdce0b)] interface IHTMLStyleSheet2 : IDispatch {
     [propget, id (DISPID_IHTMLSTYLESHEET2_PAGES)] HRESULT pages ([retval, out] IHTMLStyleSheetPagesCollection **p);
-    [id (DISPID_IHTMLSTYLESHEET2_ADDPAGERULE)] HRESULT addPageRule ([in] BSTR bstrSelector,[in] BSTR bstrStyle,[defaultvalue (-1), in] long lIndex,[retval, out] long *plNewIndex);
+    [id (DISPID_IHTMLSTYLESHEET2_ADDPAGERULE)] HRESULT addPageRule ([in] BSTR bstrSelector,[in] BSTR bstrStyle,[defaultvalue (-1), in] long lIndex,[defaultvalue (0), retval, out] long *plNewIndex);
   };
   [odl, oleautomation, dual, uuid (30510496-98b5-11cf-bb82-00aa00bdce0b)] interface IHTMLStyleSheet3 : IDispatch {
     [propput, id (DISPID_IHTMLSTYLESHEET3_IE8_HREF)] HRESULT href ([in] BSTR v);
@@ -7372,7 +7372,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLSTYLESHEET4_OWNERRULE)] HRESULT ownerRule ([retval, out] IHTMLCSSRule **p);
     [propget, id (DISPID_IHTMLSTYLESHEET4_CSSRULES)] HRESULT cssRules ([retval, out] IHTMLStyleSheetRulesCollection **p);
     [propget, id (DISPID_IHTMLSTYLESHEET4_IE9_MEDIA)] HRESULT media ([retval, out] VARIANT *p);
-    [id (DISPID_IHTMLSTYLESHEET4_INSERTRULE)] HRESULT insertRule ([in] BSTR bstrRule,[defaultvalue (-1), in] long lIndex,[retval, out] long *plNewIndex);
+    [id (DISPID_IHTMLSTYLESHEET4_INSERTRULE)] HRESULT insertRule ([in] BSTR bstrRule,[defaultvalue (-1), in] long lIndex,[defaultvalue (0), retval, out] long *plNewIndex);
     [id (DISPID_IHTMLSTYLESHEET4_DELETERULE)] HRESULT deleteRule ([defaultvalue (-1), in] long lIndex);
   };
   [hidden, uuid (3050f58d-98b5-11cf-bb82-00aa00bdce0b)] dispinterface DispHTMLStyleSheet {
@@ -8160,15 +8160,15 @@ library MSHTML {
     [id (DISPID_IHTMLTXTRANGE_SCROLLINTOVIEW)] HRESULT scrollIntoView ([defaultvalue (-1), in] VARIANT_BOOL fStart);
     [id (DISPID_IHTMLTXTRANGE_COLLAPSE)] HRESULT collapse ([defaultvalue (-1), in] VARIANT_BOOL Start);
     [id (DISPID_IHTMLTXTRANGE_EXPAND)] HRESULT expand ([in] BSTR Unit,[retval, out] VARIANT_BOOL *Success);
-    [id (DISPID_IHTMLTXTRANGE_MOVE)] HRESULT move ([in] BSTR Unit,[defaultvalue (1), in] long Count,[retval, out] long *ActualCount);
-    [id (DISPID_IHTMLTXTRANGE_MOVESTART)] HRESULT moveStart ([in] BSTR Unit,[defaultvalue (1), in] long Count,[retval, out] long *ActualCount);
-    [id (DISPID_IHTMLTXTRANGE_MOVEEND)] HRESULT moveEnd ([in] BSTR Unit,[defaultvalue (1), in] long Count,[retval, out] long *ActualCount);
+    [id (DISPID_IHTMLTXTRANGE_MOVE)] HRESULT move ([in] BSTR Unit,[defaultvalue (1), in] long Count,[defaultvalue (0), retval, out] long *ActualCount);
+    [id (DISPID_IHTMLTXTRANGE_MOVESTART)] HRESULT moveStart ([in] BSTR Unit,[defaultvalue (1), in] long Count,[defaultvalue (0), retval, out] long *ActualCount);
+    [id (DISPID_IHTMLTXTRANGE_MOVEEND)] HRESULT moveEnd ([in] BSTR Unit,[defaultvalue (1), in] long Count,[defaultvalue (0), retval, out] long *ActualCount);
     [id (DISPID_IHTMLTXTRANGE_SELECT)] HRESULT select ();
     [id (DISPID_IHTMLTXTRANGE_PASTEHTML)] HRESULT pasteHTML ([in] BSTR html);
     [id (DISPID_IHTMLTXTRANGE_MOVETOELEMENTTEXT)] HRESULT moveToElementText ([in] IHTMLElement *element);
     [id (DISPID_IHTMLTXTRANGE_SETENDPOINT)] HRESULT setEndPoint ([in] BSTR how,[in] IHTMLTxtRange *SourceRange);
     [id (DISPID_IHTMLTXTRANGE_COMPAREENDPOINTS)] HRESULT compareEndPoints ([in] BSTR how,[in] IHTMLTxtRange *SourceRange,[retval, out] long *ret);
-    [id (DISPID_IHTMLTXTRANGE_FINDTEXT)] HRESULT findText ([in] BSTR String,[defaultvalue (1073741823), in] long count,[defaultvalue (0), in] long Flags,[retval, out] VARIANT_BOOL *Success);
+    [id (DISPID_IHTMLTXTRANGE_FINDTEXT)] HRESULT findText ([in] BSTR String,[defaultvalue (1073741823), in] long count,[defaultvalue (0), in] long Flags,[defaultvalue (0), retval, out] VARIANT_BOOL *Success);
     [id (DISPID_IHTMLTXTRANGE_MOVETOPOINT)] HRESULT moveToPoint ([in] long x,[in] long y);
     [id (DISPID_IHTMLTXTRANGE_GETBOOKMARK)] HRESULT getBookmark ([retval, out] BSTR *Boolmark);
     [id (DISPID_IHTMLTXTRANGE_MOVETOBOOKMARK)] HRESULT moveToBookmark ([in] BSTR Bookmark,[retval, out] VARIANT_BOOL *Success);
@@ -8178,7 +8178,7 @@ library MSHTML {
     [id (DISPID_IHTMLTXTRANGE_QUERYCOMMANDINDETERM)] HRESULT queryCommandIndeterm ([in] BSTR cmdID,[retval, out] VARIANT_BOOL *pfRet);
     [id (DISPID_IHTMLTXTRANGE_QUERYCOMMANDTEXT)] HRESULT queryCommandText ([in] BSTR cmdID,[retval, out] BSTR *pcmdText);
     [id (DISPID_IHTMLTXTRANGE_QUERYCOMMANDVALUE)] HRESULT queryCommandValue ([in] BSTR cmdID,[retval, out] VARIANT *pcmdValue);
-    [id (DISPID_IHTMLTXTRANGE_EXECCOMMAND)] HRESULT execCommand ([in] BSTR cmdID,[defaultvalue (0), in] VARIANT_BOOL showUI,[optional, in] VARIANT value,[retval, out] VARIANT_BOOL *pfRet);
+    [id (DISPID_IHTMLTXTRANGE_EXECCOMMAND)] HRESULT execCommand ([in] BSTR cmdID, [in] VARIANT_BOOL showUI, [optional, in] VARIANT value,[retval, out] VARIANT_BOOL *pfRet);
     [id (DISPID_IHTMLTXTRANGE_EXECCOMMANDSHOWHELP)] HRESULT execCommandShowHelp ([in] BSTR cmdID,[retval, out] VARIANT_BOOL *pfRet);
   };
   [odl, oleautomation, dual, uuid (3050f40b-98b5-11cf-bb82-00aa00bdce0b)] interface IHTMLTextRangeMetrics : IDispatch {
@@ -9753,7 +9753,7 @@ library MSHTML {
     [id (DISPID_IHTMLCONTROLRANGE_QUERYCOMMANDINDETERM)] HRESULT queryCommandIndeterm ([in] BSTR cmdID,[retval, out] VARIANT_BOOL *pfRet);
     [id (DISPID_IHTMLCONTROLRANGE_QUERYCOMMANDTEXT)] HRESULT queryCommandText ([in] BSTR cmdID,[retval, out] BSTR *pcmdText);
     [id (DISPID_IHTMLCONTROLRANGE_QUERYCOMMANDVALUE)] HRESULT queryCommandValue ([in] BSTR cmdID,[retval, out] VARIANT *pcmdValue);
-    [id (DISPID_IHTMLCONTROLRANGE_EXECCOMMAND)] HRESULT execCommand ([in] BSTR cmdID,[defaultvalue (0), in] VARIANT_BOOL showUI,[optional, in] VARIANT value,[retval, out] VARIANT_BOOL *pfRet);
+    [id (DISPID_IHTMLCONTROLRANGE_EXECCOMMAND)] HRESULT execCommand ([in] BSTR cmdID,[in] VARIANT_BOOL showUI,[optional, in] VARIANT value,[retval, out] VARIANT_BOOL *pfRet);
     [id (DISPID_IHTMLCONTROLRANGE_EXECCOMMANDSHOWHELP)] HRESULT execCommandShowHelp ([in] BSTR cmdID,[retval, out] VARIANT_BOOL *pfRet);
     [id (DISPID_IHTMLCONTROLRANGE_COMMONPARENTELEMENT)] HRESULT commonParentElement ([retval, out] IHTMLElement **parent);
     [propget, id (DISPID_IHTMLCONTROLRANGE_LENGTH)] HRESULT length ([retval, out] long *p);
@@ -30460,8 +30460,8 @@ library MSHTML {
   };
   [odl, oleautomation, dual, uuid (3050f48b-98b5-11cf-bb82-00aa00bdce0b)] interface IHTMLEventObj2 : IDispatch {
     [id (DISPID_IHTMLEVENTOBJ2_SETATTRIBUTE)] HRESULT setAttribute ([in] BSTR strAttributeName,[in] VARIANT AttributeValue,[defaultvalue (1), in] LONG lFlags);
-    [id (DISPID_IHTMLEVENTOBJ2_GETATTRIBUTE)] HRESULT getAttribute ([in] BSTR strAttributeName,[defaultvalue (0), in] LONG lFlags,[retval, out] VARIANT *AttributeValue);
-    [id (DISPID_IHTMLEVENTOBJ2_REMOVEATTRIBUTE)] HRESULT removeAttribute ([in] BSTR strAttributeName,[defaultvalue (1), in] LONG lFlags,[retval, out] VARIANT_BOOL *pfSuccess);
+    [id (DISPID_IHTMLEVENTOBJ2_GETATTRIBUTE)] HRESULT getAttribute ([in] BSTR strAttributeName,[defaultvalue (0), in] LONG lFlags,[defaultvalue (0), retval, out] VARIANT *AttributeValue);
+    [id (DISPID_IHTMLEVENTOBJ2_REMOVEATTRIBUTE)] HRESULT removeAttribute ([in] BSTR strAttributeName,[defaultvalue (1), in] LONG lFlags,[defaultvalue (0), retval, out] VARIANT_BOOL *pfSuccess);
     [propput, id (DISPID_IHTMLEVENTOBJ2_PROPERTYNAME)] HRESULT propertyName ([in] BSTR v);
     [propget, id (DISPID_IHTMLEVENTOBJ2_PROPERTYNAME)] HRESULT propertyName ([retval, out] BSTR *p);
     [propputref, id (DISPID_IHTMLEVENTOBJ2_BOOKMARKS)] HRESULT bookmarks ([in] IHTMLBookmarkCollection *v);
@@ -30757,8 +30757,8 @@ library MSHTML {
     [id (DISPID_IHTMLWINDOW2_SETTIMEOUT)] HRESULT setTimeout ([in] BSTR expression,[in] long msec,[optional, in] VARIANT *language,[retval, out] long *timerID);
     [id (DISPID_IHTMLWINDOW2_CLEARTIMEOUT)] HRESULT clearTimeout ([in] long timerID);
     [id (DISPID_IHTMLWINDOW2_ALERT)] HRESULT alert ([defaultvalue (L""), in] BSTR message);
-    [id (DISPID_IHTMLWINDOW2_CONFIRM)] HRESULT confirm ([defaultvalue (L""), in] BSTR message,[retval, out] VARIANT_BOOL *confirmed);
-    [id (DISPID_IHTMLWINDOW2_PROMPT)] HRESULT prompt ([defaultvalue (L""), in] BSTR message,[defaultvalue (L"undefined"), in] BSTR defstr,[retval, out] VARIANT *textdata);
+    [id (DISPID_IHTMLWINDOW2_CONFIRM)] HRESULT confirm ([defaultvalue (L""), in] BSTR message,[defaultvalue (0), retval, out] VARIANT_BOOL *confirmed);
+    [id (DISPID_IHTMLWINDOW2_PROMPT)] HRESULT prompt ([defaultvalue (L""), in] BSTR message,[defaultvalue (L"undefined"), in] BSTR defstr,[defaultvalue (0), retval, out] VARIANT *textdata);
     [propget, id (DISPID_IHTMLWINDOW2_IMAGE)] HRESULT Image ([retval, out] IHTMLImageElementFactory **p);
     [propget, id (DISPID_IHTMLWINDOW2_LOCATION)] HRESULT location ([retval, out] IHTMLLocation **p);
     [propget, id (DISPID_IHTMLWINDOW2_HISTORY)] HRESULT history ([retval, out] IOmHistory **p);
@@ -30769,7 +30769,7 @@ library MSHTML {
     [propput, id (DISPID_IHTMLWINDOW2_NAME)] HRESULT name ([in] BSTR v);
     [propget, id (DISPID_IHTMLWINDOW2_NAME)] HRESULT name ([retval, out] BSTR *p);
     [propget, id (DISPID_IHTMLWINDOW2_PARENT)] HRESULT parent ([retval, out] IHTMLWindow2 **p);
-    [id (DISPID_IHTMLWINDOW2_OPEN)] HRESULT open ([defaultvalue (L""), in] BSTR url,[defaultvalue (L""), in] BSTR name,[defaultvalue (L""), in] BSTR features,[defaultvalue (0), in] VARIANT_BOOL replace,[retval, out] IHTMLWindow2 **pomWindowResult);
+    [id (DISPID_IHTMLWINDOW2_OPEN)] HRESULT open ([defaultvalue (L""), in] BSTR url,[defaultvalue (L""), in] BSTR name,[defaultvalue (L""), in] BSTR features,[defaultvalue (0), in] VARIANT_BOOL replace,[defaultvalue (0), retval, out] IHTMLWindow2 **pomWindowResult);
     [propget, id (DISPID_IHTMLWINDOW2_SELF)] HRESULT self ([retval, out] IHTMLWindow2 **p);
     [propget, id (DISPID_IHTMLWINDOW2_TOP)] HRESULT top ([retval, out] IHTMLWindow2 **p);
     [propget, id (DISPID_IHTMLWINDOW2_WINDOW)] HRESULT window ([retval, out] IHTMLWindow2 **p);
@@ -30808,7 +30808,7 @@ library MSHTML {
     [id (DISPID_IHTMLWINDOW2_CLEARINTERVAL)] HRESULT clearInterval ([in] long timerID);
     [propput, id (DISPID_IHTMLWINDOW2_OFFSCREENBUFFERING)] HRESULT offscreenBuffering ([in] VARIANT v);
     [propget, id (DISPID_IHTMLWINDOW2_OFFSCREENBUFFERING)] HRESULT offscreenBuffering ([retval, out] VARIANT *p);
-    [id (DISPID_IHTMLWINDOW2_EXECSCRIPT)] HRESULT execScript ([in] BSTR code,[defaultvalue (L"JScript"), in] BSTR language,[retval, out] VARIANT *pvarRet);
+    [id (DISPID_IHTMLWINDOW2_EXECSCRIPT)] HRESULT execScript ([in] BSTR code,[defaultvalue (L"JScript"), in] BSTR language,[defaultvalue (0), retval, out] VARIANT *pvarRet);
     [id (DISPID_IHTMLWINDOW2_TOSTRING)] HRESULT toString ([retval, out] BSTR *String);
     [id (DISPID_IHTMLWINDOW2_SCROLLBY)] HRESULT scrollBy ([in] long x,[in] long y);
     [id (DISPID_IHTMLWINDOW2_SCROLLTO)] HRESULT scrollTo ([in] long x,[in] long y);
@@ -30831,7 +30831,7 @@ library MSHTML {
     [propput, id (DISPID_IHTMLWINDOW3_ONAFTERPRINT), displaybind, bindable] HRESULT onafterprint ([in] VARIANT v);
     [propget, id (DISPID_IHTMLWINDOW3_ONAFTERPRINT), displaybind, bindable] HRESULT onafterprint ([retval, out] VARIANT *p);
     [propget, id (DISPID_IHTMLWINDOW3_CLIPBOARDDATA)] HRESULT clipboardData ([retval, out] IHTMLDataTransfer **p);
-    [id (DISPID_IHTMLWINDOW3_SHOWMODELESSDIALOG)] HRESULT showModelessDialog ([defaultvalue (L""), in] BSTR url,[optional, in] VARIANT *varArgIn,[optional, in] VARIANT *options,[retval, out] IHTMLWindow2 **pDialog);
+    [id (DISPID_IHTMLWINDOW3_SHOWMODELESSDIALOG)] HRESULT showModelessDialog ([defaultvalue (L""), in] BSTR url,[defaultvalue (0), optional, in] VARIANT *varArgIn,[defaultvalue (0), optional, in] VARIANT *options,[defaultvalue (0), retval, out] IHTMLWindow2 **pDialog);
   };
   [odl, oleautomation, dual, uuid (3050f6cf-98b5-11cf-bb82-00aa00bdce0b)] interface IHTMLWindow4 : IDispatch {
     [id (DISPID_IHTMLWINDOW4_CREATEPOPUP)] HRESULT createPopup ([optional, in] VARIANT *varArgIn,[retval, out] IDispatch **ppPopup);
@@ -30857,7 +30857,7 @@ library MSHTML {
   };
   [odl, oleautomation, dual, uuid (305104b7-98b5-11cf-bb82-00aa00bdce0b)] interface IHTMLWindow7 : IDispatch {
     [id (DISPID_IHTMLWINDOW7_GETSELECTION)] HRESULT getSelection ([retval, out] IHTMLSelection **ppIHTMLSelection);
-    [id (DISPID_IHTMLWINDOW7_GETCOMPUTEDSTYLE)] HRESULT getComputedStyle ([in] IHTMLDOMNode *varArgIn,[defaultvalue (L""), in] BSTR bstrPseudoElt,[retval, out] IHTMLCSSStyleDeclaration **ppComputedStyle);
+    [id (DISPID_IHTMLWINDOW7_GETCOMPUTEDSTYLE)] HRESULT getComputedStyle ([in] IHTMLDOMNode *varArgIn,[defaultvalue (L""), in] BSTR bstrPseudoElt,[defaultvalue (0), retval, out] IHTMLCSSStyleDeclaration **ppComputedStyle);
     [propget, id (DISPID_IHTMLWINDOW7_STYLEMEDIA)] HRESULT styleMedia ([retval, out] IHTMLStyleMedia **p);
     [propput, id (DISPID_IHTMLWINDOW7_PERFORMANCE)] HRESULT performance ([in] VARIANT v);
     [propget, id (DISPID_IHTMLWINDOW7_PERFORMANCE)] HRESULT performance ([retval, out] VARIANT *p);
@@ -31125,7 +31125,7 @@ library MSHTML {
     [propput, id (DISPID_IHTMLWINDOW3_ONAFTERPRINT), displaybind, bindable] void onafterprint (VARIANT v);
     [propget, id (DISPID_IHTMLWINDOW3_ONAFTERPRINT), displaybind, bindable] VARIANT onafterprint ();
     [propget, id (DISPID_IHTMLWINDOW3_CLIPBOARDDATA)] IHTMLDataTransfer *clipboardData ();
-    [id (DISPID_IHTMLWINDOW3_SHOWMODELESSDIALOG)] IHTMLWindow2 *showModelessDialog ([defaultvalue (L""), in] BSTR url,[optional, in] VARIANT *varArgIn,[optional, in] VARIANT *options);
+    [id (DISPID_IHTMLWINDOW3_SHOWMODELESSDIALOG)] IHTMLWindow2 *showModelessDialog ([defaultvalue (L""), in] BSTR url,[defaultvalue (0), optional, in] VARIANT *varArgIn,[defaultvalue (0), optional, in] VARIANT *options);
     [id (DISPID_IHTMLWINDOW4_CREATEPOPUP)] IDispatch *createPopup ([optional, in] VARIANT *varArgIn);
     [propget, id (DISPID_IHTMLWINDOW4_FRAMEELEMENT)] IHTMLFrameBase *frameElement ();
     [propget, id (DISPID_IHTMLWINDOW6_SESSIONSTORAGE)] IHTMLStorage *sessionStorage ();
@@ -31390,7 +31390,7 @@ library MSHTML {
     [propput, id (DISPID_IHTMLWINDOW3_ONAFTERPRINT), displaybind, bindable] void onafterprint (VARIANT v);
     [propget, id (DISPID_IHTMLWINDOW3_ONAFTERPRINT), displaybind, bindable] VARIANT onafterprint ();
     [propget, id (DISPID_IHTMLWINDOW3_CLIPBOARDDATA)] IHTMLDataTransfer *clipboardData ();
-    [id (DISPID_IHTMLWINDOW3_SHOWMODELESSDIALOG)] IHTMLWindow2 *showModelessDialog ([defaultvalue (L""), in] BSTR url,[optional, in] VARIANT *varArgIn,[optional, in] VARIANT *options);
+    [id (DISPID_IHTMLWINDOW3_SHOWMODELESSDIALOG)] IHTMLWindow2 *showModelessDialog ([defaultvalue (L""), in] BSTR url,[defaultvalue (0), optional, in] VARIANT *varArgIn,[defaultvalue (0), optional, in] VARIANT *options);
     [id (DISPID_IHTMLWINDOW4_CREATEPOPUP)] IDispatch *createPopup ([optional, in] VARIANT *varArgIn);
     [propget, id (DISPID_IHTMLWINDOW4_FRAMEELEMENT)] IHTMLFrameBase *frameElement ();
     [propget, id (DISPID_IHTMLWINDOW6_SESSIONSTORAGE)] IHTMLStorage *sessionStorage ();
@@ -31764,7 +31764,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLDOCUMENT2_NAMEPROP)] HRESULT nameProp ([retval, out] BSTR *p);
     [vararg, id (DISPID_IHTMLDOCUMENT2_WRITE)] HRESULT write ([in] SAFEARRAY (VARIANT) psarray);
     [vararg, id (DISPID_IHTMLDOCUMENT2_WRITELN)] HRESULT writeln ([in] SAFEARRAY (VARIANT) psarray);
-    [id (DISPID_IHTMLDOCUMENT2_OPEN)] HRESULT open ([defaultvalue (L"text/html"), in] BSTR url,[optional, in] VARIANT name,[optional, in] VARIANT features,[optional, in] VARIANT replace,[retval, out] IDispatch **pomWindowResult);
+    [id (DISPID_IHTMLDOCUMENT2_OPEN)] HRESULT open ([/*defaultvalue (L"text/html"),*/ in] BSTR url,[optional, in] VARIANT name,[optional, in] VARIANT features,[optional, in] VARIANT replace,[retval, out] IDispatch **pomWindowResult);
     [id (DISPID_IHTMLDOCUMENT2_CLOSE)] HRESULT close ();
     [id (DISPID_IHTMLDOCUMENT2_CLEAR)] HRESULT clear ();
     [id (DISPID_IHTMLDOCUMENT2_QUERYCOMMANDSUPPORTED)] HRESULT queryCommandSupported ([in] BSTR cmdID,[retval, out] VARIANT_BOOL *pfRet);
@@ -31773,7 +31773,7 @@ library MSHTML {
     [id (DISPID_IHTMLDOCUMENT2_QUERYCOMMANDINDETERM)] HRESULT queryCommandIndeterm ([in] BSTR cmdID,[retval, out] VARIANT_BOOL *pfRet);
     [id (DISPID_IHTMLDOCUMENT2_QUERYCOMMANDTEXT)] HRESULT queryCommandText ([in] BSTR cmdID,[retval, out] BSTR *pcmdText);
     [id (DISPID_IHTMLDOCUMENT2_QUERYCOMMANDVALUE)] HRESULT queryCommandValue ([in] BSTR cmdID,[retval, out] VARIANT *pcmdValue);
-    [id (DISPID_IHTMLDOCUMENT2_EXECCOMMAND)] HRESULT execCommand ([in] BSTR cmdID,[defaultvalue (0), in] VARIANT_BOOL showUI,[optional, in] VARIANT value,[retval, out] VARIANT_BOOL *pfRet);
+    [id (DISPID_IHTMLDOCUMENT2_EXECCOMMAND)] HRESULT execCommand ([in] BSTR cmdID,[in] VARIANT_BOOL showUI,[optional, in] VARIANT value,[retval, out] VARIANT_BOOL *pfRet);
     [id (DISPID_IHTMLDOCUMENT2_EXECCOMMANDSHOWHELP)] HRESULT execCommandShowHelp ([in] BSTR cmdID,[retval, out] VARIANT_BOOL *pfRet);
     [id (DISPID_IHTMLDOCUMENT2_CREATEELEMENT)] HRESULT createElement ([in] BSTR eTag,[retval, out] IHTMLElement **newElem);
     [propput, id (DISPID_IHTMLDOCUMENT2_ONHELP), displaybind, bindable] HRESULT onhelp ([in] VARIANT v);
@@ -31818,7 +31818,7 @@ library MSHTML {
     [propput, id (DISPID_IHTMLDOCUMENT2_ONERRORUPDATE), displaybind, bindable] HRESULT onerrorupdate ([in] VARIANT v);
     [propget, id (DISPID_IHTMLDOCUMENT2_ONERRORUPDATE), displaybind, bindable] HRESULT onerrorupdate ([retval, out] VARIANT *p);
     [id (DISPID_IHTMLDOCUMENT2_TOSTRING)] HRESULT toString ([retval, out] BSTR *String);
-    [id (DISPID_IHTMLDOCUMENT2_CREATESTYLESHEET)] HRESULT createStyleSheet ([defaultvalue (L""), in] BSTR bstrHref,[defaultvalue (-1), in] long lIndex,[retval, out] IHTMLStyleSheet **ppnewStyleSheet);
+    [id (DISPID_IHTMLDOCUMENT2_CREATESTYLESHEET)] HRESULT createStyleSheet ([defaultvalue (L""), in] BSTR bstrHref,[defaultvalue (-1), in] long lIndex,[defaultvalue (0), retval, out] IHTMLStyleSheet **ppnewStyleSheet);
   };
   [odl, oleautomation, dual, uuid (3050f485-98b5-11cf-bb82-00aa00bdce0b)] interface IHTMLDocument3 : IDispatch {
     [id (DISPID_IHTMLDOCUMENT3_RELEASECAPTURE)] HRESULT releaseCapture ();
@@ -32125,7 +32125,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLDOCUMENT2_NAMEPROP)] BSTR nameProp ();
     [vararg, id (DISPID_IHTMLDOCUMENT2_WRITE)] void write ([in] SAFEARRAY (VARIANT) psarray);
     [vararg, id (DISPID_IHTMLDOCUMENT2_WRITELN)] void writeln ([in] SAFEARRAY (VARIANT) psarray);
-    [id (DISPID_IHTMLDOCUMENT2_OPEN)] IDispatch *open ([defaultvalue (L"text/html"), in] BSTR url,[optional, in] VARIANT name,[optional, in] VARIANT features,[optional, in] VARIANT replace);
+    [id (DISPID_IHTMLDOCUMENT2_OPEN)] IDispatch *open ([/*defaultvalue (L"text/html"),*/ in] BSTR url,[optional, in] VARIANT name,[optional, in] VARIANT features,[optional, in] VARIANT replace);
     [id (DISPID_IHTMLDOCUMENT2_CLOSE)] void close ();
     [id (DISPID_IHTMLDOCUMENT2_CLEAR)] void clear ();
     [id (DISPID_IHTMLDOCUMENT2_QUERYCOMMANDSUPPORTED)] VARIANT_BOOL queryCommandSupported ([in] BSTR cmdID);
@@ -32134,7 +32134,7 @@ library MSHTML {
     [id (DISPID_IHTMLDOCUMENT2_QUERYCOMMANDINDETERM)] VARIANT_BOOL queryCommandIndeterm ([in] BSTR cmdID);
     [id (DISPID_IHTMLDOCUMENT2_QUERYCOMMANDTEXT)] BSTR queryCommandText ([in] BSTR cmdID);
     [id (DISPID_IHTMLDOCUMENT2_QUERYCOMMANDVALUE)] VARIANT queryCommandValue ([in] BSTR cmdID);
-    [id (DISPID_IHTMLDOCUMENT2_EXECCOMMAND)] VARIANT_BOOL execCommand ([in] BSTR cmdID,[defaultvalue (0), in] VARIANT_BOOL showUI,[optional, in] VARIANT value);
+    [id (DISPID_IHTMLDOCUMENT2_EXECCOMMAND)] VARIANT_BOOL execCommand ([in] BSTR cmdID,[in] VARIANT_BOOL showUI,[optional, in] VARIANT value);
     [id (DISPID_IHTMLDOCUMENT2_EXECCOMMANDSHOWHELP)] VARIANT_BOOL execCommandShowHelp ([in] BSTR cmdID);
     [id (DISPID_IHTMLDOCUMENT2_CREATEELEMENT)] IHTMLElement *createElement ([in] BSTR eTag);
     [propput, id (DISPID_IHTMLDOCUMENT2_ONHELP), displaybind, bindable] void onhelp (VARIANT v);
@@ -36657,7 +36657,7 @@ library MSHTML {
     [id (DISPID_IHTMLTABLE_DELETETFOOT)] HRESULT deleteTFoot ();
     [id (DISPID_IHTMLTABLE_CREATECAPTION)] HRESULT createCaption ([retval, out] IHTMLTableCaption **caption);
     [id (DISPID_IHTMLTABLE_DELETECAPTION)] HRESULT deleteCaption ();
-    [id (DISPID_IHTMLTABLE_INSERTROW)] HRESULT insertRow ([defaultvalue (-1), in] long index,[retval, out] IDispatch **row);
+    [id (DISPID_IHTMLTABLE_INSERTROW)] HRESULT insertRow ([defaultvalue (-1), in] long index,[defaultvalue (0), retval, out] IDispatch **row);
     [id (DISPID_IHTMLTABLE_DELETEROW)] HRESULT deleteRow ([defaultvalue (-1), in] long index);
     [propget, id (DISPID_IHTMLTABLE_READYSTATE)] HRESULT readyState ([retval, out] BSTR *p);
     [propput, id (DISPID_IHTMLTABLE_ONREADYSTATECHANGE), displaybind, bindable] HRESULT onreadystatechange ([in] VARIANT v);
@@ -36667,7 +36667,7 @@ library MSHTML {
     [id (DISPID_IHTMLTABLE2_FIRSTPAGE)] HRESULT firstPage ();
     [id (DISPID_IHTMLTABLE2_LASTPAGE)] HRESULT lastPage ();
     [propget, id (DISPID_IHTMLTABLE2_CELLS)] HRESULT cells ([retval, out] IHTMLElementCollection **p);
-    [id (DISPID_IHTMLTABLE2_MOVEROW)] HRESULT moveRow ([defaultvalue (-1), in] long indexFrom,[defaultvalue (-1), in] long indexTo,[retval, out] IDispatch **row);
+    [id (DISPID_IHTMLTABLE2_MOVEROW)] HRESULT moveRow ([defaultvalue (-1), in] long indexFrom,[defaultvalue (-1), in] long indexTo,[defaultvalue (0), retval, out] IDispatch **row);
   };
   [odl, oleautomation, dual, uuid (3050f829-98b5-11cf-bb82-00aa00bdce0b)] interface IHTMLTable3 : IDispatch {
     [propput, id (DISPID_IHTMLTABLE3_SUMMARY), displaybind, bindable] HRESULT summary ([in] BSTR v);
@@ -36680,7 +36680,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLTABLE4_IE9_TFOOT)] HRESULT tFoot ([retval, out] IHTMLTableSection **p);
     [propputref, id (DISPID_IHTMLTABLE4_IE9_CAPTION)] HRESULT caption ([in] IHTMLTableCaption *v);
     [propget, id (DISPID_IHTMLTABLE4_IE9_CAPTION)] HRESULT caption ([retval, out] IHTMLTableCaption **p);
-    [id (DISPID_IHTMLTABLE4_IE9_INSERTROW)] HRESULT insertRow ([defaultvalue (-1), in] long index,[retval, out] IDispatch **row);
+    [id (DISPID_IHTMLTABLE4_IE9_INSERTROW)] HRESULT insertRow ([defaultvalue (-1), in] long index,[defaultvalue (0), retval, out] IDispatch **row);
     [id (DISPID_IHTMLTABLE4_IE9_DELETEROW)] HRESULT deleteRow ([defaultvalue (-1), in] long index);
     [id (DISPID_IHTMLTABLE4_CREATETBODY)] HRESULT createTBody ([retval, out] IHTMLTableSection **tbody);
   };
@@ -36714,11 +36714,11 @@ library MSHTML {
     [propput, id (DISPID_IHTMLTABLESECTION_BGCOLOR)] HRESULT bgColor ([in] VARIANT v);
     [propget, id (DISPID_IHTMLTABLESECTION_BGCOLOR)] HRESULT bgColor ([retval, out] VARIANT *p);
     [propget, id (DISPID_IHTMLTABLESECTION_ROWS)] HRESULT rows ([retval, out] IHTMLElementCollection **p);
-    [id (DISPID_IHTMLTABLESECTION_INSERTROW)] HRESULT insertRow ([defaultvalue (-1), in] long index,[retval, out] IDispatch **row);
+    [id (DISPID_IHTMLTABLESECTION_INSERTROW)] HRESULT insertRow ([defaultvalue (-1), in] long index,[defaultvalue (0), retval, out] IDispatch **row);
     [id (DISPID_IHTMLTABLESECTION_DELETEROW)] HRESULT deleteRow ([defaultvalue (-1), in] long index);
   };
   [odl, oleautomation, dual, uuid (3050f5c7-98b5-11cf-bb82-00aa00bdce0b)] interface IHTMLTableSection2 : IDispatch {
-    [id (DISPID_IHTMLTABLESECTION2_MOVEROW)] HRESULT moveRow ([defaultvalue (-1), in] long indexFrom,[defaultvalue (-1), in] long indexTo,[retval, out] IDispatch **row);
+    [id (DISPID_IHTMLTABLESECTION2_MOVEROW)] HRESULT moveRow ([defaultvalue (-1), in] long indexFrom,[defaultvalue (-1), in] long indexTo,[defaultvalue (0), retval, out] IDispatch **row);
   };
   [odl, oleautomation, dual, uuid (3050f82b-98b5-11cf-bb82-00aa00bdce0b)] interface IHTMLTableSection3 : IDispatch {
     [propput, id (DISPID_IHTMLTABLESECTION3_CH), displaybind, bindable] HRESULT ch ([in] BSTR v);
@@ -36731,7 +36731,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLTABLESECTION4_IE9_CH), displaybind, bindable] HRESULT ch ([retval, out] BSTR *p);
     [propput, id (DISPID_IHTMLTABLESECTION4_IE9_CHOFF), displaybind, bindable] HRESULT chOff ([in] BSTR v);
     [propget, id (DISPID_IHTMLTABLESECTION4_IE9_CHOFF), displaybind, bindable] HRESULT chOff ([retval, out] BSTR *p);
-    [id (DISPID_IHTMLTABLESECTION4_IE9_INSERTROW)] HRESULT insertRow ([defaultvalue (-1), in] long index,[retval, out] IDispatch **row);
+    [id (DISPID_IHTMLTABLESECTION4_IE9_INSERTROW)] HRESULT insertRow ([defaultvalue (-1), in] long index,[defaultvalue (0), retval, out] IDispatch **row);
     [id (DISPID_IHTMLTABLESECTION4_IE9_DELETEROW)] HRESULT deleteRow ([defaultvalue (-1), in] long index);
   };
   [odl, oleautomation, dual, uuid (3050f23c-98b5-11cf-bb82-00aa00bdce0b)] interface IHTMLTableRow : IDispatch {
@@ -36750,7 +36750,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLTABLEROW_ROWINDEX)] HRESULT rowIndex ([retval, out] long *p);
     [propget, id (DISPID_IHTMLTABLEROW_SECTIONROWINDEX)] HRESULT sectionRowIndex ([retval, out] long *p);
     [propget, id (DISPID_IHTMLTABLEROW_CELLS)] HRESULT cells ([retval, out] IHTMLElementCollection **p);
-    [id (DISPID_IHTMLTABLEROW_INSERTCELL)] HRESULT insertCell ([defaultvalue (-1), in] long index,[retval, out] IDispatch **row);
+    [id (DISPID_IHTMLTABLEROW_INSERTCELL)] HRESULT insertCell ([defaultvalue (-1), in] long index,[defaultvalue (0), retval, out] IDispatch **row);
     [id (DISPID_IHTMLTABLEROW_DELETECELL)] HRESULT deleteCell ([defaultvalue (-1), in] long index);
   };
   [odl, oleautomation, dual, uuid (3050f4a1-98b5-11cf-bb82-00aa00bdce0b)] interface IHTMLTableRow2 : IDispatch {
@@ -36768,7 +36768,7 @@ library MSHTML {
     [propget, id (DISPID_IHTMLTABLEROW4_IE9_CH), displaybind, bindable] HRESULT ch ([retval, out] BSTR *p);
     [propput, id (DISPID_IHTMLTABLEROW4_IE9_CHOFF), displaybind, bindable] HRESULT chOff ([in] BSTR v);
     [propget, id (DISPID_IHTMLTABLEROW4_IE9_CHOFF), displaybind, bindable] HRESULT chOff ([retval, out] BSTR *p);
-    [id (DISPID_IHTMLTABLEROW4_IE9_INSERTCELL)] HRESULT insertCell ([defaultvalue (-1), in] long index,[retval, out] IDispatch **row);
+    [id (DISPID_IHTMLTABLEROW4_IE9_INSERTCELL)] HRESULT insertCell ([defaultvalue (-1), in] long index,[defaultvalue (0), retval, out] IDispatch **row);
     [id (DISPID_IHTMLTABLEROW4_IE9_DELETECELL)] HRESULT deleteCell ([defaultvalue (-1), in] long index);
   };
   [odl, oleautomation, dual, uuid (3050f413-98b5-11cf-bb82-00aa00bdce0b)] interface IHTMLTableRowMetrics : IDispatch {
@@ -56834,7 +56834,7 @@ library MSHTML {
   cpp_quote("EXTERN_C const GUID CLSID_CDOMMSAnimationEvent;")
   [odl, oleautomation, dual, uuid (305107c5-98b5-11cf-bb82-00aa00bdce0b)] interface IWebGeolocation : IDispatch {
     [id (DISPID_IWEBGEOLOCATION_GETCURRENTPOSITION)] HRESULT getCurrentPosition ([in] IDispatch *successCallback,[defaultvalue (0), in] IDispatch *errorCallback,[defaultvalue (0), in] IDispatch *options);
-    [id (DISPID_IWEBGEOLOCATION_WATCHPOSITION)] HRESULT watchPosition ([in] IDispatch *successCallback,[defaultvalue (0), in] IDispatch *errorCallback,[defaultvalue (0), in] IDispatch *options,[retval, out] long *watchId);
+    [id (DISPID_IWEBGEOLOCATION_WATCHPOSITION)] HRESULT watchPosition ([in] IDispatch *successCallback,[defaultvalue (0), in] IDispatch *errorCallback,[defaultvalue (0), in] IDispatch *options,[defaultvalue (0), retval, out] long *watchId);
     [id (DISPID_IWEBGEOLOCATION_CLEARWATCH)] HRESULT clearWatch ([in] long watchId);
   };
   [odl, oleautomation, dual, uuid (305107c7-98b5-11cf-bb82-00aa00bdce0b)] interface IWebGeocoordinates : IDispatch {
@@ -56920,7 +56920,7 @@ library MSHTML {
     [propget, id (DISPID_ICLIENTCAPS_AVAILHEIGHT)] HRESULT availHeight ([retval, out] long *p);
     [propget, id (DISPID_ICLIENTCAPS_AVAILWIDTH)] HRESULT availWidth ([retval, out] long *p);
     [propget, id (DISPID_ICLIENTCAPS_CONNECTIONTYPE)] HRESULT connectionType ([retval, out] BSTR *p);
-    [id (DISPID_ICLIENTCAPS_ISCOMPONENTINSTALLED)] HRESULT isComponentInstalled ([in] BSTR bstrName,[in] BSTR bstrUrl,[defaultvalue (L""), in] BSTR bStrVer,[retval, out] VARIANT_BOOL *p);
+    [id (DISPID_ICLIENTCAPS_ISCOMPONENTINSTALLED)] HRESULT isComponentInstalled ([in] BSTR bstrName,[in] BSTR bstrUrl,[defaultvalue (L""), in] BSTR bStrVer,[retval, out, defaultvalue (0)] VARIANT_BOOL *p);
     [id (DISPID_ICLIENTCAPS_GETCOMPONENTVERSION)] HRESULT getComponentVersion ([in] BSTR bstrName,[in] BSTR bstrUrl,[retval, out] BSTR *pbstrVer);
     [id (DISPID_ICLIENTCAPS_COMPAREVERSIONS)] HRESULT compareVersions ([in] BSTR bstrVer1,[in] BSTR bstrVer2,[retval, out] long *p);
     [id (DISPID_ICLIENTCAPS_ADDCOMPONENTREQUEST)] HRESULT addComponentRequest ([in] BSTR bstrName,[in] BSTR bstrUrl,[defaultvalue (L""), in] BSTR bStrVer);

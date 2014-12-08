@@ -21535,12 +21535,12 @@ IHTMLStyle : public IDispatch
     virtual HRESULT STDMETHODCALLTYPE getAttribute(
         BSTR strAttributeName,
         LONG lFlags = 0,
-        VARIANT *AttributeValue) = 0;
+        VARIANT *AttributeValue = 0) = 0;
 
     virtual HRESULT STDMETHODCALLTYPE removeAttribute(
         BSTR strAttributeName,
         LONG lFlags = 1,
-        VARIANT_BOOL *pfSuccess) = 0;
+        VARIANT_BOOL *pfSuccess = 0) = 0;
 
     virtual HRESULT STDMETHODCALLTYPE toString(
         BSTR *String) = 0;
@@ -28199,12 +28199,12 @@ IHTMLRuleStyle : public IDispatch
     virtual HRESULT STDMETHODCALLTYPE getAttribute(
         BSTR strAttributeName,
         LONG lFlags = 0,
-        VARIANT *AttributeValue) = 0;
+        VARIANT *AttributeValue = 0) = 0;
 
     virtual HRESULT STDMETHODCALLTYPE removeAttribute(
         BSTR strAttributeName,
         LONG lFlags = 1,
-        VARIANT_BOOL *pfSuccess) = 0;
+        VARIANT_BOOL *pfSuccess = 0) = 0;
 
 };
 #ifdef __CRT_UUID_DECL
@@ -34722,7 +34722,7 @@ IHTMLCSSMediaRule : public IDispatch
     virtual HRESULT STDMETHODCALLTYPE insertRule(
         BSTR bstrRule,
         LONG lIndex = -1,
-        LONG *plNewIndex) = 0;
+        LONG *plNewIndex = 0) = 0;
 
     virtual HRESULT STDMETHODCALLTYPE deleteRule(
         LONG lIndex = -1) = 0;
@@ -37379,7 +37379,7 @@ IHTMLCurrentStyle : public IDispatch
     virtual HRESULT STDMETHODCALLTYPE getAttribute(
         BSTR strAttributeName,
         LONG lFlags = 0,
-        VARIANT *AttributeValue) = 0;
+        VARIANT *AttributeValue = 0) = 0;
 
     virtual HRESULT STDMETHODCALLTYPE get_unicodeBidi(
         BSTR *p) = 0;
@@ -41005,7 +41005,7 @@ IHTMLDOMNode : public IDispatch
 
     virtual HRESULT STDMETHODCALLTYPE removeNode(
         VARIANT_BOOL fDeep = 0,
-        IHTMLDOMNode **removed) = 0;
+        IHTMLDOMNode **removed = 0) = 0;
 
     virtual HRESULT STDMETHODCALLTYPE swapNode(
         IHTMLDOMNode *otherNode,
@@ -46978,12 +46978,12 @@ IHTMLElement : public IDispatch
     virtual HRESULT STDMETHODCALLTYPE getAttribute(
         BSTR strAttributeName,
         LONG lFlags = 0,
-        VARIANT *AttributeValue) = 0;
+        VARIANT *AttributeValue = 0) = 0;
 
     virtual HRESULT STDMETHODCALLTYPE removeAttribute(
         BSTR strAttributeName,
         LONG lFlags = 1,
-        VARIANT_BOOL *pfSuccess) = 0;
+        VARIANT_BOOL *pfSuccess = 0) = 0;
 
     virtual HRESULT STDMETHODCALLTYPE put_className(
         BSTR v) = 0;
@@ -61966,13 +61966,13 @@ IHTMLStyleSheet : public IDispatch
     virtual HRESULT STDMETHODCALLTYPE addImport(
         BSTR bstrURL,
         LONG lIndex = -1,
-        LONG *plIndex) = 0;
+        LONG *plIndex = 0) = 0;
 
     virtual HRESULT STDMETHODCALLTYPE addRule(
         BSTR bstrSelector,
         BSTR bstrStyle,
         LONG lIndex = -1,
-        LONG *plNewIndex) = 0;
+        LONG *plNewIndex = 0) = 0;
 
     virtual HRESULT STDMETHODCALLTYPE removeImport(
         LONG lIndex) = 0;
@@ -62461,7 +62461,7 @@ IHTMLStyleSheet2 : public IDispatch
         BSTR bstrSelector,
         BSTR bstrStyle,
         LONG lIndex = -1,
-        LONG *plNewIndex) = 0;
+        LONG *plNewIndex = 0) = 0;
 
 };
 #ifdef __CRT_UUID_DECL
@@ -62827,7 +62827,7 @@ IHTMLStyleSheet4 : public IDispatch
     virtual HRESULT STDMETHODCALLTYPE insertRule(
         BSTR bstrRule,
         LONG lIndex = -1,
-        LONG *plNewIndex) = 0;
+        LONG *plNewIndex = 0) = 0;
 
     virtual HRESULT STDMETHODCALLTYPE deleteRule(
         LONG lIndex = -1) = 0;
@@ -65159,17 +65159,17 @@ IHTMLTxtRange : public IDispatch
     virtual HRESULT STDMETHODCALLTYPE move(
         BSTR Unit,
         LONG Count = 1,
-        LONG *ActualCount) = 0;
+        LONG *ActualCount = 0) = 0;
 
     virtual HRESULT STDMETHODCALLTYPE moveStart(
         BSTR Unit,
         LONG Count = 1,
-        LONG *ActualCount) = 0;
+        LONG *ActualCount = 0) = 0;
 
     virtual HRESULT STDMETHODCALLTYPE moveEnd(
         BSTR Unit,
         LONG Count = 1,
-        LONG *ActualCount) = 0;
+        LONG *ActualCount = 0) = 0;
 
     virtual HRESULT STDMETHODCALLTYPE select(
         ) = 0;
@@ -65193,7 +65193,7 @@ IHTMLTxtRange : public IDispatch
         BSTR String,
         LONG count = 1073741823,
         LONG Flags = 0,
-        VARIANT_BOOL *Success) = 0;
+        VARIANT_BOOL *Success = 0) = 0;
 
     virtual HRESULT STDMETHODCALLTYPE moveToPoint(
         LONG x,
@@ -65232,7 +65232,7 @@ IHTMLTxtRange : public IDispatch
 
     virtual HRESULT STDMETHODCALLTYPE execCommand(
         BSTR cmdID,
-        VARIANT_BOOL showUI = 0,
+        VARIANT_BOOL showUI,
         VARIANT value,
         VARIANT_BOOL *pfRet) = 0;
 
@@ -70173,7 +70173,7 @@ IHTMLControlRange : public IDispatch
 
     virtual HRESULT STDMETHODCALLTYPE execCommand(
         BSTR cmdID,
-        VARIANT_BOOL showUI = 0,
+        VARIANT_BOOL showUI,
         VARIANT value,
         VARIANT_BOOL *pfRet) = 0;
 
@@ -102646,12 +102646,12 @@ IHTMLEventObj2 : public IDispatch
     virtual HRESULT STDMETHODCALLTYPE getAttribute(
         BSTR strAttributeName,
         LONG lFlags = 0,
-        VARIANT *AttributeValue) = 0;
+        VARIANT *AttributeValue = 0) = 0;
 
     virtual HRESULT STDMETHODCALLTYPE removeAttribute(
         BSTR strAttributeName,
         LONG lFlags = 1,
-        VARIANT_BOOL *pfSuccess) = 0;
+        VARIANT_BOOL *pfSuccess = 0) = 0;
 
     virtual HRESULT STDMETHODCALLTYPE put_propertyName(
         BSTR v) = 0;
@@ -106552,12 +106552,12 @@ IHTMLWindow2 : public IHTMLFramesCollection2
 
     virtual HRESULT STDMETHODCALLTYPE confirm(
         BSTR message = L"",
-        VARIANT_BOOL *confirmed) = 0;
+        VARIANT_BOOL *confirmed = 0) = 0;
 
     virtual HRESULT STDMETHODCALLTYPE prompt(
         BSTR message = L"",
         BSTR defstr = L"undefined",
-        VARIANT *textdata) = 0;
+        VARIANT *textdata = 0) = 0;
 
     virtual HRESULT STDMETHODCALLTYPE get_Image(
         IHTMLImageElementFactory **p) = 0;
@@ -106594,7 +106594,7 @@ IHTMLWindow2 : public IHTMLFramesCollection2
         BSTR name = L"",
         BSTR features = L"",
         VARIANT_BOOL replace = 0,
-        IHTMLWindow2 **pomWindowResult) = 0;
+        IHTMLWindow2 **pomWindowResult = 0) = 0;
 
     virtual HRESULT STDMETHODCALLTYPE get_self(
         IHTMLWindow2 **p) = 0;
@@ -106722,7 +106722,7 @@ IHTMLWindow2 : public IHTMLFramesCollection2
     virtual HRESULT STDMETHODCALLTYPE execScript(
         BSTR code,
         BSTR language = L"JScript",
-        VARIANT *pvarRet) = 0;
+        VARIANT *pvarRet = 0) = 0;
 
     virtual HRESULT STDMETHODCALLTYPE toString(
         BSTR *String) = 0;
@@ -108070,9 +108070,9 @@ IHTMLWindow3 : public IDispatch
 
     virtual HRESULT STDMETHODCALLTYPE showModelessDialog(
         BSTR url = L"",
-        VARIANT *varArgIn,
-        VARIANT *options,
-        IHTMLWindow2 **pDialog) = 0;
+        VARIANT *varArgIn = 0,
+        VARIANT *options = 0,
+        IHTMLWindow2 **pDialog = 0) = 0;
 
 };
 #ifdef __CRT_UUID_DECL
@@ -109075,7 +109075,7 @@ IHTMLWindow7 : public IDispatch
     virtual HRESULT STDMETHODCALLTYPE getComputedStyle(
         IHTMLDOMNode *varArgIn,
         BSTR bstrPseudoElt = L"",
-        IHTMLCSSStyleDeclaration **ppComputedStyle) = 0;
+        IHTMLCSSStyleDeclaration **ppComputedStyle = 0) = 0;
 
     virtual HRESULT STDMETHODCALLTYPE get_styleMedia(
         IHTMLStyleMedia **p) = 0;
@@ -113838,7 +113838,7 @@ IHTMLDocument2 : public IHTMLDocument
         SAFEARRAY *psarray) = 0;
 
     virtual HRESULT STDMETHODCALLTYPE open(
-        BSTR url = L"text/html",
+        BSTR url,
         VARIANT name,
         VARIANT features,
         VARIANT replace,
@@ -113876,7 +113876,7 @@ IHTMLDocument2 : public IHTMLDocument
 
     virtual HRESULT STDMETHODCALLTYPE execCommand(
         BSTR cmdID,
-        VARIANT_BOOL showUI = 0,
+        VARIANT_BOOL showUI,
         VARIANT value,
         VARIANT_BOOL *pfRet) = 0;
 
@@ -114019,7 +114019,7 @@ IHTMLDocument2 : public IHTMLDocument
     virtual HRESULT STDMETHODCALLTYPE createStyleSheet(
         BSTR bstrHref = L"",
         LONG lIndex = -1,
-        IHTMLStyleSheet **ppnewStyleSheet) = 0;
+        IHTMLStyleSheet **ppnewStyleSheet = 0) = 0;
 
 };
 #ifdef __CRT_UUID_DECL
@@ -128045,7 +128045,7 @@ IHTMLTable : public IDispatch
 
     virtual HRESULT STDMETHODCALLTYPE insertRow(
         LONG index = -1,
-        IDispatch **row) = 0;
+        IDispatch **row = 0) = 0;
 
     virtual HRESULT STDMETHODCALLTYPE deleteRow(
         LONG index = -1) = 0;
@@ -128958,7 +128958,7 @@ IHTMLTable2 : public IDispatch
     virtual HRESULT STDMETHODCALLTYPE moveRow(
         LONG indexFrom = -1,
         LONG indexTo = -1,
-        IDispatch **row) = 0;
+        IDispatch **row = 0) = 0;
 
 };
 #ifdef __CRT_UUID_DECL
@@ -129308,7 +129308,7 @@ IHTMLTable4 : public IDispatch
 
     virtual HRESULT STDMETHODCALLTYPE insertRow(
         LONG index = -1,
-        IDispatch **row) = 0;
+        IDispatch **row = 0) = 0;
 
     virtual HRESULT STDMETHODCALLTYPE deleteRow(
         LONG index = -1) = 0;
@@ -130241,7 +130241,7 @@ IHTMLTableSection : public IDispatch
 
     virtual HRESULT STDMETHODCALLTYPE insertRow(
         LONG index = -1,
-        IDispatch **row) = 0;
+        IDispatch **row = 0) = 0;
 
     virtual HRESULT STDMETHODCALLTYPE deleteRow(
         LONG index = -1) = 0;
@@ -130508,7 +130508,7 @@ IHTMLTableSection2 : public IDispatch
     virtual HRESULT STDMETHODCALLTYPE moveRow(
         LONG indexFrom = -1,
         LONG indexTo = -1,
-        IDispatch **row) = 0;
+        IDispatch **row = 0) = 0;
 
 };
 #ifdef __CRT_UUID_DECL
@@ -130846,7 +130846,7 @@ IHTMLTableSection4 : public IDispatch
 
     virtual HRESULT STDMETHODCALLTYPE insertRow(
         LONG index = -1,
-        IDispatch **row) = 0;
+        IDispatch **row = 0) = 0;
 
     virtual HRESULT STDMETHODCALLTYPE deleteRow(
         LONG index = -1) = 0;
@@ -131109,7 +131109,7 @@ IHTMLTableRow : public IDispatch
 
     virtual HRESULT STDMETHODCALLTYPE insertCell(
         LONG index = -1,
-        IDispatch **row) = 0;
+        IDispatch **row = 0) = 0;
 
     virtual HRESULT STDMETHODCALLTYPE deleteCell(
         LONG index = -1) = 0;
@@ -131855,7 +131855,7 @@ IHTMLTableRow4 : public IDispatch
 
     virtual HRESULT STDMETHODCALLTYPE insertCell(
         LONG index = -1,
-        IDispatch **row) = 0;
+        IDispatch **row = 0) = 0;
 
     virtual HRESULT STDMETHODCALLTYPE deleteCell(
         LONG index = -1) = 0;
@@ -202263,7 +202263,7 @@ IWebGeolocation : public IDispatch
         IDispatch *successCallback,
         IDispatch *errorCallback = 0,
         IDispatch *options = 0,
-        LONG *watchId) = 0;
+        LONG *watchId = 0) = 0;
 
     virtual HRESULT STDMETHODCALLTYPE clearWatch(
         LONG watchId) = 0;
@@ -203528,7 +203528,7 @@ IClientCaps : public IDispatch
         BSTR bstrName,
         BSTR bstrUrl,
         BSTR bStrVer = L"",
-        VARIANT_BOOL *p) = 0;
+        VARIANT_BOOL *p = 0) = 0;
 
     virtual HRESULT STDMETHODCALLTYPE getComponentVersion(
         BSTR bstrName,
