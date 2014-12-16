@@ -5449,7 +5449,8 @@ winrtlibs = \
 #lib32_DATA += lib32/libmsvcp60.a     # Specialized for W32API conditional
 #lib32_DATA += lib32/libshell32.a    # Handled by custom rule
 #lib32_DATA += lib32/libws2_32.a      # Handled by custom rule
-@LIB32_TRUE@lib32_DATA = lib32/libaclui.a lib32/libadvapi32.a \
+@LIB32_TRUE@lib32_DATA = lib32/libaclui.a lib32/libactiveds.a \
+@LIB32_TRUE@	lib32/libadsldpc.a lib32/libadvapi32.a \
 @LIB32_TRUE@	lib32/libapcups.a \
 @LIB32_TRUE@	lib32/libapi-ms-win-core-winrt-l1-1-0.a \
 @LIB32_TRUE@	lib32/libapi-ms-win-core-winrt-string-l1-1-0.a \
