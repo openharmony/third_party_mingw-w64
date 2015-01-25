@@ -1138,15 +1138,16 @@ am__lib32_libmsvcrt_a_SOURCES_DIST = misc/invalid_parameter_handler.c \
 	secapi/_cwprintf_s.c secapi/_cwprintf_s_l.c \
 	secapi/_gmtime32_s.c secapi/_gmtime64_s.c \
 	secapi/_localtime32_s.c secapi/_localtime64_s.c \
-	secapi/_mktemp_s.c secapi/_strdate_s.c secapi/_strtime_s.c \
-	secapi/_umask_s.c secapi/_vcprintf_s.c secapi/_vcprintf_s_l.c \
-	secapi/_vcwprintf_s.c secapi/_vcwprintf_s_l.c \
-	secapi/_waccess_s.c secapi/_wasctime_s.c secapi/_wctime32_s.c \
-	secapi/_wctime64_s.c secapi/_wstrtime_s.c secapi/_wmktemp_s.c \
-	secapi/_wstrdate_s.c secapi/asctime_s.c secapi/memcpy_s.c \
-	secapi/memmove_s.c secapi/rand_s.c secapi/sprintf_s.c \
-	secapi/strerror_s.c secapi/vsprintf_s.c secapi/wmemcpy_s.c \
-	secapi/wmemmove_s.c misc/lc_locale_func.c lib32/msvcrt.def.in
+	secapi/_mktemp_s.c secapi/_sopen_s.c secapi/_strdate_s.c \
+	secapi/_strtime_s.c secapi/_umask_s.c secapi/_vcprintf_s.c \
+	secapi/_vcprintf_s_l.c secapi/_vcwprintf_s.c \
+	secapi/_vcwprintf_s_l.c secapi/_waccess_s.c \
+	secapi/_wasctime_s.c secapi/_wctime32_s.c secapi/_wctime64_s.c \
+	secapi/_wstrtime_s.c secapi/_wmktemp_s.c secapi/_wstrdate_s.c \
+	secapi/asctime_s.c secapi/memcpy_s.c secapi/memmove_s.c \
+	secapi/rand_s.c secapi/sprintf_s.c secapi/strerror_s.c \
+	secapi/vsprintf_s.c secapi/wmemcpy_s.c secapi/wmemmove_s.c \
+	misc/lc_locale_func.c lib32/msvcrt.def.in
 am__objects_21 =  \
 	misc/lib32_libmsvcrt_a-invalid_parameter_handler.$(OBJEXT) \
 	misc/lib32_libmsvcrt_a-output_format.$(OBJEXT) \
@@ -1167,6 +1168,7 @@ am__objects_21 =  \
 	secapi/lib32_libmsvcrt_a-_localtime32_s.$(OBJEXT) \
 	secapi/lib32_libmsvcrt_a-_localtime64_s.$(OBJEXT) \
 	secapi/lib32_libmsvcrt_a-_mktemp_s.$(OBJEXT) \
+	secapi/lib32_libmsvcrt_a-_sopen_s.$(OBJEXT) \
 	secapi/lib32_libmsvcrt_a-_strdate_s.$(OBJEXT) \
 	secapi/lib32_libmsvcrt_a-_strtime_s.$(OBJEXT) \
 	secapi/lib32_libmsvcrt_a-_umask_s.$(OBJEXT) \
@@ -2285,15 +2287,16 @@ am__lib64_libmsvcrt_a_SOURCES_DIST = misc/invalid_parameter_handler.c \
 	secapi/_cwprintf_s.c secapi/_cwprintf_s_l.c \
 	secapi/_gmtime32_s.c secapi/_gmtime64_s.c \
 	secapi/_localtime32_s.c secapi/_localtime64_s.c \
-	secapi/_mktemp_s.c secapi/_strdate_s.c secapi/_strtime_s.c \
-	secapi/_umask_s.c secapi/_vcprintf_s.c secapi/_vcprintf_s_l.c \
-	secapi/_vcwprintf_s.c secapi/_vcwprintf_s_l.c \
-	secapi/_waccess_s.c secapi/_wasctime_s.c secapi/_wctime32_s.c \
-	secapi/_wctime64_s.c secapi/_wstrtime_s.c secapi/_wmktemp_s.c \
-	secapi/_wstrdate_s.c secapi/asctime_s.c secapi/memcpy_s.c \
-	secapi/memmove_s.c secapi/rand_s.c secapi/sprintf_s.c \
-	secapi/strerror_s.c secapi/vsprintf_s.c secapi/wmemcpy_s.c \
-	secapi/wmemmove_s.c lib64/msvcrt.def.in
+	secapi/_mktemp_s.c secapi/_sopen_s.c secapi/_strdate_s.c \
+	secapi/_strtime_s.c secapi/_umask_s.c secapi/_vcprintf_s.c \
+	secapi/_vcprintf_s_l.c secapi/_vcwprintf_s.c \
+	secapi/_vcwprintf_s_l.c secapi/_waccess_s.c \
+	secapi/_wasctime_s.c secapi/_wctime32_s.c secapi/_wctime64_s.c \
+	secapi/_wstrtime_s.c secapi/_wmktemp_s.c secapi/_wstrdate_s.c \
+	secapi/asctime_s.c secapi/memcpy_s.c secapi/memmove_s.c \
+	secapi/rand_s.c secapi/sprintf_s.c secapi/strerror_s.c \
+	secapi/vsprintf_s.c secapi/wmemcpy_s.c secapi/wmemmove_s.c \
+	lib64/msvcrt.def.in
 am__objects_54 =  \
 	misc/lib64_libmsvcrt_a-invalid_parameter_handler.$(OBJEXT) \
 	misc/lib64_libmsvcrt_a-output_format.$(OBJEXT) \
@@ -2314,6 +2317,7 @@ am__objects_54 =  \
 	secapi/lib64_libmsvcrt_a-_localtime32_s.$(OBJEXT) \
 	secapi/lib64_libmsvcrt_a-_localtime64_s.$(OBJEXT) \
 	secapi/lib64_libmsvcrt_a-_mktemp_s.$(OBJEXT) \
+	secapi/lib64_libmsvcrt_a-_sopen_s.$(OBJEXT) \
 	secapi/lib64_libmsvcrt_a-_strdate_s.$(OBJEXT) \
 	secapi/lib64_libmsvcrt_a-_strtime_s.$(OBJEXT) \
 	secapi/lib64_libmsvcrt_a-_umask_s.$(OBJEXT) \
@@ -3365,16 +3369,16 @@ am__libarm32_libmsvcrt_a_SOURCES_DIST =  \
 	secapi/_ctime64_s.c secapi/_cwprintf_s.c \
 	secapi/_cwprintf_s_l.c secapi/_gmtime32_s.c \
 	secapi/_gmtime64_s.c secapi/_localtime32_s.c \
-	secapi/_localtime64_s.c secapi/_mktemp_s.c secapi/_strdate_s.c \
-	secapi/_strtime_s.c secapi/_umask_s.c secapi/_vcprintf_s.c \
-	secapi/_vcprintf_s_l.c secapi/_vcwprintf_s.c \
-	secapi/_vcwprintf_s_l.c secapi/_waccess_s.c \
-	secapi/_wasctime_s.c secapi/_wctime32_s.c secapi/_wctime64_s.c \
-	secapi/_wstrtime_s.c secapi/_wmktemp_s.c secapi/_wstrdate_s.c \
-	secapi/asctime_s.c secapi/memcpy_s.c secapi/memmove_s.c \
-	secapi/rand_s.c secapi/sprintf_s.c secapi/strerror_s.c \
-	secapi/vsprintf_s.c secapi/wmemcpy_s.c secapi/wmemmove_s.c \
-	misc/lc_locale_func.c
+	secapi/_localtime64_s.c secapi/_mktemp_s.c secapi/_sopen_s.c \
+	secapi/_strdate_s.c secapi/_strtime_s.c secapi/_umask_s.c \
+	secapi/_vcprintf_s.c secapi/_vcprintf_s_l.c \
+	secapi/_vcwprintf_s.c secapi/_vcwprintf_s_l.c \
+	secapi/_waccess_s.c secapi/_wasctime_s.c secapi/_wctime32_s.c \
+	secapi/_wctime64_s.c secapi/_wstrtime_s.c secapi/_wmktemp_s.c \
+	secapi/_wstrdate_s.c secapi/asctime_s.c secapi/memcpy_s.c \
+	secapi/memmove_s.c secapi/rand_s.c secapi/sprintf_s.c \
+	secapi/strerror_s.c secapi/vsprintf_s.c secapi/wmemcpy_s.c \
+	secapi/wmemmove_s.c misc/lc_locale_func.c
 am__objects_83 =  \
 	misc/libarm32_libmsvcrt_a-invalid_parameter_handler.$(OBJEXT) \
 	misc/libarm32_libmsvcrt_a-output_format.$(OBJEXT) \
@@ -3395,6 +3399,7 @@ am__objects_83 =  \
 	secapi/libarm32_libmsvcrt_a-_localtime32_s.$(OBJEXT) \
 	secapi/libarm32_libmsvcrt_a-_localtime64_s.$(OBJEXT) \
 	secapi/libarm32_libmsvcrt_a-_mktemp_s.$(OBJEXT) \
+	secapi/libarm32_libmsvcrt_a-_sopen_s.$(OBJEXT) \
 	secapi/libarm32_libmsvcrt_a-_strdate_s.$(OBJEXT) \
 	secapi/libarm32_libmsvcrt_a-_strtime_s.$(OBJEXT) \
 	secapi/libarm32_libmsvcrt_a-_umask_s.$(OBJEXT) \
@@ -5087,6 +5092,7 @@ src_msvcrt = \
   secapi/_localtime32_s.c \
   secapi/_localtime64_s.c \
   secapi/_mktemp_s.c \
+  secapi/_sopen_s.c \
   secapi/_strdate_s.c \
   secapi/_strtime_s.c \
   secapi/_umask_s.c \
@@ -9105,6 +9111,8 @@ secapi/lib32_libmsvcrt_a-_localtime64_s.$(OBJEXT):  \
 	secapi/$(am__dirstamp) secapi/$(DEPDIR)/$(am__dirstamp)
 secapi/lib32_libmsvcrt_a-_mktemp_s.$(OBJEXT): secapi/$(am__dirstamp) \
 	secapi/$(DEPDIR)/$(am__dirstamp)
+secapi/lib32_libmsvcrt_a-_sopen_s.$(OBJEXT): secapi/$(am__dirstamp) \
+	secapi/$(DEPDIR)/$(am__dirstamp)
 secapi/lib32_libmsvcrt_a-_strdate_s.$(OBJEXT): secapi/$(am__dirstamp) \
 	secapi/$(DEPDIR)/$(am__dirstamp)
 secapi/lib32_libmsvcrt_a-_strtime_s.$(OBJEXT): secapi/$(am__dirstamp) \
@@ -10723,6 +10731,8 @@ secapi/lib64_libmsvcrt_a-_localtime64_s.$(OBJEXT):  \
 	secapi/$(am__dirstamp) secapi/$(DEPDIR)/$(am__dirstamp)
 secapi/lib64_libmsvcrt_a-_mktemp_s.$(OBJEXT): secapi/$(am__dirstamp) \
 	secapi/$(DEPDIR)/$(am__dirstamp)
+secapi/lib64_libmsvcrt_a-_sopen_s.$(OBJEXT): secapi/$(am__dirstamp) \
+	secapi/$(DEPDIR)/$(am__dirstamp)
 secapi/lib64_libmsvcrt_a-_strdate_s.$(OBJEXT): secapi/$(am__dirstamp) \
 	secapi/$(DEPDIR)/$(am__dirstamp)
 secapi/lib64_libmsvcrt_a-_strtime_s.$(OBJEXT): secapi/$(am__dirstamp) \
@@ -12304,6 +12314,8 @@ secapi/libarm32_libmsvcrt_a-_localtime32_s.$(OBJEXT):  \
 secapi/libarm32_libmsvcrt_a-_localtime64_s.$(OBJEXT):  \
 	secapi/$(am__dirstamp) secapi/$(DEPDIR)/$(am__dirstamp)
 secapi/libarm32_libmsvcrt_a-_mktemp_s.$(OBJEXT):  \
+	secapi/$(am__dirstamp) secapi/$(DEPDIR)/$(am__dirstamp)
+secapi/libarm32_libmsvcrt_a-_sopen_s.$(OBJEXT):  \
 	secapi/$(am__dirstamp) secapi/$(DEPDIR)/$(am__dirstamp)
 secapi/libarm32_libmsvcrt_a-_strdate_s.$(OBJEXT):  \
 	secapi/$(am__dirstamp) secapi/$(DEPDIR)/$(am__dirstamp)
@@ -15266,6 +15278,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@secapi/$(DEPDIR)/lib32_libmsvcrt_a-_localtime32_s.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@secapi/$(DEPDIR)/lib32_libmsvcrt_a-_localtime64_s.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@secapi/$(DEPDIR)/lib32_libmsvcrt_a-_mktemp_s.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@secapi/$(DEPDIR)/lib32_libmsvcrt_a-_sopen_s.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@secapi/$(DEPDIR)/lib32_libmsvcrt_a-_strdate_s.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@secapi/$(DEPDIR)/lib32_libmsvcrt_a-_strtime_s.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@secapi/$(DEPDIR)/lib32_libmsvcrt_a-_umask_s.Po@am__quote@
@@ -15305,6 +15318,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@secapi/$(DEPDIR)/lib64_libmsvcrt_a-_localtime32_s.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@secapi/$(DEPDIR)/lib64_libmsvcrt_a-_localtime64_s.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@secapi/$(DEPDIR)/lib64_libmsvcrt_a-_mktemp_s.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@secapi/$(DEPDIR)/lib64_libmsvcrt_a-_sopen_s.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@secapi/$(DEPDIR)/lib64_libmsvcrt_a-_strdate_s.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@secapi/$(DEPDIR)/lib64_libmsvcrt_a-_strtime_s.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@secapi/$(DEPDIR)/lib64_libmsvcrt_a-_umask_s.Po@am__quote@
@@ -15344,6 +15358,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@secapi/$(DEPDIR)/libarm32_libmsvcrt_a-_localtime32_s.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@secapi/$(DEPDIR)/libarm32_libmsvcrt_a-_localtime64_s.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@secapi/$(DEPDIR)/libarm32_libmsvcrt_a-_mktemp_s.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@secapi/$(DEPDIR)/libarm32_libmsvcrt_a-_sopen_s.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@secapi/$(DEPDIR)/libarm32_libmsvcrt_a-_strdate_s.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@secapi/$(DEPDIR)/libarm32_libmsvcrt_a-_strtime_s.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@secapi/$(DEPDIR)/libarm32_libmsvcrt_a-_umask_s.Po@am__quote@
@@ -24944,6 +24959,20 @@ secapi/lib32_libmsvcrt_a-_mktemp_s.obj: secapi/_mktemp_s.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcrt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o secapi/lib32_libmsvcrt_a-_mktemp_s.obj `if test -f 'secapi/_mktemp_s.c'; then $(CYGPATH_W) 'secapi/_mktemp_s.c'; else $(CYGPATH_W) '$(srcdir)/secapi/_mktemp_s.c'; fi`
 
+secapi/lib32_libmsvcrt_a-_sopen_s.o: secapi/_sopen_s.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcrt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT secapi/lib32_libmsvcrt_a-_sopen_s.o -MD -MP -MF secapi/$(DEPDIR)/lib32_libmsvcrt_a-_sopen_s.Tpo -c -o secapi/lib32_libmsvcrt_a-_sopen_s.o `test -f 'secapi/_sopen_s.c' || echo '$(srcdir)/'`secapi/_sopen_s.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) secapi/$(DEPDIR)/lib32_libmsvcrt_a-_sopen_s.Tpo secapi/$(DEPDIR)/lib32_libmsvcrt_a-_sopen_s.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='secapi/_sopen_s.c' object='secapi/lib32_libmsvcrt_a-_sopen_s.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcrt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o secapi/lib32_libmsvcrt_a-_sopen_s.o `test -f 'secapi/_sopen_s.c' || echo '$(srcdir)/'`secapi/_sopen_s.c
+
+secapi/lib32_libmsvcrt_a-_sopen_s.obj: secapi/_sopen_s.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcrt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT secapi/lib32_libmsvcrt_a-_sopen_s.obj -MD -MP -MF secapi/$(DEPDIR)/lib32_libmsvcrt_a-_sopen_s.Tpo -c -o secapi/lib32_libmsvcrt_a-_sopen_s.obj `if test -f 'secapi/_sopen_s.c'; then $(CYGPATH_W) 'secapi/_sopen_s.c'; else $(CYGPATH_W) '$(srcdir)/secapi/_sopen_s.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) secapi/$(DEPDIR)/lib32_libmsvcrt_a-_sopen_s.Tpo secapi/$(DEPDIR)/lib32_libmsvcrt_a-_sopen_s.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='secapi/_sopen_s.c' object='secapi/lib32_libmsvcrt_a-_sopen_s.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcrt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o secapi/lib32_libmsvcrt_a-_sopen_s.obj `if test -f 'secapi/_sopen_s.c'; then $(CYGPATH_W) 'secapi/_sopen_s.c'; else $(CYGPATH_W) '$(srcdir)/secapi/_sopen_s.c'; fi`
+
 secapi/lib32_libmsvcrt_a-_strdate_s.o: secapi/_strdate_s.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcrt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT secapi/lib32_libmsvcrt_a-_strdate_s.o -MD -MP -MF secapi/$(DEPDIR)/lib32_libmsvcrt_a-_strdate_s.Tpo -c -o secapi/lib32_libmsvcrt_a-_strdate_s.o `test -f 'secapi/_strdate_s.c' || echo '$(srcdir)/'`secapi/_strdate_s.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) secapi/$(DEPDIR)/lib32_libmsvcrt_a-_strdate_s.Tpo secapi/$(DEPDIR)/lib32_libmsvcrt_a-_strdate_s.Po
@@ -34170,6 +34199,20 @@ secapi/lib64_libmsvcrt_a-_mktemp_s.obj: secapi/_mktemp_s.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcrt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o secapi/lib64_libmsvcrt_a-_mktemp_s.obj `if test -f 'secapi/_mktemp_s.c'; then $(CYGPATH_W) 'secapi/_mktemp_s.c'; else $(CYGPATH_W) '$(srcdir)/secapi/_mktemp_s.c'; fi`
 
+secapi/lib64_libmsvcrt_a-_sopen_s.o: secapi/_sopen_s.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcrt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT secapi/lib64_libmsvcrt_a-_sopen_s.o -MD -MP -MF secapi/$(DEPDIR)/lib64_libmsvcrt_a-_sopen_s.Tpo -c -o secapi/lib64_libmsvcrt_a-_sopen_s.o `test -f 'secapi/_sopen_s.c' || echo '$(srcdir)/'`secapi/_sopen_s.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) secapi/$(DEPDIR)/lib64_libmsvcrt_a-_sopen_s.Tpo secapi/$(DEPDIR)/lib64_libmsvcrt_a-_sopen_s.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='secapi/_sopen_s.c' object='secapi/lib64_libmsvcrt_a-_sopen_s.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcrt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o secapi/lib64_libmsvcrt_a-_sopen_s.o `test -f 'secapi/_sopen_s.c' || echo '$(srcdir)/'`secapi/_sopen_s.c
+
+secapi/lib64_libmsvcrt_a-_sopen_s.obj: secapi/_sopen_s.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcrt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT secapi/lib64_libmsvcrt_a-_sopen_s.obj -MD -MP -MF secapi/$(DEPDIR)/lib64_libmsvcrt_a-_sopen_s.Tpo -c -o secapi/lib64_libmsvcrt_a-_sopen_s.obj `if test -f 'secapi/_sopen_s.c'; then $(CYGPATH_W) 'secapi/_sopen_s.c'; else $(CYGPATH_W) '$(srcdir)/secapi/_sopen_s.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) secapi/$(DEPDIR)/lib64_libmsvcrt_a-_sopen_s.Tpo secapi/$(DEPDIR)/lib64_libmsvcrt_a-_sopen_s.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='secapi/_sopen_s.c' object='secapi/lib64_libmsvcrt_a-_sopen_s.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcrt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o secapi/lib64_libmsvcrt_a-_sopen_s.obj `if test -f 'secapi/_sopen_s.c'; then $(CYGPATH_W) 'secapi/_sopen_s.c'; else $(CYGPATH_W) '$(srcdir)/secapi/_sopen_s.c'; fi`
+
 secapi/lib64_libmsvcrt_a-_strdate_s.o: secapi/_strdate_s.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcrt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT secapi/lib64_libmsvcrt_a-_strdate_s.o -MD -MP -MF secapi/$(DEPDIR)/lib64_libmsvcrt_a-_strdate_s.Tpo -c -o secapi/lib64_libmsvcrt_a-_strdate_s.o `test -f 'secapi/_strdate_s.c' || echo '$(srcdir)/'`secapi/_strdate_s.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) secapi/$(DEPDIR)/lib64_libmsvcrt_a-_strdate_s.Tpo secapi/$(DEPDIR)/lib64_libmsvcrt_a-_strdate_s.Po
@@ -43185,6 +43228,20 @@ secapi/libarm32_libmsvcrt_a-_mktemp_s.obj: secapi/_mktemp_s.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='secapi/_mktemp_s.c' object='secapi/libarm32_libmsvcrt_a-_mktemp_s.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o secapi/libarm32_libmsvcrt_a-_mktemp_s.obj `if test -f 'secapi/_mktemp_s.c'; then $(CYGPATH_W) 'secapi/_mktemp_s.c'; else $(CYGPATH_W) '$(srcdir)/secapi/_mktemp_s.c'; fi`
+
+secapi/libarm32_libmsvcrt_a-_sopen_s.o: secapi/_sopen_s.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT secapi/libarm32_libmsvcrt_a-_sopen_s.o -MD -MP -MF secapi/$(DEPDIR)/libarm32_libmsvcrt_a-_sopen_s.Tpo -c -o secapi/libarm32_libmsvcrt_a-_sopen_s.o `test -f 'secapi/_sopen_s.c' || echo '$(srcdir)/'`secapi/_sopen_s.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) secapi/$(DEPDIR)/libarm32_libmsvcrt_a-_sopen_s.Tpo secapi/$(DEPDIR)/libarm32_libmsvcrt_a-_sopen_s.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='secapi/_sopen_s.c' object='secapi/libarm32_libmsvcrt_a-_sopen_s.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o secapi/libarm32_libmsvcrt_a-_sopen_s.o `test -f 'secapi/_sopen_s.c' || echo '$(srcdir)/'`secapi/_sopen_s.c
+
+secapi/libarm32_libmsvcrt_a-_sopen_s.obj: secapi/_sopen_s.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT secapi/libarm32_libmsvcrt_a-_sopen_s.obj -MD -MP -MF secapi/$(DEPDIR)/libarm32_libmsvcrt_a-_sopen_s.Tpo -c -o secapi/libarm32_libmsvcrt_a-_sopen_s.obj `if test -f 'secapi/_sopen_s.c'; then $(CYGPATH_W) 'secapi/_sopen_s.c'; else $(CYGPATH_W) '$(srcdir)/secapi/_sopen_s.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) secapi/$(DEPDIR)/libarm32_libmsvcrt_a-_sopen_s.Tpo secapi/$(DEPDIR)/libarm32_libmsvcrt_a-_sopen_s.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='secapi/_sopen_s.c' object='secapi/libarm32_libmsvcrt_a-_sopen_s.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o secapi/libarm32_libmsvcrt_a-_sopen_s.obj `if test -f 'secapi/_sopen_s.c'; then $(CYGPATH_W) 'secapi/_sopen_s.c'; else $(CYGPATH_W) '$(srcdir)/secapi/_sopen_s.c'; fi`
 
 secapi/libarm32_libmsvcrt_a-_strdate_s.o: secapi/_strdate_s.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT secapi/libarm32_libmsvcrt_a-_strdate_s.o -MD -MP -MF secapi/$(DEPDIR)/libarm32_libmsvcrt_a-_strdate_s.Tpo -c -o secapi/libarm32_libmsvcrt_a-_strdate_s.o `test -f 'secapi/_strdate_s.c' || echo '$(srcdir)/'`secapi/_strdate_s.c
