@@ -150,7 +150,7 @@ host_triplet = @host@
 @LIB32_TRUE@@W32API_FALSE@	lib32/libmingwex.a \
 @LIB32_TRUE@@W32API_FALSE@	lib32/libmoldname.a \
 @LIB32_TRUE@@W32API_FALSE@	lib32/libmingwthrd.a
-@LIB32_TRUE@@W32API_FALSE@am__append_4 = lib32/msvcrt.def lib32/msvcr80.def lib32/msvcr90.def lib32/msvcr90d.def lib32/msvcr100.def lib32/msvcr110.def
+@LIB32_TRUE@@W32API_FALSE@am__append_4 = lib32/msvcrt.def lib32/msvcr80.def lib32/msvcr90.def lib32/msvcr90d.def lib32/msvcr100.def lib32/msvcr110.def lib32/msvcr120.def lib32/msvcr120d.def
 DIST_COMMON = $(srcdir)/lib32/Makefile.am \
 	$(srcdir)/libarm32/Makefile.am \
 	$(srcdir)/testcases/complex/Makefile.am $(srcdir)/Makefile.in \
@@ -166,7 +166,7 @@ DIST_COMMON = $(srcdir)/lib32/Makefile.am \
 	$(top_srcdir)/build-aux/config.sub \
 	$(top_srcdir)/build-aux/install-sh \
 	$(top_srcdir)/build-aux/missing
-@LIB32_TRUE@@W32API_FALSE@am__append_5 = lib32/libglut.a lib32/libmsvcp60.a lib32/libmsvcr80.a lib32/libmsvcr90.a lib32/libmsvcr90d.a lib32/libmsvcr100.a lib32/libmsvcr110.a lib32/libcrtdll.a
+@LIB32_TRUE@@W32API_FALSE@am__append_5 = lib32/libglut.a lib32/libmsvcp60.a lib32/libmsvcr80.a lib32/libmsvcr90.a lib32/libmsvcr90d.a lib32/libmsvcr100.a lib32/libmsvcr110.a lib32/libmsvcr120.a lib32/libmsvcr120d.a lib32/libcrtdll.a
 @LIB64_TRUE@@W32API_FALSE@am__append_6 = lib64/libmsvcrt.a
 @LIB64_TRUE@@W32API_FALSE@am__append_7 = lib64/libdelayimp.a \
 @LIB64_TRUE@@W32API_FALSE@	lib64/libm.a lib64/libgmon.a \
@@ -175,8 +175,8 @@ DIST_COMMON = $(srcdir)/lib32/Makefile.am \
 @LIB64_TRUE@@W32API_FALSE@	lib64/libmingwex.a \
 @LIB64_TRUE@@W32API_FALSE@	lib64/libmoldname.a \
 @LIB64_TRUE@@W32API_FALSE@	lib64/libmingwthrd.a
-@LIB64_TRUE@@W32API_FALSE@am__append_8 = lib64/msvcrt.def lib64/msvcr80.def lib64/msvcr90.def lib64/msvcr90d.def lib64/msvcr100.def lib64/msvcr110.def
-@LIB64_TRUE@@W32API_FALSE@am__append_9 = lib64/libmsvcp60.a lib64/libmsvcr80.a lib64/libmsvcr90.a lib64/libmsvcr100.a lib64/libmsvcr90d.a lib64/libmsvcr110.a lib64/libcrtdll.a
+@LIB64_TRUE@@W32API_FALSE@am__append_8 = lib64/msvcrt.def lib64/msvcr80.def lib64/msvcr90.def lib64/msvcr90d.def lib64/msvcr100.def lib64/msvcr110.def lib64/msvcr120.def lib64/msvcr120d.def
+@LIB64_TRUE@@W32API_FALSE@am__append_9 = lib64/libmsvcp60.a lib64/libmsvcr80.a lib64/libmsvcr90.a lib64/libmsvcr100.a lib64/libmsvcr90d.a lib64/libmsvcr110.a lib64/libmsvcr120.a lib64/libmsvcr120d.a lib64/libcrtdll.a
 @LIBARM32_TRUE@@W32API_FALSE@am__append_10 = libarm32/libmsvcrt.a
 
 #libarm32_LIBRARIES += libarm32/libgmon.a
@@ -5517,7 +5517,8 @@ winrtlibs = \
 @LIB32_TRUE@	lib32/libd3dcompiler_41.a \
 @LIB32_TRUE@	lib32/libd3dcompiler_42.a \
 @LIB32_TRUE@	lib32/libd3dcompiler_43.a \
-@LIB32_TRUE@	lib32/libd3dcompiler_46.a lib32/libd3dcsx_46.a \
+@LIB32_TRUE@	lib32/libd3dcompiler_46.a \
+@LIB32_TRUE@	lib32/libd3dcompiler_47.a lib32/libd3dcsx_46.a \
 @LIB32_TRUE@	lib32/libd3dcsxd_43.a lib32/libd3dim.a \
 @LIB32_TRUE@	lib32/libd3drm.a lib32/libd3dx10_33.a \
 @LIB32_TRUE@	lib32/libd3dx10_34.a lib32/libd3dx10_35.a \
@@ -6372,7 +6373,7 @@ winrtlibs = \
 @LIB64_TRUE@	lib64/libxinput1_4.a lib64/libxinput9_1_0.a \
 @LIB64_TRUE@	lib64/libxaudio2_8.a lib64/libd3dcompiler_46.a \
 @LIB64_TRUE@	lib64/libd3dcsx_46.a lib64/libd3d11.a \
-@LIB64_TRUE@	lib64/libwinhttp.a \
+@LIB64_TRUE@	lib64/libd3dcompiler_47.a lib64/libwinhttp.a \
 @LIB64_TRUE@	lib64/libapi-ms-win-core-winrt-string-l1-1-0.a \
 @LIB64_TRUE@	lib64/libapi-ms-win-core-winrt-l1-1-0.a \
 @LIB64_TRUE@	$(am__append_9)
