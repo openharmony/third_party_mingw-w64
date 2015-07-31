@@ -4951,10 +4951,12 @@ INSTALL_PROGRAM = @INSTALL_PROGRAM@
 INSTALL_SCRIPT = @INSTALL_SCRIPT@
 INSTALL_STRIP_PROGRAM = @INSTALL_STRIP_PROGRAM@
 LDFLAGS = @LDFLAGS@
-LIB32SUFFIXDIR = @LIB32SUFFIXDIR@
-LIB64SUFFIXDIR = @LIB64SUFFIXDIR@
+LIBARM32SUFFIXDIR = @LIBARM32SUFFIXDIR@
+LIBARM64SUFFIXDIR = @LIBARM64SUFFIXDIR@
 LIBOBJS = @LIBOBJS@
 LIBS = @LIBS@
+LIBX8632SUFFIXDIR = @LIBX8632SUFFIXDIR@
+LIBX8664SUFFIXDIR = @LIBX8664SUFFIXDIR@
 LTLIBOBJS = @LTLIBOBJS@
 MAINT = @MAINT@
 MAKEINFO = @MAKEINFO@
@@ -5392,7 +5394,7 @@ winrtlibs = \
 #########
 # Compiling 32-bit runtime
 #
-@LIB32_TRUE@lib32dir = $(prefix)/@LIB32SUFFIXDIR@
+@LIB32_TRUE@lib32dir = $(prefix)/@LIBX8632SUFFIXDIR@
 @LIB32_TRUE@crt32dir = $(lib32dir)
 @LIBARM32_TRUE@crt32dir = $(libarm32dir)
 @LIB32_TRUE@winrt32dir = $(lib32dir)
@@ -5710,7 +5712,7 @@ winrtlibs = \
 #########################################################################
 # Compiling 64-bit runtime
 # #######################################################################
-@LIB64_TRUE@lib64dir = $(prefix)/@LIB64SUFFIXDIR@
+@LIB64_TRUE@lib64dir = $(prefix)/@LIBX8664SUFFIXDIR@
 @LIB64_TRUE@crt64dir = $(lib64dir)
 @LIB64_TRUE@winrt64dir = $(lib64dir)
 @LIB64_TRUE@dx64dir = $(lib64dir)
