@@ -1156,7 +1156,7 @@ am__lib32_libmsvcrt_a_SOURCES_DIST = misc/invalid_parameter_handler.c \
 	secapi/asctime_s.c secapi/memcpy_s.c secapi/memmove_s.c \
 	secapi/rand_s.c secapi/sprintf_s.c secapi/strerror_s.c \
 	secapi/vsprintf_s.c secapi/wmemcpy_s.c secapi/wmemmove_s.c \
-	misc/lc_locale_func.c lib32/msvcrt.def.in
+	stdio/mingw_lock.c misc/lc_locale_func.c lib32/msvcrt.def.in
 am__objects_23 =  \
 	misc/lib32_libmsvcrt_a-invalid_parameter_handler.$(OBJEXT) \
 	misc/lib32_libmsvcrt_a-output_format.$(OBJEXT) \
@@ -1200,7 +1200,8 @@ am__objects_23 =  \
 	secapi/lib32_libmsvcrt_a-strerror_s.$(OBJEXT) \
 	secapi/lib32_libmsvcrt_a-vsprintf_s.$(OBJEXT) \
 	secapi/lib32_libmsvcrt_a-wmemcpy_s.$(OBJEXT) \
-	secapi/lib32_libmsvcrt_a-wmemmove_s.$(OBJEXT)
+	secapi/lib32_libmsvcrt_a-wmemmove_s.$(OBJEXT) \
+	stdio/lib32_libmsvcrt_a-mingw_lock.$(OBJEXT)
 am__objects_24 = $(am__objects_23) \
 	misc/lib32_libmsvcrt_a-lc_locale_func.$(OBJEXT)
 @LIB32_TRUE@@W32API_FALSE@am_lib32_libmsvcrt_a_OBJECTS =  \
@@ -2323,7 +2324,7 @@ am__lib64_libmsvcrt_a_SOURCES_DIST = misc/invalid_parameter_handler.c \
 	secapi/asctime_s.c secapi/memcpy_s.c secapi/memmove_s.c \
 	secapi/rand_s.c secapi/sprintf_s.c secapi/strerror_s.c \
 	secapi/vsprintf_s.c secapi/wmemcpy_s.c secapi/wmemmove_s.c \
-	lib64/msvcrt.def.in
+	stdio/mingw_lock.c lib64/msvcrt.def.in
 am__objects_59 =  \
 	misc/lib64_libmsvcrt_a-invalid_parameter_handler.$(OBJEXT) \
 	misc/lib64_libmsvcrt_a-output_format.$(OBJEXT) \
@@ -2367,7 +2368,8 @@ am__objects_59 =  \
 	secapi/lib64_libmsvcrt_a-strerror_s.$(OBJEXT) \
 	secapi/lib64_libmsvcrt_a-vsprintf_s.$(OBJEXT) \
 	secapi/lib64_libmsvcrt_a-wmemcpy_s.$(OBJEXT) \
-	secapi/lib64_libmsvcrt_a-wmemmove_s.$(OBJEXT)
+	secapi/lib64_libmsvcrt_a-wmemmove_s.$(OBJEXT) \
+	stdio/lib64_libmsvcrt_a-mingw_lock.$(OBJEXT)
 @LIB64_TRUE@@W32API_FALSE@am_lib64_libmsvcrt_a_OBJECTS =  \
 @LIB64_TRUE@@W32API_FALSE@	$(am__objects_59)
 lib64_libmsvcrt_a_OBJECTS = $(am_lib64_libmsvcrt_a_OBJECTS)
@@ -3423,7 +3425,7 @@ am__libarm32_libmsvcrt_a_SOURCES_DIST =  \
 	secapi/_wstrdate_s.c secapi/asctime_s.c secapi/memcpy_s.c \
 	secapi/memmove_s.c secapi/rand_s.c secapi/sprintf_s.c \
 	secapi/strerror_s.c secapi/vsprintf_s.c secapi/wmemcpy_s.c \
-	secapi/wmemmove_s.c misc/lc_locale_func.c
+	secapi/wmemmove_s.c stdio/mingw_lock.c misc/lc_locale_func.c
 am__objects_91 =  \
 	misc/libarm32_libmsvcrt_a-invalid_parameter_handler.$(OBJEXT) \
 	misc/libarm32_libmsvcrt_a-output_format.$(OBJEXT) \
@@ -3467,7 +3469,8 @@ am__objects_91 =  \
 	secapi/libarm32_libmsvcrt_a-strerror_s.$(OBJEXT) \
 	secapi/libarm32_libmsvcrt_a-vsprintf_s.$(OBJEXT) \
 	secapi/libarm32_libmsvcrt_a-wmemcpy_s.$(OBJEXT) \
-	secapi/libarm32_libmsvcrt_a-wmemmove_s.$(OBJEXT)
+	secapi/libarm32_libmsvcrt_a-wmemmove_s.$(OBJEXT) \
+	stdio/libarm32_libmsvcrt_a-mingw_lock.$(OBJEXT)
 am__objects_92 = $(am__objects_91) \
 	misc/libarm32_libmsvcrt_a-lc_locale_func.$(OBJEXT)
 @LIBARM32_TRUE@@W32API_FALSE@am_libarm32_libmsvcrt_a_OBJECTS =  \
@@ -5190,7 +5193,8 @@ src_msvcrt = \
   secapi/strerror_s.c \
   secapi/vsprintf_s.c \
   secapi/wmemcpy_s.c \
-  secapi/wmemmove_s.c
+  secapi/wmemmove_s.c \
+  stdio/mingw_lock.c
 
 src_msvcrt32 = \
   $(src_msvcrt) \
@@ -9265,6 +9269,8 @@ secapi/lib32_libmsvcrt_a-wmemcpy_s.$(OBJEXT): secapi/$(am__dirstamp) \
 	secapi/$(DEPDIR)/$(am__dirstamp)
 secapi/lib32_libmsvcrt_a-wmemmove_s.$(OBJEXT): secapi/$(am__dirstamp) \
 	secapi/$(DEPDIR)/$(am__dirstamp)
+stdio/lib32_libmsvcrt_a-mingw_lock.$(OBJEXT): stdio/$(am__dirstamp) \
+	stdio/$(DEPDIR)/$(am__dirstamp)
 misc/lib32_libmsvcrt_a-lc_locale_func.$(OBJEXT): misc/$(am__dirstamp) \
 	misc/$(DEPDIR)/$(am__dirstamp)
 
@@ -10906,6 +10912,8 @@ secapi/lib64_libmsvcrt_a-wmemcpy_s.$(OBJEXT): secapi/$(am__dirstamp) \
 	secapi/$(DEPDIR)/$(am__dirstamp)
 secapi/lib64_libmsvcrt_a-wmemmove_s.$(OBJEXT): secapi/$(am__dirstamp) \
 	secapi/$(DEPDIR)/$(am__dirstamp)
+stdio/lib64_libmsvcrt_a-mingw_lock.$(OBJEXT): stdio/$(am__dirstamp) \
+	stdio/$(DEPDIR)/$(am__dirstamp)
 
 lib64/libmsvcrt.a: $(lib64_libmsvcrt_a_OBJECTS) $(lib64_libmsvcrt_a_DEPENDENCIES) $(EXTRA_lib64_libmsvcrt_a_DEPENDENCIES) lib64/$(am__dirstamp)
 	$(AM_V_at)-rm -f lib64/libmsvcrt.a
@@ -12507,6 +12515,8 @@ secapi/libarm32_libmsvcrt_a-wmemcpy_s.$(OBJEXT):  \
 	secapi/$(am__dirstamp) secapi/$(DEPDIR)/$(am__dirstamp)
 secapi/libarm32_libmsvcrt_a-wmemmove_s.$(OBJEXT):  \
 	secapi/$(am__dirstamp) secapi/$(DEPDIR)/$(am__dirstamp)
+stdio/libarm32_libmsvcrt_a-mingw_lock.$(OBJEXT):  \
+	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
 misc/libarm32_libmsvcrt_a-lc_locale_func.$(OBJEXT):  \
 	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 
@@ -15619,6 +15629,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib32_libmingwex_a-vwscanf.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib32_libmingwex_a-vwscanf2.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib32_libmingwex_a-wtoll.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib32_libmsvcrt_a-mingw_lock.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib64_libmingwex_a-_Exit.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib64_libmingwex_a-_findfirst64i32.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib64_libmingwex_a-_findnext64i32.Po@am__quote@
@@ -15700,6 +15711,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib64_libmingwex_a-vwscanf.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib64_libmingwex_a-vwscanf2.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib64_libmingwex_a-wtoll.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib64_libmsvcrt_a-mingw_lock.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/libarm32_libmingwex_a-_Exit.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/libarm32_libmingwex_a-_findfirst64i32.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/libarm32_libmingwex_a-_findnext64i32.Po@am__quote@
@@ -15781,6 +15793,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/libarm32_libmingwex_a-vwscanf.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/libarm32_libmingwex_a-vwscanf2.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/libarm32_libmingwex_a-wtoll.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/libarm32_libmsvcrt_a-mingw_lock.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@testcases/$(DEPDIR)/t_ansi_io.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@testcases/$(DEPDIR)/t_findfirst.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@testcases/$(DEPDIR)/t_float.Po@am__quote@
@@ -25451,6 +25464,20 @@ secapi/lib32_libmsvcrt_a-wmemmove_s.obj: secapi/wmemmove_s.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcrt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o secapi/lib32_libmsvcrt_a-wmemmove_s.obj `if test -f 'secapi/wmemmove_s.c'; then $(CYGPATH_W) 'secapi/wmemmove_s.c'; else $(CYGPATH_W) '$(srcdir)/secapi/wmemmove_s.c'; fi`
 
+stdio/lib32_libmsvcrt_a-mingw_lock.o: stdio/mingw_lock.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcrt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/lib32_libmsvcrt_a-mingw_lock.o -MD -MP -MF stdio/$(DEPDIR)/lib32_libmsvcrt_a-mingw_lock.Tpo -c -o stdio/lib32_libmsvcrt_a-mingw_lock.o `test -f 'stdio/mingw_lock.c' || echo '$(srcdir)/'`stdio/mingw_lock.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) stdio/$(DEPDIR)/lib32_libmsvcrt_a-mingw_lock.Tpo stdio/$(DEPDIR)/lib32_libmsvcrt_a-mingw_lock.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/mingw_lock.c' object='stdio/lib32_libmsvcrt_a-mingw_lock.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcrt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/lib32_libmsvcrt_a-mingw_lock.o `test -f 'stdio/mingw_lock.c' || echo '$(srcdir)/'`stdio/mingw_lock.c
+
+stdio/lib32_libmsvcrt_a-mingw_lock.obj: stdio/mingw_lock.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcrt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/lib32_libmsvcrt_a-mingw_lock.obj -MD -MP -MF stdio/$(DEPDIR)/lib32_libmsvcrt_a-mingw_lock.Tpo -c -o stdio/lib32_libmsvcrt_a-mingw_lock.obj `if test -f 'stdio/mingw_lock.c'; then $(CYGPATH_W) 'stdio/mingw_lock.c'; else $(CYGPATH_W) '$(srcdir)/stdio/mingw_lock.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) stdio/$(DEPDIR)/lib32_libmsvcrt_a-mingw_lock.Tpo stdio/$(DEPDIR)/lib32_libmsvcrt_a-mingw_lock.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/mingw_lock.c' object='stdio/lib32_libmsvcrt_a-mingw_lock.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcrt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/lib32_libmsvcrt_a-mingw_lock.obj `if test -f 'stdio/mingw_lock.c'; then $(CYGPATH_W) 'stdio/mingw_lock.c'; else $(CYGPATH_W) '$(srcdir)/stdio/mingw_lock.c'; fi`
+
 misc/lib32_libmsvcrt_a-lc_locale_func.o: misc/lc_locale_func.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcrt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libmsvcrt_a-lc_locale_func.o -MD -MP -MF misc/$(DEPDIR)/lib32_libmsvcrt_a-lc_locale_func.Tpo -c -o misc/lib32_libmsvcrt_a-lc_locale_func.o `test -f 'misc/lc_locale_func.c' || echo '$(srcdir)/'`misc/lc_locale_func.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libmsvcrt_a-lc_locale_func.Tpo misc/$(DEPDIR)/lib32_libmsvcrt_a-lc_locale_func.Po
@@ -34733,6 +34760,20 @@ secapi/lib64_libmsvcrt_a-wmemmove_s.obj: secapi/wmemmove_s.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcrt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o secapi/lib64_libmsvcrt_a-wmemmove_s.obj `if test -f 'secapi/wmemmove_s.c'; then $(CYGPATH_W) 'secapi/wmemmove_s.c'; else $(CYGPATH_W) '$(srcdir)/secapi/wmemmove_s.c'; fi`
 
+stdio/lib64_libmsvcrt_a-mingw_lock.o: stdio/mingw_lock.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcrt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/lib64_libmsvcrt_a-mingw_lock.o -MD -MP -MF stdio/$(DEPDIR)/lib64_libmsvcrt_a-mingw_lock.Tpo -c -o stdio/lib64_libmsvcrt_a-mingw_lock.o `test -f 'stdio/mingw_lock.c' || echo '$(srcdir)/'`stdio/mingw_lock.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) stdio/$(DEPDIR)/lib64_libmsvcrt_a-mingw_lock.Tpo stdio/$(DEPDIR)/lib64_libmsvcrt_a-mingw_lock.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/mingw_lock.c' object='stdio/lib64_libmsvcrt_a-mingw_lock.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcrt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/lib64_libmsvcrt_a-mingw_lock.o `test -f 'stdio/mingw_lock.c' || echo '$(srcdir)/'`stdio/mingw_lock.c
+
+stdio/lib64_libmsvcrt_a-mingw_lock.obj: stdio/mingw_lock.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcrt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/lib64_libmsvcrt_a-mingw_lock.obj -MD -MP -MF stdio/$(DEPDIR)/lib64_libmsvcrt_a-mingw_lock.Tpo -c -o stdio/lib64_libmsvcrt_a-mingw_lock.obj `if test -f 'stdio/mingw_lock.c'; then $(CYGPATH_W) 'stdio/mingw_lock.c'; else $(CYGPATH_W) '$(srcdir)/stdio/mingw_lock.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) stdio/$(DEPDIR)/lib64_libmsvcrt_a-mingw_lock.Tpo stdio/$(DEPDIR)/lib64_libmsvcrt_a-mingw_lock.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/mingw_lock.c' object='stdio/lib64_libmsvcrt_a-mingw_lock.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcrt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/lib64_libmsvcrt_a-mingw_lock.obj `if test -f 'stdio/mingw_lock.c'; then $(CYGPATH_W) 'stdio/mingw_lock.c'; else $(CYGPATH_W) '$(srcdir)/stdio/mingw_lock.c'; fi`
+
 libsrc/lib64_libportabledeviceguids_a-portabledeviceguids.o: libsrc/portabledeviceguids.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libportabledeviceguids_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libsrc/lib64_libportabledeviceguids_a-portabledeviceguids.o -MD -MP -MF libsrc/$(DEPDIR)/lib64_libportabledeviceguids_a-portabledeviceguids.Tpo -c -o libsrc/lib64_libportabledeviceguids_a-portabledeviceguids.o `test -f 'libsrc/portabledeviceguids.c' || echo '$(srcdir)/'`libsrc/portabledeviceguids.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libsrc/$(DEPDIR)/lib64_libportabledeviceguids_a-portabledeviceguids.Tpo libsrc/$(DEPDIR)/lib64_libportabledeviceguids_a-portabledeviceguids.Po
@@ -43776,6 +43817,20 @@ secapi/libarm32_libmsvcrt_a-wmemmove_s.obj: secapi/wmemmove_s.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='secapi/wmemmove_s.c' object='secapi/libarm32_libmsvcrt_a-wmemmove_s.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o secapi/libarm32_libmsvcrt_a-wmemmove_s.obj `if test -f 'secapi/wmemmove_s.c'; then $(CYGPATH_W) 'secapi/wmemmove_s.c'; else $(CYGPATH_W) '$(srcdir)/secapi/wmemmove_s.c'; fi`
+
+stdio/libarm32_libmsvcrt_a-mingw_lock.o: stdio/mingw_lock.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/libarm32_libmsvcrt_a-mingw_lock.o -MD -MP -MF stdio/$(DEPDIR)/libarm32_libmsvcrt_a-mingw_lock.Tpo -c -o stdio/libarm32_libmsvcrt_a-mingw_lock.o `test -f 'stdio/mingw_lock.c' || echo '$(srcdir)/'`stdio/mingw_lock.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) stdio/$(DEPDIR)/libarm32_libmsvcrt_a-mingw_lock.Tpo stdio/$(DEPDIR)/libarm32_libmsvcrt_a-mingw_lock.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/mingw_lock.c' object='stdio/libarm32_libmsvcrt_a-mingw_lock.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/libarm32_libmsvcrt_a-mingw_lock.o `test -f 'stdio/mingw_lock.c' || echo '$(srcdir)/'`stdio/mingw_lock.c
+
+stdio/libarm32_libmsvcrt_a-mingw_lock.obj: stdio/mingw_lock.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/libarm32_libmsvcrt_a-mingw_lock.obj -MD -MP -MF stdio/$(DEPDIR)/libarm32_libmsvcrt_a-mingw_lock.Tpo -c -o stdio/libarm32_libmsvcrt_a-mingw_lock.obj `if test -f 'stdio/mingw_lock.c'; then $(CYGPATH_W) 'stdio/mingw_lock.c'; else $(CYGPATH_W) '$(srcdir)/stdio/mingw_lock.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) stdio/$(DEPDIR)/libarm32_libmsvcrt_a-mingw_lock.Tpo stdio/$(DEPDIR)/libarm32_libmsvcrt_a-mingw_lock.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/mingw_lock.c' object='stdio/libarm32_libmsvcrt_a-mingw_lock.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/libarm32_libmsvcrt_a-mingw_lock.obj `if test -f 'stdio/mingw_lock.c'; then $(CYGPATH_W) 'stdio/mingw_lock.c'; else $(CYGPATH_W) '$(srcdir)/stdio/mingw_lock.c'; fi`
 
 misc/libarm32_libmsvcrt_a-lc_locale_func.o: misc/lc_locale_func.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/libarm32_libmsvcrt_a-lc_locale_func.o -MD -MP -MF misc/$(DEPDIR)/libarm32_libmsvcrt_a-lc_locale_func.Tpo -c -o misc/libarm32_libmsvcrt_a-lc_locale_func.o `test -f 'misc/lc_locale_func.c' || echo '$(srcdir)/'`misc/lc_locale_func.c
