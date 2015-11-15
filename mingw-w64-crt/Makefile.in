@@ -49027,7 +49027,7 @@ lib64/DFP_src_%.dfp.obj: math/DFP/mpdecimal/libmpdec/%.c
 # ##########
 
 %.def: %.def.in
-	$(CPP) -x c $< -Wp,-w -I$(top_srcdir)/def-include | $(SED) 's/^#/;/' >$@
+	$(MKDIR_P) $(@D) && $(CPP) -x c $< -Wp,-w -I$(top_srcdir)/def-include | $(SED) 's/^#/;/' > $@
 
 dist-hook:
 	find $(top_distdir) -name ".svn" -delete
