@@ -1139,27 +1139,27 @@ am__objects_22 = lib32_libmoldname_a-_libm_dummy.$(OBJEXT)
 @LIB32_TRUE@@W32API_FALSE@	$(am__objects_22)
 lib32_libmoldname_a_OBJECTS = $(am_lib32_libmoldname_a_OBJECTS)
 lib32_libmsvcrt_a_LIBADD =
-am__lib32_libmsvcrt_a_SOURCES_DIST = misc/invalid_parameter_handler.c \
-	misc/output_format.c misc/purecall.c secapi/_access_s.c \
-	secapi/_cgets_s.c secapi/_cgetws_s.c secapi/_chsize_s.c \
-	secapi/_controlfp_s.c secapi/_cprintf_s.c \
-	secapi/_cprintf_s_l.c secapi/_ctime32_s.c secapi/_ctime64_s.c \
-	secapi/_cwprintf_s.c secapi/_cwprintf_s_l.c \
-	secapi/_gmtime32_s.c secapi/_gmtime64_s.c \
-	secapi/_localtime32_s.c secapi/_localtime64_s.c \
-	secapi/_mktemp_s.c secapi/_sopen_s.c secapi/_strdate_s.c \
-	secapi/_strtime_s.c secapi/_umask_s.c secapi/_vcprintf_s.c \
-	secapi/_vcprintf_s_l.c secapi/_vcwprintf_s.c \
-	secapi/_vcwprintf_s_l.c secapi/_vscprintf_p.c \
-	secapi/_vscwprintf_p.c secapi/_vswprintf_p.c \
-	secapi/_waccess_s.c secapi/_wasctime_s.c secapi/_wctime32_s.c \
-	secapi/_wctime64_s.c secapi/_wstrtime_s.c secapi/_wmktemp_s.c \
-	secapi/_wstrdate_s.c secapi/asctime_s.c secapi/memcpy_s.c \
-	secapi/memmove_s.c secapi/rand_s.c secapi/sprintf_s.c \
-	secapi/strerror_s.c secapi/vsprintf_s.c secapi/wmemcpy_s.c \
-	secapi/wmemmove_s.c stdio/mingw_lock.c misc/lc_locale_func.c \
-	lib32/msvcrt.def.in
-am__objects_23 =  \
+am__lib32_libmsvcrt_a_SOURCES_DIST = misc/_configthreadlocale.c \
+	misc/invalid_parameter_handler.c misc/output_format.c \
+	misc/purecall.c secapi/_access_s.c secapi/_cgets_s.c \
+	secapi/_cgetws_s.c secapi/_chsize_s.c secapi/_controlfp_s.c \
+	secapi/_cprintf_s.c secapi/_cprintf_s_l.c secapi/_ctime32_s.c \
+	secapi/_ctime64_s.c secapi/_cwprintf_s.c \
+	secapi/_cwprintf_s_l.c secapi/_gmtime32_s.c \
+	secapi/_gmtime64_s.c secapi/_localtime32_s.c \
+	secapi/_localtime64_s.c secapi/_mktemp_s.c secapi/_sopen_s.c \
+	secapi/_strdate_s.c secapi/_strtime_s.c secapi/_umask_s.c \
+	secapi/_vcprintf_s.c secapi/_vcprintf_s_l.c \
+	secapi/_vcwprintf_s.c secapi/_vcwprintf_s_l.c \
+	secapi/_vscprintf_p.c secapi/_vscwprintf_p.c \
+	secapi/_vswprintf_p.c secapi/_waccess_s.c secapi/_wasctime_s.c \
+	secapi/_wctime32_s.c secapi/_wctime64_s.c secapi/_wstrtime_s.c \
+	secapi/_wmktemp_s.c secapi/_wstrdate_s.c secapi/asctime_s.c \
+	secapi/memcpy_s.c secapi/memmove_s.c secapi/rand_s.c \
+	secapi/sprintf_s.c secapi/strerror_s.c secapi/vsprintf_s.c \
+	secapi/wmemcpy_s.c secapi/wmemmove_s.c stdio/mingw_lock.c \
+	misc/lc_locale_func.c lib32/msvcrt.def.in
+am__objects_23 = misc/lib32_libmsvcrt_a-_configthreadlocale.$(OBJEXT) \
 	misc/lib32_libmsvcrt_a-invalid_parameter_handler.$(OBJEXT) \
 	misc/lib32_libmsvcrt_a-output_format.$(OBJEXT) \
 	misc/lib32_libmsvcrt_a-purecall.$(OBJEXT) \
@@ -2312,26 +2312,27 @@ am__objects_58 = lib64_libmoldname_a-_libm_dummy.$(OBJEXT)
 @LIB64_TRUE@@W32API_FALSE@	$(am__objects_58)
 lib64_libmoldname_a_OBJECTS = $(am_lib64_libmoldname_a_OBJECTS)
 lib64_libmsvcrt_a_LIBADD =
-am__lib64_libmsvcrt_a_SOURCES_DIST = misc/invalid_parameter_handler.c \
-	misc/output_format.c misc/purecall.c secapi/_access_s.c \
-	secapi/_cgets_s.c secapi/_cgetws_s.c secapi/_chsize_s.c \
-	secapi/_controlfp_s.c secapi/_cprintf_s.c \
-	secapi/_cprintf_s_l.c secapi/_ctime32_s.c secapi/_ctime64_s.c \
-	secapi/_cwprintf_s.c secapi/_cwprintf_s_l.c \
-	secapi/_gmtime32_s.c secapi/_gmtime64_s.c \
-	secapi/_localtime32_s.c secapi/_localtime64_s.c \
-	secapi/_mktemp_s.c secapi/_sopen_s.c secapi/_strdate_s.c \
-	secapi/_strtime_s.c secapi/_umask_s.c secapi/_vcprintf_s.c \
-	secapi/_vcprintf_s_l.c secapi/_vcwprintf_s.c \
-	secapi/_vcwprintf_s_l.c secapi/_vscprintf_p.c \
-	secapi/_vscwprintf_p.c secapi/_vswprintf_p.c \
-	secapi/_waccess_s.c secapi/_wasctime_s.c secapi/_wctime32_s.c \
-	secapi/_wctime64_s.c secapi/_wstrtime_s.c secapi/_wmktemp_s.c \
-	secapi/_wstrdate_s.c secapi/asctime_s.c secapi/memcpy_s.c \
-	secapi/memmove_s.c secapi/rand_s.c secapi/sprintf_s.c \
-	secapi/strerror_s.c secapi/vsprintf_s.c secapi/wmemcpy_s.c \
-	secapi/wmemmove_s.c stdio/mingw_lock.c lib64/msvcrt.def.in
-am__objects_59 =  \
+am__lib64_libmsvcrt_a_SOURCES_DIST = misc/_configthreadlocale.c \
+	misc/invalid_parameter_handler.c misc/output_format.c \
+	misc/purecall.c secapi/_access_s.c secapi/_cgets_s.c \
+	secapi/_cgetws_s.c secapi/_chsize_s.c secapi/_controlfp_s.c \
+	secapi/_cprintf_s.c secapi/_cprintf_s_l.c secapi/_ctime32_s.c \
+	secapi/_ctime64_s.c secapi/_cwprintf_s.c \
+	secapi/_cwprintf_s_l.c secapi/_gmtime32_s.c \
+	secapi/_gmtime64_s.c secapi/_localtime32_s.c \
+	secapi/_localtime64_s.c secapi/_mktemp_s.c secapi/_sopen_s.c \
+	secapi/_strdate_s.c secapi/_strtime_s.c secapi/_umask_s.c \
+	secapi/_vcprintf_s.c secapi/_vcprintf_s_l.c \
+	secapi/_vcwprintf_s.c secapi/_vcwprintf_s_l.c \
+	secapi/_vscprintf_p.c secapi/_vscwprintf_p.c \
+	secapi/_vswprintf_p.c secapi/_waccess_s.c secapi/_wasctime_s.c \
+	secapi/_wctime32_s.c secapi/_wctime64_s.c secapi/_wstrtime_s.c \
+	secapi/_wmktemp_s.c secapi/_wstrdate_s.c secapi/asctime_s.c \
+	secapi/memcpy_s.c secapi/memmove_s.c secapi/rand_s.c \
+	secapi/sprintf_s.c secapi/strerror_s.c secapi/vsprintf_s.c \
+	secapi/wmemcpy_s.c secapi/wmemmove_s.c stdio/mingw_lock.c \
+	lib64/msvcrt.def.in
+am__objects_59 = misc/lib64_libmsvcrt_a-_configthreadlocale.$(OBJEXT) \
 	misc/lib64_libmsvcrt_a-invalid_parameter_handler.$(OBJEXT) \
 	misc/lib64_libmsvcrt_a-output_format.$(OBJEXT) \
 	misc/lib64_libmsvcrt_a-purecall.$(OBJEXT) \
@@ -3417,7 +3418,7 @@ am__objects_90 = libarm32_libmoldname_a-_libm_dummy.$(OBJEXT)
 @LIBARM32_TRUE@@W32API_FALSE@	$(am__objects_90)
 libarm32_libmoldname_a_OBJECTS = $(am_libarm32_libmoldname_a_OBJECTS)
 libarm32_libmsvcrt_a_LIBADD =
-am__libarm32_libmsvcrt_a_SOURCES_DIST =  \
+am__libarm32_libmsvcrt_a_SOURCES_DIST = misc/_configthreadlocale.c \
 	misc/invalid_parameter_handler.c misc/output_format.c \
 	misc/purecall.c secapi/_access_s.c secapi/_cgets_s.c \
 	secapi/_cgetws_s.c secapi/_chsize_s.c secapi/_controlfp_s.c \
@@ -3438,6 +3439,7 @@ am__libarm32_libmsvcrt_a_SOURCES_DIST =  \
 	secapi/wmemcpy_s.c secapi/wmemmove_s.c stdio/mingw_lock.c \
 	misc/lc_locale_func.c
 am__objects_91 =  \
+	misc/libarm32_libmsvcrt_a-_configthreadlocale.$(OBJEXT) \
 	misc/libarm32_libmsvcrt_a-invalid_parameter_handler.$(OBJEXT) \
 	misc/libarm32_libmsvcrt_a-output_format.$(OBJEXT) \
 	misc/libarm32_libmsvcrt_a-purecall.$(OBJEXT) \
@@ -5174,6 +5176,7 @@ src_libws2_32 = libsrc/ws2_32.c \
   libsrc/wspiapi/WspiapiFreeAddrInfo.c
 
 src_msvcrt = \
+  misc/_configthreadlocale.c \
   misc/invalid_parameter_handler.c \
   misc/output_format.c \
   misc/purecall.c \
@@ -9203,6 +9206,8 @@ lib32/libmoldname.a: $(lib32_libmoldname_a_OBJECTS) $(lib32_libmoldname_a_DEPEND
 	$(AM_V_at)-rm -f lib32/libmoldname.a
 	$(AM_V_AR)$(lib32_libmoldname_a_AR) lib32/libmoldname.a $(lib32_libmoldname_a_OBJECTS) $(lib32_libmoldname_a_LIBADD)
 	$(AM_V_at)$(RANLIB) lib32/libmoldname.a
+misc/lib32_libmsvcrt_a-_configthreadlocale.$(OBJEXT):  \
+	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 misc/lib32_libmsvcrt_a-invalid_parameter_handler.$(OBJEXT):  \
 	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 misc/lib32_libmsvcrt_a-output_format.$(OBJEXT): misc/$(am__dirstamp) \
@@ -10858,6 +10863,8 @@ lib64/libmoldname.a: $(lib64_libmoldname_a_OBJECTS) $(lib64_libmoldname_a_DEPEND
 	$(AM_V_at)-rm -f lib64/libmoldname.a
 	$(AM_V_AR)$(lib64_libmoldname_a_AR) lib64/libmoldname.a $(lib64_libmoldname_a_OBJECTS) $(lib64_libmoldname_a_LIBADD)
 	$(AM_V_at)$(RANLIB) lib64/libmoldname.a
+misc/lib64_libmsvcrt_a-_configthreadlocale.$(OBJEXT):  \
+	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 misc/lib64_libmsvcrt_a-invalid_parameter_handler.$(OBJEXT):  \
 	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 misc/lib64_libmsvcrt_a-output_format.$(OBJEXT): misc/$(am__dirstamp) \
@@ -12467,6 +12474,8 @@ libarm32/libmoldname.a: $(libarm32_libmoldname_a_OBJECTS) $(libarm32_libmoldname
 	$(AM_V_at)-rm -f libarm32/libmoldname.a
 	$(AM_V_AR)$(libarm32_libmoldname_a_AR) libarm32/libmoldname.a $(libarm32_libmoldname_a_OBJECTS) $(libarm32_libmoldname_a_LIBADD)
 	$(AM_V_at)$(RANLIB) libarm32/libmoldname.a
+misc/libarm32_libmsvcrt_a-_configthreadlocale.$(OBJEXT):  \
+	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 misc/libarm32_libmsvcrt_a-invalid_parameter_handler.$(OBJEXT):  \
 	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 misc/libarm32_libmsvcrt_a-output_format.$(OBJEXT):  \
@@ -15275,6 +15284,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmingwex_a-wmemmove.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmingwex_a-wmempcpy.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmingwex_a-wmemset.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmsvcrt_a-_configthreadlocale.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmsvcrt_a-invalid_parameter_handler.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmsvcrt_a-lc_locale_func.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmsvcrt_a-output_format.Po@am__quote@
@@ -15368,6 +15378,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmingwex_a-wmemmove.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmingwex_a-wmempcpy.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmingwex_a-wmemset.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmsvcrt_a-_configthreadlocale.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmsvcrt_a-invalid_parameter_handler.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmsvcrt_a-output_format.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmsvcrt_a-purecall.Po@am__quote@
@@ -15460,6 +15471,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm32_libmingwex_a-wmemmove.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm32_libmingwex_a-wmempcpy.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm32_libmingwex_a-wmemset.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm32_libmsvcrt_a-_configthreadlocale.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm32_libmsvcrt_a-invalid_parameter_handler.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm32_libmsvcrt_a-lc_locale_func.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm32_libmsvcrt_a-output_format.Po@am__quote@
@@ -24915,6 +24927,20 @@ lib32_libmoldname_a-_libm_dummy.obj: _libm_dummy.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmoldname_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o lib32_libmoldname_a-_libm_dummy.obj `if test -f '_libm_dummy.c'; then $(CYGPATH_W) '_libm_dummy.c'; else $(CYGPATH_W) '$(srcdir)/_libm_dummy.c'; fi`
 
+misc/lib32_libmsvcrt_a-_configthreadlocale.o: misc/_configthreadlocale.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcrt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libmsvcrt_a-_configthreadlocale.o -MD -MP -MF misc/$(DEPDIR)/lib32_libmsvcrt_a-_configthreadlocale.Tpo -c -o misc/lib32_libmsvcrt_a-_configthreadlocale.o `test -f 'misc/_configthreadlocale.c' || echo '$(srcdir)/'`misc/_configthreadlocale.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libmsvcrt_a-_configthreadlocale.Tpo misc/$(DEPDIR)/lib32_libmsvcrt_a-_configthreadlocale.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/_configthreadlocale.c' object='misc/lib32_libmsvcrt_a-_configthreadlocale.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcrt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib32_libmsvcrt_a-_configthreadlocale.o `test -f 'misc/_configthreadlocale.c' || echo '$(srcdir)/'`misc/_configthreadlocale.c
+
+misc/lib32_libmsvcrt_a-_configthreadlocale.obj: misc/_configthreadlocale.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcrt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libmsvcrt_a-_configthreadlocale.obj -MD -MP -MF misc/$(DEPDIR)/lib32_libmsvcrt_a-_configthreadlocale.Tpo -c -o misc/lib32_libmsvcrt_a-_configthreadlocale.obj `if test -f 'misc/_configthreadlocale.c'; then $(CYGPATH_W) 'misc/_configthreadlocale.c'; else $(CYGPATH_W) '$(srcdir)/misc/_configthreadlocale.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libmsvcrt_a-_configthreadlocale.Tpo misc/$(DEPDIR)/lib32_libmsvcrt_a-_configthreadlocale.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/_configthreadlocale.c' object='misc/lib32_libmsvcrt_a-_configthreadlocale.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcrt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib32_libmsvcrt_a-_configthreadlocale.obj `if test -f 'misc/_configthreadlocale.c'; then $(CYGPATH_W) 'misc/_configthreadlocale.c'; else $(CYGPATH_W) '$(srcdir)/misc/_configthreadlocale.c'; fi`
+
 misc/lib32_libmsvcrt_a-invalid_parameter_handler.o: misc/invalid_parameter_handler.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcrt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libmsvcrt_a-invalid_parameter_handler.o -MD -MP -MF misc/$(DEPDIR)/lib32_libmsvcrt_a-invalid_parameter_handler.Tpo -c -o misc/lib32_libmsvcrt_a-invalid_parameter_handler.o `test -f 'misc/invalid_parameter_handler.c' || echo '$(srcdir)/'`misc/invalid_parameter_handler.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libmsvcrt_a-invalid_parameter_handler.Tpo misc/$(DEPDIR)/lib32_libmsvcrt_a-invalid_parameter_handler.Po
@@ -34253,6 +34279,20 @@ lib64_libmoldname_a-_libm_dummy.obj: _libm_dummy.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmoldname_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o lib64_libmoldname_a-_libm_dummy.obj `if test -f '_libm_dummy.c'; then $(CYGPATH_W) '_libm_dummy.c'; else $(CYGPATH_W) '$(srcdir)/_libm_dummy.c'; fi`
 
+misc/lib64_libmsvcrt_a-_configthreadlocale.o: misc/_configthreadlocale.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcrt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib64_libmsvcrt_a-_configthreadlocale.o -MD -MP -MF misc/$(DEPDIR)/lib64_libmsvcrt_a-_configthreadlocale.Tpo -c -o misc/lib64_libmsvcrt_a-_configthreadlocale.o `test -f 'misc/_configthreadlocale.c' || echo '$(srcdir)/'`misc/_configthreadlocale.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib64_libmsvcrt_a-_configthreadlocale.Tpo misc/$(DEPDIR)/lib64_libmsvcrt_a-_configthreadlocale.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/_configthreadlocale.c' object='misc/lib64_libmsvcrt_a-_configthreadlocale.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcrt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib64_libmsvcrt_a-_configthreadlocale.o `test -f 'misc/_configthreadlocale.c' || echo '$(srcdir)/'`misc/_configthreadlocale.c
+
+misc/lib64_libmsvcrt_a-_configthreadlocale.obj: misc/_configthreadlocale.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcrt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib64_libmsvcrt_a-_configthreadlocale.obj -MD -MP -MF misc/$(DEPDIR)/lib64_libmsvcrt_a-_configthreadlocale.Tpo -c -o misc/lib64_libmsvcrt_a-_configthreadlocale.obj `if test -f 'misc/_configthreadlocale.c'; then $(CYGPATH_W) 'misc/_configthreadlocale.c'; else $(CYGPATH_W) '$(srcdir)/misc/_configthreadlocale.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib64_libmsvcrt_a-_configthreadlocale.Tpo misc/$(DEPDIR)/lib64_libmsvcrt_a-_configthreadlocale.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/_configthreadlocale.c' object='misc/lib64_libmsvcrt_a-_configthreadlocale.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcrt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib64_libmsvcrt_a-_configthreadlocale.obj `if test -f 'misc/_configthreadlocale.c'; then $(CYGPATH_W) 'misc/_configthreadlocale.c'; else $(CYGPATH_W) '$(srcdir)/misc/_configthreadlocale.c'; fi`
+
 misc/lib64_libmsvcrt_a-invalid_parameter_handler.o: misc/invalid_parameter_handler.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcrt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib64_libmsvcrt_a-invalid_parameter_handler.o -MD -MP -MF misc/$(DEPDIR)/lib64_libmsvcrt_a-invalid_parameter_handler.Tpo -c -o misc/lib64_libmsvcrt_a-invalid_parameter_handler.o `test -f 'misc/invalid_parameter_handler.c' || echo '$(srcdir)/'`misc/invalid_parameter_handler.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib64_libmsvcrt_a-invalid_parameter_handler.Tpo misc/$(DEPDIR)/lib64_libmsvcrt_a-invalid_parameter_handler.Po
@@ -43352,6 +43392,20 @@ libarm32_libmoldname_a-_libm_dummy.obj: _libm_dummy.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='_libm_dummy.c' object='libarm32_libmoldname_a-_libm_dummy.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmoldname_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarm32_libmoldname_a-_libm_dummy.obj `if test -f '_libm_dummy.c'; then $(CYGPATH_W) '_libm_dummy.c'; else $(CYGPATH_W) '$(srcdir)/_libm_dummy.c'; fi`
+
+misc/libarm32_libmsvcrt_a-_configthreadlocale.o: misc/_configthreadlocale.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/libarm32_libmsvcrt_a-_configthreadlocale.o -MD -MP -MF misc/$(DEPDIR)/libarm32_libmsvcrt_a-_configthreadlocale.Tpo -c -o misc/libarm32_libmsvcrt_a-_configthreadlocale.o `test -f 'misc/_configthreadlocale.c' || echo '$(srcdir)/'`misc/_configthreadlocale.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/libarm32_libmsvcrt_a-_configthreadlocale.Tpo misc/$(DEPDIR)/libarm32_libmsvcrt_a-_configthreadlocale.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/_configthreadlocale.c' object='misc/libarm32_libmsvcrt_a-_configthreadlocale.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/libarm32_libmsvcrt_a-_configthreadlocale.o `test -f 'misc/_configthreadlocale.c' || echo '$(srcdir)/'`misc/_configthreadlocale.c
+
+misc/libarm32_libmsvcrt_a-_configthreadlocale.obj: misc/_configthreadlocale.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/libarm32_libmsvcrt_a-_configthreadlocale.obj -MD -MP -MF misc/$(DEPDIR)/libarm32_libmsvcrt_a-_configthreadlocale.Tpo -c -o misc/libarm32_libmsvcrt_a-_configthreadlocale.obj `if test -f 'misc/_configthreadlocale.c'; then $(CYGPATH_W) 'misc/_configthreadlocale.c'; else $(CYGPATH_W) '$(srcdir)/misc/_configthreadlocale.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/libarm32_libmsvcrt_a-_configthreadlocale.Tpo misc/$(DEPDIR)/libarm32_libmsvcrt_a-_configthreadlocale.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/_configthreadlocale.c' object='misc/libarm32_libmsvcrt_a-_configthreadlocale.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/libarm32_libmsvcrt_a-_configthreadlocale.obj `if test -f 'misc/_configthreadlocale.c'; then $(CYGPATH_W) 'misc/_configthreadlocale.c'; else $(CYGPATH_W) '$(srcdir)/misc/_configthreadlocale.c'; fi`
 
 misc/libarm32_libmsvcrt_a-invalid_parameter_handler.o: misc/invalid_parameter_handler.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/libarm32_libmsvcrt_a-invalid_parameter_handler.o -MD -MP -MF misc/$(DEPDIR)/libarm32_libmsvcrt_a-invalid_parameter_handler.Tpo -c -o misc/libarm32_libmsvcrt_a-invalid_parameter_handler.o `test -f 'misc/invalid_parameter_handler.c' || echo '$(srcdir)/'`misc/invalid_parameter_handler.c
