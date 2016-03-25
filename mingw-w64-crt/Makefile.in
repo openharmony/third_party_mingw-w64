@@ -558,46 +558,48 @@ am__lib32_libmingwex_a_SOURCES_DIST = crt/dllentry.c crt/dllmain.c \
 	complex/ccosf.c complex/ccosl.c complex/cexp.c complex/cexpf.c \
 	complex/cexpl.c complex/cimag.c complex/cimagf.c \
 	complex/cimagl.c complex/clog.c complex/clogf.c \
-	complex/clogl.c complex/conj.c complex/conjf.c complex/conjl.c \
-	complex/cpow.c complex/cpowf.c complex/cpowl.c complex/cproj.c \
-	complex/cprojf.c complex/cprojl.c complex/creal.c \
-	complex/crealf.c complex/creall.c complex/csin.c \
-	complex/csinf.c complex/csinl.c complex/csqrt.c \
+	complex/clogl.c complex/clog10.c complex/clog10f.c \
+	complex/clog10l.c complex/conj.c complex/conjf.c \
+	complex/conjl.c complex/cpow.c complex/cpowf.c complex/cpowl.c \
+	complex/cproj.c complex/cprojf.c complex/cprojl.c \
+	complex/creal.c complex/crealf.c complex/creall.c \
+	complex/csin.c complex/csinf.c complex/csinl.c complex/csqrt.c \
 	complex/csqrtf.c complex/csqrtl.c complex/ctan.c \
 	complex/ctanf.c complex/ctanl.c complex/cabs.def.h \
 	complex/cacos.def.h complex/cacosh.def.h complex/carg.def.h \
 	complex/casin.def.h complex/casinh.def.h complex/catan.def.h \
 	complex/catanh.def.h complex/ccos.def.h complex/ccosh.def.h \
 	complex/cexp.def.h complex/cimag.def.h complex/clog.def.h \
-	complex/complex_internal.h complex/conj.def.h \
-	complex/cpow.def.h complex/cproj.def.h complex/creal.def.h \
-	complex/csin.def.h complex/csinh.def.h complex/csqrt.def.h \
-	complex/ctan.def.h complex/ctanh.def.h gdtoa/gd_arith.h \
-	gdtoa/gd_qnan.h gdtoa/gdtoa.h gdtoa/gdtoaimp.h \
-	gdtoa/arithchk.c gdtoa/dmisc.c gdtoa/dtoa.c gdtoa/g_dfmt.c \
-	gdtoa/gdtoa.c gdtoa/gethex.c gdtoa/g_ffmt.c gdtoa/g__fmt.c \
-	gdtoa/gmisc.c gdtoa/g_xfmt.c gdtoa/hd_init.c gdtoa/hexnan.c \
-	gdtoa/misc.c gdtoa/qnan.c gdtoa/smisc.c gdtoa/strtodg.c \
-	gdtoa/strtodnrp.c gdtoa/strtof.c gdtoa/strtopx.c gdtoa/sum.c \
-	gdtoa/ulp.c math/_chgsignl.S math/ceil.S math/ceilf.S \
-	math/ceill.S math/copysignl.S math/floor.S math/floorf.S \
-	math/floorl.S math/fma.S math/fmaf.S math/nearbyint.S \
-	math/nearbyintf.S math/nearbyintl.S math/trunc.S math/truncf.S \
-	math/cbrt.c math/cbrtf.c math/cbrtl.c math/cephes_emath.c \
-	math/copysign.c math/copysignf.c math/coshf.c math/coshl.c \
-	math/erfl.c math/expf.c math/fabs.c math/fabsf.c math/fabsl.c \
-	math/fdim.c math/fdimf.c math/fdiml.c math/fmal.c math/fmax.c \
-	math/fmaxf.c math/fmaxl.c math/fmin.c math/fminf.c \
-	math/fminl.c math/fp_consts.c math/fp_constsf.c \
-	math/fp_constsl.c math/fpclassify.c math/fpclassifyf.c \
-	math/fpclassifyl.c math/frexpf.c math/hypotf.c math/hypot.c \
-	math/hypotl.c math/isnan.c math/isnanf.c math/isnanl.c \
-	math/ldexpf.c math/lgamma.c math/lgammaf.c math/lgammal.c \
-	math/llrint.c math/signgam.c math/llrintf.c math/llrintl.c \
-	math/llround.c math/llroundf.c math/llroundl.c math/log10f.c \
-	math/logf.c math/lrint.c math/lrintf.c math/lrintl.c \
-	math/lround.c math/lroundf.c math/lroundl.c math/modf.c \
-	math/modff.c math/modfl.c math/nextafterf.c math/nextafterl.c \
+	complex/clog10.def.h complex/complex_internal.h \
+	complex/conj.def.h complex/cpow.def.h complex/cproj.def.h \
+	complex/creal.def.h complex/csin.def.h complex/csinh.def.h \
+	complex/csqrt.def.h complex/ctan.def.h complex/ctanh.def.h \
+	gdtoa/gd_arith.h gdtoa/gd_qnan.h gdtoa/gdtoa.h \
+	gdtoa/gdtoaimp.h gdtoa/arithchk.c gdtoa/dmisc.c gdtoa/dtoa.c \
+	gdtoa/g_dfmt.c gdtoa/gdtoa.c gdtoa/gethex.c gdtoa/g_ffmt.c \
+	gdtoa/g__fmt.c gdtoa/gmisc.c gdtoa/g_xfmt.c gdtoa/hd_init.c \
+	gdtoa/hexnan.c gdtoa/misc.c gdtoa/qnan.c gdtoa/smisc.c \
+	gdtoa/strtodg.c gdtoa/strtodnrp.c gdtoa/strtof.c \
+	gdtoa/strtopx.c gdtoa/sum.c gdtoa/ulp.c math/_chgsignl.S \
+	math/ceil.S math/ceilf.S math/ceill.S math/copysignl.S \
+	math/floor.S math/floorf.S math/floorl.S math/fma.S \
+	math/fmaf.S math/nearbyint.S math/nearbyintf.S \
+	math/nearbyintl.S math/trunc.S math/truncf.S math/cbrt.c \
+	math/cbrtf.c math/cbrtl.c math/cephes_emath.c math/copysign.c \
+	math/copysignf.c math/coshf.c math/coshl.c math/erfl.c \
+	math/expf.c math/fabs.c math/fabsf.c math/fabsl.c math/fdim.c \
+	math/fdimf.c math/fdiml.c math/fmal.c math/fmax.c math/fmaxf.c \
+	math/fmaxl.c math/fmin.c math/fminf.c math/fminl.c \
+	math/fp_consts.c math/fp_constsf.c math/fp_constsl.c \
+	math/fpclassify.c math/fpclassifyf.c math/fpclassifyl.c \
+	math/frexpf.c math/hypotf.c math/hypot.c math/hypotl.c \
+	math/isnan.c math/isnanf.c math/isnanl.c math/ldexpf.c \
+	math/lgamma.c math/lgammaf.c math/lgammal.c math/llrint.c \
+	math/signgam.c math/llrintf.c math/llrintl.c math/llround.c \
+	math/llroundf.c math/llroundl.c math/log10f.c math/logf.c \
+	math/lrint.c math/lrintf.c math/lrintl.c math/lround.c \
+	math/lroundf.c math/lroundl.c math/modf.c math/modff.c \
+	math/modfl.c math/nextafterf.c math/nextafterl.c \
 	math/nexttoward.c math/nexttowardf.c math/powf.c math/powi.c \
 	math/powif.c math/powil.c math/rint.c math/rintf.c \
 	math/rintl.c math/round.c math/roundf.c math/roundl.c \
@@ -721,6 +723,9 @@ am__objects_18 = crt/lib32_libmingwex_a-dllentry.$(OBJEXT) \
 	complex/lib32_libmingwex_a-clog.$(OBJEXT) \
 	complex/lib32_libmingwex_a-clogf.$(OBJEXT) \
 	complex/lib32_libmingwex_a-clogl.$(OBJEXT) \
+	complex/lib32_libmingwex_a-clog10.$(OBJEXT) \
+	complex/lib32_libmingwex_a-clog10f.$(OBJEXT) \
+	complex/lib32_libmingwex_a-clog10l.$(OBJEXT) \
 	complex/lib32_libmingwex_a-conj.$(OBJEXT) \
 	complex/lib32_libmingwex_a-conjf.$(OBJEXT) \
 	complex/lib32_libmingwex_a-conjl.$(OBJEXT) \
@@ -1731,46 +1736,48 @@ am__lib64_libmingwex_a_SOURCES_DIST = crt/dllentry.c crt/dllmain.c \
 	complex/ccosf.c complex/ccosl.c complex/cexp.c complex/cexpf.c \
 	complex/cexpl.c complex/cimag.c complex/cimagf.c \
 	complex/cimagl.c complex/clog.c complex/clogf.c \
-	complex/clogl.c complex/conj.c complex/conjf.c complex/conjl.c \
-	complex/cpow.c complex/cpowf.c complex/cpowl.c complex/cproj.c \
-	complex/cprojf.c complex/cprojl.c complex/creal.c \
-	complex/crealf.c complex/creall.c complex/csin.c \
-	complex/csinf.c complex/csinl.c complex/csqrt.c \
+	complex/clogl.c complex/clog10.c complex/clog10f.c \
+	complex/clog10l.c complex/conj.c complex/conjf.c \
+	complex/conjl.c complex/cpow.c complex/cpowf.c complex/cpowl.c \
+	complex/cproj.c complex/cprojf.c complex/cprojl.c \
+	complex/creal.c complex/crealf.c complex/creall.c \
+	complex/csin.c complex/csinf.c complex/csinl.c complex/csqrt.c \
 	complex/csqrtf.c complex/csqrtl.c complex/ctan.c \
 	complex/ctanf.c complex/ctanl.c complex/cabs.def.h \
 	complex/cacos.def.h complex/cacosh.def.h complex/carg.def.h \
 	complex/casin.def.h complex/casinh.def.h complex/catan.def.h \
 	complex/catanh.def.h complex/ccos.def.h complex/ccosh.def.h \
 	complex/cexp.def.h complex/cimag.def.h complex/clog.def.h \
-	complex/complex_internal.h complex/conj.def.h \
-	complex/cpow.def.h complex/cproj.def.h complex/creal.def.h \
-	complex/csin.def.h complex/csinh.def.h complex/csqrt.def.h \
-	complex/ctan.def.h complex/ctanh.def.h gdtoa/gd_arith.h \
-	gdtoa/gd_qnan.h gdtoa/gdtoa.h gdtoa/gdtoaimp.h \
-	gdtoa/arithchk.c gdtoa/dmisc.c gdtoa/dtoa.c gdtoa/g_dfmt.c \
-	gdtoa/gdtoa.c gdtoa/gethex.c gdtoa/g_ffmt.c gdtoa/g__fmt.c \
-	gdtoa/gmisc.c gdtoa/g_xfmt.c gdtoa/hd_init.c gdtoa/hexnan.c \
-	gdtoa/misc.c gdtoa/qnan.c gdtoa/smisc.c gdtoa/strtodg.c \
-	gdtoa/strtodnrp.c gdtoa/strtof.c gdtoa/strtopx.c gdtoa/sum.c \
-	gdtoa/ulp.c math/_chgsignl.S math/ceil.S math/ceilf.S \
-	math/ceill.S math/copysignl.S math/floor.S math/floorf.S \
-	math/floorl.S math/fma.S math/fmaf.S math/nearbyint.S \
-	math/nearbyintf.S math/nearbyintl.S math/trunc.S math/truncf.S \
-	math/cbrt.c math/cbrtf.c math/cbrtl.c math/cephes_emath.c \
-	math/copysign.c math/copysignf.c math/coshf.c math/coshl.c \
-	math/erfl.c math/expf.c math/fabs.c math/fabsf.c math/fabsl.c \
-	math/fdim.c math/fdimf.c math/fdiml.c math/fmal.c math/fmax.c \
-	math/fmaxf.c math/fmaxl.c math/fmin.c math/fminf.c \
-	math/fminl.c math/fp_consts.c math/fp_constsf.c \
-	math/fp_constsl.c math/fpclassify.c math/fpclassifyf.c \
-	math/fpclassifyl.c math/frexpf.c math/hypotf.c math/hypot.c \
-	math/hypotl.c math/isnan.c math/isnanf.c math/isnanl.c \
-	math/ldexpf.c math/lgamma.c math/lgammaf.c math/lgammal.c \
-	math/llrint.c math/signgam.c math/llrintf.c math/llrintl.c \
-	math/llround.c math/llroundf.c math/llroundl.c math/log10f.c \
-	math/logf.c math/lrint.c math/lrintf.c math/lrintl.c \
-	math/lround.c math/lroundf.c math/lroundl.c math/modf.c \
-	math/modff.c math/modfl.c math/nextafterf.c math/nextafterl.c \
+	complex/clog10.def.h complex/complex_internal.h \
+	complex/conj.def.h complex/cpow.def.h complex/cproj.def.h \
+	complex/creal.def.h complex/csin.def.h complex/csinh.def.h \
+	complex/csqrt.def.h complex/ctan.def.h complex/ctanh.def.h \
+	gdtoa/gd_arith.h gdtoa/gd_qnan.h gdtoa/gdtoa.h \
+	gdtoa/gdtoaimp.h gdtoa/arithchk.c gdtoa/dmisc.c gdtoa/dtoa.c \
+	gdtoa/g_dfmt.c gdtoa/gdtoa.c gdtoa/gethex.c gdtoa/g_ffmt.c \
+	gdtoa/g__fmt.c gdtoa/gmisc.c gdtoa/g_xfmt.c gdtoa/hd_init.c \
+	gdtoa/hexnan.c gdtoa/misc.c gdtoa/qnan.c gdtoa/smisc.c \
+	gdtoa/strtodg.c gdtoa/strtodnrp.c gdtoa/strtof.c \
+	gdtoa/strtopx.c gdtoa/sum.c gdtoa/ulp.c math/_chgsignl.S \
+	math/ceil.S math/ceilf.S math/ceill.S math/copysignl.S \
+	math/floor.S math/floorf.S math/floorl.S math/fma.S \
+	math/fmaf.S math/nearbyint.S math/nearbyintf.S \
+	math/nearbyintl.S math/trunc.S math/truncf.S math/cbrt.c \
+	math/cbrtf.c math/cbrtl.c math/cephes_emath.c math/copysign.c \
+	math/copysignf.c math/coshf.c math/coshl.c math/erfl.c \
+	math/expf.c math/fabs.c math/fabsf.c math/fabsl.c math/fdim.c \
+	math/fdimf.c math/fdiml.c math/fmal.c math/fmax.c math/fmaxf.c \
+	math/fmaxl.c math/fmin.c math/fminf.c math/fminl.c \
+	math/fp_consts.c math/fp_constsf.c math/fp_constsl.c \
+	math/fpclassify.c math/fpclassifyf.c math/fpclassifyl.c \
+	math/frexpf.c math/hypotf.c math/hypot.c math/hypotl.c \
+	math/isnan.c math/isnanf.c math/isnanl.c math/ldexpf.c \
+	math/lgamma.c math/lgammaf.c math/lgammal.c math/llrint.c \
+	math/signgam.c math/llrintf.c math/llrintl.c math/llround.c \
+	math/llroundf.c math/llroundl.c math/log10f.c math/logf.c \
+	math/lrint.c math/lrintf.c math/lrintl.c math/lround.c \
+	math/lroundf.c math/lroundl.c math/modf.c math/modff.c \
+	math/modfl.c math/nextafterf.c math/nextafterl.c \
 	math/nexttoward.c math/nexttowardf.c math/powf.c math/powi.c \
 	math/powif.c math/powil.c math/rint.c math/rintf.c \
 	math/rintl.c math/round.c math/roundf.c math/roundl.c \
@@ -1894,6 +1901,9 @@ am__objects_54 = crt/lib64_libmingwex_a-dllentry.$(OBJEXT) \
 	complex/lib64_libmingwex_a-clog.$(OBJEXT) \
 	complex/lib64_libmingwex_a-clogf.$(OBJEXT) \
 	complex/lib64_libmingwex_a-clogl.$(OBJEXT) \
+	complex/lib64_libmingwex_a-clog10.$(OBJEXT) \
+	complex/lib64_libmingwex_a-clog10f.$(OBJEXT) \
+	complex/lib64_libmingwex_a-clog10l.$(OBJEXT) \
 	complex/lib64_libmingwex_a-conj.$(OBJEXT) \
 	complex/lib64_libmingwex_a-conjf.$(OBJEXT) \
 	complex/lib64_libmingwex_a-conjl.$(OBJEXT) \
@@ -2818,46 +2828,48 @@ am__libarm32_libmingwex_a_SOURCES_DIST = crt/dllentry.c crt/dllmain.c \
 	complex/ccosf.c complex/ccosl.c complex/cexp.c complex/cexpf.c \
 	complex/cexpl.c complex/cimag.c complex/cimagf.c \
 	complex/cimagl.c complex/clog.c complex/clogf.c \
-	complex/clogl.c complex/conj.c complex/conjf.c complex/conjl.c \
-	complex/cpow.c complex/cpowf.c complex/cpowl.c complex/cproj.c \
-	complex/cprojf.c complex/cprojl.c complex/creal.c \
-	complex/crealf.c complex/creall.c complex/csin.c \
-	complex/csinf.c complex/csinl.c complex/csqrt.c \
+	complex/clogl.c complex/clog10.c complex/clog10f.c \
+	complex/clog10l.c complex/conj.c complex/conjf.c \
+	complex/conjl.c complex/cpow.c complex/cpowf.c complex/cpowl.c \
+	complex/cproj.c complex/cprojf.c complex/cprojl.c \
+	complex/creal.c complex/crealf.c complex/creall.c \
+	complex/csin.c complex/csinf.c complex/csinl.c complex/csqrt.c \
 	complex/csqrtf.c complex/csqrtl.c complex/ctan.c \
 	complex/ctanf.c complex/ctanl.c complex/cabs.def.h \
 	complex/cacos.def.h complex/cacosh.def.h complex/carg.def.h \
 	complex/casin.def.h complex/casinh.def.h complex/catan.def.h \
 	complex/catanh.def.h complex/ccos.def.h complex/ccosh.def.h \
 	complex/cexp.def.h complex/cimag.def.h complex/clog.def.h \
-	complex/complex_internal.h complex/conj.def.h \
-	complex/cpow.def.h complex/cproj.def.h complex/creal.def.h \
-	complex/csin.def.h complex/csinh.def.h complex/csqrt.def.h \
-	complex/ctan.def.h complex/ctanh.def.h gdtoa/gd_arith.h \
-	gdtoa/gd_qnan.h gdtoa/gdtoa.h gdtoa/gdtoaimp.h \
-	gdtoa/arithchk.c gdtoa/dmisc.c gdtoa/dtoa.c gdtoa/g_dfmt.c \
-	gdtoa/gdtoa.c gdtoa/gethex.c gdtoa/g_ffmt.c gdtoa/g__fmt.c \
-	gdtoa/gmisc.c gdtoa/g_xfmt.c gdtoa/hd_init.c gdtoa/hexnan.c \
-	gdtoa/misc.c gdtoa/qnan.c gdtoa/smisc.c gdtoa/strtodg.c \
-	gdtoa/strtodnrp.c gdtoa/strtof.c gdtoa/strtopx.c gdtoa/sum.c \
-	gdtoa/ulp.c math/_chgsignl.S math/ceil.S math/ceilf.S \
-	math/ceill.S math/copysignl.S math/floor.S math/floorf.S \
-	math/floorl.S math/fma.S math/fmaf.S math/nearbyint.S \
-	math/nearbyintf.S math/nearbyintl.S math/trunc.S math/truncf.S \
-	math/cbrt.c math/cbrtf.c math/cbrtl.c math/cephes_emath.c \
-	math/copysign.c math/copysignf.c math/coshf.c math/coshl.c \
-	math/erfl.c math/expf.c math/fabs.c math/fabsf.c math/fabsl.c \
-	math/fdim.c math/fdimf.c math/fdiml.c math/fmal.c math/fmax.c \
-	math/fmaxf.c math/fmaxl.c math/fmin.c math/fminf.c \
-	math/fminl.c math/fp_consts.c math/fp_constsf.c \
-	math/fp_constsl.c math/fpclassify.c math/fpclassifyf.c \
-	math/fpclassifyl.c math/frexpf.c math/hypotf.c math/hypot.c \
-	math/hypotl.c math/isnan.c math/isnanf.c math/isnanl.c \
-	math/ldexpf.c math/lgamma.c math/lgammaf.c math/lgammal.c \
-	math/llrint.c math/signgam.c math/llrintf.c math/llrintl.c \
-	math/llround.c math/llroundf.c math/llroundl.c math/log10f.c \
-	math/logf.c math/lrint.c math/lrintf.c math/lrintl.c \
-	math/lround.c math/lroundf.c math/lroundl.c math/modf.c \
-	math/modff.c math/modfl.c math/nextafterf.c math/nextafterl.c \
+	complex/clog10.def.h complex/complex_internal.h \
+	complex/conj.def.h complex/cpow.def.h complex/cproj.def.h \
+	complex/creal.def.h complex/csin.def.h complex/csinh.def.h \
+	complex/csqrt.def.h complex/ctan.def.h complex/ctanh.def.h \
+	gdtoa/gd_arith.h gdtoa/gd_qnan.h gdtoa/gdtoa.h \
+	gdtoa/gdtoaimp.h gdtoa/arithchk.c gdtoa/dmisc.c gdtoa/dtoa.c \
+	gdtoa/g_dfmt.c gdtoa/gdtoa.c gdtoa/gethex.c gdtoa/g_ffmt.c \
+	gdtoa/g__fmt.c gdtoa/gmisc.c gdtoa/g_xfmt.c gdtoa/hd_init.c \
+	gdtoa/hexnan.c gdtoa/misc.c gdtoa/qnan.c gdtoa/smisc.c \
+	gdtoa/strtodg.c gdtoa/strtodnrp.c gdtoa/strtof.c \
+	gdtoa/strtopx.c gdtoa/sum.c gdtoa/ulp.c math/_chgsignl.S \
+	math/ceil.S math/ceilf.S math/ceill.S math/copysignl.S \
+	math/floor.S math/floorf.S math/floorl.S math/fma.S \
+	math/fmaf.S math/nearbyint.S math/nearbyintf.S \
+	math/nearbyintl.S math/trunc.S math/truncf.S math/cbrt.c \
+	math/cbrtf.c math/cbrtl.c math/cephes_emath.c math/copysign.c \
+	math/copysignf.c math/coshf.c math/coshl.c math/erfl.c \
+	math/expf.c math/fabs.c math/fabsf.c math/fabsl.c math/fdim.c \
+	math/fdimf.c math/fdiml.c math/fmal.c math/fmax.c math/fmaxf.c \
+	math/fmaxl.c math/fmin.c math/fminf.c math/fminl.c \
+	math/fp_consts.c math/fp_constsf.c math/fp_constsl.c \
+	math/fpclassify.c math/fpclassifyf.c math/fpclassifyl.c \
+	math/frexpf.c math/hypotf.c math/hypot.c math/hypotl.c \
+	math/isnan.c math/isnanf.c math/isnanl.c math/ldexpf.c \
+	math/lgamma.c math/lgammaf.c math/lgammal.c math/llrint.c \
+	math/signgam.c math/llrintf.c math/llrintl.c math/llround.c \
+	math/llroundf.c math/llroundl.c math/log10f.c math/logf.c \
+	math/lrint.c math/lrintf.c math/lrintl.c math/lround.c \
+	math/lroundf.c math/lroundl.c math/modf.c math/modff.c \
+	math/modfl.c math/nextafterf.c math/nextafterl.c \
 	math/nexttoward.c math/nexttowardf.c math/powf.c math/powi.c \
 	math/powif.c math/powil.c math/rint.c math/rintf.c \
 	math/rintl.c math/round.c math/roundf.c math/roundl.c \
@@ -2997,6 +3009,9 @@ am__objects_86 = crt/libarm32_libmingwex_a-dllentry.$(OBJEXT) \
 	complex/libarm32_libmingwex_a-clog.$(OBJEXT) \
 	complex/libarm32_libmingwex_a-clogf.$(OBJEXT) \
 	complex/libarm32_libmingwex_a-clogl.$(OBJEXT) \
+	complex/libarm32_libmingwex_a-clog10.$(OBJEXT) \
+	complex/libarm32_libmingwex_a-clog10f.$(OBJEXT) \
+	complex/libarm32_libmingwex_a-clog10l.$(OBJEXT) \
 	complex/libarm32_libmingwex_a-conj.$(OBJEXT) \
 	complex/libarm32_libmingwex_a-conjf.$(OBJEXT) \
 	complex/libarm32_libmingwex_a-conjl.$(OBJEXT) \
@@ -5234,19 +5249,20 @@ src_msvcrt32 = \
 src_libmingwex = \
   crt/dllentry.c        crt/dllmain.c \
   \
-  complex/_cabs.c  complex/cabs.c     complex/cabsf.c    complex/cabsl.c   complex/cacos.c    complex/cacosf.c   complex/cacosl.c \
-  complex/carg.c     complex/cargf.c    complex/cargl.c   complex/casin.c    complex/casinf.c   complex/casinl.c \
-  complex/catan.c    complex/catanf.c   complex/catanl.c  complex/ccos.c     complex/ccosf.c    complex/ccosl.c  \
-  complex/cexp.c     complex/cexpf.c    complex/cexpl.c   complex/cimag.c    complex/cimagf.c   complex/cimagl.c \
-  complex/clog.c     complex/clogf.c    complex/clogl.c   complex/conj.c     complex/conjf.c    complex/conjl.c  \
-  complex/cpow.c     complex/cpowf.c    complex/cpowl.c   complex/cproj.c    complex/cprojf.c   complex/cprojl.c \
-  complex/creal.c    complex/crealf.c   complex/creall.c  complex/csin.c     complex/csinf.c    complex/csinl.c  \
-  complex/csqrt.c    complex/csqrtf.c   complex/csqrtl.c  complex/ctan.c     complex/ctanf.c    complex/ctanl.c  \
-  complex/cabs.def.h    complex/cacos.def.h  complex/cacosh.def.h  complex/carg.def.h          complex/casin.def.h \
-  complex/casinh.def.h  complex/catan.def.h  complex/catanh.def.h  complex/ccos.def.h          complex/ccosh.def.h \
-  complex/cexp.def.h    complex/cimag.def.h  complex/clog.def.h    complex/complex_internal.h  complex/conj.def.h  \
-  complex/cpow.def.h    complex/cproj.def.h  complex/creal.def.h   complex/csin.def.h          complex/csinh.def.h \
-  complex/csqrt.def.h   complex/ctan.def.h   complex/ctanh.def.h   \
+  complex/_cabs.c    complex/cabs.c   complex/cabsf.c   complex/cabsl.c   complex/cacos.c   complex/cacosf.c   \
+  complex/cacosl.c   complex/carg.c   complex/cargf.c   complex/cargl.c   complex/casin.c   complex/casinf.c   \
+  complex/casinl.c   complex/catan.c  complex/catanf.c  complex/catanl.c  complex/ccos.c    complex/ccosf.c    \
+  complex/ccosl.c    complex/cexp.c   complex/cexpf.c   complex/cexpl.c   complex/cimag.c   complex/cimagf.c   \
+  complex/cimagl.c   complex/clog.c   complex/clogf.c   complex/clogl.c   complex/clog10.c  complex/clog10f.c  \
+  complex/clog10l.c  complex/conj.c   complex/conjf.c   complex/conjl.c   complex/cpow.c    complex/cpowf.c    \
+  complex/cpowl.c    complex/cproj.c  complex/cprojf.c  complex/cprojl.c  complex/creal.c   complex/crealf.c   \
+  complex/creall.c   complex/csin.c   complex/csinf.c   complex/csinl.c   complex/csqrt.c   complex/csqrtf.c   \
+  complex/csqrtl.c   complex/ctan.c   complex/ctanf.c   complex/ctanl.c   \
+  complex/cabs.def.h    complex/cacos.def.h  complex/cacosh.def.h  complex/carg.def.h    complex/casin.def.h         \
+  complex/casinh.def.h  complex/catan.def.h  complex/catanh.def.h  complex/ccos.def.h    complex/ccosh.def.h         \
+  complex/cexp.def.h    complex/cimag.def.h  complex/clog.def.h    complex/clog10.def.h  complex/complex_internal.h  \
+  complex/conj.def.h    complex/cpow.def.h   complex/cproj.def.h   complex/creal.def.h   complex/csin.def.h          \
+  complex/csinh.def.h   complex/csqrt.def.h  complex/ctan.def.h    complex/ctanh.def.h   \
   \
   gdtoa/gd_arith.h  gdtoa/gd_qnan.h  gdtoa/gdtoa.h  gdtoa/gdtoaimp.h \
   gdtoa/arithchk.c  gdtoa/dmisc.c    gdtoa/dtoa.c   gdtoa/g_dfmt.c   gdtoa/gdtoa.c      gdtoa/gethex.c     \
@@ -8361,6 +8377,12 @@ complex/lib32_libmingwex_a-clogf.$(OBJEXT): complex/$(am__dirstamp) \
 	complex/$(DEPDIR)/$(am__dirstamp)
 complex/lib32_libmingwex_a-clogl.$(OBJEXT): complex/$(am__dirstamp) \
 	complex/$(DEPDIR)/$(am__dirstamp)
+complex/lib32_libmingwex_a-clog10.$(OBJEXT): complex/$(am__dirstamp) \
+	complex/$(DEPDIR)/$(am__dirstamp)
+complex/lib32_libmingwex_a-clog10f.$(OBJEXT): complex/$(am__dirstamp) \
+	complex/$(DEPDIR)/$(am__dirstamp)
+complex/lib32_libmingwex_a-clog10l.$(OBJEXT): complex/$(am__dirstamp) \
+	complex/$(DEPDIR)/$(am__dirstamp)
 complex/lib32_libmingwex_a-conj.$(OBJEXT): complex/$(am__dirstamp) \
 	complex/$(DEPDIR)/$(am__dirstamp)
 complex/lib32_libmingwex_a-conjf.$(OBJEXT): complex/$(am__dirstamp) \
@@ -10048,6 +10070,12 @@ complex/lib64_libmingwex_a-clogf.$(OBJEXT): complex/$(am__dirstamp) \
 	complex/$(DEPDIR)/$(am__dirstamp)
 complex/lib64_libmingwex_a-clogl.$(OBJEXT): complex/$(am__dirstamp) \
 	complex/$(DEPDIR)/$(am__dirstamp)
+complex/lib64_libmingwex_a-clog10.$(OBJEXT): complex/$(am__dirstamp) \
+	complex/$(DEPDIR)/$(am__dirstamp)
+complex/lib64_libmingwex_a-clog10f.$(OBJEXT): complex/$(am__dirstamp) \
+	complex/$(DEPDIR)/$(am__dirstamp)
+complex/lib64_libmingwex_a-clog10l.$(OBJEXT): complex/$(am__dirstamp) \
+	complex/$(DEPDIR)/$(am__dirstamp)
 complex/lib64_libmingwex_a-conj.$(OBJEXT): complex/$(am__dirstamp) \
 	complex/$(DEPDIR)/$(am__dirstamp)
 complex/lib64_libmingwex_a-conjf.$(OBJEXT): complex/$(am__dirstamp) \
@@ -11581,6 +11609,12 @@ complex/libarm32_libmingwex_a-clog.$(OBJEXT): complex/$(am__dirstamp) \
 complex/libarm32_libmingwex_a-clogf.$(OBJEXT):  \
 	complex/$(am__dirstamp) complex/$(DEPDIR)/$(am__dirstamp)
 complex/libarm32_libmingwex_a-clogl.$(OBJEXT):  \
+	complex/$(am__dirstamp) complex/$(DEPDIR)/$(am__dirstamp)
+complex/libarm32_libmingwex_a-clog10.$(OBJEXT):  \
+	complex/$(am__dirstamp) complex/$(DEPDIR)/$(am__dirstamp)
+complex/libarm32_libmingwex_a-clog10f.$(OBJEXT):  \
+	complex/$(am__dirstamp) complex/$(DEPDIR)/$(am__dirstamp)
+complex/libarm32_libmingwex_a-clog10l.$(OBJEXT):  \
 	complex/$(am__dirstamp) complex/$(DEPDIR)/$(am__dirstamp)
 complex/libarm32_libmingwex_a-conj.$(OBJEXT): complex/$(am__dirstamp) \
 	complex/$(DEPDIR)/$(am__dirstamp)
@@ -13805,6 +13839,9 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@complex/$(DEPDIR)/lib32_libmingwex_a-cimagf.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@complex/$(DEPDIR)/lib32_libmingwex_a-cimagl.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@complex/$(DEPDIR)/lib32_libmingwex_a-clog.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@complex/$(DEPDIR)/lib32_libmingwex_a-clog10.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@complex/$(DEPDIR)/lib32_libmingwex_a-clog10f.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@complex/$(DEPDIR)/lib32_libmingwex_a-clog10l.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@complex/$(DEPDIR)/lib32_libmingwex_a-clogf.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@complex/$(DEPDIR)/lib32_libmingwex_a-clogl.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@complex/$(DEPDIR)/lib32_libmingwex_a-conj.Po@am__quote@
@@ -13854,6 +13891,9 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@complex/$(DEPDIR)/lib64_libmingwex_a-cimagf.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@complex/$(DEPDIR)/lib64_libmingwex_a-cimagl.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@complex/$(DEPDIR)/lib64_libmingwex_a-clog.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@complex/$(DEPDIR)/lib64_libmingwex_a-clog10.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@complex/$(DEPDIR)/lib64_libmingwex_a-clog10f.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@complex/$(DEPDIR)/lib64_libmingwex_a-clog10l.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@complex/$(DEPDIR)/lib64_libmingwex_a-clogf.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@complex/$(DEPDIR)/lib64_libmingwex_a-clogl.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@complex/$(DEPDIR)/lib64_libmingwex_a-conj.Po@am__quote@
@@ -13903,6 +13943,9 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@complex/$(DEPDIR)/libarm32_libmingwex_a-cimagf.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@complex/$(DEPDIR)/libarm32_libmingwex_a-cimagl.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@complex/$(DEPDIR)/libarm32_libmingwex_a-clog.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@complex/$(DEPDIR)/libarm32_libmingwex_a-clog10.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@complex/$(DEPDIR)/libarm32_libmingwex_a-clog10f.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@complex/$(DEPDIR)/libarm32_libmingwex_a-clog10l.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@complex/$(DEPDIR)/libarm32_libmingwex_a-clogf.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@complex/$(DEPDIR)/libarm32_libmingwex_a-clogl.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@complex/$(DEPDIR)/libarm32_libmingwex_a-conj.Po@am__quote@
@@ -19998,6 +20041,48 @@ complex/lib32_libmingwex_a-clogl.obj: complex/clogl.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='complex/clogl.c' object='complex/lib32_libmingwex_a-clogl.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o complex/lib32_libmingwex_a-clogl.obj `if test -f 'complex/clogl.c'; then $(CYGPATH_W) 'complex/clogl.c'; else $(CYGPATH_W) '$(srcdir)/complex/clogl.c'; fi`
+
+complex/lib32_libmingwex_a-clog10.o: complex/clog10.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT complex/lib32_libmingwex_a-clog10.o -MD -MP -MF complex/$(DEPDIR)/lib32_libmingwex_a-clog10.Tpo -c -o complex/lib32_libmingwex_a-clog10.o `test -f 'complex/clog10.c' || echo '$(srcdir)/'`complex/clog10.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) complex/$(DEPDIR)/lib32_libmingwex_a-clog10.Tpo complex/$(DEPDIR)/lib32_libmingwex_a-clog10.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='complex/clog10.c' object='complex/lib32_libmingwex_a-clog10.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o complex/lib32_libmingwex_a-clog10.o `test -f 'complex/clog10.c' || echo '$(srcdir)/'`complex/clog10.c
+
+complex/lib32_libmingwex_a-clog10.obj: complex/clog10.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT complex/lib32_libmingwex_a-clog10.obj -MD -MP -MF complex/$(DEPDIR)/lib32_libmingwex_a-clog10.Tpo -c -o complex/lib32_libmingwex_a-clog10.obj `if test -f 'complex/clog10.c'; then $(CYGPATH_W) 'complex/clog10.c'; else $(CYGPATH_W) '$(srcdir)/complex/clog10.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) complex/$(DEPDIR)/lib32_libmingwex_a-clog10.Tpo complex/$(DEPDIR)/lib32_libmingwex_a-clog10.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='complex/clog10.c' object='complex/lib32_libmingwex_a-clog10.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o complex/lib32_libmingwex_a-clog10.obj `if test -f 'complex/clog10.c'; then $(CYGPATH_W) 'complex/clog10.c'; else $(CYGPATH_W) '$(srcdir)/complex/clog10.c'; fi`
+
+complex/lib32_libmingwex_a-clog10f.o: complex/clog10f.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT complex/lib32_libmingwex_a-clog10f.o -MD -MP -MF complex/$(DEPDIR)/lib32_libmingwex_a-clog10f.Tpo -c -o complex/lib32_libmingwex_a-clog10f.o `test -f 'complex/clog10f.c' || echo '$(srcdir)/'`complex/clog10f.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) complex/$(DEPDIR)/lib32_libmingwex_a-clog10f.Tpo complex/$(DEPDIR)/lib32_libmingwex_a-clog10f.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='complex/clog10f.c' object='complex/lib32_libmingwex_a-clog10f.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o complex/lib32_libmingwex_a-clog10f.o `test -f 'complex/clog10f.c' || echo '$(srcdir)/'`complex/clog10f.c
+
+complex/lib32_libmingwex_a-clog10f.obj: complex/clog10f.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT complex/lib32_libmingwex_a-clog10f.obj -MD -MP -MF complex/$(DEPDIR)/lib32_libmingwex_a-clog10f.Tpo -c -o complex/lib32_libmingwex_a-clog10f.obj `if test -f 'complex/clog10f.c'; then $(CYGPATH_W) 'complex/clog10f.c'; else $(CYGPATH_W) '$(srcdir)/complex/clog10f.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) complex/$(DEPDIR)/lib32_libmingwex_a-clog10f.Tpo complex/$(DEPDIR)/lib32_libmingwex_a-clog10f.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='complex/clog10f.c' object='complex/lib32_libmingwex_a-clog10f.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o complex/lib32_libmingwex_a-clog10f.obj `if test -f 'complex/clog10f.c'; then $(CYGPATH_W) 'complex/clog10f.c'; else $(CYGPATH_W) '$(srcdir)/complex/clog10f.c'; fi`
+
+complex/lib32_libmingwex_a-clog10l.o: complex/clog10l.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT complex/lib32_libmingwex_a-clog10l.o -MD -MP -MF complex/$(DEPDIR)/lib32_libmingwex_a-clog10l.Tpo -c -o complex/lib32_libmingwex_a-clog10l.o `test -f 'complex/clog10l.c' || echo '$(srcdir)/'`complex/clog10l.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) complex/$(DEPDIR)/lib32_libmingwex_a-clog10l.Tpo complex/$(DEPDIR)/lib32_libmingwex_a-clog10l.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='complex/clog10l.c' object='complex/lib32_libmingwex_a-clog10l.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o complex/lib32_libmingwex_a-clog10l.o `test -f 'complex/clog10l.c' || echo '$(srcdir)/'`complex/clog10l.c
+
+complex/lib32_libmingwex_a-clog10l.obj: complex/clog10l.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT complex/lib32_libmingwex_a-clog10l.obj -MD -MP -MF complex/$(DEPDIR)/lib32_libmingwex_a-clog10l.Tpo -c -o complex/lib32_libmingwex_a-clog10l.obj `if test -f 'complex/clog10l.c'; then $(CYGPATH_W) 'complex/clog10l.c'; else $(CYGPATH_W) '$(srcdir)/complex/clog10l.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) complex/$(DEPDIR)/lib32_libmingwex_a-clog10l.Tpo complex/$(DEPDIR)/lib32_libmingwex_a-clog10l.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='complex/clog10l.c' object='complex/lib32_libmingwex_a-clog10l.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o complex/lib32_libmingwex_a-clog10l.obj `if test -f 'complex/clog10l.c'; then $(CYGPATH_W) 'complex/clog10l.c'; else $(CYGPATH_W) '$(srcdir)/complex/clog10l.c'; fi`
 
 complex/lib32_libmingwex_a-conj.o: complex/conj.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT complex/lib32_libmingwex_a-conj.o -MD -MP -MF complex/$(DEPDIR)/lib32_libmingwex_a-conj.Tpo -c -o complex/lib32_libmingwex_a-conj.o `test -f 'complex/conj.c' || echo '$(srcdir)/'`complex/conj.c
@@ -29351,6 +29436,48 @@ complex/lib64_libmingwex_a-clogl.obj: complex/clogl.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o complex/lib64_libmingwex_a-clogl.obj `if test -f 'complex/clogl.c'; then $(CYGPATH_W) 'complex/clogl.c'; else $(CYGPATH_W) '$(srcdir)/complex/clogl.c'; fi`
 
+complex/lib64_libmingwex_a-clog10.o: complex/clog10.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT complex/lib64_libmingwex_a-clog10.o -MD -MP -MF complex/$(DEPDIR)/lib64_libmingwex_a-clog10.Tpo -c -o complex/lib64_libmingwex_a-clog10.o `test -f 'complex/clog10.c' || echo '$(srcdir)/'`complex/clog10.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) complex/$(DEPDIR)/lib64_libmingwex_a-clog10.Tpo complex/$(DEPDIR)/lib64_libmingwex_a-clog10.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='complex/clog10.c' object='complex/lib64_libmingwex_a-clog10.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o complex/lib64_libmingwex_a-clog10.o `test -f 'complex/clog10.c' || echo '$(srcdir)/'`complex/clog10.c
+
+complex/lib64_libmingwex_a-clog10.obj: complex/clog10.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT complex/lib64_libmingwex_a-clog10.obj -MD -MP -MF complex/$(DEPDIR)/lib64_libmingwex_a-clog10.Tpo -c -o complex/lib64_libmingwex_a-clog10.obj `if test -f 'complex/clog10.c'; then $(CYGPATH_W) 'complex/clog10.c'; else $(CYGPATH_W) '$(srcdir)/complex/clog10.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) complex/$(DEPDIR)/lib64_libmingwex_a-clog10.Tpo complex/$(DEPDIR)/lib64_libmingwex_a-clog10.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='complex/clog10.c' object='complex/lib64_libmingwex_a-clog10.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o complex/lib64_libmingwex_a-clog10.obj `if test -f 'complex/clog10.c'; then $(CYGPATH_W) 'complex/clog10.c'; else $(CYGPATH_W) '$(srcdir)/complex/clog10.c'; fi`
+
+complex/lib64_libmingwex_a-clog10f.o: complex/clog10f.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT complex/lib64_libmingwex_a-clog10f.o -MD -MP -MF complex/$(DEPDIR)/lib64_libmingwex_a-clog10f.Tpo -c -o complex/lib64_libmingwex_a-clog10f.o `test -f 'complex/clog10f.c' || echo '$(srcdir)/'`complex/clog10f.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) complex/$(DEPDIR)/lib64_libmingwex_a-clog10f.Tpo complex/$(DEPDIR)/lib64_libmingwex_a-clog10f.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='complex/clog10f.c' object='complex/lib64_libmingwex_a-clog10f.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o complex/lib64_libmingwex_a-clog10f.o `test -f 'complex/clog10f.c' || echo '$(srcdir)/'`complex/clog10f.c
+
+complex/lib64_libmingwex_a-clog10f.obj: complex/clog10f.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT complex/lib64_libmingwex_a-clog10f.obj -MD -MP -MF complex/$(DEPDIR)/lib64_libmingwex_a-clog10f.Tpo -c -o complex/lib64_libmingwex_a-clog10f.obj `if test -f 'complex/clog10f.c'; then $(CYGPATH_W) 'complex/clog10f.c'; else $(CYGPATH_W) '$(srcdir)/complex/clog10f.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) complex/$(DEPDIR)/lib64_libmingwex_a-clog10f.Tpo complex/$(DEPDIR)/lib64_libmingwex_a-clog10f.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='complex/clog10f.c' object='complex/lib64_libmingwex_a-clog10f.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o complex/lib64_libmingwex_a-clog10f.obj `if test -f 'complex/clog10f.c'; then $(CYGPATH_W) 'complex/clog10f.c'; else $(CYGPATH_W) '$(srcdir)/complex/clog10f.c'; fi`
+
+complex/lib64_libmingwex_a-clog10l.o: complex/clog10l.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT complex/lib64_libmingwex_a-clog10l.o -MD -MP -MF complex/$(DEPDIR)/lib64_libmingwex_a-clog10l.Tpo -c -o complex/lib64_libmingwex_a-clog10l.o `test -f 'complex/clog10l.c' || echo '$(srcdir)/'`complex/clog10l.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) complex/$(DEPDIR)/lib64_libmingwex_a-clog10l.Tpo complex/$(DEPDIR)/lib64_libmingwex_a-clog10l.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='complex/clog10l.c' object='complex/lib64_libmingwex_a-clog10l.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o complex/lib64_libmingwex_a-clog10l.o `test -f 'complex/clog10l.c' || echo '$(srcdir)/'`complex/clog10l.c
+
+complex/lib64_libmingwex_a-clog10l.obj: complex/clog10l.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT complex/lib64_libmingwex_a-clog10l.obj -MD -MP -MF complex/$(DEPDIR)/lib64_libmingwex_a-clog10l.Tpo -c -o complex/lib64_libmingwex_a-clog10l.obj `if test -f 'complex/clog10l.c'; then $(CYGPATH_W) 'complex/clog10l.c'; else $(CYGPATH_W) '$(srcdir)/complex/clog10l.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) complex/$(DEPDIR)/lib64_libmingwex_a-clog10l.Tpo complex/$(DEPDIR)/lib64_libmingwex_a-clog10l.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='complex/clog10l.c' object='complex/lib64_libmingwex_a-clog10l.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o complex/lib64_libmingwex_a-clog10l.obj `if test -f 'complex/clog10l.c'; then $(CYGPATH_W) 'complex/clog10l.c'; else $(CYGPATH_W) '$(srcdir)/complex/clog10l.c'; fi`
+
 complex/lib64_libmingwex_a-conj.o: complex/conj.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT complex/lib64_libmingwex_a-conj.o -MD -MP -MF complex/$(DEPDIR)/lib64_libmingwex_a-conj.Tpo -c -o complex/lib64_libmingwex_a-conj.o `test -f 'complex/conj.c' || echo '$(srcdir)/'`complex/conj.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) complex/$(DEPDIR)/lib64_libmingwex_a-conj.Tpo complex/$(DEPDIR)/lib64_libmingwex_a-conj.Po
@@ -38086,6 +38213,48 @@ complex/libarm32_libmingwex_a-clogl.obj: complex/clogl.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='complex/clogl.c' object='complex/libarm32_libmingwex_a-clogl.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o complex/libarm32_libmingwex_a-clogl.obj `if test -f 'complex/clogl.c'; then $(CYGPATH_W) 'complex/clogl.c'; else $(CYGPATH_W) '$(srcdir)/complex/clogl.c'; fi`
+
+complex/libarm32_libmingwex_a-clog10.o: complex/clog10.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT complex/libarm32_libmingwex_a-clog10.o -MD -MP -MF complex/$(DEPDIR)/libarm32_libmingwex_a-clog10.Tpo -c -o complex/libarm32_libmingwex_a-clog10.o `test -f 'complex/clog10.c' || echo '$(srcdir)/'`complex/clog10.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) complex/$(DEPDIR)/libarm32_libmingwex_a-clog10.Tpo complex/$(DEPDIR)/libarm32_libmingwex_a-clog10.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='complex/clog10.c' object='complex/libarm32_libmingwex_a-clog10.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o complex/libarm32_libmingwex_a-clog10.o `test -f 'complex/clog10.c' || echo '$(srcdir)/'`complex/clog10.c
+
+complex/libarm32_libmingwex_a-clog10.obj: complex/clog10.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT complex/libarm32_libmingwex_a-clog10.obj -MD -MP -MF complex/$(DEPDIR)/libarm32_libmingwex_a-clog10.Tpo -c -o complex/libarm32_libmingwex_a-clog10.obj `if test -f 'complex/clog10.c'; then $(CYGPATH_W) 'complex/clog10.c'; else $(CYGPATH_W) '$(srcdir)/complex/clog10.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) complex/$(DEPDIR)/libarm32_libmingwex_a-clog10.Tpo complex/$(DEPDIR)/libarm32_libmingwex_a-clog10.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='complex/clog10.c' object='complex/libarm32_libmingwex_a-clog10.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o complex/libarm32_libmingwex_a-clog10.obj `if test -f 'complex/clog10.c'; then $(CYGPATH_W) 'complex/clog10.c'; else $(CYGPATH_W) '$(srcdir)/complex/clog10.c'; fi`
+
+complex/libarm32_libmingwex_a-clog10f.o: complex/clog10f.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT complex/libarm32_libmingwex_a-clog10f.o -MD -MP -MF complex/$(DEPDIR)/libarm32_libmingwex_a-clog10f.Tpo -c -o complex/libarm32_libmingwex_a-clog10f.o `test -f 'complex/clog10f.c' || echo '$(srcdir)/'`complex/clog10f.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) complex/$(DEPDIR)/libarm32_libmingwex_a-clog10f.Tpo complex/$(DEPDIR)/libarm32_libmingwex_a-clog10f.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='complex/clog10f.c' object='complex/libarm32_libmingwex_a-clog10f.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o complex/libarm32_libmingwex_a-clog10f.o `test -f 'complex/clog10f.c' || echo '$(srcdir)/'`complex/clog10f.c
+
+complex/libarm32_libmingwex_a-clog10f.obj: complex/clog10f.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT complex/libarm32_libmingwex_a-clog10f.obj -MD -MP -MF complex/$(DEPDIR)/libarm32_libmingwex_a-clog10f.Tpo -c -o complex/libarm32_libmingwex_a-clog10f.obj `if test -f 'complex/clog10f.c'; then $(CYGPATH_W) 'complex/clog10f.c'; else $(CYGPATH_W) '$(srcdir)/complex/clog10f.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) complex/$(DEPDIR)/libarm32_libmingwex_a-clog10f.Tpo complex/$(DEPDIR)/libarm32_libmingwex_a-clog10f.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='complex/clog10f.c' object='complex/libarm32_libmingwex_a-clog10f.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o complex/libarm32_libmingwex_a-clog10f.obj `if test -f 'complex/clog10f.c'; then $(CYGPATH_W) 'complex/clog10f.c'; else $(CYGPATH_W) '$(srcdir)/complex/clog10f.c'; fi`
+
+complex/libarm32_libmingwex_a-clog10l.o: complex/clog10l.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT complex/libarm32_libmingwex_a-clog10l.o -MD -MP -MF complex/$(DEPDIR)/libarm32_libmingwex_a-clog10l.Tpo -c -o complex/libarm32_libmingwex_a-clog10l.o `test -f 'complex/clog10l.c' || echo '$(srcdir)/'`complex/clog10l.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) complex/$(DEPDIR)/libarm32_libmingwex_a-clog10l.Tpo complex/$(DEPDIR)/libarm32_libmingwex_a-clog10l.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='complex/clog10l.c' object='complex/libarm32_libmingwex_a-clog10l.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o complex/libarm32_libmingwex_a-clog10l.o `test -f 'complex/clog10l.c' || echo '$(srcdir)/'`complex/clog10l.c
+
+complex/libarm32_libmingwex_a-clog10l.obj: complex/clog10l.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT complex/libarm32_libmingwex_a-clog10l.obj -MD -MP -MF complex/$(DEPDIR)/libarm32_libmingwex_a-clog10l.Tpo -c -o complex/libarm32_libmingwex_a-clog10l.obj `if test -f 'complex/clog10l.c'; then $(CYGPATH_W) 'complex/clog10l.c'; else $(CYGPATH_W) '$(srcdir)/complex/clog10l.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) complex/$(DEPDIR)/libarm32_libmingwex_a-clog10l.Tpo complex/$(DEPDIR)/libarm32_libmingwex_a-clog10l.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='complex/clog10l.c' object='complex/libarm32_libmingwex_a-clog10l.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o complex/libarm32_libmingwex_a-clog10l.obj `if test -f 'complex/clog10l.c'; then $(CYGPATH_W) 'complex/clog10l.c'; else $(CYGPATH_W) '$(srcdir)/complex/clog10l.c'; fi`
 
 complex/libarm32_libmingwex_a-conj.o: complex/conj.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT complex/libarm32_libmingwex_a-conj.o -MD -MP -MF complex/$(DEPDIR)/libarm32_libmingwex_a-conj.Tpo -c -o complex/libarm32_libmingwex_a-conj.o `test -f 'complex/conj.c' || echo '$(srcdir)/'`complex/conj.c
