@@ -150,7 +150,9 @@ host_triplet = @host@
 @LIB32_TRUE@@W32API_FALSE@	lib32/libmingwex.a \
 @LIB32_TRUE@@W32API_FALSE@	lib32/libmoldname.a \
 @LIB32_TRUE@@W32API_FALSE@	lib32/libmingwthrd.a
-@LIB32_TRUE@@W32API_FALSE@am__append_4 = lib32/msvcrt.def lib32/msvcr80.def lib32/msvcr90.def lib32/msvcr90d.def lib32/msvcr100.def lib32/msvcr110.def lib32/msvcr120.def lib32/msvcr120d.def
+@LIB32_TRUE@@W32API_FALSE@am__append_4 = lib32/msvcrt.def lib32/msvcr80.def lib32/msvcr90.def lib32/msvcr90d.def lib32/msvcr100.def lib32/msvcr110.def lib32/msvcr120.def lib32/msvcr120d.def \
+@LIB32_TRUE@@W32API_FALSE@				  lib32/msvcr120_app.def lib32/msvcp120_app.def
+
 DIST_COMMON = $(srcdir)/lib32/Makefile.am \
 	$(srcdir)/libarm32/Makefile.am \
 	$(srcdir)/testcases/complex/Makefile.am $(srcdir)/Makefile.in \
@@ -166,7 +168,10 @@ DIST_COMMON = $(srcdir)/lib32/Makefile.am \
 	$(top_srcdir)/build-aux/config.sub \
 	$(top_srcdir)/build-aux/install-sh \
 	$(top_srcdir)/build-aux/missing
-@LIB32_TRUE@@W32API_FALSE@am__append_5 = lib32/libglut.a lib32/libmsvcp60.a lib32/libmsvcr80.a lib32/libmsvcr90.a lib32/libmsvcr90d.a lib32/libmsvcr100.a lib32/libmsvcr110.a lib32/libmsvcr120.a lib32/libmsvcr120d.a lib32/libcrtdll.a
+@LIB32_TRUE@@W32API_FALSE@am__append_5 = lib32/libglut.a lib32/libmsvcp60.a lib32/libmsvcr80.a lib32/libmsvcr90.a lib32/libmsvcr90d.a lib32/libmsvcr100.a \
+@LIB32_TRUE@@W32API_FALSE@			  lib32/libmsvcr110.a lib32/libmsvcr120.a lib32/libmsvcr120d.a lib32/libcrtdll.a \
+@LIB32_TRUE@@W32API_FALSE@			  lib32/libmsvcr120_app.a lib32/libmsvcp120_app.a
+
 @LIB64_TRUE@@W32API_FALSE@am__append_6 = lib64/libmsvcrt.a
 @LIB64_TRUE@@W32API_FALSE@am__append_7 = lib64/libdelayimp.a \
 @LIB64_TRUE@@W32API_FALSE@	lib64/libm.a lib64/libgmon.a \
@@ -175,8 +180,14 @@ DIST_COMMON = $(srcdir)/lib32/Makefile.am \
 @LIB64_TRUE@@W32API_FALSE@	lib64/libmingwex.a \
 @LIB64_TRUE@@W32API_FALSE@	lib64/libmoldname.a \
 @LIB64_TRUE@@W32API_FALSE@	lib64/libmingwthrd.a
-@LIB64_TRUE@@W32API_FALSE@am__append_8 = lib64/msvcrt.def lib64/msvcr80.def lib64/msvcr90.def lib64/msvcr90d.def lib64/msvcr100.def lib64/msvcr110.def lib64/msvcr120.def lib64/msvcr120d.def
-@LIB64_TRUE@@W32API_FALSE@am__append_9 = lib64/libmsvcp60.a lib64/libmsvcr80.a lib64/libmsvcr90.a lib64/libmsvcr100.a lib64/libmsvcr90d.a lib64/libmsvcr110.a lib64/libmsvcr120.a lib64/libmsvcr120d.a lib64/libcrtdll.a
+@LIB64_TRUE@@W32API_FALSE@am__append_8 = lib64/msvcrt.def lib64/msvcr80.def lib64/msvcr90.def lib64/msvcr90d.def \
+@LIB64_TRUE@@W32API_FALSE@				  lib64/msvcr100.def lib64/msvcr110.def lib64/msvcr120.def lib64/msvcr120d.def \
+@LIB64_TRUE@@W32API_FALSE@				  lib64/msvcr120_app.def lib64/msvcp120_app.def
+
+@LIB64_TRUE@@W32API_FALSE@am__append_9 = lib64/libmsvcp60.a lib64/libmsvcr80.a lib64/libmsvcr90.a lib64/libmsvcr100.a lib64/libmsvcr90d.a \
+@LIB64_TRUE@@W32API_FALSE@			  lib64/libmsvcr110.a lib64/libmsvcr120.a lib64/libmsvcr120d.a lib64/libcrtdll.a \
+@LIB64_TRUE@@W32API_FALSE@			  lib64/libmsvcr120_app.a lib64/libmsvcp120_app.a
+
 @LIBARM32_TRUE@@W32API_FALSE@am__append_10 = libarm32/libmsvcrt.a
 
 #libarm32_LIBRARIES += libarm32/libgmon.a
@@ -263,8 +274,7 @@ am__installdirs = "$(DESTDIR)$(lib32dir)" "$(DESTDIR)$(lib64dir)" \
 	"$(DESTDIR)$(crt64dir)" "$(DESTDIR)$(libsrcdir)" \
 	"$(DESTDIR)$(dx32dir)" "$(DESTDIR)$(dx64dir)" \
 	"$(DESTDIR)$(lib32dir)" "$(DESTDIR)$(lib64dir)" \
-	"$(DESTDIR)$(libarm32dir)" "$(DESTDIR)$(winrt32dir)" \
-	"$(DESTDIR)$(winrt64dir)"
+	"$(DESTDIR)$(libarm32dir)"
 LIBRARIES = $(lib32_LIBRARIES) $(lib64_LIBRARIES) \
 	$(libarm32_LIBRARIES)
 ARFLAGS = cru
@@ -4727,8 +4737,7 @@ am__can_run_installinfo = \
     *) (install-info --version) >/dev/null 2>&1;; \
   esac
 DATA = $(crt32_DATA) $(crt64_DATA) $(dist_libsrc_DATA) $(dx32_DATA) \
-	$(dx64_DATA) $(lib32_DATA) $(lib64_DATA) $(libarm32_DATA) \
-	$(winrt32_DATA) $(winrt64_DATA)
+	$(dx64_DATA) $(lib32_DATA) $(lib64_DATA) $(libarm32_DATA)
 HEADERS = $(noinst_HEADERS)
 am__tagged_files = $(HEADERS) $(SOURCES) $(TAGS_FILES) \
 	$(LISP)config.h.in
@@ -5436,9 +5445,6 @@ src_intrincs32 = \
 
 # these only go into the ARM32 version:
 src_intrincsarm32 = 
-winrtlibs = \
-  winrt/libruntimeobject.a
-
 
 #########
 # Compiling 32-bit runtime
@@ -5450,8 +5456,6 @@ winrtlibs = \
 @LIBARM32_TRUE@winrt32dir = $(libarm32dir)
 @LIB32_TRUE@dx32dir = $(lib32dir)
 @LIBARM32_TRUE@dx32dir = $(libarm32dir)
-@LIB32_TRUE@winrt32_DATA = $(winrtlibs)
-@LIBARM32_TRUE@winrt32_DATA = $(winrtlibs)
 @LIB32_TRUE@@W32API_FALSE@crt32_DATA = \
 @LIB32_TRUE@@W32API_FALSE@  lib32/crt1.o    lib32/crt2.o     lib32/crt1u.o   lib32/crt2u.o    lib32/dllcrt1.o    lib32/dllcrt2.o \
 @LIB32_TRUE@@W32API_FALSE@  lib32/CRT_fp8.o lib32/CRT_fp10.o lib32/txtmode.o lib32/binmode.o  lib32/crtbegin.o   lib32/crtend.o \
@@ -5590,9 +5594,7 @@ winrtlibs = \
 #lib32_DATA += lib32/libws2_32.a      # Handled by custom rule
 @LIB32_TRUE@lib32_DATA = lib32/libaclui.a lib32/libactiveds.a \
 @LIB32_TRUE@	lib32/libadsldpc.a lib32/libadvapi32.a \
-@LIB32_TRUE@	lib32/libapcups.a \
-@LIB32_TRUE@	lib32/libapi-ms-win-core-winrt-l1-1-0.a \
-@LIB32_TRUE@	lib32/libapi-ms-win-core-winrt-string-l1-1-0.a \
+@LIB32_TRUE@	lib32/libapcups.a lib32/libruntimeobject.a \
 @LIB32_TRUE@	lib32/libauthz.a lib32/libavicap32.a \
 @LIB32_TRUE@	lib32/libavifil32.a lib32/libavrt.a \
 @LIB32_TRUE@	lib32/libbcrypt.a lib32/libbootvid.a \
@@ -5768,7 +5770,6 @@ winrtlibs = \
 @LIB64_TRUE@crt64dir = $(lib64dir)
 @LIB64_TRUE@winrt64dir = $(lib64dir)
 @LIB64_TRUE@dx64dir = $(lib64dir)
-@LIB64_TRUE@winrt64_DATA = $(winrtlibs)
 @LIB64_TRUE@@W32API_FALSE@crt64_DATA = \
 @LIB64_TRUE@@W32API_FALSE@  lib64/crt1.o    lib64/crt2.o     lib64/crt1u.o   lib64/crt2u.o   lib64/dllcrt1.o lib64/dllcrt2.o \
 @LIB64_TRUE@@W32API_FALSE@  lib64/CRT_fp8.o lib64/CRT_fp10.o lib64/txtmode.o lib64/binmode.o lib64/crtbegin.o lib64/crtend.o \
@@ -6480,9 +6481,7 @@ winrtlibs = \
 @LIB64_TRUE@	lib64/libxaudio2_8.a lib64/libd3dcompiler_46.a \
 @LIB64_TRUE@	lib64/libd3dcsx_46.a lib64/libd3d11.a \
 @LIB64_TRUE@	lib64/libd3dcompiler_47.a lib64/libwinhttp.a \
-@LIB64_TRUE@	lib64/libapi-ms-win-core-winrt-string-l1-1-0.a \
-@LIB64_TRUE@	lib64/libapi-ms-win-core-winrt-l1-1-0.a \
-@LIB64_TRUE@	$(am__append_9)
+@LIB64_TRUE@	lib64/libruntimeobject.a $(am__append_9)
 @LIB64_TRUE@dx64_DATA = lib64/libxinput.a lib64/libxapofx.a \
 @LIB64_TRUE@	lib64/libx3daudio.a lib64/libd3dx9.a \
 @LIB64_TRUE@	lib64/libd3dx10.a lib64/libd3dx11.a \
@@ -7289,12 +7288,11 @@ EXTRA_DIST = $(srcdir)/ChangeLog.* revstamp.h \
 	$(top_srcdir)/lib32/*.def $(top_srcdir)/lib64/*.def \
 	$(top_srcdir)/lib32/*.mri $(top_srcdir)/lib64/*.mri \
 	$(top_srcdir)/lib32/*.def.in $(top_srcdir)/lib64/*.def.in \
-	$(top_srcdir)/def-include/*.def.in $(top_srcdir)/$(winrtlibs) \
-	crt/binmode.c crt/crtbegin.c crt/crtdll.c crt/crtend.c \
-	crt/crtexe.c crt/CRT_fp8.c crt/CRT_fp10.c crt/CRT_glob.c \
-	crt/CRT_noglob.c crt/txtmode.c crt/ucrtexe.c profile/gcrt0.c \
-	profile/COPYING profile/CYGWIN_LICENSE \
-	math/DFP/mpdecimal-2.3/.hg_archival.txt \
+	$(top_srcdir)/def-include/*.def.in crt/binmode.c \
+	crt/crtbegin.c crt/crtdll.c crt/crtend.c crt/crtexe.c \
+	crt/CRT_fp8.c crt/CRT_fp10.c crt/CRT_glob.c crt/CRT_noglob.c \
+	crt/txtmode.c crt/ucrtexe.c profile/gcrt0.c profile/COPYING \
+	profile/CYGWIN_LICENSE math/DFP/mpdecimal-2.3/.hg_archival.txt \
 	math/DFP/mpdecimal-2.3/basearith.c \
 	math/DFP/mpdecimal-2.3/basearith.h \
 	math/DFP/mpdecimal-2.3/bench.c math/DFP/mpdecimal-2.3/bits.h \
@@ -48160,48 +48158,6 @@ uninstall-libarm32DATA:
 	@list='$(libarm32_DATA)'; test -n "$(libarm32dir)" || list=; \
 	files=`for p in $$list; do echo $$p; done | sed -e 's|^.*/||'`; \
 	dir='$(DESTDIR)$(libarm32dir)'; $(am__uninstall_files_from_dir)
-install-winrt32DATA: $(winrt32_DATA)
-	@$(NORMAL_INSTALL)
-	@list='$(winrt32_DATA)'; test -n "$(winrt32dir)" || list=; \
-	if test -n "$$list"; then \
-	  echo " $(MKDIR_P) '$(DESTDIR)$(winrt32dir)'"; \
-	  $(MKDIR_P) "$(DESTDIR)$(winrt32dir)" || exit 1; \
-	fi; \
-	for p in $$list; do \
-	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
-	  echo "$$d$$p"; \
-	done | $(am__base_list) | \
-	while read files; do \
-	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(winrt32dir)'"; \
-	  $(INSTALL_DATA) $$files "$(DESTDIR)$(winrt32dir)" || exit $$?; \
-	done
-
-uninstall-winrt32DATA:
-	@$(NORMAL_UNINSTALL)
-	@list='$(winrt32_DATA)'; test -n "$(winrt32dir)" || list=; \
-	files=`for p in $$list; do echo $$p; done | sed -e 's|^.*/||'`; \
-	dir='$(DESTDIR)$(winrt32dir)'; $(am__uninstall_files_from_dir)
-install-winrt64DATA: $(winrt64_DATA)
-	@$(NORMAL_INSTALL)
-	@list='$(winrt64_DATA)'; test -n "$(winrt64dir)" || list=; \
-	if test -n "$$list"; then \
-	  echo " $(MKDIR_P) '$(DESTDIR)$(winrt64dir)'"; \
-	  $(MKDIR_P) "$(DESTDIR)$(winrt64dir)" || exit 1; \
-	fi; \
-	for p in $$list; do \
-	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
-	  echo "$$d$$p"; \
-	done | $(am__base_list) | \
-	while read files; do \
-	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(winrt64dir)'"; \
-	  $(INSTALL_DATA) $$files "$(DESTDIR)$(winrt64dir)" || exit $$?; \
-	done
-
-uninstall-winrt64DATA:
-	@$(NORMAL_UNINSTALL)
-	@list='$(winrt64_DATA)'; test -n "$(winrt64dir)" || list=; \
-	files=`for p in $$list; do echo $$p; done | sed -e 's|^.*/||'`; \
-	dir='$(DESTDIR)$(winrt64dir)'; $(am__uninstall_files_from_dir)
 
 ID: $(am__tagged_files)
 	$(am__define_uniq_tagged_files); mkid -fID $$unique
@@ -49074,7 +49030,7 @@ check: $(BUILT_SOURCES)
 	$(MAKE) $(AM_MAKEFLAGS) check-am
 all-am: Makefile $(LIBRARIES) $(DATA) $(HEADERS) config.h
 installdirs:
-	for dir in "$(DESTDIR)$(lib32dir)" "$(DESTDIR)$(lib64dir)" "$(DESTDIR)$(libarm32dir)" "$(DESTDIR)$(crt32dir)" "$(DESTDIR)$(crt64dir)" "$(DESTDIR)$(libsrcdir)" "$(DESTDIR)$(dx32dir)" "$(DESTDIR)$(dx64dir)" "$(DESTDIR)$(lib32dir)" "$(DESTDIR)$(lib64dir)" "$(DESTDIR)$(libarm32dir)" "$(DESTDIR)$(winrt32dir)" "$(DESTDIR)$(winrt64dir)"; do \
+	for dir in "$(DESTDIR)$(lib32dir)" "$(DESTDIR)$(lib64dir)" "$(DESTDIR)$(libarm32dir)" "$(DESTDIR)$(crt32dir)" "$(DESTDIR)$(crt64dir)" "$(DESTDIR)$(libsrcdir)" "$(DESTDIR)$(dx32dir)" "$(DESTDIR)$(dx64dir)" "$(DESTDIR)$(lib32dir)" "$(DESTDIR)$(lib64dir)" "$(DESTDIR)$(libarm32dir)"; do \
 	  test -z "$$dir" || $(MKDIR_P) "$$dir"; \
 	done
 install: $(BUILT_SOURCES)
@@ -49179,8 +49135,7 @@ install-data-am: install-crt32DATA install-crt64DATA \
 	install-dist_libsrcDATA install-dx32DATA install-dx64DATA \
 	install-lib32DATA install-lib32LIBRARIES install-lib64DATA \
 	install-lib64LIBRARIES install-libarm32DATA \
-	install-libarm32LIBRARIES install-winrt32DATA \
-	install-winrt64DATA
+	install-libarm32LIBRARIES
 
 install-dvi: install-dvi-am
 
@@ -49232,8 +49187,7 @@ uninstall-am: uninstall-crt32DATA uninstall-crt64DATA \
 	uninstall-dx64DATA uninstall-lib32DATA \
 	uninstall-lib32LIBRARIES uninstall-lib64DATA \
 	uninstall-lib64LIBRARIES uninstall-libarm32DATA \
-	uninstall-libarm32LIBRARIES uninstall-winrt32DATA \
-	uninstall-winrt64DATA
+	uninstall-libarm32LIBRARIES
 
 .MAKE: all check check-am install install-am install-strip
 
@@ -49255,8 +49209,7 @@ uninstall-am: uninstall-crt32DATA uninstall-crt64DATA \
 	install-lib64LIBRARIES install-libarm32DATA \
 	install-libarm32LIBRARIES install-man install-pdf \
 	install-pdf-am install-ps install-ps-am install-strip \
-	install-winrt32DATA install-winrt64DATA installcheck \
-	installcheck-am installdirs maintainer-clean \
+	installcheck installcheck-am installdirs maintainer-clean \
 	maintainer-clean-generic mostlyclean mostlyclean-compile \
 	mostlyclean-generic pdf pdf-am ps ps-am recheck tags tags-am \
 	uninstall uninstall-am uninstall-crt32DATA uninstall-crt64DATA \
@@ -49264,8 +49217,7 @@ uninstall-am: uninstall-crt32DATA uninstall-crt64DATA \
 	uninstall-dx64DATA uninstall-lib32DATA \
 	uninstall-lib32LIBRARIES uninstall-lib64DATA \
 	uninstall-lib64LIBRARIES uninstall-libarm32DATA \
-	uninstall-libarm32LIBRARIES uninstall-winrt32DATA \
-	uninstall-winrt64DATA
+	uninstall-libarm32LIBRARIES
 
 _libm_dummy.c:
 	echo "static int __attribute__((unused)) __mingw_libm_dummy;" > _libm_dummy.c
@@ -49311,6 +49263,11 @@ lib64/DFP_src_%.dfp.obj: math/DFP/mpdecimal/libmpdec/%.c
 # NB: With older dlltool, the object file members will not have unique
 # names.
 @LIB32_TRUE@lib32/libvfw32.a: lib32/vfw32.mri lib32/libmsvfw32.a lib32/libavifil32.a lib32/libavicap32.a
+@LIB32_TRUE@	rm -f $@
+@LIB32_TRUE@	$(AR) -M < $<
+@LIB32_TRUE@	$(RANLIB) $@
+
+@LIB32_TRUE@lib32/libruntimeobject.a: lib32/runtimeobject.mri lib32/libapi-ms-win-core-winrt-string-l1-1-0.a lib32/libapi-ms-win-core-winrt-l1-1-0.a
 @LIB32_TRUE@	rm -f $@
 @LIB32_TRUE@	$(AR) -M < $<
 @LIB32_TRUE@	$(RANLIB) $@
@@ -49365,6 +49322,11 @@ lib64/DFP_src_%.dfp.obj: math/DFP/mpdecimal/libmpdec/%.c
 # NB: With older dlltool, the object file members will not have unique
 # names.
 @LIB64_TRUE@lib64/libvfw32.a: lib64/vfw32.mri lib64/libmsvfw32.a lib64/libavifil32.a lib64/libavicap32.a
+@LIB64_TRUE@	rm -f $@
+@LIB64_TRUE@	$(AR) -M < $<
+@LIB64_TRUE@	$(RANLIB) $@
+
+@LIB64_TRUE@lib64/libruntimeobject.a: lib64/runtimeobject.mri lib64/libapi-ms-win-core-winrt-string-l1-1-0.a lib64/libapi-ms-win-core-winrt-l1-1-0.a
 @LIB64_TRUE@	rm -f $@
 @LIB64_TRUE@	$(AR) -M < $<
 @LIB64_TRUE@	$(RANLIB) $@
