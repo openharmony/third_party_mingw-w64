@@ -6451,8 +6451,9 @@ src_intrincsarm32 =
 @LIB64_TRUE@	lib64/libwdscore.a lib64/libcryptsp.a \
 @LIB64_TRUE@	lib64/libwdsclient.a lib64/libwdsupgcompl.a \
 @LIB64_TRUE@	lib64/libwdsclientapi.a lib64/libwdsutil.a \
-@LIB64_TRUE@	lib64/libwdsimage.a lib64/libcryptxml.a \
-@LIB64_TRUE@	lib64/libsspicli.a lib64/libd3dcompiler_33.a \
+@LIB64_TRUE@	lib64/libwdsimage.a lib64/libvirtdisk.a \
+@LIB64_TRUE@	lib64/libcryptxml.a lib64/libsspicli.a \
+@LIB64_TRUE@	lib64/libd3dcompiler_33.a \
 @LIB64_TRUE@	lib64/libd3dcompiler_34.a \
 @LIB64_TRUE@	lib64/libd3dcompiler_35.a \
 @LIB64_TRUE@	lib64/libd3dcompiler_36.a \
