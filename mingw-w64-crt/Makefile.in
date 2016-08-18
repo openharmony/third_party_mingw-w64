@@ -2916,7 +2916,8 @@ am__libarm32_libmingwex_a_SOURCES_DIST = crt/dllentry.c crt/dllmain.c \
 	stdio/vscanf.c stdio/vsnprintf.c stdio/vsnprintf_s.c \
 	stdio/vsnwprintf.c stdio/vsscanf.c stdio/vswscanf.c \
 	stdio/vwscanf.c stdio/wtoll.c stdio/mingw_asprintf.c \
-	stdio/mingw_vasprintf.c math/softmath/e_fmod.c \
+	stdio/mingw_vasprintf.c math/arm/exp2.c math/arm/log2.c \
+	math/arm/scalbn.c math/softmath/e_fmod.c \
 	math/softmath/e_fmodf.c math/softmath/e_powf.c \
 	math/softmath/e_pow.c math/softmath/acosf.c \
 	math/softmath/acosh.c math/softmath/acosl.c \
@@ -3306,78 +3307,81 @@ am__objects_86 = crt/libarm32_libmingwex_a-dllentry.$(OBJEXT) \
 	stdio/libarm32_libmingwex_a-wtoll.$(OBJEXT) \
 	stdio/libarm32_libmingwex_a-mingw_asprintf.$(OBJEXT) \
 	stdio/libarm32_libmingwex_a-mingw_vasprintf.$(OBJEXT)
-am__objects_87 = math/softmath/libarm32_libmingwex_a-e_fmod.$(OBJEXT) \
-	math/softmath/libarm32_libmingwex_a-e_fmodf.$(OBJEXT) \
-	math/softmath/libarm32_libmingwex_a-e_powf.$(OBJEXT) \
-	math/softmath/libarm32_libmingwex_a-e_pow.$(OBJEXT) \
-	math/softmath/libarm32_libmingwex_a-acosf.$(OBJEXT) \
-	math/softmath/libarm32_libmingwex_a-acosh.$(OBJEXT) \
-	math/softmath/libarm32_libmingwex_a-acosl.$(OBJEXT) \
-	math/softmath/libarm32_libmingwex_a-acoshf.$(OBJEXT) \
-	math/softmath/libarm32_libmingwex_a-acoshl.$(OBJEXT) \
-	math/softmath/libarm32_libmingwex_a-asinf.$(OBJEXT) \
-	math/softmath/libarm32_libmingwex_a-asinh.$(OBJEXT) \
-	math/softmath/libarm32_libmingwex_a-asinl.$(OBJEXT) \
-	math/softmath/libarm32_libmingwex_a-asinhf.$(OBJEXT) \
-	math/softmath/libarm32_libmingwex_a-asinhl.$(OBJEXT) \
-	math/softmath/libarm32_libmingwex_a-atan2f.$(OBJEXT) \
-	math/softmath/libarm32_libmingwex_a-atan2l.$(OBJEXT) \
-	math/softmath/libarm32_libmingwex_a-atanf.$(OBJEXT) \
-	math/softmath/libarm32_libmingwex_a-atanh.$(OBJEXT) \
-	math/softmath/libarm32_libmingwex_a-atanl.$(OBJEXT) \
-	math/softmath/libarm32_libmingwex_a-atanhf.$(OBJEXT) \
-	math/softmath/libarm32_libmingwex_a-atanhl.$(OBJEXT) \
-	math/softmath/libarm32_libmingwex_a-cos.$(OBJEXT) \
-	math/softmath/libarm32_libmingwex_a-cosf.$(OBJEXT) \
-	math/softmath/libarm32_libmingwex_a-cosl.$(OBJEXT) \
-	math/softmath/libarm32_libmingwex_a-exp.$(OBJEXT) \
-	math/softmath/libarm32_libmingwex_a-expl.$(OBJEXT) \
-	math/softmath/libarm32_libmingwex_a-exp2.$(OBJEXT) \
-	math/softmath/libarm32_libmingwex_a-exp2f.$(OBJEXT) \
-	math/softmath/libarm32_libmingwex_a-exp2l.$(OBJEXT) \
-	math/softmath/libarm32_libmingwex_a-expm1.$(OBJEXT) \
-	math/softmath/libarm32_libmingwex_a-expm1f.$(OBJEXT) \
-	math/softmath/libarm32_libmingwex_a-expm1l.$(OBJEXT) \
-	math/softmath/libarm32_libmingwex_a-fmod.$(OBJEXT) \
-	math/softmath/libarm32_libmingwex_a-fmodf.$(OBJEXT) \
-	math/softmath/libarm32_libmingwex_a-fmodl.$(OBJEXT) \
-	math/softmath/libarm32_libmingwex_a-frexpl.$(OBJEXT) \
-	math/softmath/libarm32_libmingwex_a-ilogb.$(OBJEXT) \
-	math/softmath/libarm32_libmingwex_a-ilogbf.$(OBJEXT) \
-	math/softmath/libarm32_libmingwex_a-ilogbl.$(OBJEXT) \
-	math/softmath/libarm32_libmingwex_a-ldexp.$(OBJEXT) \
-	math/softmath/libarm32_libmingwex_a-ldexpl.$(OBJEXT) \
-	math/softmath/libarm32_libmingwex_a-log.$(OBJEXT) \
-	math/softmath/libarm32_libmingwex_a-log10l.$(OBJEXT) \
-	math/softmath/libarm32_libmingwex_a-log1p.$(OBJEXT) \
-	math/softmath/libarm32_libmingwex_a-log1pf.$(OBJEXT) \
-	math/softmath/libarm32_libmingwex_a-log1pl.$(OBJEXT) \
-	math/softmath/libarm32_libmingwex_a-log2.$(OBJEXT) \
-	math/softmath/libarm32_libmingwex_a-log2f.$(OBJEXT) \
-	math/softmath/libarm32_libmingwex_a-log2l.$(OBJEXT) \
-	math/softmath/libarm32_libmingwex_a-logb.$(OBJEXT) \
-	math/softmath/libarm32_libmingwex_a-logbf.$(OBJEXT) \
-	math/softmath/libarm32_libmingwex_a-logbl.$(OBJEXT) \
-	math/softmath/libarm32_libmingwex_a-logl.$(OBJEXT) \
-	math/softmath/libarm32_libmingwex_a-pow.$(OBJEXT) \
-	math/softmath/libarm32_libmingwex_a-powl.$(OBJEXT) \
-	math/softmath/libarm32_libmingwex_a-remainder.$(OBJEXT) \
-	math/softmath/libarm32_libmingwex_a-remainderf.$(OBJEXT) \
-	math/softmath/libarm32_libmingwex_a-remainderl.$(OBJEXT) \
-	math/softmath/libarm32_libmingwex_a-remquo.$(OBJEXT) \
-	math/softmath/libarm32_libmingwex_a-remquof.$(OBJEXT) \
-	math/softmath/libarm32_libmingwex_a-remquol.$(OBJEXT) \
-	math/softmath/libarm32_libmingwex_a-scalbn.$(OBJEXT) \
-	math/softmath/libarm32_libmingwex_a-scalbnf.$(OBJEXT) \
-	math/softmath/libarm32_libmingwex_a-scalbnl.$(OBJEXT) \
-	math/softmath/libarm32_libmingwex_a-sin.$(OBJEXT) \
-	math/softmath/libarm32_libmingwex_a-sincos.$(OBJEXT) \
-	math/softmath/libarm32_libmingwex_a-sincosf.$(OBJEXT) \
-	math/softmath/libarm32_libmingwex_a-sincosl.$(OBJEXT) \
-	math/softmath/libarm32_libmingwex_a-sinf.$(OBJEXT) \
-	math/softmath/libarm32_libmingwex_a-sinl.$(OBJEXT) \
-	math/softmath/libarm32_libmingwex_a-tanf.$(OBJEXT) \
-	math/softmath/libarm32_libmingwex_a-tanl.$(OBJEXT)
+@ENABLE_SOFTMATH_FALSE@am__objects_87 = math/arm/libarm32_libmingwex_a-exp2.$(OBJEXT) \
+@ENABLE_SOFTMATH_FALSE@	math/arm/libarm32_libmingwex_a-log2.$(OBJEXT) \
+@ENABLE_SOFTMATH_FALSE@	math/arm/libarm32_libmingwex_a-scalbn.$(OBJEXT)
+@ENABLE_SOFTMATH_TRUE@am__objects_87 = math/softmath/libarm32_libmingwex_a-e_fmod.$(OBJEXT) \
+@ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-e_fmodf.$(OBJEXT) \
+@ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-e_powf.$(OBJEXT) \
+@ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-e_pow.$(OBJEXT) \
+@ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-acosf.$(OBJEXT) \
+@ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-acosh.$(OBJEXT) \
+@ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-acosl.$(OBJEXT) \
+@ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-acoshf.$(OBJEXT) \
+@ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-acoshl.$(OBJEXT) \
+@ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-asinf.$(OBJEXT) \
+@ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-asinh.$(OBJEXT) \
+@ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-asinl.$(OBJEXT) \
+@ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-asinhf.$(OBJEXT) \
+@ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-asinhl.$(OBJEXT) \
+@ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-atan2f.$(OBJEXT) \
+@ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-atan2l.$(OBJEXT) \
+@ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-atanf.$(OBJEXT) \
+@ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-atanh.$(OBJEXT) \
+@ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-atanl.$(OBJEXT) \
+@ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-atanhf.$(OBJEXT) \
+@ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-atanhl.$(OBJEXT) \
+@ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-cos.$(OBJEXT) \
+@ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-cosf.$(OBJEXT) \
+@ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-cosl.$(OBJEXT) \
+@ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-exp.$(OBJEXT) \
+@ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-expl.$(OBJEXT) \
+@ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-exp2.$(OBJEXT) \
+@ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-exp2f.$(OBJEXT) \
+@ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-exp2l.$(OBJEXT) \
+@ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-expm1.$(OBJEXT) \
+@ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-expm1f.$(OBJEXT) \
+@ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-expm1l.$(OBJEXT) \
+@ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-fmod.$(OBJEXT) \
+@ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-fmodf.$(OBJEXT) \
+@ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-fmodl.$(OBJEXT) \
+@ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-frexpl.$(OBJEXT) \
+@ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-ilogb.$(OBJEXT) \
+@ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-ilogbf.$(OBJEXT) \
+@ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-ilogbl.$(OBJEXT) \
+@ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-ldexp.$(OBJEXT) \
+@ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-ldexpl.$(OBJEXT) \
+@ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-log.$(OBJEXT) \
+@ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-log10l.$(OBJEXT) \
+@ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-log1p.$(OBJEXT) \
+@ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-log1pf.$(OBJEXT) \
+@ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-log1pl.$(OBJEXT) \
+@ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-log2.$(OBJEXT) \
+@ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-log2f.$(OBJEXT) \
+@ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-log2l.$(OBJEXT) \
+@ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-logb.$(OBJEXT) \
+@ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-logbf.$(OBJEXT) \
+@ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-logbl.$(OBJEXT) \
+@ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-logl.$(OBJEXT) \
+@ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-pow.$(OBJEXT) \
+@ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-powl.$(OBJEXT) \
+@ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-remainder.$(OBJEXT) \
+@ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-remainderf.$(OBJEXT) \
+@ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-remainderl.$(OBJEXT) \
+@ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-remquo.$(OBJEXT) \
+@ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-remquof.$(OBJEXT) \
+@ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-remquol.$(OBJEXT) \
+@ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-scalbn.$(OBJEXT) \
+@ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-scalbnf.$(OBJEXT) \
+@ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-scalbnl.$(OBJEXT) \
+@ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-sin.$(OBJEXT) \
+@ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-sincos.$(OBJEXT) \
+@ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-sincosf.$(OBJEXT) \
+@ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-sincosl.$(OBJEXT) \
+@ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-sinf.$(OBJEXT) \
+@ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-sinl.$(OBJEXT) \
+@ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-tanf.$(OBJEXT) \
+@ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-tanl.$(OBJEXT)
 @ENABLE_DFP_TRUE@am__objects_88 = math/DFP/libarm32_libmingwex_a-__fpclassifyd32.$(OBJEXT) \
 @ENABLE_DFP_TRUE@	math/DFP/libarm32_libmingwex_a-__fpclassifyd64.$(OBJEXT) \
 @ENABLE_DFP_TRUE@	math/DFP/libarm32_libmingwex_a-__fpclassifyd128.$(OBJEXT) \
@@ -5354,25 +5358,28 @@ src_libmingwex32 = \
   math/remquol.S            math/scalbn.S             math/scalbnf.S            math/scalbnl.S            math/sin.c                \
   math/sinf.c               math/sinl.c               math/sinl_internal.S      math/tanf.c               math/tanl.S
 
+@ENABLE_SOFTMATH_FALSE@src_libmingwexarm32 = \
+@ENABLE_SOFTMATH_FALSE@  math/arm/exp2.c           math/arm/log2.c           math/arm/scalbn.c
+
 
 # these only go into the ARM32 version:
-src_libmingwexarm32 = \
-  math/softmath/e_fmod.c    math/softmath/e_fmodf.c   math/softmath/e_powf.c    math/softmath/e_pow.c \
-  math/softmath/acosf.c     math/softmath/acosh.c     math/softmath/acosl.c     math/softmath/acoshf.c    math/softmath/acoshl.c    \
-  math/softmath/asinf.c     math/softmath/asinh.c     math/softmath/asinl.c     math/softmath/asinhf.c    math/softmath/asinhl.c    \
-  math/softmath/atan2f.c    math/softmath/atan2l.c    math/softmath/atanf.c     math/softmath/atanh.c     math/softmath/atanl.c     \
-  math/softmath/atanhf.c    math/softmath/atanhl.c    math/softmath/cos.c       math/softmath/cosf.c      math/softmath/cosl.c      \
-  math/softmath/exp.c       math/softmath/expl.c      math/softmath/exp2.c      math/softmath/exp2f.c     math/softmath/exp2l.c     \
-  math/softmath/expm1.c     math/softmath/expm1f.c    math/softmath/expm1l.c    math/softmath/fmod.c      math/softmath/fmodf.c     \
-  math/softmath/fmodl.c     math/softmath/frexpl.c    math/softmath/ilogb.c     math/softmath/ilogbf.c    math/softmath/ilogbl.c    \
-  math/softmath/ldexp.c     math/softmath/ldexpl.c    math/softmath/log.c       math/softmath/log10l.c    math/softmath/log1p.c     \
-  math/softmath/log1pf.c    math/softmath/log1pl.c    math/softmath/log2.c      math/softmath/log2f.c     math/softmath/log2l.c     \
-  math/softmath/logb.c      math/softmath/logbf.c     math/softmath/logbl.c     math/softmath/logl.c      math/softmath/pow.c       \
-  math/softmath/powl.c      \
-  math/softmath/remainder.c math/softmath/remainderf.c math/softmath/remainderl.c \
-  math/softmath/remquo.c    math/softmath/remquof.c   math/softmath/remquol.c   math/softmath/scalbn.c    math/softmath/scalbnf.c   \
-  math/softmath/scalbnl.c   math/softmath/sin.c       math/softmath/sincos.c    math/softmath/sincosf.c   math/softmath/sincosl.c   \
-  math/softmath/sinf.c      math/softmath/sinl.c      math/softmath/tanf.c      math/softmath/tanl.c
+@ENABLE_SOFTMATH_TRUE@src_libmingwexarm32 = \
+@ENABLE_SOFTMATH_TRUE@  math/softmath/e_fmod.c    math/softmath/e_fmodf.c   math/softmath/e_powf.c    math/softmath/e_pow.c \
+@ENABLE_SOFTMATH_TRUE@  math/softmath/acosf.c     math/softmath/acosh.c     math/softmath/acosl.c     math/softmath/acoshf.c    math/softmath/acoshl.c    \
+@ENABLE_SOFTMATH_TRUE@  math/softmath/asinf.c     math/softmath/asinh.c     math/softmath/asinl.c     math/softmath/asinhf.c    math/softmath/asinhl.c    \
+@ENABLE_SOFTMATH_TRUE@  math/softmath/atan2f.c    math/softmath/atan2l.c    math/softmath/atanf.c     math/softmath/atanh.c     math/softmath/atanl.c     \
+@ENABLE_SOFTMATH_TRUE@  math/softmath/atanhf.c    math/softmath/atanhl.c    math/softmath/cos.c       math/softmath/cosf.c      math/softmath/cosl.c      \
+@ENABLE_SOFTMATH_TRUE@  math/softmath/exp.c       math/softmath/expl.c      math/softmath/exp2.c      math/softmath/exp2f.c     math/softmath/exp2l.c     \
+@ENABLE_SOFTMATH_TRUE@  math/softmath/expm1.c     math/softmath/expm1f.c    math/softmath/expm1l.c    math/softmath/fmod.c      math/softmath/fmodf.c     \
+@ENABLE_SOFTMATH_TRUE@  math/softmath/fmodl.c     math/softmath/frexpl.c    math/softmath/ilogb.c     math/softmath/ilogbf.c    math/softmath/ilogbl.c    \
+@ENABLE_SOFTMATH_TRUE@  math/softmath/ldexp.c     math/softmath/ldexpl.c    math/softmath/log.c       math/softmath/log10l.c    math/softmath/log1p.c     \
+@ENABLE_SOFTMATH_TRUE@  math/softmath/log1pf.c    math/softmath/log1pl.c    math/softmath/log2.c      math/softmath/log2f.c     math/softmath/log2l.c     \
+@ENABLE_SOFTMATH_TRUE@  math/softmath/logb.c      math/softmath/logbf.c     math/softmath/logbl.c     math/softmath/logl.c      math/softmath/pow.c       \
+@ENABLE_SOFTMATH_TRUE@  math/softmath/powl.c      \
+@ENABLE_SOFTMATH_TRUE@  math/softmath/remainder.c math/softmath/remainderf.c math/softmath/remainderl.c \
+@ENABLE_SOFTMATH_TRUE@  math/softmath/remquo.c    math/softmath/remquof.c   math/softmath/remquol.c   math/softmath/scalbn.c    math/softmath/scalbnf.c   \
+@ENABLE_SOFTMATH_TRUE@  math/softmath/scalbnl.c   math/softmath/sin.c       math/softmath/sincos.c    math/softmath/sincosf.c   math/softmath/sincosl.c   \
+@ENABLE_SOFTMATH_TRUE@  math/softmath/sinf.c      math/softmath/sinl.c      math/softmath/tanf.c      math/softmath/tanl.c
 
 
 # These intrinsics are target independent:
@@ -12048,6 +12055,18 @@ stdio/libarm32_libmingwex_a-mingw_asprintf.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
 stdio/libarm32_libmingwex_a-mingw_vasprintf.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
+math/arm/$(am__dirstamp):
+	@$(MKDIR_P) math/arm
+	@: > math/arm/$(am__dirstamp)
+math/arm/$(DEPDIR)/$(am__dirstamp):
+	@$(MKDIR_P) math/arm/$(DEPDIR)
+	@: > math/arm/$(DEPDIR)/$(am__dirstamp)
+math/arm/libarm32_libmingwex_a-exp2.$(OBJEXT):  \
+	math/arm/$(am__dirstamp) math/arm/$(DEPDIR)/$(am__dirstamp)
+math/arm/libarm32_libmingwex_a-log2.$(OBJEXT):  \
+	math/arm/$(am__dirstamp) math/arm/$(DEPDIR)/$(am__dirstamp)
+math/arm/libarm32_libmingwex_a-scalbn.$(OBJEXT):  \
+	math/arm/$(am__dirstamp) math/arm/$(DEPDIR)/$(am__dirstamp)
 math/softmath/$(am__dirstamp):
 	@$(MKDIR_P) math/softmath
 	@: > math/softmath/$(am__dirstamp)
@@ -13599,6 +13618,7 @@ mostlyclean-compile:
 	-rm -f libsrc/wspiapi/*.$(OBJEXT)
 	-rm -f math/*.$(OBJEXT)
 	-rm -f math/DFP/*.$(OBJEXT)
+	-rm -f math/arm/*.$(OBJEXT)
 	-rm -f math/softmath/*.$(OBJEXT)
 	-rm -f misc/*.$(OBJEXT)
 	-rm -f profile/*.$(OBJEXT)
@@ -14970,6 +14990,9 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@math/DFP/$(DEPDIR)/libarm32_libmingwex_a-isinfd128.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/DFP/$(DEPDIR)/libarm32_libmingwex_a-isinfd32.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/DFP/$(DEPDIR)/libarm32_libmingwex_a-isinfd64.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@math/arm/$(DEPDIR)/libarm32_libmingwex_a-exp2.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@math/arm/$(DEPDIR)/libarm32_libmingwex_a-log2.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@math/arm/$(DEPDIR)/libarm32_libmingwex_a-scalbn.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/softmath/$(DEPDIR)/libarm32_libmingwex_a-acosf.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/softmath/$(DEPDIR)/libarm32_libmingwex_a-acosh.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/softmath/$(DEPDIR)/libarm32_libmingwex_a-acoshf.Po@am__quote@
@@ -42221,6 +42244,48 @@ stdio/libarm32_libmingwex_a-mingw_vasprintf.obj: stdio/mingw_vasprintf.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/libarm32_libmingwex_a-mingw_vasprintf.obj `if test -f 'stdio/mingw_vasprintf.c'; then $(CYGPATH_W) 'stdio/mingw_vasprintf.c'; else $(CYGPATH_W) '$(srcdir)/stdio/mingw_vasprintf.c'; fi`
 
+math/arm/libarm32_libmingwex_a-exp2.o: math/arm/exp2.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/arm/libarm32_libmingwex_a-exp2.o -MD -MP -MF math/arm/$(DEPDIR)/libarm32_libmingwex_a-exp2.Tpo -c -o math/arm/libarm32_libmingwex_a-exp2.o `test -f 'math/arm/exp2.c' || echo '$(srcdir)/'`math/arm/exp2.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/arm/$(DEPDIR)/libarm32_libmingwex_a-exp2.Tpo math/arm/$(DEPDIR)/libarm32_libmingwex_a-exp2.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/arm/exp2.c' object='math/arm/libarm32_libmingwex_a-exp2.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/arm/libarm32_libmingwex_a-exp2.o `test -f 'math/arm/exp2.c' || echo '$(srcdir)/'`math/arm/exp2.c
+
+math/arm/libarm32_libmingwex_a-exp2.obj: math/arm/exp2.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/arm/libarm32_libmingwex_a-exp2.obj -MD -MP -MF math/arm/$(DEPDIR)/libarm32_libmingwex_a-exp2.Tpo -c -o math/arm/libarm32_libmingwex_a-exp2.obj `if test -f 'math/arm/exp2.c'; then $(CYGPATH_W) 'math/arm/exp2.c'; else $(CYGPATH_W) '$(srcdir)/math/arm/exp2.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/arm/$(DEPDIR)/libarm32_libmingwex_a-exp2.Tpo math/arm/$(DEPDIR)/libarm32_libmingwex_a-exp2.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/arm/exp2.c' object='math/arm/libarm32_libmingwex_a-exp2.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/arm/libarm32_libmingwex_a-exp2.obj `if test -f 'math/arm/exp2.c'; then $(CYGPATH_W) 'math/arm/exp2.c'; else $(CYGPATH_W) '$(srcdir)/math/arm/exp2.c'; fi`
+
+math/arm/libarm32_libmingwex_a-log2.o: math/arm/log2.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/arm/libarm32_libmingwex_a-log2.o -MD -MP -MF math/arm/$(DEPDIR)/libarm32_libmingwex_a-log2.Tpo -c -o math/arm/libarm32_libmingwex_a-log2.o `test -f 'math/arm/log2.c' || echo '$(srcdir)/'`math/arm/log2.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/arm/$(DEPDIR)/libarm32_libmingwex_a-log2.Tpo math/arm/$(DEPDIR)/libarm32_libmingwex_a-log2.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/arm/log2.c' object='math/arm/libarm32_libmingwex_a-log2.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/arm/libarm32_libmingwex_a-log2.o `test -f 'math/arm/log2.c' || echo '$(srcdir)/'`math/arm/log2.c
+
+math/arm/libarm32_libmingwex_a-log2.obj: math/arm/log2.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/arm/libarm32_libmingwex_a-log2.obj -MD -MP -MF math/arm/$(DEPDIR)/libarm32_libmingwex_a-log2.Tpo -c -o math/arm/libarm32_libmingwex_a-log2.obj `if test -f 'math/arm/log2.c'; then $(CYGPATH_W) 'math/arm/log2.c'; else $(CYGPATH_W) '$(srcdir)/math/arm/log2.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/arm/$(DEPDIR)/libarm32_libmingwex_a-log2.Tpo math/arm/$(DEPDIR)/libarm32_libmingwex_a-log2.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/arm/log2.c' object='math/arm/libarm32_libmingwex_a-log2.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/arm/libarm32_libmingwex_a-log2.obj `if test -f 'math/arm/log2.c'; then $(CYGPATH_W) 'math/arm/log2.c'; else $(CYGPATH_W) '$(srcdir)/math/arm/log2.c'; fi`
+
+math/arm/libarm32_libmingwex_a-scalbn.o: math/arm/scalbn.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/arm/libarm32_libmingwex_a-scalbn.o -MD -MP -MF math/arm/$(DEPDIR)/libarm32_libmingwex_a-scalbn.Tpo -c -o math/arm/libarm32_libmingwex_a-scalbn.o `test -f 'math/arm/scalbn.c' || echo '$(srcdir)/'`math/arm/scalbn.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/arm/$(DEPDIR)/libarm32_libmingwex_a-scalbn.Tpo math/arm/$(DEPDIR)/libarm32_libmingwex_a-scalbn.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/arm/scalbn.c' object='math/arm/libarm32_libmingwex_a-scalbn.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/arm/libarm32_libmingwex_a-scalbn.o `test -f 'math/arm/scalbn.c' || echo '$(srcdir)/'`math/arm/scalbn.c
+
+math/arm/libarm32_libmingwex_a-scalbn.obj: math/arm/scalbn.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/arm/libarm32_libmingwex_a-scalbn.obj -MD -MP -MF math/arm/$(DEPDIR)/libarm32_libmingwex_a-scalbn.Tpo -c -o math/arm/libarm32_libmingwex_a-scalbn.obj `if test -f 'math/arm/scalbn.c'; then $(CYGPATH_W) 'math/arm/scalbn.c'; else $(CYGPATH_W) '$(srcdir)/math/arm/scalbn.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/arm/$(DEPDIR)/libarm32_libmingwex_a-scalbn.Tpo math/arm/$(DEPDIR)/libarm32_libmingwex_a-scalbn.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/arm/scalbn.c' object='math/arm/libarm32_libmingwex_a-scalbn.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/arm/libarm32_libmingwex_a-scalbn.obj `if test -f 'math/arm/scalbn.c'; then $(CYGPATH_W) 'math/arm/scalbn.c'; else $(CYGPATH_W) '$(srcdir)/math/arm/scalbn.c'; fi`
+
 math/softmath/libarm32_libmingwex_a-e_fmod.o: math/softmath/e_fmod.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/softmath/libarm32_libmingwex_a-e_fmod.o -MD -MP -MF math/softmath/$(DEPDIR)/libarm32_libmingwex_a-e_fmod.Tpo -c -o math/softmath/libarm32_libmingwex_a-e_fmod.o `test -f 'math/softmath/e_fmod.c' || echo '$(srcdir)/'`math/softmath/e_fmod.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/softmath/$(DEPDIR)/libarm32_libmingwex_a-e_fmod.Tpo math/softmath/$(DEPDIR)/libarm32_libmingwex_a-e_fmod.Po
@@ -48945,6 +49010,8 @@ distclean-generic:
 	-rm -f math/$(am__dirstamp)
 	-rm -f math/DFP/$(DEPDIR)/$(am__dirstamp)
 	-rm -f math/DFP/$(am__dirstamp)
+	-rm -f math/arm/$(DEPDIR)/$(am__dirstamp)
+	-rm -f math/arm/$(am__dirstamp)
 	-rm -f math/softmath/$(DEPDIR)/$(am__dirstamp)
 	-rm -f math/softmath/$(am__dirstamp)
 	-rm -f misc/$(DEPDIR)/$(am__dirstamp)
@@ -48974,7 +49041,7 @@ clean-am: clean-checkLIBRARIES clean-checkPROGRAMS clean-generic \
 
 distclean: distclean-am
 	-rm -f $(am__CONFIG_DISTCLEAN_FILES)
-	-rm -rf ./$(DEPDIR) complex/$(DEPDIR) crt/$(DEPDIR) gdtoa/$(DEPDIR) intrincs/$(DEPDIR) libsrc/$(DEPDIR) libsrc/ws2tcpip/$(DEPDIR) libsrc/wspiapi/$(DEPDIR) math/$(DEPDIR) math/DFP/$(DEPDIR) math/softmath/$(DEPDIR) misc/$(DEPDIR) profile/$(DEPDIR) secapi/$(DEPDIR) stdio/$(DEPDIR) testcases/$(DEPDIR) testcases/complex/$(DEPDIR)
+	-rm -rf ./$(DEPDIR) complex/$(DEPDIR) crt/$(DEPDIR) gdtoa/$(DEPDIR) intrincs/$(DEPDIR) libsrc/$(DEPDIR) libsrc/ws2tcpip/$(DEPDIR) libsrc/wspiapi/$(DEPDIR) math/$(DEPDIR) math/DFP/$(DEPDIR) math/arm/$(DEPDIR) math/softmath/$(DEPDIR) misc/$(DEPDIR) profile/$(DEPDIR) secapi/$(DEPDIR) stdio/$(DEPDIR) testcases/$(DEPDIR) testcases/complex/$(DEPDIR)
 	-rm -f Makefile
 distclean-am: clean-am distclean-compile distclean-generic \
 	distclean-hdr distclean-tags
@@ -49026,7 +49093,7 @@ installcheck-am:
 maintainer-clean: maintainer-clean-am
 	-rm -f $(am__CONFIG_DISTCLEAN_FILES)
 	-rm -rf $(top_srcdir)/autom4te.cache
-	-rm -rf ./$(DEPDIR) complex/$(DEPDIR) crt/$(DEPDIR) gdtoa/$(DEPDIR) intrincs/$(DEPDIR) libsrc/$(DEPDIR) libsrc/ws2tcpip/$(DEPDIR) libsrc/wspiapi/$(DEPDIR) math/$(DEPDIR) math/DFP/$(DEPDIR) math/softmath/$(DEPDIR) misc/$(DEPDIR) profile/$(DEPDIR) secapi/$(DEPDIR) stdio/$(DEPDIR) testcases/$(DEPDIR) testcases/complex/$(DEPDIR)
+	-rm -rf ./$(DEPDIR) complex/$(DEPDIR) crt/$(DEPDIR) gdtoa/$(DEPDIR) intrincs/$(DEPDIR) libsrc/$(DEPDIR) libsrc/ws2tcpip/$(DEPDIR) libsrc/wspiapi/$(DEPDIR) math/$(DEPDIR) math/DFP/$(DEPDIR) math/arm/$(DEPDIR) math/softmath/$(DEPDIR) misc/$(DEPDIR) profile/$(DEPDIR) secapi/$(DEPDIR) stdio/$(DEPDIR) testcases/$(DEPDIR) testcases/complex/$(DEPDIR)
 	-rm -f Makefile
 maintainer-clean-am: distclean-am maintainer-clean-generic
 
