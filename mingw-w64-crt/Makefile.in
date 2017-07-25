@@ -1276,8 +1276,9 @@ am__lib32_libuuid_a_SOURCES_DIST = libsrc/ativscp-uuid.c \
 	libsrc/ocidl-uuid.c libsrc/oleacc-uuid.c \
 	libsrc/olectlid-uuid.c libsrc/oleidl-uuid.c \
 	libsrc/power-uuid.c libsrc/powrprof-uuid.c \
-	libsrc/usbcamdi-uuid.c libsrc/usbiodef-uuid.c libsrc/uuid.c \
-	libsrc/vds-uuid.c libsrc/virtdisk-uuid.c libsrc/wia-uuid.c
+	libsrc/uianimation-uuid.c libsrc/usbcamdi-uuid.c \
+	libsrc/usbiodef-uuid.c libsrc/uuid.c libsrc/vds-uuid.c \
+	libsrc/virtdisk-uuid.c libsrc/wia-uuid.c
 am__objects_33 = libsrc/lib32_libuuid_a-ativscp-uuid.$(OBJEXT) \
 	libsrc/lib32_libuuid_a-atsmedia-uuid.$(OBJEXT) \
 	libsrc/lib32_libuuid_a-bth-uuid.$(OBJEXT) \
@@ -1314,6 +1315,7 @@ am__objects_33 = libsrc/lib32_libuuid_a-ativscp-uuid.$(OBJEXT) \
 	libsrc/lib32_libuuid_a-oleidl-uuid.$(OBJEXT) \
 	libsrc/lib32_libuuid_a-power-uuid.$(OBJEXT) \
 	libsrc/lib32_libuuid_a-powrprof-uuid.$(OBJEXT) \
+	libsrc/lib32_libuuid_a-uianimation-uuid.$(OBJEXT) \
 	libsrc/lib32_libuuid_a-usbcamdi-uuid.$(OBJEXT) \
 	libsrc/lib32_libuuid_a-usbiodef-uuid.$(OBJEXT) \
 	libsrc/lib32_libuuid_a-uuid.$(OBJEXT) \
@@ -2442,8 +2444,9 @@ am__lib64_libuuid_a_SOURCES_DIST = libsrc/ativscp-uuid.c \
 	libsrc/ocidl-uuid.c libsrc/oleacc-uuid.c \
 	libsrc/olectlid-uuid.c libsrc/oleidl-uuid.c \
 	libsrc/power-uuid.c libsrc/powrprof-uuid.c \
-	libsrc/usbcamdi-uuid.c libsrc/usbiodef-uuid.c libsrc/uuid.c \
-	libsrc/vds-uuid.c libsrc/virtdisk-uuid.c libsrc/wia-uuid.c
+	libsrc/uianimation-uuid.c libsrc/usbcamdi-uuid.c \
+	libsrc/usbiodef-uuid.c libsrc/uuid.c libsrc/vds-uuid.c \
+	libsrc/virtdisk-uuid.c libsrc/wia-uuid.c
 am__objects_68 = libsrc/lib64_libuuid_a-ativscp-uuid.$(OBJEXT) \
 	libsrc/lib64_libuuid_a-atsmedia-uuid.$(OBJEXT) \
 	libsrc/lib64_libuuid_a-bth-uuid.$(OBJEXT) \
@@ -2480,6 +2483,7 @@ am__objects_68 = libsrc/lib64_libuuid_a-ativscp-uuid.$(OBJEXT) \
 	libsrc/lib64_libuuid_a-oleidl-uuid.$(OBJEXT) \
 	libsrc/lib64_libuuid_a-power-uuid.$(OBJEXT) \
 	libsrc/lib64_libuuid_a-powrprof-uuid.$(OBJEXT) \
+	libsrc/lib64_libuuid_a-uianimation-uuid.$(OBJEXT) \
 	libsrc/lib64_libuuid_a-usbcamdi-uuid.$(OBJEXT) \
 	libsrc/lib64_libuuid_a-usbiodef-uuid.$(OBJEXT) \
 	libsrc/lib64_libuuid_a-uuid.$(OBJEXT) \
@@ -3562,8 +3566,9 @@ am__libarm32_libuuid_a_SOURCES_DIST = libsrc/ativscp-uuid.c \
 	libsrc/ocidl-uuid.c libsrc/oleacc-uuid.c \
 	libsrc/olectlid-uuid.c libsrc/oleidl-uuid.c \
 	libsrc/power-uuid.c libsrc/powrprof-uuid.c \
-	libsrc/usbcamdi-uuid.c libsrc/usbiodef-uuid.c libsrc/uuid.c \
-	libsrc/vds-uuid.c libsrc/virtdisk-uuid.c libsrc/wia-uuid.c
+	libsrc/uianimation-uuid.c libsrc/usbcamdi-uuid.c \
+	libsrc/usbiodef-uuid.c libsrc/uuid.c libsrc/vds-uuid.c \
+	libsrc/virtdisk-uuid.c libsrc/wia-uuid.c
 am__objects_102 = libsrc/libarm32_libuuid_a-ativscp-uuid.$(OBJEXT) \
 	libsrc/libarm32_libuuid_a-atsmedia-uuid.$(OBJEXT) \
 	libsrc/libarm32_libuuid_a-bth-uuid.$(OBJEXT) \
@@ -3600,6 +3605,7 @@ am__objects_102 = libsrc/libarm32_libuuid_a-ativscp-uuid.$(OBJEXT) \
 	libsrc/libarm32_libuuid_a-oleidl-uuid.$(OBJEXT) \
 	libsrc/libarm32_libuuid_a-power-uuid.$(OBJEXT) \
 	libsrc/libarm32_libuuid_a-powrprof-uuid.$(OBJEXT) \
+	libsrc/libarm32_libuuid_a-uianimation-uuid.$(OBJEXT) \
 	libsrc/libarm32_libuuid_a-usbcamdi-uuid.$(OBJEXT) \
 	libsrc/libarm32_libuuid_a-usbiodef-uuid.$(OBJEXT) \
 	libsrc/libarm32_libuuid_a-uuid.$(OBJEXT) \
@@ -5158,15 +5164,15 @@ src_libstrmiids = libsrc/strmiids.c
 src_libmingwthrd = libsrc/mingwthrd_mt.c
 src_libgdiplus = libsrc/gdiplus.c
 src_libuuid = \
-  libsrc/ativscp-uuid.c   libsrc/atsmedia-uuid.c  libsrc/bth-uuid.c       libsrc/cguid-uuid.c     libsrc/comcat-uuid.c  \
-  libsrc/devguid.c        libsrc/docobj-uuid.c    libsrc/dxva-uuid.c      libsrc/exdisp-uuid.c    libsrc/extras-uuid.c  \
-  libsrc/fwp-uuid.c       libsrc/guid_nul.c       libsrc/hlguids-uuid.c   libsrc/hlink-uuid.c     libsrc/mlang-uuid.c   \
-  libsrc/msctf-uuid.c     libsrc/mshtmhst-uuid.c  libsrc/mshtml-uuid.c    libsrc/msxml-uuid.c     libsrc/netcon-uuid.c  \
-  libsrc/ntddkbd-uuid.c   libsrc/ntddmou-uuid.c   libsrc/ntddpar-uuid.c   libsrc/ntddscsi-uuid.c  libsrc/ntddser-uuid.c \
-  libsrc/ntddstor-uuid.c  libsrc/ntddvdeo-uuid.c  libsrc/oaidl-uuid.c     libsrc/objidl-uuid.c    libsrc/objsafe-uuid.c \
-  libsrc/ocidl-uuid.c     libsrc/oleacc-uuid.c    libsrc/olectlid-uuid.c  libsrc/oleidl-uuid.c    libsrc/power-uuid.c   \
-  libsrc/powrprof-uuid.c  libsrc/usbcamdi-uuid.c  libsrc/usbiodef-uuid.c  libsrc/uuid.c         \
-  libsrc/vds-uuid.c       libsrc/virtdisk-uuid.c  libsrc/wia-uuid.c
+  libsrc/ativscp-uuid.c   libsrc/atsmedia-uuid.c    libsrc/bth-uuid.c       libsrc/cguid-uuid.c     libsrc/comcat-uuid.c  \
+  libsrc/devguid.c        libsrc/docobj-uuid.c      libsrc/dxva-uuid.c      libsrc/exdisp-uuid.c    libsrc/extras-uuid.c  \
+  libsrc/fwp-uuid.c       libsrc/guid_nul.c         libsrc/hlguids-uuid.c   libsrc/hlink-uuid.c     libsrc/mlang-uuid.c   \
+  libsrc/msctf-uuid.c     libsrc/mshtmhst-uuid.c    libsrc/mshtml-uuid.c    libsrc/msxml-uuid.c     libsrc/netcon-uuid.c  \
+  libsrc/ntddkbd-uuid.c   libsrc/ntddmou-uuid.c     libsrc/ntddpar-uuid.c   libsrc/ntddscsi-uuid.c  libsrc/ntddser-uuid.c \
+  libsrc/ntddstor-uuid.c  libsrc/ntddvdeo-uuid.c    libsrc/oaidl-uuid.c     libsrc/objidl-uuid.c    libsrc/objsafe-uuid.c \
+  libsrc/ocidl-uuid.c     libsrc/oleacc-uuid.c      libsrc/olectlid-uuid.c  libsrc/oleidl-uuid.c    libsrc/power-uuid.c   \
+  libsrc/powrprof-uuid.c  libsrc/uianimation-uuid.c libsrc/usbcamdi-uuid.c  libsrc/usbiodef-uuid.c  libsrc/uuid.c         \
+  libsrc/vds-uuid.c       libsrc/virtdisk-uuid.c    libsrc/wia-uuid.c
 
 src_libws2_32 = libsrc/ws2_32.c \
   \
@@ -9287,6 +9293,8 @@ libsrc/lib32_libuuid_a-power-uuid.$(OBJEXT): libsrc/$(am__dirstamp) \
 	libsrc/$(DEPDIR)/$(am__dirstamp)
 libsrc/lib32_libuuid_a-powrprof-uuid.$(OBJEXT):  \
 	libsrc/$(am__dirstamp) libsrc/$(DEPDIR)/$(am__dirstamp)
+libsrc/lib32_libuuid_a-uianimation-uuid.$(OBJEXT):  \
+	libsrc/$(am__dirstamp) libsrc/$(DEPDIR)/$(am__dirstamp)
 libsrc/lib32_libuuid_a-usbcamdi-uuid.$(OBJEXT):  \
 	libsrc/$(am__dirstamp) libsrc/$(DEPDIR)/$(am__dirstamp)
 libsrc/lib32_libuuid_a-usbiodef-uuid.$(OBJEXT):  \
@@ -10951,6 +10959,8 @@ libsrc/lib64_libuuid_a-power-uuid.$(OBJEXT): libsrc/$(am__dirstamp) \
 	libsrc/$(DEPDIR)/$(am__dirstamp)
 libsrc/lib64_libuuid_a-powrprof-uuid.$(OBJEXT):  \
 	libsrc/$(am__dirstamp) libsrc/$(DEPDIR)/$(am__dirstamp)
+libsrc/lib64_libuuid_a-uianimation-uuid.$(OBJEXT):  \
+	libsrc/$(am__dirstamp) libsrc/$(DEPDIR)/$(am__dirstamp)
 libsrc/lib64_libuuid_a-usbcamdi-uuid.$(OBJEXT):  \
 	libsrc/$(am__dirstamp) libsrc/$(DEPDIR)/$(am__dirstamp)
 libsrc/lib64_libuuid_a-usbiodef-uuid.$(OBJEXT):  \
@@ -12586,6 +12596,8 @@ libsrc/libarm32_libuuid_a-oleidl-uuid.$(OBJEXT):  \
 libsrc/libarm32_libuuid_a-power-uuid.$(OBJEXT):  \
 	libsrc/$(am__dirstamp) libsrc/$(DEPDIR)/$(am__dirstamp)
 libsrc/libarm32_libuuid_a-powrprof-uuid.$(OBJEXT):  \
+	libsrc/$(am__dirstamp) libsrc/$(DEPDIR)/$(am__dirstamp)
+libsrc/libarm32_libuuid_a-uianimation-uuid.$(OBJEXT):  \
 	libsrc/$(am__dirstamp) libsrc/$(DEPDIR)/$(am__dirstamp)
 libsrc/libarm32_libuuid_a-usbcamdi-uuid.$(OBJEXT):  \
 	libsrc/$(am__dirstamp) libsrc/$(DEPDIR)/$(am__dirstamp)
@@ -14278,6 +14290,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/lib32_libuuid_a-oleidl-uuid.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/lib32_libuuid_a-power-uuid.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/lib32_libuuid_a-powrprof-uuid.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/lib32_libuuid_a-uianimation-uuid.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/lib32_libuuid_a-usbcamdi-uuid.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/lib32_libuuid_a-usbiodef-uuid.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/lib32_libuuid_a-uuid.Po@am__quote@
@@ -14356,6 +14369,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/lib64_libuuid_a-oleidl-uuid.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/lib64_libuuid_a-power-uuid.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/lib64_libuuid_a-powrprof-uuid.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/lib64_libuuid_a-uianimation-uuid.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/lib64_libuuid_a-usbcamdi-uuid.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/lib64_libuuid_a-usbiodef-uuid.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/lib64_libuuid_a-uuid.Po@am__quote@
@@ -14423,6 +14437,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/libarm32_libuuid_a-oleidl-uuid.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/libarm32_libuuid_a-power-uuid.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/libarm32_libuuid_a-powrprof-uuid.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/libarm32_libuuid_a-uianimation-uuid.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/libarm32_libuuid_a-usbcamdi-uuid.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/libarm32_libuuid_a-usbiodef-uuid.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/libarm32_libuuid_a-uuid.Po@am__quote@
@@ -26165,6 +26180,20 @@ libsrc/lib32_libuuid_a-powrprof-uuid.obj: libsrc/powrprof-uuid.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libuuid_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libsrc/lib32_libuuid_a-powrprof-uuid.obj `if test -f 'libsrc/powrprof-uuid.c'; then $(CYGPATH_W) 'libsrc/powrprof-uuid.c'; else $(CYGPATH_W) '$(srcdir)/libsrc/powrprof-uuid.c'; fi`
 
+libsrc/lib32_libuuid_a-uianimation-uuid.o: libsrc/uianimation-uuid.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libuuid_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libsrc/lib32_libuuid_a-uianimation-uuid.o -MD -MP -MF libsrc/$(DEPDIR)/lib32_libuuid_a-uianimation-uuid.Tpo -c -o libsrc/lib32_libuuid_a-uianimation-uuid.o `test -f 'libsrc/uianimation-uuid.c' || echo '$(srcdir)/'`libsrc/uianimation-uuid.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libsrc/$(DEPDIR)/lib32_libuuid_a-uianimation-uuid.Tpo libsrc/$(DEPDIR)/lib32_libuuid_a-uianimation-uuid.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libsrc/uianimation-uuid.c' object='libsrc/lib32_libuuid_a-uianimation-uuid.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libuuid_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libsrc/lib32_libuuid_a-uianimation-uuid.o `test -f 'libsrc/uianimation-uuid.c' || echo '$(srcdir)/'`libsrc/uianimation-uuid.c
+
+libsrc/lib32_libuuid_a-uianimation-uuid.obj: libsrc/uianimation-uuid.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libuuid_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libsrc/lib32_libuuid_a-uianimation-uuid.obj -MD -MP -MF libsrc/$(DEPDIR)/lib32_libuuid_a-uianimation-uuid.Tpo -c -o libsrc/lib32_libuuid_a-uianimation-uuid.obj `if test -f 'libsrc/uianimation-uuid.c'; then $(CYGPATH_W) 'libsrc/uianimation-uuid.c'; else $(CYGPATH_W) '$(srcdir)/libsrc/uianimation-uuid.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libsrc/$(DEPDIR)/lib32_libuuid_a-uianimation-uuid.Tpo libsrc/$(DEPDIR)/lib32_libuuid_a-uianimation-uuid.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libsrc/uianimation-uuid.c' object='libsrc/lib32_libuuid_a-uianimation-uuid.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libuuid_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libsrc/lib32_libuuid_a-uianimation-uuid.obj `if test -f 'libsrc/uianimation-uuid.c'; then $(CYGPATH_W) 'libsrc/uianimation-uuid.c'; else $(CYGPATH_W) '$(srcdir)/libsrc/uianimation-uuid.c'; fi`
+
 libsrc/lib32_libuuid_a-usbcamdi-uuid.o: libsrc/usbcamdi-uuid.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libuuid_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libsrc/lib32_libuuid_a-usbcamdi-uuid.o -MD -MP -MF libsrc/$(DEPDIR)/lib32_libuuid_a-usbcamdi-uuid.Tpo -c -o libsrc/lib32_libuuid_a-usbcamdi-uuid.o `test -f 'libsrc/usbcamdi-uuid.c' || echo '$(srcdir)/'`libsrc/usbcamdi-uuid.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libsrc/$(DEPDIR)/lib32_libuuid_a-usbcamdi-uuid.Tpo libsrc/$(DEPDIR)/lib32_libuuid_a-usbcamdi-uuid.Po
@@ -35587,6 +35616,20 @@ libsrc/lib64_libuuid_a-powrprof-uuid.obj: libsrc/powrprof-uuid.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libuuid_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libsrc/lib64_libuuid_a-powrprof-uuid.obj `if test -f 'libsrc/powrprof-uuid.c'; then $(CYGPATH_W) 'libsrc/powrprof-uuid.c'; else $(CYGPATH_W) '$(srcdir)/libsrc/powrprof-uuid.c'; fi`
 
+libsrc/lib64_libuuid_a-uianimation-uuid.o: libsrc/uianimation-uuid.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libuuid_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libsrc/lib64_libuuid_a-uianimation-uuid.o -MD -MP -MF libsrc/$(DEPDIR)/lib64_libuuid_a-uianimation-uuid.Tpo -c -o libsrc/lib64_libuuid_a-uianimation-uuid.o `test -f 'libsrc/uianimation-uuid.c' || echo '$(srcdir)/'`libsrc/uianimation-uuid.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libsrc/$(DEPDIR)/lib64_libuuid_a-uianimation-uuid.Tpo libsrc/$(DEPDIR)/lib64_libuuid_a-uianimation-uuid.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libsrc/uianimation-uuid.c' object='libsrc/lib64_libuuid_a-uianimation-uuid.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libuuid_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libsrc/lib64_libuuid_a-uianimation-uuid.o `test -f 'libsrc/uianimation-uuid.c' || echo '$(srcdir)/'`libsrc/uianimation-uuid.c
+
+libsrc/lib64_libuuid_a-uianimation-uuid.obj: libsrc/uianimation-uuid.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libuuid_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libsrc/lib64_libuuid_a-uianimation-uuid.obj -MD -MP -MF libsrc/$(DEPDIR)/lib64_libuuid_a-uianimation-uuid.Tpo -c -o libsrc/lib64_libuuid_a-uianimation-uuid.obj `if test -f 'libsrc/uianimation-uuid.c'; then $(CYGPATH_W) 'libsrc/uianimation-uuid.c'; else $(CYGPATH_W) '$(srcdir)/libsrc/uianimation-uuid.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libsrc/$(DEPDIR)/lib64_libuuid_a-uianimation-uuid.Tpo libsrc/$(DEPDIR)/lib64_libuuid_a-uianimation-uuid.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libsrc/uianimation-uuid.c' object='libsrc/lib64_libuuid_a-uianimation-uuid.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libuuid_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libsrc/lib64_libuuid_a-uianimation-uuid.obj `if test -f 'libsrc/uianimation-uuid.c'; then $(CYGPATH_W) 'libsrc/uianimation-uuid.c'; else $(CYGPATH_W) '$(srcdir)/libsrc/uianimation-uuid.c'; fi`
+
 libsrc/lib64_libuuid_a-usbcamdi-uuid.o: libsrc/usbcamdi-uuid.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libuuid_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libsrc/lib64_libuuid_a-usbcamdi-uuid.o -MD -MP -MF libsrc/$(DEPDIR)/lib64_libuuid_a-usbcamdi-uuid.Tpo -c -o libsrc/lib64_libuuid_a-usbcamdi-uuid.o `test -f 'libsrc/usbcamdi-uuid.c' || echo '$(srcdir)/'`libsrc/usbcamdi-uuid.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libsrc/$(DEPDIR)/lib64_libuuid_a-usbcamdi-uuid.Tpo libsrc/$(DEPDIR)/lib64_libuuid_a-usbcamdi-uuid.Po
@@ -44840,6 +44883,20 @@ libsrc/libarm32_libuuid_a-powrprof-uuid.obj: libsrc/powrprof-uuid.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libsrc/powrprof-uuid.c' object='libsrc/libarm32_libuuid_a-powrprof-uuid.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libuuid_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libsrc/libarm32_libuuid_a-powrprof-uuid.obj `if test -f 'libsrc/powrprof-uuid.c'; then $(CYGPATH_W) 'libsrc/powrprof-uuid.c'; else $(CYGPATH_W) '$(srcdir)/libsrc/powrprof-uuid.c'; fi`
+
+libsrc/libarm32_libuuid_a-uianimation-uuid.o: libsrc/uianimation-uuid.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libuuid_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libsrc/libarm32_libuuid_a-uianimation-uuid.o -MD -MP -MF libsrc/$(DEPDIR)/libarm32_libuuid_a-uianimation-uuid.Tpo -c -o libsrc/libarm32_libuuid_a-uianimation-uuid.o `test -f 'libsrc/uianimation-uuid.c' || echo '$(srcdir)/'`libsrc/uianimation-uuid.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libsrc/$(DEPDIR)/libarm32_libuuid_a-uianimation-uuid.Tpo libsrc/$(DEPDIR)/libarm32_libuuid_a-uianimation-uuid.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libsrc/uianimation-uuid.c' object='libsrc/libarm32_libuuid_a-uianimation-uuid.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libuuid_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libsrc/libarm32_libuuid_a-uianimation-uuid.o `test -f 'libsrc/uianimation-uuid.c' || echo '$(srcdir)/'`libsrc/uianimation-uuid.c
+
+libsrc/libarm32_libuuid_a-uianimation-uuid.obj: libsrc/uianimation-uuid.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libuuid_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libsrc/libarm32_libuuid_a-uianimation-uuid.obj -MD -MP -MF libsrc/$(DEPDIR)/libarm32_libuuid_a-uianimation-uuid.Tpo -c -o libsrc/libarm32_libuuid_a-uianimation-uuid.obj `if test -f 'libsrc/uianimation-uuid.c'; then $(CYGPATH_W) 'libsrc/uianimation-uuid.c'; else $(CYGPATH_W) '$(srcdir)/libsrc/uianimation-uuid.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libsrc/$(DEPDIR)/libarm32_libuuid_a-uianimation-uuid.Tpo libsrc/$(DEPDIR)/libarm32_libuuid_a-uianimation-uuid.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libsrc/uianimation-uuid.c' object='libsrc/libarm32_libuuid_a-uianimation-uuid.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libuuid_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libsrc/libarm32_libuuid_a-uianimation-uuid.obj `if test -f 'libsrc/uianimation-uuid.c'; then $(CYGPATH_W) 'libsrc/uianimation-uuid.c'; else $(CYGPATH_W) '$(srcdir)/libsrc/uianimation-uuid.c'; fi`
 
 libsrc/libarm32_libuuid_a-usbcamdi-uuid.o: libsrc/usbcamdi-uuid.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libuuid_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libsrc/libarm32_libuuid_a-usbcamdi-uuid.o -MD -MP -MF libsrc/$(DEPDIR)/libarm32_libuuid_a-usbcamdi-uuid.Tpo -c -o libsrc/libarm32_libuuid_a-usbcamdi-uuid.o `test -f 'libsrc/usbcamdi-uuid.c' || echo '$(srcdir)/'`libsrc/usbcamdi-uuid.c
