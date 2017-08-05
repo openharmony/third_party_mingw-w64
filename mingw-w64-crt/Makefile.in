@@ -4116,17 +4116,17 @@ am__libarm64_libmingwex_a_SOURCES_DIST = crt/dllentry.c crt/dllmain.c \
 	stdio/vwscanf.c stdio/wtoll.c stdio/mingw_asprintf.c \
 	stdio/mingw_vasprintf.c math/arm64/_chgsignl.S \
 	math/arm64/ceil.S math/arm64/ceilf.S math/arm64/ceill.S \
-	math/arm64/copysignl.c math/arm64/exp2.c math/arm64/floor.S \
-	math/arm64/floorf.S math/arm64/floorl.S math/arm64/log2.c \
-	math/arm64/nearbyint.S math/arm64/nearbyintf.S \
-	math/arm64/nearbyintl.S math/arm64/scalbn.c \
-	math/arm64/sincos.c math/arm64/trunc.S math/arm64/truncf.S \
-	math/DFP/__fpclassifyd32.c math/DFP/__fpclassifyd64.c \
-	math/DFP/__fpclassifyd128.c math/DFP/__isnand32.c \
-	math/DFP/__isnand64.c math/DFP/__isnand128.c \
-	math/DFP/__signbitd32.c math/DFP/__signbitd64.c \
-	math/DFP/__signbitd128.c math/DFP/isinfd32.c \
-	math/DFP/isinfd64.c math/DFP/isinfd128.c
+	math/arm64/copysignl.c math/arm64/exp2.S math/arm64/exp2f.S \
+	math/arm64/floor.S math/arm64/floorf.S math/arm64/floorl.S \
+	math/arm64/log2.c math/arm64/nearbyint.S \
+	math/arm64/nearbyintf.S math/arm64/nearbyintl.S \
+	math/arm64/scalbn.c math/arm64/sincos.c math/arm64/trunc.S \
+	math/arm64/truncf.S math/DFP/__fpclassifyd32.c \
+	math/DFP/__fpclassifyd64.c math/DFP/__fpclassifyd128.c \
+	math/DFP/__isnand32.c math/DFP/__isnand64.c \
+	math/DFP/__isnand128.c math/DFP/__signbitd32.c \
+	math/DFP/__signbitd64.c math/DFP/__signbitd128.c \
+	math/DFP/isinfd32.c math/DFP/isinfd64.c math/DFP/isinfd128.c
 am__objects_125 = crt/libarm64_libmingwex_a-dllentry.$(OBJEXT) \
 	crt/libarm64_libmingwex_a-dllmain.$(OBJEXT) \
 	complex/libarm64_libmingwex_a-_cabs.$(OBJEXT) \
@@ -4471,6 +4471,7 @@ am__objects_126 =  \
 	math/arm64/libarm64_libmingwex_a-ceill.$(OBJEXT) \
 	math/arm64/libarm64_libmingwex_a-copysignl.$(OBJEXT) \
 	math/arm64/libarm64_libmingwex_a-exp2.$(OBJEXT) \
+	math/arm64/libarm64_libmingwex_a-exp2f.$(OBJEXT) \
 	math/arm64/libarm64_libmingwex_a-floor.$(OBJEXT) \
 	math/arm64/libarm64_libmingwex_a-floorf.$(OBJEXT) \
 	math/arm64/libarm64_libmingwex_a-floorl.$(OBJEXT) \
@@ -6530,9 +6531,9 @@ src_libmingwexarm32 = math/arm/_chgsignl.S math/arm/ceil.S \
 # these only go into the ARM64 version:
 src_libmingwexarm64 = \
   math/arm64/_chgsignl.S    math/arm64/ceil.S         math/arm64/ceilf.S        math/arm64/ceill.S        math/arm64/copysignl.c    \
-  math/arm64/exp2.c         math/arm64/floor.S        math/arm64/floorf.S       math/arm64/floorl.S       math/arm64/log2.c         \
-  math/arm64/nearbyint.S    math/arm64/nearbyintf.S   math/arm64/nearbyintl.S   math/arm64/scalbn.c       math/arm64/sincos.c       \
-  math/arm64/trunc.S        math/arm64/truncf.S
+  math/arm64/exp2.S         math/arm64/exp2f.S        math/arm64/floor.S        math/arm64/floorf.S       math/arm64/floorl.S       \
+  math/arm64/log2.c         math/arm64/nearbyint.S    math/arm64/nearbyintf.S   math/arm64/nearbyintl.S   math/arm64/scalbn.c       \
+  math/arm64/sincos.c       math/arm64/trunc.S        math/arm64/truncf.S
 
 
 # These intrinsics are target independent:
@@ -14864,6 +14865,9 @@ math/arm64/libarm64_libmingwex_a-copysignl.$(OBJEXT):  \
 math/arm64/libarm64_libmingwex_a-exp2.$(OBJEXT):  \
 	math/arm64/$(am__dirstamp) \
 	math/arm64/$(DEPDIR)/$(am__dirstamp)
+math/arm64/libarm64_libmingwex_a-exp2f.$(OBJEXT):  \
+	math/arm64/$(am__dirstamp) \
+	math/arm64/$(DEPDIR)/$(am__dirstamp)
 math/arm64/libarm64_libmingwex_a-floor.$(OBJEXT):  \
 	math/arm64/$(am__dirstamp) \
 	math/arm64/$(DEPDIR)/$(am__dirstamp)
@@ -17824,6 +17828,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@math/arm64/$(DEPDIR)/libarm64_libmingwex_a-ceill.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/arm64/$(DEPDIR)/libarm64_libmingwex_a-copysignl.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/arm64/$(DEPDIR)/libarm64_libmingwex_a-exp2.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@math/arm64/$(DEPDIR)/libarm64_libmingwex_a-exp2f.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/arm64/$(DEPDIR)/libarm64_libmingwex_a-floor.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/arm64/$(DEPDIR)/libarm64_libmingwex_a-floorf.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/arm64/$(DEPDIR)/libarm64_libmingwex_a-floorl.Po@am__quote@
@@ -20999,6 +21004,34 @@ math/arm64/libarm64_libmingwex_a-ceill.obj: math/arm64/ceill.S
 @AMDEP_TRUE@@am__fastdepCCAS_FALSE@	$(AM_V_CPPAS)source='math/arm64/ceill.S' object='math/arm64/libarm64_libmingwex_a-ceill.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCCAS_FALSE@	DEPDIR=$(DEPDIR) $(CCASDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCCAS_FALSE@	$(AM_V_CPPAS@am__nodep@)$(CCAS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CCASFLAGS) $(CCASFLAGS) -c -o math/arm64/libarm64_libmingwex_a-ceill.obj `if test -f 'math/arm64/ceill.S'; then $(CYGPATH_W) 'math/arm64/ceill.S'; else $(CYGPATH_W) '$(srcdir)/math/arm64/ceill.S'; fi`
+
+math/arm64/libarm64_libmingwex_a-exp2.o: math/arm64/exp2.S
+@am__fastdepCCAS_TRUE@	$(AM_V_CPPAS)$(CCAS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CCASFLAGS) $(CCASFLAGS) -MT math/arm64/libarm64_libmingwex_a-exp2.o -MD -MP -MF math/arm64/$(DEPDIR)/libarm64_libmingwex_a-exp2.Tpo -c -o math/arm64/libarm64_libmingwex_a-exp2.o `test -f 'math/arm64/exp2.S' || echo '$(srcdir)/'`math/arm64/exp2.S
+@am__fastdepCCAS_TRUE@	$(AM_V_at)$(am__mv) math/arm64/$(DEPDIR)/libarm64_libmingwex_a-exp2.Tpo math/arm64/$(DEPDIR)/libarm64_libmingwex_a-exp2.Po
+@AMDEP_TRUE@@am__fastdepCCAS_FALSE@	$(AM_V_CPPAS)source='math/arm64/exp2.S' object='math/arm64/libarm64_libmingwex_a-exp2.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCCAS_FALSE@	DEPDIR=$(DEPDIR) $(CCASDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCCAS_FALSE@	$(AM_V_CPPAS@am__nodep@)$(CCAS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CCASFLAGS) $(CCASFLAGS) -c -o math/arm64/libarm64_libmingwex_a-exp2.o `test -f 'math/arm64/exp2.S' || echo '$(srcdir)/'`math/arm64/exp2.S
+
+math/arm64/libarm64_libmingwex_a-exp2.obj: math/arm64/exp2.S
+@am__fastdepCCAS_TRUE@	$(AM_V_CPPAS)$(CCAS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CCASFLAGS) $(CCASFLAGS) -MT math/arm64/libarm64_libmingwex_a-exp2.obj -MD -MP -MF math/arm64/$(DEPDIR)/libarm64_libmingwex_a-exp2.Tpo -c -o math/arm64/libarm64_libmingwex_a-exp2.obj `if test -f 'math/arm64/exp2.S'; then $(CYGPATH_W) 'math/arm64/exp2.S'; else $(CYGPATH_W) '$(srcdir)/math/arm64/exp2.S'; fi`
+@am__fastdepCCAS_TRUE@	$(AM_V_at)$(am__mv) math/arm64/$(DEPDIR)/libarm64_libmingwex_a-exp2.Tpo math/arm64/$(DEPDIR)/libarm64_libmingwex_a-exp2.Po
+@AMDEP_TRUE@@am__fastdepCCAS_FALSE@	$(AM_V_CPPAS)source='math/arm64/exp2.S' object='math/arm64/libarm64_libmingwex_a-exp2.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCCAS_FALSE@	DEPDIR=$(DEPDIR) $(CCASDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCCAS_FALSE@	$(AM_V_CPPAS@am__nodep@)$(CCAS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CCASFLAGS) $(CCASFLAGS) -c -o math/arm64/libarm64_libmingwex_a-exp2.obj `if test -f 'math/arm64/exp2.S'; then $(CYGPATH_W) 'math/arm64/exp2.S'; else $(CYGPATH_W) '$(srcdir)/math/arm64/exp2.S'; fi`
+
+math/arm64/libarm64_libmingwex_a-exp2f.o: math/arm64/exp2f.S
+@am__fastdepCCAS_TRUE@	$(AM_V_CPPAS)$(CCAS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CCASFLAGS) $(CCASFLAGS) -MT math/arm64/libarm64_libmingwex_a-exp2f.o -MD -MP -MF math/arm64/$(DEPDIR)/libarm64_libmingwex_a-exp2f.Tpo -c -o math/arm64/libarm64_libmingwex_a-exp2f.o `test -f 'math/arm64/exp2f.S' || echo '$(srcdir)/'`math/arm64/exp2f.S
+@am__fastdepCCAS_TRUE@	$(AM_V_at)$(am__mv) math/arm64/$(DEPDIR)/libarm64_libmingwex_a-exp2f.Tpo math/arm64/$(DEPDIR)/libarm64_libmingwex_a-exp2f.Po
+@AMDEP_TRUE@@am__fastdepCCAS_FALSE@	$(AM_V_CPPAS)source='math/arm64/exp2f.S' object='math/arm64/libarm64_libmingwex_a-exp2f.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCCAS_FALSE@	DEPDIR=$(DEPDIR) $(CCASDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCCAS_FALSE@	$(AM_V_CPPAS@am__nodep@)$(CCAS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CCASFLAGS) $(CCASFLAGS) -c -o math/arm64/libarm64_libmingwex_a-exp2f.o `test -f 'math/arm64/exp2f.S' || echo '$(srcdir)/'`math/arm64/exp2f.S
+
+math/arm64/libarm64_libmingwex_a-exp2f.obj: math/arm64/exp2f.S
+@am__fastdepCCAS_TRUE@	$(AM_V_CPPAS)$(CCAS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CCASFLAGS) $(CCASFLAGS) -MT math/arm64/libarm64_libmingwex_a-exp2f.obj -MD -MP -MF math/arm64/$(DEPDIR)/libarm64_libmingwex_a-exp2f.Tpo -c -o math/arm64/libarm64_libmingwex_a-exp2f.obj `if test -f 'math/arm64/exp2f.S'; then $(CYGPATH_W) 'math/arm64/exp2f.S'; else $(CYGPATH_W) '$(srcdir)/math/arm64/exp2f.S'; fi`
+@am__fastdepCCAS_TRUE@	$(AM_V_at)$(am__mv) math/arm64/$(DEPDIR)/libarm64_libmingwex_a-exp2f.Tpo math/arm64/$(DEPDIR)/libarm64_libmingwex_a-exp2f.Po
+@AMDEP_TRUE@@am__fastdepCCAS_FALSE@	$(AM_V_CPPAS)source='math/arm64/exp2f.S' object='math/arm64/libarm64_libmingwex_a-exp2f.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCCAS_FALSE@	DEPDIR=$(DEPDIR) $(CCASDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCCAS_FALSE@	$(AM_V_CPPAS@am__nodep@)$(CCAS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CCASFLAGS) $(CCASFLAGS) -c -o math/arm64/libarm64_libmingwex_a-exp2f.obj `if test -f 'math/arm64/exp2f.S'; then $(CYGPATH_W) 'math/arm64/exp2f.S'; else $(CYGPATH_W) '$(srcdir)/math/arm64/exp2f.S'; fi`
 
 math/arm64/libarm64_libmingwex_a-floor.o: math/arm64/floor.S
 @am__fastdepCCAS_TRUE@	$(AM_V_CPPAS)$(CCAS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CCASFLAGS) $(CCASFLAGS) -MT math/arm64/libarm64_libmingwex_a-floor.o -MD -MP -MF math/arm64/$(DEPDIR)/libarm64_libmingwex_a-floor.Tpo -c -o math/arm64/libarm64_libmingwex_a-floor.o `test -f 'math/arm64/floor.S' || echo '$(srcdir)/'`math/arm64/floor.S
@@ -55105,20 +55138,6 @@ math/arm64/libarm64_libmingwex_a-copysignl.obj: math/arm64/copysignl.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/arm64/copysignl.c' object='math/arm64/libarm64_libmingwex_a-copysignl.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/arm64/libarm64_libmingwex_a-copysignl.obj `if test -f 'math/arm64/copysignl.c'; then $(CYGPATH_W) 'math/arm64/copysignl.c'; else $(CYGPATH_W) '$(srcdir)/math/arm64/copysignl.c'; fi`
-
-math/arm64/libarm64_libmingwex_a-exp2.o: math/arm64/exp2.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/arm64/libarm64_libmingwex_a-exp2.o -MD -MP -MF math/arm64/$(DEPDIR)/libarm64_libmingwex_a-exp2.Tpo -c -o math/arm64/libarm64_libmingwex_a-exp2.o `test -f 'math/arm64/exp2.c' || echo '$(srcdir)/'`math/arm64/exp2.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/arm64/$(DEPDIR)/libarm64_libmingwex_a-exp2.Tpo math/arm64/$(DEPDIR)/libarm64_libmingwex_a-exp2.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/arm64/exp2.c' object='math/arm64/libarm64_libmingwex_a-exp2.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/arm64/libarm64_libmingwex_a-exp2.o `test -f 'math/arm64/exp2.c' || echo '$(srcdir)/'`math/arm64/exp2.c
-
-math/arm64/libarm64_libmingwex_a-exp2.obj: math/arm64/exp2.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/arm64/libarm64_libmingwex_a-exp2.obj -MD -MP -MF math/arm64/$(DEPDIR)/libarm64_libmingwex_a-exp2.Tpo -c -o math/arm64/libarm64_libmingwex_a-exp2.obj `if test -f 'math/arm64/exp2.c'; then $(CYGPATH_W) 'math/arm64/exp2.c'; else $(CYGPATH_W) '$(srcdir)/math/arm64/exp2.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/arm64/$(DEPDIR)/libarm64_libmingwex_a-exp2.Tpo math/arm64/$(DEPDIR)/libarm64_libmingwex_a-exp2.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/arm64/exp2.c' object='math/arm64/libarm64_libmingwex_a-exp2.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/arm64/libarm64_libmingwex_a-exp2.obj `if test -f 'math/arm64/exp2.c'; then $(CYGPATH_W) 'math/arm64/exp2.c'; else $(CYGPATH_W) '$(srcdir)/math/arm64/exp2.c'; fi`
 
 math/arm64/libarm64_libmingwex_a-log2.o: math/arm64/log2.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/arm64/libarm64_libmingwex_a-log2.o -MD -MP -MF math/arm64/$(DEPDIR)/libarm64_libmingwex_a-log2.Tpo -c -o math/arm64/libarm64_libmingwex_a-log2.o `test -f 'math/arm64/log2.c' || echo '$(srcdir)/'`math/arm64/log2.c
