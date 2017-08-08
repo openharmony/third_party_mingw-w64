@@ -27,21 +27,6 @@ __MINGW_USYMBOL(floorf):
         ret
         .seh_endproc
         .def    __MINGW_USYMBOL(floor);  .scl    2;      .type   32;     .endef
-#elif defined(_ARM_) || defined(__arm__)
-	vmov	r2, s0
-	lsr		r2, r2, #23
-	bic		r2, r2, #0x100
-	cmp		r2, #0xff /* Check for INF/NAN, just return the input in those cases */
-	it		eq
-	bxeq	lr
-	vmrs	r1, fpscr
-	bic		r0, r1, #0x00c00000
-	orr		r0, r0, #0x00800000 /* Round towards Minus Infinity */
-	vmsr	fpscr, r0
-	vcvtr.s32.f32	s0, s0
-	vcvt.f32.s32	s0, s0
-	vmsr	fpscr, r1
-	bx	lr
 #elif defined(_X86_) || defined(__i386__)
 	flds	4(%esp)
 	subl	$8,%esp
