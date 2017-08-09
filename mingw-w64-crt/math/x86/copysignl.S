@@ -32,8 +32,6 @@ __MINGW_USYMBOL(copysignl):
 	movq	%rax, 8(%rcx)
 	movq	%rcx, %rax
 	ret
-#elif defined(_ARM_) || defined(__arm__)
-	b	copysign
 #elif defined(_X86_) || defined(__i386__)
 	movl	24(%esp),%edx
 	movl	12(%esp),%eax

@@ -55,21 +55,6 @@ __MINGW_USYMBOL(truncf):
 	addq	$24, %rsp
 	ret
 	.seh_endproc
-#elif defined(_ARM_) || defined(__arm__)
-	vmov	r2, r3, d0
-	lsr		r3, r3, #20
-	bic		r3, r3, #0x800
-	movw	r2, #0x7ff
-	cmp		r2, r3 /* Check for INF/NAN, just return the input in those cases */
-	it		eq
-	bxeq	lr
-	vmrs	r1, fpscr
-	orr		r0, r1, #0x00c00000 /* Round towards Zero */
-	vmsr	fpscr, r0
-	vcvt.s32.f32	s0, s0
-	vcvt.f32.s32	s0, s0
-	vmsr	fpscr, r1
-	bx	lr
 #elif defined(_X86_) || defined(__i386__)
         flds    4(%esp)
         subl    $8, %esp

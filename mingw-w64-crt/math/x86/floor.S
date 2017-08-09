@@ -143,22 +143,6 @@ __MINGW_USYMBOL(floor):
 .hugeval:
 	.long	-2013235812
 	.long	2117592124
-#elif defined(_ARM_) || defined(__arm__)
-	vmov	r2, r3, d0
-	lsr		r3, r3, #20
-	bic		r3, r3, #0x800
-	movw	r2, #0x7ff
-	cmp		r2, r3 /* Check for INF/NAN, just return the input in those cases */
-	it		eq
-	bxeq	lr
-	vmrs	r1, fpscr
-	bic		r0, r1, #0x00c00000
-	orr		r0, r0, #0x00800000 /* Round towards Minus Infinity */
-	vmsr	fpscr, r0
-	vcvtr.s32.f64	s0, d0
-	vcvt.f64.s32	d0, s0
-	vmsr	fpscr, r1
-	bx	lr
 #elif defined(_X86_) || defined(__i386__)
 	fldl	4(%esp)
 	subl	$8,%esp

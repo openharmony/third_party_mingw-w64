@@ -5,50 +5,36 @@
  */
 #include <_mingw_mac.h>
 
-	.file	"nearbyintl.S"
+	.file	"nearbyint.S"
 	.text
 #ifdef __x86_64__
 	.align 8
 #else
 	.align 4
 #endif
-	.globl __MINGW_USYMBOL(nearbyintl)
-	.def	__MINGW_USYMBOL(nearbyintl);	.scl	2;	.type	32;	.endef
-__MINGW_USYMBOL(nearbyintl):
+	.globl __MINGW_USYMBOL(nearbyint)
+	.def	__MINGW_USYMBOL(nearbyint);	.scl	2;	.type	32;	.endef
+__MINGW_USYMBOL(nearbyint):
 #if defined(_AMD64_) || defined(__x86_64__)
-	fldt	(%rdx)
-	movq	%rcx,%r8
+	movsd	%xmm0,-16(%rsp)
+	fldl	-16(%rsp)
 	pushq	%rax
 	pushq	%rcx
 	fnstcw	(%rsp)
-	movl	(%rsp), %eax
-	orl	$0x20, %eax
-	movl	%eax, 8(%rsp)
+	movq	(%rsp), %rax
+	orq	$0x20, %rax
+	movq	%rax, 8(%rsp)
 	fldcw	8(%rsp)
 	frndint
 	fclex
 	fldcw	(%rsp)
 	popq	%rcx
 	popq	%rax
-	movq	%r8,%rax
-	movq	$0,8(%r8)
-	fstpt	(%r8)
+	fstpl	-16(%rsp)
+	movsd	-16(%rsp),%xmm0
 	ret
-#elif defined(_ARM_) || defined(__arm__)
-	vmov	r2, r3, d0
-	lsr		r3, r3, #20
-	bic		r3, r3, #0x800
-	movw	r2, #0x7ff
-	cmp		r2, r3 /* Check for INF/NAN, just return the input in those cases */
-	it		eq
-	bxeq	lr
-	vmrs	r1, fpscr
-	vcvtr.s32.f64	s0, d0
-	vcvt.f64.s32	d0, s0
-	vmsr	fpscr, r1
-	bx	lr
 #elif defined(_X86_) || defined(__i386__)
-	fldt	4(%esp)
+	fldl	4(%esp)
 	pushl	%eax
 	pushl	%ecx
 	fnstcw	(%esp)

@@ -36,9 +36,6 @@ __MINGW_USYMBOL(_chgsignl):
 	movq	%rdx, 8(%rcx)
 	movq	%rcx, %rax
 	ret
-#elif defined(_ARM_) || defined(__arm__)
-	vneg.f64	d0, d0
-	bx	lr
 #elif defined(_X86_) || defined(__i386__)
 	movl	12(%esp),%eax
 	xorl	$0x8000,%eax
