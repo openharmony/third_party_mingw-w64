@@ -6019,9 +6019,8 @@ src_intrincsarm32 =
 @LIB64_TRUE@	lib64/libgetuname.a lib64/libglmf32.a \
 @LIB64_TRUE@	lib64/libglu32.a lib64/libgpedit.a \
 @LIB64_TRUE@	lib64/libgpkcsp.a lib64/libgptext.a \
-@LIB64_TRUE@	lib64/libguitrn.a lib64/libgzip.a \
-@LIB64_TRUE@	lib64/libh323msp.a lib64/libhal.a \
-@LIB64_TRUE@	lib64/libhbaapi.a lib64/libhgfs.a \
+@LIB64_TRUE@	lib64/libguitrn.a lib64/libh323msp.a \
+@LIB64_TRUE@	lib64/libhal.a lib64/libhbaapi.a lib64/libhgfs.a \
 @LIB64_TRUE@	lib64/libhhsetup.a lib64/libhid.a \
 @LIB64_TRUE@	lib64/libhidclass.a lib64/libhidparse.a \
 @LIB64_TRUE@	lib64/libhlink.a lib64/libhmmapi.a \
