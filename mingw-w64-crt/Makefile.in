@@ -6619,7 +6619,6 @@ src_intrincsarm32 =
 @LIBARM32_TRUE@	libarm32/libappxdeploymentclient.a \
 @LIBARM32_TRUE@	libarm32/libappxdeploymentextensions.a \
 @LIBARM32_TRUE@	libarm32/libappxdeploymentserver.a \
-@LIBARM32_TRUE@	libarm32/libappxpackaging.a \
 @LIBARM32_TRUE@	libarm32/libappxsip.a libarm32/libappxsysprep.a \
 @LIBARM32_TRUE@	libarm32/libasycfilt.a libarm32/libatl110.a \
 @LIBARM32_TRUE@	libarm32/libatl.a \
@@ -6639,10 +6638,9 @@ src_intrincsarm32 =
 @LIBARM32_TRUE@	libarm32/libbi.a libarm32/libbisrv.a \
 @LIBARM32_TRUE@	libarm32/libbitsigd.a libarm32/libbitsperf.a \
 @LIBARM32_TRUE@	libarm32/libbluetoothapis.a \
-@LIBARM32_TRUE@	libarm32/libbootmenuux.a libarm32/libbootux.a \
-@LIBARM32_TRUE@	libarm32/libbootvid.a libarm32/libbrokerlib.a \
-@LIBARM32_TRUE@	libarm32/libbrowcli.a libarm32/libbrowser.a \
-@LIBARM32_TRUE@	libarm32/libbrowseui.a libarm32/libbthci.a \
+@LIBARM32_TRUE@	libarm32/libbootmenuux.a libarm32/libbootvid.a \
+@LIBARM32_TRUE@	libarm32/libbrokerlib.a libarm32/libbrowcli.a \
+@LIBARM32_TRUE@	libarm32/libbrowser.a libarm32/libbthci.a \
 @LIBARM32_TRUE@	libarm32/libbthhfsrv.a libarm32/libbthpanapi.a \
 @LIBARM32_TRUE@	libarm32/libbthserv.a libarm32/libbthsqm.a \
 @LIBARM32_TRUE@	libarm32/libcabinet.a libarm32/libcabview.a \
@@ -6750,9 +6748,8 @@ src_intrincsarm32 =
 @LIBARM32_TRUE@	libarm32/libenergyprov.a libarm32/libes.a \
 @LIBARM32_TRUE@	libarm32/libesent.a libarm32/libesentprf.a \
 @LIBARM32_TRUE@	libarm32/libeventaggregation.a \
-@LIBARM32_TRUE@	libarm32/libevr.a libarm32/libexplorerframe.a \
-@LIBARM32_TRUE@	libarm32/libf3ahvoas.a libarm32/libfaultrep.a \
-@LIBARM32_TRUE@	libarm32/libfde.a libarm32/libfdeploy.a \
+@LIBARM32_TRUE@	libarm32/libevr.a libarm32/libf3ahvoas.a \
+@LIBARM32_TRUE@	libarm32/libfaultrep.a libarm32/libfdeploy.a \
 @LIBARM32_TRUE@	libarm32/libfdphost.a libarm32/libfdprint.a \
 @LIBARM32_TRUE@	libarm32/libfdrespub.a libarm32/libfdssdp.a \
 @LIBARM32_TRUE@	libarm32/libfdwsd.a libarm32/libfeclient.a \
@@ -6839,7 +6836,6 @@ src_intrincsarm32 =
 @LIBARM32_TRUE@	libarm32/libmdminst.a \
 @LIBARM32_TRUE@	libarm32/libmdmregistration.a \
 @LIBARM32_TRUE@	libarm32/libmf3216.a libarm32/libmfasfsrcsnk.a \
-@LIBARM32_TRUE@	libarm32/libmfc110.a libarm32/libmfc110u.a \
 @LIBARM32_TRUE@	libarm32/libmfc42.a libarm32/libmfc42u.a \
 @LIBARM32_TRUE@	libarm32/libmfcaptureengine.a \
 @LIBARM32_TRUE@	libarm32/libmfcore.a libarm32/libmfcsubs.a \
@@ -6874,10 +6870,10 @@ src_intrincsarm32 =
 @LIBARM32_TRUE@	libarm32/libmsdrm.a libarm32/libmsfeeds.a \
 @LIBARM32_TRUE@	libarm32/libmsftedit.a libarm32/libmshtml.a \
 @LIBARM32_TRUE@	libarm32/libmsicofire.a libarm32/libmsidcrl40.a \
-@LIBARM32_TRUE@	libarm32/libmsi.a libarm32/libmsidle.a \
-@LIBARM32_TRUE@	libarm32/libmsiltcfg.a libarm32/libmsimg32.a \
-@LIBARM32_TRUE@	libarm32/libmsimtf.a libarm32/libmsisip.a \
-@LIBARM32_TRUE@	libarm32/libmsiwer.a libarm32/libmskeyprotcli.a \
+@LIBARM32_TRUE@	libarm32/libmsi.a libarm32/libmsiltcfg.a \
+@LIBARM32_TRUE@	libarm32/libmsimg32.a libarm32/libmsimtf.a \
+@LIBARM32_TRUE@	libarm32/libmsisip.a libarm32/libmsiwer.a \
+@LIBARM32_TRUE@	libarm32/libmskeyprotcli.a \
 @LIBARM32_TRUE@	libarm32/libmskeyprotect.a libarm32/libmsls31.a \
 @LIBARM32_TRUE@	libarm32/libmsmpeg2vdec.a \
 @LIBARM32_TRUE@	libarm32/libmsoeacct.a libarm32/libmsoert2.a \
@@ -6926,26 +6922,24 @@ src_intrincsarm32 =
 @LIBARM32_TRUE@	libarm32/libnrpsrv.a libarm32/libnshhttp.a \
 @LIBARM32_TRUE@	libarm32/libnshipsec.a libarm32/libnshwfp.a \
 @LIBARM32_TRUE@	libarm32/libnsi.a libarm32/libnsisvc.a \
-@LIBARM32_TRUE@	libarm32/libntasn1.a libarm32/libntdll.a \
-@LIBARM32_TRUE@	libarm32/libntdsapi.a libarm32/libntlanman.a \
-@LIBARM32_TRUE@	libarm32/libntmarta.a libarm32/libntoskrnl.a \
-@LIBARM32_TRUE@	libarm32/libntprint.a libarm32/libntshrui.a \
+@LIBARM32_TRUE@	libarm32/libntdll.a libarm32/libntdsapi.a \
+@LIBARM32_TRUE@	libarm32/libntlanman.a libarm32/libntmarta.a \
+@LIBARM32_TRUE@	libarm32/libntoskrnl.a libarm32/libntprint.a \
+@LIBARM32_TRUE@	libarm32/libntshrui.a \
 @LIBARM32_TRUE@	libarm32/libnvcameraispb.a \
 @LIBARM32_TRUE@	libarm32/libnvcameraisp.a libarm32/libnvd3dum.a \
 @LIBARM32_TRUE@	libarm32/libnvencodeapi.a libarm32/liboccache.a \
 @LIBARM32_TRUE@	libarm32/libodbc32.a libarm32/libodbccp32.a \
 @LIBARM32_TRUE@	libarm32/libodbctrac.a libarm32/liboemlicense.a \
 @LIBARM32_TRUE@	libarm32/liboffreg.a libarm32/libole32.a \
-@LIBARM32_TRUE@	libarm32/liboleacc.a libarm32/liboleacchooks.a \
-@LIBARM32_TRUE@	libarm32/liboleaut32.a libarm32/liboledlg.a \
+@LIBARM32_TRUE@	libarm32/liboleacc.a libarm32/liboleaut32.a \
+@LIBARM32_TRUE@	libarm32/liboledlg.a \
 @LIBARM32_TRUE@	libarm32/libondemandconnroutehelper.a \
 @LIBARM32_TRUE@	libarm32/libonex.a libarm32/libonexui.a \
-@LIBARM32_TRUE@	libarm32/liboobefldr.a \
-@LIBARM32_TRUE@	libarm32/libopcservices.a \
-@LIBARM32_TRUE@	libarm32/libosbaseln.a libarm32/libosksupport.a \
-@LIBARM32_TRUE@	libarm32/libosuninst.a libarm32/libp2p.a \
-@LIBARM32_TRUE@	libarm32/libp2pgraph.a libarm32/libp2pnetsh.a \
-@LIBARM32_TRUE@	libarm32/libp2psvc.a libarm32/libpackager.a \
+@LIBARM32_TRUE@	libarm32/liboobefldr.a libarm32/libosbaseln.a \
+@LIBARM32_TRUE@	libarm32/libosksupport.a libarm32/libosuninst.a \
+@LIBARM32_TRUE@	libarm32/libp2p.a libarm32/libp2pgraph.a \
+@LIBARM32_TRUE@	libarm32/libp2pnetsh.a libarm32/libp2psvc.a \
 @LIBARM32_TRUE@	libarm32/libpautoenr.a libarm32/libpcacli.a \
 @LIBARM32_TRUE@	libarm32/libpcaui.a libarm32/libpcpksp.a \
 @LIBARM32_TRUE@	libarm32/libpcptpm12.a libarm32/libpcwum.a \
@@ -6961,17 +6955,13 @@ src_intrincsarm32 =
 @LIBARM32_TRUE@	libarm32/libpnpui.a libarm32/libpnrpauto.a \
 @LIBARM32_TRUE@	libarm32/libpnrpnsp.a libarm32/libpnrpsvc.a \
 @LIBARM32_TRUE@	libarm32/libpolstore.a \
-@LIBARM32_TRUE@	libarm32/libportabledeviceapi.a \
 @LIBARM32_TRUE@	libarm32/libportabledeviceclassextension.a \
 @LIBARM32_TRUE@	libarm32/libpots.a \
 @LIBARM32_TRUE@	libarm32/libpowerwmiprovider.a \
 @LIBARM32_TRUE@	libarm32/libpowrprof.a \
-@LIBARM32_TRUE@	libarm32/libprintdialogs.a \
 @LIBARM32_TRUE@	libarm32/libprintfilterpipelineprxy.a \
-@LIBARM32_TRUE@	libarm32/libprintisolationproxy.a \
-@LIBARM32_TRUE@	libarm32/libprintui.a libarm32/libprncache.a \
-@LIBARM32_TRUE@	libarm32/libprnntfy.a libarm32/libprntvpt.a \
-@LIBARM32_TRUE@	libarm32/libprocinst.a libarm32/libprofapi.a \
+@LIBARM32_TRUE@	libarm32/libprintui.a libarm32/libprnntfy.a \
+@LIBARM32_TRUE@	libarm32/libprntvpt.a libarm32/libprocinst.a \
 @LIBARM32_TRUE@	libarm32/libprofext.a libarm32/libprofsvc.a \
 @LIBARM32_TRUE@	libarm32/libprofsvcext.a libarm32/libpropsys.a \
 @LIBARM32_TRUE@	libarm32/libprovsvc.a libarm32/libprovthrd.a \
@@ -6983,8 +6973,8 @@ src_intrincsarm32 =
 @LIBARM32_TRUE@	libarm32/libprvdmofcomp.a libarm32/libpsapi.a \
 @LIBARM32_TRUE@	libarm32/libpshed.a \
 @LIBARM32_TRUE@	libarm32/libpsmodulediscoveryprovider.a \
-@LIBARM32_TRUE@	libarm32/libpsmsrv.a libarm32/libpstorec.a \
-@LIBARM32_TRUE@	libarm32/libpuiapi.a libarm32/libpwlauncher.a \
+@LIBARM32_TRUE@	libarm32/libpstorec.a libarm32/libpuiapi.a \
+@LIBARM32_TRUE@	libarm32/libpwlauncher.a \
 @LIBARM32_TRUE@	libarm32/libpwrshplugin.a \
 @LIBARM32_TRUE@	libarm32/libqagentrt.a libarm32/libqmgr.a \
 @LIBARM32_TRUE@	libarm32/libqshvhost.a libarm32/libquery.a \
@@ -7041,17 +7031,14 @@ src_intrincsarm32 =
 @LIBARM32_TRUE@	libarm32/libsensrsvc.a libarm32/libserialui.a \
 @LIBARM32_TRUE@	libarm32/libserwvdrv.a libarm32/libsessenv.a \
 @LIBARM32_TRUE@	libarm32/libsetbcdlocale.a \
-@LIBARM32_TRUE@	libarm32/libsetnetworklocation.a \
-@LIBARM32_TRUE@	libarm32/libsetproxycredential.a \
 @LIBARM32_TRUE@	libarm32/libsettingshandlers.a \
 @LIBARM32_TRUE@	libarm32/libsettingsyncpolicy.a \
 @LIBARM32_TRUE@	libarm32/libsetupapi.a libarm32/libsfc.a \
 @LIBARM32_TRUE@	libarm32/libsfc_os.a libarm32/libshcore.a \
 @LIBARM32_TRUE@	libarm32/libshdocvw.a libarm32/libshfolder.a \
-@LIBARM32_TRUE@	libarm32/libshgina.a libarm32/libshimeng.a \
-@LIBARM32_TRUE@	libarm32/libshimgvw.a libarm32/libshlwapi.a \
-@LIBARM32_TRUE@	libarm32/libshsetup.a libarm32/libshsvcs.a \
-@LIBARM32_TRUE@	libarm32/libshunimpl.a libarm32/libshwebsvc.a \
+@LIBARM32_TRUE@	libarm32/libshimeng.a libarm32/libshimgvw.a \
+@LIBARM32_TRUE@	libarm32/libshlwapi.a libarm32/libshsetup.a \
+@LIBARM32_TRUE@	libarm32/libshsvcs.a libarm32/libshwebsvc.a \
 @LIBARM32_TRUE@	libarm32/libsimauth.a libarm32/libsimcfg.a \
 @LIBARM32_TRUE@	libarm32/libsisbkup.a \
 @LIBARM32_TRUE@	libarm32/libskydrivetelemetry.a \
@@ -7060,16 +7047,15 @@ src_intrincsarm32 =
 @LIBARM32_TRUE@	libarm32/libslwga.a \
 @LIBARM32_TRUE@	libarm32/libsmartcardsimulator.a \
 @LIBARM32_TRUE@	libarm32/libsmbwmiv2.a libarm32/libsmiengine.a \
-@LIBARM32_TRUE@	libarm32/libsmsrouter.a libarm32/libsndvolsso.a \
-@LIBARM32_TRUE@	libarm32/libsnmpapi.a libarm32/libsoftpub.a \
-@LIBARM32_TRUE@	libarm32/libspbcd.a libarm32/libspfileq.a \
-@LIBARM32_TRUE@	libarm32/libspinf.a libarm32/libspmpm.a \
-@LIBARM32_TRUE@	libarm32/libspnet.a libarm32/libspoolss.a \
-@LIBARM32_TRUE@	libarm32/libspopk.a libarm32/libsppc.a \
-@LIBARM32_TRUE@	libarm32/libsppcext.a libarm32/libsppcommdlg.a \
-@LIBARM32_TRUE@	libarm32/libsppnp.a libarm32/libsppobjs.a \
-@LIBARM32_TRUE@	libarm32/libsppwinob.a libarm32/libspwinsat.a \
-@LIBARM32_TRUE@	libarm32/libspwizeng.a \
+@LIBARM32_TRUE@	libarm32/libsmsrouter.a libarm32/libsnmpapi.a \
+@LIBARM32_TRUE@	libarm32/libsoftpub.a libarm32/libspbcd.a \
+@LIBARM32_TRUE@	libarm32/libspfileq.a libarm32/libspinf.a \
+@LIBARM32_TRUE@	libarm32/libspmpm.a libarm32/libspnet.a \
+@LIBARM32_TRUE@	libarm32/libspoolss.a libarm32/libspopk.a \
+@LIBARM32_TRUE@	libarm32/libsppc.a libarm32/libsppcext.a \
+@LIBARM32_TRUE@	libarm32/libsppcommdlg.a libarm32/libsppnp.a \
+@LIBARM32_TRUE@	libarm32/libsppobjs.a libarm32/libsppwinob.a \
+@LIBARM32_TRUE@	libarm32/libspwinsat.a libarm32/libspwizeng.a \
 @LIBARM32_TRUE@	libarm32/libsqlcecompact40.a \
 @LIBARM32_TRUE@	libarm32/libsqlcese40.a libarm32/libsqlsrv32.a \
 @LIBARM32_TRUE@	libarm32/libsqmapi.a libarm32/libsrchadmin.a \
@@ -7125,12 +7111,9 @@ src_intrincsarm32 =
 @LIBARM32_TRUE@	libarm32/libtsusbredirectiongrouppolicyextension.a \
 @LIBARM32_TRUE@	libarm32/libtsworkspace.a \
 @LIBARM32_TRUE@	libarm32/libttlsauth.a libarm32/libttlscfg.a \
-@LIBARM32_TRUE@	libarm32/libttlsext.a \
-@LIBARM32_TRUE@	libarm32/libtwinapi.appcore.a \
-@LIBARM32_TRUE@	libarm32/libtwinapi.a libarm32/libtxfw32.a \
+@LIBARM32_TRUE@	libarm32/libttlsext.a libarm32/libtxfw32.a \
 @LIBARM32_TRUE@	libarm32/libubpm.a libarm32/libudhisapi.a \
-@LIBARM32_TRUE@	libarm32/libudwm.a libarm32/libuexfat.a \
-@LIBARM32_TRUE@	libarm32/libufat.a \
+@LIBARM32_TRUE@	libarm32/libuexfat.a libarm32/libufat.a \
 @LIBARM32_TRUE@	libarm32/libuiautomationcore.a \
 @LIBARM32_TRUE@	libarm32/libuireng.a libarm32/libulib.a \
 @LIBARM32_TRUE@	libarm32/libumdmxfrm.a libarm32/libumpnpmgr.a \
@@ -7158,7 +7141,6 @@ src_intrincsarm32 =
 @LIBARM32_TRUE@	libarm32/libvpnike.a libarm32/libvssapi.a \
 @LIBARM32_TRUE@	libarm32/libvss_ps.a libarm32/libvsstrace.a \
 @LIBARM32_TRUE@	libarm32/libw32time.a libarm32/libw32topl.a \
-@LIBARM32_TRUE@	libarm32/libwabsyncprovider.a \
 @LIBARM32_TRUE@	libarm32/libwbemcomn.a libarm32/libwbiosrvc.a \
 @LIBARM32_TRUE@	libarm32/libwcl.a libarm32/libwcletw.a \
 @LIBARM32_TRUE@	libarm32/libwclpowrprof.a libarm32/libwclsqm.a \
@@ -7171,9 +7153,8 @@ src_intrincsarm32 =
 @LIBARM32_TRUE@	libarm32/libwcspluginservice.a \
 @LIBARM32_TRUE@	libarm32/libwdc.a libarm32/libwdiasqmmodule.a \
 @LIBARM32_TRUE@	libarm32/libwdi.a libarm32/libwdigest.a \
-@LIBARM32_TRUE@	libarm32/libwdscore.a libarm32/libwebcheck.a \
-@LIBARM32_TRUE@	libarm32/libwebclnt.a libarm32/libwebio.a \
-@LIBARM32_TRUE@	libarm32/libwebservices.a \
+@LIBARM32_TRUE@	libarm32/libwdscore.a libarm32/libwebclnt.a \
+@LIBARM32_TRUE@	libarm32/libwebio.a libarm32/libwebservices.a \
 @LIBARM32_TRUE@	libarm32/libwebsocket.a libarm32/libwecapi.a \
 @LIBARM32_TRUE@	libarm32/libwecsvc.a libarm32/libwerconcpl.a \
 @LIBARM32_TRUE@	libarm32/libwercplsupport.a libarm32/libwer.a \
@@ -7200,7 +7181,6 @@ src_intrincsarm32 =
 @LIBARM32_TRUE@	libarm32/libwindows.networking.vpn.a \
 @LIBARM32_TRUE@	libarm32/libwindows.storage.applicationdata.a \
 @LIBARM32_TRUE@	libarm32/libwindows.ui.a \
-@LIBARM32_TRUE@	libarm32/libwindows.ui.immersive.a \
 @LIBARM32_TRUE@	libarm32/libwindows.ui.xaml.a \
 @LIBARM32_TRUE@	libarm32/libwinethc.a libarm32/libwinhttp.a \
 @LIBARM32_TRUE@	libarm32/libwininet.a libarm32/libwininitext.a \
@@ -7212,9 +7192,6 @@ src_intrincsarm32 =
 @LIBARM32_TRUE@	libarm32/libwinsetupui.a libarm32/libwinshfhc.a \
 @LIBARM32_TRUE@	libarm32/libwinsku.a libarm32/libwinsrpc.a \
 @LIBARM32_TRUE@	libarm32/libwinsrv.a libarm32/libwinsta.a \
-@LIBARM32_TRUE@	libarm32/libwinsync.a \
-@LIBARM32_TRUE@	libarm32/libwinsyncmetastore.a \
-@LIBARM32_TRUE@	libarm32/libwinsyncproviders.a \
 @LIBARM32_TRUE@	libarm32/libwintrust.a libarm32/libwintypes.a \
 @LIBARM32_TRUE@	libarm32/libwinusb.a \
 @LIBARM32_TRUE@	libarm32/libwitnesswmiv2provider.a \
@@ -7255,25 +7232,22 @@ src_intrincsarm32 =
 @LIBARM32_TRUE@	libarm32/libwsock32.a libarm32/libwsservice.a \
 @LIBARM32_TRUE@	libarm32/libwsshared.a libarm32/libwssync.a \
 @LIBARM32_TRUE@	libarm32/libwtsapi32.a libarm32/libwuaext.a \
-@LIBARM32_TRUE@	libarm32/libwuapi.a libarm32/libwuaueng.a \
-@LIBARM32_TRUE@	libarm32/libwucltux.a \
+@LIBARM32_TRUE@	libarm32/libwuaueng.a \
 @LIBARM32_TRUE@	libarm32/libwudfcoinstaller.a \
 @LIBARM32_TRUE@	libarm32/libwudfplatform.a \
 @LIBARM32_TRUE@	libarm32/libwudfsvc.a libarm32/libwudfx02000.a \
 @LIBARM32_TRUE@	libarm32/libwudfx.a libarm32/libwudriver.a \
-@LIBARM32_TRUE@	libarm32/libwups2.a libarm32/libwups.a \
 @LIBARM32_TRUE@	libarm32/libwusettingsprovider.a \
 @LIBARM32_TRUE@	libarm32/libwwaapi.a libarm32/libwwancfg.a \
 @LIBARM32_TRUE@	libarm32/libwwaninst.a libarm32/libwwanmm.a \
 @LIBARM32_TRUE@	libarm32/libwwanprotdim.a libarm32/libwwansvc.a \
 @LIBARM32_TRUE@	libarm32/libwwapi.a libarm32/libxaudio2_8.a \
 @LIBARM32_TRUE@	libarm32/libxinput1_4.a libarm32/libxmllite.a \
-@LIBARM32_TRUE@	libarm32/libxpsgdiconverter.a \
 @LIBARM32_TRUE@	libarm32/libxpsprint.a \
 @LIBARM32_TRUE@	libarm32/libxpsrasterservice.a \
-@LIBARM32_TRUE@	libarm32/libxpsservices.a libarm32/libxpssvcs.a \
-@LIBARM32_TRUE@	libarm32/libxwizards.a libarm32/libzipfldr.a \
-@LIBARM32_TRUE@	$(am__append_15) libarm32/libruntimeobject.a \
+@LIBARM32_TRUE@	libarm32/libxpssvcs.a libarm32/libxwizards.a \
+@LIBARM32_TRUE@	libarm32/libzipfldr.a $(am__append_15) \
+@LIBARM32_TRUE@	libarm32/libruntimeobject.a \
 @LIBARM32_TRUE@	libarm32/libsynchronization.a
 
 # Don't compile these, but install as is:
