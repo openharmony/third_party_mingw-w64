@@ -200,7 +200,7 @@ host_triplet = @host@
 @LIB64_TRUE@@W32API_FALSE@				  lib64/msvcr100.def lib64/msvcr110.def lib64/msvcr120.def lib64/msvcr120d.def \
 @LIB64_TRUE@@W32API_FALSE@				  lib64/msvcr120_app.def lib64/msvcp120_app.def \
 @LIB64_TRUE@@W32API_FALSE@				  lib64/advapi32.def lib64/clbcatq.def lib64/kernel32.def lib64/ole32.def \
-@LIB64_TRUE@@W32API_FALSE@				  lib64/user32.def
+@LIB64_TRUE@@W32API_FALSE@				  lib64/user32.def lib64/ws2_32.def
 
 @LIB64_TRUE@@W32API_FALSE@am__append_11 = lib64/libmsvcp60.a lib64/libmsvcr80.a lib64/libmsvcr90.a lib64/libmsvcr100.a lib64/libmsvcr90d.a \
 @LIB64_TRUE@@W32API_FALSE@			  lib64/libmsvcr110.a lib64/libmsvcr120.a lib64/libmsvcr120d.a lib64/libcrtdll.a \
@@ -222,7 +222,8 @@ host_triplet = @host@
 @LIBARM32_TRUE@@W32API_FALSE@	libarm32/libmoldname.a \
 @LIBARM32_TRUE@@W32API_FALSE@	libarm32/libmingwthrd.a
 @LIBARM32_TRUE@@W32API_FALSE@am__append_14 = libarm32/msvcrt.def libarm32/msvcr80.def libarm32/msvcr90.def libarm32/msvcr90d.def libarm32/msvcr100.def libarm32/msvcr110.def \
-@LIBARM32_TRUE@@W32API_FALSE@				  libarm32/advapi32.def libarm32/clbcatq.def libarm32/kernel32.def libarm32/ole32.def libarm32/user32.def
+@LIBARM32_TRUE@@W32API_FALSE@				  libarm32/advapi32.def libarm32/clbcatq.def libarm32/kernel32.def libarm32/ole32.def libarm32/user32.def \
+@LIBARM32_TRUE@@W32API_FALSE@				  libarm32/ws2_32.def
 
 @LIBARM32_TRUE@@W32API_FALSE@am__append_15 = libarm32/libmsvcp60.a libarm32/libmsvcr110.a
 @ENABLE_TESTS_UNICODE_TRUE@am__append_16 = testcases/t_municode testcases/t_tmain
@@ -2590,7 +2591,7 @@ am__lib64_libws2_32_a_SOURCES_DIST = libsrc/ws2_32.c \
 	libsrc/wspiapi/WspiapiLoad.c \
 	libsrc/wspiapi/WspiapiGetAddrInfo.c \
 	libsrc/wspiapi/WspiapiGetNameInfo.c \
-	libsrc/wspiapi/WspiapiFreeAddrInfo.c
+	libsrc/wspiapi/WspiapiFreeAddrInfo.c lib-common/ws2_32.def.in
 am__objects_74 = libsrc/lib64_libws2_32_a-ws2_32.$(OBJEXT) \
 	libsrc/ws2tcpip/lib64_libws2_32_a-in6_addr_equal.$(OBJEXT) \
 	libsrc/ws2tcpip/lib64_libws2_32_a-in6addr_isany.$(OBJEXT) \
@@ -3717,7 +3718,8 @@ am__libarm32_libws2_32_a_SOURCES_DIST = libsrc/ws2_32.c \
 	libsrc/wspiapi/WspiapiLoad.c \
 	libsrc/wspiapi/WspiapiGetAddrInfo.c \
 	libsrc/wspiapi/WspiapiGetNameInfo.c \
-	libsrc/wspiapi/WspiapiFreeAddrInfo.c
+	libsrc/wspiapi/WspiapiFreeAddrInfo.c \
+	lib-common/libws2_32.def.in
 am__objects_110 = libsrc/libarm32_libws2_32_a-ws2_32.$(OBJEXT) \
 	libsrc/ws2tcpip/libarm32_libws2_32_a-in6_addr_equal.$(OBJEXT) \
 	libsrc/ws2tcpip/libarm32_libws2_32_a-in6addr_isany.$(OBJEXT) \
@@ -5862,9 +5864,10 @@ src_intrincsarm32 =
 @LIB64_TRUE@lib64_libgdiplus_a_SOURCES = $(src_libgdiplus)
 @LIB64_TRUE@lib64_libgdiplus_a_CPPFLAGS = $(CPPFLAGS64) $(sysincludes)
 @LIB64_TRUE@lib64_libgdiplus_a_AR = $(DTDEF64) $(top_srcdir)/lib-common/gdiplus.def && $(AR) $(ARFLAGS)
-@LIB64_TRUE@lib64_libws2_32_a_SOURCES = $(src_libws2_32)
+@LIB64_TRUE@lib64_libws2_32_a_SOURCES = $(src_libws2_32) lib-common/ws2_32.def.in
 @LIB64_TRUE@lib64_libws2_32_a_CPPFLAGS = $(CPPFLAGS64) $(sysincludes)
-@LIB64_TRUE@lib64_libws2_32_a_AR = $(DTLIB64) && $(AR) $(ARFLAGS)
+@LIB64_TRUE@lib64_libws2_32_a_AR = $(DTDEF64) lib64/ws2_32.def && $(AR) $(ARFLAGS)
+@LIB64_TRUE@EXTRA_lib64_libws2_32_a_DEPENDENCIES = lib64/ws2_32.def
 @LIB64_TRUE@lib64_libtaskschd_a_SOURCES = $(src_libtaskschd)
 @LIB64_TRUE@lib64_libtaskschd_a_CPPFLAGS = $(CPPFLAGS64) $(sysincludes)
 @LIB64_TRUE@@W32API_FALSE@lib64_libdelayimp_a_SOURCES = 
@@ -6362,9 +6365,10 @@ src_intrincsarm32 =
 @LIBARM32_TRUE@libarm32_libgdiplus_a_SOURCES = $(src_libgdiplus)
 @LIBARM32_TRUE@libarm32_libgdiplus_a_CPPFLAGS = $(CPPFLAGSARM32) $(sysincludes)
 @LIBARM32_TRUE@libarm32_libgdiplus_a_AR = $(DTDEFARM32) $(top_srcdir)/lib-common/gdiplus.def && $(AR) $(ARFLAGS)
-@LIBARM32_TRUE@libarm32_libws2_32_a_SOURCES = $(src_libws2_32)
+@LIBARM32_TRUE@libarm32_libws2_32_a_SOURCES = $(src_libws2_32) lib-common/libws2_32.def.in
 @LIBARM32_TRUE@libarm32_libws2_32_a_CPPFLAGS = $(CPPFLAGSARM32) $(sysincludes)
-@LIBARM32_TRUE@libarm32_libws2_32_a_AR = $(DTLIBARM32) && $(AR) $(ARFLAGS)
+@LIBARM32_TRUE@libarm32_libws2_32_a_AR = $(DTDEFARM32) libarm32/ws2_32.def && $(AR) $(ARFLAGS)
+@LIBARM32_TRUE@EXTRA_libarm32_libws2_32_a_DEPENDENCIES = libarm32/ws2_32.def
 @LIBARM32_TRUE@@W32API_FALSE@libarm32_libdelayimp_a_SOURCES = 
 @LIBARM32_TRUE@@W32API_FALSE@nodist_libarm32_libm_a_SOURCES = $(src_libm)
 @LIBARM32_TRUE@@W32API_FALSE@libarm32_libm_a_CPPFLAGS = $(CPPFLAGSARM32) $(sysincludes)
