@@ -5909,28 +5909,27 @@ src_intrincsarm32 =
 @LIB64_TRUE@	lib64/libcdm.a lib64/libcertcli.a \
 @LIB64_TRUE@	lib64/libcertmgr.a lib64/libcertobj.a \
 @LIB64_TRUE@	lib64/libcfgbkend.a lib64/libcfgmgr32.a \
-@LIB64_TRUE@	lib64/libc_g18030.a lib64/libchtskdic.a \
-@LIB64_TRUE@	lib64/libcimwin32.a lib64/libCINTIME.a \
-@LIB64_TRUE@	lib64/libc_is2022.a lib64/libc_iscii.a \
-@LIB64_TRUE@	lib64/libclbcatq.a lib64/libclb.a \
-@LIB64_TRUE@	lib64/libcliconfg.a lib64/libclasspnp.a \
-@LIB64_TRUE@	lib64/libclusapi.a lib64/libcmcfg32.a \
-@LIB64_TRUE@	lib64/libcmdial32.a lib64/libcmpbk32.a \
-@LIB64_TRUE@	lib64/libcmutil.a lib64/libcnbjmon.a \
-@LIB64_TRUE@	lib64/libcnetcfg.a lib64/libcnvfat.a \
-@LIB64_TRUE@	lib64/libcoadmin.a lib64/libcolbact.a \
-@LIB64_TRUE@	lib64/libcomctl32.a lib64/libcomdlg32.a \
-@LIB64_TRUE@	lib64/libcompstui.a lib64/libcomres.a \
-@LIB64_TRUE@	lib64/libcomsetup.a lib64/libcomsnap.a \
-@LIB64_TRUE@	lib64/libcomsvcs.a lib64/libcomuid.a \
-@LIB64_TRUE@	lib64/libconsole.a lib64/libcorpol.a \
-@LIB64_TRUE@	lib64/libcredui.a lib64/libcrypt32.a \
-@LIB64_TRUE@	lib64/libcryptdlg.a lib64/libcryptdll.a \
-@LIB64_TRUE@	lib64/libcryptext.a lib64/libcryptnet.a \
-@LIB64_TRUE@	lib64/libcryptsvc.a lib64/libcryptui.a \
-@LIB64_TRUE@	lib64/libcscdll.a lib64/libcscui.a \
-@LIB64_TRUE@	lib64/libcsrsrv.a lib64/libd3d8thk.a \
-@LIB64_TRUE@	lib64/libd3d9.a lib64/libd3dxof.a lib64/libdanim.a \
+@LIB64_TRUE@	lib64/libchtskdic.a lib64/libcimwin32.a \
+@LIB64_TRUE@	lib64/libCINTIME.a lib64/libclbcatq.a \
+@LIB64_TRUE@	lib64/libclb.a lib64/libcliconfg.a \
+@LIB64_TRUE@	lib64/libclasspnp.a lib64/libclusapi.a \
+@LIB64_TRUE@	lib64/libcmcfg32.a lib64/libcmdial32.a \
+@LIB64_TRUE@	lib64/libcmpbk32.a lib64/libcmutil.a \
+@LIB64_TRUE@	lib64/libcnbjmon.a lib64/libcnetcfg.a \
+@LIB64_TRUE@	lib64/libcnvfat.a lib64/libcoadmin.a \
+@LIB64_TRUE@	lib64/libcolbact.a lib64/libcomctl32.a \
+@LIB64_TRUE@	lib64/libcomdlg32.a lib64/libcompstui.a \
+@LIB64_TRUE@	lib64/libcomres.a lib64/libcomsetup.a \
+@LIB64_TRUE@	lib64/libcomsnap.a lib64/libcomsvcs.a \
+@LIB64_TRUE@	lib64/libcomuid.a lib64/libconsole.a \
+@LIB64_TRUE@	lib64/libcorpol.a lib64/libcredui.a \
+@LIB64_TRUE@	lib64/libcrypt32.a lib64/libcryptdlg.a \
+@LIB64_TRUE@	lib64/libcryptdll.a lib64/libcryptext.a \
+@LIB64_TRUE@	lib64/libcryptnet.a lib64/libcryptsvc.a \
+@LIB64_TRUE@	lib64/libcryptui.a lib64/libcscdll.a \
+@LIB64_TRUE@	lib64/libcscui.a lib64/libcsrsrv.a \
+@LIB64_TRUE@	lib64/libd3d8thk.a lib64/libd3d9.a \
+@LIB64_TRUE@	lib64/libd3dxof.a lib64/libdanim.a \
 @LIB64_TRUE@	lib64/libdavclnt.a lib64/libdbgeng.a \
 @LIB64_TRUE@	lib64/libdbghelp.a lib64/libdbnetlib.a \
 @LIB64_TRUE@	lib64/libdbnmpntw.a lib64/libdciman32.a \
@@ -6464,11 +6463,9 @@ src_intrincsarm32 =
 @LIBARM32_TRUE@	libarm32/libcertenrollui.a \
 @LIBARM32_TRUE@	libarm32/libcertpoleng.a libarm32/libcertprop.a \
 @LIBARM32_TRUE@	libarm32/libcfgbkend.a libarm32/libcfgmgr32.a \
-@LIBARM32_TRUE@	libarm32/libc_g18030.a libarm32/libchartv.a \
-@LIBARM32_TRUE@	libarm32/libchkwudrv.a \
+@LIBARM32_TRUE@	libarm32/libchartv.a libarm32/libchkwudrv.a \
 @LIBARM32_TRUE@	libarm32/libchxreadingstringime.a \
-@LIBARM32_TRUE@	libarm32/libci.a libarm32/libc_is2022.a \
-@LIBARM32_TRUE@	libarm32/libc_iscii.a libarm32/libclbcatq.a \
+@LIBARM32_TRUE@	libarm32/libci.a libarm32/libclbcatq.a \
 @LIBARM32_TRUE@	libarm32/libclb.a libarm32/libclfsw32.a \
 @LIBARM32_TRUE@	libarm32/libcliconfg.a libarm32/libclusapi.a \
 @LIBARM32_TRUE@	libarm32/libcmdext.a libarm32/libcmifw.a \
