@@ -5857,7 +5857,7 @@ src_intrincsarm32 =
 @LIB64_TRUE@lib64_libuuid_a_CPPFLAGS = $(CPPFLAGS64) $(sysincludes)
 @LIB64_TRUE@lib64_libgdiplus_a_SOURCES = $(src_libgdiplus)
 @LIB64_TRUE@lib64_libgdiplus_a_CPPFLAGS = $(CPPFLAGS64) $(sysincludes)
-@LIB64_TRUE@lib64_libgdiplus_a_AR = $(DTLIB64) && $(AR) $(ARFLAGS)
+@LIB64_TRUE@lib64_libgdiplus_a_AR = $(DTDEF64) $(top_srcdir)/lib-common/gdiplus.def && $(AR) $(ARFLAGS)
 @LIB64_TRUE@lib64_libws2_32_a_SOURCES = $(src_libws2_32)
 @LIB64_TRUE@lib64_libws2_32_a_CPPFLAGS = $(CPPFLAGS64) $(sysincludes)
 @LIB64_TRUE@lib64_libws2_32_a_AR = $(DTLIB64) && $(AR) $(ARFLAGS)
@@ -6355,7 +6355,7 @@ src_intrincsarm32 =
 @LIBARM32_TRUE@libarm32_libuuid_a_CPPFLAGS = $(CPPFLAGSARM32) $(sysincludes)
 @LIBARM32_TRUE@libarm32_libgdiplus_a_SOURCES = $(src_libgdiplus)
 @LIBARM32_TRUE@libarm32_libgdiplus_a_CPPFLAGS = $(CPPFLAGSARM32) $(sysincludes)
-@LIBARM32_TRUE@libarm32_libgdiplus_a_AR = $(DTLIBARM32) && $(AR) $(ARFLAGS)
+@LIBARM32_TRUE@libarm32_libgdiplus_a_AR = $(DTDEFARM32) $(top_srcdir)/lib-common/gdiplus.def && $(AR) $(ARFLAGS)
 @LIBARM32_TRUE@libarm32_libws2_32_a_SOURCES = $(src_libws2_32)
 @LIBARM32_TRUE@libarm32_libws2_32_a_CPPFLAGS = $(CPPFLAGSARM32) $(sysincludes)
 @LIBARM32_TRUE@libarm32_libws2_32_a_AR = $(DTLIBARM32) && $(AR) $(ARFLAGS)
@@ -49231,7 +49231,7 @@ _libm_dummy.c:
 @LIBARM32_TRUE@	$(AR) -M < $<
 @LIBARM32_TRUE@	$(RANLIB) $@
 
-@LIBARM32_TRUE@libarm32/libxinput.a: libarm32/xinput1_4.def
+@LIBARM32_TRUE@libarm32/libxinput.a: lib-common/xinput1_4.def
 @LIBARM32_TRUE@	$(DTDEFARM32) $<
 @LIBARM32_TRUE@libarm32/libd3dcompiler.a: lib-common/d3dcompiler_47.def
 @LIBARM32_TRUE@	$(DTDEFARM32) $<
