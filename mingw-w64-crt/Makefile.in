@@ -49233,7 +49233,7 @@ _libm_dummy.c:
 
 @LIBARM32_TRUE@libarm32/libxinput.a: libarm32/xinput1_4.def
 @LIBARM32_TRUE@	$(DTDEFARM32) $<
-@LIBARM32_TRUE@libarm32/libd3dcompiler.a: libarm32/d3dcompiler_47.def
+@LIBARM32_TRUE@libarm32/libd3dcompiler.a: lib-common/d3dcompiler_47.def
 @LIBARM32_TRUE@	$(DTDEFARM32) $<
 
 # End ARM 32-bit runtime
