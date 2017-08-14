@@ -5888,11 +5888,10 @@ src_intrincsarm32 =
 @LIB64_TRUE@	lib64/libadmwprox.a lib64/libadptif.a \
 @LIB64_TRUE@	lib64/libadsiisex.a lib64/libadsldpc.a \
 @LIB64_TRUE@	lib64/libadvapi32.a lib64/libadvpack.a \
-@LIB64_TRUE@	lib64/libagentanm.a lib64/libagrmco64.a \
-@LIB64_TRUE@	lib64/libakscoinst.a lib64/libalrsvc.a \
-@LIB64_TRUE@	lib64/libapcups.a lib64/libapphelp.a \
-@LIB64_TRUE@	lib64/libappmgmts.a lib64/libappmgr.a \
-@LIB64_TRUE@	lib64/libaqueue.a lib64/libasp.a \
+@LIB64_TRUE@	lib64/libagentanm.a lib64/libakscoinst.a \
+@LIB64_TRUE@	lib64/libalrsvc.a lib64/libapcups.a \
+@LIB64_TRUE@	lib64/libapphelp.a lib64/libappmgmts.a \
+@LIB64_TRUE@	lib64/libappmgr.a lib64/libaqueue.a lib64/libasp.a \
 @LIB64_TRUE@	lib64/libaspperf.a lib64/libasycfilt.a \
 @LIB64_TRUE@	lib64/libatkctrs.a lib64/libatl.a \
 @LIB64_TRUE@	lib64/libatmlib.a lib64/libatrace.a \
