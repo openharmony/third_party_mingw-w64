@@ -2369,7 +2369,7 @@ am__lib64_libmsvcrt_a_SOURCES_DIST = misc/_configthreadlocale.c \
 	secapi/memcpy_s.c secapi/memmove_s.c secapi/rand_s.c \
 	secapi/sprintf_s.c secapi/strerror_s.c secapi/vsprintf_s.c \
 	secapi/wmemcpy_s.c secapi/wmemmove_s.c stdio/mingw_lock.c \
-	lib64/msvcrt.def.in
+	lib-common/msvcrt.def.in
 am__objects_62 = misc/lib64_libmsvcrt_a-_configthreadlocale.$(OBJEXT) \
 	misc/lib64_libmsvcrt_a-invalid_parameter_handler.$(OBJEXT) \
 	misc/lib64_libmsvcrt_a-output_format.$(OBJEXT) \
@@ -3493,7 +3493,7 @@ am__libarm32_libmsvcrt_a_SOURCES_DIST = misc/_configthreadlocale.c \
 	secapi/memcpy_s.c secapi/memmove_s.c secapi/rand_s.c \
 	secapi/sprintf_s.c secapi/strerror_s.c secapi/vsprintf_s.c \
 	secapi/wmemcpy_s.c secapi/wmemmove_s.c stdio/mingw_lock.c \
-	misc/lc_locale_func.c libarm32/msvcrt.def.in
+	misc/lc_locale_func.c lib-common/msvcrt.def.in
 am__objects_97 =  \
 	misc/libarm32_libmsvcrt_a-_configthreadlocale.$(OBJEXT) \
 	misc/libarm32_libmsvcrt_a-invalid_parameter_handler.$(OBJEXT) \
@@ -5807,7 +5807,7 @@ src_intrincsarm32 =
 @LIB64_TRUE@lib64_libkernel32_a_CPPFLAGS = $(CPPFLAGS64) $(extra_include) $(AM_CPPFLAGS)
 @LIB64_TRUE@lib64_libkernel32_a_AR = $(DTDEF64) lib64/kernel32.def && $(AR) $(ARFLAGS)
 @LIB64_TRUE@EXTRA_lib64_libkernel32_a_DEPENDENCIES = lib64/kernel32.def
-@LIB64_TRUE@@W32API_FALSE@lib64_libmsvcrt_a_SOURCES = $(src_msvcrt) lib64/msvcrt.def.in
+@LIB64_TRUE@@W32API_FALSE@lib64_libmsvcrt_a_SOURCES = $(src_msvcrt) lib-common/msvcrt.def.in
 @LIB64_TRUE@@W32API_FALSE@lib64_libmsvcrt_a_AR = $(DTDEF64) lib64/msvcrt.def && $(AR) $(ARFLAGS)
 @LIB64_TRUE@@W32API_FALSE@lib64_libmsvcrt_a_CPPFLAGS = $(CPPFLAGS64) -D__LIBMSVCRT__ $(extra_include) $(sysincludes)
 @LIB64_TRUE@@W32API_FALSE@EXTRA_lib64_libmsvcrt_a_DEPENDENCIES = lib64/msvcrt.def
@@ -6314,7 +6314,7 @@ src_intrincsarm32 =
 @LIBARM32_TRUE@libarm32_libkernel32_a_AR = $(DTDEFARM32) libarm32/kernel32.def && $(AR) $(ARFLAGS)
 @LIBARM32_TRUE@libarm32_libkernel32_a_CPPFLAGS = $(CPPFLAGSARM32) $(extra_include) $(AM_CPPFLAGS)
 @LIBARM32_TRUE@EXTRA_libarm32_libkernel32_a_DEPENDENCIES = libarm32/kernel32.def
-@LIBARM32_TRUE@@W32API_FALSE@libarm32_libmsvcrt_a_SOURCES = $(src_msvcrt32) libarm32/msvcrt.def.in
+@LIBARM32_TRUE@@W32API_FALSE@libarm32_libmsvcrt_a_SOURCES = $(src_msvcrt32) lib-common/msvcrt.def.in
 @LIBARM32_TRUE@@W32API_FALSE@libarm32_libmsvcrt_a_AR = $(DTDEFARM32) libarm32/msvcrt.def && $(AR) $(ARFLAGS)
 @LIBARM32_TRUE@@W32API_FALSE@libarm32_libmsvcrt_a_CPPFLAGS = $(CPPFLAGSARM32) -D__LIBMSVCRT__ $(extra_include) $(sysincludes)
 @LIBARM32_TRUE@@W32API_FALSE@EXTRA_libarm32_libmsvcrt_a_DEPENDENCIES = libarm32/msvcrt.def
