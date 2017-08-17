@@ -1360,7 +1360,6 @@ am__lib32_libwbemuuid_a_SOURCES_DIST = libsrc/wbemuuid.c
 am__objects_35 = libsrc/lib32_libwbemuuid_a-wbemuuid.$(OBJEXT)
 @LIB32_TRUE@am_lib32_libwbemuuid_a_OBJECTS = $(am__objects_35)
 lib32_libwbemuuid_a_OBJECTS = $(am_lib32_libwbemuuid_a_OBJECTS)
-lib32_libwindowscodecs_a_AR = $(AR) $(ARFLAGS)
 lib32_libwindowscodecs_a_LIBADD =
 am__lib32_libwindowscodecs_a_SOURCES_DIST = libsrc/windowscodecs.c
 am__objects_36 =  \
@@ -2537,7 +2536,6 @@ am__lib64_libwbemuuid_a_SOURCES_DIST = libsrc/wbemuuid.c
 am__objects_71 = libsrc/lib64_libwbemuuid_a-wbemuuid.$(OBJEXT)
 @LIB64_TRUE@am_lib64_libwbemuuid_a_OBJECTS = $(am__objects_71)
 lib64_libwbemuuid_a_OBJECTS = $(am_lib64_libwbemuuid_a_OBJECTS)
-lib64_libwindowscodecs_a_AR = $(AR) $(ARFLAGS)
 lib64_libwindowscodecs_a_LIBADD =
 am__lib64_libwindowscodecs_a_SOURCES_DIST = libsrc/windowscodecs.c
 am__objects_72 =  \
@@ -3662,7 +3660,6 @@ am__libarm32_libwbemuuid_a_SOURCES_DIST = libsrc/wbemuuid.c
 am__objects_107 = libsrc/libarm32_libwbemuuid_a-wbemuuid.$(OBJEXT)
 @LIBARM32_TRUE@am_libarm32_libwbemuuid_a_OBJECTS = $(am__objects_107)
 libarm32_libwbemuuid_a_OBJECTS = $(am_libarm32_libwbemuuid_a_OBJECTS)
-libarm32_libwindowscodecs_a_AR = $(AR) $(ARFLAGS)
 libarm32_libwindowscodecs_a_LIBADD =
 am__libarm32_libwindowscodecs_a_SOURCES_DIST = libsrc/windowscodecs.c
 am__objects_108 =  \
@@ -5537,6 +5534,7 @@ src_intrincsarm32 =
 @LIB32_TRUE@lib32_libwmcodecdspuuid_a_CPPFLAGS = $(CPPFLAGS32) $(sysincludes)
 @LIB32_TRUE@lib32_libwindowscodecs_a_SOURCES = $(src_libwindowscodecs)
 @LIB32_TRUE@lib32_libwindowscodecs_a_CPPFLAGS = $(CPPFLAGS32) $(sysincludes)
+@LIB32_TRUE@lib32_libwindowscodecs_a_AR = $(DTDEF32) $(top_srcdir)/lib32/windowscodecs.def && $(AR) $(ARFLAGS)
 @LIB32_TRUE@lib32_libwbemuuid_a_SOURCES = $(src_libwbemuuid)
 @LIB32_TRUE@lib32_libwbemuuid_a_CPPFLAGS = $(CPPFLAGS32) $(sysincludes)
 @LIB32_TRUE@lib32_libdxguid_a_SOURCES = $(src_libdxguid)
@@ -5738,28 +5736,27 @@ src_intrincsarm32 =
 @LIB32_TRUE@	lib32/libwer.a lib32/libwevtapi.a \
 @LIB32_TRUE@	lib32/libwevtfwd.a lib32/libwiadss.a \
 @LIB32_TRUE@	lib32/libwin32k.a lib32/libwin32spl.a \
-@LIB32_TRUE@	lib32/libwindowscodecs.a lib32/libwinhttp.a \
-@LIB32_TRUE@	lib32/libwininet.a lib32/libwinmm.a \
-@LIB32_TRUE@	lib32/libwinscard.a lib32/libwinspool.a \
-@LIB32_TRUE@	lib32/libwinstrm.a lib32/libwintrust.a \
-@LIB32_TRUE@	lib32/libwinusb.a lib32/libwkscli.a \
-@LIB32_TRUE@	lib32/libwlanapi.a lib32/libwlanui.a \
-@LIB32_TRUE@	lib32/libwlanutil.a lib32/libwldap32.a \
-@LIB32_TRUE@	lib32/libwmilib.a lib32/libwow32.a \
-@LIB32_TRUE@	lib32/libwsdapi.a lib32/libwsnmp32.a \
-@LIB32_TRUE@	lib32/libwsock32.a lib32/libwst.a \
-@LIB32_TRUE@	lib32/libwtsapi32.a lib32/libx3daudio1_2.a \
-@LIB32_TRUE@	lib32/libx3daudio1_3.a lib32/libx3daudio1_4.a \
-@LIB32_TRUE@	lib32/libx3daudio1_5.a lib32/libx3daudio1_6.a \
-@LIB32_TRUE@	lib32/libx3daudio1_7.a lib32/libx3daudiod1_7.a \
-@LIB32_TRUE@	lib32/libxapofx1_0.a lib32/libxapofx1_1.a \
-@LIB32_TRUE@	lib32/libxapofx1_2.a lib32/libxapofx1_3.a \
-@LIB32_TRUE@	lib32/libxapofx1_4.a lib32/libxapofx1_5.a \
-@LIB32_TRUE@	lib32/libxapofxd1_5.a lib32/libxaudio2_8.a \
-@LIB32_TRUE@	lib32/libxinput1_1.a lib32/libxinput1_2.a \
-@LIB32_TRUE@	lib32/libxinput1_3.a lib32/libxinput1_4.a \
-@LIB32_TRUE@	lib32/libxinput9_1_0.a lib32/libwindowsapp.a \
-@LIB32_TRUE@	$(am__append_7)
+@LIB32_TRUE@	lib32/libwinhttp.a lib32/libwininet.a \
+@LIB32_TRUE@	lib32/libwinmm.a lib32/libwinscard.a \
+@LIB32_TRUE@	lib32/libwinspool.a lib32/libwinstrm.a \
+@LIB32_TRUE@	lib32/libwintrust.a lib32/libwinusb.a \
+@LIB32_TRUE@	lib32/libwkscli.a lib32/libwlanapi.a \
+@LIB32_TRUE@	lib32/libwlanui.a lib32/libwlanutil.a \
+@LIB32_TRUE@	lib32/libwldap32.a lib32/libwmilib.a \
+@LIB32_TRUE@	lib32/libwow32.a lib32/libwsdapi.a \
+@LIB32_TRUE@	lib32/libwsnmp32.a lib32/libwsock32.a \
+@LIB32_TRUE@	lib32/libwst.a lib32/libwtsapi32.a \
+@LIB32_TRUE@	lib32/libx3daudio1_2.a lib32/libx3daudio1_3.a \
+@LIB32_TRUE@	lib32/libx3daudio1_4.a lib32/libx3daudio1_5.a \
+@LIB32_TRUE@	lib32/libx3daudio1_6.a lib32/libx3daudio1_7.a \
+@LIB32_TRUE@	lib32/libx3daudiod1_7.a lib32/libxapofx1_0.a \
+@LIB32_TRUE@	lib32/libxapofx1_1.a lib32/libxapofx1_2.a \
+@LIB32_TRUE@	lib32/libxapofx1_3.a lib32/libxapofx1_4.a \
+@LIB32_TRUE@	lib32/libxapofx1_5.a lib32/libxapofxd1_5.a \
+@LIB32_TRUE@	lib32/libxaudio2_8.a lib32/libxinput1_1.a \
+@LIB32_TRUE@	lib32/libxinput1_2.a lib32/libxinput1_3.a \
+@LIB32_TRUE@	lib32/libxinput1_4.a lib32/libxinput9_1_0.a \
+@LIB32_TRUE@	lib32/libwindowsapp.a $(am__append_7)
 @LIB32_TRUE@dx32_DATA = lib32/libxinput.a lib32/libxapofx.a \
 @LIB32_TRUE@	lib32/libx3daudio.a lib32/libd3dx9.a \
 @LIB32_TRUE@	lib32/libd3dx10.a lib32/libd3dx11.a \
@@ -5829,6 +5826,7 @@ src_intrincsarm32 =
 @LIB64_TRUE@lib64_libwmcodecdspuuid_a_CPPFLAGS = $(CPPFLAGS64) $(sysincludes)
 @LIB64_TRUE@lib64_libwindowscodecs_a_SOURCES = $(src_libwindowscodecs)
 @LIB64_TRUE@lib64_libwindowscodecs_a_CPPFLAGS = $(CPPFLAGS64) $(sysincludes)
+@LIB64_TRUE@lib64_libwindowscodecs_a_AR = $(DTDEF64) $(top_srcdir)/lib-common/windowscodecs.def && $(AR) $(ARFLAGS)
 @LIB64_TRUE@lib64_libwbemuuid_a_SOURCES = $(src_libwbemuuid)
 @LIB64_TRUE@lib64_libwbemuuid_a_CPPFLAGS = $(CPPFLAGS64) $(sysincludes)
 @LIB64_TRUE@lib64_libdxguid_a_SOURCES = $(src_libdxguid)
@@ -6327,6 +6325,7 @@ src_intrincsarm32 =
 @LIBARM32_TRUE@libarm32_libwmcodecdspuuid_a_CPPFLAGS = $(CPPFLAGSARM32) $(sysincludes)
 @LIBARM32_TRUE@libarm32_libwindowscodecs_a_SOURCES = $(src_libwindowscodecs)
 @LIBARM32_TRUE@libarm32_libwindowscodecs_a_CPPFLAGS = $(CPPFLAGSARM32) $(sysincludes)
+@LIBARM32_TRUE@libarm32_libwindowscodecs_a_AR = $(DTDEFARM32) $(top_srcdir)/lib-common/windowscodecs.def && $(AR) $(ARFLAGS)
 @LIBARM32_TRUE@libarm32_libwbemuuid_a_SOURCES = $(src_libwbemuuid)
 @LIBARM32_TRUE@libarm32_libwbemuuid_a_CPPFLAGS = $(CPPFLAGSARM32) $(sysincludes)
 @LIBARM32_TRUE@libarm32_libdxguid_a_SOURCES = $(src_libdxguid)
@@ -6885,7 +6884,6 @@ src_intrincsarm32 =
 @LIBARM32_TRUE@	libarm32/libwifidisplay.a libarm32/libwimgapi.a \
 @LIBARM32_TRUE@	libarm32/libwinbici.a libarm32/libwinbio.a \
 @LIBARM32_TRUE@	libarm32/libwinbrand.a \
-@LIBARM32_TRUE@	libarm32/libwindowscodecs.a \
 @LIBARM32_TRUE@	libarm32/libwindowscodecsext.a \
 @LIBARM32_TRUE@	libarm32/libwindows.data.pdf.a \
 @LIBARM32_TRUE@	libarm32/libwindows.globalization.fontgroups.a \
