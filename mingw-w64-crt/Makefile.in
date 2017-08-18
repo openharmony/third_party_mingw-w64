@@ -49240,7 +49240,7 @@ _libm_dummy.c:
 # ##########
 
 %.def: %.def.in
-	$(MKDIR_P) $(@D) && $(CPP) -x c $< -Wp,-w -I$(top_srcdir)/def-include | $(SED) 's/^#/;/' > $@
+	$(MKDIR_P) $(@D) && $(CPP) -x c $< -Wp,-w -undef -P -I$(top_srcdir)/def-include > $@
 
 dist-hook:
 	find $(top_distdir) -name ".svn" -delete
