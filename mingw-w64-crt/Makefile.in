@@ -6556,21 +6556,21 @@ src_intrincsarm32 =
 @LIBARM32_TRUE@	libarm32/libhotplug.a libarm32/libhttpapi.a \
 @LIBARM32_TRUE@	libarm32/libhttpprxm.a libarm32/libhttpprxp.a \
 @LIBARM32_TRUE@	libarm32/libhtui.a libarm32/libiashlpr.a \
-@LIBARM32_TRUE@	libarm32/libiassvcs.a libarm32/libicfupgd.a \
-@LIBARM32_TRUE@	libarm32/libicm32.a libarm32/libicmp.a \
-@LIBARM32_TRUE@	libarm32/libicmui.a libarm32/libidndl.a \
-@LIBARM32_TRUE@	libarm32/libieadvpack.a libarm32/libiedkcs32.a \
-@LIBARM32_TRUE@	libarm32/libieframe.a libarm32/libiernonce.a \
-@LIBARM32_TRUE@	libarm32/libiertutil.a libarm32/libiesetup.a \
-@LIBARM32_TRUE@	libarm32/libiesysprep.a libarm32/libieui.a \
-@LIBARM32_TRUE@	libarm32/libigddiag.a libarm32/libikeext.a \
-@LIBARM32_TRUE@	libarm32/libimagehlp.a libarm32/libimgutil.a \
-@LIBARM32_TRUE@	libarm32/libimm32.a libarm32/libinetcomm.a \
-@LIBARM32_TRUE@	libarm32/libinetmib1.a libarm32/libinput.a \
-@LIBARM32_TRUE@	libarm32/libinseng.a libarm32/libiphlpapi.a \
-@LIBARM32_TRUE@	libarm32/libiphlpsvc.a libarm32/libipnathlp.a \
-@LIBARM32_TRUE@	libarm32/libipsecsvc.a libarm32/libiuilp.a \
-@LIBARM32_TRUE@	libarm32/libjscript9.a \
+@LIBARM32_TRUE@	libarm32/libiassam.a libarm32/libiassvcs.a \
+@LIBARM32_TRUE@	libarm32/libicfupgd.a libarm32/libicm32.a \
+@LIBARM32_TRUE@	libarm32/libicmp.a libarm32/libicmui.a \
+@LIBARM32_TRUE@	libarm32/libidndl.a libarm32/libieadvpack.a \
+@LIBARM32_TRUE@	libarm32/libiedkcs32.a libarm32/libieframe.a \
+@LIBARM32_TRUE@	libarm32/libiernonce.a libarm32/libiertutil.a \
+@LIBARM32_TRUE@	libarm32/libiesetup.a libarm32/libiesysprep.a \
+@LIBARM32_TRUE@	libarm32/libieui.a libarm32/libigddiag.a \
+@LIBARM32_TRUE@	libarm32/libikeext.a libarm32/libimagehlp.a \
+@LIBARM32_TRUE@	libarm32/libimgutil.a libarm32/libimm32.a \
+@LIBARM32_TRUE@	libarm32/libinetcomm.a libarm32/libinetmib1.a \
+@LIBARM32_TRUE@	libarm32/libinput.a libarm32/libinseng.a \
+@LIBARM32_TRUE@	libarm32/libiphlpapi.a libarm32/libiphlpsvc.a \
+@LIBARM32_TRUE@	libarm32/libipnathlp.a libarm32/libipsecsvc.a \
+@LIBARM32_TRUE@	libarm32/libiuilp.a libarm32/libjscript9.a \
 @LIBARM32_TRUE@	libarm32/libjscript9diag.a \
 @LIBARM32_TRUE@	libarm32/libjsproxy.a libarm32/libkdcom.a \
 @LIBARM32_TRUE@	libarm32/libkd.a libarm32/libkdscli.a \
