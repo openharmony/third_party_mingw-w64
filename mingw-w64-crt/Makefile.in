@@ -182,11 +182,11 @@ host_triplet = @host@
 @LIB32_TRUE@@W32API_FALSE@	lib32/libmoldname.a \
 @LIB32_TRUE@@W32API_FALSE@	lib32/libmingwthrd.a
 @LIB32_TRUE@@W32API_FALSE@am__append_6 = lib32/msvcrt.def lib32/msvcr80.def lib32/msvcr90.def lib32/msvcr90d.def lib32/msvcr100.def lib32/msvcr110.def lib32/msvcr120.def lib32/msvcr120d.def \
-@LIB32_TRUE@@W32API_FALSE@				  lib32/msvcr120_app.def lib32/msvcp120_app.def
+@LIB32_TRUE@@W32API_FALSE@				  lib32/msvcr120_app.def lib32/msvcp120_app.def lib32/ucrtbase.def
 
 @LIB32_TRUE@@W32API_FALSE@am__append_7 = lib32/libglut.a lib32/libmsvcp60.a lib32/libmsvcr80.a lib32/libmsvcr90.a lib32/libmsvcr90d.a lib32/libmsvcr100.a \
 @LIB32_TRUE@@W32API_FALSE@			  lib32/libmsvcr110.a lib32/libmsvcr120.a lib32/libmsvcr120d.a lib32/libcrtdll.a \
-@LIB32_TRUE@@W32API_FALSE@			  lib32/libmsvcr120_app.a lib32/libmsvcp120_app.a
+@LIB32_TRUE@@W32API_FALSE@			  lib32/libmsvcr120_app.a lib32/libmsvcp120_app.a lib32/libucrtbase.a
 
 @LIB64_TRUE@@W32API_FALSE@am__append_8 = lib64/libmsvcrt.a
 @LIB64_TRUE@@W32API_FALSE@am__append_9 = lib64/libdelayimp.a \
@@ -198,13 +198,13 @@ host_triplet = @host@
 @LIB64_TRUE@@W32API_FALSE@	lib64/libmingwthrd.a
 @LIB64_TRUE@@W32API_FALSE@am__append_10 = lib64/msvcrt.def lib64/msvcr80.def lib64/msvcr90.def lib64/msvcr90d.def \
 @LIB64_TRUE@@W32API_FALSE@				  lib64/msvcr100.def lib64/msvcr110.def lib64/msvcr120.def lib64/msvcr120d.def \
-@LIB64_TRUE@@W32API_FALSE@				  lib64/msvcr120_app.def lib64/msvcp120_app.def \
+@LIB64_TRUE@@W32API_FALSE@				  lib64/msvcr120_app.def lib64/msvcp120_app.def lib64/ucrtbase.def \
 @LIB64_TRUE@@W32API_FALSE@				  lib64/advapi32.def lib64/clbcatq.def lib64/kernel32.def lib64/ole32.def \
 @LIB64_TRUE@@W32API_FALSE@				  lib64/oleaut32.def lib64/user32.def lib64/ws2_32.def
 
 @LIB64_TRUE@@W32API_FALSE@am__append_11 = lib64/libmsvcp60.a lib64/libmsvcr80.a lib64/libmsvcr90.a lib64/libmsvcr100.a lib64/libmsvcr90d.a \
 @LIB64_TRUE@@W32API_FALSE@			  lib64/libmsvcr110.a lib64/libmsvcr120.a lib64/libmsvcr120d.a lib64/libcrtdll.a \
-@LIB64_TRUE@@W32API_FALSE@			  lib64/libmsvcr120_app.a lib64/libmsvcp120_app.a
+@LIB64_TRUE@@W32API_FALSE@			  lib64/libmsvcr120_app.a lib64/libmsvcp120_app.a lib64/libucrtbase.a
 
 @LIBARM32_TRUE@@W32API_FALSE@am__append_12 = libarm32/libmsvcrt.a
 
@@ -221,11 +221,11 @@ host_triplet = @host@
 @LIBARM32_TRUE@@W32API_FALSE@	libarm32/libmingwex.a \
 @LIBARM32_TRUE@@W32API_FALSE@	libarm32/libmoldname.a \
 @LIBARM32_TRUE@@W32API_FALSE@	libarm32/libmingwthrd.a
-@LIBARM32_TRUE@@W32API_FALSE@am__append_14 = libarm32/msvcrt.def libarm32/msvcr80.def libarm32/msvcr90.def libarm32/msvcr90d.def libarm32/msvcr100.def libarm32/msvcr110.def \
+@LIBARM32_TRUE@@W32API_FALSE@am__append_14 = libarm32/msvcrt.def libarm32/msvcr80.def libarm32/msvcr90.def libarm32/msvcr90d.def libarm32/msvcr100.def libarm32/msvcr110.def libarm32/ucrtbase.def \
 @LIBARM32_TRUE@@W32API_FALSE@				  libarm32/advapi32.def libarm32/clbcatq.def libarm32/kernel32.def libarm32/ole32.def libarm32/oleaut32.def \
 @LIBARM32_TRUE@@W32API_FALSE@				  libarm32/user32.def libarm32/ws2_32.def
 
-@LIBARM32_TRUE@@W32API_FALSE@am__append_15 = libarm32/libmsvcp60.a libarm32/libmsvcr110.a
+@LIBARM32_TRUE@@W32API_FALSE@am__append_15 = libarm32/libmsvcp60.a libarm32/libmsvcr110.a libarm32/libucrtbase.a
 @LIBARM64_TRUE@@W32API_FALSE@am__append_16 = libarm64/libmsvcrt.a
 
 #libarm64_LIBRARIES += libarm64/libgmon.a
@@ -241,36 +241,37 @@ host_triplet = @host@
 @LIBARM64_TRUE@@W32API_FALSE@	libarm64/libmingwex.a \
 @LIBARM64_TRUE@@W32API_FALSE@	libarm64/libmoldname.a \
 @LIBARM64_TRUE@@W32API_FALSE@	libarm64/libmingwthrd.a
-@LIBARM64_TRUE@@W32API_FALSE@am__append_18 = libarm64/msvcrt.def \
+@LIBARM64_TRUE@@W32API_FALSE@am__append_18 = libarm64/msvcrt.def libarm64/ucrtbase.def \
 @LIBARM64_TRUE@@W32API_FALSE@				  libarm64/advapi32.def libarm64/clbcatq.def libarm64/kernel32.def libarm64/ole32.def libarm64/oleaut32.def \
 @LIBARM64_TRUE@@W32API_FALSE@				  libarm64/user32.def libarm64/ws2_32.def
 
-@ENABLE_TESTS_UNICODE_TRUE@am__append_19 = testcases/t_municode testcases/t_tmain
+@LIBARM64_TRUE@@W32API_FALSE@am__append_19 = libarm64/libucrtbase.a
+@ENABLE_TESTS_UNICODE_TRUE@am__append_20 = testcases/t_municode testcases/t_tmain
 check_PROGRAMS = $(am__EXEEXT_2) $(am__EXEEXT_4) $(am__EXEEXT_6)
 TESTS = $(am__EXEEXT_2) $(am__EXEEXT_4) $(am__EXEEXT_6)
 XFAIL_TESTS = testcases/t_nullptrexception$(EXEEXT) $(am__EXEEXT_7) \
 	$(am__EXEEXT_7)
 
 # Build the libraries
-@LIB32_TRUE@am__append_20 = $(newcomplex_test_lib32)
+@LIB32_TRUE@am__append_21 = $(newcomplex_test_lib32)
 
 # Build the programs during make check.
-@LIB32_TRUE@am__append_21 = $(newcomplex_tests32)
+@LIB32_TRUE@am__append_22 = $(newcomplex_tests32)
 
 # Declare the tests.
-@LIB32_TRUE@am__append_22 = $(newcomplex_tests32)
+@LIB32_TRUE@am__append_23 = $(newcomplex_tests32)
 # Remove these when completed.
-@LIB32_TRUE@am__append_23 = 
+@LIB32_TRUE@am__append_24 = 
 
 # Build the libraries
-@LIB64_TRUE@am__append_24 = $(newcomplex_test_lib64)
+@LIB64_TRUE@am__append_25 = $(newcomplex_test_lib64)
 
 # Build the programs during make check.
-@LIB64_TRUE@am__append_25 = $(newcomplex_tests64)
+@LIB64_TRUE@am__append_26 = $(newcomplex_tests64)
 
 # Declare the tests.
-@LIB64_TRUE@am__append_26 = $(newcomplex_tests64)
-@LIB64_TRUE@am__append_27 = 
+@LIB64_TRUE@am__append_27 = $(newcomplex_tests64)
+@LIB64_TRUE@am__append_28 = 
 subdir = .
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/configure.ac
@@ -8352,7 +8353,7 @@ src_intrincsarm64 =
 @LIBARM64_TRUE@	libarm64/libws2help.a libarm64/libwscsvc.a \
 @LIBARM64_TRUE@	libarm64/libwshbth.a libarm64/libwsock32.a \
 @LIBARM64_TRUE@	libarm64/libwtsapi32.a libarm64/libxaudio2_8.a \
-@LIBARM64_TRUE@	libarm64/libxinput1_4.a
+@LIBARM64_TRUE@	libarm64/libxinput1_4.a $(am__append_19)
 
 # Don't compile these, but install as is:
 #
@@ -8405,7 +8406,7 @@ testcase_progs = testcases/tstmainc testcases/tstmaincpp \
 	testcases/t_setjmp testcases/t_sigv testcases/t_speed_powl \
 	testcases/t_stat testcases/t_stdint testcases/t_time \
 	testcases/t_tls1 testcases/t_trycatch testcases/t_stat_slash \
-	testcases/t_wreaddir testcases/t_fseeko64 $(am__append_19)
+	testcases/t_wreaddir testcases/t_fseeko64 $(am__append_20)
 testcases_tstmaincpp_SOURCES = testcases/tstmaincpp.cpp
 testcases_t_trycatch_SOURCES = testcases/t_trycatch.cpp
 testcases_t_intrinc_CFLAGS = -std=c99
@@ -8414,7 +8415,7 @@ testcases_t_intrinc_CFLAGS = -std=c99
 
 # Do not specify TESTS = check_PROGRAMS, because some TESTS
 # may not be check_PROGRAMS.
-check_LIBRARIES = $(am__append_20) $(am__append_24)
+check_LIBRARIES = $(am__append_21) $(am__append_25)
 
 # Complex library check sources.
 check_complex_lib_sources = \
@@ -61348,8 +61349,6 @@ _libm_dummy.c:
 
 @LIBARM64_TRUE@libarm64/%.o: crt/%.c
 @LIBARM64_TRUE@	$(COMPILE) $(CPPFLAGSARM64) -c $< -o $@
-
-#libarm64_DATA += libarm64/libmsvcp60.a libarm64/libmsvcr110.a
 
 @LIBARM64_TRUE@libarm64/libcrtdll.a libarm64/libmsvcr80.a: libarm64/lib%.a: libarm64/%.def
 @LIBARM64_TRUE@	$(DTDEFARM64) $< --dllname $*.dll
