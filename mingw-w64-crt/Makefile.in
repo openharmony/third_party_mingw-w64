@@ -8058,10 +8058,10 @@ src_intrincsarm64 =
 @LIBARM32_TRUE@	libarm32/libwinnsi.a libarm32/libwinrnr.a \
 @LIBARM32_TRUE@	libarm32/libwinrscmd.a libarm32/libwinscard.a \
 @LIBARM32_TRUE@	libarm32/libwinsetupui.a libarm32/libwinshfhc.a \
-@LIBARM32_TRUE@	libarm32/libwinsku.a libarm32/libwinsrpc.a \
-@LIBARM32_TRUE@	libarm32/libwinsrv.a libarm32/libwinsta.a \
-@LIBARM32_TRUE@	libarm32/libwintrust.a libarm32/libwintypes.a \
-@LIBARM32_TRUE@	libarm32/libwinusb.a \
+@LIBARM32_TRUE@	libarm32/libwinsku.a libarm32/libwinspool.a \
+@LIBARM32_TRUE@	libarm32/libwinsrpc.a libarm32/libwinsrv.a \
+@LIBARM32_TRUE@	libarm32/libwinsta.a libarm32/libwintrust.a \
+@LIBARM32_TRUE@	libarm32/libwintypes.a libarm32/libwinusb.a \
 @LIBARM32_TRUE@	libarm32/libwitnesswmiv2provider.a \
 @LIBARM32_TRUE@	libarm32/libwkscli.a libarm32/libwkssvc.a \
 @LIBARM32_TRUE@	libarm32/libwlanapi.a libarm32/libwlangpui.a \
@@ -8342,16 +8342,16 @@ src_intrincsarm64 =
 @LIBARM64_TRUE@	libarm64/libwecapi.a libarm64/libwevtapi.a \
 @LIBARM64_TRUE@	libarm64/libwiashext.a libarm64/libwinhttp.a \
 @LIBARM64_TRUE@	libarm64/libwininet.a libarm64/libwinmm.a \
-@LIBARM64_TRUE@	libarm64/libwinrnr.a libarm64/libwinsrv.a \
-@LIBARM64_TRUE@	libarm64/libwinusb.a libarm64/libwkscli.a \
-@LIBARM64_TRUE@	libarm64/libwkssvc.a libarm64/libwlanapi.a \
-@LIBARM64_TRUE@	libarm64/libwlanui.a libarm64/libwlanutil.a \
-@LIBARM64_TRUE@	libarm64/libwldap32.a libarm64/libwmi.a \
-@LIBARM64_TRUE@	libarm64/libwmiprop.a libarm64/libwpd_ci.a \
-@LIBARM64_TRUE@	libarm64/libws2help.a libarm64/libwscsvc.a \
-@LIBARM64_TRUE@	libarm64/libwshbth.a libarm64/libwsock32.a \
-@LIBARM64_TRUE@	libarm64/libwtsapi32.a libarm64/libxaudio2_8.a \
-@LIBARM64_TRUE@	libarm64/libxinput1_4.a
+@LIBARM64_TRUE@	libarm64/libwinrnr.a libarm64/libwinspool.a \
+@LIBARM64_TRUE@	libarm64/libwinsrv.a libarm64/libwinusb.a \
+@LIBARM64_TRUE@	libarm64/libwkscli.a libarm64/libwkssvc.a \
+@LIBARM64_TRUE@	libarm64/libwlanapi.a libarm64/libwlanui.a \
+@LIBARM64_TRUE@	libarm64/libwlanutil.a libarm64/libwldap32.a \
+@LIBARM64_TRUE@	libarm64/libwmi.a libarm64/libwmiprop.a \
+@LIBARM64_TRUE@	libarm64/libwpd_ci.a libarm64/libws2help.a \
+@LIBARM64_TRUE@	libarm64/libwscsvc.a libarm64/libwshbth.a \
+@LIBARM64_TRUE@	libarm64/libwsock32.a libarm64/libwtsapi32.a \
+@LIBARM64_TRUE@	libarm64/libxaudio2_8.a libarm64/libxinput1_4.a
 
 # Don't compile these, but install as is:
 #
