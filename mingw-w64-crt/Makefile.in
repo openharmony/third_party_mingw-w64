@@ -200,7 +200,7 @@ host_triplet = @host@
 @LIB64_TRUE@@W32API_FALSE@				  lib64/msvcr100.def lib64/msvcr110.def lib64/msvcr120.def lib64/msvcr120d.def \
 @LIB64_TRUE@@W32API_FALSE@				  lib64/msvcr120_app.def lib64/msvcp120_app.def \
 @LIB64_TRUE@@W32API_FALSE@				  lib64/advapi32.def lib64/clbcatq.def lib64/kernel32.def lib64/ole32.def \
-@LIB64_TRUE@@W32API_FALSE@				  lib64/user32.def lib64/ws2_32.def
+@LIB64_TRUE@@W32API_FALSE@				  lib64/oleaut32.def lib64/user32.def lib64/ws2_32.def
 
 @LIB64_TRUE@@W32API_FALSE@am__append_11 = lib64/libmsvcp60.a lib64/libmsvcr80.a lib64/libmsvcr90.a lib64/libmsvcr100.a lib64/libmsvcr90d.a \
 @LIB64_TRUE@@W32API_FALSE@			  lib64/libmsvcr110.a lib64/libmsvcr120.a lib64/libmsvcr120d.a lib64/libcrtdll.a \
@@ -222,8 +222,8 @@ host_triplet = @host@
 @LIBARM32_TRUE@@W32API_FALSE@	libarm32/libmoldname.a \
 @LIBARM32_TRUE@@W32API_FALSE@	libarm32/libmingwthrd.a
 @LIBARM32_TRUE@@W32API_FALSE@am__append_14 = libarm32/msvcrt.def libarm32/msvcr80.def libarm32/msvcr90.def libarm32/msvcr90d.def libarm32/msvcr100.def libarm32/msvcr110.def \
-@LIBARM32_TRUE@@W32API_FALSE@				  libarm32/advapi32.def libarm32/clbcatq.def libarm32/kernel32.def libarm32/ole32.def libarm32/user32.def \
-@LIBARM32_TRUE@@W32API_FALSE@				  libarm32/ws2_32.def
+@LIBARM32_TRUE@@W32API_FALSE@				  libarm32/advapi32.def libarm32/clbcatq.def libarm32/kernel32.def libarm32/ole32.def libarm32/oleaut32.def \
+@LIBARM32_TRUE@@W32API_FALSE@				  libarm32/user32.def libarm32/ws2_32.def
 
 @LIBARM32_TRUE@@W32API_FALSE@am__append_15 = libarm32/libmsvcp60.a libarm32/libmsvcr110.a
 @LIBARM64_TRUE@@W32API_FALSE@am__append_16 = libarm64/libmsvcrt.a
@@ -242,8 +242,8 @@ host_triplet = @host@
 @LIBARM64_TRUE@@W32API_FALSE@	libarm64/libmoldname.a \
 @LIBARM64_TRUE@@W32API_FALSE@	libarm64/libmingwthrd.a
 @LIBARM64_TRUE@@W32API_FALSE@am__append_18 = libarm64/msvcrt.def \
-@LIBARM64_TRUE@@W32API_FALSE@				  libarm64/advapi32.def libarm64/clbcatq.def libarm64/kernel32.def libarm64/ole32.def libarm64/user32.def \
-@LIBARM64_TRUE@@W32API_FALSE@				  libarm64/ws2_32.def
+@LIBARM64_TRUE@@W32API_FALSE@				  libarm64/advapi32.def libarm64/clbcatq.def libarm64/kernel32.def libarm64/ole32.def libarm64/oleaut32.def \
+@LIBARM64_TRUE@@W32API_FALSE@				  libarm64/user32.def libarm64/ws2_32.def
 
 @ENABLE_TESTS_UNICODE_TRUE@am__append_19 = testcases/t_municode testcases/t_tmain
 check_PROGRAMS = $(am__EXEEXT_2) $(am__EXEEXT_4) $(am__EXEEXT_6)
@@ -8296,62 +8296,63 @@ src_intrincsarm64 =
 @LIBARM64_TRUE@	libarm64/libnetutils.a libarm64/libnormaliz.a \
 @LIBARM64_TRUE@	libarm64/libntdsapi.a libarm64/liboccache.a \
 @LIBARM64_TRUE@	libarm64/libodbccp32.a libarm64/libole32.a \
-@LIBARM64_TRUE@	libarm64/liboleacc.a libarm64/liboledlg.a \
-@LIBARM64_TRUE@	libarm64/libosuninst.a libarm64/libp2p.a \
-@LIBARM64_TRUE@	libarm64/libp2pgraph.a libarm64/libpcwum.a \
-@LIBARM64_TRUE@	libarm64/libperfctrs.a libarm64/libperfdisk.a \
-@LIBARM64_TRUE@	libarm64/libperfnet.a libarm64/libperfos.a \
-@LIBARM64_TRUE@	libarm64/libperfproc.a libarm64/libperfts.a \
-@LIBARM64_TRUE@	libarm64/libphotowiz.a libarm64/libpsapi.a \
-@LIBARM64_TRUE@	libarm64/libpstorec.a libarm64/libqutil.a \
-@LIBARM64_TRUE@	libarm64/libqwave.a libarm64/librasadhlp.a \
-@LIBARM64_TRUE@	libarm64/librasauto.a libarm64/libraschap.a \
-@LIBARM64_TRUE@	libarm64/librasctrs.a libarm64/librasmontr.a \
-@LIBARM64_TRUE@	libarm64/librasmxs.a libarm64/librasser.a \
-@LIBARM64_TRUE@	libarm64/librastapi.a libarm64/librdpcfgex.a \
-@LIBARM64_TRUE@	libarm64/libregapi.a libarm64/libregsvc.a \
-@LIBARM64_TRUE@	libarm64/libresutils.a libarm64/libriched20.a \
-@LIBARM64_TRUE@	libarm64/librnr20.a libarm64/librpcns4.a \
-@LIBARM64_TRUE@	libarm64/librpcrt4.a libarm64/librpcss.a \
-@LIBARM64_TRUE@	libarm64/librsaenh.a libarm64/librtutils.a \
-@LIBARM64_TRUE@	libarm64/libsamcli.a libarm64/libscarddlg.a \
-@LIBARM64_TRUE@	libarm64/libscesrv.a libarm64/libschannel.a \
-@LIBARM64_TRUE@	libarm64/libschedcli.a libarm64/libscrobj.a \
-@LIBARM64_TRUE@	libarm64/libscrrun.a libarm64/libsdhcinst.a \
-@LIBARM64_TRUE@	libarm64/libseclogon.a libarm64/libsecur32.a \
-@LIBARM64_TRUE@	libarm64/libsecurity.a libarm64/libsensapi.a \
-@LIBARM64_TRUE@	libarm64/libsens.a libarm64/libserialui.a \
-@LIBARM64_TRUE@	libarm64/libserwvdrv.a libarm64/libshfolder.a \
-@LIBARM64_TRUE@	libarm64/libshimgvw.a libarm64/libshsvcs.a \
-@LIBARM64_TRUE@	libarm64/libsisbkup.a libarm64/libslcext.a \
-@LIBARM64_TRUE@	libarm64/libslwga.a libarm64/libsnmpapi.a \
-@LIBARM64_TRUE@	libarm64/libsoftpub.a libarm64/libsqlsrv32.a \
-@LIBARM64_TRUE@	libarm64/libsrvcli.a libarm64/libsrvsvc.a \
-@LIBARM64_TRUE@	libarm64/libsspicli.a libarm64/libstreamci.a \
-@LIBARM64_TRUE@	libarm64/libsxs.a libarm64/libt2embed.a \
-@LIBARM64_TRUE@	libarm64/libtapi32.a libarm64/libtapiperf.a \
-@LIBARM64_TRUE@	libarm64/libtbs.a libarm64/libtdh.a \
-@LIBARM64_TRUE@	libarm64/libtraffic.a libarm64/libtsbyuv.a \
-@LIBARM64_TRUE@	libarm64/libtxfw32.a libarm64/libumdmxfrm.a \
-@LIBARM64_TRUE@	libarm64/libunimdmat.a libarm64/libuniplat.a \
-@LIBARM64_TRUE@	libarm64/libupnp.a libarm64/liburl.a \
-@LIBARM64_TRUE@	libarm64/libuser32.a libarm64/libusp10.a \
-@LIBARM64_TRUE@	libarm64/libutildll.a libarm64/libvirtdisk.a \
-@LIBARM64_TRUE@	libarm64/libw32time.a libarm64/libw32topl.a \
-@LIBARM64_TRUE@	libarm64/libwdigest.a libarm64/libwebclnt.a \
-@LIBARM64_TRUE@	libarm64/libwecapi.a libarm64/libwevtapi.a \
-@LIBARM64_TRUE@	libarm64/libwiashext.a libarm64/libwinhttp.a \
-@LIBARM64_TRUE@	libarm64/libwininet.a libarm64/libwinmm.a \
-@LIBARM64_TRUE@	libarm64/libwinrnr.a libarm64/libwinspool.a \
-@LIBARM64_TRUE@	libarm64/libwinsrv.a libarm64/libwinusb.a \
-@LIBARM64_TRUE@	libarm64/libwkscli.a libarm64/libwkssvc.a \
-@LIBARM64_TRUE@	libarm64/libwlanapi.a libarm64/libwlanui.a \
-@LIBARM64_TRUE@	libarm64/libwlanutil.a libarm64/libwldap32.a \
-@LIBARM64_TRUE@	libarm64/libwmi.a libarm64/libwmiprop.a \
-@LIBARM64_TRUE@	libarm64/libwpd_ci.a libarm64/libws2help.a \
-@LIBARM64_TRUE@	libarm64/libwscsvc.a libarm64/libwshbth.a \
-@LIBARM64_TRUE@	libarm64/libwsock32.a libarm64/libwtsapi32.a \
-@LIBARM64_TRUE@	libarm64/libxaudio2_8.a libarm64/libxinput1_4.a
+@LIBARM64_TRUE@	libarm64/liboleacc.a libarm64/liboleaut32.a \
+@LIBARM64_TRUE@	libarm64/liboledlg.a libarm64/libosuninst.a \
+@LIBARM64_TRUE@	libarm64/libp2p.a libarm64/libp2pgraph.a \
+@LIBARM64_TRUE@	libarm64/libpcwum.a libarm64/libperfctrs.a \
+@LIBARM64_TRUE@	libarm64/libperfdisk.a libarm64/libperfnet.a \
+@LIBARM64_TRUE@	libarm64/libperfos.a libarm64/libperfproc.a \
+@LIBARM64_TRUE@	libarm64/libperfts.a libarm64/libphotowiz.a \
+@LIBARM64_TRUE@	libarm64/libpsapi.a libarm64/libpstorec.a \
+@LIBARM64_TRUE@	libarm64/libqutil.a libarm64/libqwave.a \
+@LIBARM64_TRUE@	libarm64/librasadhlp.a libarm64/librasauto.a \
+@LIBARM64_TRUE@	libarm64/libraschap.a libarm64/librasctrs.a \
+@LIBARM64_TRUE@	libarm64/librasmontr.a libarm64/librasmxs.a \
+@LIBARM64_TRUE@	libarm64/librasser.a libarm64/librastapi.a \
+@LIBARM64_TRUE@	libarm64/librdpcfgex.a libarm64/libregapi.a \
+@LIBARM64_TRUE@	libarm64/libregsvc.a libarm64/libresutils.a \
+@LIBARM64_TRUE@	libarm64/libriched20.a libarm64/librnr20.a \
+@LIBARM64_TRUE@	libarm64/librpcns4.a libarm64/librpcrt4.a \
+@LIBARM64_TRUE@	libarm64/librpcss.a libarm64/librsaenh.a \
+@LIBARM64_TRUE@	libarm64/librtutils.a libarm64/libsamcli.a \
+@LIBARM64_TRUE@	libarm64/libscarddlg.a libarm64/libscesrv.a \
+@LIBARM64_TRUE@	libarm64/libschannel.a libarm64/libschedcli.a \
+@LIBARM64_TRUE@	libarm64/libscrobj.a libarm64/libscrrun.a \
+@LIBARM64_TRUE@	libarm64/libsdhcinst.a libarm64/libseclogon.a \
+@LIBARM64_TRUE@	libarm64/libsecur32.a libarm64/libsecurity.a \
+@LIBARM64_TRUE@	libarm64/libsensapi.a libarm64/libsens.a \
+@LIBARM64_TRUE@	libarm64/libserialui.a libarm64/libserwvdrv.a \
+@LIBARM64_TRUE@	libarm64/libshfolder.a libarm64/libshimgvw.a \
+@LIBARM64_TRUE@	libarm64/libshsvcs.a libarm64/libsisbkup.a \
+@LIBARM64_TRUE@	libarm64/libslcext.a libarm64/libslwga.a \
+@LIBARM64_TRUE@	libarm64/libsnmpapi.a libarm64/libsoftpub.a \
+@LIBARM64_TRUE@	libarm64/libsqlsrv32.a libarm64/libsrvcli.a \
+@LIBARM64_TRUE@	libarm64/libsrvsvc.a libarm64/libsspicli.a \
+@LIBARM64_TRUE@	libarm64/libstreamci.a libarm64/libsxs.a \
+@LIBARM64_TRUE@	libarm64/libt2embed.a libarm64/libtapi32.a \
+@LIBARM64_TRUE@	libarm64/libtapiperf.a libarm64/libtbs.a \
+@LIBARM64_TRUE@	libarm64/libtdh.a libarm64/libtraffic.a \
+@LIBARM64_TRUE@	libarm64/libtsbyuv.a libarm64/libtxfw32.a \
+@LIBARM64_TRUE@	libarm64/libumdmxfrm.a libarm64/libunimdmat.a \
+@LIBARM64_TRUE@	libarm64/libuniplat.a libarm64/libupnp.a \
+@LIBARM64_TRUE@	libarm64/liburl.a libarm64/libuser32.a \
+@LIBARM64_TRUE@	libarm64/libusp10.a libarm64/libutildll.a \
+@LIBARM64_TRUE@	libarm64/libvirtdisk.a libarm64/libw32time.a \
+@LIBARM64_TRUE@	libarm64/libw32topl.a libarm64/libwdigest.a \
+@LIBARM64_TRUE@	libarm64/libwebclnt.a libarm64/libwecapi.a \
+@LIBARM64_TRUE@	libarm64/libwevtapi.a libarm64/libwiashext.a \
+@LIBARM64_TRUE@	libarm64/libwinhttp.a libarm64/libwininet.a \
+@LIBARM64_TRUE@	libarm64/libwinmm.a libarm64/libwinrnr.a \
+@LIBARM64_TRUE@	libarm64/libwinspool.a libarm64/libwinsrv.a \
+@LIBARM64_TRUE@	libarm64/libwinusb.a libarm64/libwkscli.a \
+@LIBARM64_TRUE@	libarm64/libwkssvc.a libarm64/libwlanapi.a \
+@LIBARM64_TRUE@	libarm64/libwlanui.a libarm64/libwlanutil.a \
+@LIBARM64_TRUE@	libarm64/libwldap32.a libarm64/libwmi.a \
+@LIBARM64_TRUE@	libarm64/libwmiprop.a libarm64/libwpd_ci.a \
+@LIBARM64_TRUE@	libarm64/libws2help.a libarm64/libwscsvc.a \
+@LIBARM64_TRUE@	libarm64/libwshbth.a libarm64/libwsock32.a \
+@LIBARM64_TRUE@	libarm64/libwtsapi32.a libarm64/libxaudio2_8.a \
+@LIBARM64_TRUE@	libarm64/libxinput1_4.a
 
 # Don't compile these, but install as is:
 #
