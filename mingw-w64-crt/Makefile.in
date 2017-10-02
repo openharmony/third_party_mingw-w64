@@ -6895,8 +6895,9 @@ src_intrincsarm64 =
 @LIB32_TRUE@	lib32/librpcns4.a lib32/librpcrt4.a \
 @LIB32_TRUE@	lib32/librstrmgr.a lib32/librtm.a \
 @LIB32_TRUE@	lib32/librtutils.a lib32/libsamcli.a \
-@LIB32_TRUE@	lib32/libschedcli.a lib32/libscsiport.a \
-@LIB32_TRUE@	lib32/libsecur32.a lib32/libsetupapi.a \
+@LIB32_TRUE@	lib32/libschannel.a lib32/libschedcli.a \
+@LIB32_TRUE@	lib32/libscsiport.a lib32/libsecur32.a \
+@LIB32_TRUE@	lib32/libsecurity.a lib32/libsetupapi.a \
 @LIB32_TRUE@	lib32/libshfolder.a lib32/libshlwapi.a \
 @LIB32_TRUE@	lib32/libslc.a lib32/libslcext.a lib32/libslwga.a \
 @LIB32_TRUE@	lib32/libsnmpapi.a lib32/libspoolss.a \
