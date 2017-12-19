@@ -8719,16 +8719,17 @@ src_intrincsarm64 =
 @LIBARM64_TRUE@	libarm64/libwecapi.a libarm64/libwevtapi.a \
 @LIBARM64_TRUE@	libarm64/libwiashext.a libarm64/libwinhttp.a \
 @LIBARM64_TRUE@	libarm64/libwininet.a libarm64/libwinmm.a \
-@LIBARM64_TRUE@	libarm64/libwinrnr.a libarm64/libwinspool.a \
-@LIBARM64_TRUE@	libarm64/libwinsrv.a libarm64/libwinusb.a \
-@LIBARM64_TRUE@	libarm64/libwkscli.a libarm64/libwkssvc.a \
-@LIBARM64_TRUE@	libarm64/libwlanapi.a libarm64/libwlanui.a \
-@LIBARM64_TRUE@	libarm64/libwlanutil.a libarm64/libwldap32.a \
-@LIBARM64_TRUE@	libarm64/libwmi.a libarm64/libwmiprop.a \
-@LIBARM64_TRUE@	libarm64/libwpd_ci.a libarm64/libws2help.a \
-@LIBARM64_TRUE@	libarm64/libwscsvc.a libarm64/libwshbth.a \
-@LIBARM64_TRUE@	libarm64/libwsock32.a libarm64/libwtsapi32.a \
-@LIBARM64_TRUE@	libarm64/libxaudio2_8.a libarm64/libxinput1_4.a
+@LIBARM64_TRUE@	libarm64/libwinrnr.a libarm64/libwinscard.a \
+@LIBARM64_TRUE@	libarm64/libwinspool.a libarm64/libwinsrv.a \
+@LIBARM64_TRUE@	libarm64/libwinusb.a libarm64/libwkscli.a \
+@LIBARM64_TRUE@	libarm64/libwkssvc.a libarm64/libwlanapi.a \
+@LIBARM64_TRUE@	libarm64/libwlanui.a libarm64/libwlanutil.a \
+@LIBARM64_TRUE@	libarm64/libwldap32.a libarm64/libwmi.a \
+@LIBARM64_TRUE@	libarm64/libwmiprop.a libarm64/libwpd_ci.a \
+@LIBARM64_TRUE@	libarm64/libws2help.a libarm64/libwscsvc.a \
+@LIBARM64_TRUE@	libarm64/libwshbth.a libarm64/libwsock32.a \
+@LIBARM64_TRUE@	libarm64/libwtsapi32.a libarm64/libxaudio2_8.a \
+@LIBARM64_TRUE@	libarm64/libxinput1_4.a
 @LIBARM64_TRUE@@W32API_FALSE@libarm64_libmsvcrt_os_a_SOURCES = $(src_msvcrtarm64) lib-common/msvcrt.def.in
 @LIBARM64_TRUE@@W32API_FALSE@libarm64_libmsvcrt_os_a_AR = $(DTDEFARM64) libarm64/msvcrt.def && $(AR) $(ARFLAGS)
 @LIBARM64_TRUE@@W32API_FALSE@libarm64_libmsvcrt_os_a_CPPFLAGS = $(CPPFLAGSARM64) -D__LIBMSVCRT__ $(extra_include) $(sysincludes)
