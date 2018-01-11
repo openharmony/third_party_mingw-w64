@@ -353,8 +353,10 @@ am__objects_1 = libsrc/lib32_libamstrmid_a-amstrmid.$(OBJEXT)
 @LIB32_TRUE@am_lib32_libamstrmid_a_OBJECTS = $(am__objects_1)
 lib32_libamstrmid_a_OBJECTS = $(am_lib32_libamstrmid_a_OBJECTS)
 lib32_libcrtdll_a_LIBADD =
-am__lib32_libcrtdll_a_SOURCES_DIST = stdio/acrt_iob_func.c
-am__objects_2 = stdio/lib32_libcrtdll_a-acrt_iob_func.$(OBJEXT)
+am__lib32_libcrtdll_a_SOURCES_DIST = misc/onexit_table.c \
+	stdio/acrt_iob_func.c
+am__objects_2 = misc/lib32_libcrtdll_a-onexit_table.$(OBJEXT) \
+	stdio/lib32_libcrtdll_a-acrt_iob_func.$(OBJEXT)
 @LIB32_TRUE@@W32API_FALSE@am_lib32_libcrtdll_a_OBJECTS =  \
 @LIB32_TRUE@@W32API_FALSE@	$(am__objects_2)
 lib32_libcrtdll_a_OBJECTS = $(am_lib32_libcrtdll_a_OBJECTS)
@@ -1214,86 +1216,95 @@ am__objects_24 = lib32_libmoldname_a-_libm_dummy.$(OBJEXT)
 @LIB32_TRUE@@W32API_FALSE@	$(am__objects_24)
 lib32_libmoldname_a_OBJECTS = $(am_lib32_libmoldname_a_OBJECTS)
 lib32_libmsvcr100_a_LIBADD =
-am__lib32_libmsvcr100_a_SOURCES_DIST = stdio/acrt_iob_func.c \
-	lib32/msvcr100.def.in
-am__objects_25 = stdio/lib32_libmsvcr100_a-acrt_iob_func.$(OBJEXT)
+am__lib32_libmsvcr100_a_SOURCES_DIST = misc/onexit_table.c \
+	stdio/acrt_iob_func.c lib32/msvcr100.def.in
+am__objects_25 = misc/lib32_libmsvcr100_a-onexit_table.$(OBJEXT) \
+	stdio/lib32_libmsvcr100_a-acrt_iob_func.$(OBJEXT)
 @LIB32_TRUE@@W32API_FALSE@am_lib32_libmsvcr100_a_OBJECTS =  \
 @LIB32_TRUE@@W32API_FALSE@	$(am__objects_25)
 lib32_libmsvcr100_a_OBJECTS = $(am_lib32_libmsvcr100_a_OBJECTS)
 lib32_libmsvcr110_a_LIBADD =
-am__lib32_libmsvcr110_a_SOURCES_DIST = stdio/acrt_iob_func.c \
-	lib32/msvcr110.def.in
-am__objects_26 = stdio/lib32_libmsvcr110_a-acrt_iob_func.$(OBJEXT)
+am__lib32_libmsvcr110_a_SOURCES_DIST = misc/onexit_table.c \
+	stdio/acrt_iob_func.c lib32/msvcr110.def.in
+am__objects_26 = misc/lib32_libmsvcr110_a-onexit_table.$(OBJEXT) \
+	stdio/lib32_libmsvcr110_a-acrt_iob_func.$(OBJEXT)
 @LIB32_TRUE@@W32API_FALSE@am_lib32_libmsvcr110_a_OBJECTS =  \
 @LIB32_TRUE@@W32API_FALSE@	$(am__objects_26)
 lib32_libmsvcr110_a_OBJECTS = $(am_lib32_libmsvcr110_a_OBJECTS)
 lib32_libmsvcr120_a_LIBADD =
-am__lib32_libmsvcr120_a_SOURCES_DIST = stdio/acrt_iob_func.c \
-	lib32/msvcr120.def.in
-am__objects_27 = stdio/lib32_libmsvcr120_a-acrt_iob_func.$(OBJEXT)
+am__lib32_libmsvcr120_a_SOURCES_DIST = misc/onexit_table.c \
+	stdio/acrt_iob_func.c lib32/msvcr120.def.in
+am__objects_27 = misc/lib32_libmsvcr120_a-onexit_table.$(OBJEXT) \
+	stdio/lib32_libmsvcr120_a-acrt_iob_func.$(OBJEXT)
 @LIB32_TRUE@@W32API_FALSE@am_lib32_libmsvcr120_a_OBJECTS =  \
 @LIB32_TRUE@@W32API_FALSE@	$(am__objects_27)
 lib32_libmsvcr120_a_OBJECTS = $(am_lib32_libmsvcr120_a_OBJECTS)
 lib32_libmsvcr120_app_a_LIBADD =
-am__lib32_libmsvcr120_app_a_SOURCES_DIST = stdio/acrt_iob_func.c \
-	lib32/msvcr120_app.def.in
-am__objects_28 =  \
+am__lib32_libmsvcr120_app_a_SOURCES_DIST = misc/onexit_table.c \
+	stdio/acrt_iob_func.c lib32/msvcr120_app.def.in
+am__objects_28 = misc/lib32_libmsvcr120_app_a-onexit_table.$(OBJEXT) \
 	stdio/lib32_libmsvcr120_app_a-acrt_iob_func.$(OBJEXT)
 @LIB32_TRUE@@W32API_FALSE@am_lib32_libmsvcr120_app_a_OBJECTS =  \
 @LIB32_TRUE@@W32API_FALSE@	$(am__objects_28)
 lib32_libmsvcr120_app_a_OBJECTS =  \
 	$(am_lib32_libmsvcr120_app_a_OBJECTS)
 lib32_libmsvcr120d_a_LIBADD =
-am__lib32_libmsvcr120d_a_SOURCES_DIST = stdio/acrt_iob_func.c \
-	lib32/msvcr120d.def.in
-am__objects_29 = stdio/lib32_libmsvcr120d_a-acrt_iob_func.$(OBJEXT)
+am__lib32_libmsvcr120d_a_SOURCES_DIST = misc/onexit_table.c \
+	stdio/acrt_iob_func.c lib32/msvcr120d.def.in
+am__objects_29 = misc/lib32_libmsvcr120d_a-onexit_table.$(OBJEXT) \
+	stdio/lib32_libmsvcr120d_a-acrt_iob_func.$(OBJEXT)
 @LIB32_TRUE@@W32API_FALSE@am_lib32_libmsvcr120d_a_OBJECTS =  \
 @LIB32_TRUE@@W32API_FALSE@	$(am__objects_29)
 lib32_libmsvcr120d_a_OBJECTS = $(am_lib32_libmsvcr120d_a_OBJECTS)
 lib32_libmsvcr80_a_LIBADD =
-am__lib32_libmsvcr80_a_SOURCES_DIST = stdio/acrt_iob_func.c \
-	lib32/msvcr80.def.in
-am__objects_30 = stdio/lib32_libmsvcr80_a-acrt_iob_func.$(OBJEXT)
+am__lib32_libmsvcr80_a_SOURCES_DIST = misc/onexit_table.c \
+	stdio/acrt_iob_func.c lib32/msvcr80.def.in
+am__objects_30 = misc/lib32_libmsvcr80_a-onexit_table.$(OBJEXT) \
+	stdio/lib32_libmsvcr80_a-acrt_iob_func.$(OBJEXT)
 @LIB32_TRUE@@W32API_FALSE@am_lib32_libmsvcr80_a_OBJECTS =  \
 @LIB32_TRUE@@W32API_FALSE@	$(am__objects_30)
 lib32_libmsvcr80_a_OBJECTS = $(am_lib32_libmsvcr80_a_OBJECTS)
 lib32_libmsvcr90_a_LIBADD =
-am__lib32_libmsvcr90_a_SOURCES_DIST = stdio/acrt_iob_func.c \
-	lib32/msvcr90.def.in
-am__objects_31 = stdio/lib32_libmsvcr90_a-acrt_iob_func.$(OBJEXT)
+am__lib32_libmsvcr90_a_SOURCES_DIST = misc/onexit_table.c \
+	stdio/acrt_iob_func.c lib32/msvcr90.def.in
+am__objects_31 = misc/lib32_libmsvcr90_a-onexit_table.$(OBJEXT) \
+	stdio/lib32_libmsvcr90_a-acrt_iob_func.$(OBJEXT)
 @LIB32_TRUE@@W32API_FALSE@am_lib32_libmsvcr90_a_OBJECTS =  \
 @LIB32_TRUE@@W32API_FALSE@	$(am__objects_31)
 lib32_libmsvcr90_a_OBJECTS = $(am_lib32_libmsvcr90_a_OBJECTS)
 lib32_libmsvcr90d_a_LIBADD =
-am__lib32_libmsvcr90d_a_SOURCES_DIST = stdio/acrt_iob_func.c \
-	lib32/msvcr90d.def.in
-am__objects_32 = stdio/lib32_libmsvcr90d_a-acrt_iob_func.$(OBJEXT)
+am__lib32_libmsvcr90d_a_SOURCES_DIST = misc/onexit_table.c \
+	stdio/acrt_iob_func.c lib32/msvcr90d.def.in
+am__objects_32 = misc/lib32_libmsvcr90d_a-onexit_table.$(OBJEXT) \
+	stdio/lib32_libmsvcr90d_a-acrt_iob_func.$(OBJEXT)
 @LIB32_TRUE@@W32API_FALSE@am_lib32_libmsvcr90d_a_OBJECTS =  \
 @LIB32_TRUE@@W32API_FALSE@	$(am__objects_32)
 lib32_libmsvcr90d_a_OBJECTS = $(am_lib32_libmsvcr90d_a_OBJECTS)
 lib32_libmsvcrt_os_a_LIBADD =
-am__lib32_libmsvcrt_os_a_SOURCES_DIST = stdio/acrt_iob_func.c \
-	misc/_configthreadlocale.c misc/_get_current_locale.c \
-	misc/invalid_parameter_handler.c misc/output_format.c \
-	misc/purecall.c secapi/_access_s.c secapi/_cgets_s.c \
-	secapi/_cgetws_s.c secapi/_chsize_s.c secapi/_controlfp_s.c \
-	secapi/_cprintf_s.c secapi/_cprintf_s_l.c secapi/_ctime32_s.c \
-	secapi/_ctime64_s.c secapi/_cwprintf_s.c \
-	secapi/_cwprintf_s_l.c secapi/_gmtime32_s.c \
-	secapi/_gmtime64_s.c secapi/_localtime32_s.c \
-	secapi/_localtime64_s.c secapi/_mktemp_s.c secapi/_sopen_s.c \
-	secapi/_strdate_s.c secapi/_strtime_s.c secapi/_umask_s.c \
-	secapi/_vcprintf_s.c secapi/_vcprintf_s_l.c \
-	secapi/_vcwprintf_s.c secapi/_vcwprintf_s_l.c \
-	secapi/_vscprintf_p.c secapi/_vscwprintf_p.c \
-	secapi/_vswprintf_p.c secapi/_waccess_s.c secapi/_wasctime_s.c \
-	secapi/_wctime32_s.c secapi/_wctime64_s.c secapi/_wstrtime_s.c \
-	secapi/_wmktemp_s.c secapi/_wstrdate_s.c secapi/asctime_s.c \
-	secapi/memcpy_s.c secapi/memmove_s.c secapi/rand_s.c \
-	secapi/sprintf_s.c secapi/strerror_s.c secapi/vsprintf_s.c \
-	secapi/wmemcpy_s.c secapi/wmemmove_s.c stdio/mingw_lock.c \
-	misc/lc_locale_func.c lib-common/msvcrt.def.in
-am__objects_33 = stdio/lib32_libmsvcrt_os_a-acrt_iob_func.$(OBJEXT)
+am__lib32_libmsvcrt_os_a_SOURCES_DIST = misc/onexit_table.c \
+	stdio/acrt_iob_func.c misc/_configthreadlocale.c \
+	misc/_get_current_locale.c misc/invalid_parameter_handler.c \
+	misc/output_format.c misc/purecall.c secapi/_access_s.c \
+	secapi/_cgets_s.c secapi/_cgetws_s.c secapi/_chsize_s.c \
+	secapi/_controlfp_s.c secapi/_cprintf_s.c \
+	secapi/_cprintf_s_l.c secapi/_ctime32_s.c secapi/_ctime64_s.c \
+	secapi/_cwprintf_s.c secapi/_cwprintf_s_l.c \
+	secapi/_gmtime32_s.c secapi/_gmtime64_s.c \
+	secapi/_localtime32_s.c secapi/_localtime64_s.c \
+	secapi/_mktemp_s.c secapi/_sopen_s.c secapi/_strdate_s.c \
+	secapi/_strtime_s.c secapi/_umask_s.c secapi/_vcprintf_s.c \
+	secapi/_vcprintf_s_l.c secapi/_vcwprintf_s.c \
+	secapi/_vcwprintf_s_l.c secapi/_vscprintf_p.c \
+	secapi/_vscwprintf_p.c secapi/_vswprintf_p.c \
+	secapi/_waccess_s.c secapi/_wasctime_s.c secapi/_wctime32_s.c \
+	secapi/_wctime64_s.c secapi/_wstrtime_s.c secapi/_wmktemp_s.c \
+	secapi/_wstrdate_s.c secapi/asctime_s.c secapi/memcpy_s.c \
+	secapi/memmove_s.c secapi/rand_s.c secapi/sprintf_s.c \
+	secapi/strerror_s.c secapi/vsprintf_s.c secapi/wmemcpy_s.c \
+	secapi/wmemmove_s.c stdio/mingw_lock.c misc/lc_locale_func.c \
+	lib-common/msvcrt.def.in
+am__objects_33 = misc/lib32_libmsvcrt_os_a-onexit_table.$(OBJEXT) \
+	stdio/lib32_libmsvcrt_os_a-acrt_iob_func.$(OBJEXT)
 am__objects_34 = $(am__objects_33) \
 	misc/lib32_libmsvcrt_os_a-_configthreadlocale.$(OBJEXT) \
 	misc/lib32_libmsvcrt_os_a-_get_current_locale.$(OBJEXT) \
@@ -1584,8 +1595,10 @@ am__objects_50 = libsrc/lib64_libamstrmid_a-amstrmid.$(OBJEXT)
 @LIB64_TRUE@am_lib64_libamstrmid_a_OBJECTS = $(am__objects_50)
 lib64_libamstrmid_a_OBJECTS = $(am_lib64_libamstrmid_a_OBJECTS)
 lib64_libcrtdll_a_LIBADD =
-am__lib64_libcrtdll_a_SOURCES_DIST = stdio/acrt_iob_func.c
-am__objects_51 = stdio/lib64_libcrtdll_a-acrt_iob_func.$(OBJEXT)
+am__lib64_libcrtdll_a_SOURCES_DIST = misc/onexit_table.c \
+	stdio/acrt_iob_func.c
+am__objects_51 = misc/lib64_libcrtdll_a-onexit_table.$(OBJEXT) \
+	stdio/lib64_libcrtdll_a-acrt_iob_func.$(OBJEXT)
 @LIB64_TRUE@@W32API_FALSE@am_lib64_libcrtdll_a_OBJECTS =  \
 @LIB64_TRUE@@W32API_FALSE@	$(am__objects_51)
 lib64_libcrtdll_a_OBJECTS = $(am_lib64_libcrtdll_a_OBJECTS)
@@ -2479,47 +2492,52 @@ am__objects_73 = lib64_libmoldname_a-_libm_dummy.$(OBJEXT)
 @LIB64_TRUE@@W32API_FALSE@	$(am__objects_73)
 lib64_libmoldname_a_OBJECTS = $(am_lib64_libmoldname_a_OBJECTS)
 lib64_libmsvcr100_a_LIBADD =
-am__lib64_libmsvcr100_a_SOURCES_DIST = stdio/acrt_iob_func.c \
-	lib64/msvcr100.def.in
-am__objects_74 = stdio/lib64_libmsvcr100_a-acrt_iob_func.$(OBJEXT)
+am__lib64_libmsvcr100_a_SOURCES_DIST = misc/onexit_table.c \
+	stdio/acrt_iob_func.c lib64/msvcr100.def.in
+am__objects_74 = misc/lib64_libmsvcr100_a-onexit_table.$(OBJEXT) \
+	stdio/lib64_libmsvcr100_a-acrt_iob_func.$(OBJEXT)
 @LIB64_TRUE@@W32API_FALSE@am_lib64_libmsvcr100_a_OBJECTS =  \
 @LIB64_TRUE@@W32API_FALSE@	$(am__objects_74)
 lib64_libmsvcr100_a_OBJECTS = $(am_lib64_libmsvcr100_a_OBJECTS)
 lib64_libmsvcr110_a_LIBADD =
-am__lib64_libmsvcr110_a_SOURCES_DIST = stdio/acrt_iob_func.c \
-	lib64/msvcr110.def.in
-am__objects_75 = stdio/lib64_libmsvcr110_a-acrt_iob_func.$(OBJEXT)
+am__lib64_libmsvcr110_a_SOURCES_DIST = misc/onexit_table.c \
+	stdio/acrt_iob_func.c lib64/msvcr110.def.in
+am__objects_75 = misc/lib64_libmsvcr110_a-onexit_table.$(OBJEXT) \
+	stdio/lib64_libmsvcr110_a-acrt_iob_func.$(OBJEXT)
 @LIB64_TRUE@@W32API_FALSE@am_lib64_libmsvcr110_a_OBJECTS =  \
 @LIB64_TRUE@@W32API_FALSE@	$(am__objects_75)
 lib64_libmsvcr110_a_OBJECTS = $(am_lib64_libmsvcr110_a_OBJECTS)
 lib64_libmsvcr120_a_LIBADD =
-am__lib64_libmsvcr120_a_SOURCES_DIST = stdio/acrt_iob_func.c \
-	lib64/msvcr120.def.in
-am__objects_76 = stdio/lib64_libmsvcr120_a-acrt_iob_func.$(OBJEXT)
+am__lib64_libmsvcr120_a_SOURCES_DIST = misc/onexit_table.c \
+	stdio/acrt_iob_func.c lib64/msvcr120.def.in
+am__objects_76 = misc/lib64_libmsvcr120_a-onexit_table.$(OBJEXT) \
+	stdio/lib64_libmsvcr120_a-acrt_iob_func.$(OBJEXT)
 @LIB64_TRUE@@W32API_FALSE@am_lib64_libmsvcr120_a_OBJECTS =  \
 @LIB64_TRUE@@W32API_FALSE@	$(am__objects_76)
 lib64_libmsvcr120_a_OBJECTS = $(am_lib64_libmsvcr120_a_OBJECTS)
 lib64_libmsvcr120_app_a_LIBADD =
-am__lib64_libmsvcr120_app_a_SOURCES_DIST = stdio/acrt_iob_func.c \
-	lib64/msvcr120_app.def.in
-am__objects_77 =  \
+am__lib64_libmsvcr120_app_a_SOURCES_DIST = misc/onexit_table.c \
+	stdio/acrt_iob_func.c lib64/msvcr120_app.def.in
+am__objects_77 = misc/lib64_libmsvcr120_app_a-onexit_table.$(OBJEXT) \
 	stdio/lib64_libmsvcr120_app_a-acrt_iob_func.$(OBJEXT)
 @LIB64_TRUE@@W32API_FALSE@am_lib64_libmsvcr120_app_a_OBJECTS =  \
 @LIB64_TRUE@@W32API_FALSE@	$(am__objects_77)
 lib64_libmsvcr120_app_a_OBJECTS =  \
 	$(am_lib64_libmsvcr120_app_a_OBJECTS)
 lib64_libmsvcr120d_a_LIBADD =
-am__lib64_libmsvcr120d_a_SOURCES_DIST = stdio/acrt_iob_func.c \
-	lib64/msvcr120d.def.in
-am__objects_78 = stdio/lib64_libmsvcr120d_a-acrt_iob_func.$(OBJEXT)
+am__lib64_libmsvcr120d_a_SOURCES_DIST = misc/onexit_table.c \
+	stdio/acrt_iob_func.c lib64/msvcr120d.def.in
+am__objects_78 = misc/lib64_libmsvcr120d_a-onexit_table.$(OBJEXT) \
+	stdio/lib64_libmsvcr120d_a-acrt_iob_func.$(OBJEXT)
 @LIB64_TRUE@@W32API_FALSE@am_lib64_libmsvcr120d_a_OBJECTS =  \
 @LIB64_TRUE@@W32API_FALSE@	$(am__objects_78)
 lib64_libmsvcr120d_a_OBJECTS = $(am_lib64_libmsvcr120d_a_OBJECTS)
 lib64_libmsvcr80_a_LIBADD =
-am__lib64_libmsvcr80_a_SOURCES_DIST = stdio/acrt_iob_func.c \
-	misc/__p___argv.c misc/__p__acmdln.c misc/__p__fmode.c \
-	misc/__p__wcmdln.c lib64/msvcr80.def.in
-am__objects_79 = stdio/lib64_libmsvcr80_a-acrt_iob_func.$(OBJEXT)
+am__lib64_libmsvcr80_a_SOURCES_DIST = misc/onexit_table.c \
+	stdio/acrt_iob_func.c misc/__p___argv.c misc/__p__acmdln.c \
+	misc/__p__fmode.c misc/__p__wcmdln.c lib64/msvcr80.def.in
+am__objects_79 = misc/lib64_libmsvcr80_a-onexit_table.$(OBJEXT) \
+	stdio/lib64_libmsvcr80_a-acrt_iob_func.$(OBJEXT)
 am__objects_80 = $(am__objects_79) \
 	misc/lib64_libmsvcr80_a-__p___argv.$(OBJEXT) \
 	misc/lib64_libmsvcr80_a-__p__acmdln.$(OBJEXT) \
@@ -2529,43 +2547,47 @@ am__objects_80 = $(am__objects_79) \
 @LIB64_TRUE@@W32API_FALSE@	$(am__objects_80)
 lib64_libmsvcr80_a_OBJECTS = $(am_lib64_libmsvcr80_a_OBJECTS)
 lib64_libmsvcr90_a_LIBADD =
-am__lib64_libmsvcr90_a_SOURCES_DIST = stdio/acrt_iob_func.c \
-	lib64/msvcr90.def.in
-am__objects_81 = stdio/lib64_libmsvcr90_a-acrt_iob_func.$(OBJEXT)
+am__lib64_libmsvcr90_a_SOURCES_DIST = misc/onexit_table.c \
+	stdio/acrt_iob_func.c lib64/msvcr90.def.in
+am__objects_81 = misc/lib64_libmsvcr90_a-onexit_table.$(OBJEXT) \
+	stdio/lib64_libmsvcr90_a-acrt_iob_func.$(OBJEXT)
 @LIB64_TRUE@@W32API_FALSE@am_lib64_libmsvcr90_a_OBJECTS =  \
 @LIB64_TRUE@@W32API_FALSE@	$(am__objects_81)
 lib64_libmsvcr90_a_OBJECTS = $(am_lib64_libmsvcr90_a_OBJECTS)
 lib64_libmsvcr90d_a_LIBADD =
-am__lib64_libmsvcr90d_a_SOURCES_DIST = stdio/acrt_iob_func.c \
-	lib64/msvcr90d.def.in
-am__objects_82 = stdio/lib64_libmsvcr90d_a-acrt_iob_func.$(OBJEXT)
+am__lib64_libmsvcr90d_a_SOURCES_DIST = misc/onexit_table.c \
+	stdio/acrt_iob_func.c lib64/msvcr90d.def.in
+am__objects_82 = misc/lib64_libmsvcr90d_a-onexit_table.$(OBJEXT) \
+	stdio/lib64_libmsvcr90d_a-acrt_iob_func.$(OBJEXT)
 @LIB64_TRUE@@W32API_FALSE@am_lib64_libmsvcr90d_a_OBJECTS =  \
 @LIB64_TRUE@@W32API_FALSE@	$(am__objects_82)
 lib64_libmsvcr90d_a_OBJECTS = $(am_lib64_libmsvcr90d_a_OBJECTS)
 lib64_libmsvcrt_os_a_LIBADD =
-am__lib64_libmsvcrt_os_a_SOURCES_DIST = stdio/acrt_iob_func.c \
-	misc/_configthreadlocale.c misc/_get_current_locale.c \
-	misc/invalid_parameter_handler.c misc/output_format.c \
-	misc/purecall.c secapi/_access_s.c secapi/_cgets_s.c \
-	secapi/_cgetws_s.c secapi/_chsize_s.c secapi/_controlfp_s.c \
-	secapi/_cprintf_s.c secapi/_cprintf_s_l.c secapi/_ctime32_s.c \
-	secapi/_ctime64_s.c secapi/_cwprintf_s.c \
-	secapi/_cwprintf_s_l.c secapi/_gmtime32_s.c \
-	secapi/_gmtime64_s.c secapi/_localtime32_s.c \
-	secapi/_localtime64_s.c secapi/_mktemp_s.c secapi/_sopen_s.c \
-	secapi/_strdate_s.c secapi/_strtime_s.c secapi/_umask_s.c \
-	secapi/_vcprintf_s.c secapi/_vcprintf_s_l.c \
-	secapi/_vcwprintf_s.c secapi/_vcwprintf_s_l.c \
-	secapi/_vscprintf_p.c secapi/_vscwprintf_p.c \
-	secapi/_vswprintf_p.c secapi/_waccess_s.c secapi/_wasctime_s.c \
-	secapi/_wctime32_s.c secapi/_wctime64_s.c secapi/_wstrtime_s.c \
-	secapi/_wmktemp_s.c secapi/_wstrdate_s.c secapi/asctime_s.c \
-	secapi/memcpy_s.c secapi/memmove_s.c secapi/rand_s.c \
-	secapi/sprintf_s.c secapi/strerror_s.c secapi/vsprintf_s.c \
-	secapi/wmemcpy_s.c secapi/wmemmove_s.c stdio/mingw_lock.c \
-	misc/__p___argv.c misc/__p__acmdln.c misc/__p__fmode.c \
-	misc/__p__wcmdln.c lib-common/msvcrt.def.in
-am__objects_83 = stdio/lib64_libmsvcrt_os_a-acrt_iob_func.$(OBJEXT)
+am__lib64_libmsvcrt_os_a_SOURCES_DIST = misc/onexit_table.c \
+	stdio/acrt_iob_func.c misc/_configthreadlocale.c \
+	misc/_get_current_locale.c misc/invalid_parameter_handler.c \
+	misc/output_format.c misc/purecall.c secapi/_access_s.c \
+	secapi/_cgets_s.c secapi/_cgetws_s.c secapi/_chsize_s.c \
+	secapi/_controlfp_s.c secapi/_cprintf_s.c \
+	secapi/_cprintf_s_l.c secapi/_ctime32_s.c secapi/_ctime64_s.c \
+	secapi/_cwprintf_s.c secapi/_cwprintf_s_l.c \
+	secapi/_gmtime32_s.c secapi/_gmtime64_s.c \
+	secapi/_localtime32_s.c secapi/_localtime64_s.c \
+	secapi/_mktemp_s.c secapi/_sopen_s.c secapi/_strdate_s.c \
+	secapi/_strtime_s.c secapi/_umask_s.c secapi/_vcprintf_s.c \
+	secapi/_vcprintf_s_l.c secapi/_vcwprintf_s.c \
+	secapi/_vcwprintf_s_l.c secapi/_vscprintf_p.c \
+	secapi/_vscwprintf_p.c secapi/_vswprintf_p.c \
+	secapi/_waccess_s.c secapi/_wasctime_s.c secapi/_wctime32_s.c \
+	secapi/_wctime64_s.c secapi/_wstrtime_s.c secapi/_wmktemp_s.c \
+	secapi/_wstrdate_s.c secapi/asctime_s.c secapi/memcpy_s.c \
+	secapi/memmove_s.c secapi/rand_s.c secapi/sprintf_s.c \
+	secapi/strerror_s.c secapi/vsprintf_s.c secapi/wmemcpy_s.c \
+	secapi/wmemmove_s.c stdio/mingw_lock.c misc/__p___argv.c \
+	misc/__p__acmdln.c misc/__p__fmode.c misc/__p__wcmdln.c \
+	lib-common/msvcrt.def.in
+am__objects_83 = misc/lib64_libmsvcrt_os_a-onexit_table.$(OBJEXT) \
+	stdio/lib64_libmsvcrt_os_a-acrt_iob_func.$(OBJEXT)
 am__objects_84 = $(am__objects_83) \
 	misc/lib64_libmsvcrt_os_a-_configthreadlocale.$(OBJEXT) \
 	misc/lib64_libmsvcrt_os_a-_get_current_locale.$(OBJEXT) \
@@ -3697,36 +3719,38 @@ am__objects_120 = libarm32_libmoldname_a-_libm_dummy.$(OBJEXT)
 @LIBARM32_TRUE@@W32API_FALSE@	$(am__objects_120)
 libarm32_libmoldname_a_OBJECTS = $(am_libarm32_libmoldname_a_OBJECTS)
 libarm32_libmsvcr110_a_LIBADD =
-am__libarm32_libmsvcr110_a_SOURCES_DIST = stdio/acrt_iob_func.c
-am__objects_121 =  \
+am__libarm32_libmsvcr110_a_SOURCES_DIST = misc/onexit_table.c \
+	stdio/acrt_iob_func.c
+am__objects_121 = misc/libarm32_libmsvcr110_a-onexit_table.$(OBJEXT) \
 	stdio/libarm32_libmsvcr110_a-acrt_iob_func.$(OBJEXT)
 @LIBARM32_TRUE@@W32API_FALSE@am_libarm32_libmsvcr110_a_OBJECTS =  \
 @LIBARM32_TRUE@@W32API_FALSE@	$(am__objects_121)
 libarm32_libmsvcr110_a_OBJECTS = $(am_libarm32_libmsvcr110_a_OBJECTS)
 libarm32_libmsvcrt_os_a_LIBADD =
-am__libarm32_libmsvcrt_os_a_SOURCES_DIST = stdio/acrt_iob_func.c \
-	misc/_configthreadlocale.c misc/_get_current_locale.c \
-	misc/invalid_parameter_handler.c misc/output_format.c \
-	misc/purecall.c secapi/_access_s.c secapi/_cgets_s.c \
-	secapi/_cgetws_s.c secapi/_chsize_s.c secapi/_controlfp_s.c \
-	secapi/_cprintf_s.c secapi/_cprintf_s_l.c secapi/_ctime32_s.c \
-	secapi/_ctime64_s.c secapi/_cwprintf_s.c \
-	secapi/_cwprintf_s_l.c secapi/_gmtime32_s.c \
-	secapi/_gmtime64_s.c secapi/_localtime32_s.c \
-	secapi/_localtime64_s.c secapi/_mktemp_s.c secapi/_sopen_s.c \
-	secapi/_strdate_s.c secapi/_strtime_s.c secapi/_umask_s.c \
-	secapi/_vcprintf_s.c secapi/_vcprintf_s_l.c \
-	secapi/_vcwprintf_s.c secapi/_vcwprintf_s_l.c \
-	secapi/_vscprintf_p.c secapi/_vscwprintf_p.c \
-	secapi/_vswprintf_p.c secapi/_waccess_s.c secapi/_wasctime_s.c \
-	secapi/_wctime32_s.c secapi/_wctime64_s.c secapi/_wstrtime_s.c \
-	secapi/_wmktemp_s.c secapi/_wstrdate_s.c secapi/asctime_s.c \
-	secapi/memcpy_s.c secapi/memmove_s.c secapi/rand_s.c \
-	secapi/sprintf_s.c secapi/strerror_s.c secapi/vsprintf_s.c \
-	secapi/wmemcpy_s.c secapi/wmemmove_s.c stdio/mingw_lock.c \
-	misc/__p___argv.c misc/__p__acmdln.c misc/__p__fmode.c \
-	misc/__p__wcmdln.c lib-common/msvcrt.def.in
-am__objects_122 =  \
+am__libarm32_libmsvcrt_os_a_SOURCES_DIST = misc/onexit_table.c \
+	stdio/acrt_iob_func.c misc/_configthreadlocale.c \
+	misc/_get_current_locale.c misc/invalid_parameter_handler.c \
+	misc/output_format.c misc/purecall.c secapi/_access_s.c \
+	secapi/_cgets_s.c secapi/_cgetws_s.c secapi/_chsize_s.c \
+	secapi/_controlfp_s.c secapi/_cprintf_s.c \
+	secapi/_cprintf_s_l.c secapi/_ctime32_s.c secapi/_ctime64_s.c \
+	secapi/_cwprintf_s.c secapi/_cwprintf_s_l.c \
+	secapi/_gmtime32_s.c secapi/_gmtime64_s.c \
+	secapi/_localtime32_s.c secapi/_localtime64_s.c \
+	secapi/_mktemp_s.c secapi/_sopen_s.c secapi/_strdate_s.c \
+	secapi/_strtime_s.c secapi/_umask_s.c secapi/_vcprintf_s.c \
+	secapi/_vcprintf_s_l.c secapi/_vcwprintf_s.c \
+	secapi/_vcwprintf_s_l.c secapi/_vscprintf_p.c \
+	secapi/_vscwprintf_p.c secapi/_vswprintf_p.c \
+	secapi/_waccess_s.c secapi/_wasctime_s.c secapi/_wctime32_s.c \
+	secapi/_wctime64_s.c secapi/_wstrtime_s.c secapi/_wmktemp_s.c \
+	secapi/_wstrdate_s.c secapi/asctime_s.c secapi/memcpy_s.c \
+	secapi/memmove_s.c secapi/rand_s.c secapi/sprintf_s.c \
+	secapi/strerror_s.c secapi/vsprintf_s.c secapi/wmemcpy_s.c \
+	secapi/wmemmove_s.c stdio/mingw_lock.c misc/__p___argv.c \
+	misc/__p__acmdln.c misc/__p__fmode.c misc/__p__wcmdln.c \
+	lib-common/msvcrt.def.in
+am__objects_122 = misc/libarm32_libmsvcrt_os_a-onexit_table.$(OBJEXT) \
 	stdio/libarm32_libmsvcrt_os_a-acrt_iob_func.$(OBJEXT)
 am__objects_123 = $(am__objects_122) \
 	misc/libarm32_libmsvcrt_os_a-_configthreadlocale.$(OBJEXT) \
@@ -4757,29 +4781,30 @@ am__objects_156 = libarm64_libmoldname_a-_libm_dummy.$(OBJEXT)
 @LIBARM64_TRUE@@W32API_FALSE@	$(am__objects_156)
 libarm64_libmoldname_a_OBJECTS = $(am_libarm64_libmoldname_a_OBJECTS)
 libarm64_libmsvcrt_os_a_LIBADD =
-am__libarm64_libmsvcrt_os_a_SOURCES_DIST = stdio/acrt_iob_func.c \
-	misc/_configthreadlocale.c misc/_get_current_locale.c \
-	misc/invalid_parameter_handler.c misc/output_format.c \
-	misc/purecall.c secapi/_access_s.c secapi/_cgets_s.c \
-	secapi/_cgetws_s.c secapi/_chsize_s.c secapi/_controlfp_s.c \
-	secapi/_cprintf_s.c secapi/_cprintf_s_l.c secapi/_ctime32_s.c \
-	secapi/_ctime64_s.c secapi/_cwprintf_s.c \
-	secapi/_cwprintf_s_l.c secapi/_gmtime32_s.c \
-	secapi/_gmtime64_s.c secapi/_localtime32_s.c \
-	secapi/_localtime64_s.c secapi/_mktemp_s.c secapi/_sopen_s.c \
-	secapi/_strdate_s.c secapi/_strtime_s.c secapi/_umask_s.c \
-	secapi/_vcprintf_s.c secapi/_vcprintf_s_l.c \
-	secapi/_vcwprintf_s.c secapi/_vcwprintf_s_l.c \
-	secapi/_vscprintf_p.c secapi/_vscwprintf_p.c \
-	secapi/_vswprintf_p.c secapi/_waccess_s.c secapi/_wasctime_s.c \
-	secapi/_wctime32_s.c secapi/_wctime64_s.c secapi/_wstrtime_s.c \
-	secapi/_wmktemp_s.c secapi/_wstrdate_s.c secapi/asctime_s.c \
-	secapi/memcpy_s.c secapi/memmove_s.c secapi/rand_s.c \
-	secapi/sprintf_s.c secapi/strerror_s.c secapi/vsprintf_s.c \
-	secapi/wmemcpy_s.c secapi/wmemmove_s.c stdio/mingw_lock.c \
-	misc/__p___argv.c misc/__p__acmdln.c misc/__p__fmode.c \
-	misc/__p__wcmdln.c lib-common/msvcrt.def.in
-am__objects_157 =  \
+am__libarm64_libmsvcrt_os_a_SOURCES_DIST = misc/onexit_table.c \
+	stdio/acrt_iob_func.c misc/_configthreadlocale.c \
+	misc/_get_current_locale.c misc/invalid_parameter_handler.c \
+	misc/output_format.c misc/purecall.c secapi/_access_s.c \
+	secapi/_cgets_s.c secapi/_cgetws_s.c secapi/_chsize_s.c \
+	secapi/_controlfp_s.c secapi/_cprintf_s.c \
+	secapi/_cprintf_s_l.c secapi/_ctime32_s.c secapi/_ctime64_s.c \
+	secapi/_cwprintf_s.c secapi/_cwprintf_s_l.c \
+	secapi/_gmtime32_s.c secapi/_gmtime64_s.c \
+	secapi/_localtime32_s.c secapi/_localtime64_s.c \
+	secapi/_mktemp_s.c secapi/_sopen_s.c secapi/_strdate_s.c \
+	secapi/_strtime_s.c secapi/_umask_s.c secapi/_vcprintf_s.c \
+	secapi/_vcprintf_s_l.c secapi/_vcwprintf_s.c \
+	secapi/_vcwprintf_s_l.c secapi/_vscprintf_p.c \
+	secapi/_vscwprintf_p.c secapi/_vswprintf_p.c \
+	secapi/_waccess_s.c secapi/_wasctime_s.c secapi/_wctime32_s.c \
+	secapi/_wctime64_s.c secapi/_wstrtime_s.c secapi/_wmktemp_s.c \
+	secapi/_wstrdate_s.c secapi/asctime_s.c secapi/memcpy_s.c \
+	secapi/memmove_s.c secapi/rand_s.c secapi/sprintf_s.c \
+	secapi/strerror_s.c secapi/vsprintf_s.c secapi/wmemcpy_s.c \
+	secapi/wmemmove_s.c stdio/mingw_lock.c misc/__p___argv.c \
+	misc/__p__acmdln.c misc/__p__fmode.c misc/__p__wcmdln.c \
+	lib-common/msvcrt.def.in
+am__objects_157 = misc/libarm64_libmsvcrt_os_a-onexit_table.$(OBJEXT) \
 	stdio/libarm64_libmsvcrt_os_a-acrt_iob_func.$(OBJEXT)
 am__objects_158 = $(am__objects_157) \
 	misc/libarm64_libmsvcrt_os_a-_configthreadlocale.$(OBJEXT) \
@@ -6659,6 +6684,7 @@ src_libws2_32 = libsrc/ws2_32.c \
   libsrc/wspiapi/WspiapiFreeAddrInfo.c
 
 src_msvcrt_common = \
+  misc/onexit_table.c \
   stdio/acrt_iob_func.c
 
 src_msvcrt = \
@@ -9357,6 +9383,14 @@ lib32/libamstrmid.a: $(lib32_libamstrmid_a_OBJECTS) $(lib32_libamstrmid_a_DEPEND
 	$(AM_V_at)-rm -f lib32/libamstrmid.a
 	$(AM_V_AR)$(lib32_libamstrmid_a_AR) lib32/libamstrmid.a $(lib32_libamstrmid_a_OBJECTS) $(lib32_libamstrmid_a_LIBADD)
 	$(AM_V_at)$(RANLIB) lib32/libamstrmid.a
+misc/$(am__dirstamp):
+	@$(MKDIR_P) misc
+	@: > misc/$(am__dirstamp)
+misc/$(DEPDIR)/$(am__dirstamp):
+	@$(MKDIR_P) misc/$(DEPDIR)
+	@: > misc/$(DEPDIR)/$(am__dirstamp)
+misc/lib32_libcrtdll_a-onexit_table.$(OBJEXT): misc/$(am__dirstamp) \
+	misc/$(DEPDIR)/$(am__dirstamp)
 stdio/$(am__dirstamp):
 	@$(MKDIR_P) stdio
 	@: > stdio/$(am__dirstamp)
@@ -10075,12 +10109,6 @@ math/lib32_libmingwex_a-truncl.$(OBJEXT): math/$(am__dirstamp) \
 	math/$(DEPDIR)/$(am__dirstamp)
 math/lib32_libmingwex_a-abs64.$(OBJEXT): math/$(am__dirstamp) \
 	math/$(DEPDIR)/$(am__dirstamp)
-misc/$(am__dirstamp):
-	@$(MKDIR_P) misc
-	@: > misc/$(am__dirstamp)
-misc/$(DEPDIR)/$(am__dirstamp):
-	@$(MKDIR_P) misc/$(DEPDIR)
-	@: > misc/$(DEPDIR)/$(am__dirstamp)
 misc/lib32_libmingwex_a-mingw_getsp.$(OBJEXT): misc/$(am__dirstamp) \
 	misc/$(DEPDIR)/$(am__dirstamp)
 misc/lib32_libmingwex_a-alarm.$(OBJEXT): misc/$(am__dirstamp) \
@@ -10642,6 +10670,8 @@ lib32/libmoldname.a: $(lib32_libmoldname_a_OBJECTS) $(lib32_libmoldname_a_DEPEND
 	$(AM_V_at)-rm -f lib32/libmoldname.a
 	$(AM_V_AR)$(lib32_libmoldname_a_AR) lib32/libmoldname.a $(lib32_libmoldname_a_OBJECTS) $(lib32_libmoldname_a_LIBADD)
 	$(AM_V_at)$(RANLIB) lib32/libmoldname.a
+misc/lib32_libmsvcr100_a-onexit_table.$(OBJEXT): misc/$(am__dirstamp) \
+	misc/$(DEPDIR)/$(am__dirstamp)
 stdio/lib32_libmsvcr100_a-acrt_iob_func.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
 
@@ -10649,6 +10679,8 @@ lib32/libmsvcr100.a: $(lib32_libmsvcr100_a_OBJECTS) $(lib32_libmsvcr100_a_DEPEND
 	$(AM_V_at)-rm -f lib32/libmsvcr100.a
 	$(AM_V_AR)$(lib32_libmsvcr100_a_AR) lib32/libmsvcr100.a $(lib32_libmsvcr100_a_OBJECTS) $(lib32_libmsvcr100_a_LIBADD)
 	$(AM_V_at)$(RANLIB) lib32/libmsvcr100.a
+misc/lib32_libmsvcr110_a-onexit_table.$(OBJEXT): misc/$(am__dirstamp) \
+	misc/$(DEPDIR)/$(am__dirstamp)
 stdio/lib32_libmsvcr110_a-acrt_iob_func.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
 
@@ -10656,6 +10688,8 @@ lib32/libmsvcr110.a: $(lib32_libmsvcr110_a_OBJECTS) $(lib32_libmsvcr110_a_DEPEND
 	$(AM_V_at)-rm -f lib32/libmsvcr110.a
 	$(AM_V_AR)$(lib32_libmsvcr110_a_AR) lib32/libmsvcr110.a $(lib32_libmsvcr110_a_OBJECTS) $(lib32_libmsvcr110_a_LIBADD)
 	$(AM_V_at)$(RANLIB) lib32/libmsvcr110.a
+misc/lib32_libmsvcr120_a-onexit_table.$(OBJEXT): misc/$(am__dirstamp) \
+	misc/$(DEPDIR)/$(am__dirstamp)
 stdio/lib32_libmsvcr120_a-acrt_iob_func.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
 
@@ -10663,6 +10697,8 @@ lib32/libmsvcr120.a: $(lib32_libmsvcr120_a_OBJECTS) $(lib32_libmsvcr120_a_DEPEND
 	$(AM_V_at)-rm -f lib32/libmsvcr120.a
 	$(AM_V_AR)$(lib32_libmsvcr120_a_AR) lib32/libmsvcr120.a $(lib32_libmsvcr120_a_OBJECTS) $(lib32_libmsvcr120_a_LIBADD)
 	$(AM_V_at)$(RANLIB) lib32/libmsvcr120.a
+misc/lib32_libmsvcr120_app_a-onexit_table.$(OBJEXT):  \
+	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 stdio/lib32_libmsvcr120_app_a-acrt_iob_func.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
 
@@ -10670,6 +10706,8 @@ lib32/libmsvcr120_app.a: $(lib32_libmsvcr120_app_a_OBJECTS) $(lib32_libmsvcr120_
 	$(AM_V_at)-rm -f lib32/libmsvcr120_app.a
 	$(AM_V_AR)$(lib32_libmsvcr120_app_a_AR) lib32/libmsvcr120_app.a $(lib32_libmsvcr120_app_a_OBJECTS) $(lib32_libmsvcr120_app_a_LIBADD)
 	$(AM_V_at)$(RANLIB) lib32/libmsvcr120_app.a
+misc/lib32_libmsvcr120d_a-onexit_table.$(OBJEXT):  \
+	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 stdio/lib32_libmsvcr120d_a-acrt_iob_func.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
 
@@ -10677,6 +10715,8 @@ lib32/libmsvcr120d.a: $(lib32_libmsvcr120d_a_OBJECTS) $(lib32_libmsvcr120d_a_DEP
 	$(AM_V_at)-rm -f lib32/libmsvcr120d.a
 	$(AM_V_AR)$(lib32_libmsvcr120d_a_AR) lib32/libmsvcr120d.a $(lib32_libmsvcr120d_a_OBJECTS) $(lib32_libmsvcr120d_a_LIBADD)
 	$(AM_V_at)$(RANLIB) lib32/libmsvcr120d.a
+misc/lib32_libmsvcr80_a-onexit_table.$(OBJEXT): misc/$(am__dirstamp) \
+	misc/$(DEPDIR)/$(am__dirstamp)
 stdio/lib32_libmsvcr80_a-acrt_iob_func.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
 
@@ -10684,6 +10724,8 @@ lib32/libmsvcr80.a: $(lib32_libmsvcr80_a_OBJECTS) $(lib32_libmsvcr80_a_DEPENDENC
 	$(AM_V_at)-rm -f lib32/libmsvcr80.a
 	$(AM_V_AR)$(lib32_libmsvcr80_a_AR) lib32/libmsvcr80.a $(lib32_libmsvcr80_a_OBJECTS) $(lib32_libmsvcr80_a_LIBADD)
 	$(AM_V_at)$(RANLIB) lib32/libmsvcr80.a
+misc/lib32_libmsvcr90_a-onexit_table.$(OBJEXT): misc/$(am__dirstamp) \
+	misc/$(DEPDIR)/$(am__dirstamp)
 stdio/lib32_libmsvcr90_a-acrt_iob_func.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
 
@@ -10691,6 +10733,8 @@ lib32/libmsvcr90.a: $(lib32_libmsvcr90_a_OBJECTS) $(lib32_libmsvcr90_a_DEPENDENC
 	$(AM_V_at)-rm -f lib32/libmsvcr90.a
 	$(AM_V_AR)$(lib32_libmsvcr90_a_AR) lib32/libmsvcr90.a $(lib32_libmsvcr90_a_OBJECTS) $(lib32_libmsvcr90_a_LIBADD)
 	$(AM_V_at)$(RANLIB) lib32/libmsvcr90.a
+misc/lib32_libmsvcr90d_a-onexit_table.$(OBJEXT): misc/$(am__dirstamp) \
+	misc/$(DEPDIR)/$(am__dirstamp)
 stdio/lib32_libmsvcr90d_a-acrt_iob_func.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
 
@@ -10698,6 +10742,8 @@ lib32/libmsvcr90d.a: $(lib32_libmsvcr90d_a_OBJECTS) $(lib32_libmsvcr90d_a_DEPEND
 	$(AM_V_at)-rm -f lib32/libmsvcr90d.a
 	$(AM_V_AR)$(lib32_libmsvcr90d_a_AR) lib32/libmsvcr90d.a $(lib32_libmsvcr90d_a_OBJECTS) $(lib32_libmsvcr90d_a_LIBADD)
 	$(AM_V_at)$(RANLIB) lib32/libmsvcr90d.a
+misc/lib32_libmsvcrt_os_a-onexit_table.$(OBJEXT):  \
+	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 stdio/lib32_libmsvcrt_os_a-acrt_iob_func.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
 misc/lib32_libmsvcrt_os_a-_configthreadlocale.$(OBJEXT):  \
@@ -11135,6 +11181,8 @@ lib64/libamstrmid.a: $(lib64_libamstrmid_a_OBJECTS) $(lib64_libamstrmid_a_DEPEND
 	$(AM_V_at)-rm -f lib64/libamstrmid.a
 	$(AM_V_AR)$(lib64_libamstrmid_a_AR) lib64/libamstrmid.a $(lib64_libamstrmid_a_OBJECTS) $(lib64_libamstrmid_a_LIBADD)
 	$(AM_V_at)$(RANLIB) lib64/libamstrmid.a
+misc/lib64_libcrtdll_a-onexit_table.$(OBJEXT): misc/$(am__dirstamp) \
+	misc/$(DEPDIR)/$(am__dirstamp)
 stdio/lib64_libcrtdll_a-acrt_iob_func.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
 
@@ -12406,6 +12454,8 @@ lib64/libmoldname.a: $(lib64_libmoldname_a_OBJECTS) $(lib64_libmoldname_a_DEPEND
 	$(AM_V_at)-rm -f lib64/libmoldname.a
 	$(AM_V_AR)$(lib64_libmoldname_a_AR) lib64/libmoldname.a $(lib64_libmoldname_a_OBJECTS) $(lib64_libmoldname_a_LIBADD)
 	$(AM_V_at)$(RANLIB) lib64/libmoldname.a
+misc/lib64_libmsvcr100_a-onexit_table.$(OBJEXT): misc/$(am__dirstamp) \
+	misc/$(DEPDIR)/$(am__dirstamp)
 stdio/lib64_libmsvcr100_a-acrt_iob_func.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
 
@@ -12413,6 +12463,8 @@ lib64/libmsvcr100.a: $(lib64_libmsvcr100_a_OBJECTS) $(lib64_libmsvcr100_a_DEPEND
 	$(AM_V_at)-rm -f lib64/libmsvcr100.a
 	$(AM_V_AR)$(lib64_libmsvcr100_a_AR) lib64/libmsvcr100.a $(lib64_libmsvcr100_a_OBJECTS) $(lib64_libmsvcr100_a_LIBADD)
 	$(AM_V_at)$(RANLIB) lib64/libmsvcr100.a
+misc/lib64_libmsvcr110_a-onexit_table.$(OBJEXT): misc/$(am__dirstamp) \
+	misc/$(DEPDIR)/$(am__dirstamp)
 stdio/lib64_libmsvcr110_a-acrt_iob_func.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
 
@@ -12420,6 +12472,8 @@ lib64/libmsvcr110.a: $(lib64_libmsvcr110_a_OBJECTS) $(lib64_libmsvcr110_a_DEPEND
 	$(AM_V_at)-rm -f lib64/libmsvcr110.a
 	$(AM_V_AR)$(lib64_libmsvcr110_a_AR) lib64/libmsvcr110.a $(lib64_libmsvcr110_a_OBJECTS) $(lib64_libmsvcr110_a_LIBADD)
 	$(AM_V_at)$(RANLIB) lib64/libmsvcr110.a
+misc/lib64_libmsvcr120_a-onexit_table.$(OBJEXT): misc/$(am__dirstamp) \
+	misc/$(DEPDIR)/$(am__dirstamp)
 stdio/lib64_libmsvcr120_a-acrt_iob_func.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
 
@@ -12427,6 +12481,8 @@ lib64/libmsvcr120.a: $(lib64_libmsvcr120_a_OBJECTS) $(lib64_libmsvcr120_a_DEPEND
 	$(AM_V_at)-rm -f lib64/libmsvcr120.a
 	$(AM_V_AR)$(lib64_libmsvcr120_a_AR) lib64/libmsvcr120.a $(lib64_libmsvcr120_a_OBJECTS) $(lib64_libmsvcr120_a_LIBADD)
 	$(AM_V_at)$(RANLIB) lib64/libmsvcr120.a
+misc/lib64_libmsvcr120_app_a-onexit_table.$(OBJEXT):  \
+	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 stdio/lib64_libmsvcr120_app_a-acrt_iob_func.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
 
@@ -12434,6 +12490,8 @@ lib64/libmsvcr120_app.a: $(lib64_libmsvcr120_app_a_OBJECTS) $(lib64_libmsvcr120_
 	$(AM_V_at)-rm -f lib64/libmsvcr120_app.a
 	$(AM_V_AR)$(lib64_libmsvcr120_app_a_AR) lib64/libmsvcr120_app.a $(lib64_libmsvcr120_app_a_OBJECTS) $(lib64_libmsvcr120_app_a_LIBADD)
 	$(AM_V_at)$(RANLIB) lib64/libmsvcr120_app.a
+misc/lib64_libmsvcr120d_a-onexit_table.$(OBJEXT):  \
+	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 stdio/lib64_libmsvcr120d_a-acrt_iob_func.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
 
@@ -12441,6 +12499,8 @@ lib64/libmsvcr120d.a: $(lib64_libmsvcr120d_a_OBJECTS) $(lib64_libmsvcr120d_a_DEP
 	$(AM_V_at)-rm -f lib64/libmsvcr120d.a
 	$(AM_V_AR)$(lib64_libmsvcr120d_a_AR) lib64/libmsvcr120d.a $(lib64_libmsvcr120d_a_OBJECTS) $(lib64_libmsvcr120d_a_LIBADD)
 	$(AM_V_at)$(RANLIB) lib64/libmsvcr120d.a
+misc/lib64_libmsvcr80_a-onexit_table.$(OBJEXT): misc/$(am__dirstamp) \
+	misc/$(DEPDIR)/$(am__dirstamp)
 stdio/lib64_libmsvcr80_a-acrt_iob_func.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
 misc/lib64_libmsvcr80_a-__p___argv.$(OBJEXT): misc/$(am__dirstamp) \
@@ -12456,6 +12516,8 @@ lib64/libmsvcr80.a: $(lib64_libmsvcr80_a_OBJECTS) $(lib64_libmsvcr80_a_DEPENDENC
 	$(AM_V_at)-rm -f lib64/libmsvcr80.a
 	$(AM_V_AR)$(lib64_libmsvcr80_a_AR) lib64/libmsvcr80.a $(lib64_libmsvcr80_a_OBJECTS) $(lib64_libmsvcr80_a_LIBADD)
 	$(AM_V_at)$(RANLIB) lib64/libmsvcr80.a
+misc/lib64_libmsvcr90_a-onexit_table.$(OBJEXT): misc/$(am__dirstamp) \
+	misc/$(DEPDIR)/$(am__dirstamp)
 stdio/lib64_libmsvcr90_a-acrt_iob_func.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
 
@@ -12463,6 +12525,8 @@ lib64/libmsvcr90.a: $(lib64_libmsvcr90_a_OBJECTS) $(lib64_libmsvcr90_a_DEPENDENC
 	$(AM_V_at)-rm -f lib64/libmsvcr90.a
 	$(AM_V_AR)$(lib64_libmsvcr90_a_AR) lib64/libmsvcr90.a $(lib64_libmsvcr90_a_OBJECTS) $(lib64_libmsvcr90_a_LIBADD)
 	$(AM_V_at)$(RANLIB) lib64/libmsvcr90.a
+misc/lib64_libmsvcr90d_a-onexit_table.$(OBJEXT): misc/$(am__dirstamp) \
+	misc/$(DEPDIR)/$(am__dirstamp)
 stdio/lib64_libmsvcr90d_a-acrt_iob_func.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
 
@@ -12470,6 +12534,8 @@ lib64/libmsvcr90d.a: $(lib64_libmsvcr90d_a_OBJECTS) $(lib64_libmsvcr90d_a_DEPEND
 	$(AM_V_at)-rm -f lib64/libmsvcr90d.a
 	$(AM_V_AR)$(lib64_libmsvcr90d_a_AR) lib64/libmsvcr90d.a $(lib64_libmsvcr90d_a_OBJECTS) $(lib64_libmsvcr90d_a_LIBADD)
 	$(AM_V_at)$(RANLIB) lib64/libmsvcr90d.a
+misc/lib64_libmsvcrt_os_a-onexit_table.$(OBJEXT):  \
+	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 stdio/lib64_libmsvcrt_os_a-acrt_iob_func.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
 misc/lib64_libmsvcrt_os_a-_configthreadlocale.$(OBJEXT):  \
@@ -14152,6 +14218,8 @@ libarm32/libmoldname.a: $(libarm32_libmoldname_a_OBJECTS) $(libarm32_libmoldname
 	$(AM_V_at)-rm -f libarm32/libmoldname.a
 	$(AM_V_AR)$(libarm32_libmoldname_a_AR) libarm32/libmoldname.a $(libarm32_libmoldname_a_OBJECTS) $(libarm32_libmoldname_a_LIBADD)
 	$(AM_V_at)$(RANLIB) libarm32/libmoldname.a
+misc/libarm32_libmsvcr110_a-onexit_table.$(OBJEXT):  \
+	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 stdio/libarm32_libmsvcr110_a-acrt_iob_func.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
 
@@ -14159,6 +14227,8 @@ libarm32/libmsvcr110.a: $(libarm32_libmsvcr110_a_OBJECTS) $(libarm32_libmsvcr110
 	$(AM_V_at)-rm -f libarm32/libmsvcr110.a
 	$(AM_V_AR)$(libarm32_libmsvcr110_a_AR) libarm32/libmsvcr110.a $(libarm32_libmsvcr110_a_OBJECTS) $(libarm32_libmsvcr110_a_LIBADD)
 	$(AM_V_at)$(RANLIB) libarm32/libmsvcr110.a
+misc/libarm32_libmsvcrt_os_a-onexit_table.$(OBJEXT):  \
+	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 stdio/libarm32_libmsvcrt_os_a-acrt_iob_func.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
 misc/libarm32_libmsvcrt_os_a-_configthreadlocale.$(OBJEXT):  \
@@ -15633,6 +15703,8 @@ libarm64/libmoldname.a: $(libarm64_libmoldname_a_OBJECTS) $(libarm64_libmoldname
 	$(AM_V_at)-rm -f libarm64/libmoldname.a
 	$(AM_V_AR)$(libarm64_libmoldname_a_AR) libarm64/libmoldname.a $(libarm64_libmoldname_a_OBJECTS) $(libarm64_libmoldname_a_LIBADD)
 	$(AM_V_at)$(RANLIB) libarm64/libmoldname.a
+misc/libarm64_libmsvcrt_os_a-onexit_table.$(OBJEXT):  \
+	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 stdio/libarm64_libmsvcrt_os_a-acrt_iob_func.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
 misc/libarm64_libmsvcrt_os_a-_configthreadlocale.$(OBJEXT):  \
@@ -18812,6 +18884,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@math/x86/$(DEPDIR)/lib64_libmingwex_a-tanl.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/x86/$(DEPDIR)/lib64_libmingwex_a-trunc.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/x86/$(DEPDIR)/lib64_libmingwex_a-truncf.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libcrtdll_a-onexit_table.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmingwex_a-alarm.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmingwex_a-basename.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmingwex_a-btowc.Po@am__quote@
@@ -18901,12 +18974,22 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmingwex_a-wmemmove.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmingwex_a-wmempcpy.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmingwex_a-wmemset.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmsvcr100_a-onexit_table.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmsvcr110_a-onexit_table.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmsvcr120_a-onexit_table.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmsvcr120_app_a-onexit_table.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmsvcr120d_a-onexit_table.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmsvcr80_a-onexit_table.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmsvcr90_a-onexit_table.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmsvcr90d_a-onexit_table.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmsvcrt_os_a-_configthreadlocale.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmsvcrt_os_a-_get_current_locale.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmsvcrt_os_a-invalid_parameter_handler.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmsvcrt_os_a-lc_locale_func.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmsvcrt_os_a-onexit_table.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmsvcrt_os_a-output_format.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmsvcrt_os_a-purecall.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libcrtdll_a-onexit_table.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmingwex_a-alarm.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmingwex_a-basename.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmingwex_a-btowc.Po@am__quote@
@@ -18996,10 +19079,18 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmingwex_a-wmemmove.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmingwex_a-wmempcpy.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmingwex_a-wmemset.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmsvcr100_a-onexit_table.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmsvcr110_a-onexit_table.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmsvcr120_a-onexit_table.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmsvcr120_app_a-onexit_table.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmsvcr120d_a-onexit_table.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmsvcr80_a-__p___argv.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmsvcr80_a-__p__acmdln.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmsvcr80_a-__p__fmode.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmsvcr80_a-__p__wcmdln.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmsvcr80_a-onexit_table.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmsvcr90_a-onexit_table.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmsvcr90d_a-onexit_table.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmsvcrt_os_a-__p___argv.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmsvcrt_os_a-__p__acmdln.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmsvcrt_os_a-__p__fmode.Po@am__quote@
@@ -19007,6 +19098,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmsvcrt_os_a-_configthreadlocale.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmsvcrt_os_a-_get_current_locale.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmsvcrt_os_a-invalid_parameter_handler.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmsvcrt_os_a-onexit_table.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmsvcrt_os_a-output_format.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmsvcrt_os_a-purecall.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm32_libmingwex_a-alarm.Po@am__quote@
@@ -19098,6 +19190,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm32_libmingwex_a-wmemmove.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm32_libmingwex_a-wmempcpy.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm32_libmingwex_a-wmemset.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm32_libmsvcr110_a-onexit_table.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-__p___argv.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-__p__acmdln.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-__p__fmode.Po@am__quote@
@@ -19105,6 +19198,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-_configthreadlocale.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-_get_current_locale.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-invalid_parameter_handler.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-onexit_table.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-output_format.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-purecall.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm64_libmingwex_a-alarm.Po@am__quote@
@@ -19203,6 +19297,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-_configthreadlocale.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-_get_current_locale.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-invalid_parameter_handler.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-onexit_table.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-output_format.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-purecall.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@profile/$(DEPDIR)/lib32_libgmon_a-gmon.Po@am__quote@
@@ -21979,6 +22074,20 @@ libsrc/lib32_libamstrmid_a-amstrmid.obj: libsrc/amstrmid.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libsrc/amstrmid.c' object='libsrc/lib32_libamstrmid_a-amstrmid.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libamstrmid_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libsrc/lib32_libamstrmid_a-amstrmid.obj `if test -f 'libsrc/amstrmid.c'; then $(CYGPATH_W) 'libsrc/amstrmid.c'; else $(CYGPATH_W) '$(srcdir)/libsrc/amstrmid.c'; fi`
+
+misc/lib32_libcrtdll_a-onexit_table.o: misc/onexit_table.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libcrtdll_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libcrtdll_a-onexit_table.o -MD -MP -MF misc/$(DEPDIR)/lib32_libcrtdll_a-onexit_table.Tpo -c -o misc/lib32_libcrtdll_a-onexit_table.o `test -f 'misc/onexit_table.c' || echo '$(srcdir)/'`misc/onexit_table.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libcrtdll_a-onexit_table.Tpo misc/$(DEPDIR)/lib32_libcrtdll_a-onexit_table.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/onexit_table.c' object='misc/lib32_libcrtdll_a-onexit_table.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libcrtdll_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib32_libcrtdll_a-onexit_table.o `test -f 'misc/onexit_table.c' || echo '$(srcdir)/'`misc/onexit_table.c
+
+misc/lib32_libcrtdll_a-onexit_table.obj: misc/onexit_table.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libcrtdll_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libcrtdll_a-onexit_table.obj -MD -MP -MF misc/$(DEPDIR)/lib32_libcrtdll_a-onexit_table.Tpo -c -o misc/lib32_libcrtdll_a-onexit_table.obj `if test -f 'misc/onexit_table.c'; then $(CYGPATH_W) 'misc/onexit_table.c'; else $(CYGPATH_W) '$(srcdir)/misc/onexit_table.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libcrtdll_a-onexit_table.Tpo misc/$(DEPDIR)/lib32_libcrtdll_a-onexit_table.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/onexit_table.c' object='misc/lib32_libcrtdll_a-onexit_table.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libcrtdll_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib32_libcrtdll_a-onexit_table.obj `if test -f 'misc/onexit_table.c'; then $(CYGPATH_W) 'misc/onexit_table.c'; else $(CYGPATH_W) '$(srcdir)/misc/onexit_table.c'; fi`
 
 stdio/lib32_libcrtdll_a-acrt_iob_func.o: stdio/acrt_iob_func.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libcrtdll_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/lib32_libcrtdll_a-acrt_iob_func.o -MD -MP -MF stdio/$(DEPDIR)/lib32_libcrtdll_a-acrt_iob_func.Tpo -c -o stdio/lib32_libcrtdll_a-acrt_iob_func.o `test -f 'stdio/acrt_iob_func.c' || echo '$(srcdir)/'`stdio/acrt_iob_func.c
@@ -29162,6 +29271,20 @@ lib32_libmoldname_a-_libm_dummy.obj: _libm_dummy.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmoldname_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o lib32_libmoldname_a-_libm_dummy.obj `if test -f '_libm_dummy.c'; then $(CYGPATH_W) '_libm_dummy.c'; else $(CYGPATH_W) '$(srcdir)/_libm_dummy.c'; fi`
 
+misc/lib32_libmsvcr100_a-onexit_table.o: misc/onexit_table.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr100_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libmsvcr100_a-onexit_table.o -MD -MP -MF misc/$(DEPDIR)/lib32_libmsvcr100_a-onexit_table.Tpo -c -o misc/lib32_libmsvcr100_a-onexit_table.o `test -f 'misc/onexit_table.c' || echo '$(srcdir)/'`misc/onexit_table.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libmsvcr100_a-onexit_table.Tpo misc/$(DEPDIR)/lib32_libmsvcr100_a-onexit_table.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/onexit_table.c' object='misc/lib32_libmsvcr100_a-onexit_table.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr100_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib32_libmsvcr100_a-onexit_table.o `test -f 'misc/onexit_table.c' || echo '$(srcdir)/'`misc/onexit_table.c
+
+misc/lib32_libmsvcr100_a-onexit_table.obj: misc/onexit_table.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr100_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libmsvcr100_a-onexit_table.obj -MD -MP -MF misc/$(DEPDIR)/lib32_libmsvcr100_a-onexit_table.Tpo -c -o misc/lib32_libmsvcr100_a-onexit_table.obj `if test -f 'misc/onexit_table.c'; then $(CYGPATH_W) 'misc/onexit_table.c'; else $(CYGPATH_W) '$(srcdir)/misc/onexit_table.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libmsvcr100_a-onexit_table.Tpo misc/$(DEPDIR)/lib32_libmsvcr100_a-onexit_table.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/onexit_table.c' object='misc/lib32_libmsvcr100_a-onexit_table.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr100_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib32_libmsvcr100_a-onexit_table.obj `if test -f 'misc/onexit_table.c'; then $(CYGPATH_W) 'misc/onexit_table.c'; else $(CYGPATH_W) '$(srcdir)/misc/onexit_table.c'; fi`
+
 stdio/lib32_libmsvcr100_a-acrt_iob_func.o: stdio/acrt_iob_func.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr100_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/lib32_libmsvcr100_a-acrt_iob_func.o -MD -MP -MF stdio/$(DEPDIR)/lib32_libmsvcr100_a-acrt_iob_func.Tpo -c -o stdio/lib32_libmsvcr100_a-acrt_iob_func.o `test -f 'stdio/acrt_iob_func.c' || echo '$(srcdir)/'`stdio/acrt_iob_func.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) stdio/$(DEPDIR)/lib32_libmsvcr100_a-acrt_iob_func.Tpo stdio/$(DEPDIR)/lib32_libmsvcr100_a-acrt_iob_func.Po
@@ -29175,6 +29298,20 @@ stdio/lib32_libmsvcr100_a-acrt_iob_func.obj: stdio/acrt_iob_func.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/acrt_iob_func.c' object='stdio/lib32_libmsvcr100_a-acrt_iob_func.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr100_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/lib32_libmsvcr100_a-acrt_iob_func.obj `if test -f 'stdio/acrt_iob_func.c'; then $(CYGPATH_W) 'stdio/acrt_iob_func.c'; else $(CYGPATH_W) '$(srcdir)/stdio/acrt_iob_func.c'; fi`
+
+misc/lib32_libmsvcr110_a-onexit_table.o: misc/onexit_table.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr110_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libmsvcr110_a-onexit_table.o -MD -MP -MF misc/$(DEPDIR)/lib32_libmsvcr110_a-onexit_table.Tpo -c -o misc/lib32_libmsvcr110_a-onexit_table.o `test -f 'misc/onexit_table.c' || echo '$(srcdir)/'`misc/onexit_table.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libmsvcr110_a-onexit_table.Tpo misc/$(DEPDIR)/lib32_libmsvcr110_a-onexit_table.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/onexit_table.c' object='misc/lib32_libmsvcr110_a-onexit_table.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr110_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib32_libmsvcr110_a-onexit_table.o `test -f 'misc/onexit_table.c' || echo '$(srcdir)/'`misc/onexit_table.c
+
+misc/lib32_libmsvcr110_a-onexit_table.obj: misc/onexit_table.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr110_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libmsvcr110_a-onexit_table.obj -MD -MP -MF misc/$(DEPDIR)/lib32_libmsvcr110_a-onexit_table.Tpo -c -o misc/lib32_libmsvcr110_a-onexit_table.obj `if test -f 'misc/onexit_table.c'; then $(CYGPATH_W) 'misc/onexit_table.c'; else $(CYGPATH_W) '$(srcdir)/misc/onexit_table.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libmsvcr110_a-onexit_table.Tpo misc/$(DEPDIR)/lib32_libmsvcr110_a-onexit_table.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/onexit_table.c' object='misc/lib32_libmsvcr110_a-onexit_table.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr110_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib32_libmsvcr110_a-onexit_table.obj `if test -f 'misc/onexit_table.c'; then $(CYGPATH_W) 'misc/onexit_table.c'; else $(CYGPATH_W) '$(srcdir)/misc/onexit_table.c'; fi`
 
 stdio/lib32_libmsvcr110_a-acrt_iob_func.o: stdio/acrt_iob_func.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr110_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/lib32_libmsvcr110_a-acrt_iob_func.o -MD -MP -MF stdio/$(DEPDIR)/lib32_libmsvcr110_a-acrt_iob_func.Tpo -c -o stdio/lib32_libmsvcr110_a-acrt_iob_func.o `test -f 'stdio/acrt_iob_func.c' || echo '$(srcdir)/'`stdio/acrt_iob_func.c
@@ -29190,6 +29327,20 @@ stdio/lib32_libmsvcr110_a-acrt_iob_func.obj: stdio/acrt_iob_func.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr110_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/lib32_libmsvcr110_a-acrt_iob_func.obj `if test -f 'stdio/acrt_iob_func.c'; then $(CYGPATH_W) 'stdio/acrt_iob_func.c'; else $(CYGPATH_W) '$(srcdir)/stdio/acrt_iob_func.c'; fi`
 
+misc/lib32_libmsvcr120_a-onexit_table.o: misc/onexit_table.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr120_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libmsvcr120_a-onexit_table.o -MD -MP -MF misc/$(DEPDIR)/lib32_libmsvcr120_a-onexit_table.Tpo -c -o misc/lib32_libmsvcr120_a-onexit_table.o `test -f 'misc/onexit_table.c' || echo '$(srcdir)/'`misc/onexit_table.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libmsvcr120_a-onexit_table.Tpo misc/$(DEPDIR)/lib32_libmsvcr120_a-onexit_table.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/onexit_table.c' object='misc/lib32_libmsvcr120_a-onexit_table.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr120_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib32_libmsvcr120_a-onexit_table.o `test -f 'misc/onexit_table.c' || echo '$(srcdir)/'`misc/onexit_table.c
+
+misc/lib32_libmsvcr120_a-onexit_table.obj: misc/onexit_table.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr120_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libmsvcr120_a-onexit_table.obj -MD -MP -MF misc/$(DEPDIR)/lib32_libmsvcr120_a-onexit_table.Tpo -c -o misc/lib32_libmsvcr120_a-onexit_table.obj `if test -f 'misc/onexit_table.c'; then $(CYGPATH_W) 'misc/onexit_table.c'; else $(CYGPATH_W) '$(srcdir)/misc/onexit_table.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libmsvcr120_a-onexit_table.Tpo misc/$(DEPDIR)/lib32_libmsvcr120_a-onexit_table.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/onexit_table.c' object='misc/lib32_libmsvcr120_a-onexit_table.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr120_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib32_libmsvcr120_a-onexit_table.obj `if test -f 'misc/onexit_table.c'; then $(CYGPATH_W) 'misc/onexit_table.c'; else $(CYGPATH_W) '$(srcdir)/misc/onexit_table.c'; fi`
+
 stdio/lib32_libmsvcr120_a-acrt_iob_func.o: stdio/acrt_iob_func.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr120_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/lib32_libmsvcr120_a-acrt_iob_func.o -MD -MP -MF stdio/$(DEPDIR)/lib32_libmsvcr120_a-acrt_iob_func.Tpo -c -o stdio/lib32_libmsvcr120_a-acrt_iob_func.o `test -f 'stdio/acrt_iob_func.c' || echo '$(srcdir)/'`stdio/acrt_iob_func.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) stdio/$(DEPDIR)/lib32_libmsvcr120_a-acrt_iob_func.Tpo stdio/$(DEPDIR)/lib32_libmsvcr120_a-acrt_iob_func.Po
@@ -29203,6 +29354,20 @@ stdio/lib32_libmsvcr120_a-acrt_iob_func.obj: stdio/acrt_iob_func.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/acrt_iob_func.c' object='stdio/lib32_libmsvcr120_a-acrt_iob_func.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr120_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/lib32_libmsvcr120_a-acrt_iob_func.obj `if test -f 'stdio/acrt_iob_func.c'; then $(CYGPATH_W) 'stdio/acrt_iob_func.c'; else $(CYGPATH_W) '$(srcdir)/stdio/acrt_iob_func.c'; fi`
+
+misc/lib32_libmsvcr120_app_a-onexit_table.o: misc/onexit_table.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr120_app_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libmsvcr120_app_a-onexit_table.o -MD -MP -MF misc/$(DEPDIR)/lib32_libmsvcr120_app_a-onexit_table.Tpo -c -o misc/lib32_libmsvcr120_app_a-onexit_table.o `test -f 'misc/onexit_table.c' || echo '$(srcdir)/'`misc/onexit_table.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libmsvcr120_app_a-onexit_table.Tpo misc/$(DEPDIR)/lib32_libmsvcr120_app_a-onexit_table.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/onexit_table.c' object='misc/lib32_libmsvcr120_app_a-onexit_table.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr120_app_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib32_libmsvcr120_app_a-onexit_table.o `test -f 'misc/onexit_table.c' || echo '$(srcdir)/'`misc/onexit_table.c
+
+misc/lib32_libmsvcr120_app_a-onexit_table.obj: misc/onexit_table.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr120_app_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libmsvcr120_app_a-onexit_table.obj -MD -MP -MF misc/$(DEPDIR)/lib32_libmsvcr120_app_a-onexit_table.Tpo -c -o misc/lib32_libmsvcr120_app_a-onexit_table.obj `if test -f 'misc/onexit_table.c'; then $(CYGPATH_W) 'misc/onexit_table.c'; else $(CYGPATH_W) '$(srcdir)/misc/onexit_table.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libmsvcr120_app_a-onexit_table.Tpo misc/$(DEPDIR)/lib32_libmsvcr120_app_a-onexit_table.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/onexit_table.c' object='misc/lib32_libmsvcr120_app_a-onexit_table.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr120_app_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib32_libmsvcr120_app_a-onexit_table.obj `if test -f 'misc/onexit_table.c'; then $(CYGPATH_W) 'misc/onexit_table.c'; else $(CYGPATH_W) '$(srcdir)/misc/onexit_table.c'; fi`
 
 stdio/lib32_libmsvcr120_app_a-acrt_iob_func.o: stdio/acrt_iob_func.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr120_app_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/lib32_libmsvcr120_app_a-acrt_iob_func.o -MD -MP -MF stdio/$(DEPDIR)/lib32_libmsvcr120_app_a-acrt_iob_func.Tpo -c -o stdio/lib32_libmsvcr120_app_a-acrt_iob_func.o `test -f 'stdio/acrt_iob_func.c' || echo '$(srcdir)/'`stdio/acrt_iob_func.c
@@ -29218,6 +29383,20 @@ stdio/lib32_libmsvcr120_app_a-acrt_iob_func.obj: stdio/acrt_iob_func.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr120_app_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/lib32_libmsvcr120_app_a-acrt_iob_func.obj `if test -f 'stdio/acrt_iob_func.c'; then $(CYGPATH_W) 'stdio/acrt_iob_func.c'; else $(CYGPATH_W) '$(srcdir)/stdio/acrt_iob_func.c'; fi`
 
+misc/lib32_libmsvcr120d_a-onexit_table.o: misc/onexit_table.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr120d_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libmsvcr120d_a-onexit_table.o -MD -MP -MF misc/$(DEPDIR)/lib32_libmsvcr120d_a-onexit_table.Tpo -c -o misc/lib32_libmsvcr120d_a-onexit_table.o `test -f 'misc/onexit_table.c' || echo '$(srcdir)/'`misc/onexit_table.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libmsvcr120d_a-onexit_table.Tpo misc/$(DEPDIR)/lib32_libmsvcr120d_a-onexit_table.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/onexit_table.c' object='misc/lib32_libmsvcr120d_a-onexit_table.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr120d_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib32_libmsvcr120d_a-onexit_table.o `test -f 'misc/onexit_table.c' || echo '$(srcdir)/'`misc/onexit_table.c
+
+misc/lib32_libmsvcr120d_a-onexit_table.obj: misc/onexit_table.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr120d_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libmsvcr120d_a-onexit_table.obj -MD -MP -MF misc/$(DEPDIR)/lib32_libmsvcr120d_a-onexit_table.Tpo -c -o misc/lib32_libmsvcr120d_a-onexit_table.obj `if test -f 'misc/onexit_table.c'; then $(CYGPATH_W) 'misc/onexit_table.c'; else $(CYGPATH_W) '$(srcdir)/misc/onexit_table.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libmsvcr120d_a-onexit_table.Tpo misc/$(DEPDIR)/lib32_libmsvcr120d_a-onexit_table.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/onexit_table.c' object='misc/lib32_libmsvcr120d_a-onexit_table.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr120d_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib32_libmsvcr120d_a-onexit_table.obj `if test -f 'misc/onexit_table.c'; then $(CYGPATH_W) 'misc/onexit_table.c'; else $(CYGPATH_W) '$(srcdir)/misc/onexit_table.c'; fi`
+
 stdio/lib32_libmsvcr120d_a-acrt_iob_func.o: stdio/acrt_iob_func.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr120d_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/lib32_libmsvcr120d_a-acrt_iob_func.o -MD -MP -MF stdio/$(DEPDIR)/lib32_libmsvcr120d_a-acrt_iob_func.Tpo -c -o stdio/lib32_libmsvcr120d_a-acrt_iob_func.o `test -f 'stdio/acrt_iob_func.c' || echo '$(srcdir)/'`stdio/acrt_iob_func.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) stdio/$(DEPDIR)/lib32_libmsvcr120d_a-acrt_iob_func.Tpo stdio/$(DEPDIR)/lib32_libmsvcr120d_a-acrt_iob_func.Po
@@ -29231,6 +29410,20 @@ stdio/lib32_libmsvcr120d_a-acrt_iob_func.obj: stdio/acrt_iob_func.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/acrt_iob_func.c' object='stdio/lib32_libmsvcr120d_a-acrt_iob_func.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr120d_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/lib32_libmsvcr120d_a-acrt_iob_func.obj `if test -f 'stdio/acrt_iob_func.c'; then $(CYGPATH_W) 'stdio/acrt_iob_func.c'; else $(CYGPATH_W) '$(srcdir)/stdio/acrt_iob_func.c'; fi`
+
+misc/lib32_libmsvcr80_a-onexit_table.o: misc/onexit_table.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr80_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libmsvcr80_a-onexit_table.o -MD -MP -MF misc/$(DEPDIR)/lib32_libmsvcr80_a-onexit_table.Tpo -c -o misc/lib32_libmsvcr80_a-onexit_table.o `test -f 'misc/onexit_table.c' || echo '$(srcdir)/'`misc/onexit_table.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libmsvcr80_a-onexit_table.Tpo misc/$(DEPDIR)/lib32_libmsvcr80_a-onexit_table.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/onexit_table.c' object='misc/lib32_libmsvcr80_a-onexit_table.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr80_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib32_libmsvcr80_a-onexit_table.o `test -f 'misc/onexit_table.c' || echo '$(srcdir)/'`misc/onexit_table.c
+
+misc/lib32_libmsvcr80_a-onexit_table.obj: misc/onexit_table.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr80_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libmsvcr80_a-onexit_table.obj -MD -MP -MF misc/$(DEPDIR)/lib32_libmsvcr80_a-onexit_table.Tpo -c -o misc/lib32_libmsvcr80_a-onexit_table.obj `if test -f 'misc/onexit_table.c'; then $(CYGPATH_W) 'misc/onexit_table.c'; else $(CYGPATH_W) '$(srcdir)/misc/onexit_table.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libmsvcr80_a-onexit_table.Tpo misc/$(DEPDIR)/lib32_libmsvcr80_a-onexit_table.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/onexit_table.c' object='misc/lib32_libmsvcr80_a-onexit_table.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr80_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib32_libmsvcr80_a-onexit_table.obj `if test -f 'misc/onexit_table.c'; then $(CYGPATH_W) 'misc/onexit_table.c'; else $(CYGPATH_W) '$(srcdir)/misc/onexit_table.c'; fi`
 
 stdio/lib32_libmsvcr80_a-acrt_iob_func.o: stdio/acrt_iob_func.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr80_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/lib32_libmsvcr80_a-acrt_iob_func.o -MD -MP -MF stdio/$(DEPDIR)/lib32_libmsvcr80_a-acrt_iob_func.Tpo -c -o stdio/lib32_libmsvcr80_a-acrt_iob_func.o `test -f 'stdio/acrt_iob_func.c' || echo '$(srcdir)/'`stdio/acrt_iob_func.c
@@ -29246,6 +29439,20 @@ stdio/lib32_libmsvcr80_a-acrt_iob_func.obj: stdio/acrt_iob_func.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr80_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/lib32_libmsvcr80_a-acrt_iob_func.obj `if test -f 'stdio/acrt_iob_func.c'; then $(CYGPATH_W) 'stdio/acrt_iob_func.c'; else $(CYGPATH_W) '$(srcdir)/stdio/acrt_iob_func.c'; fi`
 
+misc/lib32_libmsvcr90_a-onexit_table.o: misc/onexit_table.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr90_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libmsvcr90_a-onexit_table.o -MD -MP -MF misc/$(DEPDIR)/lib32_libmsvcr90_a-onexit_table.Tpo -c -o misc/lib32_libmsvcr90_a-onexit_table.o `test -f 'misc/onexit_table.c' || echo '$(srcdir)/'`misc/onexit_table.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libmsvcr90_a-onexit_table.Tpo misc/$(DEPDIR)/lib32_libmsvcr90_a-onexit_table.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/onexit_table.c' object='misc/lib32_libmsvcr90_a-onexit_table.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr90_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib32_libmsvcr90_a-onexit_table.o `test -f 'misc/onexit_table.c' || echo '$(srcdir)/'`misc/onexit_table.c
+
+misc/lib32_libmsvcr90_a-onexit_table.obj: misc/onexit_table.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr90_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libmsvcr90_a-onexit_table.obj -MD -MP -MF misc/$(DEPDIR)/lib32_libmsvcr90_a-onexit_table.Tpo -c -o misc/lib32_libmsvcr90_a-onexit_table.obj `if test -f 'misc/onexit_table.c'; then $(CYGPATH_W) 'misc/onexit_table.c'; else $(CYGPATH_W) '$(srcdir)/misc/onexit_table.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libmsvcr90_a-onexit_table.Tpo misc/$(DEPDIR)/lib32_libmsvcr90_a-onexit_table.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/onexit_table.c' object='misc/lib32_libmsvcr90_a-onexit_table.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr90_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib32_libmsvcr90_a-onexit_table.obj `if test -f 'misc/onexit_table.c'; then $(CYGPATH_W) 'misc/onexit_table.c'; else $(CYGPATH_W) '$(srcdir)/misc/onexit_table.c'; fi`
+
 stdio/lib32_libmsvcr90_a-acrt_iob_func.o: stdio/acrt_iob_func.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr90_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/lib32_libmsvcr90_a-acrt_iob_func.o -MD -MP -MF stdio/$(DEPDIR)/lib32_libmsvcr90_a-acrt_iob_func.Tpo -c -o stdio/lib32_libmsvcr90_a-acrt_iob_func.o `test -f 'stdio/acrt_iob_func.c' || echo '$(srcdir)/'`stdio/acrt_iob_func.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) stdio/$(DEPDIR)/lib32_libmsvcr90_a-acrt_iob_func.Tpo stdio/$(DEPDIR)/lib32_libmsvcr90_a-acrt_iob_func.Po
@@ -29260,6 +29467,20 @@ stdio/lib32_libmsvcr90_a-acrt_iob_func.obj: stdio/acrt_iob_func.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr90_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/lib32_libmsvcr90_a-acrt_iob_func.obj `if test -f 'stdio/acrt_iob_func.c'; then $(CYGPATH_W) 'stdio/acrt_iob_func.c'; else $(CYGPATH_W) '$(srcdir)/stdio/acrt_iob_func.c'; fi`
 
+misc/lib32_libmsvcr90d_a-onexit_table.o: misc/onexit_table.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr90d_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libmsvcr90d_a-onexit_table.o -MD -MP -MF misc/$(DEPDIR)/lib32_libmsvcr90d_a-onexit_table.Tpo -c -o misc/lib32_libmsvcr90d_a-onexit_table.o `test -f 'misc/onexit_table.c' || echo '$(srcdir)/'`misc/onexit_table.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libmsvcr90d_a-onexit_table.Tpo misc/$(DEPDIR)/lib32_libmsvcr90d_a-onexit_table.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/onexit_table.c' object='misc/lib32_libmsvcr90d_a-onexit_table.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr90d_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib32_libmsvcr90d_a-onexit_table.o `test -f 'misc/onexit_table.c' || echo '$(srcdir)/'`misc/onexit_table.c
+
+misc/lib32_libmsvcr90d_a-onexit_table.obj: misc/onexit_table.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr90d_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libmsvcr90d_a-onexit_table.obj -MD -MP -MF misc/$(DEPDIR)/lib32_libmsvcr90d_a-onexit_table.Tpo -c -o misc/lib32_libmsvcr90d_a-onexit_table.obj `if test -f 'misc/onexit_table.c'; then $(CYGPATH_W) 'misc/onexit_table.c'; else $(CYGPATH_W) '$(srcdir)/misc/onexit_table.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libmsvcr90d_a-onexit_table.Tpo misc/$(DEPDIR)/lib32_libmsvcr90d_a-onexit_table.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/onexit_table.c' object='misc/lib32_libmsvcr90d_a-onexit_table.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr90d_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib32_libmsvcr90d_a-onexit_table.obj `if test -f 'misc/onexit_table.c'; then $(CYGPATH_W) 'misc/onexit_table.c'; else $(CYGPATH_W) '$(srcdir)/misc/onexit_table.c'; fi`
+
 stdio/lib32_libmsvcr90d_a-acrt_iob_func.o: stdio/acrt_iob_func.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr90d_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/lib32_libmsvcr90d_a-acrt_iob_func.o -MD -MP -MF stdio/$(DEPDIR)/lib32_libmsvcr90d_a-acrt_iob_func.Tpo -c -o stdio/lib32_libmsvcr90d_a-acrt_iob_func.o `test -f 'stdio/acrt_iob_func.c' || echo '$(srcdir)/'`stdio/acrt_iob_func.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) stdio/$(DEPDIR)/lib32_libmsvcr90d_a-acrt_iob_func.Tpo stdio/$(DEPDIR)/lib32_libmsvcr90d_a-acrt_iob_func.Po
@@ -29273,6 +29494,20 @@ stdio/lib32_libmsvcr90d_a-acrt_iob_func.obj: stdio/acrt_iob_func.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/acrt_iob_func.c' object='stdio/lib32_libmsvcr90d_a-acrt_iob_func.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr90d_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/lib32_libmsvcr90d_a-acrt_iob_func.obj `if test -f 'stdio/acrt_iob_func.c'; then $(CYGPATH_W) 'stdio/acrt_iob_func.c'; else $(CYGPATH_W) '$(srcdir)/stdio/acrt_iob_func.c'; fi`
+
+misc/lib32_libmsvcrt_os_a-onexit_table.o: misc/onexit_table.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libmsvcrt_os_a-onexit_table.o -MD -MP -MF misc/$(DEPDIR)/lib32_libmsvcrt_os_a-onexit_table.Tpo -c -o misc/lib32_libmsvcrt_os_a-onexit_table.o `test -f 'misc/onexit_table.c' || echo '$(srcdir)/'`misc/onexit_table.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libmsvcrt_os_a-onexit_table.Tpo misc/$(DEPDIR)/lib32_libmsvcrt_os_a-onexit_table.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/onexit_table.c' object='misc/lib32_libmsvcrt_os_a-onexit_table.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib32_libmsvcrt_os_a-onexit_table.o `test -f 'misc/onexit_table.c' || echo '$(srcdir)/'`misc/onexit_table.c
+
+misc/lib32_libmsvcrt_os_a-onexit_table.obj: misc/onexit_table.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libmsvcrt_os_a-onexit_table.obj -MD -MP -MF misc/$(DEPDIR)/lib32_libmsvcrt_os_a-onexit_table.Tpo -c -o misc/lib32_libmsvcrt_os_a-onexit_table.obj `if test -f 'misc/onexit_table.c'; then $(CYGPATH_W) 'misc/onexit_table.c'; else $(CYGPATH_W) '$(srcdir)/misc/onexit_table.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libmsvcrt_os_a-onexit_table.Tpo misc/$(DEPDIR)/lib32_libmsvcrt_os_a-onexit_table.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/onexit_table.c' object='misc/lib32_libmsvcrt_os_a-onexit_table.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib32_libmsvcrt_os_a-onexit_table.obj `if test -f 'misc/onexit_table.c'; then $(CYGPATH_W) 'misc/onexit_table.c'; else $(CYGPATH_W) '$(srcdir)/misc/onexit_table.c'; fi`
 
 stdio/lib32_libmsvcrt_os_a-acrt_iob_func.o: stdio/acrt_iob_func.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/lib32_libmsvcrt_os_a-acrt_iob_func.o -MD -MP -MF stdio/$(DEPDIR)/lib32_libmsvcrt_os_a-acrt_iob_func.Tpo -c -o stdio/lib32_libmsvcrt_os_a-acrt_iob_func.o `test -f 'stdio/acrt_iob_func.c' || echo '$(srcdir)/'`stdio/acrt_iob_func.c
@@ -31387,6 +31622,20 @@ libsrc/lib64_libamstrmid_a-amstrmid.obj: libsrc/amstrmid.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libsrc/amstrmid.c' object='libsrc/lib64_libamstrmid_a-amstrmid.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libamstrmid_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libsrc/lib64_libamstrmid_a-amstrmid.obj `if test -f 'libsrc/amstrmid.c'; then $(CYGPATH_W) 'libsrc/amstrmid.c'; else $(CYGPATH_W) '$(srcdir)/libsrc/amstrmid.c'; fi`
+
+misc/lib64_libcrtdll_a-onexit_table.o: misc/onexit_table.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libcrtdll_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib64_libcrtdll_a-onexit_table.o -MD -MP -MF misc/$(DEPDIR)/lib64_libcrtdll_a-onexit_table.Tpo -c -o misc/lib64_libcrtdll_a-onexit_table.o `test -f 'misc/onexit_table.c' || echo '$(srcdir)/'`misc/onexit_table.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib64_libcrtdll_a-onexit_table.Tpo misc/$(DEPDIR)/lib64_libcrtdll_a-onexit_table.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/onexit_table.c' object='misc/lib64_libcrtdll_a-onexit_table.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libcrtdll_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib64_libcrtdll_a-onexit_table.o `test -f 'misc/onexit_table.c' || echo '$(srcdir)/'`misc/onexit_table.c
+
+misc/lib64_libcrtdll_a-onexit_table.obj: misc/onexit_table.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libcrtdll_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib64_libcrtdll_a-onexit_table.obj -MD -MP -MF misc/$(DEPDIR)/lib64_libcrtdll_a-onexit_table.Tpo -c -o misc/lib64_libcrtdll_a-onexit_table.obj `if test -f 'misc/onexit_table.c'; then $(CYGPATH_W) 'misc/onexit_table.c'; else $(CYGPATH_W) '$(srcdir)/misc/onexit_table.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib64_libcrtdll_a-onexit_table.Tpo misc/$(DEPDIR)/lib64_libcrtdll_a-onexit_table.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/onexit_table.c' object='misc/lib64_libcrtdll_a-onexit_table.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libcrtdll_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib64_libcrtdll_a-onexit_table.obj `if test -f 'misc/onexit_table.c'; then $(CYGPATH_W) 'misc/onexit_table.c'; else $(CYGPATH_W) '$(srcdir)/misc/onexit_table.c'; fi`
 
 stdio/lib64_libcrtdll_a-acrt_iob_func.o: stdio/acrt_iob_func.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libcrtdll_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/lib64_libcrtdll_a-acrt_iob_func.o -MD -MP -MF stdio/$(DEPDIR)/lib64_libcrtdll_a-acrt_iob_func.Tpo -c -o stdio/lib64_libcrtdll_a-acrt_iob_func.o `test -f 'stdio/acrt_iob_func.c' || echo '$(srcdir)/'`stdio/acrt_iob_func.c
@@ -38892,6 +39141,20 @@ lib64_libmoldname_a-_libm_dummy.obj: _libm_dummy.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmoldname_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o lib64_libmoldname_a-_libm_dummy.obj `if test -f '_libm_dummy.c'; then $(CYGPATH_W) '_libm_dummy.c'; else $(CYGPATH_W) '$(srcdir)/_libm_dummy.c'; fi`
 
+misc/lib64_libmsvcr100_a-onexit_table.o: misc/onexit_table.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr100_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib64_libmsvcr100_a-onexit_table.o -MD -MP -MF misc/$(DEPDIR)/lib64_libmsvcr100_a-onexit_table.Tpo -c -o misc/lib64_libmsvcr100_a-onexit_table.o `test -f 'misc/onexit_table.c' || echo '$(srcdir)/'`misc/onexit_table.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib64_libmsvcr100_a-onexit_table.Tpo misc/$(DEPDIR)/lib64_libmsvcr100_a-onexit_table.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/onexit_table.c' object='misc/lib64_libmsvcr100_a-onexit_table.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr100_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib64_libmsvcr100_a-onexit_table.o `test -f 'misc/onexit_table.c' || echo '$(srcdir)/'`misc/onexit_table.c
+
+misc/lib64_libmsvcr100_a-onexit_table.obj: misc/onexit_table.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr100_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib64_libmsvcr100_a-onexit_table.obj -MD -MP -MF misc/$(DEPDIR)/lib64_libmsvcr100_a-onexit_table.Tpo -c -o misc/lib64_libmsvcr100_a-onexit_table.obj `if test -f 'misc/onexit_table.c'; then $(CYGPATH_W) 'misc/onexit_table.c'; else $(CYGPATH_W) '$(srcdir)/misc/onexit_table.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib64_libmsvcr100_a-onexit_table.Tpo misc/$(DEPDIR)/lib64_libmsvcr100_a-onexit_table.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/onexit_table.c' object='misc/lib64_libmsvcr100_a-onexit_table.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr100_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib64_libmsvcr100_a-onexit_table.obj `if test -f 'misc/onexit_table.c'; then $(CYGPATH_W) 'misc/onexit_table.c'; else $(CYGPATH_W) '$(srcdir)/misc/onexit_table.c'; fi`
+
 stdio/lib64_libmsvcr100_a-acrt_iob_func.o: stdio/acrt_iob_func.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr100_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/lib64_libmsvcr100_a-acrt_iob_func.o -MD -MP -MF stdio/$(DEPDIR)/lib64_libmsvcr100_a-acrt_iob_func.Tpo -c -o stdio/lib64_libmsvcr100_a-acrt_iob_func.o `test -f 'stdio/acrt_iob_func.c' || echo '$(srcdir)/'`stdio/acrt_iob_func.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) stdio/$(DEPDIR)/lib64_libmsvcr100_a-acrt_iob_func.Tpo stdio/$(DEPDIR)/lib64_libmsvcr100_a-acrt_iob_func.Po
@@ -38905,6 +39168,20 @@ stdio/lib64_libmsvcr100_a-acrt_iob_func.obj: stdio/acrt_iob_func.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/acrt_iob_func.c' object='stdio/lib64_libmsvcr100_a-acrt_iob_func.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr100_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/lib64_libmsvcr100_a-acrt_iob_func.obj `if test -f 'stdio/acrt_iob_func.c'; then $(CYGPATH_W) 'stdio/acrt_iob_func.c'; else $(CYGPATH_W) '$(srcdir)/stdio/acrt_iob_func.c'; fi`
+
+misc/lib64_libmsvcr110_a-onexit_table.o: misc/onexit_table.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr110_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib64_libmsvcr110_a-onexit_table.o -MD -MP -MF misc/$(DEPDIR)/lib64_libmsvcr110_a-onexit_table.Tpo -c -o misc/lib64_libmsvcr110_a-onexit_table.o `test -f 'misc/onexit_table.c' || echo '$(srcdir)/'`misc/onexit_table.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib64_libmsvcr110_a-onexit_table.Tpo misc/$(DEPDIR)/lib64_libmsvcr110_a-onexit_table.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/onexit_table.c' object='misc/lib64_libmsvcr110_a-onexit_table.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr110_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib64_libmsvcr110_a-onexit_table.o `test -f 'misc/onexit_table.c' || echo '$(srcdir)/'`misc/onexit_table.c
+
+misc/lib64_libmsvcr110_a-onexit_table.obj: misc/onexit_table.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr110_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib64_libmsvcr110_a-onexit_table.obj -MD -MP -MF misc/$(DEPDIR)/lib64_libmsvcr110_a-onexit_table.Tpo -c -o misc/lib64_libmsvcr110_a-onexit_table.obj `if test -f 'misc/onexit_table.c'; then $(CYGPATH_W) 'misc/onexit_table.c'; else $(CYGPATH_W) '$(srcdir)/misc/onexit_table.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib64_libmsvcr110_a-onexit_table.Tpo misc/$(DEPDIR)/lib64_libmsvcr110_a-onexit_table.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/onexit_table.c' object='misc/lib64_libmsvcr110_a-onexit_table.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr110_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib64_libmsvcr110_a-onexit_table.obj `if test -f 'misc/onexit_table.c'; then $(CYGPATH_W) 'misc/onexit_table.c'; else $(CYGPATH_W) '$(srcdir)/misc/onexit_table.c'; fi`
 
 stdio/lib64_libmsvcr110_a-acrt_iob_func.o: stdio/acrt_iob_func.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr110_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/lib64_libmsvcr110_a-acrt_iob_func.o -MD -MP -MF stdio/$(DEPDIR)/lib64_libmsvcr110_a-acrt_iob_func.Tpo -c -o stdio/lib64_libmsvcr110_a-acrt_iob_func.o `test -f 'stdio/acrt_iob_func.c' || echo '$(srcdir)/'`stdio/acrt_iob_func.c
@@ -38920,6 +39197,20 @@ stdio/lib64_libmsvcr110_a-acrt_iob_func.obj: stdio/acrt_iob_func.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr110_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/lib64_libmsvcr110_a-acrt_iob_func.obj `if test -f 'stdio/acrt_iob_func.c'; then $(CYGPATH_W) 'stdio/acrt_iob_func.c'; else $(CYGPATH_W) '$(srcdir)/stdio/acrt_iob_func.c'; fi`
 
+misc/lib64_libmsvcr120_a-onexit_table.o: misc/onexit_table.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr120_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib64_libmsvcr120_a-onexit_table.o -MD -MP -MF misc/$(DEPDIR)/lib64_libmsvcr120_a-onexit_table.Tpo -c -o misc/lib64_libmsvcr120_a-onexit_table.o `test -f 'misc/onexit_table.c' || echo '$(srcdir)/'`misc/onexit_table.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib64_libmsvcr120_a-onexit_table.Tpo misc/$(DEPDIR)/lib64_libmsvcr120_a-onexit_table.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/onexit_table.c' object='misc/lib64_libmsvcr120_a-onexit_table.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr120_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib64_libmsvcr120_a-onexit_table.o `test -f 'misc/onexit_table.c' || echo '$(srcdir)/'`misc/onexit_table.c
+
+misc/lib64_libmsvcr120_a-onexit_table.obj: misc/onexit_table.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr120_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib64_libmsvcr120_a-onexit_table.obj -MD -MP -MF misc/$(DEPDIR)/lib64_libmsvcr120_a-onexit_table.Tpo -c -o misc/lib64_libmsvcr120_a-onexit_table.obj `if test -f 'misc/onexit_table.c'; then $(CYGPATH_W) 'misc/onexit_table.c'; else $(CYGPATH_W) '$(srcdir)/misc/onexit_table.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib64_libmsvcr120_a-onexit_table.Tpo misc/$(DEPDIR)/lib64_libmsvcr120_a-onexit_table.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/onexit_table.c' object='misc/lib64_libmsvcr120_a-onexit_table.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr120_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib64_libmsvcr120_a-onexit_table.obj `if test -f 'misc/onexit_table.c'; then $(CYGPATH_W) 'misc/onexit_table.c'; else $(CYGPATH_W) '$(srcdir)/misc/onexit_table.c'; fi`
+
 stdio/lib64_libmsvcr120_a-acrt_iob_func.o: stdio/acrt_iob_func.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr120_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/lib64_libmsvcr120_a-acrt_iob_func.o -MD -MP -MF stdio/$(DEPDIR)/lib64_libmsvcr120_a-acrt_iob_func.Tpo -c -o stdio/lib64_libmsvcr120_a-acrt_iob_func.o `test -f 'stdio/acrt_iob_func.c' || echo '$(srcdir)/'`stdio/acrt_iob_func.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) stdio/$(DEPDIR)/lib64_libmsvcr120_a-acrt_iob_func.Tpo stdio/$(DEPDIR)/lib64_libmsvcr120_a-acrt_iob_func.Po
@@ -38933,6 +39224,20 @@ stdio/lib64_libmsvcr120_a-acrt_iob_func.obj: stdio/acrt_iob_func.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/acrt_iob_func.c' object='stdio/lib64_libmsvcr120_a-acrt_iob_func.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr120_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/lib64_libmsvcr120_a-acrt_iob_func.obj `if test -f 'stdio/acrt_iob_func.c'; then $(CYGPATH_W) 'stdio/acrt_iob_func.c'; else $(CYGPATH_W) '$(srcdir)/stdio/acrt_iob_func.c'; fi`
+
+misc/lib64_libmsvcr120_app_a-onexit_table.o: misc/onexit_table.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr120_app_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib64_libmsvcr120_app_a-onexit_table.o -MD -MP -MF misc/$(DEPDIR)/lib64_libmsvcr120_app_a-onexit_table.Tpo -c -o misc/lib64_libmsvcr120_app_a-onexit_table.o `test -f 'misc/onexit_table.c' || echo '$(srcdir)/'`misc/onexit_table.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib64_libmsvcr120_app_a-onexit_table.Tpo misc/$(DEPDIR)/lib64_libmsvcr120_app_a-onexit_table.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/onexit_table.c' object='misc/lib64_libmsvcr120_app_a-onexit_table.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr120_app_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib64_libmsvcr120_app_a-onexit_table.o `test -f 'misc/onexit_table.c' || echo '$(srcdir)/'`misc/onexit_table.c
+
+misc/lib64_libmsvcr120_app_a-onexit_table.obj: misc/onexit_table.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr120_app_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib64_libmsvcr120_app_a-onexit_table.obj -MD -MP -MF misc/$(DEPDIR)/lib64_libmsvcr120_app_a-onexit_table.Tpo -c -o misc/lib64_libmsvcr120_app_a-onexit_table.obj `if test -f 'misc/onexit_table.c'; then $(CYGPATH_W) 'misc/onexit_table.c'; else $(CYGPATH_W) '$(srcdir)/misc/onexit_table.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib64_libmsvcr120_app_a-onexit_table.Tpo misc/$(DEPDIR)/lib64_libmsvcr120_app_a-onexit_table.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/onexit_table.c' object='misc/lib64_libmsvcr120_app_a-onexit_table.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr120_app_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib64_libmsvcr120_app_a-onexit_table.obj `if test -f 'misc/onexit_table.c'; then $(CYGPATH_W) 'misc/onexit_table.c'; else $(CYGPATH_W) '$(srcdir)/misc/onexit_table.c'; fi`
 
 stdio/lib64_libmsvcr120_app_a-acrt_iob_func.o: stdio/acrt_iob_func.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr120_app_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/lib64_libmsvcr120_app_a-acrt_iob_func.o -MD -MP -MF stdio/$(DEPDIR)/lib64_libmsvcr120_app_a-acrt_iob_func.Tpo -c -o stdio/lib64_libmsvcr120_app_a-acrt_iob_func.o `test -f 'stdio/acrt_iob_func.c' || echo '$(srcdir)/'`stdio/acrt_iob_func.c
@@ -38948,6 +39253,20 @@ stdio/lib64_libmsvcr120_app_a-acrt_iob_func.obj: stdio/acrt_iob_func.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr120_app_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/lib64_libmsvcr120_app_a-acrt_iob_func.obj `if test -f 'stdio/acrt_iob_func.c'; then $(CYGPATH_W) 'stdio/acrt_iob_func.c'; else $(CYGPATH_W) '$(srcdir)/stdio/acrt_iob_func.c'; fi`
 
+misc/lib64_libmsvcr120d_a-onexit_table.o: misc/onexit_table.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr120d_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib64_libmsvcr120d_a-onexit_table.o -MD -MP -MF misc/$(DEPDIR)/lib64_libmsvcr120d_a-onexit_table.Tpo -c -o misc/lib64_libmsvcr120d_a-onexit_table.o `test -f 'misc/onexit_table.c' || echo '$(srcdir)/'`misc/onexit_table.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib64_libmsvcr120d_a-onexit_table.Tpo misc/$(DEPDIR)/lib64_libmsvcr120d_a-onexit_table.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/onexit_table.c' object='misc/lib64_libmsvcr120d_a-onexit_table.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr120d_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib64_libmsvcr120d_a-onexit_table.o `test -f 'misc/onexit_table.c' || echo '$(srcdir)/'`misc/onexit_table.c
+
+misc/lib64_libmsvcr120d_a-onexit_table.obj: misc/onexit_table.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr120d_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib64_libmsvcr120d_a-onexit_table.obj -MD -MP -MF misc/$(DEPDIR)/lib64_libmsvcr120d_a-onexit_table.Tpo -c -o misc/lib64_libmsvcr120d_a-onexit_table.obj `if test -f 'misc/onexit_table.c'; then $(CYGPATH_W) 'misc/onexit_table.c'; else $(CYGPATH_W) '$(srcdir)/misc/onexit_table.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib64_libmsvcr120d_a-onexit_table.Tpo misc/$(DEPDIR)/lib64_libmsvcr120d_a-onexit_table.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/onexit_table.c' object='misc/lib64_libmsvcr120d_a-onexit_table.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr120d_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib64_libmsvcr120d_a-onexit_table.obj `if test -f 'misc/onexit_table.c'; then $(CYGPATH_W) 'misc/onexit_table.c'; else $(CYGPATH_W) '$(srcdir)/misc/onexit_table.c'; fi`
+
 stdio/lib64_libmsvcr120d_a-acrt_iob_func.o: stdio/acrt_iob_func.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr120d_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/lib64_libmsvcr120d_a-acrt_iob_func.o -MD -MP -MF stdio/$(DEPDIR)/lib64_libmsvcr120d_a-acrt_iob_func.Tpo -c -o stdio/lib64_libmsvcr120d_a-acrt_iob_func.o `test -f 'stdio/acrt_iob_func.c' || echo '$(srcdir)/'`stdio/acrt_iob_func.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) stdio/$(DEPDIR)/lib64_libmsvcr120d_a-acrt_iob_func.Tpo stdio/$(DEPDIR)/lib64_libmsvcr120d_a-acrt_iob_func.Po
@@ -38961,6 +39280,20 @@ stdio/lib64_libmsvcr120d_a-acrt_iob_func.obj: stdio/acrt_iob_func.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/acrt_iob_func.c' object='stdio/lib64_libmsvcr120d_a-acrt_iob_func.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr120d_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/lib64_libmsvcr120d_a-acrt_iob_func.obj `if test -f 'stdio/acrt_iob_func.c'; then $(CYGPATH_W) 'stdio/acrt_iob_func.c'; else $(CYGPATH_W) '$(srcdir)/stdio/acrt_iob_func.c'; fi`
+
+misc/lib64_libmsvcr80_a-onexit_table.o: misc/onexit_table.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr80_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib64_libmsvcr80_a-onexit_table.o -MD -MP -MF misc/$(DEPDIR)/lib64_libmsvcr80_a-onexit_table.Tpo -c -o misc/lib64_libmsvcr80_a-onexit_table.o `test -f 'misc/onexit_table.c' || echo '$(srcdir)/'`misc/onexit_table.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib64_libmsvcr80_a-onexit_table.Tpo misc/$(DEPDIR)/lib64_libmsvcr80_a-onexit_table.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/onexit_table.c' object='misc/lib64_libmsvcr80_a-onexit_table.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr80_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib64_libmsvcr80_a-onexit_table.o `test -f 'misc/onexit_table.c' || echo '$(srcdir)/'`misc/onexit_table.c
+
+misc/lib64_libmsvcr80_a-onexit_table.obj: misc/onexit_table.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr80_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib64_libmsvcr80_a-onexit_table.obj -MD -MP -MF misc/$(DEPDIR)/lib64_libmsvcr80_a-onexit_table.Tpo -c -o misc/lib64_libmsvcr80_a-onexit_table.obj `if test -f 'misc/onexit_table.c'; then $(CYGPATH_W) 'misc/onexit_table.c'; else $(CYGPATH_W) '$(srcdir)/misc/onexit_table.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib64_libmsvcr80_a-onexit_table.Tpo misc/$(DEPDIR)/lib64_libmsvcr80_a-onexit_table.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/onexit_table.c' object='misc/lib64_libmsvcr80_a-onexit_table.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr80_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib64_libmsvcr80_a-onexit_table.obj `if test -f 'misc/onexit_table.c'; then $(CYGPATH_W) 'misc/onexit_table.c'; else $(CYGPATH_W) '$(srcdir)/misc/onexit_table.c'; fi`
 
 stdio/lib64_libmsvcr80_a-acrt_iob_func.o: stdio/acrt_iob_func.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr80_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/lib64_libmsvcr80_a-acrt_iob_func.o -MD -MP -MF stdio/$(DEPDIR)/lib64_libmsvcr80_a-acrt_iob_func.Tpo -c -o stdio/lib64_libmsvcr80_a-acrt_iob_func.o `test -f 'stdio/acrt_iob_func.c' || echo '$(srcdir)/'`stdio/acrt_iob_func.c
@@ -39032,6 +39365,20 @@ misc/lib64_libmsvcr80_a-__p__wcmdln.obj: misc/__p__wcmdln.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr80_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib64_libmsvcr80_a-__p__wcmdln.obj `if test -f 'misc/__p__wcmdln.c'; then $(CYGPATH_W) 'misc/__p__wcmdln.c'; else $(CYGPATH_W) '$(srcdir)/misc/__p__wcmdln.c'; fi`
 
+misc/lib64_libmsvcr90_a-onexit_table.o: misc/onexit_table.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr90_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib64_libmsvcr90_a-onexit_table.o -MD -MP -MF misc/$(DEPDIR)/lib64_libmsvcr90_a-onexit_table.Tpo -c -o misc/lib64_libmsvcr90_a-onexit_table.o `test -f 'misc/onexit_table.c' || echo '$(srcdir)/'`misc/onexit_table.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib64_libmsvcr90_a-onexit_table.Tpo misc/$(DEPDIR)/lib64_libmsvcr90_a-onexit_table.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/onexit_table.c' object='misc/lib64_libmsvcr90_a-onexit_table.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr90_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib64_libmsvcr90_a-onexit_table.o `test -f 'misc/onexit_table.c' || echo '$(srcdir)/'`misc/onexit_table.c
+
+misc/lib64_libmsvcr90_a-onexit_table.obj: misc/onexit_table.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr90_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib64_libmsvcr90_a-onexit_table.obj -MD -MP -MF misc/$(DEPDIR)/lib64_libmsvcr90_a-onexit_table.Tpo -c -o misc/lib64_libmsvcr90_a-onexit_table.obj `if test -f 'misc/onexit_table.c'; then $(CYGPATH_W) 'misc/onexit_table.c'; else $(CYGPATH_W) '$(srcdir)/misc/onexit_table.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib64_libmsvcr90_a-onexit_table.Tpo misc/$(DEPDIR)/lib64_libmsvcr90_a-onexit_table.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/onexit_table.c' object='misc/lib64_libmsvcr90_a-onexit_table.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr90_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib64_libmsvcr90_a-onexit_table.obj `if test -f 'misc/onexit_table.c'; then $(CYGPATH_W) 'misc/onexit_table.c'; else $(CYGPATH_W) '$(srcdir)/misc/onexit_table.c'; fi`
+
 stdio/lib64_libmsvcr90_a-acrt_iob_func.o: stdio/acrt_iob_func.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr90_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/lib64_libmsvcr90_a-acrt_iob_func.o -MD -MP -MF stdio/$(DEPDIR)/lib64_libmsvcr90_a-acrt_iob_func.Tpo -c -o stdio/lib64_libmsvcr90_a-acrt_iob_func.o `test -f 'stdio/acrt_iob_func.c' || echo '$(srcdir)/'`stdio/acrt_iob_func.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) stdio/$(DEPDIR)/lib64_libmsvcr90_a-acrt_iob_func.Tpo stdio/$(DEPDIR)/lib64_libmsvcr90_a-acrt_iob_func.Po
@@ -39046,6 +39393,20 @@ stdio/lib64_libmsvcr90_a-acrt_iob_func.obj: stdio/acrt_iob_func.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr90_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/lib64_libmsvcr90_a-acrt_iob_func.obj `if test -f 'stdio/acrt_iob_func.c'; then $(CYGPATH_W) 'stdio/acrt_iob_func.c'; else $(CYGPATH_W) '$(srcdir)/stdio/acrt_iob_func.c'; fi`
 
+misc/lib64_libmsvcr90d_a-onexit_table.o: misc/onexit_table.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr90d_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib64_libmsvcr90d_a-onexit_table.o -MD -MP -MF misc/$(DEPDIR)/lib64_libmsvcr90d_a-onexit_table.Tpo -c -o misc/lib64_libmsvcr90d_a-onexit_table.o `test -f 'misc/onexit_table.c' || echo '$(srcdir)/'`misc/onexit_table.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib64_libmsvcr90d_a-onexit_table.Tpo misc/$(DEPDIR)/lib64_libmsvcr90d_a-onexit_table.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/onexit_table.c' object='misc/lib64_libmsvcr90d_a-onexit_table.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr90d_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib64_libmsvcr90d_a-onexit_table.o `test -f 'misc/onexit_table.c' || echo '$(srcdir)/'`misc/onexit_table.c
+
+misc/lib64_libmsvcr90d_a-onexit_table.obj: misc/onexit_table.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr90d_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib64_libmsvcr90d_a-onexit_table.obj -MD -MP -MF misc/$(DEPDIR)/lib64_libmsvcr90d_a-onexit_table.Tpo -c -o misc/lib64_libmsvcr90d_a-onexit_table.obj `if test -f 'misc/onexit_table.c'; then $(CYGPATH_W) 'misc/onexit_table.c'; else $(CYGPATH_W) '$(srcdir)/misc/onexit_table.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib64_libmsvcr90d_a-onexit_table.Tpo misc/$(DEPDIR)/lib64_libmsvcr90d_a-onexit_table.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/onexit_table.c' object='misc/lib64_libmsvcr90d_a-onexit_table.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr90d_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib64_libmsvcr90d_a-onexit_table.obj `if test -f 'misc/onexit_table.c'; then $(CYGPATH_W) 'misc/onexit_table.c'; else $(CYGPATH_W) '$(srcdir)/misc/onexit_table.c'; fi`
+
 stdio/lib64_libmsvcr90d_a-acrt_iob_func.o: stdio/acrt_iob_func.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr90d_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/lib64_libmsvcr90d_a-acrt_iob_func.o -MD -MP -MF stdio/$(DEPDIR)/lib64_libmsvcr90d_a-acrt_iob_func.Tpo -c -o stdio/lib64_libmsvcr90d_a-acrt_iob_func.o `test -f 'stdio/acrt_iob_func.c' || echo '$(srcdir)/'`stdio/acrt_iob_func.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) stdio/$(DEPDIR)/lib64_libmsvcr90d_a-acrt_iob_func.Tpo stdio/$(DEPDIR)/lib64_libmsvcr90d_a-acrt_iob_func.Po
@@ -39059,6 +39420,20 @@ stdio/lib64_libmsvcr90d_a-acrt_iob_func.obj: stdio/acrt_iob_func.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/acrt_iob_func.c' object='stdio/lib64_libmsvcr90d_a-acrt_iob_func.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr90d_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/lib64_libmsvcr90d_a-acrt_iob_func.obj `if test -f 'stdio/acrt_iob_func.c'; then $(CYGPATH_W) 'stdio/acrt_iob_func.c'; else $(CYGPATH_W) '$(srcdir)/stdio/acrt_iob_func.c'; fi`
+
+misc/lib64_libmsvcrt_os_a-onexit_table.o: misc/onexit_table.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib64_libmsvcrt_os_a-onexit_table.o -MD -MP -MF misc/$(DEPDIR)/lib64_libmsvcrt_os_a-onexit_table.Tpo -c -o misc/lib64_libmsvcrt_os_a-onexit_table.o `test -f 'misc/onexit_table.c' || echo '$(srcdir)/'`misc/onexit_table.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib64_libmsvcrt_os_a-onexit_table.Tpo misc/$(DEPDIR)/lib64_libmsvcrt_os_a-onexit_table.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/onexit_table.c' object='misc/lib64_libmsvcrt_os_a-onexit_table.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib64_libmsvcrt_os_a-onexit_table.o `test -f 'misc/onexit_table.c' || echo '$(srcdir)/'`misc/onexit_table.c
+
+misc/lib64_libmsvcrt_os_a-onexit_table.obj: misc/onexit_table.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib64_libmsvcrt_os_a-onexit_table.obj -MD -MP -MF misc/$(DEPDIR)/lib64_libmsvcrt_os_a-onexit_table.Tpo -c -o misc/lib64_libmsvcrt_os_a-onexit_table.obj `if test -f 'misc/onexit_table.c'; then $(CYGPATH_W) 'misc/onexit_table.c'; else $(CYGPATH_W) '$(srcdir)/misc/onexit_table.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib64_libmsvcrt_os_a-onexit_table.Tpo misc/$(DEPDIR)/lib64_libmsvcrt_os_a-onexit_table.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/onexit_table.c' object='misc/lib64_libmsvcrt_os_a-onexit_table.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib64_libmsvcrt_os_a-onexit_table.obj `if test -f 'misc/onexit_table.c'; then $(CYGPATH_W) 'misc/onexit_table.c'; else $(CYGPATH_W) '$(srcdir)/misc/onexit_table.c'; fi`
 
 stdio/lib64_libmsvcrt_os_a-acrt_iob_func.o: stdio/acrt_iob_func.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/lib64_libmsvcrt_os_a-acrt_iob_func.o -MD -MP -MF stdio/$(DEPDIR)/lib64_libmsvcrt_os_a-acrt_iob_func.Tpo -c -o stdio/lib64_libmsvcrt_os_a-acrt_iob_func.o `test -f 'stdio/acrt_iob_func.c' || echo '$(srcdir)/'`stdio/acrt_iob_func.c
@@ -48580,6 +48955,20 @@ libarm32_libmoldname_a-_libm_dummy.obj: _libm_dummy.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmoldname_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarm32_libmoldname_a-_libm_dummy.obj `if test -f '_libm_dummy.c'; then $(CYGPATH_W) '_libm_dummy.c'; else $(CYGPATH_W) '$(srcdir)/_libm_dummy.c'; fi`
 
+misc/libarm32_libmsvcr110_a-onexit_table.o: misc/onexit_table.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcr110_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/libarm32_libmsvcr110_a-onexit_table.o -MD -MP -MF misc/$(DEPDIR)/libarm32_libmsvcr110_a-onexit_table.Tpo -c -o misc/libarm32_libmsvcr110_a-onexit_table.o `test -f 'misc/onexit_table.c' || echo '$(srcdir)/'`misc/onexit_table.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/libarm32_libmsvcr110_a-onexit_table.Tpo misc/$(DEPDIR)/libarm32_libmsvcr110_a-onexit_table.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/onexit_table.c' object='misc/libarm32_libmsvcr110_a-onexit_table.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcr110_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/libarm32_libmsvcr110_a-onexit_table.o `test -f 'misc/onexit_table.c' || echo '$(srcdir)/'`misc/onexit_table.c
+
+misc/libarm32_libmsvcr110_a-onexit_table.obj: misc/onexit_table.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcr110_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/libarm32_libmsvcr110_a-onexit_table.obj -MD -MP -MF misc/$(DEPDIR)/libarm32_libmsvcr110_a-onexit_table.Tpo -c -o misc/libarm32_libmsvcr110_a-onexit_table.obj `if test -f 'misc/onexit_table.c'; then $(CYGPATH_W) 'misc/onexit_table.c'; else $(CYGPATH_W) '$(srcdir)/misc/onexit_table.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/libarm32_libmsvcr110_a-onexit_table.Tpo misc/$(DEPDIR)/libarm32_libmsvcr110_a-onexit_table.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/onexit_table.c' object='misc/libarm32_libmsvcr110_a-onexit_table.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcr110_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/libarm32_libmsvcr110_a-onexit_table.obj `if test -f 'misc/onexit_table.c'; then $(CYGPATH_W) 'misc/onexit_table.c'; else $(CYGPATH_W) '$(srcdir)/misc/onexit_table.c'; fi`
+
 stdio/libarm32_libmsvcr110_a-acrt_iob_func.o: stdio/acrt_iob_func.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcr110_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/libarm32_libmsvcr110_a-acrt_iob_func.o -MD -MP -MF stdio/$(DEPDIR)/libarm32_libmsvcr110_a-acrt_iob_func.Tpo -c -o stdio/libarm32_libmsvcr110_a-acrt_iob_func.o `test -f 'stdio/acrt_iob_func.c' || echo '$(srcdir)/'`stdio/acrt_iob_func.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) stdio/$(DEPDIR)/libarm32_libmsvcr110_a-acrt_iob_func.Tpo stdio/$(DEPDIR)/libarm32_libmsvcr110_a-acrt_iob_func.Po
@@ -48593,6 +48982,20 @@ stdio/libarm32_libmsvcr110_a-acrt_iob_func.obj: stdio/acrt_iob_func.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/acrt_iob_func.c' object='stdio/libarm32_libmsvcr110_a-acrt_iob_func.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcr110_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/libarm32_libmsvcr110_a-acrt_iob_func.obj `if test -f 'stdio/acrt_iob_func.c'; then $(CYGPATH_W) 'stdio/acrt_iob_func.c'; else $(CYGPATH_W) '$(srcdir)/stdio/acrt_iob_func.c'; fi`
+
+misc/libarm32_libmsvcrt_os_a-onexit_table.o: misc/onexit_table.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/libarm32_libmsvcrt_os_a-onexit_table.o -MD -MP -MF misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-onexit_table.Tpo -c -o misc/libarm32_libmsvcrt_os_a-onexit_table.o `test -f 'misc/onexit_table.c' || echo '$(srcdir)/'`misc/onexit_table.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-onexit_table.Tpo misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-onexit_table.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/onexit_table.c' object='misc/libarm32_libmsvcrt_os_a-onexit_table.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/libarm32_libmsvcrt_os_a-onexit_table.o `test -f 'misc/onexit_table.c' || echo '$(srcdir)/'`misc/onexit_table.c
+
+misc/libarm32_libmsvcrt_os_a-onexit_table.obj: misc/onexit_table.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/libarm32_libmsvcrt_os_a-onexit_table.obj -MD -MP -MF misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-onexit_table.Tpo -c -o misc/libarm32_libmsvcrt_os_a-onexit_table.obj `if test -f 'misc/onexit_table.c'; then $(CYGPATH_W) 'misc/onexit_table.c'; else $(CYGPATH_W) '$(srcdir)/misc/onexit_table.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-onexit_table.Tpo misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-onexit_table.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/onexit_table.c' object='misc/libarm32_libmsvcrt_os_a-onexit_table.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/libarm32_libmsvcrt_os_a-onexit_table.obj `if test -f 'misc/onexit_table.c'; then $(CYGPATH_W) 'misc/onexit_table.c'; else $(CYGPATH_W) '$(srcdir)/misc/onexit_table.c'; fi`
 
 stdio/libarm32_libmsvcrt_os_a-acrt_iob_func.o: stdio/acrt_iob_func.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/libarm32_libmsvcrt_os_a-acrt_iob_func.o -MD -MP -MF stdio/$(DEPDIR)/libarm32_libmsvcrt_os_a-acrt_iob_func.Tpo -c -o stdio/libarm32_libmsvcrt_os_a-acrt_iob_func.o `test -f 'stdio/acrt_iob_func.c' || echo '$(srcdir)/'`stdio/acrt_iob_func.c
@@ -57077,6 +57480,20 @@ libarm64_libmoldname_a-_libm_dummy.obj: _libm_dummy.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='_libm_dummy.c' object='libarm64_libmoldname_a-_libm_dummy.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmoldname_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarm64_libmoldname_a-_libm_dummy.obj `if test -f '_libm_dummy.c'; then $(CYGPATH_W) '_libm_dummy.c'; else $(CYGPATH_W) '$(srcdir)/_libm_dummy.c'; fi`
+
+misc/libarm64_libmsvcrt_os_a-onexit_table.o: misc/onexit_table.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/libarm64_libmsvcrt_os_a-onexit_table.o -MD -MP -MF misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-onexit_table.Tpo -c -o misc/libarm64_libmsvcrt_os_a-onexit_table.o `test -f 'misc/onexit_table.c' || echo '$(srcdir)/'`misc/onexit_table.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-onexit_table.Tpo misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-onexit_table.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/onexit_table.c' object='misc/libarm64_libmsvcrt_os_a-onexit_table.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/libarm64_libmsvcrt_os_a-onexit_table.o `test -f 'misc/onexit_table.c' || echo '$(srcdir)/'`misc/onexit_table.c
+
+misc/libarm64_libmsvcrt_os_a-onexit_table.obj: misc/onexit_table.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/libarm64_libmsvcrt_os_a-onexit_table.obj -MD -MP -MF misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-onexit_table.Tpo -c -o misc/libarm64_libmsvcrt_os_a-onexit_table.obj `if test -f 'misc/onexit_table.c'; then $(CYGPATH_W) 'misc/onexit_table.c'; else $(CYGPATH_W) '$(srcdir)/misc/onexit_table.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-onexit_table.Tpo misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-onexit_table.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/onexit_table.c' object='misc/libarm64_libmsvcrt_os_a-onexit_table.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/libarm64_libmsvcrt_os_a-onexit_table.obj `if test -f 'misc/onexit_table.c'; then $(CYGPATH_W) 'misc/onexit_table.c'; else $(CYGPATH_W) '$(srcdir)/misc/onexit_table.c'; fi`
 
 stdio/libarm64_libmsvcrt_os_a-acrt_iob_func.o: stdio/acrt_iob_func.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/libarm64_libmsvcrt_os_a-acrt_iob_func.o -MD -MP -MF stdio/$(DEPDIR)/libarm64_libmsvcrt_os_a-acrt_iob_func.Tpo -c -o stdio/libarm64_libmsvcrt_os_a-acrt_iob_func.o `test -f 'stdio/acrt_iob_func.c' || echo '$(srcdir)/'`stdio/acrt_iob_func.c
