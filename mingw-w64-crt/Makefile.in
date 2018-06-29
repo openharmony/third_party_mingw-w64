@@ -8578,7 +8578,7 @@ src_intrincsarm64 =
 @LIBARM32_TRUE@	libarm32/libwiashext.a libarm32/libwiatrace.a \
 @LIBARM32_TRUE@	libarm32/libwifidisplay.a libarm32/libwimgapi.a \
 @LIBARM32_TRUE@	libarm32/libwinbici.a libarm32/libwinbio.a \
-@LIBARM32_TRUE@	libarm32/libwinbrand.a \
+@LIBARM32_TRUE@	libarm32/libwinbrand.a libarm32/libwindowsapp.a \
 @LIBARM32_TRUE@	libarm32/libwindowscodecsext.a \
 @LIBARM32_TRUE@	libarm32/libwindows.data.pdf.a \
 @LIBARM32_TRUE@	libarm32/libwindows.globalization.fontgroups.a \
@@ -8866,35 +8866,38 @@ src_intrincsarm64 =
 @LIBARM64_TRUE@	libarm64/libriched20.a libarm64/librnr20.a \
 @LIBARM64_TRUE@	libarm64/librpcns4.a libarm64/librpcrt4.a \
 @LIBARM64_TRUE@	libarm64/librpcss.a libarm64/librsaenh.a \
-@LIBARM64_TRUE@	libarm64/librtutils.a libarm64/libsamcli.a \
-@LIBARM64_TRUE@	libarm64/libscarddlg.a libarm64/libscesrv.a \
-@LIBARM64_TRUE@	libarm64/libschannel.a libarm64/libschedcli.a \
-@LIBARM64_TRUE@	libarm64/libscrobj.a libarm64/libscrrun.a \
-@LIBARM64_TRUE@	libarm64/libsdhcinst.a libarm64/libseclogon.a \
-@LIBARM64_TRUE@	libarm64/libsecur32.a libarm64/libsecurity.a \
-@LIBARM64_TRUE@	libarm64/libsensapi.a libarm64/libsens.a \
-@LIBARM64_TRUE@	libarm64/libserialui.a libarm64/libserwvdrv.a \
-@LIBARM64_TRUE@	libarm64/libshfolder.a libarm64/libshimgvw.a \
-@LIBARM64_TRUE@	libarm64/libshlwapi.a libarm64/libshsvcs.a \
-@LIBARM64_TRUE@	libarm64/libsisbkup.a libarm64/libslcext.a \
-@LIBARM64_TRUE@	libarm64/libslwga.a libarm64/libsnmpapi.a \
-@LIBARM64_TRUE@	libarm64/libsoftpub.a libarm64/libsqlsrv32.a \
-@LIBARM64_TRUE@	libarm64/libsrvcli.a libarm64/libsrvsvc.a \
-@LIBARM64_TRUE@	libarm64/libsspicli.a libarm64/libstreamci.a \
-@LIBARM64_TRUE@	libarm64/libsxs.a libarm64/libt2embed.a \
-@LIBARM64_TRUE@	libarm64/libtapi32.a libarm64/libtapiperf.a \
-@LIBARM64_TRUE@	libarm64/libtbs.a libarm64/libtdh.a \
-@LIBARM64_TRUE@	libarm64/libtraffic.a libarm64/libtsbyuv.a \
-@LIBARM64_TRUE@	libarm64/libtxfw32.a libarm64/libumdmxfrm.a \
-@LIBARM64_TRUE@	libarm64/libunimdmat.a libarm64/libuniplat.a \
-@LIBARM64_TRUE@	libarm64/libupnp.a libarm64/liburl.a \
-@LIBARM64_TRUE@	libarm64/libuser32.a libarm64/libuserenv.a \
-@LIBARM64_TRUE@	libarm64/libusp10.a libarm64/libutildll.a \
-@LIBARM64_TRUE@	libarm64/libuxtheme.a libarm64/libversion.a \
-@LIBARM64_TRUE@	libarm64/libvirtdisk.a libarm64/libw32time.a \
-@LIBARM64_TRUE@	libarm64/libw32topl.a libarm64/libwdigest.a \
-@LIBARM64_TRUE@	libarm64/libwebclnt.a libarm64/libwecapi.a \
-@LIBARM64_TRUE@	libarm64/libwevtapi.a libarm64/libwiashext.a \
+@LIBARM64_TRUE@	libarm64/librtutils.a \
+@LIBARM64_TRUE@	libarm64/libruntimeobject.a \
+@LIBARM64_TRUE@	libarm64/libsamcli.a libarm64/libscarddlg.a \
+@LIBARM64_TRUE@	libarm64/libscesrv.a libarm64/libschannel.a \
+@LIBARM64_TRUE@	libarm64/libschedcli.a libarm64/libscrobj.a \
+@LIBARM64_TRUE@	libarm64/libscrrun.a libarm64/libsdhcinst.a \
+@LIBARM64_TRUE@	libarm64/libseclogon.a libarm64/libsecur32.a \
+@LIBARM64_TRUE@	libarm64/libsecurity.a libarm64/libsensapi.a \
+@LIBARM64_TRUE@	libarm64/libsens.a libarm64/libserialui.a \
+@LIBARM64_TRUE@	libarm64/libserwvdrv.a libarm64/libshfolder.a \
+@LIBARM64_TRUE@	libarm64/libshimgvw.a libarm64/libshlwapi.a \
+@LIBARM64_TRUE@	libarm64/libshsvcs.a libarm64/libsisbkup.a \
+@LIBARM64_TRUE@	libarm64/libslcext.a libarm64/libslwga.a \
+@LIBARM64_TRUE@	libarm64/libsnmpapi.a libarm64/libsoftpub.a \
+@LIBARM64_TRUE@	libarm64/libsqlsrv32.a libarm64/libsrvcli.a \
+@LIBARM64_TRUE@	libarm64/libsrvsvc.a libarm64/libsspicli.a \
+@LIBARM64_TRUE@	libarm64/libstreamci.a libarm64/libsxs.a \
+@LIBARM64_TRUE@	libarm64/libsynchronization.a \
+@LIBARM64_TRUE@	libarm64/libt2embed.a libarm64/libtapi32.a \
+@LIBARM64_TRUE@	libarm64/libtapiperf.a libarm64/libtbs.a \
+@LIBARM64_TRUE@	libarm64/libtdh.a libarm64/libtraffic.a \
+@LIBARM64_TRUE@	libarm64/libtsbyuv.a libarm64/libtxfw32.a \
+@LIBARM64_TRUE@	libarm64/libumdmxfrm.a libarm64/libunimdmat.a \
+@LIBARM64_TRUE@	libarm64/libuniplat.a libarm64/libupnp.a \
+@LIBARM64_TRUE@	libarm64/liburl.a libarm64/libuser32.a \
+@LIBARM64_TRUE@	libarm64/libuserenv.a libarm64/libusp10.a \
+@LIBARM64_TRUE@	libarm64/libutildll.a libarm64/libuxtheme.a \
+@LIBARM64_TRUE@	libarm64/libversion.a libarm64/libvirtdisk.a \
+@LIBARM64_TRUE@	libarm64/libw32time.a libarm64/libw32topl.a \
+@LIBARM64_TRUE@	libarm64/libwdigest.a libarm64/libwebclnt.a \
+@LIBARM64_TRUE@	libarm64/libwecapi.a libarm64/libwevtapi.a \
+@LIBARM64_TRUE@	libarm64/libwiashext.a libarm64/libwindowsapp.a \
 @LIBARM64_TRUE@	libarm64/libwinhttp.a libarm64/libwininet.a \
 @LIBARM64_TRUE@	libarm64/libwinmm.a libarm64/libwinrnr.a \
 @LIBARM64_TRUE@	libarm64/libwinscard.a libarm64/libwinspool.a \
@@ -64642,6 +64645,33 @@ _libm_dummy.c:
 @LIBARM32_TRUE@	$(AR) -M < $<
 @LIBARM32_TRUE@	$(RANLIB) $@
 
+@LIBARM32_TRUE@libarm32/libwindowsapp.a: libarm32/windowsapp.mri libarm32/libapi-ms-win-core-com-l1-1-1.a libarm32/libapi-ms-win-core-com-l2-1-1.a \
+@LIBARM32_TRUE@	libarm32/libapi-ms-win-core-com-midlproxystub-l1-1-0.a libarm32/libapi-ms-win-core-datetime-l1-1-1.a libarm32/libapi-ms-win-core-datetime-l1-1-2.a \
+@LIBARM32_TRUE@	libarm32/libapi-ms-win-core-debug-l1-1-1.a libarm32/libapi-ms-win-core-delayload-l1-1-1.a libarm32/libapi-ms-win-core-errorhandling-l1-1-1.a \
+@LIBARM32_TRUE@	libarm32/libapi-ms-win-core-errorhandling-l1-1-3.a libarm32/libapi-ms-win-core-fibers-l1-1-1.a libarm32/libapi-ms-win-core-fibers-l2-1-1.a \
+@LIBARM32_TRUE@	libarm32/libapi-ms-win-core-file-ansi-l2-1-0.a libarm32/libapi-ms-win-core-file-l1-2-1.a libarm32/libapi-ms-win-core-file-l2-1-1.a \
+@LIBARM32_TRUE@	libarm32/libapi-ms-win-core-handle-l1-1-0.a libarm32/libapi-ms-win-core-heap-l1-2-0.a libarm32/libapi-ms-win-core-interlocked-l1-2-0.a \
+@LIBARM32_TRUE@	libarm32/libapi-ms-win-core-io-l1-1-1.a libarm32/libapi-ms-win-core-kernel32-legacy-l1-1-1.a libarm32/libapi-ms-win-core-largeinteger-l1-1-0.a \
+@LIBARM32_TRUE@	libarm32/libapi-ms-win-core-libraryloader-l1-2-0.a libarm32/libapi-ms-win-core-libraryloader-l2-1-0.a libarm32/libapi-ms-win-core-localization-ansi-l1-1-0.a \
+@LIBARM32_TRUE@	libarm32/libapi-ms-win-core-localization-l1-2-1.a libarm32/libapi-ms-win-core-localization-l1-2-2.a libarm32/libapi-ms-win-core-localization-l2-1-0.a \
+@LIBARM32_TRUE@	libarm32/libapi-ms-win-core-memory-l1-1-2.a libarm32/libapi-ms-win-core-memory-l1-1-3.a libarm32/libapi-ms-win-core-normalization-l1-1-0.a \
+@LIBARM32_TRUE@	libarm32/libapi-ms-win-core-processenvironment-l1-2-0.a libarm32/libapi-ms-win-core-processthreads-l1-1-2.a libarm32/libapi-ms-win-core-processthreads-l1-1-3.a \
+@LIBARM32_TRUE@	libarm32/libapi-ms-win-core-profile-l1-1-0.a libarm32/libapi-ms-win-core-realtime-l1-1-0.a libarm32/libapi-ms-win-core-realtime-l1-1-1.a \
+@LIBARM32_TRUE@	libarm32/libapi-ms-win-core-rtlsupport-l1-2-0.a libarm32/libapi-ms-win-core-string-l1-1-0.a libarm32/libapi-ms-win-core-synch-ansi-l1-1-0.a \
+@LIBARM32_TRUE@	libarm32/libapi-ms-win-core-synch-l1-2-0.a libarm32/libapi-ms-win-core-synch-l1-2-1.a libarm32/libapi-ms-win-core-sysinfo-l1-2-1.a \
+@LIBARM32_TRUE@	libarm32/libapi-ms-win-core-sysinfo-l1-2-3.a libarm32/libapi-ms-win-core-threadpool-l1-2-0.a libarm32/libapi-ms-win-core-timezone-l1-1-0.a \
+@LIBARM32_TRUE@	libarm32/libapi-ms-win-core-util-l1-1-0.a libarm32/libapi-ms-win-core-windowsceip-l1-1-0.a libarm32/libapi-ms-win-core-windowserrorreporting-l1-1-0.a \
+@LIBARM32_TRUE@	libarm32/libapi-ms-win-core-winrt-error-l1-1-1.a libarm32/libapi-ms-win-core-winrt-l1-1-0.a libarm32/libapi-ms-win-core-winrt-registration-l1-1-0.a \
+@LIBARM32_TRUE@	libarm32/libapi-ms-win-core-winrt-robuffer-l1-1-0.a libarm32/libapi-ms-win-core-winrt-roparameterizediid-l1-1-0.a libarm32/libapi-ms-win-core-winrt-string-l1-1-0.a \
+@LIBARM32_TRUE@	libarm32/libapi-ms-win-core-xstate-l2-1-0.a libarm32/libapi-ms-win-eventing-classicprovider-l1-1-0.a libarm32/libapi-ms-win-eventing-consumer-l1-1-0.a \
+@LIBARM32_TRUE@	libarm32/libapi-ms-win-eventing-controller-l1-1-0.a libarm32/libapi-ms-win-eventing-legacy-l1-1-0.a libarm32/libapi-ms-win-eventing-provider-l1-1-0.a \
+@LIBARM32_TRUE@	libarm32/libapi-ms-win-gaming-tcui-l1-1-0.a libarm32/libapi-ms-win-ro-typeresolution-l1-1-0.a libarm32/libapi-ms-win-security-cryptoapi-l1-1-0.a \
+@LIBARM32_TRUE@	libarm32/libapi-ms-win-shcore-stream-winrt-l1-1-0.a
+
+@LIBARM32_TRUE@	rm -f $@
+@LIBARM32_TRUE@	$(AR) -M < $<
+@LIBARM32_TRUE@	$(RANLIB) $@
+
 @LIBARM32_TRUE@libarm32/libucrt.a: libarm32/ucrt.mri libarm32/libucrt_extra.a \
 @LIBARM32_TRUE@		libarm32/libapi-ms-win-crt-conio-l1-1-0.a libarm32/libapi-ms-win-crt-convert-l1-1-0.a libarm32/libapi-ms-win-crt-environment-l1-1-0.a \
 @LIBARM32_TRUE@		libarm32/libapi-ms-win-crt-filesystem-l1-1-0.a libarm32/libapi-ms-win-crt-heap-l1-1-0.a libarm32/libapi-ms-win-crt-locale-l1-1-0.a \
@@ -64703,6 +64733,33 @@ _libm_dummy.c:
 @LIBARM64_TRUE@	$(RANLIB) $@
 
 @LIBARM64_TRUE@libarm64/libsynchronization.a: libarm64/synchronization.mri libarm64/libapi-ms-win-core-synch-l1-2-0.a
+@LIBARM64_TRUE@	rm -f $@
+@LIBARM64_TRUE@	$(AR) -M < $<
+@LIBARM64_TRUE@	$(RANLIB) $@
+
+@LIBARM64_TRUE@libarm64/libwindowsapp.a: libarm64/windowsapp.mri libarm64/libapi-ms-win-core-com-l1-1-1.a libarm64/libapi-ms-win-core-com-l2-1-1.a \
+@LIBARM64_TRUE@	libarm64/libapi-ms-win-core-com-midlproxystub-l1-1-0.a libarm64/libapi-ms-win-core-datetime-l1-1-1.a libarm64/libapi-ms-win-core-datetime-l1-1-2.a \
+@LIBARM64_TRUE@	libarm64/libapi-ms-win-core-debug-l1-1-1.a libarm64/libapi-ms-win-core-delayload-l1-1-1.a libarm64/libapi-ms-win-core-errorhandling-l1-1-1.a \
+@LIBARM64_TRUE@	libarm64/libapi-ms-win-core-errorhandling-l1-1-3.a libarm64/libapi-ms-win-core-fibers-l1-1-1.a libarm64/libapi-ms-win-core-fibers-l2-1-1.a \
+@LIBARM64_TRUE@	libarm64/libapi-ms-win-core-file-ansi-l2-1-0.a libarm64/libapi-ms-win-core-file-l1-2-1.a libarm64/libapi-ms-win-core-file-l2-1-1.a \
+@LIBARM64_TRUE@	libarm64/libapi-ms-win-core-handle-l1-1-0.a libarm64/libapi-ms-win-core-heap-l1-2-0.a libarm64/libapi-ms-win-core-interlocked-l1-2-0.a \
+@LIBARM64_TRUE@	libarm64/libapi-ms-win-core-io-l1-1-1.a libarm64/libapi-ms-win-core-kernel32-legacy-l1-1-1.a libarm64/libapi-ms-win-core-largeinteger-l1-1-0.a \
+@LIBARM64_TRUE@	libarm64/libapi-ms-win-core-libraryloader-l1-2-0.a libarm64/libapi-ms-win-core-libraryloader-l2-1-0.a libarm64/libapi-ms-win-core-localization-ansi-l1-1-0.a \
+@LIBARM64_TRUE@	libarm64/libapi-ms-win-core-localization-l1-2-1.a libarm64/libapi-ms-win-core-localization-l1-2-2.a libarm64/libapi-ms-win-core-localization-l2-1-0.a \
+@LIBARM64_TRUE@	libarm64/libapi-ms-win-core-memory-l1-1-2.a libarm64/libapi-ms-win-core-memory-l1-1-3.a libarm64/libapi-ms-win-core-normalization-l1-1-0.a \
+@LIBARM64_TRUE@	libarm64/libapi-ms-win-core-processenvironment-l1-2-0.a libarm64/libapi-ms-win-core-processthreads-l1-1-2.a libarm64/libapi-ms-win-core-processthreads-l1-1-3.a \
+@LIBARM64_TRUE@	libarm64/libapi-ms-win-core-profile-l1-1-0.a libarm64/libapi-ms-win-core-realtime-l1-1-0.a libarm64/libapi-ms-win-core-realtime-l1-1-1.a \
+@LIBARM64_TRUE@	libarm64/libapi-ms-win-core-rtlsupport-l1-2-0.a libarm64/libapi-ms-win-core-string-l1-1-0.a libarm64/libapi-ms-win-core-synch-ansi-l1-1-0.a \
+@LIBARM64_TRUE@	libarm64/libapi-ms-win-core-synch-l1-2-0.a libarm64/libapi-ms-win-core-synch-l1-2-1.a libarm64/libapi-ms-win-core-sysinfo-l1-2-1.a \
+@LIBARM64_TRUE@	libarm64/libapi-ms-win-core-sysinfo-l1-2-3.a libarm64/libapi-ms-win-core-threadpool-l1-2-0.a libarm64/libapi-ms-win-core-timezone-l1-1-0.a \
+@LIBARM64_TRUE@	libarm64/libapi-ms-win-core-util-l1-1-0.a libarm64/libapi-ms-win-core-windowsceip-l1-1-0.a libarm64/libapi-ms-win-core-windowserrorreporting-l1-1-0.a \
+@LIBARM64_TRUE@	libarm64/libapi-ms-win-core-winrt-error-l1-1-1.a libarm64/libapi-ms-win-core-winrt-l1-1-0.a libarm64/libapi-ms-win-core-winrt-registration-l1-1-0.a \
+@LIBARM64_TRUE@	libarm64/libapi-ms-win-core-winrt-robuffer-l1-1-0.a libarm64/libapi-ms-win-core-winrt-roparameterizediid-l1-1-0.a libarm64/libapi-ms-win-core-winrt-string-l1-1-0.a \
+@LIBARM64_TRUE@	libarm64/libapi-ms-win-core-xstate-l2-1-0.a libarm64/libapi-ms-win-eventing-classicprovider-l1-1-0.a libarm64/libapi-ms-win-eventing-consumer-l1-1-0.a \
+@LIBARM64_TRUE@	libarm64/libapi-ms-win-eventing-controller-l1-1-0.a libarm64/libapi-ms-win-eventing-legacy-l1-1-0.a libarm64/libapi-ms-win-eventing-provider-l1-1-0.a \
+@LIBARM64_TRUE@	libarm64/libapi-ms-win-gaming-tcui-l1-1-0.a libarm64/libapi-ms-win-ro-typeresolution-l1-1-0.a libarm64/libapi-ms-win-security-cryptoapi-l1-1-0.a \
+@LIBARM64_TRUE@	libarm64/libapi-ms-win-shcore-stream-winrt-l1-1-0.a
+
 @LIBARM64_TRUE@	rm -f $@
 @LIBARM64_TRUE@	$(AR) -M < $<
 @LIBARM64_TRUE@	$(RANLIB) $@
