@@ -692,18 +692,18 @@ am__lib32_libmingwex_a_SOURCES_DIST = crt/dllentry.c crt/dllmain.c \
 	math/powi.def.h math/sqrt.def.h math/cephes_emath.h \
 	math/cephes_mconf.h math/fp_consts.h math/abs64.c \
 	misc/mb_wc_common.h misc/mingw_getsp.S misc/alarm.c \
-	misc/basename.c misc/btowc.c misc/delay-f.c misc/delay-n.c \
-	misc/delayimp.c misc/difftime.c misc/difftime32.c \
-	misc/difftime64.c misc/dirent.c misc/dirname.c misc/execv.c \
-	misc/execve.c misc/execvp.c misc/execvpe.c \
-	misc/feclearexcept.c misc/fegetenv.c misc/fegetexceptflag.c \
-	misc/fegetround.c misc/feholdexcept.c misc/feraiseexcept.c \
-	misc/fesetenv.c misc/fesetexceptflag.c misc/fesetround.c \
-	misc/fetestexcept.c misc/feupdateenv.c misc/ftruncate.c \
-	misc/fwide.c misc/getlogin.c misc/getopt.c misc/gettimeofday.c \
-	misc/imaxabs.c misc/imaxdiv.c misc/isblank.c misc/iswblank.c \
-	misc/mbrtowc.c misc/mbsinit.c misc/mempcpy.c \
-	misc/mingw-aligned-malloc.c misc/mingw-fseek.c \
+	misc/assert.c misc/basename.c misc/btowc.c misc/delay-f.c \
+	misc/delay-n.c misc/delayimp.c misc/difftime.c \
+	misc/difftime32.c misc/difftime64.c misc/dirent.c \
+	misc/dirname.c misc/execv.c misc/execve.c misc/execvp.c \
+	misc/execvpe.c misc/feclearexcept.c misc/fegetenv.c \
+	misc/fegetexceptflag.c misc/fegetround.c misc/feholdexcept.c \
+	misc/feraiseexcept.c misc/fesetenv.c misc/fesetexceptflag.c \
+	misc/fesetround.c misc/fetestexcept.c misc/feupdateenv.c \
+	misc/ftruncate.c misc/fwide.c misc/getlogin.c misc/getopt.c \
+	misc/gettimeofday.c misc/imaxabs.c misc/imaxdiv.c \
+	misc/isblank.c misc/iswblank.c misc/mbrtowc.c misc/mbsinit.c \
+	misc/mempcpy.c misc/mingw-aligned-malloc.c misc/mingw-fseek.c \
 	misc/mingw_matherr.c misc/mingw_mbwc_convert.c \
 	misc/mingw_usleep.c misc/mingw_wcstod.c misc/mingw_wcstof.c \
 	misc/mingw_wcstold.c misc/mkstemp.c misc/seterrno.c \
@@ -953,6 +953,7 @@ am__objects_19 = crt/lib32_libmingwex_a-dllentry.$(OBJEXT) \
 	math/lib32_libmingwex_a-abs64.$(OBJEXT) \
 	misc/lib32_libmingwex_a-mingw_getsp.$(OBJEXT) \
 	misc/lib32_libmingwex_a-alarm.$(OBJEXT) \
+	misc/lib32_libmingwex_a-assert.$(OBJEXT) \
 	misc/lib32_libmingwex_a-basename.$(OBJEXT) \
 	misc/lib32_libmingwex_a-btowc.$(OBJEXT) \
 	misc/lib32_libmingwex_a-delay-f.$(OBJEXT) \
@@ -1994,18 +1995,18 @@ am__lib64_libmingwex_a_SOURCES_DIST = crt/dllentry.c crt/dllmain.c \
 	math/powi.def.h math/sqrt.def.h math/cephes_emath.h \
 	math/cephes_mconf.h math/fp_consts.h math/abs64.c \
 	misc/mb_wc_common.h misc/mingw_getsp.S misc/alarm.c \
-	misc/basename.c misc/btowc.c misc/delay-f.c misc/delay-n.c \
-	misc/delayimp.c misc/difftime.c misc/difftime32.c \
-	misc/difftime64.c misc/dirent.c misc/dirname.c misc/execv.c \
-	misc/execve.c misc/execvp.c misc/execvpe.c \
-	misc/feclearexcept.c misc/fegetenv.c misc/fegetexceptflag.c \
-	misc/fegetround.c misc/feholdexcept.c misc/feraiseexcept.c \
-	misc/fesetenv.c misc/fesetexceptflag.c misc/fesetround.c \
-	misc/fetestexcept.c misc/feupdateenv.c misc/ftruncate.c \
-	misc/fwide.c misc/getlogin.c misc/getopt.c misc/gettimeofday.c \
-	misc/imaxabs.c misc/imaxdiv.c misc/isblank.c misc/iswblank.c \
-	misc/mbrtowc.c misc/mbsinit.c misc/mempcpy.c \
-	misc/mingw-aligned-malloc.c misc/mingw-fseek.c \
+	misc/assert.c misc/basename.c misc/btowc.c misc/delay-f.c \
+	misc/delay-n.c misc/delayimp.c misc/difftime.c \
+	misc/difftime32.c misc/difftime64.c misc/dirent.c \
+	misc/dirname.c misc/execv.c misc/execve.c misc/execvp.c \
+	misc/execvpe.c misc/feclearexcept.c misc/fegetenv.c \
+	misc/fegetexceptflag.c misc/fegetround.c misc/feholdexcept.c \
+	misc/feraiseexcept.c misc/fesetenv.c misc/fesetexceptflag.c \
+	misc/fesetround.c misc/fetestexcept.c misc/feupdateenv.c \
+	misc/ftruncate.c misc/fwide.c misc/getlogin.c misc/getopt.c \
+	misc/gettimeofday.c misc/imaxabs.c misc/imaxdiv.c \
+	misc/isblank.c misc/iswblank.c misc/mbrtowc.c misc/mbsinit.c \
+	misc/mempcpy.c misc/mingw-aligned-malloc.c misc/mingw-fseek.c \
 	misc/mingw_matherr.c misc/mingw_mbwc_convert.c \
 	misc/mingw_usleep.c misc/mingw_wcstod.c misc/mingw_wcstof.c \
 	misc/mingw_wcstold.c misc/mkstemp.c misc/seterrno.c \
@@ -2255,6 +2256,7 @@ am__objects_69 = crt/lib64_libmingwex_a-dllentry.$(OBJEXT) \
 	math/lib64_libmingwex_a-abs64.$(OBJEXT) \
 	misc/lib64_libmingwex_a-mingw_getsp.$(OBJEXT) \
 	misc/lib64_libmingwex_a-alarm.$(OBJEXT) \
+	misc/lib64_libmingwex_a-assert.$(OBJEXT) \
 	misc/lib64_libmingwex_a-basename.$(OBJEXT) \
 	misc/lib64_libmingwex_a-btowc.$(OBJEXT) \
 	misc/lib64_libmingwex_a-delay-f.$(OBJEXT) \
@@ -3228,18 +3230,18 @@ am__libarm32_libmingwex_a_SOURCES_DIST = crt/dllentry.c crt/dllmain.c \
 	math/powi.def.h math/sqrt.def.h math/cephes_emath.h \
 	math/cephes_mconf.h math/fp_consts.h math/abs64.c \
 	misc/mb_wc_common.h misc/mingw_getsp.S misc/alarm.c \
-	misc/basename.c misc/btowc.c misc/delay-f.c misc/delay-n.c \
-	misc/delayimp.c misc/difftime.c misc/difftime32.c \
-	misc/difftime64.c misc/dirent.c misc/dirname.c misc/execv.c \
-	misc/execve.c misc/execvp.c misc/execvpe.c \
-	misc/feclearexcept.c misc/fegetenv.c misc/fegetexceptflag.c \
-	misc/fegetround.c misc/feholdexcept.c misc/feraiseexcept.c \
-	misc/fesetenv.c misc/fesetexceptflag.c misc/fesetround.c \
-	misc/fetestexcept.c misc/feupdateenv.c misc/ftruncate.c \
-	misc/fwide.c misc/getlogin.c misc/getopt.c misc/gettimeofday.c \
-	misc/imaxabs.c misc/imaxdiv.c misc/isblank.c misc/iswblank.c \
-	misc/mbrtowc.c misc/mbsinit.c misc/mempcpy.c \
-	misc/mingw-aligned-malloc.c misc/mingw-fseek.c \
+	misc/assert.c misc/basename.c misc/btowc.c misc/delay-f.c \
+	misc/delay-n.c misc/delayimp.c misc/difftime.c \
+	misc/difftime32.c misc/difftime64.c misc/dirent.c \
+	misc/dirname.c misc/execv.c misc/execve.c misc/execvp.c \
+	misc/execvpe.c misc/feclearexcept.c misc/fegetenv.c \
+	misc/fegetexceptflag.c misc/fegetround.c misc/feholdexcept.c \
+	misc/feraiseexcept.c misc/fesetenv.c misc/fesetexceptflag.c \
+	misc/fesetround.c misc/fetestexcept.c misc/feupdateenv.c \
+	misc/ftruncate.c misc/fwide.c misc/getlogin.c misc/getopt.c \
+	misc/gettimeofday.c misc/imaxabs.c misc/imaxdiv.c \
+	misc/isblank.c misc/iswblank.c misc/mbrtowc.c misc/mbsinit.c \
+	misc/mempcpy.c misc/mingw-aligned-malloc.c misc/mingw-fseek.c \
 	misc/mingw_matherr.c misc/mingw_mbwc_convert.c \
 	misc/mingw_usleep.c misc/mingw_wcstod.c misc/mingw_wcstof.c \
 	misc/mingw_wcstold.c misc/mkstemp.c misc/seterrno.c \
@@ -3499,6 +3501,7 @@ am__objects_116 = crt/libarm32_libmingwex_a-dllentry.$(OBJEXT) \
 	math/libarm32_libmingwex_a-abs64.$(OBJEXT) \
 	misc/libarm32_libmingwex_a-mingw_getsp.$(OBJEXT) \
 	misc/libarm32_libmingwex_a-alarm.$(OBJEXT) \
+	misc/libarm32_libmingwex_a-assert.$(OBJEXT) \
 	misc/libarm32_libmingwex_a-basename.$(OBJEXT) \
 	misc/libarm32_libmingwex_a-btowc.$(OBJEXT) \
 	misc/libarm32_libmingwex_a-delay-f.$(OBJEXT) \
@@ -4422,18 +4425,18 @@ am__libarm64_libmingwex_a_SOURCES_DIST = crt/dllentry.c crt/dllmain.c \
 	math/powi.def.h math/sqrt.def.h math/cephes_emath.h \
 	math/cephes_mconf.h math/fp_consts.h math/abs64.c \
 	misc/mb_wc_common.h misc/mingw_getsp.S misc/alarm.c \
-	misc/basename.c misc/btowc.c misc/delay-f.c misc/delay-n.c \
-	misc/delayimp.c misc/difftime.c misc/difftime32.c \
-	misc/difftime64.c misc/dirent.c misc/dirname.c misc/execv.c \
-	misc/execve.c misc/execvp.c misc/execvpe.c \
-	misc/feclearexcept.c misc/fegetenv.c misc/fegetexceptflag.c \
-	misc/fegetround.c misc/feholdexcept.c misc/feraiseexcept.c \
-	misc/fesetenv.c misc/fesetexceptflag.c misc/fesetround.c \
-	misc/fetestexcept.c misc/feupdateenv.c misc/ftruncate.c \
-	misc/fwide.c misc/getlogin.c misc/getopt.c misc/gettimeofday.c \
-	misc/imaxabs.c misc/imaxdiv.c misc/isblank.c misc/iswblank.c \
-	misc/mbrtowc.c misc/mbsinit.c misc/mempcpy.c \
-	misc/mingw-aligned-malloc.c misc/mingw-fseek.c \
+	misc/assert.c misc/basename.c misc/btowc.c misc/delay-f.c \
+	misc/delay-n.c misc/delayimp.c misc/difftime.c \
+	misc/difftime32.c misc/difftime64.c misc/dirent.c \
+	misc/dirname.c misc/execv.c misc/execve.c misc/execvp.c \
+	misc/execvpe.c misc/feclearexcept.c misc/fegetenv.c \
+	misc/fegetexceptflag.c misc/fegetround.c misc/feholdexcept.c \
+	misc/feraiseexcept.c misc/fesetenv.c misc/fesetexceptflag.c \
+	misc/fesetround.c misc/fetestexcept.c misc/feupdateenv.c \
+	misc/ftruncate.c misc/fwide.c misc/getlogin.c misc/getopt.c \
+	misc/gettimeofday.c misc/imaxabs.c misc/imaxdiv.c \
+	misc/isblank.c misc/iswblank.c misc/mbrtowc.c misc/mbsinit.c \
+	misc/mempcpy.c misc/mingw-aligned-malloc.c misc/mingw-fseek.c \
 	misc/mingw_matherr.c misc/mingw_mbwc_convert.c \
 	misc/mingw_usleep.c misc/mingw_wcstod.c misc/mingw_wcstof.c \
 	misc/mingw_wcstold.c misc/mkstemp.c misc/seterrno.c \
@@ -4660,6 +4663,7 @@ am__objects_155 = crt/libarm64_libmingwex_a-dllentry.$(OBJEXT) \
 	math/libarm64_libmingwex_a-abs64.$(OBJEXT) \
 	misc/libarm64_libmingwex_a-mingw_getsp.$(OBJEXT) \
 	misc/libarm64_libmingwex_a-alarm.$(OBJEXT) \
+	misc/libarm64_libmingwex_a-assert.$(OBJEXT) \
 	misc/libarm64_libmingwex_a-basename.$(OBJEXT) \
 	misc/libarm64_libmingwex_a-btowc.$(OBJEXT) \
 	misc/libarm64_libmingwex_a-delay-f.$(OBJEXT) \
@@ -6977,7 +6981,8 @@ src_libmingwex = \
   \
   misc/mb_wc_common.h \
   misc/mingw_getsp.S \
-  misc/alarm.c           misc/basename.c            misc/btowc.c            misc/delay-f.c               misc/delay-n.c         \
+  misc/alarm.c \
+  misc/assert.c          misc/basename.c            misc/btowc.c            misc/delay-f.c               misc/delay-n.c         \
   misc/delayimp.c        misc/difftime.c            misc/difftime32.c       misc/difftime64.c            misc/dirent.c          \
   misc/dirname.c         misc/execv.c               misc/execve.c           misc/execvp.c                misc/execvpe.c         \
   misc/feclearexcept.c   misc/fegetenv.c            misc/fegetexceptflag.c  misc/fegetround.c            misc/feholdexcept.c    \
@@ -10269,6 +10274,8 @@ misc/lib32_libmingwex_a-mingw_getsp.$(OBJEXT): misc/$(am__dirstamp) \
 	misc/$(DEPDIR)/$(am__dirstamp)
 misc/lib32_libmingwex_a-alarm.$(OBJEXT): misc/$(am__dirstamp) \
 	misc/$(DEPDIR)/$(am__dirstamp)
+misc/lib32_libmingwex_a-assert.$(OBJEXT): misc/$(am__dirstamp) \
+	misc/$(DEPDIR)/$(am__dirstamp)
 misc/lib32_libmingwex_a-basename.$(OBJEXT): misc/$(am__dirstamp) \
 	misc/$(DEPDIR)/$(am__dirstamp)
 misc/lib32_libmingwex_a-btowc.$(OBJEXT): misc/$(am__dirstamp) \
@@ -12102,6 +12109,8 @@ misc/lib64_libmingwex_a-mingw_getsp.$(OBJEXT): misc/$(am__dirstamp) \
 	misc/$(DEPDIR)/$(am__dirstamp)
 misc/lib64_libmingwex_a-alarm.$(OBJEXT): misc/$(am__dirstamp) \
 	misc/$(DEPDIR)/$(am__dirstamp)
+misc/lib64_libmingwex_a-assert.$(OBJEXT): misc/$(am__dirstamp) \
+	misc/$(DEPDIR)/$(am__dirstamp)
 misc/lib64_libmingwex_a-basename.$(OBJEXT): misc/$(am__dirstamp) \
 	misc/$(DEPDIR)/$(am__dirstamp)
 misc/lib64_libmingwex_a-btowc.$(OBJEXT): misc/$(am__dirstamp) \
@@ -13806,6 +13815,8 @@ math/libarm32_libmingwex_a-abs64.$(OBJEXT): math/$(am__dirstamp) \
 misc/libarm32_libmingwex_a-mingw_getsp.$(OBJEXT):  \
 	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 misc/libarm32_libmingwex_a-alarm.$(OBJEXT): misc/$(am__dirstamp) \
+	misc/$(DEPDIR)/$(am__dirstamp)
+misc/libarm32_libmingwex_a-assert.$(OBJEXT): misc/$(am__dirstamp) \
 	misc/$(DEPDIR)/$(am__dirstamp)
 misc/libarm32_libmingwex_a-basename.$(OBJEXT): misc/$(am__dirstamp) \
 	misc/$(DEPDIR)/$(am__dirstamp)
@@ -15529,6 +15540,8 @@ math/libarm64_libmingwex_a-abs64.$(OBJEXT): math/$(am__dirstamp) \
 misc/libarm64_libmingwex_a-mingw_getsp.$(OBJEXT):  \
 	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 misc/libarm64_libmingwex_a-alarm.$(OBJEXT): misc/$(am__dirstamp) \
+	misc/$(DEPDIR)/$(am__dirstamp)
+misc/libarm64_libmingwex_a-assert.$(OBJEXT): misc/$(am__dirstamp) \
 	misc/$(DEPDIR)/$(am__dirstamp)
 misc/libarm64_libmingwex_a-basename.$(OBJEXT): misc/$(am__dirstamp) \
 	misc/$(DEPDIR)/$(am__dirstamp)
@@ -19200,6 +19213,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@math/x86/$(DEPDIR)/lib64_libmingwex_a-truncf.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libcrtdll_a-onexit_table.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmingwex_a-alarm.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmingwex_a-assert.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmingwex_a-basename.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmingwex_a-btowc.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmingwex_a-delay-f.Po@am__quote@
@@ -19305,6 +19319,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmsvcrt_os_a-purecall.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libcrtdll_a-onexit_table.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmingwex_a-alarm.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmingwex_a-assert.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmingwex_a-basename.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmingwex_a-btowc.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmingwex_a-delay-f.Po@am__quote@
@@ -19416,6 +19431,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmsvcrt_os_a-output_format.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmsvcrt_os_a-purecall.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm32_libmingwex_a-alarm.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm32_libmingwex_a-assert.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm32_libmingwex_a-basename.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm32_libmingwex_a-btowc.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm32_libmingwex_a-delay-f.Po@am__quote@
@@ -19516,6 +19532,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-output_format.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-purecall.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm64_libmingwex_a-alarm.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm64_libmingwex_a-assert.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm64_libmingwex_a-basename.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm64_libmingwex_a-btowc.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm64_libmingwex_a-delay-f.Po@am__quote@
@@ -26548,6 +26565,20 @@ misc/lib32_libmingwex_a-alarm.obj: misc/alarm.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/alarm.c' object='misc/lib32_libmingwex_a-alarm.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib32_libmingwex_a-alarm.obj `if test -f 'misc/alarm.c'; then $(CYGPATH_W) 'misc/alarm.c'; else $(CYGPATH_W) '$(srcdir)/misc/alarm.c'; fi`
+
+misc/lib32_libmingwex_a-assert.o: misc/assert.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libmingwex_a-assert.o -MD -MP -MF misc/$(DEPDIR)/lib32_libmingwex_a-assert.Tpo -c -o misc/lib32_libmingwex_a-assert.o `test -f 'misc/assert.c' || echo '$(srcdir)/'`misc/assert.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libmingwex_a-assert.Tpo misc/$(DEPDIR)/lib32_libmingwex_a-assert.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/assert.c' object='misc/lib32_libmingwex_a-assert.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib32_libmingwex_a-assert.o `test -f 'misc/assert.c' || echo '$(srcdir)/'`misc/assert.c
+
+misc/lib32_libmingwex_a-assert.obj: misc/assert.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libmingwex_a-assert.obj -MD -MP -MF misc/$(DEPDIR)/lib32_libmingwex_a-assert.Tpo -c -o misc/lib32_libmingwex_a-assert.obj `if test -f 'misc/assert.c'; then $(CYGPATH_W) 'misc/assert.c'; else $(CYGPATH_W) '$(srcdir)/misc/assert.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libmingwex_a-assert.Tpo misc/$(DEPDIR)/lib32_libmingwex_a-assert.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/assert.c' object='misc/lib32_libmingwex_a-assert.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib32_libmingwex_a-assert.obj `if test -f 'misc/assert.c'; then $(CYGPATH_W) 'misc/assert.c'; else $(CYGPATH_W) '$(srcdir)/misc/assert.c'; fi`
 
 misc/lib32_libmingwex_a-basename.o: misc/basename.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libmingwex_a-basename.o -MD -MP -MF misc/$(DEPDIR)/lib32_libmingwex_a-basename.Tpo -c -o misc/lib32_libmingwex_a-basename.o `test -f 'misc/basename.c' || echo '$(srcdir)/'`misc/basename.c
@@ -36573,6 +36604,20 @@ misc/lib64_libmingwex_a-alarm.obj: misc/alarm.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib64_libmingwex_a-alarm.obj `if test -f 'misc/alarm.c'; then $(CYGPATH_W) 'misc/alarm.c'; else $(CYGPATH_W) '$(srcdir)/misc/alarm.c'; fi`
 
+misc/lib64_libmingwex_a-assert.o: misc/assert.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib64_libmingwex_a-assert.o -MD -MP -MF misc/$(DEPDIR)/lib64_libmingwex_a-assert.Tpo -c -o misc/lib64_libmingwex_a-assert.o `test -f 'misc/assert.c' || echo '$(srcdir)/'`misc/assert.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib64_libmingwex_a-assert.Tpo misc/$(DEPDIR)/lib64_libmingwex_a-assert.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/assert.c' object='misc/lib64_libmingwex_a-assert.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib64_libmingwex_a-assert.o `test -f 'misc/assert.c' || echo '$(srcdir)/'`misc/assert.c
+
+misc/lib64_libmingwex_a-assert.obj: misc/assert.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib64_libmingwex_a-assert.obj -MD -MP -MF misc/$(DEPDIR)/lib64_libmingwex_a-assert.Tpo -c -o misc/lib64_libmingwex_a-assert.obj `if test -f 'misc/assert.c'; then $(CYGPATH_W) 'misc/assert.c'; else $(CYGPATH_W) '$(srcdir)/misc/assert.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib64_libmingwex_a-assert.Tpo misc/$(DEPDIR)/lib64_libmingwex_a-assert.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/assert.c' object='misc/lib64_libmingwex_a-assert.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib64_libmingwex_a-assert.obj `if test -f 'misc/assert.c'; then $(CYGPATH_W) 'misc/assert.c'; else $(CYGPATH_W) '$(srcdir)/misc/assert.c'; fi`
+
 misc/lib64_libmingwex_a-basename.o: misc/basename.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib64_libmingwex_a-basename.o -MD -MP -MF misc/$(DEPDIR)/lib64_libmingwex_a-basename.Tpo -c -o misc/lib64_libmingwex_a-basename.o `test -f 'misc/basename.c' || echo '$(srcdir)/'`misc/basename.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib64_libmingwex_a-basename.Tpo misc/$(DEPDIR)/lib64_libmingwex_a-basename.Po
@@ -46064,6 +46109,20 @@ misc/libarm32_libmingwex_a-alarm.obj: misc/alarm.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/alarm.c' object='misc/libarm32_libmingwex_a-alarm.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/libarm32_libmingwex_a-alarm.obj `if test -f 'misc/alarm.c'; then $(CYGPATH_W) 'misc/alarm.c'; else $(CYGPATH_W) '$(srcdir)/misc/alarm.c'; fi`
+
+misc/libarm32_libmingwex_a-assert.o: misc/assert.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/libarm32_libmingwex_a-assert.o -MD -MP -MF misc/$(DEPDIR)/libarm32_libmingwex_a-assert.Tpo -c -o misc/libarm32_libmingwex_a-assert.o `test -f 'misc/assert.c' || echo '$(srcdir)/'`misc/assert.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/libarm32_libmingwex_a-assert.Tpo misc/$(DEPDIR)/libarm32_libmingwex_a-assert.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/assert.c' object='misc/libarm32_libmingwex_a-assert.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/libarm32_libmingwex_a-assert.o `test -f 'misc/assert.c' || echo '$(srcdir)/'`misc/assert.c
+
+misc/libarm32_libmingwex_a-assert.obj: misc/assert.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/libarm32_libmingwex_a-assert.obj -MD -MP -MF misc/$(DEPDIR)/libarm32_libmingwex_a-assert.Tpo -c -o misc/libarm32_libmingwex_a-assert.obj `if test -f 'misc/assert.c'; then $(CYGPATH_W) 'misc/assert.c'; else $(CYGPATH_W) '$(srcdir)/misc/assert.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/libarm32_libmingwex_a-assert.Tpo misc/$(DEPDIR)/libarm32_libmingwex_a-assert.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/assert.c' object='misc/libarm32_libmingwex_a-assert.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/libarm32_libmingwex_a-assert.obj `if test -f 'misc/assert.c'; then $(CYGPATH_W) 'misc/assert.c'; else $(CYGPATH_W) '$(srcdir)/misc/assert.c'; fi`
 
 misc/libarm32_libmingwex_a-basename.o: misc/basename.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/libarm32_libmingwex_a-basename.o -MD -MP -MF misc/$(DEPDIR)/libarm32_libmingwex_a-basename.Tpo -c -o misc/libarm32_libmingwex_a-basename.o `test -f 'misc/basename.c' || echo '$(srcdir)/'`misc/basename.c
@@ -55766,6 +55825,20 @@ misc/libarm64_libmingwex_a-alarm.obj: misc/alarm.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/alarm.c' object='misc/libarm64_libmingwex_a-alarm.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/libarm64_libmingwex_a-alarm.obj `if test -f 'misc/alarm.c'; then $(CYGPATH_W) 'misc/alarm.c'; else $(CYGPATH_W) '$(srcdir)/misc/alarm.c'; fi`
+
+misc/libarm64_libmingwex_a-assert.o: misc/assert.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/libarm64_libmingwex_a-assert.o -MD -MP -MF misc/$(DEPDIR)/libarm64_libmingwex_a-assert.Tpo -c -o misc/libarm64_libmingwex_a-assert.o `test -f 'misc/assert.c' || echo '$(srcdir)/'`misc/assert.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/libarm64_libmingwex_a-assert.Tpo misc/$(DEPDIR)/libarm64_libmingwex_a-assert.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/assert.c' object='misc/libarm64_libmingwex_a-assert.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/libarm64_libmingwex_a-assert.o `test -f 'misc/assert.c' || echo '$(srcdir)/'`misc/assert.c
+
+misc/libarm64_libmingwex_a-assert.obj: misc/assert.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/libarm64_libmingwex_a-assert.obj -MD -MP -MF misc/$(DEPDIR)/libarm64_libmingwex_a-assert.Tpo -c -o misc/libarm64_libmingwex_a-assert.obj `if test -f 'misc/assert.c'; then $(CYGPATH_W) 'misc/assert.c'; else $(CYGPATH_W) '$(srcdir)/misc/assert.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/libarm64_libmingwex_a-assert.Tpo misc/$(DEPDIR)/libarm64_libmingwex_a-assert.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/assert.c' object='misc/libarm64_libmingwex_a-assert.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/libarm64_libmingwex_a-assert.obj `if test -f 'misc/assert.c'; then $(CYGPATH_W) 'misc/assert.c'; else $(CYGPATH_W) '$(srcdir)/misc/assert.c'; fi`
 
 misc/libarm64_libmingwex_a-basename.o: misc/basename.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/libarm64_libmingwex_a-basename.o -MD -MP -MF misc/$(DEPDIR)/libarm64_libmingwex_a-basename.Tpo -c -o misc/libarm64_libmingwex_a-basename.o `test -f 'misc/basename.c' || echo '$(srcdir)/'`misc/basename.c
