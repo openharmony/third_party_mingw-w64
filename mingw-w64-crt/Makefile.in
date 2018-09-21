@@ -64998,15 +64998,6 @@ _libm_dummy.c:
 @LIB32_TRUE@lib32/lib%.a: lib-common/%.def
 @LIB32_TRUE@	$(DTDEF32) $<
 
-# libvfw32.a contains import stubs for 3 dll's.  Using an MRI script
-# seems to be the simplest way to combine them into one archive.
-# NB: With older dlltool, the object file members will not have unique
-# names.
-@LIB32_TRUE@lib32/libvfw32.a: lib32/vfw32.mri lib32/libmsvfw32.a lib32/libavifil32.a lib32/libavicap32.a
-@LIB32_TRUE@	rm -f $@
-@LIB32_TRUE@	$(AR) -M < $<
-@LIB32_TRUE@	$(RANLIB) $@
-
 @LIB32_TRUE@lib32/libwindowsapp.a: lib32/windowsapp.mri lib32/libapi-ms-win-core-com-l1-1-1.a lib32/libapi-ms-win-core-com-l2-1-1.a lib32/libapi-ms-win-core-com-midlproxystub-l1-1-0.a \
 @LIB32_TRUE@					lib32/libapi-ms-win-core-datetime-l1-1-1.a lib32/libapi-ms-win-core-datetime-l1-1-2.a lib32/libapi-ms-win-core-debug-l1-1-1.a \
 @LIB32_TRUE@					lib32/libapi-ms-win-core-delayload-l1-1-1.a lib32/libapi-ms-win-core-errorhandling-l1-1-1.a lib32/libapi-ms-win-core-errorhandling-l1-1-3.a \
@@ -65090,15 +65081,6 @@ _libm_dummy.c:
 
 @LIB64_TRUE@lib64/lib%.a: lib-common/%.def
 @LIB64_TRUE@	$(DTDEF64) $<
-
-# libvfw32.a contains import stubs for 3 dll's.  Using an MRI script
-# seems to be the simplest way to combine them into one archive.
-# NB: With older dlltool, the object file members will not have unique
-# names.
-@LIB64_TRUE@lib64/libvfw32.a: lib64/vfw32.mri lib64/libmsvfw32.a lib64/libavifil32.a lib64/libavicap32.a
-@LIB64_TRUE@	rm -f $@
-@LIB64_TRUE@	$(AR) -M < $<
-@LIB64_TRUE@	$(RANLIB) $@
 
 @LIB64_TRUE@lib64/libwindowsapp.a: lib64/windowsapp.mri lib64/libapi-ms-win-core-com-l1-1-1.a lib64/libapi-ms-win-core-com-l2-1-1.a \
 @LIB64_TRUE@	lib64/libapi-ms-win-core-com-midlproxystub-l1-1-0.a lib64/libapi-ms-win-core-datetime-l1-1-1.a lib64/libapi-ms-win-core-datetime-l1-1-2.a \
@@ -65184,15 +65166,6 @@ _libm_dummy.c:
 @LIBARM32_TRUE@libarm32/lib%.a: lib-common/%.def
 @LIBARM32_TRUE@	$(DTDEFARM32) $<
 
-# libvfw32.a contains import stubs for 3 dll's.  Using an MRI script
-# seems to be the simplest way to combine them into one archive.
-# NB: With older dlltool, the object file members will not have unique
-# names.
-@LIBARM32_TRUE@libarm32/libvfw32.a: libarm32/vfw32.mri libarm32/libmsvfw32.a libarm32/libavifil32.a libarm32/libavicap32.a
-@LIBARM32_TRUE@	rm -f $@
-@LIBARM32_TRUE@	$(AR) -M < $<
-@LIBARM32_TRUE@	$(RANLIB) $@
-
 @LIBARM32_TRUE@libarm32/libwindowsapp.a: libarm32/windowsapp.mri libarm32/libapi-ms-win-core-com-l1-1-1.a libarm32/libapi-ms-win-core-com-l2-1-1.a \
 @LIBARM32_TRUE@	libarm32/libapi-ms-win-core-com-midlproxystub-l1-1-0.a libarm32/libapi-ms-win-core-datetime-l1-1-1.a libarm32/libapi-ms-win-core-datetime-l1-1-2.a \
 @LIBARM32_TRUE@	libarm32/libapi-ms-win-core-debug-l1-1-1.a libarm32/libapi-ms-win-core-delayload-l1-1-1.a libarm32/libapi-ms-win-core-errorhandling-l1-1-1.a \
@@ -65264,16 +65237,6 @@ _libm_dummy.c:
 
 @LIBARM64_TRUE@libarm64/lib%.a: lib-common/%.def
 @LIBARM64_TRUE@	$(DTDEFARM64) $<
-
-# libvfw32.a contains import stubs for 3 dll's.  Using an MRI script
-# seems to be the simplest way to combine them into one archive.
-# NB: With older dlltool, the object file members will not have unique
-# names.
-# TODO: These libraries files aren't yet built for arm64.
-@LIBARM64_TRUE@libarm64/libvfw32.a: libarm64/vfw32.mri libarm64/libmsvfw32.a libarm64/libavifil32.a libarm64/libavicap32.a
-@LIBARM64_TRUE@	rm -f $@
-@LIBARM64_TRUE@	$(AR) -M < $<
-@LIBARM64_TRUE@	$(RANLIB) $@
 
 @LIBARM64_TRUE@libarm64/libwindowsapp.a: libarm64/windowsapp.mri libarm64/libapi-ms-win-core-com-l1-1-1.a libarm64/libapi-ms-win-core-com-l2-1-1.a \
 @LIBARM64_TRUE@	libarm64/libapi-ms-win-core-com-midlproxystub-l1-1-0.a libarm64/libapi-ms-win-core-datetime-l1-1-1.a libarm64/libapi-ms-win-core-datetime-l1-1-2.a \
@@ -65397,6 +65360,14 @@ _libm_dummy.c:
 
 %/libsynchronization.a: lib-common/synchronization.mri \
 		%/libapi-ms-win-core-synch-l1-2-0.a
+	rm -f $@
+	cd $(dir $@) && $(AR) -M < $(abspath $<)
+	$(RANLIB) $@
+
+%/libvfw32.a: lib-common/vfw32.mri \
+		%/libmsvfw32.a \
+		%/libavifil32.a \
+		%/libavicap32.a
 	rm -f $@
 	cd $(dir $@) && $(AR) -M < $(abspath $<)
 	$(RANLIB) $@
