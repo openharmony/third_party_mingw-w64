@@ -65007,11 +65007,6 @@ _libm_dummy.c:
 @LIB32_TRUE@	$(AR) -M < $<
 @LIB32_TRUE@	$(RANLIB) $@
 
-@LIB32_TRUE@lib32/libruntimeobject.a: lib32/runtimeobject.mri lib32/libapi-ms-win-core-winrt-string-l1-1-0.a lib32/libapi-ms-win-core-winrt-l1-1-0.a
-@LIB32_TRUE@	rm -f $@
-@LIB32_TRUE@	$(AR) -M < $<
-@LIB32_TRUE@	$(RANLIB) $@
-
 @LIB32_TRUE@lib32/libsynchronization.a: lib32/synchronization.mri lib32/libapi-ms-win-core-synch-l1-2-0.a
 @LIB32_TRUE@	rm -f $@
 @LIB32_TRUE@	$(AR) -M < $<
@@ -65106,11 +65101,6 @@ _libm_dummy.c:
 # NB: With older dlltool, the object file members will not have unique
 # names.
 @LIB64_TRUE@lib64/libvfw32.a: lib64/vfw32.mri lib64/libmsvfw32.a lib64/libavifil32.a lib64/libavicap32.a
-@LIB64_TRUE@	rm -f $@
-@LIB64_TRUE@	$(AR) -M < $<
-@LIB64_TRUE@	$(RANLIB) $@
-
-@LIB64_TRUE@lib64/libruntimeobject.a: lib64/runtimeobject.mri lib64/libapi-ms-win-core-winrt-string-l1-1-0.a lib64/libapi-ms-win-core-winrt-l1-1-0.a
 @LIB64_TRUE@	rm -f $@
 @LIB64_TRUE@	$(AR) -M < $<
 @LIB64_TRUE@	$(RANLIB) $@
@@ -65213,11 +65203,6 @@ _libm_dummy.c:
 @LIBARM32_TRUE@	$(AR) -M < $<
 @LIBARM32_TRUE@	$(RANLIB) $@
 
-@LIBARM32_TRUE@libarm32/libruntimeobject.a: libarm32/runtimeobject.mri libarm32/libapi-ms-win-core-winrt-string-l1-1-0.a libarm32/libapi-ms-win-core-winrt-l1-1-0.a
-@LIBARM32_TRUE@	rm -f $@
-@LIBARM32_TRUE@	$(AR) -M < $<
-@LIBARM32_TRUE@	$(RANLIB) $@
-
 @LIBARM32_TRUE@libarm32/libsynchronization.a: libarm32/synchronization.mri libarm32/libapi-ms-win-core-synch-l1-2-0.a
 @LIBARM32_TRUE@	rm -f $@
 @LIBARM32_TRUE@	$(AR) -M < $<
@@ -65301,11 +65286,6 @@ _libm_dummy.c:
 # names.
 # TODO: These libraries files aren't yet built for arm64.
 @LIBARM64_TRUE@libarm64/libvfw32.a: libarm64/vfw32.mri libarm64/libmsvfw32.a libarm64/libavifil32.a libarm64/libavicap32.a
-@LIBARM64_TRUE@	rm -f $@
-@LIBARM64_TRUE@	$(AR) -M < $<
-@LIBARM64_TRUE@	$(RANLIB) $@
-
-@LIBARM64_TRUE@libarm64/libruntimeobject.a: libarm64/runtimeobject.mri libarm64/libapi-ms-win-core-winrt-string-l1-1-0.a libarm64/libapi-ms-win-core-winrt-l1-1-0.a
 @LIBARM64_TRUE@	rm -f $@
 @LIBARM64_TRUE@	$(AR) -M < $<
 @LIBARM64_TRUE@	$(RANLIB) $@
@@ -65424,6 +65404,13 @@ _libm_dummy.c:
 		%/libwinhttp.a \
 		%/libwldap32.a \
 		%/libws2_32.a
+	rm -f $@
+	cd $(dir $@) && $(AR) -M < $(abspath $<)
+	$(RANLIB) $@
+
+%/libruntimeobject.a: lib-common/runtimeobject.mri \
+		%/libapi-ms-win-core-winrt-string-l1-1-0.a \
+		%/libapi-ms-win-core-winrt-l1-1-0.a
 	rm -f $@
 	cd $(dir $@) && $(AR) -M < $(abspath $<)
 	$(RANLIB) $@
