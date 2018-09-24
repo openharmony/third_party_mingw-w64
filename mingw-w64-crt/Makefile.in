@@ -65157,10 +65157,6 @@ _libm_dummy.c:
 @LIBARM64_TRUE@libarm64/lib%.a: lib-common/%.def
 @LIBARM64_TRUE@	$(DTDEFARM64) $<
 
-@LIBARM64_TRUE@	rm -f $@
-@LIBARM64_TRUE@	$(AR) -M < $<
-@LIBARM64_TRUE@	$(RANLIB) $@
-
 @LIBARM64_TRUE@libarm64/libucrt.a: libarm64/ucrt.mri libarm64/libucrt_extra.a \
 @LIBARM64_TRUE@		libarm64/libapi-ms-win-crt-conio-l1-1-0.a libarm64/libapi-ms-win-crt-convert-l1-1-0.a libarm64/libapi-ms-win-crt-environment-l1-1-0.a \
 @LIBARM64_TRUE@		libarm64/libapi-ms-win-crt-filesystem-l1-1-0.a libarm64/libapi-ms-win-crt-heap-l1-1-0.a libarm64/libapi-ms-win-crt-locale-l1-1-0.a \
