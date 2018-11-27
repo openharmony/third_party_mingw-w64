@@ -1341,8 +1341,9 @@ am__lib32_libmsvcrt_os_a_SOURCES_DIST = misc/onexit_table.c \
 	secapi/_wmktemp_s.c secapi/_wstrdate_s.c secapi/asctime_s.c \
 	secapi/memcpy_s.c secapi/memmove_s.c secapi/rand_s.c \
 	secapi/sprintf_s.c secapi/strerror_s.c secapi/vsprintf_s.c \
-	secapi/wmemcpy_s.c secapi/wmemmove_s.c stdio/mingw_lock.c \
-	misc/lc_locale_func.c lib-common/msvcrt.def.in
+	secapi/wmemcpy_s.c secapi/wmemmove_s.c stdio/fseeki64.c \
+	stdio/mingw_lock.c misc/lc_locale_func.c \
+	lib-common/msvcrt.def.in
 am__objects_33 = misc/lib32_libmsvcrt_os_a-onexit_table.$(OBJEXT) \
 	misc/lib32_libmsvcrt_os_a-register_tls_atexit.$(OBJEXT) \
 	stdio/lib32_libmsvcrt_os_a-acrt_iob_func.$(OBJEXT)
@@ -1395,6 +1396,7 @@ am__objects_34 = $(am__objects_33) \
 	secapi/lib32_libmsvcrt_os_a-vsprintf_s.$(OBJEXT) \
 	secapi/lib32_libmsvcrt_os_a-wmemcpy_s.$(OBJEXT) \
 	secapi/lib32_libmsvcrt_os_a-wmemmove_s.$(OBJEXT) \
+	stdio/lib32_libmsvcrt_os_a-fseeki64.$(OBJEXT) \
 	stdio/lib32_libmsvcrt_os_a-mingw_lock.$(OBJEXT)
 am__objects_35 = $(am__objects_34) \
 	misc/lib32_libmsvcrt_os_a-lc_locale_func.$(OBJEXT)
@@ -2675,9 +2677,9 @@ am__lib64_libmsvcrt_os_a_SOURCES_DIST = misc/onexit_table.c \
 	secapi/_wmktemp_s.c secapi/_wstrdate_s.c secapi/asctime_s.c \
 	secapi/memcpy_s.c secapi/memmove_s.c secapi/rand_s.c \
 	secapi/sprintf_s.c secapi/strerror_s.c secapi/vsprintf_s.c \
-	secapi/wmemcpy_s.c secapi/wmemmove_s.c stdio/mingw_lock.c \
-	misc/__p___argv.c misc/__p__acmdln.c misc/__p__fmode.c \
-	misc/__p__wcmdln.c lib-common/msvcrt.def.in
+	secapi/wmemcpy_s.c secapi/wmemmove_s.c stdio/fseeki64.c \
+	stdio/mingw_lock.c misc/__p___argv.c misc/__p__acmdln.c \
+	misc/__p__fmode.c misc/__p__wcmdln.c lib-common/msvcrt.def.in
 am__objects_84 = misc/lib64_libmsvcrt_os_a-onexit_table.$(OBJEXT) \
 	misc/lib64_libmsvcrt_os_a-register_tls_atexit.$(OBJEXT) \
 	stdio/lib64_libmsvcrt_os_a-acrt_iob_func.$(OBJEXT)
@@ -2730,6 +2732,7 @@ am__objects_85 = $(am__objects_84) \
 	secapi/lib64_libmsvcrt_os_a-vsprintf_s.$(OBJEXT) \
 	secapi/lib64_libmsvcrt_os_a-wmemcpy_s.$(OBJEXT) \
 	secapi/lib64_libmsvcrt_os_a-wmemmove_s.$(OBJEXT) \
+	stdio/lib64_libmsvcrt_os_a-fseeki64.$(OBJEXT) \
 	stdio/lib64_libmsvcrt_os_a-mingw_lock.$(OBJEXT)
 am__objects_86 = $(am__objects_85) \
 	misc/lib64_libmsvcrt_os_a-__p___argv.$(OBJEXT) \
@@ -3875,9 +3878,9 @@ am__libarm32_libmsvcrt_os_a_SOURCES_DIST = misc/onexit_table.c \
 	secapi/_wmktemp_s.c secapi/_wstrdate_s.c secapi/asctime_s.c \
 	secapi/memcpy_s.c secapi/memmove_s.c secapi/rand_s.c \
 	secapi/sprintf_s.c secapi/strerror_s.c secapi/vsprintf_s.c \
-	secapi/wmemcpy_s.c secapi/wmemmove_s.c stdio/mingw_lock.c \
-	misc/__p___argv.c misc/__p__acmdln.c misc/__p__fmode.c \
-	misc/__p__wcmdln.c lib-common/msvcrt.def.in
+	secapi/wmemcpy_s.c secapi/wmemmove_s.c stdio/fseeki64.c \
+	stdio/mingw_lock.c misc/__p___argv.c misc/__p__acmdln.c \
+	misc/__p__fmode.c misc/__p__wcmdln.c lib-common/msvcrt.def.in
 am__objects_124 = misc/libarm32_libmsvcrt_os_a-onexit_table.$(OBJEXT) \
 	misc/libarm32_libmsvcrt_os_a-register_tls_atexit.$(OBJEXT) \
 	stdio/libarm32_libmsvcrt_os_a-acrt_iob_func.$(OBJEXT)
@@ -3930,6 +3933,7 @@ am__objects_125 = $(am__objects_124) \
 	secapi/libarm32_libmsvcrt_os_a-vsprintf_s.$(OBJEXT) \
 	secapi/libarm32_libmsvcrt_os_a-wmemcpy_s.$(OBJEXT) \
 	secapi/libarm32_libmsvcrt_os_a-wmemmove_s.$(OBJEXT) \
+	stdio/libarm32_libmsvcrt_os_a-fseeki64.$(OBJEXT) \
 	stdio/libarm32_libmsvcrt_os_a-mingw_lock.$(OBJEXT)
 am__objects_126 = $(am__objects_125) \
 	misc/libarm32_libmsvcrt_os_a-__p___argv.$(OBJEXT) \
@@ -4966,9 +4970,9 @@ am__libarm64_libmsvcrt_os_a_SOURCES_DIST = misc/onexit_table.c \
 	secapi/_wmktemp_s.c secapi/_wstrdate_s.c secapi/asctime_s.c \
 	secapi/memcpy_s.c secapi/memmove_s.c secapi/rand_s.c \
 	secapi/sprintf_s.c secapi/strerror_s.c secapi/vsprintf_s.c \
-	secapi/wmemcpy_s.c secapi/wmemmove_s.c stdio/mingw_lock.c \
-	misc/__p___argv.c misc/__p__acmdln.c misc/__p__fmode.c \
-	misc/__p__wcmdln.c lib-common/msvcrt.def.in
+	secapi/wmemcpy_s.c secapi/wmemmove_s.c stdio/fseeki64.c \
+	stdio/mingw_lock.c misc/__p___argv.c misc/__p__acmdln.c \
+	misc/__p__fmode.c misc/__p__wcmdln.c lib-common/msvcrt.def.in
 am__objects_160 = misc/libarm64_libmsvcrt_os_a-onexit_table.$(OBJEXT) \
 	misc/libarm64_libmsvcrt_os_a-register_tls_atexit.$(OBJEXT) \
 	stdio/libarm64_libmsvcrt_os_a-acrt_iob_func.$(OBJEXT)
@@ -5021,6 +5025,7 @@ am__objects_161 = $(am__objects_160) \
 	secapi/libarm64_libmsvcrt_os_a-vsprintf_s.$(OBJEXT) \
 	secapi/libarm64_libmsvcrt_os_a-wmemcpy_s.$(OBJEXT) \
 	secapi/libarm64_libmsvcrt_os_a-wmemmove_s.$(OBJEXT) \
+	stdio/libarm64_libmsvcrt_os_a-fseeki64.$(OBJEXT) \
 	stdio/libarm64_libmsvcrt_os_a-mingw_lock.$(OBJEXT)
 am__objects_162 = $(am__objects_161) \
 	misc/libarm64_libmsvcrt_os_a-__p___argv.$(OBJEXT) \
@@ -6949,6 +6954,7 @@ src_msvcrt = \
   secapi/vsprintf_s.c \
   secapi/wmemcpy_s.c \
   secapi/wmemmove_s.c \
+  stdio/fseeki64.c \
   stdio/mingw_lock.c
 
 src_ucrtbase = \
@@ -11107,6 +11113,8 @@ secapi/lib32_libmsvcrt_os_a-wmemcpy_s.$(OBJEXT):  \
 	secapi/$(am__dirstamp) secapi/$(DEPDIR)/$(am__dirstamp)
 secapi/lib32_libmsvcrt_os_a-wmemmove_s.$(OBJEXT):  \
 	secapi/$(am__dirstamp) secapi/$(DEPDIR)/$(am__dirstamp)
+stdio/lib32_libmsvcrt_os_a-fseeki64.$(OBJEXT): stdio/$(am__dirstamp) \
+	stdio/$(DEPDIR)/$(am__dirstamp)
 stdio/lib32_libmsvcrt_os_a-mingw_lock.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
 misc/lib32_libmsvcrt_os_a-lc_locale_func.$(OBJEXT):  \
@@ -12962,6 +12970,8 @@ secapi/lib64_libmsvcrt_os_a-wmemcpy_s.$(OBJEXT):  \
 	secapi/$(am__dirstamp) secapi/$(DEPDIR)/$(am__dirstamp)
 secapi/lib64_libmsvcrt_os_a-wmemmove_s.$(OBJEXT):  \
 	secapi/$(am__dirstamp) secapi/$(DEPDIR)/$(am__dirstamp)
+stdio/lib64_libmsvcrt_os_a-fseeki64.$(OBJEXT): stdio/$(am__dirstamp) \
+	stdio/$(DEPDIR)/$(am__dirstamp)
 stdio/lib64_libmsvcrt_os_a-mingw_lock.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
 misc/lib64_libmsvcrt_os_a-__p___argv.$(OBJEXT): misc/$(am__dirstamp) \
@@ -14708,6 +14718,8 @@ secapi/libarm32_libmsvcrt_os_a-wmemcpy_s.$(OBJEXT):  \
 	secapi/$(am__dirstamp) secapi/$(DEPDIR)/$(am__dirstamp)
 secapi/libarm32_libmsvcrt_os_a-wmemmove_s.$(OBJEXT):  \
 	secapi/$(am__dirstamp) secapi/$(DEPDIR)/$(am__dirstamp)
+stdio/libarm32_libmsvcrt_os_a-fseeki64.$(OBJEXT):  \
+	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
 stdio/libarm32_libmsvcrt_os_a-mingw_lock.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
 misc/libarm32_libmsvcrt_os_a-__p___argv.$(OBJEXT):  \
@@ -16235,6 +16247,8 @@ secapi/libarm64_libmsvcrt_os_a-wmemcpy_s.$(OBJEXT):  \
 	secapi/$(am__dirstamp) secapi/$(DEPDIR)/$(am__dirstamp)
 secapi/libarm64_libmsvcrt_os_a-wmemmove_s.$(OBJEXT):  \
 	secapi/$(am__dirstamp) secapi/$(DEPDIR)/$(am__dirstamp)
+stdio/libarm64_libmsvcrt_os_a-fseeki64.$(OBJEXT):  \
+	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
 stdio/libarm64_libmsvcrt_os_a-mingw_lock.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
 misc/libarm64_libmsvcrt_os_a-__p___argv.$(OBJEXT):  \
@@ -20089,6 +20103,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib32_libmsvcr90_a-acrt_iob_func.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib32_libmsvcr90d_a-acrt_iob_func.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib32_libmsvcrt_os_a-acrt_iob_func.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib32_libmsvcrt_os_a-fseeki64.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib32_libmsvcrt_os_a-mingw_lock.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib32_libucrt_extra_a-ucrt__snwprintf.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib32_libucrt_extra_a-ucrt__vsnprintf.Po@am__quote@
@@ -20205,6 +20220,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib64_libmsvcr90_a-acrt_iob_func.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib64_libmsvcr90d_a-acrt_iob_func.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib64_libmsvcrt_os_a-acrt_iob_func.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib64_libmsvcrt_os_a-fseeki64.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib64_libmsvcrt_os_a-mingw_lock.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib64_libucrt_extra_a-ucrt__snwprintf.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib64_libucrt_extra_a-ucrt__vsnprintf.Po@am__quote@
@@ -20313,6 +20329,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/libarm32_libmingwex_a-wtoll.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/libarm32_libmsvcr110_a-acrt_iob_func.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/libarm32_libmsvcrt_os_a-acrt_iob_func.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/libarm32_libmsvcrt_os_a-fseeki64.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/libarm32_libmsvcrt_os_a-mingw_lock.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/libarm32_libucrt_extra_a-ucrt__snwprintf.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/libarm32_libucrt_extra_a-ucrt__vsnprintf.Po@am__quote@
@@ -20420,6 +20437,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/libarm64_libmingwex_a-vwscanf2.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/libarm64_libmingwex_a-wtoll.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/libarm64_libmsvcrt_os_a-acrt_iob_func.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/libarm64_libmsvcrt_os_a-fseeki64.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/libarm64_libmsvcrt_os_a-mingw_lock.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/libarm64_libucrt_extra_a-ucrt__snwprintf.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/libarm64_libucrt_extra_a-ucrt__vsnprintf.Po@am__quote@
@@ -30927,6 +30945,20 @@ secapi/lib32_libmsvcrt_os_a-wmemmove_s.obj: secapi/wmemmove_s.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o secapi/lib32_libmsvcrt_os_a-wmemmove_s.obj `if test -f 'secapi/wmemmove_s.c'; then $(CYGPATH_W) 'secapi/wmemmove_s.c'; else $(CYGPATH_W) '$(srcdir)/secapi/wmemmove_s.c'; fi`
 
+stdio/lib32_libmsvcrt_os_a-fseeki64.o: stdio/fseeki64.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/lib32_libmsvcrt_os_a-fseeki64.o -MD -MP -MF stdio/$(DEPDIR)/lib32_libmsvcrt_os_a-fseeki64.Tpo -c -o stdio/lib32_libmsvcrt_os_a-fseeki64.o `test -f 'stdio/fseeki64.c' || echo '$(srcdir)/'`stdio/fseeki64.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) stdio/$(DEPDIR)/lib32_libmsvcrt_os_a-fseeki64.Tpo stdio/$(DEPDIR)/lib32_libmsvcrt_os_a-fseeki64.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/fseeki64.c' object='stdio/lib32_libmsvcrt_os_a-fseeki64.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/lib32_libmsvcrt_os_a-fseeki64.o `test -f 'stdio/fseeki64.c' || echo '$(srcdir)/'`stdio/fseeki64.c
+
+stdio/lib32_libmsvcrt_os_a-fseeki64.obj: stdio/fseeki64.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/lib32_libmsvcrt_os_a-fseeki64.obj -MD -MP -MF stdio/$(DEPDIR)/lib32_libmsvcrt_os_a-fseeki64.Tpo -c -o stdio/lib32_libmsvcrt_os_a-fseeki64.obj `if test -f 'stdio/fseeki64.c'; then $(CYGPATH_W) 'stdio/fseeki64.c'; else $(CYGPATH_W) '$(srcdir)/stdio/fseeki64.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) stdio/$(DEPDIR)/lib32_libmsvcrt_os_a-fseeki64.Tpo stdio/$(DEPDIR)/lib32_libmsvcrt_os_a-fseeki64.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/fseeki64.c' object='stdio/lib32_libmsvcrt_os_a-fseeki64.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/lib32_libmsvcrt_os_a-fseeki64.obj `if test -f 'stdio/fseeki64.c'; then $(CYGPATH_W) 'stdio/fseeki64.c'; else $(CYGPATH_W) '$(srcdir)/stdio/fseeki64.c'; fi`
+
 stdio/lib32_libmsvcrt_os_a-mingw_lock.o: stdio/mingw_lock.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/lib32_libmsvcrt_os_a-mingw_lock.o -MD -MP -MF stdio/$(DEPDIR)/lib32_libmsvcrt_os_a-mingw_lock.Tpo -c -o stdio/lib32_libmsvcrt_os_a-mingw_lock.o `test -f 'stdio/mingw_lock.c' || echo '$(srcdir)/'`stdio/mingw_lock.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) stdio/$(DEPDIR)/lib32_libmsvcrt_os_a-mingw_lock.Tpo stdio/$(DEPDIR)/lib32_libmsvcrt_os_a-mingw_lock.Po
@@ -41231,6 +41263,20 @@ secapi/lib64_libmsvcrt_os_a-wmemmove_s.obj: secapi/wmemmove_s.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o secapi/lib64_libmsvcrt_os_a-wmemmove_s.obj `if test -f 'secapi/wmemmove_s.c'; then $(CYGPATH_W) 'secapi/wmemmove_s.c'; else $(CYGPATH_W) '$(srcdir)/secapi/wmemmove_s.c'; fi`
 
+stdio/lib64_libmsvcrt_os_a-fseeki64.o: stdio/fseeki64.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/lib64_libmsvcrt_os_a-fseeki64.o -MD -MP -MF stdio/$(DEPDIR)/lib64_libmsvcrt_os_a-fseeki64.Tpo -c -o stdio/lib64_libmsvcrt_os_a-fseeki64.o `test -f 'stdio/fseeki64.c' || echo '$(srcdir)/'`stdio/fseeki64.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) stdio/$(DEPDIR)/lib64_libmsvcrt_os_a-fseeki64.Tpo stdio/$(DEPDIR)/lib64_libmsvcrt_os_a-fseeki64.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/fseeki64.c' object='stdio/lib64_libmsvcrt_os_a-fseeki64.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/lib64_libmsvcrt_os_a-fseeki64.o `test -f 'stdio/fseeki64.c' || echo '$(srcdir)/'`stdio/fseeki64.c
+
+stdio/lib64_libmsvcrt_os_a-fseeki64.obj: stdio/fseeki64.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/lib64_libmsvcrt_os_a-fseeki64.obj -MD -MP -MF stdio/$(DEPDIR)/lib64_libmsvcrt_os_a-fseeki64.Tpo -c -o stdio/lib64_libmsvcrt_os_a-fseeki64.obj `if test -f 'stdio/fseeki64.c'; then $(CYGPATH_W) 'stdio/fseeki64.c'; else $(CYGPATH_W) '$(srcdir)/stdio/fseeki64.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) stdio/$(DEPDIR)/lib64_libmsvcrt_os_a-fseeki64.Tpo stdio/$(DEPDIR)/lib64_libmsvcrt_os_a-fseeki64.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/fseeki64.c' object='stdio/lib64_libmsvcrt_os_a-fseeki64.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/lib64_libmsvcrt_os_a-fseeki64.obj `if test -f 'stdio/fseeki64.c'; then $(CYGPATH_W) 'stdio/fseeki64.c'; else $(CYGPATH_W) '$(srcdir)/stdio/fseeki64.c'; fi`
+
 stdio/lib64_libmsvcrt_os_a-mingw_lock.o: stdio/mingw_lock.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/lib64_libmsvcrt_os_a-mingw_lock.o -MD -MP -MF stdio/$(DEPDIR)/lib64_libmsvcrt_os_a-mingw_lock.Tpo -c -o stdio/lib64_libmsvcrt_os_a-mingw_lock.o `test -f 'stdio/mingw_lock.c' || echo '$(srcdir)/'`stdio/mingw_lock.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) stdio/$(DEPDIR)/lib64_libmsvcrt_os_a-mingw_lock.Tpo stdio/$(DEPDIR)/lib64_libmsvcrt_os_a-mingw_lock.Po
@@ -51059,6 +51105,20 @@ secapi/libarm32_libmsvcrt_os_a-wmemmove_s.obj: secapi/wmemmove_s.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o secapi/libarm32_libmsvcrt_os_a-wmemmove_s.obj `if test -f 'secapi/wmemmove_s.c'; then $(CYGPATH_W) 'secapi/wmemmove_s.c'; else $(CYGPATH_W) '$(srcdir)/secapi/wmemmove_s.c'; fi`
 
+stdio/libarm32_libmsvcrt_os_a-fseeki64.o: stdio/fseeki64.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/libarm32_libmsvcrt_os_a-fseeki64.o -MD -MP -MF stdio/$(DEPDIR)/libarm32_libmsvcrt_os_a-fseeki64.Tpo -c -o stdio/libarm32_libmsvcrt_os_a-fseeki64.o `test -f 'stdio/fseeki64.c' || echo '$(srcdir)/'`stdio/fseeki64.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) stdio/$(DEPDIR)/libarm32_libmsvcrt_os_a-fseeki64.Tpo stdio/$(DEPDIR)/libarm32_libmsvcrt_os_a-fseeki64.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/fseeki64.c' object='stdio/libarm32_libmsvcrt_os_a-fseeki64.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/libarm32_libmsvcrt_os_a-fseeki64.o `test -f 'stdio/fseeki64.c' || echo '$(srcdir)/'`stdio/fseeki64.c
+
+stdio/libarm32_libmsvcrt_os_a-fseeki64.obj: stdio/fseeki64.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/libarm32_libmsvcrt_os_a-fseeki64.obj -MD -MP -MF stdio/$(DEPDIR)/libarm32_libmsvcrt_os_a-fseeki64.Tpo -c -o stdio/libarm32_libmsvcrt_os_a-fseeki64.obj `if test -f 'stdio/fseeki64.c'; then $(CYGPATH_W) 'stdio/fseeki64.c'; else $(CYGPATH_W) '$(srcdir)/stdio/fseeki64.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) stdio/$(DEPDIR)/libarm32_libmsvcrt_os_a-fseeki64.Tpo stdio/$(DEPDIR)/libarm32_libmsvcrt_os_a-fseeki64.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/fseeki64.c' object='stdio/libarm32_libmsvcrt_os_a-fseeki64.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/libarm32_libmsvcrt_os_a-fseeki64.obj `if test -f 'stdio/fseeki64.c'; then $(CYGPATH_W) 'stdio/fseeki64.c'; else $(CYGPATH_W) '$(srcdir)/stdio/fseeki64.c'; fi`
+
 stdio/libarm32_libmsvcrt_os_a-mingw_lock.o: stdio/mingw_lock.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/libarm32_libmsvcrt_os_a-mingw_lock.o -MD -MP -MF stdio/$(DEPDIR)/libarm32_libmsvcrt_os_a-mingw_lock.Tpo -c -o stdio/libarm32_libmsvcrt_os_a-mingw_lock.o `test -f 'stdio/mingw_lock.c' || echo '$(srcdir)/'`stdio/mingw_lock.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) stdio/$(DEPDIR)/libarm32_libmsvcrt_os_a-mingw_lock.Tpo stdio/$(DEPDIR)/libarm32_libmsvcrt_os_a-mingw_lock.Po
@@ -59808,6 +59868,20 @@ secapi/libarm64_libmsvcrt_os_a-wmemmove_s.obj: secapi/wmemmove_s.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='secapi/wmemmove_s.c' object='secapi/libarm64_libmsvcrt_os_a-wmemmove_s.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o secapi/libarm64_libmsvcrt_os_a-wmemmove_s.obj `if test -f 'secapi/wmemmove_s.c'; then $(CYGPATH_W) 'secapi/wmemmove_s.c'; else $(CYGPATH_W) '$(srcdir)/secapi/wmemmove_s.c'; fi`
+
+stdio/libarm64_libmsvcrt_os_a-fseeki64.o: stdio/fseeki64.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/libarm64_libmsvcrt_os_a-fseeki64.o -MD -MP -MF stdio/$(DEPDIR)/libarm64_libmsvcrt_os_a-fseeki64.Tpo -c -o stdio/libarm64_libmsvcrt_os_a-fseeki64.o `test -f 'stdio/fseeki64.c' || echo '$(srcdir)/'`stdio/fseeki64.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) stdio/$(DEPDIR)/libarm64_libmsvcrt_os_a-fseeki64.Tpo stdio/$(DEPDIR)/libarm64_libmsvcrt_os_a-fseeki64.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/fseeki64.c' object='stdio/libarm64_libmsvcrt_os_a-fseeki64.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/libarm64_libmsvcrt_os_a-fseeki64.o `test -f 'stdio/fseeki64.c' || echo '$(srcdir)/'`stdio/fseeki64.c
+
+stdio/libarm64_libmsvcrt_os_a-fseeki64.obj: stdio/fseeki64.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/libarm64_libmsvcrt_os_a-fseeki64.obj -MD -MP -MF stdio/$(DEPDIR)/libarm64_libmsvcrt_os_a-fseeki64.Tpo -c -o stdio/libarm64_libmsvcrt_os_a-fseeki64.obj `if test -f 'stdio/fseeki64.c'; then $(CYGPATH_W) 'stdio/fseeki64.c'; else $(CYGPATH_W) '$(srcdir)/stdio/fseeki64.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) stdio/$(DEPDIR)/libarm64_libmsvcrt_os_a-fseeki64.Tpo stdio/$(DEPDIR)/libarm64_libmsvcrt_os_a-fseeki64.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/fseeki64.c' object='stdio/libarm64_libmsvcrt_os_a-fseeki64.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/libarm64_libmsvcrt_os_a-fseeki64.obj `if test -f 'stdio/fseeki64.c'; then $(CYGPATH_W) 'stdio/fseeki64.c'; else $(CYGPATH_W) '$(srcdir)/stdio/fseeki64.c'; fi`
 
 stdio/libarm64_libmsvcrt_os_a-mingw_lock.o: stdio/mingw_lock.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/libarm64_libmsvcrt_os_a-mingw_lock.o -MD -MP -MF stdio/$(DEPDIR)/libarm64_libmsvcrt_os_a-mingw_lock.Tpo -c -o stdio/libarm64_libmsvcrt_os_a-mingw_lock.o `test -f 'stdio/mingw_lock.c' || echo '$(srcdir)/'`stdio/mingw_lock.c
