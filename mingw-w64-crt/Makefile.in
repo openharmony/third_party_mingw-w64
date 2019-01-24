@@ -8859,7 +8859,6 @@ src_intrincsarm64 =
 #libarm64_DATA += libarm64/libgdiplus.a  # Handled by custom rule
 #libarm64_DATA += libarm64/libkernel32.a  # Handled by custom rule
 #libarm64_DATA += libarm64/libksuser.a    # Handled by custom rule
-#libarm64_DATA += libarm64/libmincore.a
 #libarm64_DATA += libarm64/libshell32.a    # Handled by custom rule
 #libarm64_DATA += libarm64/libws2_32.a      # Handled by custom rule
 @LIBARM64_TRUE@libarm64_DATA = $(am__append_22) libarm64/libacledit.a \
@@ -8867,26 +8866,26 @@ src_intrincsarm64 =
 @LIBARM64_TRUE@	libarm64/libadvpack.a libarm64/libappmgmts.a \
 @LIBARM64_TRUE@	libarm64/libappmgr.a libarm64/libasycfilt.a \
 @LIBARM64_TRUE@	libarm64/libatl.a libarm64/libaudiosrv.a \
-@LIBARM64_TRUE@	libarm64/libavrt.a libarm64/libazroles.a \
-@LIBARM64_TRUE@	libarm64/libbasesrv.a libarm64/libbcrypt.a \
-@LIBARM64_TRUE@	libarm64/libbootvid.a libarm64/libbrowcli.a \
-@LIBARM64_TRUE@	libarm64/libbrowser.a libarm64/libbthci.a \
-@LIBARM64_TRUE@	libarm64/libcabinet.a libarm64/libcabview.a \
-@LIBARM64_TRUE@	libarm64/libcfgbkend.a libarm64/libclbcatq.a \
-@LIBARM64_TRUE@	libarm64/libclb.a libarm64/libcliconfg.a \
-@LIBARM64_TRUE@	libarm64/libclusapi.a libarm64/libcnvfat.a \
-@LIBARM64_TRUE@	libarm64/libcolbact.a libarm64/libcomctl32.a \
-@LIBARM64_TRUE@	libarm64/libcomdlg32.a libarm64/libcompstui.a \
-@LIBARM64_TRUE@	libarm64/libcomsnap.a libarm64/libcomuid.a \
-@LIBARM64_TRUE@	libarm64/libconnect.a libarm64/libconsole.a \
-@LIBARM64_TRUE@	libarm64/libcredui.a libarm64/libcrypt32.a \
-@LIBARM64_TRUE@	libarm64/libcryptdlg.a libarm64/libcryptdll.a \
-@LIBARM64_TRUE@	libarm64/libcryptext.a libarm64/libcryptnet.a \
-@LIBARM64_TRUE@	libarm64/libcryptsp.a libarm64/libcryptsvc.a \
-@LIBARM64_TRUE@	libarm64/libcryptui.a libarm64/libcryptxml.a \
-@LIBARM64_TRUE@	libarm64/libcscapi.a libarm64/libd2d1.a \
-@LIBARM64_TRUE@	libarm64/libd3d11.a libarm64/libd3d9.a \
-@LIBARM64_TRUE@	libarm64/libd3dcompiler_47.a \
+@LIBARM64_TRUE@	libarm64/libauthz.a libarm64/libavrt.a \
+@LIBARM64_TRUE@	libarm64/libazroles.a libarm64/libbasesrv.a \
+@LIBARM64_TRUE@	libarm64/libbcrypt.a libarm64/libbootvid.a \
+@LIBARM64_TRUE@	libarm64/libbrowcli.a libarm64/libbrowser.a \
+@LIBARM64_TRUE@	libarm64/libbthci.a libarm64/libcabinet.a \
+@LIBARM64_TRUE@	libarm64/libcabview.a libarm64/libcfgbkend.a \
+@LIBARM64_TRUE@	libarm64/libclbcatq.a libarm64/libclb.a \
+@LIBARM64_TRUE@	libarm64/libcliconfg.a libarm64/libclusapi.a \
+@LIBARM64_TRUE@	libarm64/libcnvfat.a libarm64/libcolbact.a \
+@LIBARM64_TRUE@	libarm64/libcomctl32.a libarm64/libcomdlg32.a \
+@LIBARM64_TRUE@	libarm64/libcompstui.a libarm64/libcomsnap.a \
+@LIBARM64_TRUE@	libarm64/libcomuid.a libarm64/libconnect.a \
+@LIBARM64_TRUE@	libarm64/libconsole.a libarm64/libcredui.a \
+@LIBARM64_TRUE@	libarm64/libcrypt32.a libarm64/libcryptdlg.a \
+@LIBARM64_TRUE@	libarm64/libcryptdll.a libarm64/libcryptext.a \
+@LIBARM64_TRUE@	libarm64/libcryptnet.a libarm64/libcryptsp.a \
+@LIBARM64_TRUE@	libarm64/libcryptsvc.a libarm64/libcryptui.a \
+@LIBARM64_TRUE@	libarm64/libcryptxml.a libarm64/libcscapi.a \
+@LIBARM64_TRUE@	libarm64/libd2d1.a libarm64/libd3d11.a \
+@LIBARM64_TRUE@	libarm64/libd3d9.a libarm64/libd3dcompiler_47.a \
 @LIBARM64_TRUE@	libarm64/libdavclnt.a libarm64/libdavhlpr.a \
 @LIBARM64_TRUE@	libarm64/libdbgeng.a libarm64/libdbghelp.a \
 @LIBARM64_TRUE@	libarm64/libdbnetlib.a libarm64/libdbnmpntw.a \
@@ -8932,17 +8931,18 @@ src_intrincsarm64 =
 @LIBARM64_TRUE@	libarm64/libmdminst.a libarm64/libmf3216.a \
 @LIBARM64_TRUE@	libarm64/libmf.a libarm64/libmfplat.a \
 @LIBARM64_TRUE@	libarm64/libmgmtapi.a libarm64/libmidimap.a \
-@LIBARM64_TRUE@	libarm64/libmlang.a libarm64/libmodemui.a \
-@LIBARM64_TRUE@	libarm64/libmpr.a libarm64/libmsacm32.a \
-@LIBARM64_TRUE@	libarm64/libmsafd.a libarm64/libmscat32.a \
-@LIBARM64_TRUE@	libarm64/libmsctf.a libarm64/libmsdadiag.a \
-@LIBARM64_TRUE@	libarm64/libmsdmo.a libarm64/libmsdrm.a \
-@LIBARM64_TRUE@	libarm64/libmsi.a libarm64/libmsimg32.a \
-@LIBARM64_TRUE@	libarm64/libmsimtf.a libarm64/libmsisip.a \
-@LIBARM64_TRUE@	libarm64/libmsls31.a libarm64/libmspatcha.a \
-@LIBARM64_TRUE@	libarm64/libmsports.a libarm64/libmsrating.a \
-@LIBARM64_TRUE@	libarm64/libmssign32.a libarm64/libmssip32.a \
-@LIBARM64_TRUE@	libarm64/libmstask.a libarm64/libmsv1_0.a \
+@LIBARM64_TRUE@	libarm64/libmincore.a libarm64/libmlang.a \
+@LIBARM64_TRUE@	libarm64/libmodemui.a libarm64/libmpr.a \
+@LIBARM64_TRUE@	libarm64/libmsacm32.a libarm64/libmsafd.a \
+@LIBARM64_TRUE@	libarm64/libmscat32.a libarm64/libmsctf.a \
+@LIBARM64_TRUE@	libarm64/libmsdadiag.a libarm64/libmsdmo.a \
+@LIBARM64_TRUE@	libarm64/libmsdrm.a libarm64/libmsi.a \
+@LIBARM64_TRUE@	libarm64/libmsimg32.a libarm64/libmsimtf.a \
+@LIBARM64_TRUE@	libarm64/libmsisip.a libarm64/libmsls31.a \
+@LIBARM64_TRUE@	libarm64/libmspatcha.a libarm64/libmsports.a \
+@LIBARM64_TRUE@	libarm64/libmsrating.a libarm64/libmssign32.a \
+@LIBARM64_TRUE@	libarm64/libmssip32.a libarm64/libmstask.a \
+@LIBARM64_TRUE@	libarm64/libmsv1_0.a libarm64/libmswsock.a \
 @LIBARM64_TRUE@	libarm64/libmsyuv.a libarm64/libmtxdm.a \
 @LIBARM64_TRUE@	libarm64/libmydocs.a libarm64/libncobjapi.a \
 @LIBARM64_TRUE@	libarm64/libncrypt.a libarm64/libnddeapi.a \
