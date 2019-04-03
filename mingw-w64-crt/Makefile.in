@@ -753,8 +753,7 @@ am__lib32_libmingwex_a_SOURCES_DIST = crt/dllentry.c crt/dllmain.c \
 	misc/mingw_matherr.c misc/mingw_mbwc_convert.c \
 	misc/mingw_usleep.c misc/mingw_wcstod.c misc/mingw_wcstof.c \
 	misc/mingw_wcstold.c misc/mkstemp.c misc/seterrno.c \
-	misc/sleep.c misc/spawnv.c misc/spawnve.c misc/spawnvp.c \
-	misc/spawnvpe.c misc/strnlen.c misc/strsafe.c misc/strtoimax.c \
+	misc/sleep.c misc/strnlen.c misc/strsafe.c misc/strtoimax.c \
 	misc/strtold.c misc/strtoumax.c misc/tdelete.c misc/tfind.c \
 	misc/tsearch.c misc/twalk.c misc/uchar_c16rtomb.c \
 	misc/uchar_c32rtomb.c misc/uchar_mbrtoc16.c \
@@ -1048,10 +1047,6 @@ am__objects_19 = crt/lib32_libmingwex_a-dllentry.$(OBJEXT) \
 	misc/lib32_libmingwex_a-mkstemp.$(OBJEXT) \
 	misc/lib32_libmingwex_a-seterrno.$(OBJEXT) \
 	misc/lib32_libmingwex_a-sleep.$(OBJEXT) \
-	misc/lib32_libmingwex_a-spawnv.$(OBJEXT) \
-	misc/lib32_libmingwex_a-spawnve.$(OBJEXT) \
-	misc/lib32_libmingwex_a-spawnvp.$(OBJEXT) \
-	misc/lib32_libmingwex_a-spawnvpe.$(OBJEXT) \
 	misc/lib32_libmingwex_a-strnlen.$(OBJEXT) \
 	misc/lib32_libmingwex_a-strsafe.$(OBJEXT) \
 	misc/lib32_libmingwex_a-strtoimax.$(OBJEXT) \
@@ -2089,8 +2084,7 @@ am__lib64_libmingwex_a_SOURCES_DIST = crt/dllentry.c crt/dllmain.c \
 	misc/mingw_matherr.c misc/mingw_mbwc_convert.c \
 	misc/mingw_usleep.c misc/mingw_wcstod.c misc/mingw_wcstof.c \
 	misc/mingw_wcstold.c misc/mkstemp.c misc/seterrno.c \
-	misc/sleep.c misc/spawnv.c misc/spawnve.c misc/spawnvp.c \
-	misc/spawnvpe.c misc/strnlen.c misc/strsafe.c misc/strtoimax.c \
+	misc/sleep.c misc/strnlen.c misc/strsafe.c misc/strtoimax.c \
 	misc/strtold.c misc/strtoumax.c misc/tdelete.c misc/tfind.c \
 	misc/tsearch.c misc/twalk.c misc/uchar_c16rtomb.c \
 	misc/uchar_c32rtomb.c misc/uchar_mbrtoc16.c \
@@ -2384,10 +2378,6 @@ am__objects_70 = crt/lib64_libmingwex_a-dllentry.$(OBJEXT) \
 	misc/lib64_libmingwex_a-mkstemp.$(OBJEXT) \
 	misc/lib64_libmingwex_a-seterrno.$(OBJEXT) \
 	misc/lib64_libmingwex_a-sleep.$(OBJEXT) \
-	misc/lib64_libmingwex_a-spawnv.$(OBJEXT) \
-	misc/lib64_libmingwex_a-spawnve.$(OBJEXT) \
-	misc/lib64_libmingwex_a-spawnvp.$(OBJEXT) \
-	misc/lib64_libmingwex_a-spawnvpe.$(OBJEXT) \
 	misc/lib64_libmingwex_a-strnlen.$(OBJEXT) \
 	misc/lib64_libmingwex_a-strsafe.$(OBJEXT) \
 	misc/lib64_libmingwex_a-strtoimax.$(OBJEXT) \
@@ -3349,8 +3339,7 @@ am__libarm32_libmingwex_a_SOURCES_DIST = crt/dllentry.c crt/dllmain.c \
 	misc/mingw_matherr.c misc/mingw_mbwc_convert.c \
 	misc/mingw_usleep.c misc/mingw_wcstod.c misc/mingw_wcstof.c \
 	misc/mingw_wcstold.c misc/mkstemp.c misc/seterrno.c \
-	misc/sleep.c misc/spawnv.c misc/spawnve.c misc/spawnvp.c \
-	misc/spawnvpe.c misc/strnlen.c misc/strsafe.c misc/strtoimax.c \
+	misc/sleep.c misc/strnlen.c misc/strsafe.c misc/strtoimax.c \
 	misc/strtold.c misc/strtoumax.c misc/tdelete.c misc/tfind.c \
 	misc/tsearch.c misc/twalk.c misc/uchar_c16rtomb.c \
 	misc/uchar_c32rtomb.c misc/uchar_mbrtoc16.c \
@@ -3654,10 +3643,6 @@ am__objects_117 = crt/libarm32_libmingwex_a-dllentry.$(OBJEXT) \
 	misc/libarm32_libmingwex_a-mkstemp.$(OBJEXT) \
 	misc/libarm32_libmingwex_a-seterrno.$(OBJEXT) \
 	misc/libarm32_libmingwex_a-sleep.$(OBJEXT) \
-	misc/libarm32_libmingwex_a-spawnv.$(OBJEXT) \
-	misc/libarm32_libmingwex_a-spawnve.$(OBJEXT) \
-	misc/libarm32_libmingwex_a-spawnvp.$(OBJEXT) \
-	misc/libarm32_libmingwex_a-spawnvpe.$(OBJEXT) \
 	misc/libarm32_libmingwex_a-strnlen.$(OBJEXT) \
 	misc/libarm32_libmingwex_a-strsafe.$(OBJEXT) \
 	misc/libarm32_libmingwex_a-strtoimax.$(OBJEXT) \
@@ -4554,8 +4539,7 @@ am__libarm64_libmingwex_a_SOURCES_DIST = crt/dllentry.c crt/dllmain.c \
 	misc/mingw_matherr.c misc/mingw_mbwc_convert.c \
 	misc/mingw_usleep.c misc/mingw_wcstod.c misc/mingw_wcstof.c \
 	misc/mingw_wcstold.c misc/mkstemp.c misc/seterrno.c \
-	misc/sleep.c misc/spawnv.c misc/spawnve.c misc/spawnvp.c \
-	misc/spawnvpe.c misc/strnlen.c misc/strsafe.c misc/strtoimax.c \
+	misc/sleep.c misc/strnlen.c misc/strsafe.c misc/strtoimax.c \
 	misc/strtold.c misc/strtoumax.c misc/tdelete.c misc/tfind.c \
 	misc/tsearch.c misc/twalk.c misc/uchar_c16rtomb.c \
 	misc/uchar_c32rtomb.c misc/uchar_mbrtoc16.c \
@@ -4826,10 +4810,6 @@ am__objects_156 = crt/libarm64_libmingwex_a-dllentry.$(OBJEXT) \
 	misc/libarm64_libmingwex_a-mkstemp.$(OBJEXT) \
 	misc/libarm64_libmingwex_a-seterrno.$(OBJEXT) \
 	misc/libarm64_libmingwex_a-sleep.$(OBJEXT) \
-	misc/libarm64_libmingwex_a-spawnv.$(OBJEXT) \
-	misc/libarm64_libmingwex_a-spawnve.$(OBJEXT) \
-	misc/libarm64_libmingwex_a-spawnvp.$(OBJEXT) \
-	misc/libarm64_libmingwex_a-spawnvpe.$(OBJEXT) \
 	misc/libarm64_libmingwex_a-strnlen.$(OBJEXT) \
 	misc/libarm64_libmingwex_a-strsafe.$(OBJEXT) \
 	misc/libarm64_libmingwex_a-strtoimax.$(OBJEXT) \
@@ -7909,10 +7889,6 @@ am__depfiles_remade = ./$(DEPDIR)/lib32_libm_a-_libm_dummy.Po \
 	misc/$(DEPDIR)/lib32_libmingwex_a-mkstemp.Po \
 	misc/$(DEPDIR)/lib32_libmingwex_a-seterrno.Po \
 	misc/$(DEPDIR)/lib32_libmingwex_a-sleep.Po \
-	misc/$(DEPDIR)/lib32_libmingwex_a-spawnv.Po \
-	misc/$(DEPDIR)/lib32_libmingwex_a-spawnve.Po \
-	misc/$(DEPDIR)/lib32_libmingwex_a-spawnvp.Po \
-	misc/$(DEPDIR)/lib32_libmingwex_a-spawnvpe.Po \
 	misc/$(DEPDIR)/lib32_libmingwex_a-strnlen.Po \
 	misc/$(DEPDIR)/lib32_libmingwex_a-strsafe.Po \
 	misc/$(DEPDIR)/lib32_libmingwex_a-strtoimax.Po \
@@ -8026,10 +8002,6 @@ am__depfiles_remade = ./$(DEPDIR)/lib32_libm_a-_libm_dummy.Po \
 	misc/$(DEPDIR)/lib64_libmingwex_a-mkstemp.Po \
 	misc/$(DEPDIR)/lib64_libmingwex_a-seterrno.Po \
 	misc/$(DEPDIR)/lib64_libmingwex_a-sleep.Po \
-	misc/$(DEPDIR)/lib64_libmingwex_a-spawnv.Po \
-	misc/$(DEPDIR)/lib64_libmingwex_a-spawnve.Po \
-	misc/$(DEPDIR)/lib64_libmingwex_a-spawnvp.Po \
-	misc/$(DEPDIR)/lib64_libmingwex_a-spawnvpe.Po \
 	misc/$(DEPDIR)/lib64_libmingwex_a-strnlen.Po \
 	misc/$(DEPDIR)/lib64_libmingwex_a-strsafe.Po \
 	misc/$(DEPDIR)/lib64_libmingwex_a-strtoimax.Po \
@@ -8147,10 +8119,6 @@ am__depfiles_remade = ./$(DEPDIR)/lib32_libm_a-_libm_dummy.Po \
 	misc/$(DEPDIR)/libarm32_libmingwex_a-mkstemp.Po \
 	misc/$(DEPDIR)/libarm32_libmingwex_a-seterrno.Po \
 	misc/$(DEPDIR)/libarm32_libmingwex_a-sleep.Po \
-	misc/$(DEPDIR)/libarm32_libmingwex_a-spawnv.Po \
-	misc/$(DEPDIR)/libarm32_libmingwex_a-spawnve.Po \
-	misc/$(DEPDIR)/libarm32_libmingwex_a-spawnvp.Po \
-	misc/$(DEPDIR)/libarm32_libmingwex_a-spawnvpe.Po \
 	misc/$(DEPDIR)/libarm32_libmingwex_a-strnlen.Po \
 	misc/$(DEPDIR)/libarm32_libmingwex_a-strsafe.Po \
 	misc/$(DEPDIR)/libarm32_libmingwex_a-strtoimax.Po \
@@ -8250,10 +8218,6 @@ am__depfiles_remade = ./$(DEPDIR)/lib32_libm_a-_libm_dummy.Po \
 	misc/$(DEPDIR)/libarm64_libmingwex_a-mkstemp.Po \
 	misc/$(DEPDIR)/libarm64_libmingwex_a-seterrno.Po \
 	misc/$(DEPDIR)/libarm64_libmingwex_a-sleep.Po \
-	misc/$(DEPDIR)/libarm64_libmingwex_a-spawnv.Po \
-	misc/$(DEPDIR)/libarm64_libmingwex_a-spawnve.Po \
-	misc/$(DEPDIR)/libarm64_libmingwex_a-spawnvp.Po \
-	misc/$(DEPDIR)/libarm64_libmingwex_a-spawnvpe.Po \
 	misc/$(DEPDIR)/libarm64_libmingwex_a-strnlen.Po \
 	misc/$(DEPDIR)/libarm64_libmingwex_a-strsafe.Po \
 	misc/$(DEPDIR)/libarm64_libmingwex_a-strtoimax.Po \
@@ -10196,8 +10160,8 @@ src_libmingwex = \
   misc/gettimeofday.c    misc/imaxabs.c             misc/imaxdiv.c          misc/isblank.c               misc/iswblank.c        \
   misc/mbrtowc.c         misc/mbsinit.c             misc/mempcpy.c          misc/mingw-aligned-malloc.c  misc/mingw-fseek.c     \
   misc/mingw_matherr.c   misc/mingw_mbwc_convert.c  misc/mingw_usleep.c     misc/mingw_wcstod.c          misc/mingw_wcstof.c    \
-  misc/mingw_wcstold.c   misc/mkstemp.c             misc/seterrno.c         misc/sleep.c                 misc/spawnv.c          \
-  misc/spawnve.c         misc/spawnvp.c             misc/spawnvpe.c         misc/strnlen.c               misc/strsafe.c         \
+  misc/mingw_wcstold.c   misc/mkstemp.c             misc/seterrno.c         misc/sleep.c          \
+  misc/strnlen.c         misc/strsafe.c         \
   misc/strtoimax.c       misc/strtold.c             misc/strtoumax.c        misc/tdelete.c               misc/tfind.c           \
   misc/tsearch.c         misc/twalk.c               misc/uchar_c16rtomb.c   misc/uchar_c32rtomb.c        misc/uchar_mbrtoc16.c  \
   misc/uchar_mbrtoc32.c  misc/wcrtomb.c             misc/wcsnlen.c          misc/wcstof.c          \
@@ -13595,14 +13559,6 @@ misc/lib32_libmingwex_a-seterrno.$(OBJEXT): misc/$(am__dirstamp) \
 	misc/$(DEPDIR)/$(am__dirstamp)
 misc/lib32_libmingwex_a-sleep.$(OBJEXT): misc/$(am__dirstamp) \
 	misc/$(DEPDIR)/$(am__dirstamp)
-misc/lib32_libmingwex_a-spawnv.$(OBJEXT): misc/$(am__dirstamp) \
-	misc/$(DEPDIR)/$(am__dirstamp)
-misc/lib32_libmingwex_a-spawnve.$(OBJEXT): misc/$(am__dirstamp) \
-	misc/$(DEPDIR)/$(am__dirstamp)
-misc/lib32_libmingwex_a-spawnvp.$(OBJEXT): misc/$(am__dirstamp) \
-	misc/$(DEPDIR)/$(am__dirstamp)
-misc/lib32_libmingwex_a-spawnvpe.$(OBJEXT): misc/$(am__dirstamp) \
-	misc/$(DEPDIR)/$(am__dirstamp)
 misc/lib32_libmingwex_a-strnlen.$(OBJEXT): misc/$(am__dirstamp) \
 	misc/$(DEPDIR)/$(am__dirstamp)
 misc/lib32_libmingwex_a-strsafe.$(OBJEXT): misc/$(am__dirstamp) \
@@ -15471,14 +15427,6 @@ misc/lib64_libmingwex_a-seterrno.$(OBJEXT): misc/$(am__dirstamp) \
 	misc/$(DEPDIR)/$(am__dirstamp)
 misc/lib64_libmingwex_a-sleep.$(OBJEXT): misc/$(am__dirstamp) \
 	misc/$(DEPDIR)/$(am__dirstamp)
-misc/lib64_libmingwex_a-spawnv.$(OBJEXT): misc/$(am__dirstamp) \
-	misc/$(DEPDIR)/$(am__dirstamp)
-misc/lib64_libmingwex_a-spawnve.$(OBJEXT): misc/$(am__dirstamp) \
-	misc/$(DEPDIR)/$(am__dirstamp)
-misc/lib64_libmingwex_a-spawnvp.$(OBJEXT): misc/$(am__dirstamp) \
-	misc/$(DEPDIR)/$(am__dirstamp)
-misc/lib64_libmingwex_a-spawnvpe.$(OBJEXT): misc/$(am__dirstamp) \
-	misc/$(DEPDIR)/$(am__dirstamp)
 misc/lib64_libmingwex_a-strnlen.$(OBJEXT): misc/$(am__dirstamp) \
 	misc/$(DEPDIR)/$(am__dirstamp)
 misc/lib64_libmingwex_a-strsafe.$(OBJEXT): misc/$(am__dirstamp) \
@@ -17207,14 +17155,6 @@ misc/libarm32_libmingwex_a-mkstemp.$(OBJEXT): misc/$(am__dirstamp) \
 misc/libarm32_libmingwex_a-seterrno.$(OBJEXT): misc/$(am__dirstamp) \
 	misc/$(DEPDIR)/$(am__dirstamp)
 misc/libarm32_libmingwex_a-sleep.$(OBJEXT): misc/$(am__dirstamp) \
-	misc/$(DEPDIR)/$(am__dirstamp)
-misc/libarm32_libmingwex_a-spawnv.$(OBJEXT): misc/$(am__dirstamp) \
-	misc/$(DEPDIR)/$(am__dirstamp)
-misc/libarm32_libmingwex_a-spawnve.$(OBJEXT): misc/$(am__dirstamp) \
-	misc/$(DEPDIR)/$(am__dirstamp)
-misc/libarm32_libmingwex_a-spawnvp.$(OBJEXT): misc/$(am__dirstamp) \
-	misc/$(DEPDIR)/$(am__dirstamp)
-misc/libarm32_libmingwex_a-spawnvpe.$(OBJEXT): misc/$(am__dirstamp) \
 	misc/$(DEPDIR)/$(am__dirstamp)
 misc/libarm32_libmingwex_a-strnlen.$(OBJEXT): misc/$(am__dirstamp) \
 	misc/$(DEPDIR)/$(am__dirstamp)
@@ -18948,14 +18888,6 @@ misc/libarm64_libmingwex_a-mkstemp.$(OBJEXT): misc/$(am__dirstamp) \
 misc/libarm64_libmingwex_a-seterrno.$(OBJEXT): misc/$(am__dirstamp) \
 	misc/$(DEPDIR)/$(am__dirstamp)
 misc/libarm64_libmingwex_a-sleep.$(OBJEXT): misc/$(am__dirstamp) \
-	misc/$(DEPDIR)/$(am__dirstamp)
-misc/libarm64_libmingwex_a-spawnv.$(OBJEXT): misc/$(am__dirstamp) \
-	misc/$(DEPDIR)/$(am__dirstamp)
-misc/libarm64_libmingwex_a-spawnve.$(OBJEXT): misc/$(am__dirstamp) \
-	misc/$(DEPDIR)/$(am__dirstamp)
-misc/libarm64_libmingwex_a-spawnvp.$(OBJEXT): misc/$(am__dirstamp) \
-	misc/$(DEPDIR)/$(am__dirstamp)
-misc/libarm64_libmingwex_a-spawnvpe.$(OBJEXT): misc/$(am__dirstamp) \
 	misc/$(DEPDIR)/$(am__dirstamp)
 misc/libarm64_libmingwex_a-strnlen.$(OBJEXT): misc/$(am__dirstamp) \
 	misc/$(DEPDIR)/$(am__dirstamp)
@@ -22591,10 +22523,6 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmingwex_a-mkstemp.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmingwex_a-seterrno.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmingwex_a-sleep.Po@am__quote@ # am--include-marker
-@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmingwex_a-spawnv.Po@am__quote@ # am--include-marker
-@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmingwex_a-spawnve.Po@am__quote@ # am--include-marker
-@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmingwex_a-spawnvp.Po@am__quote@ # am--include-marker
-@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmingwex_a-spawnvpe.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmingwex_a-strnlen.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmingwex_a-strsafe.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmingwex_a-strtoimax.Po@am__quote@ # am--include-marker
@@ -22708,10 +22636,6 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmingwex_a-mkstemp.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmingwex_a-seterrno.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmingwex_a-sleep.Po@am__quote@ # am--include-marker
-@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmingwex_a-spawnv.Po@am__quote@ # am--include-marker
-@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmingwex_a-spawnve.Po@am__quote@ # am--include-marker
-@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmingwex_a-spawnvp.Po@am__quote@ # am--include-marker
-@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmingwex_a-spawnvpe.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmingwex_a-strnlen.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmingwex_a-strsafe.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmingwex_a-strtoimax.Po@am__quote@ # am--include-marker
@@ -22829,10 +22753,6 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm32_libmingwex_a-mkstemp.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm32_libmingwex_a-seterrno.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm32_libmingwex_a-sleep.Po@am__quote@ # am--include-marker
-@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm32_libmingwex_a-spawnv.Po@am__quote@ # am--include-marker
-@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm32_libmingwex_a-spawnve.Po@am__quote@ # am--include-marker
-@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm32_libmingwex_a-spawnvp.Po@am__quote@ # am--include-marker
-@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm32_libmingwex_a-spawnvpe.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm32_libmingwex_a-strnlen.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm32_libmingwex_a-strsafe.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm32_libmingwex_a-strtoimax.Po@am__quote@ # am--include-marker
@@ -22932,10 +22852,6 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm64_libmingwex_a-mkstemp.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm64_libmingwex_a-seterrno.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm64_libmingwex_a-sleep.Po@am__quote@ # am--include-marker
-@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm64_libmingwex_a-spawnv.Po@am__quote@ # am--include-marker
-@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm64_libmingwex_a-spawnve.Po@am__quote@ # am--include-marker
-@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm64_libmingwex_a-spawnvp.Po@am__quote@ # am--include-marker
-@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm64_libmingwex_a-spawnvpe.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm64_libmingwex_a-strnlen.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm64_libmingwex_a-strsafe.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm64_libmingwex_a-strtoimax.Po@am__quote@ # am--include-marker
@@ -30695,62 +30611,6 @@ misc/lib32_libmingwex_a-sleep.obj: misc/sleep.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/sleep.c' object='misc/lib32_libmingwex_a-sleep.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib32_libmingwex_a-sleep.obj `if test -f 'misc/sleep.c'; then $(CYGPATH_W) 'misc/sleep.c'; else $(CYGPATH_W) '$(srcdir)/misc/sleep.c'; fi`
-
-misc/lib32_libmingwex_a-spawnv.o: misc/spawnv.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libmingwex_a-spawnv.o -MD -MP -MF misc/$(DEPDIR)/lib32_libmingwex_a-spawnv.Tpo -c -o misc/lib32_libmingwex_a-spawnv.o `test -f 'misc/spawnv.c' || echo '$(srcdir)/'`misc/spawnv.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libmingwex_a-spawnv.Tpo misc/$(DEPDIR)/lib32_libmingwex_a-spawnv.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/spawnv.c' object='misc/lib32_libmingwex_a-spawnv.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib32_libmingwex_a-spawnv.o `test -f 'misc/spawnv.c' || echo '$(srcdir)/'`misc/spawnv.c
-
-misc/lib32_libmingwex_a-spawnv.obj: misc/spawnv.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libmingwex_a-spawnv.obj -MD -MP -MF misc/$(DEPDIR)/lib32_libmingwex_a-spawnv.Tpo -c -o misc/lib32_libmingwex_a-spawnv.obj `if test -f 'misc/spawnv.c'; then $(CYGPATH_W) 'misc/spawnv.c'; else $(CYGPATH_W) '$(srcdir)/misc/spawnv.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libmingwex_a-spawnv.Tpo misc/$(DEPDIR)/lib32_libmingwex_a-spawnv.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/spawnv.c' object='misc/lib32_libmingwex_a-spawnv.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib32_libmingwex_a-spawnv.obj `if test -f 'misc/spawnv.c'; then $(CYGPATH_W) 'misc/spawnv.c'; else $(CYGPATH_W) '$(srcdir)/misc/spawnv.c'; fi`
-
-misc/lib32_libmingwex_a-spawnve.o: misc/spawnve.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libmingwex_a-spawnve.o -MD -MP -MF misc/$(DEPDIR)/lib32_libmingwex_a-spawnve.Tpo -c -o misc/lib32_libmingwex_a-spawnve.o `test -f 'misc/spawnve.c' || echo '$(srcdir)/'`misc/spawnve.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libmingwex_a-spawnve.Tpo misc/$(DEPDIR)/lib32_libmingwex_a-spawnve.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/spawnve.c' object='misc/lib32_libmingwex_a-spawnve.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib32_libmingwex_a-spawnve.o `test -f 'misc/spawnve.c' || echo '$(srcdir)/'`misc/spawnve.c
-
-misc/lib32_libmingwex_a-spawnve.obj: misc/spawnve.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libmingwex_a-spawnve.obj -MD -MP -MF misc/$(DEPDIR)/lib32_libmingwex_a-spawnve.Tpo -c -o misc/lib32_libmingwex_a-spawnve.obj `if test -f 'misc/spawnve.c'; then $(CYGPATH_W) 'misc/spawnve.c'; else $(CYGPATH_W) '$(srcdir)/misc/spawnve.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libmingwex_a-spawnve.Tpo misc/$(DEPDIR)/lib32_libmingwex_a-spawnve.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/spawnve.c' object='misc/lib32_libmingwex_a-spawnve.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib32_libmingwex_a-spawnve.obj `if test -f 'misc/spawnve.c'; then $(CYGPATH_W) 'misc/spawnve.c'; else $(CYGPATH_W) '$(srcdir)/misc/spawnve.c'; fi`
-
-misc/lib32_libmingwex_a-spawnvp.o: misc/spawnvp.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libmingwex_a-spawnvp.o -MD -MP -MF misc/$(DEPDIR)/lib32_libmingwex_a-spawnvp.Tpo -c -o misc/lib32_libmingwex_a-spawnvp.o `test -f 'misc/spawnvp.c' || echo '$(srcdir)/'`misc/spawnvp.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libmingwex_a-spawnvp.Tpo misc/$(DEPDIR)/lib32_libmingwex_a-spawnvp.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/spawnvp.c' object='misc/lib32_libmingwex_a-spawnvp.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib32_libmingwex_a-spawnvp.o `test -f 'misc/spawnvp.c' || echo '$(srcdir)/'`misc/spawnvp.c
-
-misc/lib32_libmingwex_a-spawnvp.obj: misc/spawnvp.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libmingwex_a-spawnvp.obj -MD -MP -MF misc/$(DEPDIR)/lib32_libmingwex_a-spawnvp.Tpo -c -o misc/lib32_libmingwex_a-spawnvp.obj `if test -f 'misc/spawnvp.c'; then $(CYGPATH_W) 'misc/spawnvp.c'; else $(CYGPATH_W) '$(srcdir)/misc/spawnvp.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libmingwex_a-spawnvp.Tpo misc/$(DEPDIR)/lib32_libmingwex_a-spawnvp.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/spawnvp.c' object='misc/lib32_libmingwex_a-spawnvp.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib32_libmingwex_a-spawnvp.obj `if test -f 'misc/spawnvp.c'; then $(CYGPATH_W) 'misc/spawnvp.c'; else $(CYGPATH_W) '$(srcdir)/misc/spawnvp.c'; fi`
-
-misc/lib32_libmingwex_a-spawnvpe.o: misc/spawnvpe.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libmingwex_a-spawnvpe.o -MD -MP -MF misc/$(DEPDIR)/lib32_libmingwex_a-spawnvpe.Tpo -c -o misc/lib32_libmingwex_a-spawnvpe.o `test -f 'misc/spawnvpe.c' || echo '$(srcdir)/'`misc/spawnvpe.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libmingwex_a-spawnvpe.Tpo misc/$(DEPDIR)/lib32_libmingwex_a-spawnvpe.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/spawnvpe.c' object='misc/lib32_libmingwex_a-spawnvpe.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib32_libmingwex_a-spawnvpe.o `test -f 'misc/spawnvpe.c' || echo '$(srcdir)/'`misc/spawnvpe.c
-
-misc/lib32_libmingwex_a-spawnvpe.obj: misc/spawnvpe.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libmingwex_a-spawnvpe.obj -MD -MP -MF misc/$(DEPDIR)/lib32_libmingwex_a-spawnvpe.Tpo -c -o misc/lib32_libmingwex_a-spawnvpe.obj `if test -f 'misc/spawnvpe.c'; then $(CYGPATH_W) 'misc/spawnvpe.c'; else $(CYGPATH_W) '$(srcdir)/misc/spawnvpe.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libmingwex_a-spawnvpe.Tpo misc/$(DEPDIR)/lib32_libmingwex_a-spawnvpe.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/spawnvpe.c' object='misc/lib32_libmingwex_a-spawnvpe.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib32_libmingwex_a-spawnvpe.obj `if test -f 'misc/spawnvpe.c'; then $(CYGPATH_W) 'misc/spawnvpe.c'; else $(CYGPATH_W) '$(srcdir)/misc/spawnvpe.c'; fi`
 
 misc/lib32_libmingwex_a-strnlen.o: misc/strnlen.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libmingwex_a-strnlen.o -MD -MP -MF misc/$(DEPDIR)/lib32_libmingwex_a-strnlen.Tpo -c -o misc/lib32_libmingwex_a-strnlen.o `test -f 'misc/strnlen.c' || echo '$(srcdir)/'`misc/strnlen.c
@@ -40972,62 +40832,6 @@ misc/lib64_libmingwex_a-sleep.obj: misc/sleep.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib64_libmingwex_a-sleep.obj `if test -f 'misc/sleep.c'; then $(CYGPATH_W) 'misc/sleep.c'; else $(CYGPATH_W) '$(srcdir)/misc/sleep.c'; fi`
 
-misc/lib64_libmingwex_a-spawnv.o: misc/spawnv.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib64_libmingwex_a-spawnv.o -MD -MP -MF misc/$(DEPDIR)/lib64_libmingwex_a-spawnv.Tpo -c -o misc/lib64_libmingwex_a-spawnv.o `test -f 'misc/spawnv.c' || echo '$(srcdir)/'`misc/spawnv.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib64_libmingwex_a-spawnv.Tpo misc/$(DEPDIR)/lib64_libmingwex_a-spawnv.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/spawnv.c' object='misc/lib64_libmingwex_a-spawnv.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib64_libmingwex_a-spawnv.o `test -f 'misc/spawnv.c' || echo '$(srcdir)/'`misc/spawnv.c
-
-misc/lib64_libmingwex_a-spawnv.obj: misc/spawnv.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib64_libmingwex_a-spawnv.obj -MD -MP -MF misc/$(DEPDIR)/lib64_libmingwex_a-spawnv.Tpo -c -o misc/lib64_libmingwex_a-spawnv.obj `if test -f 'misc/spawnv.c'; then $(CYGPATH_W) 'misc/spawnv.c'; else $(CYGPATH_W) '$(srcdir)/misc/spawnv.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib64_libmingwex_a-spawnv.Tpo misc/$(DEPDIR)/lib64_libmingwex_a-spawnv.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/spawnv.c' object='misc/lib64_libmingwex_a-spawnv.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib64_libmingwex_a-spawnv.obj `if test -f 'misc/spawnv.c'; then $(CYGPATH_W) 'misc/spawnv.c'; else $(CYGPATH_W) '$(srcdir)/misc/spawnv.c'; fi`
-
-misc/lib64_libmingwex_a-spawnve.o: misc/spawnve.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib64_libmingwex_a-spawnve.o -MD -MP -MF misc/$(DEPDIR)/lib64_libmingwex_a-spawnve.Tpo -c -o misc/lib64_libmingwex_a-spawnve.o `test -f 'misc/spawnve.c' || echo '$(srcdir)/'`misc/spawnve.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib64_libmingwex_a-spawnve.Tpo misc/$(DEPDIR)/lib64_libmingwex_a-spawnve.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/spawnve.c' object='misc/lib64_libmingwex_a-spawnve.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib64_libmingwex_a-spawnve.o `test -f 'misc/spawnve.c' || echo '$(srcdir)/'`misc/spawnve.c
-
-misc/lib64_libmingwex_a-spawnve.obj: misc/spawnve.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib64_libmingwex_a-spawnve.obj -MD -MP -MF misc/$(DEPDIR)/lib64_libmingwex_a-spawnve.Tpo -c -o misc/lib64_libmingwex_a-spawnve.obj `if test -f 'misc/spawnve.c'; then $(CYGPATH_W) 'misc/spawnve.c'; else $(CYGPATH_W) '$(srcdir)/misc/spawnve.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib64_libmingwex_a-spawnve.Tpo misc/$(DEPDIR)/lib64_libmingwex_a-spawnve.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/spawnve.c' object='misc/lib64_libmingwex_a-spawnve.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib64_libmingwex_a-spawnve.obj `if test -f 'misc/spawnve.c'; then $(CYGPATH_W) 'misc/spawnve.c'; else $(CYGPATH_W) '$(srcdir)/misc/spawnve.c'; fi`
-
-misc/lib64_libmingwex_a-spawnvp.o: misc/spawnvp.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib64_libmingwex_a-spawnvp.o -MD -MP -MF misc/$(DEPDIR)/lib64_libmingwex_a-spawnvp.Tpo -c -o misc/lib64_libmingwex_a-spawnvp.o `test -f 'misc/spawnvp.c' || echo '$(srcdir)/'`misc/spawnvp.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib64_libmingwex_a-spawnvp.Tpo misc/$(DEPDIR)/lib64_libmingwex_a-spawnvp.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/spawnvp.c' object='misc/lib64_libmingwex_a-spawnvp.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib64_libmingwex_a-spawnvp.o `test -f 'misc/spawnvp.c' || echo '$(srcdir)/'`misc/spawnvp.c
-
-misc/lib64_libmingwex_a-spawnvp.obj: misc/spawnvp.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib64_libmingwex_a-spawnvp.obj -MD -MP -MF misc/$(DEPDIR)/lib64_libmingwex_a-spawnvp.Tpo -c -o misc/lib64_libmingwex_a-spawnvp.obj `if test -f 'misc/spawnvp.c'; then $(CYGPATH_W) 'misc/spawnvp.c'; else $(CYGPATH_W) '$(srcdir)/misc/spawnvp.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib64_libmingwex_a-spawnvp.Tpo misc/$(DEPDIR)/lib64_libmingwex_a-spawnvp.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/spawnvp.c' object='misc/lib64_libmingwex_a-spawnvp.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib64_libmingwex_a-spawnvp.obj `if test -f 'misc/spawnvp.c'; then $(CYGPATH_W) 'misc/spawnvp.c'; else $(CYGPATH_W) '$(srcdir)/misc/spawnvp.c'; fi`
-
-misc/lib64_libmingwex_a-spawnvpe.o: misc/spawnvpe.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib64_libmingwex_a-spawnvpe.o -MD -MP -MF misc/$(DEPDIR)/lib64_libmingwex_a-spawnvpe.Tpo -c -o misc/lib64_libmingwex_a-spawnvpe.o `test -f 'misc/spawnvpe.c' || echo '$(srcdir)/'`misc/spawnvpe.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib64_libmingwex_a-spawnvpe.Tpo misc/$(DEPDIR)/lib64_libmingwex_a-spawnvpe.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/spawnvpe.c' object='misc/lib64_libmingwex_a-spawnvpe.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib64_libmingwex_a-spawnvpe.o `test -f 'misc/spawnvpe.c' || echo '$(srcdir)/'`misc/spawnvpe.c
-
-misc/lib64_libmingwex_a-spawnvpe.obj: misc/spawnvpe.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib64_libmingwex_a-spawnvpe.obj -MD -MP -MF misc/$(DEPDIR)/lib64_libmingwex_a-spawnvpe.Tpo -c -o misc/lib64_libmingwex_a-spawnvpe.obj `if test -f 'misc/spawnvpe.c'; then $(CYGPATH_W) 'misc/spawnvpe.c'; else $(CYGPATH_W) '$(srcdir)/misc/spawnvpe.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib64_libmingwex_a-spawnvpe.Tpo misc/$(DEPDIR)/lib64_libmingwex_a-spawnvpe.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/spawnvpe.c' object='misc/lib64_libmingwex_a-spawnvpe.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib64_libmingwex_a-spawnvpe.obj `if test -f 'misc/spawnvpe.c'; then $(CYGPATH_W) 'misc/spawnvpe.c'; else $(CYGPATH_W) '$(srcdir)/misc/spawnvpe.c'; fi`
-
 misc/lib64_libmingwex_a-strnlen.o: misc/strnlen.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib64_libmingwex_a-strnlen.o -MD -MP -MF misc/$(DEPDIR)/lib64_libmingwex_a-strnlen.Tpo -c -o misc/lib64_libmingwex_a-strnlen.o `test -f 'misc/strnlen.c' || echo '$(srcdir)/'`misc/strnlen.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib64_libmingwex_a-strnlen.Tpo misc/$(DEPDIR)/lib64_libmingwex_a-strnlen.Po
@@ -50673,62 +50477,6 @@ misc/libarm32_libmingwex_a-sleep.obj: misc/sleep.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/sleep.c' object='misc/libarm32_libmingwex_a-sleep.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/libarm32_libmingwex_a-sleep.obj `if test -f 'misc/sleep.c'; then $(CYGPATH_W) 'misc/sleep.c'; else $(CYGPATH_W) '$(srcdir)/misc/sleep.c'; fi`
-
-misc/libarm32_libmingwex_a-spawnv.o: misc/spawnv.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/libarm32_libmingwex_a-spawnv.o -MD -MP -MF misc/$(DEPDIR)/libarm32_libmingwex_a-spawnv.Tpo -c -o misc/libarm32_libmingwex_a-spawnv.o `test -f 'misc/spawnv.c' || echo '$(srcdir)/'`misc/spawnv.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/libarm32_libmingwex_a-spawnv.Tpo misc/$(DEPDIR)/libarm32_libmingwex_a-spawnv.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/spawnv.c' object='misc/libarm32_libmingwex_a-spawnv.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/libarm32_libmingwex_a-spawnv.o `test -f 'misc/spawnv.c' || echo '$(srcdir)/'`misc/spawnv.c
-
-misc/libarm32_libmingwex_a-spawnv.obj: misc/spawnv.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/libarm32_libmingwex_a-spawnv.obj -MD -MP -MF misc/$(DEPDIR)/libarm32_libmingwex_a-spawnv.Tpo -c -o misc/libarm32_libmingwex_a-spawnv.obj `if test -f 'misc/spawnv.c'; then $(CYGPATH_W) 'misc/spawnv.c'; else $(CYGPATH_W) '$(srcdir)/misc/spawnv.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/libarm32_libmingwex_a-spawnv.Tpo misc/$(DEPDIR)/libarm32_libmingwex_a-spawnv.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/spawnv.c' object='misc/libarm32_libmingwex_a-spawnv.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/libarm32_libmingwex_a-spawnv.obj `if test -f 'misc/spawnv.c'; then $(CYGPATH_W) 'misc/spawnv.c'; else $(CYGPATH_W) '$(srcdir)/misc/spawnv.c'; fi`
-
-misc/libarm32_libmingwex_a-spawnve.o: misc/spawnve.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/libarm32_libmingwex_a-spawnve.o -MD -MP -MF misc/$(DEPDIR)/libarm32_libmingwex_a-spawnve.Tpo -c -o misc/libarm32_libmingwex_a-spawnve.o `test -f 'misc/spawnve.c' || echo '$(srcdir)/'`misc/spawnve.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/libarm32_libmingwex_a-spawnve.Tpo misc/$(DEPDIR)/libarm32_libmingwex_a-spawnve.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/spawnve.c' object='misc/libarm32_libmingwex_a-spawnve.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/libarm32_libmingwex_a-spawnve.o `test -f 'misc/spawnve.c' || echo '$(srcdir)/'`misc/spawnve.c
-
-misc/libarm32_libmingwex_a-spawnve.obj: misc/spawnve.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/libarm32_libmingwex_a-spawnve.obj -MD -MP -MF misc/$(DEPDIR)/libarm32_libmingwex_a-spawnve.Tpo -c -o misc/libarm32_libmingwex_a-spawnve.obj `if test -f 'misc/spawnve.c'; then $(CYGPATH_W) 'misc/spawnve.c'; else $(CYGPATH_W) '$(srcdir)/misc/spawnve.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/libarm32_libmingwex_a-spawnve.Tpo misc/$(DEPDIR)/libarm32_libmingwex_a-spawnve.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/spawnve.c' object='misc/libarm32_libmingwex_a-spawnve.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/libarm32_libmingwex_a-spawnve.obj `if test -f 'misc/spawnve.c'; then $(CYGPATH_W) 'misc/spawnve.c'; else $(CYGPATH_W) '$(srcdir)/misc/spawnve.c'; fi`
-
-misc/libarm32_libmingwex_a-spawnvp.o: misc/spawnvp.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/libarm32_libmingwex_a-spawnvp.o -MD -MP -MF misc/$(DEPDIR)/libarm32_libmingwex_a-spawnvp.Tpo -c -o misc/libarm32_libmingwex_a-spawnvp.o `test -f 'misc/spawnvp.c' || echo '$(srcdir)/'`misc/spawnvp.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/libarm32_libmingwex_a-spawnvp.Tpo misc/$(DEPDIR)/libarm32_libmingwex_a-spawnvp.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/spawnvp.c' object='misc/libarm32_libmingwex_a-spawnvp.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/libarm32_libmingwex_a-spawnvp.o `test -f 'misc/spawnvp.c' || echo '$(srcdir)/'`misc/spawnvp.c
-
-misc/libarm32_libmingwex_a-spawnvp.obj: misc/spawnvp.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/libarm32_libmingwex_a-spawnvp.obj -MD -MP -MF misc/$(DEPDIR)/libarm32_libmingwex_a-spawnvp.Tpo -c -o misc/libarm32_libmingwex_a-spawnvp.obj `if test -f 'misc/spawnvp.c'; then $(CYGPATH_W) 'misc/spawnvp.c'; else $(CYGPATH_W) '$(srcdir)/misc/spawnvp.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/libarm32_libmingwex_a-spawnvp.Tpo misc/$(DEPDIR)/libarm32_libmingwex_a-spawnvp.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/spawnvp.c' object='misc/libarm32_libmingwex_a-spawnvp.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/libarm32_libmingwex_a-spawnvp.obj `if test -f 'misc/spawnvp.c'; then $(CYGPATH_W) 'misc/spawnvp.c'; else $(CYGPATH_W) '$(srcdir)/misc/spawnvp.c'; fi`
-
-misc/libarm32_libmingwex_a-spawnvpe.o: misc/spawnvpe.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/libarm32_libmingwex_a-spawnvpe.o -MD -MP -MF misc/$(DEPDIR)/libarm32_libmingwex_a-spawnvpe.Tpo -c -o misc/libarm32_libmingwex_a-spawnvpe.o `test -f 'misc/spawnvpe.c' || echo '$(srcdir)/'`misc/spawnvpe.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/libarm32_libmingwex_a-spawnvpe.Tpo misc/$(DEPDIR)/libarm32_libmingwex_a-spawnvpe.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/spawnvpe.c' object='misc/libarm32_libmingwex_a-spawnvpe.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/libarm32_libmingwex_a-spawnvpe.o `test -f 'misc/spawnvpe.c' || echo '$(srcdir)/'`misc/spawnvpe.c
-
-misc/libarm32_libmingwex_a-spawnvpe.obj: misc/spawnvpe.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/libarm32_libmingwex_a-spawnvpe.obj -MD -MP -MF misc/$(DEPDIR)/libarm32_libmingwex_a-spawnvpe.Tpo -c -o misc/libarm32_libmingwex_a-spawnvpe.obj `if test -f 'misc/spawnvpe.c'; then $(CYGPATH_W) 'misc/spawnvpe.c'; else $(CYGPATH_W) '$(srcdir)/misc/spawnvpe.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/libarm32_libmingwex_a-spawnvpe.Tpo misc/$(DEPDIR)/libarm32_libmingwex_a-spawnvpe.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/spawnvpe.c' object='misc/libarm32_libmingwex_a-spawnvpe.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/libarm32_libmingwex_a-spawnvpe.obj `if test -f 'misc/spawnvpe.c'; then $(CYGPATH_W) 'misc/spawnvpe.c'; else $(CYGPATH_W) '$(srcdir)/misc/spawnvpe.c'; fi`
 
 misc/libarm32_libmingwex_a-strnlen.o: misc/strnlen.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/libarm32_libmingwex_a-strnlen.o -MD -MP -MF misc/$(DEPDIR)/libarm32_libmingwex_a-strnlen.Tpo -c -o misc/libarm32_libmingwex_a-strnlen.o `test -f 'misc/strnlen.c' || echo '$(srcdir)/'`misc/strnlen.c
@@ -60487,62 +60235,6 @@ misc/libarm64_libmingwex_a-sleep.obj: misc/sleep.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/sleep.c' object='misc/libarm64_libmingwex_a-sleep.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/libarm64_libmingwex_a-sleep.obj `if test -f 'misc/sleep.c'; then $(CYGPATH_W) 'misc/sleep.c'; else $(CYGPATH_W) '$(srcdir)/misc/sleep.c'; fi`
-
-misc/libarm64_libmingwex_a-spawnv.o: misc/spawnv.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/libarm64_libmingwex_a-spawnv.o -MD -MP -MF misc/$(DEPDIR)/libarm64_libmingwex_a-spawnv.Tpo -c -o misc/libarm64_libmingwex_a-spawnv.o `test -f 'misc/spawnv.c' || echo '$(srcdir)/'`misc/spawnv.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/libarm64_libmingwex_a-spawnv.Tpo misc/$(DEPDIR)/libarm64_libmingwex_a-spawnv.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/spawnv.c' object='misc/libarm64_libmingwex_a-spawnv.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/libarm64_libmingwex_a-spawnv.o `test -f 'misc/spawnv.c' || echo '$(srcdir)/'`misc/spawnv.c
-
-misc/libarm64_libmingwex_a-spawnv.obj: misc/spawnv.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/libarm64_libmingwex_a-spawnv.obj -MD -MP -MF misc/$(DEPDIR)/libarm64_libmingwex_a-spawnv.Tpo -c -o misc/libarm64_libmingwex_a-spawnv.obj `if test -f 'misc/spawnv.c'; then $(CYGPATH_W) 'misc/spawnv.c'; else $(CYGPATH_W) '$(srcdir)/misc/spawnv.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/libarm64_libmingwex_a-spawnv.Tpo misc/$(DEPDIR)/libarm64_libmingwex_a-spawnv.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/spawnv.c' object='misc/libarm64_libmingwex_a-spawnv.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/libarm64_libmingwex_a-spawnv.obj `if test -f 'misc/spawnv.c'; then $(CYGPATH_W) 'misc/spawnv.c'; else $(CYGPATH_W) '$(srcdir)/misc/spawnv.c'; fi`
-
-misc/libarm64_libmingwex_a-spawnve.o: misc/spawnve.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/libarm64_libmingwex_a-spawnve.o -MD -MP -MF misc/$(DEPDIR)/libarm64_libmingwex_a-spawnve.Tpo -c -o misc/libarm64_libmingwex_a-spawnve.o `test -f 'misc/spawnve.c' || echo '$(srcdir)/'`misc/spawnve.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/libarm64_libmingwex_a-spawnve.Tpo misc/$(DEPDIR)/libarm64_libmingwex_a-spawnve.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/spawnve.c' object='misc/libarm64_libmingwex_a-spawnve.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/libarm64_libmingwex_a-spawnve.o `test -f 'misc/spawnve.c' || echo '$(srcdir)/'`misc/spawnve.c
-
-misc/libarm64_libmingwex_a-spawnve.obj: misc/spawnve.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/libarm64_libmingwex_a-spawnve.obj -MD -MP -MF misc/$(DEPDIR)/libarm64_libmingwex_a-spawnve.Tpo -c -o misc/libarm64_libmingwex_a-spawnve.obj `if test -f 'misc/spawnve.c'; then $(CYGPATH_W) 'misc/spawnve.c'; else $(CYGPATH_W) '$(srcdir)/misc/spawnve.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/libarm64_libmingwex_a-spawnve.Tpo misc/$(DEPDIR)/libarm64_libmingwex_a-spawnve.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/spawnve.c' object='misc/libarm64_libmingwex_a-spawnve.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/libarm64_libmingwex_a-spawnve.obj `if test -f 'misc/spawnve.c'; then $(CYGPATH_W) 'misc/spawnve.c'; else $(CYGPATH_W) '$(srcdir)/misc/spawnve.c'; fi`
-
-misc/libarm64_libmingwex_a-spawnvp.o: misc/spawnvp.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/libarm64_libmingwex_a-spawnvp.o -MD -MP -MF misc/$(DEPDIR)/libarm64_libmingwex_a-spawnvp.Tpo -c -o misc/libarm64_libmingwex_a-spawnvp.o `test -f 'misc/spawnvp.c' || echo '$(srcdir)/'`misc/spawnvp.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/libarm64_libmingwex_a-spawnvp.Tpo misc/$(DEPDIR)/libarm64_libmingwex_a-spawnvp.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/spawnvp.c' object='misc/libarm64_libmingwex_a-spawnvp.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/libarm64_libmingwex_a-spawnvp.o `test -f 'misc/spawnvp.c' || echo '$(srcdir)/'`misc/spawnvp.c
-
-misc/libarm64_libmingwex_a-spawnvp.obj: misc/spawnvp.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/libarm64_libmingwex_a-spawnvp.obj -MD -MP -MF misc/$(DEPDIR)/libarm64_libmingwex_a-spawnvp.Tpo -c -o misc/libarm64_libmingwex_a-spawnvp.obj `if test -f 'misc/spawnvp.c'; then $(CYGPATH_W) 'misc/spawnvp.c'; else $(CYGPATH_W) '$(srcdir)/misc/spawnvp.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/libarm64_libmingwex_a-spawnvp.Tpo misc/$(DEPDIR)/libarm64_libmingwex_a-spawnvp.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/spawnvp.c' object='misc/libarm64_libmingwex_a-spawnvp.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/libarm64_libmingwex_a-spawnvp.obj `if test -f 'misc/spawnvp.c'; then $(CYGPATH_W) 'misc/spawnvp.c'; else $(CYGPATH_W) '$(srcdir)/misc/spawnvp.c'; fi`
-
-misc/libarm64_libmingwex_a-spawnvpe.o: misc/spawnvpe.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/libarm64_libmingwex_a-spawnvpe.o -MD -MP -MF misc/$(DEPDIR)/libarm64_libmingwex_a-spawnvpe.Tpo -c -o misc/libarm64_libmingwex_a-spawnvpe.o `test -f 'misc/spawnvpe.c' || echo '$(srcdir)/'`misc/spawnvpe.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/libarm64_libmingwex_a-spawnvpe.Tpo misc/$(DEPDIR)/libarm64_libmingwex_a-spawnvpe.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/spawnvpe.c' object='misc/libarm64_libmingwex_a-spawnvpe.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/libarm64_libmingwex_a-spawnvpe.o `test -f 'misc/spawnvpe.c' || echo '$(srcdir)/'`misc/spawnvpe.c
-
-misc/libarm64_libmingwex_a-spawnvpe.obj: misc/spawnvpe.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/libarm64_libmingwex_a-spawnvpe.obj -MD -MP -MF misc/$(DEPDIR)/libarm64_libmingwex_a-spawnvpe.Tpo -c -o misc/libarm64_libmingwex_a-spawnvpe.obj `if test -f 'misc/spawnvpe.c'; then $(CYGPATH_W) 'misc/spawnvpe.c'; else $(CYGPATH_W) '$(srcdir)/misc/spawnvpe.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/libarm64_libmingwex_a-spawnvpe.Tpo misc/$(DEPDIR)/libarm64_libmingwex_a-spawnvpe.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/spawnvpe.c' object='misc/libarm64_libmingwex_a-spawnvpe.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/libarm64_libmingwex_a-spawnvpe.obj `if test -f 'misc/spawnvpe.c'; then $(CYGPATH_W) 'misc/spawnvpe.c'; else $(CYGPATH_W) '$(srcdir)/misc/spawnvpe.c'; fi`
 
 misc/libarm64_libmingwex_a-strnlen.o: misc/strnlen.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/libarm64_libmingwex_a-strnlen.o -MD -MP -MF misc/$(DEPDIR)/libarm64_libmingwex_a-strnlen.Tpo -c -o misc/libarm64_libmingwex_a-strnlen.o `test -f 'misc/strnlen.c' || echo '$(srcdir)/'`misc/strnlen.c
@@ -70316,10 +70008,6 @@ distclean: distclean-am
 	-rm -f misc/$(DEPDIR)/lib32_libmingwex_a-mkstemp.Po
 	-rm -f misc/$(DEPDIR)/lib32_libmingwex_a-seterrno.Po
 	-rm -f misc/$(DEPDIR)/lib32_libmingwex_a-sleep.Po
-	-rm -f misc/$(DEPDIR)/lib32_libmingwex_a-spawnv.Po
-	-rm -f misc/$(DEPDIR)/lib32_libmingwex_a-spawnve.Po
-	-rm -f misc/$(DEPDIR)/lib32_libmingwex_a-spawnvp.Po
-	-rm -f misc/$(DEPDIR)/lib32_libmingwex_a-spawnvpe.Po
 	-rm -f misc/$(DEPDIR)/lib32_libmingwex_a-strnlen.Po
 	-rm -f misc/$(DEPDIR)/lib32_libmingwex_a-strsafe.Po
 	-rm -f misc/$(DEPDIR)/lib32_libmingwex_a-strtoimax.Po
@@ -70433,10 +70121,6 @@ distclean: distclean-am
 	-rm -f misc/$(DEPDIR)/lib64_libmingwex_a-mkstemp.Po
 	-rm -f misc/$(DEPDIR)/lib64_libmingwex_a-seterrno.Po
 	-rm -f misc/$(DEPDIR)/lib64_libmingwex_a-sleep.Po
-	-rm -f misc/$(DEPDIR)/lib64_libmingwex_a-spawnv.Po
-	-rm -f misc/$(DEPDIR)/lib64_libmingwex_a-spawnve.Po
-	-rm -f misc/$(DEPDIR)/lib64_libmingwex_a-spawnvp.Po
-	-rm -f misc/$(DEPDIR)/lib64_libmingwex_a-spawnvpe.Po
 	-rm -f misc/$(DEPDIR)/lib64_libmingwex_a-strnlen.Po
 	-rm -f misc/$(DEPDIR)/lib64_libmingwex_a-strsafe.Po
 	-rm -f misc/$(DEPDIR)/lib64_libmingwex_a-strtoimax.Po
@@ -70554,10 +70238,6 @@ distclean: distclean-am
 	-rm -f misc/$(DEPDIR)/libarm32_libmingwex_a-mkstemp.Po
 	-rm -f misc/$(DEPDIR)/libarm32_libmingwex_a-seterrno.Po
 	-rm -f misc/$(DEPDIR)/libarm32_libmingwex_a-sleep.Po
-	-rm -f misc/$(DEPDIR)/libarm32_libmingwex_a-spawnv.Po
-	-rm -f misc/$(DEPDIR)/libarm32_libmingwex_a-spawnve.Po
-	-rm -f misc/$(DEPDIR)/libarm32_libmingwex_a-spawnvp.Po
-	-rm -f misc/$(DEPDIR)/libarm32_libmingwex_a-spawnvpe.Po
 	-rm -f misc/$(DEPDIR)/libarm32_libmingwex_a-strnlen.Po
 	-rm -f misc/$(DEPDIR)/libarm32_libmingwex_a-strsafe.Po
 	-rm -f misc/$(DEPDIR)/libarm32_libmingwex_a-strtoimax.Po
@@ -70657,10 +70337,6 @@ distclean: distclean-am
 	-rm -f misc/$(DEPDIR)/libarm64_libmingwex_a-mkstemp.Po
 	-rm -f misc/$(DEPDIR)/libarm64_libmingwex_a-seterrno.Po
 	-rm -f misc/$(DEPDIR)/libarm64_libmingwex_a-sleep.Po
-	-rm -f misc/$(DEPDIR)/libarm64_libmingwex_a-spawnv.Po
-	-rm -f misc/$(DEPDIR)/libarm64_libmingwex_a-spawnve.Po
-	-rm -f misc/$(DEPDIR)/libarm64_libmingwex_a-spawnvp.Po
-	-rm -f misc/$(DEPDIR)/libarm64_libmingwex_a-spawnvpe.Po
 	-rm -f misc/$(DEPDIR)/libarm64_libmingwex_a-strnlen.Po
 	-rm -f misc/$(DEPDIR)/libarm64_libmingwex_a-strsafe.Po
 	-rm -f misc/$(DEPDIR)/libarm64_libmingwex_a-strtoimax.Po
@@ -73493,10 +73169,6 @@ maintainer-clean: maintainer-clean-am
 	-rm -f misc/$(DEPDIR)/lib32_libmingwex_a-mkstemp.Po
 	-rm -f misc/$(DEPDIR)/lib32_libmingwex_a-seterrno.Po
 	-rm -f misc/$(DEPDIR)/lib32_libmingwex_a-sleep.Po
-	-rm -f misc/$(DEPDIR)/lib32_libmingwex_a-spawnv.Po
-	-rm -f misc/$(DEPDIR)/lib32_libmingwex_a-spawnve.Po
-	-rm -f misc/$(DEPDIR)/lib32_libmingwex_a-spawnvp.Po
-	-rm -f misc/$(DEPDIR)/lib32_libmingwex_a-spawnvpe.Po
 	-rm -f misc/$(DEPDIR)/lib32_libmingwex_a-strnlen.Po
 	-rm -f misc/$(DEPDIR)/lib32_libmingwex_a-strsafe.Po
 	-rm -f misc/$(DEPDIR)/lib32_libmingwex_a-strtoimax.Po
@@ -73610,10 +73282,6 @@ maintainer-clean: maintainer-clean-am
 	-rm -f misc/$(DEPDIR)/lib64_libmingwex_a-mkstemp.Po
 	-rm -f misc/$(DEPDIR)/lib64_libmingwex_a-seterrno.Po
 	-rm -f misc/$(DEPDIR)/lib64_libmingwex_a-sleep.Po
-	-rm -f misc/$(DEPDIR)/lib64_libmingwex_a-spawnv.Po
-	-rm -f misc/$(DEPDIR)/lib64_libmingwex_a-spawnve.Po
-	-rm -f misc/$(DEPDIR)/lib64_libmingwex_a-spawnvp.Po
-	-rm -f misc/$(DEPDIR)/lib64_libmingwex_a-spawnvpe.Po
 	-rm -f misc/$(DEPDIR)/lib64_libmingwex_a-strnlen.Po
 	-rm -f misc/$(DEPDIR)/lib64_libmingwex_a-strsafe.Po
 	-rm -f misc/$(DEPDIR)/lib64_libmingwex_a-strtoimax.Po
@@ -73731,10 +73399,6 @@ maintainer-clean: maintainer-clean-am
 	-rm -f misc/$(DEPDIR)/libarm32_libmingwex_a-mkstemp.Po
 	-rm -f misc/$(DEPDIR)/libarm32_libmingwex_a-seterrno.Po
 	-rm -f misc/$(DEPDIR)/libarm32_libmingwex_a-sleep.Po
-	-rm -f misc/$(DEPDIR)/libarm32_libmingwex_a-spawnv.Po
-	-rm -f misc/$(DEPDIR)/libarm32_libmingwex_a-spawnve.Po
-	-rm -f misc/$(DEPDIR)/libarm32_libmingwex_a-spawnvp.Po
-	-rm -f misc/$(DEPDIR)/libarm32_libmingwex_a-spawnvpe.Po
 	-rm -f misc/$(DEPDIR)/libarm32_libmingwex_a-strnlen.Po
 	-rm -f misc/$(DEPDIR)/libarm32_libmingwex_a-strsafe.Po
 	-rm -f misc/$(DEPDIR)/libarm32_libmingwex_a-strtoimax.Po
@@ -73834,10 +73498,6 @@ maintainer-clean: maintainer-clean-am
 	-rm -f misc/$(DEPDIR)/libarm64_libmingwex_a-mkstemp.Po
 	-rm -f misc/$(DEPDIR)/libarm64_libmingwex_a-seterrno.Po
 	-rm -f misc/$(DEPDIR)/libarm64_libmingwex_a-sleep.Po
-	-rm -f misc/$(DEPDIR)/libarm64_libmingwex_a-spawnv.Po
-	-rm -f misc/$(DEPDIR)/libarm64_libmingwex_a-spawnve.Po
-	-rm -f misc/$(DEPDIR)/libarm64_libmingwex_a-spawnvp.Po
-	-rm -f misc/$(DEPDIR)/libarm64_libmingwex_a-spawnvpe.Po
 	-rm -f misc/$(DEPDIR)/libarm64_libmingwex_a-strnlen.Po
 	-rm -f misc/$(DEPDIR)/libarm64_libmingwex_a-strsafe.Po
 	-rm -f misc/$(DEPDIR)/libarm64_libmingwex_a-strtoimax.Po
