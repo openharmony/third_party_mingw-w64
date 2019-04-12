@@ -161,6 +161,12 @@ host_triplet = @host@
 @ENABLE_SOFTMATH_FALSE@  math/arm/truncf.S \
 @ENABLE_SOFTMATH_FALSE@  math/arm-common/copysignl.c \
 @ENABLE_SOFTMATH_FALSE@  math/arm-common/log2.c \
+@ENABLE_SOFTMATH_FALSE@  math/arm-common/remainder.c \
+@ENABLE_SOFTMATH_FALSE@  math/arm-common/remainderf.c \
+@ENABLE_SOFTMATH_FALSE@  math/arm-common/remainderl.c \
+@ENABLE_SOFTMATH_FALSE@  math/arm-common/remquo.c \
+@ENABLE_SOFTMATH_FALSE@  math/arm-common/remquof.c \
+@ENABLE_SOFTMATH_FALSE@  math/arm-common/remquol.c \
 @ENABLE_SOFTMATH_FALSE@  math/arm-common/scalbn.c
 
 @ENABLE_SOFTMATH_TRUE@am__append_3 = \
@@ -3889,6 +3895,9 @@ am__libarm32_libmsvcrt_os_a_SOURCES_DIST = misc/onexit_table.c \
 	math/arm/nearbyint.S math/arm/nearbyintf.S \
 	math/arm/nearbyintl.S math/arm/trunc.S math/arm/truncf.S \
 	math/arm-common/copysignl.c math/arm-common/log2.c \
+	math/arm-common/remainder.c math/arm-common/remainderf.c \
+	math/arm-common/remainderl.c math/arm-common/remquo.c \
+	math/arm-common/remquof.c math/arm-common/remquol.c \
 	math/arm-common/scalbn.c lib-common/msvcrt.def.in
 am__objects_125 = misc/libarm32_libmsvcrt_os_a-onexit_table.$(OBJEXT) \
 	misc/libarm32_libmsvcrt_os_a-register_tls_atexit.$(OBJEXT) \
@@ -3952,6 +3961,12 @@ am__objects_126 = $(am__objects_125) \
 @ENABLE_SOFTMATH_FALSE@	math/arm/libarm32_libmsvcrt_os_a-truncf.$(OBJEXT) \
 @ENABLE_SOFTMATH_FALSE@	math/arm-common/libarm32_libmsvcrt_os_a-copysignl.$(OBJEXT) \
 @ENABLE_SOFTMATH_FALSE@	math/arm-common/libarm32_libmsvcrt_os_a-log2.$(OBJEXT) \
+@ENABLE_SOFTMATH_FALSE@	math/arm-common/libarm32_libmsvcrt_os_a-remainder.$(OBJEXT) \
+@ENABLE_SOFTMATH_FALSE@	math/arm-common/libarm32_libmsvcrt_os_a-remainderf.$(OBJEXT) \
+@ENABLE_SOFTMATH_FALSE@	math/arm-common/libarm32_libmsvcrt_os_a-remainderl.$(OBJEXT) \
+@ENABLE_SOFTMATH_FALSE@	math/arm-common/libarm32_libmsvcrt_os_a-remquo.$(OBJEXT) \
+@ENABLE_SOFTMATH_FALSE@	math/arm-common/libarm32_libmsvcrt_os_a-remquof.$(OBJEXT) \
+@ENABLE_SOFTMATH_FALSE@	math/arm-common/libarm32_libmsvcrt_os_a-remquol.$(OBJEXT) \
 @ENABLE_SOFTMATH_FALSE@	math/arm-common/libarm32_libmsvcrt_os_a-scalbn.$(OBJEXT)
 am__objects_128 = $(am__objects_126) \
 	misc/libarm32_libmsvcrt_os_a-__p___argv.$(OBJEXT) \
@@ -4957,7 +4972,10 @@ am__libarm64_libmsvcrt_os_a_SOURCES_DIST = misc/onexit_table.c \
 	secapi/sprintf_s.c secapi/strerror_s.c secapi/vsprintf_s.c \
 	secapi/wmemcpy_s.c secapi/wmemmove_s.c stdio/fseeki64.c \
 	stdio/mingw_lock.c math/arm-common/copysignl.c \
-	math/arm-common/log2.c math/arm-common/scalbn.c \
+	math/arm-common/log2.c math/arm-common/remainder.c \
+	math/arm-common/remainderf.c math/arm-common/remainderl.c \
+	math/arm-common/remquo.c math/arm-common/remquof.c \
+	math/arm-common/remquol.c math/arm-common/scalbn.c \
 	math/arm64/exp2.S math/arm64/exp2f.S math/arm64/nearbyint.S \
 	math/arm64/nearbyintf.S math/arm64/nearbyintl.S \
 	math/arm64/trunc.S math/arm64/truncf.S misc/__p___argv.c \
@@ -5020,6 +5038,12 @@ am__objects_163 = $(am__objects_162) \
 am__objects_164 = $(am__objects_163) \
 	math/arm-common/libarm64_libmsvcrt_os_a-copysignl.$(OBJEXT) \
 	math/arm-common/libarm64_libmsvcrt_os_a-log2.$(OBJEXT) \
+	math/arm-common/libarm64_libmsvcrt_os_a-remainder.$(OBJEXT) \
+	math/arm-common/libarm64_libmsvcrt_os_a-remainderf.$(OBJEXT) \
+	math/arm-common/libarm64_libmsvcrt_os_a-remainderl.$(OBJEXT) \
+	math/arm-common/libarm64_libmsvcrt_os_a-remquo.$(OBJEXT) \
+	math/arm-common/libarm64_libmsvcrt_os_a-remquof.$(OBJEXT) \
+	math/arm-common/libarm64_libmsvcrt_os_a-remquol.$(OBJEXT) \
 	math/arm-common/libarm64_libmsvcrt_os_a-scalbn.$(OBJEXT) \
 	math/arm64/libarm64_libmsvcrt_os_a-exp2.$(OBJEXT) \
 	math/arm64/libarm64_libmsvcrt_os_a-exp2f.$(OBJEXT) \
@@ -7534,11 +7558,23 @@ am__depfiles_remade = ./$(DEPDIR)/lib32_libm_a-_libm_dummy.Po \
 	math/arm-common/$(DEPDIR)/libarm32_libmingwex_a-sincos.Po \
 	math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-copysignl.Po \
 	math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-log2.Po \
+	math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-remainder.Po \
+	math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-remainderf.Po \
+	math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-remainderl.Po \
+	math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-remquo.Po \
+	math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-remquof.Po \
+	math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-remquol.Po \
 	math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-scalbn.Po \
 	math/arm-common/$(DEPDIR)/libarm64_libmingwex_a-ldexpl.Po \
 	math/arm-common/$(DEPDIR)/libarm64_libmingwex_a-sincos.Po \
 	math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-copysignl.Po \
 	math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-log2.Po \
+	math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-remainder.Po \
+	math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-remainderf.Po \
+	math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-remainderl.Po \
+	math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-remquo.Po \
+	math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-remquof.Po \
+	math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-remquol.Po \
 	math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-scalbn.Po \
 	math/arm/$(DEPDIR)/libarm32_libmingwex_a-_chgsignl.Po \
 	math/arm/$(DEPDIR)/libarm32_libmsvcrt_os_a-exp2.Po \
@@ -10016,6 +10052,12 @@ src_msvcrtarm64 = \
   $(src_msvcrt) \
   math/arm-common/copysignl.c \
   math/arm-common/log2.c \
+  math/arm-common/remainder.c \
+  math/arm-common/remainderf.c \
+  math/arm-common/remainderl.c \
+  math/arm-common/remquo.c \
+  math/arm-common/remquof.c \
+  math/arm-common/remquol.c \
   math/arm-common/scalbn.c \
   math/arm64/exp2.S \
   math/arm64/exp2f.S \
@@ -17710,6 +17752,24 @@ math/arm-common/libarm32_libmsvcrt_os_a-copysignl.$(OBJEXT):  \
 math/arm-common/libarm32_libmsvcrt_os_a-log2.$(OBJEXT):  \
 	math/arm-common/$(am__dirstamp) \
 	math/arm-common/$(DEPDIR)/$(am__dirstamp)
+math/arm-common/libarm32_libmsvcrt_os_a-remainder.$(OBJEXT):  \
+	math/arm-common/$(am__dirstamp) \
+	math/arm-common/$(DEPDIR)/$(am__dirstamp)
+math/arm-common/libarm32_libmsvcrt_os_a-remainderf.$(OBJEXT):  \
+	math/arm-common/$(am__dirstamp) \
+	math/arm-common/$(DEPDIR)/$(am__dirstamp)
+math/arm-common/libarm32_libmsvcrt_os_a-remainderl.$(OBJEXT):  \
+	math/arm-common/$(am__dirstamp) \
+	math/arm-common/$(DEPDIR)/$(am__dirstamp)
+math/arm-common/libarm32_libmsvcrt_os_a-remquo.$(OBJEXT):  \
+	math/arm-common/$(am__dirstamp) \
+	math/arm-common/$(DEPDIR)/$(am__dirstamp)
+math/arm-common/libarm32_libmsvcrt_os_a-remquof.$(OBJEXT):  \
+	math/arm-common/$(am__dirstamp) \
+	math/arm-common/$(DEPDIR)/$(am__dirstamp)
+math/arm-common/libarm32_libmsvcrt_os_a-remquol.$(OBJEXT):  \
+	math/arm-common/$(am__dirstamp) \
+	math/arm-common/$(DEPDIR)/$(am__dirstamp)
 math/arm-common/libarm32_libmsvcrt_os_a-scalbn.$(OBJEXT):  \
 	math/arm-common/$(am__dirstamp) \
 	math/arm-common/$(DEPDIR)/$(am__dirstamp)
@@ -19170,6 +19230,24 @@ math/arm-common/libarm64_libmsvcrt_os_a-copysignl.$(OBJEXT):  \
 	math/arm-common/$(am__dirstamp) \
 	math/arm-common/$(DEPDIR)/$(am__dirstamp)
 math/arm-common/libarm64_libmsvcrt_os_a-log2.$(OBJEXT):  \
+	math/arm-common/$(am__dirstamp) \
+	math/arm-common/$(DEPDIR)/$(am__dirstamp)
+math/arm-common/libarm64_libmsvcrt_os_a-remainder.$(OBJEXT):  \
+	math/arm-common/$(am__dirstamp) \
+	math/arm-common/$(DEPDIR)/$(am__dirstamp)
+math/arm-common/libarm64_libmsvcrt_os_a-remainderf.$(OBJEXT):  \
+	math/arm-common/$(am__dirstamp) \
+	math/arm-common/$(DEPDIR)/$(am__dirstamp)
+math/arm-common/libarm64_libmsvcrt_os_a-remainderl.$(OBJEXT):  \
+	math/arm-common/$(am__dirstamp) \
+	math/arm-common/$(DEPDIR)/$(am__dirstamp)
+math/arm-common/libarm64_libmsvcrt_os_a-remquo.$(OBJEXT):  \
+	math/arm-common/$(am__dirstamp) \
+	math/arm-common/$(DEPDIR)/$(am__dirstamp)
+math/arm-common/libarm64_libmsvcrt_os_a-remquof.$(OBJEXT):  \
+	math/arm-common/$(am__dirstamp) \
+	math/arm-common/$(DEPDIR)/$(am__dirstamp)
+math/arm-common/libarm64_libmsvcrt_os_a-remquol.$(OBJEXT):  \
 	math/arm-common/$(am__dirstamp) \
 	math/arm-common/$(DEPDIR)/$(am__dirstamp)
 math/arm-common/libarm64_libmsvcrt_os_a-scalbn.$(OBJEXT):  \
@@ -22064,11 +22142,23 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@math/arm-common/$(DEPDIR)/libarm32_libmingwex_a-sincos.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-copysignl.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-log2.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-remainder.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-remainderf.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-remainderl.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-remquo.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-remquof.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-remquol.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-scalbn.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@math/arm-common/$(DEPDIR)/libarm64_libmingwex_a-ldexpl.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@math/arm-common/$(DEPDIR)/libarm64_libmingwex_a-sincos.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-copysignl.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-log2.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-remainder.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-remainderf.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-remainderl.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-remquo.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-remquof.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-remquol.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-scalbn.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@math/arm/$(DEPDIR)/libarm32_libmingwex_a-_chgsignl.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@math/arm/$(DEPDIR)/libarm32_libmsvcrt_os_a-exp2.Po@am__quote@ # am--include-marker
@@ -53528,6 +53618,90 @@ math/arm-common/libarm32_libmsvcrt_os_a-log2.obj: math/arm-common/log2.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/arm-common/libarm32_libmsvcrt_os_a-log2.obj `if test -f 'math/arm-common/log2.c'; then $(CYGPATH_W) 'math/arm-common/log2.c'; else $(CYGPATH_W) '$(srcdir)/math/arm-common/log2.c'; fi`
 
+math/arm-common/libarm32_libmsvcrt_os_a-remainder.o: math/arm-common/remainder.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/arm-common/libarm32_libmsvcrt_os_a-remainder.o -MD -MP -MF math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-remainder.Tpo -c -o math/arm-common/libarm32_libmsvcrt_os_a-remainder.o `test -f 'math/arm-common/remainder.c' || echo '$(srcdir)/'`math/arm-common/remainder.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-remainder.Tpo math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-remainder.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/arm-common/remainder.c' object='math/arm-common/libarm32_libmsvcrt_os_a-remainder.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/arm-common/libarm32_libmsvcrt_os_a-remainder.o `test -f 'math/arm-common/remainder.c' || echo '$(srcdir)/'`math/arm-common/remainder.c
+
+math/arm-common/libarm32_libmsvcrt_os_a-remainder.obj: math/arm-common/remainder.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/arm-common/libarm32_libmsvcrt_os_a-remainder.obj -MD -MP -MF math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-remainder.Tpo -c -o math/arm-common/libarm32_libmsvcrt_os_a-remainder.obj `if test -f 'math/arm-common/remainder.c'; then $(CYGPATH_W) 'math/arm-common/remainder.c'; else $(CYGPATH_W) '$(srcdir)/math/arm-common/remainder.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-remainder.Tpo math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-remainder.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/arm-common/remainder.c' object='math/arm-common/libarm32_libmsvcrt_os_a-remainder.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/arm-common/libarm32_libmsvcrt_os_a-remainder.obj `if test -f 'math/arm-common/remainder.c'; then $(CYGPATH_W) 'math/arm-common/remainder.c'; else $(CYGPATH_W) '$(srcdir)/math/arm-common/remainder.c'; fi`
+
+math/arm-common/libarm32_libmsvcrt_os_a-remainderf.o: math/arm-common/remainderf.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/arm-common/libarm32_libmsvcrt_os_a-remainderf.o -MD -MP -MF math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-remainderf.Tpo -c -o math/arm-common/libarm32_libmsvcrt_os_a-remainderf.o `test -f 'math/arm-common/remainderf.c' || echo '$(srcdir)/'`math/arm-common/remainderf.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-remainderf.Tpo math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-remainderf.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/arm-common/remainderf.c' object='math/arm-common/libarm32_libmsvcrt_os_a-remainderf.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/arm-common/libarm32_libmsvcrt_os_a-remainderf.o `test -f 'math/arm-common/remainderf.c' || echo '$(srcdir)/'`math/arm-common/remainderf.c
+
+math/arm-common/libarm32_libmsvcrt_os_a-remainderf.obj: math/arm-common/remainderf.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/arm-common/libarm32_libmsvcrt_os_a-remainderf.obj -MD -MP -MF math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-remainderf.Tpo -c -o math/arm-common/libarm32_libmsvcrt_os_a-remainderf.obj `if test -f 'math/arm-common/remainderf.c'; then $(CYGPATH_W) 'math/arm-common/remainderf.c'; else $(CYGPATH_W) '$(srcdir)/math/arm-common/remainderf.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-remainderf.Tpo math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-remainderf.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/arm-common/remainderf.c' object='math/arm-common/libarm32_libmsvcrt_os_a-remainderf.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/arm-common/libarm32_libmsvcrt_os_a-remainderf.obj `if test -f 'math/arm-common/remainderf.c'; then $(CYGPATH_W) 'math/arm-common/remainderf.c'; else $(CYGPATH_W) '$(srcdir)/math/arm-common/remainderf.c'; fi`
+
+math/arm-common/libarm32_libmsvcrt_os_a-remainderl.o: math/arm-common/remainderl.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/arm-common/libarm32_libmsvcrt_os_a-remainderl.o -MD -MP -MF math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-remainderl.Tpo -c -o math/arm-common/libarm32_libmsvcrt_os_a-remainderl.o `test -f 'math/arm-common/remainderl.c' || echo '$(srcdir)/'`math/arm-common/remainderl.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-remainderl.Tpo math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-remainderl.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/arm-common/remainderl.c' object='math/arm-common/libarm32_libmsvcrt_os_a-remainderl.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/arm-common/libarm32_libmsvcrt_os_a-remainderl.o `test -f 'math/arm-common/remainderl.c' || echo '$(srcdir)/'`math/arm-common/remainderl.c
+
+math/arm-common/libarm32_libmsvcrt_os_a-remainderl.obj: math/arm-common/remainderl.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/arm-common/libarm32_libmsvcrt_os_a-remainderl.obj -MD -MP -MF math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-remainderl.Tpo -c -o math/arm-common/libarm32_libmsvcrt_os_a-remainderl.obj `if test -f 'math/arm-common/remainderl.c'; then $(CYGPATH_W) 'math/arm-common/remainderl.c'; else $(CYGPATH_W) '$(srcdir)/math/arm-common/remainderl.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-remainderl.Tpo math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-remainderl.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/arm-common/remainderl.c' object='math/arm-common/libarm32_libmsvcrt_os_a-remainderl.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/arm-common/libarm32_libmsvcrt_os_a-remainderl.obj `if test -f 'math/arm-common/remainderl.c'; then $(CYGPATH_W) 'math/arm-common/remainderl.c'; else $(CYGPATH_W) '$(srcdir)/math/arm-common/remainderl.c'; fi`
+
+math/arm-common/libarm32_libmsvcrt_os_a-remquo.o: math/arm-common/remquo.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/arm-common/libarm32_libmsvcrt_os_a-remquo.o -MD -MP -MF math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-remquo.Tpo -c -o math/arm-common/libarm32_libmsvcrt_os_a-remquo.o `test -f 'math/arm-common/remquo.c' || echo '$(srcdir)/'`math/arm-common/remquo.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-remquo.Tpo math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-remquo.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/arm-common/remquo.c' object='math/arm-common/libarm32_libmsvcrt_os_a-remquo.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/arm-common/libarm32_libmsvcrt_os_a-remquo.o `test -f 'math/arm-common/remquo.c' || echo '$(srcdir)/'`math/arm-common/remquo.c
+
+math/arm-common/libarm32_libmsvcrt_os_a-remquo.obj: math/arm-common/remquo.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/arm-common/libarm32_libmsvcrt_os_a-remquo.obj -MD -MP -MF math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-remquo.Tpo -c -o math/arm-common/libarm32_libmsvcrt_os_a-remquo.obj `if test -f 'math/arm-common/remquo.c'; then $(CYGPATH_W) 'math/arm-common/remquo.c'; else $(CYGPATH_W) '$(srcdir)/math/arm-common/remquo.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-remquo.Tpo math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-remquo.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/arm-common/remquo.c' object='math/arm-common/libarm32_libmsvcrt_os_a-remquo.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/arm-common/libarm32_libmsvcrt_os_a-remquo.obj `if test -f 'math/arm-common/remquo.c'; then $(CYGPATH_W) 'math/arm-common/remquo.c'; else $(CYGPATH_W) '$(srcdir)/math/arm-common/remquo.c'; fi`
+
+math/arm-common/libarm32_libmsvcrt_os_a-remquof.o: math/arm-common/remquof.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/arm-common/libarm32_libmsvcrt_os_a-remquof.o -MD -MP -MF math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-remquof.Tpo -c -o math/arm-common/libarm32_libmsvcrt_os_a-remquof.o `test -f 'math/arm-common/remquof.c' || echo '$(srcdir)/'`math/arm-common/remquof.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-remquof.Tpo math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-remquof.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/arm-common/remquof.c' object='math/arm-common/libarm32_libmsvcrt_os_a-remquof.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/arm-common/libarm32_libmsvcrt_os_a-remquof.o `test -f 'math/arm-common/remquof.c' || echo '$(srcdir)/'`math/arm-common/remquof.c
+
+math/arm-common/libarm32_libmsvcrt_os_a-remquof.obj: math/arm-common/remquof.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/arm-common/libarm32_libmsvcrt_os_a-remquof.obj -MD -MP -MF math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-remquof.Tpo -c -o math/arm-common/libarm32_libmsvcrt_os_a-remquof.obj `if test -f 'math/arm-common/remquof.c'; then $(CYGPATH_W) 'math/arm-common/remquof.c'; else $(CYGPATH_W) '$(srcdir)/math/arm-common/remquof.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-remquof.Tpo math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-remquof.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/arm-common/remquof.c' object='math/arm-common/libarm32_libmsvcrt_os_a-remquof.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/arm-common/libarm32_libmsvcrt_os_a-remquof.obj `if test -f 'math/arm-common/remquof.c'; then $(CYGPATH_W) 'math/arm-common/remquof.c'; else $(CYGPATH_W) '$(srcdir)/math/arm-common/remquof.c'; fi`
+
+math/arm-common/libarm32_libmsvcrt_os_a-remquol.o: math/arm-common/remquol.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/arm-common/libarm32_libmsvcrt_os_a-remquol.o -MD -MP -MF math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-remquol.Tpo -c -o math/arm-common/libarm32_libmsvcrt_os_a-remquol.o `test -f 'math/arm-common/remquol.c' || echo '$(srcdir)/'`math/arm-common/remquol.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-remquol.Tpo math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-remquol.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/arm-common/remquol.c' object='math/arm-common/libarm32_libmsvcrt_os_a-remquol.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/arm-common/libarm32_libmsvcrt_os_a-remquol.o `test -f 'math/arm-common/remquol.c' || echo '$(srcdir)/'`math/arm-common/remquol.c
+
+math/arm-common/libarm32_libmsvcrt_os_a-remquol.obj: math/arm-common/remquol.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/arm-common/libarm32_libmsvcrt_os_a-remquol.obj -MD -MP -MF math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-remquol.Tpo -c -o math/arm-common/libarm32_libmsvcrt_os_a-remquol.obj `if test -f 'math/arm-common/remquol.c'; then $(CYGPATH_W) 'math/arm-common/remquol.c'; else $(CYGPATH_W) '$(srcdir)/math/arm-common/remquol.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-remquol.Tpo math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-remquol.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/arm-common/remquol.c' object='math/arm-common/libarm32_libmsvcrt_os_a-remquol.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/arm-common/libarm32_libmsvcrt_os_a-remquol.obj `if test -f 'math/arm-common/remquol.c'; then $(CYGPATH_W) 'math/arm-common/remquol.c'; else $(CYGPATH_W) '$(srcdir)/math/arm-common/remquol.c'; fi`
+
 math/arm-common/libarm32_libmsvcrt_os_a-scalbn.o: math/arm-common/scalbn.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/arm-common/libarm32_libmsvcrt_os_a-scalbn.o -MD -MP -MF math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-scalbn.Tpo -c -o math/arm-common/libarm32_libmsvcrt_os_a-scalbn.o `test -f 'math/arm-common/scalbn.c' || echo '$(srcdir)/'`math/arm-common/scalbn.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-scalbn.Tpo math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-scalbn.Po
@@ -62082,6 +62256,90 @@ math/arm-common/libarm64_libmsvcrt_os_a-log2.obj: math/arm-common/log2.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/arm-common/libarm64_libmsvcrt_os_a-log2.obj `if test -f 'math/arm-common/log2.c'; then $(CYGPATH_W) 'math/arm-common/log2.c'; else $(CYGPATH_W) '$(srcdir)/math/arm-common/log2.c'; fi`
 
+math/arm-common/libarm64_libmsvcrt_os_a-remainder.o: math/arm-common/remainder.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/arm-common/libarm64_libmsvcrt_os_a-remainder.o -MD -MP -MF math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-remainder.Tpo -c -o math/arm-common/libarm64_libmsvcrt_os_a-remainder.o `test -f 'math/arm-common/remainder.c' || echo '$(srcdir)/'`math/arm-common/remainder.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-remainder.Tpo math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-remainder.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/arm-common/remainder.c' object='math/arm-common/libarm64_libmsvcrt_os_a-remainder.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/arm-common/libarm64_libmsvcrt_os_a-remainder.o `test -f 'math/arm-common/remainder.c' || echo '$(srcdir)/'`math/arm-common/remainder.c
+
+math/arm-common/libarm64_libmsvcrt_os_a-remainder.obj: math/arm-common/remainder.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/arm-common/libarm64_libmsvcrt_os_a-remainder.obj -MD -MP -MF math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-remainder.Tpo -c -o math/arm-common/libarm64_libmsvcrt_os_a-remainder.obj `if test -f 'math/arm-common/remainder.c'; then $(CYGPATH_W) 'math/arm-common/remainder.c'; else $(CYGPATH_W) '$(srcdir)/math/arm-common/remainder.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-remainder.Tpo math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-remainder.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/arm-common/remainder.c' object='math/arm-common/libarm64_libmsvcrt_os_a-remainder.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/arm-common/libarm64_libmsvcrt_os_a-remainder.obj `if test -f 'math/arm-common/remainder.c'; then $(CYGPATH_W) 'math/arm-common/remainder.c'; else $(CYGPATH_W) '$(srcdir)/math/arm-common/remainder.c'; fi`
+
+math/arm-common/libarm64_libmsvcrt_os_a-remainderf.o: math/arm-common/remainderf.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/arm-common/libarm64_libmsvcrt_os_a-remainderf.o -MD -MP -MF math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-remainderf.Tpo -c -o math/arm-common/libarm64_libmsvcrt_os_a-remainderf.o `test -f 'math/arm-common/remainderf.c' || echo '$(srcdir)/'`math/arm-common/remainderf.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-remainderf.Tpo math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-remainderf.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/arm-common/remainderf.c' object='math/arm-common/libarm64_libmsvcrt_os_a-remainderf.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/arm-common/libarm64_libmsvcrt_os_a-remainderf.o `test -f 'math/arm-common/remainderf.c' || echo '$(srcdir)/'`math/arm-common/remainderf.c
+
+math/arm-common/libarm64_libmsvcrt_os_a-remainderf.obj: math/arm-common/remainderf.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/arm-common/libarm64_libmsvcrt_os_a-remainderf.obj -MD -MP -MF math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-remainderf.Tpo -c -o math/arm-common/libarm64_libmsvcrt_os_a-remainderf.obj `if test -f 'math/arm-common/remainderf.c'; then $(CYGPATH_W) 'math/arm-common/remainderf.c'; else $(CYGPATH_W) '$(srcdir)/math/arm-common/remainderf.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-remainderf.Tpo math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-remainderf.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/arm-common/remainderf.c' object='math/arm-common/libarm64_libmsvcrt_os_a-remainderf.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/arm-common/libarm64_libmsvcrt_os_a-remainderf.obj `if test -f 'math/arm-common/remainderf.c'; then $(CYGPATH_W) 'math/arm-common/remainderf.c'; else $(CYGPATH_W) '$(srcdir)/math/arm-common/remainderf.c'; fi`
+
+math/arm-common/libarm64_libmsvcrt_os_a-remainderl.o: math/arm-common/remainderl.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/arm-common/libarm64_libmsvcrt_os_a-remainderl.o -MD -MP -MF math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-remainderl.Tpo -c -o math/arm-common/libarm64_libmsvcrt_os_a-remainderl.o `test -f 'math/arm-common/remainderl.c' || echo '$(srcdir)/'`math/arm-common/remainderl.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-remainderl.Tpo math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-remainderl.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/arm-common/remainderl.c' object='math/arm-common/libarm64_libmsvcrt_os_a-remainderl.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/arm-common/libarm64_libmsvcrt_os_a-remainderl.o `test -f 'math/arm-common/remainderl.c' || echo '$(srcdir)/'`math/arm-common/remainderl.c
+
+math/arm-common/libarm64_libmsvcrt_os_a-remainderl.obj: math/arm-common/remainderl.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/arm-common/libarm64_libmsvcrt_os_a-remainderl.obj -MD -MP -MF math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-remainderl.Tpo -c -o math/arm-common/libarm64_libmsvcrt_os_a-remainderl.obj `if test -f 'math/arm-common/remainderl.c'; then $(CYGPATH_W) 'math/arm-common/remainderl.c'; else $(CYGPATH_W) '$(srcdir)/math/arm-common/remainderl.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-remainderl.Tpo math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-remainderl.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/arm-common/remainderl.c' object='math/arm-common/libarm64_libmsvcrt_os_a-remainderl.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/arm-common/libarm64_libmsvcrt_os_a-remainderl.obj `if test -f 'math/arm-common/remainderl.c'; then $(CYGPATH_W) 'math/arm-common/remainderl.c'; else $(CYGPATH_W) '$(srcdir)/math/arm-common/remainderl.c'; fi`
+
+math/arm-common/libarm64_libmsvcrt_os_a-remquo.o: math/arm-common/remquo.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/arm-common/libarm64_libmsvcrt_os_a-remquo.o -MD -MP -MF math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-remquo.Tpo -c -o math/arm-common/libarm64_libmsvcrt_os_a-remquo.o `test -f 'math/arm-common/remquo.c' || echo '$(srcdir)/'`math/arm-common/remquo.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-remquo.Tpo math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-remquo.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/arm-common/remquo.c' object='math/arm-common/libarm64_libmsvcrt_os_a-remquo.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/arm-common/libarm64_libmsvcrt_os_a-remquo.o `test -f 'math/arm-common/remquo.c' || echo '$(srcdir)/'`math/arm-common/remquo.c
+
+math/arm-common/libarm64_libmsvcrt_os_a-remquo.obj: math/arm-common/remquo.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/arm-common/libarm64_libmsvcrt_os_a-remquo.obj -MD -MP -MF math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-remquo.Tpo -c -o math/arm-common/libarm64_libmsvcrt_os_a-remquo.obj `if test -f 'math/arm-common/remquo.c'; then $(CYGPATH_W) 'math/arm-common/remquo.c'; else $(CYGPATH_W) '$(srcdir)/math/arm-common/remquo.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-remquo.Tpo math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-remquo.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/arm-common/remquo.c' object='math/arm-common/libarm64_libmsvcrt_os_a-remquo.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/arm-common/libarm64_libmsvcrt_os_a-remquo.obj `if test -f 'math/arm-common/remquo.c'; then $(CYGPATH_W) 'math/arm-common/remquo.c'; else $(CYGPATH_W) '$(srcdir)/math/arm-common/remquo.c'; fi`
+
+math/arm-common/libarm64_libmsvcrt_os_a-remquof.o: math/arm-common/remquof.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/arm-common/libarm64_libmsvcrt_os_a-remquof.o -MD -MP -MF math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-remquof.Tpo -c -o math/arm-common/libarm64_libmsvcrt_os_a-remquof.o `test -f 'math/arm-common/remquof.c' || echo '$(srcdir)/'`math/arm-common/remquof.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-remquof.Tpo math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-remquof.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/arm-common/remquof.c' object='math/arm-common/libarm64_libmsvcrt_os_a-remquof.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/arm-common/libarm64_libmsvcrt_os_a-remquof.o `test -f 'math/arm-common/remquof.c' || echo '$(srcdir)/'`math/arm-common/remquof.c
+
+math/arm-common/libarm64_libmsvcrt_os_a-remquof.obj: math/arm-common/remquof.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/arm-common/libarm64_libmsvcrt_os_a-remquof.obj -MD -MP -MF math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-remquof.Tpo -c -o math/arm-common/libarm64_libmsvcrt_os_a-remquof.obj `if test -f 'math/arm-common/remquof.c'; then $(CYGPATH_W) 'math/arm-common/remquof.c'; else $(CYGPATH_W) '$(srcdir)/math/arm-common/remquof.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-remquof.Tpo math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-remquof.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/arm-common/remquof.c' object='math/arm-common/libarm64_libmsvcrt_os_a-remquof.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/arm-common/libarm64_libmsvcrt_os_a-remquof.obj `if test -f 'math/arm-common/remquof.c'; then $(CYGPATH_W) 'math/arm-common/remquof.c'; else $(CYGPATH_W) '$(srcdir)/math/arm-common/remquof.c'; fi`
+
+math/arm-common/libarm64_libmsvcrt_os_a-remquol.o: math/arm-common/remquol.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/arm-common/libarm64_libmsvcrt_os_a-remquol.o -MD -MP -MF math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-remquol.Tpo -c -o math/arm-common/libarm64_libmsvcrt_os_a-remquol.o `test -f 'math/arm-common/remquol.c' || echo '$(srcdir)/'`math/arm-common/remquol.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-remquol.Tpo math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-remquol.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/arm-common/remquol.c' object='math/arm-common/libarm64_libmsvcrt_os_a-remquol.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/arm-common/libarm64_libmsvcrt_os_a-remquol.o `test -f 'math/arm-common/remquol.c' || echo '$(srcdir)/'`math/arm-common/remquol.c
+
+math/arm-common/libarm64_libmsvcrt_os_a-remquol.obj: math/arm-common/remquol.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/arm-common/libarm64_libmsvcrt_os_a-remquol.obj -MD -MP -MF math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-remquol.Tpo -c -o math/arm-common/libarm64_libmsvcrt_os_a-remquol.obj `if test -f 'math/arm-common/remquol.c'; then $(CYGPATH_W) 'math/arm-common/remquol.c'; else $(CYGPATH_W) '$(srcdir)/math/arm-common/remquol.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-remquol.Tpo math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-remquol.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/arm-common/remquol.c' object='math/arm-common/libarm64_libmsvcrt_os_a-remquol.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/arm-common/libarm64_libmsvcrt_os_a-remquol.obj `if test -f 'math/arm-common/remquol.c'; then $(CYGPATH_W) 'math/arm-common/remquol.c'; else $(CYGPATH_W) '$(srcdir)/math/arm-common/remquol.c'; fi`
+
 math/arm-common/libarm64_libmsvcrt_os_a-scalbn.o: math/arm-common/scalbn.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/arm-common/libarm64_libmsvcrt_os_a-scalbn.o -MD -MP -MF math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-scalbn.Tpo -c -o math/arm-common/libarm64_libmsvcrt_os_a-scalbn.o `test -f 'math/arm-common/scalbn.c' || echo '$(srcdir)/'`math/arm-common/scalbn.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-scalbn.Tpo math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-scalbn.Po
@@ -69011,11 +69269,23 @@ distclean: distclean-am
 	-rm -f math/arm-common/$(DEPDIR)/libarm32_libmingwex_a-sincos.Po
 	-rm -f math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-copysignl.Po
 	-rm -f math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-log2.Po
+	-rm -f math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-remainder.Po
+	-rm -f math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-remainderf.Po
+	-rm -f math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-remainderl.Po
+	-rm -f math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-remquo.Po
+	-rm -f math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-remquof.Po
+	-rm -f math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-remquol.Po
 	-rm -f math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-scalbn.Po
 	-rm -f math/arm-common/$(DEPDIR)/libarm64_libmingwex_a-ldexpl.Po
 	-rm -f math/arm-common/$(DEPDIR)/libarm64_libmingwex_a-sincos.Po
 	-rm -f math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-copysignl.Po
 	-rm -f math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-log2.Po
+	-rm -f math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-remainder.Po
+	-rm -f math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-remainderf.Po
+	-rm -f math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-remainderl.Po
+	-rm -f math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-remquo.Po
+	-rm -f math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-remquof.Po
+	-rm -f math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-remquol.Po
 	-rm -f math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-scalbn.Po
 	-rm -f math/arm/$(DEPDIR)/libarm32_libmingwex_a-_chgsignl.Po
 	-rm -f math/arm/$(DEPDIR)/libarm32_libmsvcrt_os_a-exp2.Po
@@ -72136,11 +72406,23 @@ maintainer-clean: maintainer-clean-am
 	-rm -f math/arm-common/$(DEPDIR)/libarm32_libmingwex_a-sincos.Po
 	-rm -f math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-copysignl.Po
 	-rm -f math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-log2.Po
+	-rm -f math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-remainder.Po
+	-rm -f math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-remainderf.Po
+	-rm -f math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-remainderl.Po
+	-rm -f math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-remquo.Po
+	-rm -f math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-remquof.Po
+	-rm -f math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-remquol.Po
 	-rm -f math/arm-common/$(DEPDIR)/libarm32_libmsvcrt_os_a-scalbn.Po
 	-rm -f math/arm-common/$(DEPDIR)/libarm64_libmingwex_a-ldexpl.Po
 	-rm -f math/arm-common/$(DEPDIR)/libarm64_libmingwex_a-sincos.Po
 	-rm -f math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-copysignl.Po
 	-rm -f math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-log2.Po
+	-rm -f math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-remainder.Po
+	-rm -f math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-remainderf.Po
+	-rm -f math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-remainderl.Po
+	-rm -f math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-remquo.Po
+	-rm -f math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-remquof.Po
+	-rm -f math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-remquol.Po
 	-rm -f math/arm-common/$(DEPDIR)/libarm64_libmsvcrt_os_a-scalbn.Po
 	-rm -f math/arm/$(DEPDIR)/libarm32_libmingwex_a-_chgsignl.Po
 	-rm -f math/arm/$(DEPDIR)/libarm32_libmsvcrt_os_a-exp2.Po
