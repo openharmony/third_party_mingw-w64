@@ -1408,8 +1408,8 @@ am__lib32_libmsvcrt_os_a_SOURCES_DIST = misc/onexit_table.c \
 	secapi/memcpy_s.c secapi/memmove_s.c secapi/rand_s.c \
 	secapi/sprintf_s.c secapi/strerror_s.c secapi/vsprintf_s.c \
 	secapi/wmemcpy_s.c secapi/wmemmove_s.c stdio/fseeki64.c \
-	stdio/mingw_lock.c misc/lc_locale_func.c misc/wassert.c \
-	lib-common/msvcrt.def.in
+	stdio/mingw_lock.c math/x86/_copysignf.c misc/lc_locale_func.c \
+	misc/wassert.c lib-common/msvcrt.def.in
 am__objects_34 = misc/lib32_libmsvcrt_os_a-onexit_table.$(OBJEXT) \
 	misc/lib32_libmsvcrt_os_a-register_tls_atexit.$(OBJEXT) \
 	stdio/lib32_libmsvcrt_os_a-acrt_iob_func.$(OBJEXT)
@@ -1465,6 +1465,7 @@ am__objects_35 = $(am__objects_34) \
 	stdio/lib32_libmsvcrt_os_a-fseeki64.$(OBJEXT) \
 	stdio/lib32_libmsvcrt_os_a-mingw_lock.$(OBJEXT)
 am__objects_36 = $(am__objects_35) \
+	math/x86/lib32_libmsvcrt_os_a-_copysignf.$(OBJEXT) \
 	misc/lib32_libmsvcrt_os_a-lc_locale_func.$(OBJEXT) \
 	misc/lib32_libmsvcrt_os_a-wassert.$(OBJEXT)
 @LIB32_TRUE@@W32API_FALSE@am_lib32_libmsvcrt_os_a_OBJECTS =  \
@@ -7843,6 +7844,7 @@ am__depfiles_remade = ./$(DEPDIR)/lib32_libm_a-_libm_dummy.Po \
 	math/x86/$(DEPDIR)/lib32_libmingwex_a-tanl.Po \
 	math/x86/$(DEPDIR)/lib32_libmingwex_a-trunc.Po \
 	math/x86/$(DEPDIR)/lib32_libmingwex_a-truncf.Po \
+	math/x86/$(DEPDIR)/lib32_libmsvcrt_os_a-_copysignf.Po \
 	math/x86/$(DEPDIR)/lib64_libmingwex_a-_chgsignl.Po \
 	math/x86/$(DEPDIR)/lib64_libmingwex_a-acosf.Po \
 	math/x86/$(DEPDIR)/lib64_libmingwex_a-acosh.Po \
@@ -10136,6 +10138,7 @@ src_ucrtbase = \
 
 src_msvcrt32 = \
   $(src_msvcrt) \
+  math/x86/_copysignf.c \
   misc/lc_locale_func.c \
   misc/wassert.c
 
@@ -14297,6 +14300,8 @@ stdio/lib32_libmsvcrt_os_a-fseeki64.$(OBJEXT): stdio/$(am__dirstamp) \
 	stdio/$(DEPDIR)/$(am__dirstamp)
 stdio/lib32_libmsvcrt_os_a-mingw_lock.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
+math/x86/lib32_libmsvcrt_os_a-_copysignf.$(OBJEXT):  \
+	math/x86/$(am__dirstamp) math/x86/$(DEPDIR)/$(am__dirstamp)
 misc/lib32_libmsvcrt_os_a-lc_locale_func.$(OBJEXT):  \
 	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 misc/lib32_libmsvcrt_os_a-wassert.$(OBJEXT): misc/$(am__dirstamp) \
@@ -22580,6 +22585,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@math/x86/$(DEPDIR)/lib32_libmingwex_a-tanl.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@math/x86/$(DEPDIR)/lib32_libmingwex_a-trunc.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@math/x86/$(DEPDIR)/lib32_libmingwex_a-truncf.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@math/x86/$(DEPDIR)/lib32_libmsvcrt_os_a-_copysignf.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@math/x86/$(DEPDIR)/lib64_libmingwex_a-_chgsignl.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@math/x86/$(DEPDIR)/lib64_libmingwex_a-acosf.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@math/x86/$(DEPDIR)/lib64_libmingwex_a-acosh.Po@am__quote@ # am--include-marker
@@ -33962,6 +33968,20 @@ stdio/lib32_libmsvcrt_os_a-mingw_lock.obj: stdio/mingw_lock.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/mingw_lock.c' object='stdio/lib32_libmsvcrt_os_a-mingw_lock.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/lib32_libmsvcrt_os_a-mingw_lock.obj `if test -f 'stdio/mingw_lock.c'; then $(CYGPATH_W) 'stdio/mingw_lock.c'; else $(CYGPATH_W) '$(srcdir)/stdio/mingw_lock.c'; fi`
+
+math/x86/lib32_libmsvcrt_os_a-_copysignf.o: math/x86/_copysignf.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/x86/lib32_libmsvcrt_os_a-_copysignf.o -MD -MP -MF math/x86/$(DEPDIR)/lib32_libmsvcrt_os_a-_copysignf.Tpo -c -o math/x86/lib32_libmsvcrt_os_a-_copysignf.o `test -f 'math/x86/_copysignf.c' || echo '$(srcdir)/'`math/x86/_copysignf.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/x86/$(DEPDIR)/lib32_libmsvcrt_os_a-_copysignf.Tpo math/x86/$(DEPDIR)/lib32_libmsvcrt_os_a-_copysignf.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/x86/_copysignf.c' object='math/x86/lib32_libmsvcrt_os_a-_copysignf.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/x86/lib32_libmsvcrt_os_a-_copysignf.o `test -f 'math/x86/_copysignf.c' || echo '$(srcdir)/'`math/x86/_copysignf.c
+
+math/x86/lib32_libmsvcrt_os_a-_copysignf.obj: math/x86/_copysignf.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/x86/lib32_libmsvcrt_os_a-_copysignf.obj -MD -MP -MF math/x86/$(DEPDIR)/lib32_libmsvcrt_os_a-_copysignf.Tpo -c -o math/x86/lib32_libmsvcrt_os_a-_copysignf.obj `if test -f 'math/x86/_copysignf.c'; then $(CYGPATH_W) 'math/x86/_copysignf.c'; else $(CYGPATH_W) '$(srcdir)/math/x86/_copysignf.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/x86/$(DEPDIR)/lib32_libmsvcrt_os_a-_copysignf.Tpo math/x86/$(DEPDIR)/lib32_libmsvcrt_os_a-_copysignf.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/x86/_copysignf.c' object='math/x86/lib32_libmsvcrt_os_a-_copysignf.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/x86/lib32_libmsvcrt_os_a-_copysignf.obj `if test -f 'math/x86/_copysignf.c'; then $(CYGPATH_W) 'math/x86/_copysignf.c'; else $(CYGPATH_W) '$(srcdir)/math/x86/_copysignf.c'; fi`
 
 misc/lib32_libmsvcrt_os_a-lc_locale_func.o: misc/lc_locale_func.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libmsvcrt_os_a-lc_locale_func.o -MD -MP -MF misc/$(DEPDIR)/lib32_libmsvcrt_os_a-lc_locale_func.Tpo -c -o misc/lib32_libmsvcrt_os_a-lc_locale_func.o `test -f 'misc/lc_locale_func.c' || echo '$(srcdir)/'`misc/lc_locale_func.c
@@ -70217,6 +70237,7 @@ distclean: distclean-am
 	-rm -f math/x86/$(DEPDIR)/lib32_libmingwex_a-tanl.Po
 	-rm -f math/x86/$(DEPDIR)/lib32_libmingwex_a-trunc.Po
 	-rm -f math/x86/$(DEPDIR)/lib32_libmingwex_a-truncf.Po
+	-rm -f math/x86/$(DEPDIR)/lib32_libmsvcrt_os_a-_copysignf.Po
 	-rm -f math/x86/$(DEPDIR)/lib64_libmingwex_a-_chgsignl.Po
 	-rm -f math/x86/$(DEPDIR)/lib64_libmingwex_a-acosf.Po
 	-rm -f math/x86/$(DEPDIR)/lib64_libmingwex_a-acosh.Po
@@ -73388,6 +73409,7 @@ maintainer-clean: maintainer-clean-am
 	-rm -f math/x86/$(DEPDIR)/lib32_libmingwex_a-tanl.Po
 	-rm -f math/x86/$(DEPDIR)/lib32_libmingwex_a-trunc.Po
 	-rm -f math/x86/$(DEPDIR)/lib32_libmingwex_a-truncf.Po
+	-rm -f math/x86/$(DEPDIR)/lib32_libmsvcrt_os_a-_copysignf.Po
 	-rm -f math/x86/$(DEPDIR)/lib64_libmingwex_a-_chgsignl.Po
 	-rm -f math/x86/$(DEPDIR)/lib64_libmingwex_a-acosf.Po
 	-rm -f math/x86/$(DEPDIR)/lib64_libmingwex_a-acosh.Po
