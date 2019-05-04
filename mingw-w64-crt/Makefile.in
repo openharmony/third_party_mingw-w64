@@ -1339,11 +1339,12 @@ lib32_libmsvcr120_a_OBJECTS = $(am_lib32_libmsvcr120_a_OBJECTS)
 lib32_libmsvcr120_app_a_LIBADD =
 am__lib32_libmsvcr120_app_a_SOURCES_DIST = misc/onexit_table.c \
 	misc/register_tls_atexit.c stdio/acrt_iob_func.c \
-	misc/_getpid.c lib32/msvcr120_app.def.in
+	misc/__set_app_type.c misc/_getpid.c lib32/msvcr120_app.def.in
 am__objects_28 = misc/lib32_libmsvcr120_app_a-onexit_table.$(OBJEXT) \
 	misc/lib32_libmsvcr120_app_a-register_tls_atexit.$(OBJEXT) \
 	stdio/lib32_libmsvcr120_app_a-acrt_iob_func.$(OBJEXT)
 am__objects_29 = $(am__objects_28) \
+	misc/lib32_libmsvcr120_app_a-__set_app_type.$(OBJEXT) \
 	misc/lib32_libmsvcr120_app_a-_getpid.$(OBJEXT)
 @LIB32_TRUE@@W32API_FALSE@am_lib32_libmsvcr120_app_a_OBJECTS =  \
 @LIB32_TRUE@@W32API_FALSE@	$(am__objects_29)
@@ -2666,11 +2667,12 @@ lib64_libmsvcr120_a_OBJECTS = $(am_lib64_libmsvcr120_a_OBJECTS)
 lib64_libmsvcr120_app_a_LIBADD =
 am__lib64_libmsvcr120_app_a_SOURCES_DIST = misc/onexit_table.c \
 	misc/register_tls_atexit.c stdio/acrt_iob_func.c \
-	misc/_getpid.c lib64/msvcr120_app.def.in
+	misc/__set_app_type.c misc/_getpid.c lib64/msvcr120_app.def.in
 am__objects_80 = misc/lib64_libmsvcr120_app_a-onexit_table.$(OBJEXT) \
 	misc/lib64_libmsvcr120_app_a-register_tls_atexit.$(OBJEXT) \
 	stdio/lib64_libmsvcr120_app_a-acrt_iob_func.$(OBJEXT)
 am__objects_81 = $(am__objects_80) \
+	misc/lib64_libmsvcr120_app_a-__set_app_type.$(OBJEXT) \
 	misc/lib64_libmsvcr120_app_a-_getpid.$(OBJEXT)
 @LIB64_TRUE@@W32API_FALSE@am_lib64_libmsvcr120_app_a_OBJECTS =  \
 @LIB64_TRUE@@W32API_FALSE@	$(am__objects_81)
@@ -8037,6 +8039,7 @@ am__depfiles_remade = ./$(DEPDIR)/lib32_libm_a-_libm_dummy.Po \
 	misc/$(DEPDIR)/lib32_libmsvcr110_a-register_tls_atexit.Po \
 	misc/$(DEPDIR)/lib32_libmsvcr120_a-onexit_table.Po \
 	misc/$(DEPDIR)/lib32_libmsvcr120_a-register_tls_atexit.Po \
+	misc/$(DEPDIR)/lib32_libmsvcr120_app_a-__set_app_type.Po \
 	misc/$(DEPDIR)/lib32_libmsvcr120_app_a-_getpid.Po \
 	misc/$(DEPDIR)/lib32_libmsvcr120_app_a-onexit_table.Po \
 	misc/$(DEPDIR)/lib32_libmsvcr120_app_a-register_tls_atexit.Po \
@@ -8144,6 +8147,7 @@ am__depfiles_remade = ./$(DEPDIR)/lib32_libm_a-_libm_dummy.Po \
 	misc/$(DEPDIR)/lib64_libmsvcr110_a-register_tls_atexit.Po \
 	misc/$(DEPDIR)/lib64_libmsvcr120_a-onexit_table.Po \
 	misc/$(DEPDIR)/lib64_libmsvcr120_a-register_tls_atexit.Po \
+	misc/$(DEPDIR)/lib64_libmsvcr120_app_a-__set_app_type.Po \
 	misc/$(DEPDIR)/lib64_libmsvcr120_app_a-_getpid.Po \
 	misc/$(DEPDIR)/lib64_libmsvcr120_app_a-onexit_table.Po \
 	misc/$(DEPDIR)/lib64_libmsvcr120_app_a-register_tls_atexit.Po \
@@ -10227,6 +10231,7 @@ src_msvcr80_64 = \
 
 src_msvcr120_app = \
   $(src_msvcrt_common) \
+  misc/__set_app_type.c \
   misc/_getpid.c
 
 
@@ -14164,6 +14169,8 @@ misc/lib32_libmsvcr120_app_a-register_tls_atexit.$(OBJEXT):  \
 	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 stdio/lib32_libmsvcr120_app_a-acrt_iob_func.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
+misc/lib32_libmsvcr120_app_a-__set_app_type.$(OBJEXT):  \
+	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 misc/lib32_libmsvcr120_app_a-_getpid.$(OBJEXT): misc/$(am__dirstamp) \
 	misc/$(DEPDIR)/$(am__dirstamp)
 
@@ -16012,6 +16019,8 @@ misc/lib64_libmsvcr120_app_a-register_tls_atexit.$(OBJEXT):  \
 	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 stdio/lib64_libmsvcr120_app_a-acrt_iob_func.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
+misc/lib64_libmsvcr120_app_a-__set_app_type.$(OBJEXT):  \
+	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 misc/lib64_libmsvcr120_app_a-_getpid.$(OBJEXT): misc/$(am__dirstamp) \
 	misc/$(DEPDIR)/$(am__dirstamp)
 
@@ -22812,6 +22821,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmsvcr110_a-register_tls_atexit.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmsvcr120_a-onexit_table.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmsvcr120_a-register_tls_atexit.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmsvcr120_app_a-__set_app_type.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmsvcr120_app_a-_getpid.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmsvcr120_app_a-onexit_table.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmsvcr120_app_a-register_tls_atexit.Po@am__quote@ # am--include-marker
@@ -22919,6 +22929,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmsvcr110_a-register_tls_atexit.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmsvcr120_a-onexit_table.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmsvcr120_a-register_tls_atexit.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmsvcr120_app_a-__set_app_type.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmsvcr120_app_a-_getpid.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmsvcr120_app_a-onexit_table.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmsvcr120_app_a-register_tls_atexit.Po@am__quote@ # am--include-marker
@@ -33102,6 +33113,20 @@ stdio/lib32_libmsvcr120_app_a-acrt_iob_func.obj: stdio/acrt_iob_func.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr120_app_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/lib32_libmsvcr120_app_a-acrt_iob_func.obj `if test -f 'stdio/acrt_iob_func.c'; then $(CYGPATH_W) 'stdio/acrt_iob_func.c'; else $(CYGPATH_W) '$(srcdir)/stdio/acrt_iob_func.c'; fi`
 
+misc/lib32_libmsvcr120_app_a-__set_app_type.o: misc/__set_app_type.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr120_app_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libmsvcr120_app_a-__set_app_type.o -MD -MP -MF misc/$(DEPDIR)/lib32_libmsvcr120_app_a-__set_app_type.Tpo -c -o misc/lib32_libmsvcr120_app_a-__set_app_type.o `test -f 'misc/__set_app_type.c' || echo '$(srcdir)/'`misc/__set_app_type.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libmsvcr120_app_a-__set_app_type.Tpo misc/$(DEPDIR)/lib32_libmsvcr120_app_a-__set_app_type.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/__set_app_type.c' object='misc/lib32_libmsvcr120_app_a-__set_app_type.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr120_app_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib32_libmsvcr120_app_a-__set_app_type.o `test -f 'misc/__set_app_type.c' || echo '$(srcdir)/'`misc/__set_app_type.c
+
+misc/lib32_libmsvcr120_app_a-__set_app_type.obj: misc/__set_app_type.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr120_app_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libmsvcr120_app_a-__set_app_type.obj -MD -MP -MF misc/$(DEPDIR)/lib32_libmsvcr120_app_a-__set_app_type.Tpo -c -o misc/lib32_libmsvcr120_app_a-__set_app_type.obj `if test -f 'misc/__set_app_type.c'; then $(CYGPATH_W) 'misc/__set_app_type.c'; else $(CYGPATH_W) '$(srcdir)/misc/__set_app_type.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libmsvcr120_app_a-__set_app_type.Tpo misc/$(DEPDIR)/lib32_libmsvcr120_app_a-__set_app_type.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/__set_app_type.c' object='misc/lib32_libmsvcr120_app_a-__set_app_type.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr120_app_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib32_libmsvcr120_app_a-__set_app_type.obj `if test -f 'misc/__set_app_type.c'; then $(CYGPATH_W) 'misc/__set_app_type.c'; else $(CYGPATH_W) '$(srcdir)/misc/__set_app_type.c'; fi`
+
 misc/lib32_libmsvcr120_app_a-_getpid.o: misc/_getpid.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr120_app_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libmsvcr120_app_a-_getpid.o -MD -MP -MF misc/$(DEPDIR)/lib32_libmsvcr120_app_a-_getpid.Tpo -c -o misc/lib32_libmsvcr120_app_a-_getpid.o `test -f 'misc/_getpid.c' || echo '$(srcdir)/'`misc/_getpid.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libmsvcr120_app_a-_getpid.Tpo misc/$(DEPDIR)/lib32_libmsvcr120_app_a-_getpid.Po
@@ -43265,6 +43290,20 @@ stdio/lib64_libmsvcr120_app_a-acrt_iob_func.obj: stdio/acrt_iob_func.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/acrt_iob_func.c' object='stdio/lib64_libmsvcr120_app_a-acrt_iob_func.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr120_app_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/lib64_libmsvcr120_app_a-acrt_iob_func.obj `if test -f 'stdio/acrt_iob_func.c'; then $(CYGPATH_W) 'stdio/acrt_iob_func.c'; else $(CYGPATH_W) '$(srcdir)/stdio/acrt_iob_func.c'; fi`
+
+misc/lib64_libmsvcr120_app_a-__set_app_type.o: misc/__set_app_type.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr120_app_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib64_libmsvcr120_app_a-__set_app_type.o -MD -MP -MF misc/$(DEPDIR)/lib64_libmsvcr120_app_a-__set_app_type.Tpo -c -o misc/lib64_libmsvcr120_app_a-__set_app_type.o `test -f 'misc/__set_app_type.c' || echo '$(srcdir)/'`misc/__set_app_type.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib64_libmsvcr120_app_a-__set_app_type.Tpo misc/$(DEPDIR)/lib64_libmsvcr120_app_a-__set_app_type.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/__set_app_type.c' object='misc/lib64_libmsvcr120_app_a-__set_app_type.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr120_app_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib64_libmsvcr120_app_a-__set_app_type.o `test -f 'misc/__set_app_type.c' || echo '$(srcdir)/'`misc/__set_app_type.c
+
+misc/lib64_libmsvcr120_app_a-__set_app_type.obj: misc/__set_app_type.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr120_app_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib64_libmsvcr120_app_a-__set_app_type.obj -MD -MP -MF misc/$(DEPDIR)/lib64_libmsvcr120_app_a-__set_app_type.Tpo -c -o misc/lib64_libmsvcr120_app_a-__set_app_type.obj `if test -f 'misc/__set_app_type.c'; then $(CYGPATH_W) 'misc/__set_app_type.c'; else $(CYGPATH_W) '$(srcdir)/misc/__set_app_type.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib64_libmsvcr120_app_a-__set_app_type.Tpo misc/$(DEPDIR)/lib64_libmsvcr120_app_a-__set_app_type.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/__set_app_type.c' object='misc/lib64_libmsvcr120_app_a-__set_app_type.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr120_app_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib64_libmsvcr120_app_a-__set_app_type.obj `if test -f 'misc/__set_app_type.c'; then $(CYGPATH_W) 'misc/__set_app_type.c'; else $(CYGPATH_W) '$(srcdir)/misc/__set_app_type.c'; fi`
 
 misc/lib64_libmsvcr120_app_a-_getpid.o: misc/_getpid.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr120_app_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib64_libmsvcr120_app_a-_getpid.o -MD -MP -MF misc/$(DEPDIR)/lib64_libmsvcr120_app_a-_getpid.Tpo -c -o misc/lib64_libmsvcr120_app_a-_getpid.o `test -f 'misc/_getpid.c' || echo '$(srcdir)/'`misc/_getpid.c
@@ -70584,6 +70623,7 @@ distclean: distclean-am
 	-rm -f misc/$(DEPDIR)/lib32_libmsvcr110_a-register_tls_atexit.Po
 	-rm -f misc/$(DEPDIR)/lib32_libmsvcr120_a-onexit_table.Po
 	-rm -f misc/$(DEPDIR)/lib32_libmsvcr120_a-register_tls_atexit.Po
+	-rm -f misc/$(DEPDIR)/lib32_libmsvcr120_app_a-__set_app_type.Po
 	-rm -f misc/$(DEPDIR)/lib32_libmsvcr120_app_a-_getpid.Po
 	-rm -f misc/$(DEPDIR)/lib32_libmsvcr120_app_a-onexit_table.Po
 	-rm -f misc/$(DEPDIR)/lib32_libmsvcr120_app_a-register_tls_atexit.Po
@@ -70691,6 +70731,7 @@ distclean: distclean-am
 	-rm -f misc/$(DEPDIR)/lib64_libmsvcr110_a-register_tls_atexit.Po
 	-rm -f misc/$(DEPDIR)/lib64_libmsvcr120_a-onexit_table.Po
 	-rm -f misc/$(DEPDIR)/lib64_libmsvcr120_a-register_tls_atexit.Po
+	-rm -f misc/$(DEPDIR)/lib64_libmsvcr120_app_a-__set_app_type.Po
 	-rm -f misc/$(DEPDIR)/lib64_libmsvcr120_app_a-_getpid.Po
 	-rm -f misc/$(DEPDIR)/lib64_libmsvcr120_app_a-onexit_table.Po
 	-rm -f misc/$(DEPDIR)/lib64_libmsvcr120_app_a-register_tls_atexit.Po
@@ -73764,6 +73805,7 @@ maintainer-clean: maintainer-clean-am
 	-rm -f misc/$(DEPDIR)/lib32_libmsvcr110_a-register_tls_atexit.Po
 	-rm -f misc/$(DEPDIR)/lib32_libmsvcr120_a-onexit_table.Po
 	-rm -f misc/$(DEPDIR)/lib32_libmsvcr120_a-register_tls_atexit.Po
+	-rm -f misc/$(DEPDIR)/lib32_libmsvcr120_app_a-__set_app_type.Po
 	-rm -f misc/$(DEPDIR)/lib32_libmsvcr120_app_a-_getpid.Po
 	-rm -f misc/$(DEPDIR)/lib32_libmsvcr120_app_a-onexit_table.Po
 	-rm -f misc/$(DEPDIR)/lib32_libmsvcr120_app_a-register_tls_atexit.Po
@@ -73871,6 +73913,7 @@ maintainer-clean: maintainer-clean-am
 	-rm -f misc/$(DEPDIR)/lib64_libmsvcr110_a-register_tls_atexit.Po
 	-rm -f misc/$(DEPDIR)/lib64_libmsvcr120_a-onexit_table.Po
 	-rm -f misc/$(DEPDIR)/lib64_libmsvcr120_a-register_tls_atexit.Po
+	-rm -f misc/$(DEPDIR)/lib64_libmsvcr120_app_a-__set_app_type.Po
 	-rm -f misc/$(DEPDIR)/lib64_libmsvcr120_app_a-_getpid.Po
 	-rm -f misc/$(DEPDIR)/lib64_libmsvcr120_app_a-onexit_table.Po
 	-rm -f misc/$(DEPDIR)/lib64_libmsvcr120_app_a-register_tls_atexit.Po
