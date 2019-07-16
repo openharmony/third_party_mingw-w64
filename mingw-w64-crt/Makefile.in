@@ -1369,8 +1369,9 @@ am__lib32_libmsvcrt_os_a_SOURCES_DIST = misc/onexit_table.c \
 	secapi/memcpy_s.c secapi/memmove_s.c secapi/rand_s.c \
 	secapi/sprintf_s.c secapi/strerror_s.c secapi/vsprintf_s.c \
 	secapi/wmemcpy_s.c secapi/wmemmove_s.c stdio/fseeki64.c \
-	stdio/mingw_lock.c math/x86/_copysignf.c misc/lc_locale_func.c \
-	misc/wassert.c lib-common/msvcrt.def.in
+	stdio/mingw_lock.c math/x86/_copysignf.c \
+	misc/___mb_cur_max_func.c misc/lc_locale_func.c misc/wassert.c \
+	lib-common/msvcrt.def.in
 am__objects_34 = misc/lib32_libmsvcrt_os_a-onexit_table.$(OBJEXT) \
 	misc/lib32_libmsvcrt_os_a-register_tls_atexit.$(OBJEXT) \
 	stdio/lib32_libmsvcrt_os_a-acrt_iob_func.$(OBJEXT)
@@ -1427,6 +1428,7 @@ am__objects_35 = $(am__objects_34) \
 	stdio/lib32_libmsvcrt_os_a-mingw_lock.$(OBJEXT)
 am__objects_36 = $(am__objects_35) \
 	math/x86/lib32_libmsvcrt_os_a-_copysignf.$(OBJEXT) \
+	misc/lib32_libmsvcrt_os_a-___mb_cur_max_func.$(OBJEXT) \
 	misc/lib32_libmsvcrt_os_a-lc_locale_func.$(OBJEXT) \
 	misc/lib32_libmsvcrt_os_a-wassert.$(OBJEXT)
 @LIB32_TRUE@@W32API_FALSE@am_lib32_libmsvcrt_os_a_OBJECTS =  \
@@ -7061,6 +7063,7 @@ src_ucrtbase = \
 src_msvcrt32 = \
   $(src_msvcrt) \
   math/x86/_copysignf.c \
+  misc/___mb_cur_max_func.c \
   misc/lc_locale_func.c \
   misc/wassert.c
 
@@ -11232,6 +11235,8 @@ stdio/lib32_libmsvcrt_os_a-mingw_lock.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
 math/x86/lib32_libmsvcrt_os_a-_copysignf.$(OBJEXT):  \
 	math/x86/$(am__dirstamp) math/x86/$(DEPDIR)/$(am__dirstamp)
+misc/lib32_libmsvcrt_os_a-___mb_cur_max_func.$(OBJEXT):  \
+	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 misc/lib32_libmsvcrt_os_a-lc_locale_func.$(OBJEXT):  \
 	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 misc/lib32_libmsvcrt_os_a-wassert.$(OBJEXT): misc/$(am__dirstamp) \
@@ -19747,6 +19752,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmsvcr90_a-register_tls_atexit.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmsvcr90d_a-onexit_table.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmsvcr90d_a-register_tls_atexit.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmsvcrt_os_a-___mb_cur_max_func.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmsvcrt_os_a-_configthreadlocale.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmsvcrt_os_a-_get_current_locale.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmsvcrt_os_a-invalid_parameter_handler.Po@am__quote@
@@ -30977,6 +30983,20 @@ math/x86/lib32_libmsvcrt_os_a-_copysignf.obj: math/x86/_copysignf.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/x86/_copysignf.c' object='math/x86/lib32_libmsvcrt_os_a-_copysignf.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/x86/lib32_libmsvcrt_os_a-_copysignf.obj `if test -f 'math/x86/_copysignf.c'; then $(CYGPATH_W) 'math/x86/_copysignf.c'; else $(CYGPATH_W) '$(srcdir)/math/x86/_copysignf.c'; fi`
+
+misc/lib32_libmsvcrt_os_a-___mb_cur_max_func.o: misc/___mb_cur_max_func.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libmsvcrt_os_a-___mb_cur_max_func.o -MD -MP -MF misc/$(DEPDIR)/lib32_libmsvcrt_os_a-___mb_cur_max_func.Tpo -c -o misc/lib32_libmsvcrt_os_a-___mb_cur_max_func.o `test -f 'misc/___mb_cur_max_func.c' || echo '$(srcdir)/'`misc/___mb_cur_max_func.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libmsvcrt_os_a-___mb_cur_max_func.Tpo misc/$(DEPDIR)/lib32_libmsvcrt_os_a-___mb_cur_max_func.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/___mb_cur_max_func.c' object='misc/lib32_libmsvcrt_os_a-___mb_cur_max_func.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib32_libmsvcrt_os_a-___mb_cur_max_func.o `test -f 'misc/___mb_cur_max_func.c' || echo '$(srcdir)/'`misc/___mb_cur_max_func.c
+
+misc/lib32_libmsvcrt_os_a-___mb_cur_max_func.obj: misc/___mb_cur_max_func.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libmsvcrt_os_a-___mb_cur_max_func.obj -MD -MP -MF misc/$(DEPDIR)/lib32_libmsvcrt_os_a-___mb_cur_max_func.Tpo -c -o misc/lib32_libmsvcrt_os_a-___mb_cur_max_func.obj `if test -f 'misc/___mb_cur_max_func.c'; then $(CYGPATH_W) 'misc/___mb_cur_max_func.c'; else $(CYGPATH_W) '$(srcdir)/misc/___mb_cur_max_func.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libmsvcrt_os_a-___mb_cur_max_func.Tpo misc/$(DEPDIR)/lib32_libmsvcrt_os_a-___mb_cur_max_func.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/___mb_cur_max_func.c' object='misc/lib32_libmsvcrt_os_a-___mb_cur_max_func.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib32_libmsvcrt_os_a-___mb_cur_max_func.obj `if test -f 'misc/___mb_cur_max_func.c'; then $(CYGPATH_W) 'misc/___mb_cur_max_func.c'; else $(CYGPATH_W) '$(srcdir)/misc/___mb_cur_max_func.c'; fi`
 
 misc/lib32_libmsvcrt_os_a-lc_locale_func.o: misc/lc_locale_func.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libmsvcrt_os_a-lc_locale_func.o -MD -MP -MF misc/$(DEPDIR)/lib32_libmsvcrt_os_a-lc_locale_func.Tpo -c -o misc/lib32_libmsvcrt_os_a-lc_locale_func.o `test -f 'misc/lc_locale_func.c' || echo '$(srcdir)/'`misc/lc_locale_func.c
