@@ -412,10 +412,11 @@ am__objects_1 = libsrc/lib32_libamstrmid_a-amstrmid.$(OBJEXT)
 lib32_libamstrmid_a_OBJECTS = $(am_lib32_libamstrmid_a_OBJECTS)
 lib32_libcrtdll_a_LIBADD =
 am__lib32_libcrtdll_a_SOURCES_DIST = misc/onexit_table.c \
-	misc/register_tls_atexit.c stdio/acrt_iob_func.c
+	misc/register_tls_atexit.c stdio/acrt_iob_func.c math/frexp.c
 am__objects_2 = misc/lib32_libcrtdll_a-onexit_table.$(OBJEXT) \
 	misc/lib32_libcrtdll_a-register_tls_atexit.$(OBJEXT) \
-	stdio/lib32_libcrtdll_a-acrt_iob_func.$(OBJEXT)
+	stdio/lib32_libcrtdll_a-acrt_iob_func.$(OBJEXT) \
+	math/lib32_libcrtdll_a-frexp.$(OBJEXT)
 @LIB32_TRUE@@W32API_FALSE@am_lib32_libcrtdll_a_OBJECTS =  \
 @LIB32_TRUE@@W32API_FALSE@	$(am__objects_2)
 lib32_libcrtdll_a_OBJECTS = $(am_lib32_libcrtdll_a_OBJECTS)
@@ -714,34 +715,34 @@ am__lib32_libmingwex_a_SOURCES_DIST = crt/dllentry.c crt/dllmain.c \
 	math/fmax.c math/fmaxf.c math/fmaxl.c math/fmin.c math/fminf.c \
 	math/fminl.c math/fp_consts.c math/fp_constsf.c \
 	math/fp_constsl.c math/fpclassify.c math/fpclassifyf.c \
-	math/fpclassifyl.c math/frexpf.c math/hypotf.c math/hypot.c \
-	math/hypotl.c math/isnan.c math/isnanf.c math/isnanl.c \
-	math/ldexpf.c math/lgamma.c math/lgammaf.c math/lgammal.c \
-	math/llrint.c math/signgam.c math/llrintf.c math/llrintl.c \
-	math/llround.c math/llroundf.c math/llroundl.c math/log10f.c \
-	math/logf.c math/lrint.c math/lrintf.c math/lrintl.c \
-	math/lround.c math/lroundf.c math/lroundl.c math/modf.c \
-	math/modff.c math/modfl.c math/nextafterf.c math/nextafterl.c \
-	math/nexttoward.c math/nexttowardf.c math/powf.c math/powi.c \
-	math/powif.c math/powil.c math/rint.c math/rintf.c \
-	math/rintl.c math/round.c math/roundf.c math/roundl.c \
-	math/s_erf.c math/sf_erf.c math/signbit.c math/signbitf.c \
-	math/signbitl.c math/sinhf.c math/sinhl.c math/sqrt.c \
-	math/sqrtf.c math/sqrtl.c math/tanhf.c math/tanhl.c \
-	math/tgamma.c math/tgammaf.c math/tgammal.c math/truncl.c \
-	math/powi.def.h math/sqrt.def.h math/cephes_emath.h \
-	math/cephes_mconf.h math/fp_consts.h math/abs64.c \
-	misc/mb_wc_common.h misc/longjmp.S misc/mingw_getsp.S \
-	misc/alarm.c misc/basename.c misc/btowc.c misc/delay-f.c \
-	misc/delay-n.c misc/delayimp.c misc/dirent.c misc/dirname.c \
-	misc/feclearexcept.c misc/fegetenv.c misc/fegetexceptflag.c \
-	misc/fegetround.c misc/feholdexcept.c misc/feraiseexcept.c \
-	misc/fesetenv.c misc/fesetexceptflag.c misc/fesetround.c \
-	misc/fetestexcept.c misc/feupdateenv.c misc/ftruncate.c \
-	misc/fwide.c misc/getlogin.c misc/getopt.c misc/gettimeofday.c \
-	misc/imaxabs.c misc/imaxdiv.c misc/isblank.c misc/iswblank.c \
-	misc/mbrtowc.c misc/mbsinit.c misc/mempcpy.c \
-	misc/mingw-aligned-malloc.c misc/mingw-fseek.c \
+	math/fpclassifyl.c math/frexpf.c math/frexpl.c math/hypotf.c \
+	math/hypot.c math/hypotl.c math/isnan.c math/isnanf.c \
+	math/isnanl.c math/ldexpf.c math/lgamma.c math/lgammaf.c \
+	math/lgammal.c math/llrint.c math/signgam.c math/llrintf.c \
+	math/llrintl.c math/llround.c math/llroundf.c math/llroundl.c \
+	math/log10f.c math/logf.c math/lrint.c math/lrintf.c \
+	math/lrintl.c math/lround.c math/lroundf.c math/lroundl.c \
+	math/modf.c math/modff.c math/modfl.c math/nextafterf.c \
+	math/nextafterl.c math/nexttoward.c math/nexttowardf.c \
+	math/powf.c math/powi.c math/powif.c math/powil.c math/rint.c \
+	math/rintf.c math/rintl.c math/round.c math/roundf.c \
+	math/roundl.c math/s_erf.c math/sf_erf.c math/signbit.c \
+	math/signbitf.c math/signbitl.c math/sinhf.c math/sinhl.c \
+	math/sqrt.c math/sqrtf.c math/sqrtl.c math/tanhf.c \
+	math/tanhl.c math/tgamma.c math/tgammaf.c math/tgammal.c \
+	math/truncl.c math/powi.def.h math/sqrt.def.h \
+	math/cephes_emath.h math/cephes_mconf.h math/fp_consts.h \
+	math/abs64.c misc/mb_wc_common.h misc/longjmp.S \
+	misc/mingw_getsp.S misc/alarm.c misc/basename.c misc/btowc.c \
+	misc/delay-f.c misc/delay-n.c misc/delayimp.c misc/dirent.c \
+	misc/dirname.c misc/feclearexcept.c misc/fegetenv.c \
+	misc/fegetexceptflag.c misc/fegetround.c misc/feholdexcept.c \
+	misc/feraiseexcept.c misc/fesetenv.c misc/fesetexceptflag.c \
+	misc/fesetround.c misc/fetestexcept.c misc/feupdateenv.c \
+	misc/ftruncate.c misc/fwide.c misc/getlogin.c misc/getopt.c \
+	misc/gettimeofday.c misc/imaxabs.c misc/imaxdiv.c \
+	misc/isblank.c misc/iswblank.c misc/mbrtowc.c misc/mbsinit.c \
+	misc/mempcpy.c misc/mingw-aligned-malloc.c misc/mingw-fseek.c \
 	misc/mingw_matherr.c misc/mingw_mbwc_convert.c \
 	misc/mingw_usleep.c misc/mingw_wcstod.c misc/mingw_wcstof.c \
 	misc/mingw_wcstold.c misc/mkstemp.c misc/seterrno.c \
@@ -801,22 +802,22 @@ am__lib32_libmingwex_a_SOURCES_DIST = crt/dllentry.c crt/dllmain.c \
 	math/x86/expm1.c math/x86/expm1.def.h math/x86/expm1f.c \
 	math/x86/expm1l.c math/x86/fastmath.h math/x86/floor.S \
 	math/x86/floorf.S math/x86/floorl.S math/x86/fmod.c \
-	math/x86/fmodf.c math/x86/fmodl.c math/x86/frexpl.S \
-	math/x86/fucom.c math/x86/ilogb.S math/x86/ilogbf.S \
-	math/x86/ilogbl.S math/x86/internal_logl.S math/x86/ldexp.c \
-	math/x86/ldexpl.c math/x86/log.c math/x86/log.def.h \
-	math/x86/log10l.S math/x86/log1p.S math/x86/log1pf.S \
-	math/x86/log1pl.S math/x86/log2.S math/x86/log2f.S \
-	math/x86/log2l.S math/x86/logb.c math/x86/logbf.c \
-	math/x86/logbl.c math/x86/logl.c math/x86/nearbyint.S \
-	math/x86/nearbyintf.S math/x86/nearbyintl.S math/x86/pow.c \
-	math/x86/pow.def.h math/x86/powl.c math/x86/remainder.S \
-	math/x86/remainderf.S math/x86/remainderl.S math/x86/remquo.S \
-	math/x86/remquof.S math/x86/remquol.S math/x86/scalbn.S \
-	math/x86/scalbnf.S math/x86/scalbnl.S math/x86/sin.c \
-	math/x86/sin.def.h math/x86/sinf.c math/x86/sinl.c \
-	math/x86/sinl_internal.S math/x86/tanf.c math/x86/tanl.S \
-	math/x86/trunc.S math/x86/truncf.S math/DFP/__fpclassifyd32.c \
+	math/x86/fmodf.c math/x86/fmodl.c math/x86/fucom.c \
+	math/x86/ilogb.S math/x86/ilogbf.S math/x86/ilogbl.S \
+	math/x86/internal_logl.S math/x86/ldexp.c math/x86/ldexpl.c \
+	math/x86/log.c math/x86/log.def.h math/x86/log10l.S \
+	math/x86/log1p.S math/x86/log1pf.S math/x86/log1pl.S \
+	math/x86/log2.S math/x86/log2f.S math/x86/log2l.S \
+	math/x86/logb.c math/x86/logbf.c math/x86/logbl.c \
+	math/x86/logl.c math/x86/nearbyint.S math/x86/nearbyintf.S \
+	math/x86/nearbyintl.S math/x86/pow.c math/x86/pow.def.h \
+	math/x86/powl.c math/x86/remainder.S math/x86/remainderf.S \
+	math/x86/remainderl.S math/x86/remquo.S math/x86/remquof.S \
+	math/x86/remquol.S math/x86/scalbn.S math/x86/scalbnf.S \
+	math/x86/scalbnl.S math/x86/sin.c math/x86/sin.def.h \
+	math/x86/sinf.c math/x86/sinl.c math/x86/sinl_internal.S \
+	math/x86/tanf.c math/x86/tanl.S math/x86/trunc.S \
+	math/x86/truncf.S math/DFP/__fpclassifyd32.c \
 	math/DFP/__fpclassifyd64.c math/DFP/__fpclassifyd128.c \
 	math/DFP/__isnand32.c math/DFP/__isnand64.c \
 	math/DFP/__isnand128.c math/DFP/__signbitd32.c \
@@ -929,6 +930,7 @@ am__objects_19 = crt/lib32_libmingwex_a-dllentry.$(OBJEXT) \
 	math/lib32_libmingwex_a-fpclassifyf.$(OBJEXT) \
 	math/lib32_libmingwex_a-fpclassifyl.$(OBJEXT) \
 	math/lib32_libmingwex_a-frexpf.$(OBJEXT) \
+	math/lib32_libmingwex_a-frexpl.$(OBJEXT) \
 	math/lib32_libmingwex_a-hypotf.$(OBJEXT) \
 	math/lib32_libmingwex_a-hypot.$(OBJEXT) \
 	math/lib32_libmingwex_a-hypotl.$(OBJEXT) \
@@ -1190,7 +1192,6 @@ am__objects_20 = math/x86/lib32_libmingwex_a-_chgsignl.$(OBJEXT) \
 	math/x86/lib32_libmingwex_a-fmod.$(OBJEXT) \
 	math/x86/lib32_libmingwex_a-fmodf.$(OBJEXT) \
 	math/x86/lib32_libmingwex_a-fmodl.$(OBJEXT) \
-	math/x86/lib32_libmingwex_a-frexpl.$(OBJEXT) \
 	math/x86/lib32_libmingwex_a-fucom.$(OBJEXT) \
 	math/x86/lib32_libmingwex_a-ilogb.$(OBJEXT) \
 	math/x86/lib32_libmingwex_a-ilogbf.$(OBJEXT) \
@@ -1265,41 +1266,45 @@ am__objects_24 = lib32_libmoldname_a-_libm_dummy.$(OBJEXT)
 lib32_libmoldname_a_OBJECTS = $(am_lib32_libmoldname_a_OBJECTS)
 lib32_libmsvcr100_a_LIBADD =
 am__lib32_libmsvcr100_a_SOURCES_DIST = misc/onexit_table.c \
-	misc/register_tls_atexit.c stdio/acrt_iob_func.c \
+	misc/register_tls_atexit.c stdio/acrt_iob_func.c math/frexp.c \
 	lib32/msvcr100.def.in
 am__objects_25 = misc/lib32_libmsvcr100_a-onexit_table.$(OBJEXT) \
 	misc/lib32_libmsvcr100_a-register_tls_atexit.$(OBJEXT) \
-	stdio/lib32_libmsvcr100_a-acrt_iob_func.$(OBJEXT)
+	stdio/lib32_libmsvcr100_a-acrt_iob_func.$(OBJEXT) \
+	math/lib32_libmsvcr100_a-frexp.$(OBJEXT)
 @LIB32_TRUE@@W32API_FALSE@am_lib32_libmsvcr100_a_OBJECTS =  \
 @LIB32_TRUE@@W32API_FALSE@	$(am__objects_25)
 lib32_libmsvcr100_a_OBJECTS = $(am_lib32_libmsvcr100_a_OBJECTS)
 lib32_libmsvcr110_a_LIBADD =
 am__lib32_libmsvcr110_a_SOURCES_DIST = misc/onexit_table.c \
-	misc/register_tls_atexit.c stdio/acrt_iob_func.c \
+	misc/register_tls_atexit.c stdio/acrt_iob_func.c math/frexp.c \
 	lib32/msvcr110.def.in
 am__objects_26 = misc/lib32_libmsvcr110_a-onexit_table.$(OBJEXT) \
 	misc/lib32_libmsvcr110_a-register_tls_atexit.$(OBJEXT) \
-	stdio/lib32_libmsvcr110_a-acrt_iob_func.$(OBJEXT)
+	stdio/lib32_libmsvcr110_a-acrt_iob_func.$(OBJEXT) \
+	math/lib32_libmsvcr110_a-frexp.$(OBJEXT)
 @LIB32_TRUE@@W32API_FALSE@am_lib32_libmsvcr110_a_OBJECTS =  \
 @LIB32_TRUE@@W32API_FALSE@	$(am__objects_26)
 lib32_libmsvcr110_a_OBJECTS = $(am_lib32_libmsvcr110_a_OBJECTS)
 lib32_libmsvcr120_a_LIBADD =
 am__lib32_libmsvcr120_a_SOURCES_DIST = misc/onexit_table.c \
-	misc/register_tls_atexit.c stdio/acrt_iob_func.c \
+	misc/register_tls_atexit.c stdio/acrt_iob_func.c math/frexp.c \
 	lib32/msvcr120.def.in
 am__objects_27 = misc/lib32_libmsvcr120_a-onexit_table.$(OBJEXT) \
 	misc/lib32_libmsvcr120_a-register_tls_atexit.$(OBJEXT) \
-	stdio/lib32_libmsvcr120_a-acrt_iob_func.$(OBJEXT)
+	stdio/lib32_libmsvcr120_a-acrt_iob_func.$(OBJEXT) \
+	math/lib32_libmsvcr120_a-frexp.$(OBJEXT)
 @LIB32_TRUE@@W32API_FALSE@am_lib32_libmsvcr120_a_OBJECTS =  \
 @LIB32_TRUE@@W32API_FALSE@	$(am__objects_27)
 lib32_libmsvcr120_a_OBJECTS = $(am_lib32_libmsvcr120_a_OBJECTS)
 lib32_libmsvcr120_app_a_LIBADD =
 am__lib32_libmsvcr120_app_a_SOURCES_DIST = misc/onexit_table.c \
-	misc/register_tls_atexit.c stdio/acrt_iob_func.c \
+	misc/register_tls_atexit.c stdio/acrt_iob_func.c math/frexp.c \
 	misc/__set_app_type.c misc/_getpid.c lib32/msvcr120_app.def.in
 am__objects_28 = misc/lib32_libmsvcr120_app_a-onexit_table.$(OBJEXT) \
 	misc/lib32_libmsvcr120_app_a-register_tls_atexit.$(OBJEXT) \
-	stdio/lib32_libmsvcr120_app_a-acrt_iob_func.$(OBJEXT)
+	stdio/lib32_libmsvcr120_app_a-acrt_iob_func.$(OBJEXT) \
+	math/lib32_libmsvcr120_app_a-frexp.$(OBJEXT)
 am__objects_29 = $(am__objects_28) \
 	misc/lib32_libmsvcr120_app_a-__set_app_type.$(OBJEXT) \
 	misc/lib32_libmsvcr120_app_a-_getpid.$(OBJEXT)
@@ -1309,47 +1314,51 @@ lib32_libmsvcr120_app_a_OBJECTS =  \
 	$(am_lib32_libmsvcr120_app_a_OBJECTS)
 lib32_libmsvcr120d_a_LIBADD =
 am__lib32_libmsvcr120d_a_SOURCES_DIST = misc/onexit_table.c \
-	misc/register_tls_atexit.c stdio/acrt_iob_func.c \
+	misc/register_tls_atexit.c stdio/acrt_iob_func.c math/frexp.c \
 	lib32/msvcr120d.def.in
 am__objects_30 = misc/lib32_libmsvcr120d_a-onexit_table.$(OBJEXT) \
 	misc/lib32_libmsvcr120d_a-register_tls_atexit.$(OBJEXT) \
-	stdio/lib32_libmsvcr120d_a-acrt_iob_func.$(OBJEXT)
+	stdio/lib32_libmsvcr120d_a-acrt_iob_func.$(OBJEXT) \
+	math/lib32_libmsvcr120d_a-frexp.$(OBJEXT)
 @LIB32_TRUE@@W32API_FALSE@am_lib32_libmsvcr120d_a_OBJECTS =  \
 @LIB32_TRUE@@W32API_FALSE@	$(am__objects_30)
 lib32_libmsvcr120d_a_OBJECTS = $(am_lib32_libmsvcr120d_a_OBJECTS)
 lib32_libmsvcr80_a_LIBADD =
 am__lib32_libmsvcr80_a_SOURCES_DIST = misc/onexit_table.c \
-	misc/register_tls_atexit.c stdio/acrt_iob_func.c \
+	misc/register_tls_atexit.c stdio/acrt_iob_func.c math/frexp.c \
 	lib32/msvcr80.def.in
 am__objects_31 = misc/lib32_libmsvcr80_a-onexit_table.$(OBJEXT) \
 	misc/lib32_libmsvcr80_a-register_tls_atexit.$(OBJEXT) \
-	stdio/lib32_libmsvcr80_a-acrt_iob_func.$(OBJEXT)
+	stdio/lib32_libmsvcr80_a-acrt_iob_func.$(OBJEXT) \
+	math/lib32_libmsvcr80_a-frexp.$(OBJEXT)
 @LIB32_TRUE@@W32API_FALSE@am_lib32_libmsvcr80_a_OBJECTS =  \
 @LIB32_TRUE@@W32API_FALSE@	$(am__objects_31)
 lib32_libmsvcr80_a_OBJECTS = $(am_lib32_libmsvcr80_a_OBJECTS)
 lib32_libmsvcr90_a_LIBADD =
 am__lib32_libmsvcr90_a_SOURCES_DIST = misc/onexit_table.c \
-	misc/register_tls_atexit.c stdio/acrt_iob_func.c \
+	misc/register_tls_atexit.c stdio/acrt_iob_func.c math/frexp.c \
 	lib32/msvcr90.def.in
 am__objects_32 = misc/lib32_libmsvcr90_a-onexit_table.$(OBJEXT) \
 	misc/lib32_libmsvcr90_a-register_tls_atexit.$(OBJEXT) \
-	stdio/lib32_libmsvcr90_a-acrt_iob_func.$(OBJEXT)
+	stdio/lib32_libmsvcr90_a-acrt_iob_func.$(OBJEXT) \
+	math/lib32_libmsvcr90_a-frexp.$(OBJEXT)
 @LIB32_TRUE@@W32API_FALSE@am_lib32_libmsvcr90_a_OBJECTS =  \
 @LIB32_TRUE@@W32API_FALSE@	$(am__objects_32)
 lib32_libmsvcr90_a_OBJECTS = $(am_lib32_libmsvcr90_a_OBJECTS)
 lib32_libmsvcr90d_a_LIBADD =
 am__lib32_libmsvcr90d_a_SOURCES_DIST = misc/onexit_table.c \
-	misc/register_tls_atexit.c stdio/acrt_iob_func.c \
+	misc/register_tls_atexit.c stdio/acrt_iob_func.c math/frexp.c \
 	lib32/msvcr90d.def.in
 am__objects_33 = misc/lib32_libmsvcr90d_a-onexit_table.$(OBJEXT) \
 	misc/lib32_libmsvcr90d_a-register_tls_atexit.$(OBJEXT) \
-	stdio/lib32_libmsvcr90d_a-acrt_iob_func.$(OBJEXT)
+	stdio/lib32_libmsvcr90d_a-acrt_iob_func.$(OBJEXT) \
+	math/lib32_libmsvcr90d_a-frexp.$(OBJEXT)
 @LIB32_TRUE@@W32API_FALSE@am_lib32_libmsvcr90d_a_OBJECTS =  \
 @LIB32_TRUE@@W32API_FALSE@	$(am__objects_33)
 lib32_libmsvcr90d_a_OBJECTS = $(am_lib32_libmsvcr90d_a_OBJECTS)
 lib32_libmsvcrt_os_a_LIBADD =
 am__lib32_libmsvcrt_os_a_SOURCES_DIST = misc/onexit_table.c \
-	misc/register_tls_atexit.c stdio/acrt_iob_func.c \
+	misc/register_tls_atexit.c stdio/acrt_iob_func.c math/frexp.c \
 	misc/_configthreadlocale.c misc/_get_current_locale.c \
 	misc/invalid_parameter_handler.c misc/output_format.c \
 	misc/purecall.c secapi/_access_s.c secapi/_cgets_s.c \
@@ -1374,7 +1383,8 @@ am__lib32_libmsvcrt_os_a_SOURCES_DIST = misc/onexit_table.c \
 	lib-common/msvcrt.def.in
 am__objects_34 = misc/lib32_libmsvcrt_os_a-onexit_table.$(OBJEXT) \
 	misc/lib32_libmsvcrt_os_a-register_tls_atexit.$(OBJEXT) \
-	stdio/lib32_libmsvcrt_os_a-acrt_iob_func.$(OBJEXT)
+	stdio/lib32_libmsvcrt_os_a-acrt_iob_func.$(OBJEXT) \
+	math/lib32_libmsvcrt_os_a-frexp.$(OBJEXT)
 am__objects_35 = $(am__objects_34) \
 	misc/lib32_libmsvcrt_os_a-_configthreadlocale.$(OBJEXT) \
 	misc/lib32_libmsvcrt_os_a-_get_current_locale.$(OBJEXT) \
@@ -1708,10 +1718,11 @@ am__objects_53 = libsrc/lib64_libamstrmid_a-amstrmid.$(OBJEXT)
 lib64_libamstrmid_a_OBJECTS = $(am_lib64_libamstrmid_a_OBJECTS)
 lib64_libcrtdll_a_LIBADD =
 am__lib64_libcrtdll_a_SOURCES_DIST = misc/onexit_table.c \
-	misc/register_tls_atexit.c stdio/acrt_iob_func.c
+	misc/register_tls_atexit.c stdio/acrt_iob_func.c math/frexp.c
 am__objects_54 = misc/lib64_libcrtdll_a-onexit_table.$(OBJEXT) \
 	misc/lib64_libcrtdll_a-register_tls_atexit.$(OBJEXT) \
-	stdio/lib64_libcrtdll_a-acrt_iob_func.$(OBJEXT)
+	stdio/lib64_libcrtdll_a-acrt_iob_func.$(OBJEXT) \
+	math/lib64_libcrtdll_a-frexp.$(OBJEXT)
 @LIB64_TRUE@@W32API_FALSE@am_lib64_libcrtdll_a_OBJECTS =  \
 @LIB64_TRUE@@W32API_FALSE@	$(am__objects_54)
 lib64_libcrtdll_a_OBJECTS = $(am_lib64_libcrtdll_a_OBJECTS)
@@ -2044,34 +2055,34 @@ am__lib64_libmingwex_a_SOURCES_DIST = crt/dllentry.c crt/dllmain.c \
 	math/fmax.c math/fmaxf.c math/fmaxl.c math/fmin.c math/fminf.c \
 	math/fminl.c math/fp_consts.c math/fp_constsf.c \
 	math/fp_constsl.c math/fpclassify.c math/fpclassifyf.c \
-	math/fpclassifyl.c math/frexpf.c math/hypotf.c math/hypot.c \
-	math/hypotl.c math/isnan.c math/isnanf.c math/isnanl.c \
-	math/ldexpf.c math/lgamma.c math/lgammaf.c math/lgammal.c \
-	math/llrint.c math/signgam.c math/llrintf.c math/llrintl.c \
-	math/llround.c math/llroundf.c math/llroundl.c math/log10f.c \
-	math/logf.c math/lrint.c math/lrintf.c math/lrintl.c \
-	math/lround.c math/lroundf.c math/lroundl.c math/modf.c \
-	math/modff.c math/modfl.c math/nextafterf.c math/nextafterl.c \
-	math/nexttoward.c math/nexttowardf.c math/powf.c math/powi.c \
-	math/powif.c math/powil.c math/rint.c math/rintf.c \
-	math/rintl.c math/round.c math/roundf.c math/roundl.c \
-	math/s_erf.c math/sf_erf.c math/signbit.c math/signbitf.c \
-	math/signbitl.c math/sinhf.c math/sinhl.c math/sqrt.c \
-	math/sqrtf.c math/sqrtl.c math/tanhf.c math/tanhl.c \
-	math/tgamma.c math/tgammaf.c math/tgammal.c math/truncl.c \
-	math/powi.def.h math/sqrt.def.h math/cephes_emath.h \
-	math/cephes_mconf.h math/fp_consts.h math/abs64.c \
-	misc/mb_wc_common.h misc/longjmp.S misc/mingw_getsp.S \
-	misc/alarm.c misc/basename.c misc/btowc.c misc/delay-f.c \
-	misc/delay-n.c misc/delayimp.c misc/dirent.c misc/dirname.c \
-	misc/feclearexcept.c misc/fegetenv.c misc/fegetexceptflag.c \
-	misc/fegetround.c misc/feholdexcept.c misc/feraiseexcept.c \
-	misc/fesetenv.c misc/fesetexceptflag.c misc/fesetround.c \
-	misc/fetestexcept.c misc/feupdateenv.c misc/ftruncate.c \
-	misc/fwide.c misc/getlogin.c misc/getopt.c misc/gettimeofday.c \
-	misc/imaxabs.c misc/imaxdiv.c misc/isblank.c misc/iswblank.c \
-	misc/mbrtowc.c misc/mbsinit.c misc/mempcpy.c \
-	misc/mingw-aligned-malloc.c misc/mingw-fseek.c \
+	math/fpclassifyl.c math/frexpf.c math/frexpl.c math/hypotf.c \
+	math/hypot.c math/hypotl.c math/isnan.c math/isnanf.c \
+	math/isnanl.c math/ldexpf.c math/lgamma.c math/lgammaf.c \
+	math/lgammal.c math/llrint.c math/signgam.c math/llrintf.c \
+	math/llrintl.c math/llround.c math/llroundf.c math/llroundl.c \
+	math/log10f.c math/logf.c math/lrint.c math/lrintf.c \
+	math/lrintl.c math/lround.c math/lroundf.c math/lroundl.c \
+	math/modf.c math/modff.c math/modfl.c math/nextafterf.c \
+	math/nextafterl.c math/nexttoward.c math/nexttowardf.c \
+	math/powf.c math/powi.c math/powif.c math/powil.c math/rint.c \
+	math/rintf.c math/rintl.c math/round.c math/roundf.c \
+	math/roundl.c math/s_erf.c math/sf_erf.c math/signbit.c \
+	math/signbitf.c math/signbitl.c math/sinhf.c math/sinhl.c \
+	math/sqrt.c math/sqrtf.c math/sqrtl.c math/tanhf.c \
+	math/tanhl.c math/tgamma.c math/tgammaf.c math/tgammal.c \
+	math/truncl.c math/powi.def.h math/sqrt.def.h \
+	math/cephes_emath.h math/cephes_mconf.h math/fp_consts.h \
+	math/abs64.c misc/mb_wc_common.h misc/longjmp.S \
+	misc/mingw_getsp.S misc/alarm.c misc/basename.c misc/btowc.c \
+	misc/delay-f.c misc/delay-n.c misc/delayimp.c misc/dirent.c \
+	misc/dirname.c misc/feclearexcept.c misc/fegetenv.c \
+	misc/fegetexceptflag.c misc/fegetround.c misc/feholdexcept.c \
+	misc/feraiseexcept.c misc/fesetenv.c misc/fesetexceptflag.c \
+	misc/fesetround.c misc/fetestexcept.c misc/feupdateenv.c \
+	misc/ftruncate.c misc/fwide.c misc/getlogin.c misc/getopt.c \
+	misc/gettimeofday.c misc/imaxabs.c misc/imaxdiv.c \
+	misc/isblank.c misc/iswblank.c misc/mbrtowc.c misc/mbsinit.c \
+	misc/mempcpy.c misc/mingw-aligned-malloc.c misc/mingw-fseek.c \
 	misc/mingw_matherr.c misc/mingw_mbwc_convert.c \
 	misc/mingw_usleep.c misc/mingw_wcstod.c misc/mingw_wcstof.c \
 	misc/mingw_wcstold.c misc/mkstemp.c misc/seterrno.c \
@@ -2131,22 +2142,22 @@ am__lib64_libmingwex_a_SOURCES_DIST = crt/dllentry.c crt/dllmain.c \
 	math/x86/expm1.c math/x86/expm1.def.h math/x86/expm1f.c \
 	math/x86/expm1l.c math/x86/fastmath.h math/x86/floor.S \
 	math/x86/floorf.S math/x86/floorl.S math/x86/fmod.c \
-	math/x86/fmodf.c math/x86/fmodl.c math/x86/frexpl.S \
-	math/x86/fucom.c math/x86/ilogb.S math/x86/ilogbf.S \
-	math/x86/ilogbl.S math/x86/internal_logl.S math/x86/ldexp.c \
-	math/x86/ldexpl.c math/x86/log.c math/x86/log.def.h \
-	math/x86/log10l.S math/x86/log1p.S math/x86/log1pf.S \
-	math/x86/log1pl.S math/x86/log2.S math/x86/log2f.S \
-	math/x86/log2l.S math/x86/logb.c math/x86/logbf.c \
-	math/x86/logbl.c math/x86/logl.c math/x86/nearbyint.S \
-	math/x86/nearbyintf.S math/x86/nearbyintl.S math/x86/pow.c \
-	math/x86/pow.def.h math/x86/powl.c math/x86/remainder.S \
-	math/x86/remainderf.S math/x86/remainderl.S math/x86/remquo.S \
-	math/x86/remquof.S math/x86/remquol.S math/x86/scalbn.S \
-	math/x86/scalbnf.S math/x86/scalbnl.S math/x86/sin.c \
-	math/x86/sin.def.h math/x86/sinf.c math/x86/sinl.c \
-	math/x86/sinl_internal.S math/x86/tanf.c math/x86/tanl.S \
-	math/x86/trunc.S math/x86/truncf.S math/DFP/__fpclassifyd32.c \
+	math/x86/fmodf.c math/x86/fmodl.c math/x86/fucom.c \
+	math/x86/ilogb.S math/x86/ilogbf.S math/x86/ilogbl.S \
+	math/x86/internal_logl.S math/x86/ldexp.c math/x86/ldexpl.c \
+	math/x86/log.c math/x86/log.def.h math/x86/log10l.S \
+	math/x86/log1p.S math/x86/log1pf.S math/x86/log1pl.S \
+	math/x86/log2.S math/x86/log2f.S math/x86/log2l.S \
+	math/x86/logb.c math/x86/logbf.c math/x86/logbl.c \
+	math/x86/logl.c math/x86/nearbyint.S math/x86/nearbyintf.S \
+	math/x86/nearbyintl.S math/x86/pow.c math/x86/pow.def.h \
+	math/x86/powl.c math/x86/remainder.S math/x86/remainderf.S \
+	math/x86/remainderl.S math/x86/remquo.S math/x86/remquof.S \
+	math/x86/remquol.S math/x86/scalbn.S math/x86/scalbnf.S \
+	math/x86/scalbnl.S math/x86/sin.c math/x86/sin.def.h \
+	math/x86/sinf.c math/x86/sinl.c math/x86/sinl_internal.S \
+	math/x86/tanf.c math/x86/tanl.S math/x86/trunc.S \
+	math/x86/truncf.S math/DFP/__fpclassifyd32.c \
 	math/DFP/__fpclassifyd64.c math/DFP/__fpclassifyd128.c \
 	math/DFP/__isnand32.c math/DFP/__isnand64.c \
 	math/DFP/__isnand128.c math/DFP/__signbitd32.c \
@@ -2259,6 +2270,7 @@ am__objects_71 = crt/lib64_libmingwex_a-dllentry.$(OBJEXT) \
 	math/lib64_libmingwex_a-fpclassifyf.$(OBJEXT) \
 	math/lib64_libmingwex_a-fpclassifyl.$(OBJEXT) \
 	math/lib64_libmingwex_a-frexpf.$(OBJEXT) \
+	math/lib64_libmingwex_a-frexpl.$(OBJEXT) \
 	math/lib64_libmingwex_a-hypotf.$(OBJEXT) \
 	math/lib64_libmingwex_a-hypot.$(OBJEXT) \
 	math/lib64_libmingwex_a-hypotl.$(OBJEXT) \
@@ -2520,7 +2532,6 @@ am__objects_72 = math/x86/lib64_libmingwex_a-_chgsignl.$(OBJEXT) \
 	math/x86/lib64_libmingwex_a-fmod.$(OBJEXT) \
 	math/x86/lib64_libmingwex_a-fmodf.$(OBJEXT) \
 	math/x86/lib64_libmingwex_a-fmodl.$(OBJEXT) \
-	math/x86/lib64_libmingwex_a-frexpl.$(OBJEXT) \
 	math/x86/lib64_libmingwex_a-fucom.$(OBJEXT) \
 	math/x86/lib64_libmingwex_a-ilogb.$(OBJEXT) \
 	math/x86/lib64_libmingwex_a-ilogbf.$(OBJEXT) \
@@ -2595,41 +2606,45 @@ am__objects_76 = lib64_libmoldname_a-_libm_dummy.$(OBJEXT)
 lib64_libmoldname_a_OBJECTS = $(am_lib64_libmoldname_a_OBJECTS)
 lib64_libmsvcr100_a_LIBADD =
 am__lib64_libmsvcr100_a_SOURCES_DIST = misc/onexit_table.c \
-	misc/register_tls_atexit.c stdio/acrt_iob_func.c \
+	misc/register_tls_atexit.c stdio/acrt_iob_func.c math/frexp.c \
 	lib64/msvcr100.def.in
 am__objects_77 = misc/lib64_libmsvcr100_a-onexit_table.$(OBJEXT) \
 	misc/lib64_libmsvcr100_a-register_tls_atexit.$(OBJEXT) \
-	stdio/lib64_libmsvcr100_a-acrt_iob_func.$(OBJEXT)
+	stdio/lib64_libmsvcr100_a-acrt_iob_func.$(OBJEXT) \
+	math/lib64_libmsvcr100_a-frexp.$(OBJEXT)
 @LIB64_TRUE@@W32API_FALSE@am_lib64_libmsvcr100_a_OBJECTS =  \
 @LIB64_TRUE@@W32API_FALSE@	$(am__objects_77)
 lib64_libmsvcr100_a_OBJECTS = $(am_lib64_libmsvcr100_a_OBJECTS)
 lib64_libmsvcr110_a_LIBADD =
 am__lib64_libmsvcr110_a_SOURCES_DIST = misc/onexit_table.c \
-	misc/register_tls_atexit.c stdio/acrt_iob_func.c \
+	misc/register_tls_atexit.c stdio/acrt_iob_func.c math/frexp.c \
 	lib64/msvcr110.def.in
 am__objects_78 = misc/lib64_libmsvcr110_a-onexit_table.$(OBJEXT) \
 	misc/lib64_libmsvcr110_a-register_tls_atexit.$(OBJEXT) \
-	stdio/lib64_libmsvcr110_a-acrt_iob_func.$(OBJEXT)
+	stdio/lib64_libmsvcr110_a-acrt_iob_func.$(OBJEXT) \
+	math/lib64_libmsvcr110_a-frexp.$(OBJEXT)
 @LIB64_TRUE@@W32API_FALSE@am_lib64_libmsvcr110_a_OBJECTS =  \
 @LIB64_TRUE@@W32API_FALSE@	$(am__objects_78)
 lib64_libmsvcr110_a_OBJECTS = $(am_lib64_libmsvcr110_a_OBJECTS)
 lib64_libmsvcr120_a_LIBADD =
 am__lib64_libmsvcr120_a_SOURCES_DIST = misc/onexit_table.c \
-	misc/register_tls_atexit.c stdio/acrt_iob_func.c \
+	misc/register_tls_atexit.c stdio/acrt_iob_func.c math/frexp.c \
 	lib64/msvcr120.def.in
 am__objects_79 = misc/lib64_libmsvcr120_a-onexit_table.$(OBJEXT) \
 	misc/lib64_libmsvcr120_a-register_tls_atexit.$(OBJEXT) \
-	stdio/lib64_libmsvcr120_a-acrt_iob_func.$(OBJEXT)
+	stdio/lib64_libmsvcr120_a-acrt_iob_func.$(OBJEXT) \
+	math/lib64_libmsvcr120_a-frexp.$(OBJEXT)
 @LIB64_TRUE@@W32API_FALSE@am_lib64_libmsvcr120_a_OBJECTS =  \
 @LIB64_TRUE@@W32API_FALSE@	$(am__objects_79)
 lib64_libmsvcr120_a_OBJECTS = $(am_lib64_libmsvcr120_a_OBJECTS)
 lib64_libmsvcr120_app_a_LIBADD =
 am__lib64_libmsvcr120_app_a_SOURCES_DIST = misc/onexit_table.c \
-	misc/register_tls_atexit.c stdio/acrt_iob_func.c \
+	misc/register_tls_atexit.c stdio/acrt_iob_func.c math/frexp.c \
 	misc/__set_app_type.c misc/_getpid.c lib64/msvcr120_app.def.in
 am__objects_80 = misc/lib64_libmsvcr120_app_a-onexit_table.$(OBJEXT) \
 	misc/lib64_libmsvcr120_app_a-register_tls_atexit.$(OBJEXT) \
-	stdio/lib64_libmsvcr120_app_a-acrt_iob_func.$(OBJEXT)
+	stdio/lib64_libmsvcr120_app_a-acrt_iob_func.$(OBJEXT) \
+	math/lib64_libmsvcr120_app_a-frexp.$(OBJEXT)
 am__objects_81 = $(am__objects_80) \
 	misc/lib64_libmsvcr120_app_a-__set_app_type.$(OBJEXT) \
 	misc/lib64_libmsvcr120_app_a-_getpid.$(OBJEXT)
@@ -2639,22 +2654,24 @@ lib64_libmsvcr120_app_a_OBJECTS =  \
 	$(am_lib64_libmsvcr120_app_a_OBJECTS)
 lib64_libmsvcr120d_a_LIBADD =
 am__lib64_libmsvcr120d_a_SOURCES_DIST = misc/onexit_table.c \
-	misc/register_tls_atexit.c stdio/acrt_iob_func.c \
+	misc/register_tls_atexit.c stdio/acrt_iob_func.c math/frexp.c \
 	lib64/msvcr120d.def.in
 am__objects_82 = misc/lib64_libmsvcr120d_a-onexit_table.$(OBJEXT) \
 	misc/lib64_libmsvcr120d_a-register_tls_atexit.$(OBJEXT) \
-	stdio/lib64_libmsvcr120d_a-acrt_iob_func.$(OBJEXT)
+	stdio/lib64_libmsvcr120d_a-acrt_iob_func.$(OBJEXT) \
+	math/lib64_libmsvcr120d_a-frexp.$(OBJEXT)
 @LIB64_TRUE@@W32API_FALSE@am_lib64_libmsvcr120d_a_OBJECTS =  \
 @LIB64_TRUE@@W32API_FALSE@	$(am__objects_82)
 lib64_libmsvcr120d_a_OBJECTS = $(am_lib64_libmsvcr120d_a_OBJECTS)
 lib64_libmsvcr80_a_LIBADD =
 am__lib64_libmsvcr80_a_SOURCES_DIST = misc/onexit_table.c \
-	misc/register_tls_atexit.c stdio/acrt_iob_func.c \
+	misc/register_tls_atexit.c stdio/acrt_iob_func.c math/frexp.c \
 	misc/__p___argv.c misc/__p__acmdln.c misc/__p__fmode.c \
 	misc/__p__wcmdln.c lib64/msvcr80.def.in
 am__objects_83 = misc/lib64_libmsvcr80_a-onexit_table.$(OBJEXT) \
 	misc/lib64_libmsvcr80_a-register_tls_atexit.$(OBJEXT) \
-	stdio/lib64_libmsvcr80_a-acrt_iob_func.$(OBJEXT)
+	stdio/lib64_libmsvcr80_a-acrt_iob_func.$(OBJEXT) \
+	math/lib64_libmsvcr80_a-frexp.$(OBJEXT)
 am__objects_84 = $(am__objects_83) \
 	misc/lib64_libmsvcr80_a-__p___argv.$(OBJEXT) \
 	misc/lib64_libmsvcr80_a-__p__acmdln.$(OBJEXT) \
@@ -2665,27 +2682,29 @@ am__objects_84 = $(am__objects_83) \
 lib64_libmsvcr80_a_OBJECTS = $(am_lib64_libmsvcr80_a_OBJECTS)
 lib64_libmsvcr90_a_LIBADD =
 am__lib64_libmsvcr90_a_SOURCES_DIST = misc/onexit_table.c \
-	misc/register_tls_atexit.c stdio/acrt_iob_func.c \
+	misc/register_tls_atexit.c stdio/acrt_iob_func.c math/frexp.c \
 	lib64/msvcr90.def.in
 am__objects_85 = misc/lib64_libmsvcr90_a-onexit_table.$(OBJEXT) \
 	misc/lib64_libmsvcr90_a-register_tls_atexit.$(OBJEXT) \
-	stdio/lib64_libmsvcr90_a-acrt_iob_func.$(OBJEXT)
+	stdio/lib64_libmsvcr90_a-acrt_iob_func.$(OBJEXT) \
+	math/lib64_libmsvcr90_a-frexp.$(OBJEXT)
 @LIB64_TRUE@@W32API_FALSE@am_lib64_libmsvcr90_a_OBJECTS =  \
 @LIB64_TRUE@@W32API_FALSE@	$(am__objects_85)
 lib64_libmsvcr90_a_OBJECTS = $(am_lib64_libmsvcr90_a_OBJECTS)
 lib64_libmsvcr90d_a_LIBADD =
 am__lib64_libmsvcr90d_a_SOURCES_DIST = misc/onexit_table.c \
-	misc/register_tls_atexit.c stdio/acrt_iob_func.c \
+	misc/register_tls_atexit.c stdio/acrt_iob_func.c math/frexp.c \
 	lib64/msvcr90d.def.in
 am__objects_86 = misc/lib64_libmsvcr90d_a-onexit_table.$(OBJEXT) \
 	misc/lib64_libmsvcr90d_a-register_tls_atexit.$(OBJEXT) \
-	stdio/lib64_libmsvcr90d_a-acrt_iob_func.$(OBJEXT)
+	stdio/lib64_libmsvcr90d_a-acrt_iob_func.$(OBJEXT) \
+	math/lib64_libmsvcr90d_a-frexp.$(OBJEXT)
 @LIB64_TRUE@@W32API_FALSE@am_lib64_libmsvcr90d_a_OBJECTS =  \
 @LIB64_TRUE@@W32API_FALSE@	$(am__objects_86)
 lib64_libmsvcr90d_a_OBJECTS = $(am_lib64_libmsvcr90d_a_OBJECTS)
 lib64_libmsvcrt_os_a_LIBADD =
 am__lib64_libmsvcrt_os_a_SOURCES_DIST = misc/onexit_table.c \
-	misc/register_tls_atexit.c stdio/acrt_iob_func.c \
+	misc/register_tls_atexit.c stdio/acrt_iob_func.c math/frexp.c \
 	misc/_configthreadlocale.c misc/_get_current_locale.c \
 	misc/invalid_parameter_handler.c misc/output_format.c \
 	misc/purecall.c secapi/_access_s.c secapi/_cgets_s.c \
@@ -2709,7 +2728,8 @@ am__lib64_libmsvcrt_os_a_SOURCES_DIST = misc/onexit_table.c \
 	misc/__p__fmode.c misc/__p__wcmdln.c lib-common/msvcrt.def.in
 am__objects_87 = misc/lib64_libmsvcrt_os_a-onexit_table.$(OBJEXT) \
 	misc/lib64_libmsvcrt_os_a-register_tls_atexit.$(OBJEXT) \
-	stdio/lib64_libmsvcrt_os_a-acrt_iob_func.$(OBJEXT)
+	stdio/lib64_libmsvcrt_os_a-acrt_iob_func.$(OBJEXT) \
+	math/lib64_libmsvcrt_os_a-frexp.$(OBJEXT)
 am__objects_88 = $(am__objects_87) \
 	misc/lib64_libmsvcrt_os_a-_configthreadlocale.$(OBJEXT) \
 	misc/lib64_libmsvcrt_os_a-_get_current_locale.$(OBJEXT) \
@@ -3295,34 +3315,34 @@ am__libarm32_libmingwex_a_SOURCES_DIST = crt/dllentry.c crt/dllmain.c \
 	math/fmax.c math/fmaxf.c math/fmaxl.c math/fmin.c math/fminf.c \
 	math/fminl.c math/fp_consts.c math/fp_constsf.c \
 	math/fp_constsl.c math/fpclassify.c math/fpclassifyf.c \
-	math/fpclassifyl.c math/frexpf.c math/hypotf.c math/hypot.c \
-	math/hypotl.c math/isnan.c math/isnanf.c math/isnanl.c \
-	math/ldexpf.c math/lgamma.c math/lgammaf.c math/lgammal.c \
-	math/llrint.c math/signgam.c math/llrintf.c math/llrintl.c \
-	math/llround.c math/llroundf.c math/llroundl.c math/log10f.c \
-	math/logf.c math/lrint.c math/lrintf.c math/lrintl.c \
-	math/lround.c math/lroundf.c math/lroundl.c math/modf.c \
-	math/modff.c math/modfl.c math/nextafterf.c math/nextafterl.c \
-	math/nexttoward.c math/nexttowardf.c math/powf.c math/powi.c \
-	math/powif.c math/powil.c math/rint.c math/rintf.c \
-	math/rintl.c math/round.c math/roundf.c math/roundl.c \
-	math/s_erf.c math/sf_erf.c math/signbit.c math/signbitf.c \
-	math/signbitl.c math/sinhf.c math/sinhl.c math/sqrt.c \
-	math/sqrtf.c math/sqrtl.c math/tanhf.c math/tanhl.c \
-	math/tgamma.c math/tgammaf.c math/tgammal.c math/truncl.c \
-	math/powi.def.h math/sqrt.def.h math/cephes_emath.h \
-	math/cephes_mconf.h math/fp_consts.h math/abs64.c \
-	misc/mb_wc_common.h misc/longjmp.S misc/mingw_getsp.S \
-	misc/alarm.c misc/basename.c misc/btowc.c misc/delay-f.c \
-	misc/delay-n.c misc/delayimp.c misc/dirent.c misc/dirname.c \
-	misc/feclearexcept.c misc/fegetenv.c misc/fegetexceptflag.c \
-	misc/fegetround.c misc/feholdexcept.c misc/feraiseexcept.c \
-	misc/fesetenv.c misc/fesetexceptflag.c misc/fesetround.c \
-	misc/fetestexcept.c misc/feupdateenv.c misc/ftruncate.c \
-	misc/fwide.c misc/getlogin.c misc/getopt.c misc/gettimeofday.c \
-	misc/imaxabs.c misc/imaxdiv.c misc/isblank.c misc/iswblank.c \
-	misc/mbrtowc.c misc/mbsinit.c misc/mempcpy.c \
-	misc/mingw-aligned-malloc.c misc/mingw-fseek.c \
+	math/fpclassifyl.c math/frexpf.c math/frexpl.c math/hypotf.c \
+	math/hypot.c math/hypotl.c math/isnan.c math/isnanf.c \
+	math/isnanl.c math/ldexpf.c math/lgamma.c math/lgammaf.c \
+	math/lgammal.c math/llrint.c math/signgam.c math/llrintf.c \
+	math/llrintl.c math/llround.c math/llroundf.c math/llroundl.c \
+	math/log10f.c math/logf.c math/lrint.c math/lrintf.c \
+	math/lrintl.c math/lround.c math/lroundf.c math/lroundl.c \
+	math/modf.c math/modff.c math/modfl.c math/nextafterf.c \
+	math/nextafterl.c math/nexttoward.c math/nexttowardf.c \
+	math/powf.c math/powi.c math/powif.c math/powil.c math/rint.c \
+	math/rintf.c math/rintl.c math/round.c math/roundf.c \
+	math/roundl.c math/s_erf.c math/sf_erf.c math/signbit.c \
+	math/signbitf.c math/signbitl.c math/sinhf.c math/sinhl.c \
+	math/sqrt.c math/sqrtf.c math/sqrtl.c math/tanhf.c \
+	math/tanhl.c math/tgamma.c math/tgammaf.c math/tgammal.c \
+	math/truncl.c math/powi.def.h math/sqrt.def.h \
+	math/cephes_emath.h math/cephes_mconf.h math/fp_consts.h \
+	math/abs64.c misc/mb_wc_common.h misc/longjmp.S \
+	misc/mingw_getsp.S misc/alarm.c misc/basename.c misc/btowc.c \
+	misc/delay-f.c misc/delay-n.c misc/delayimp.c misc/dirent.c \
+	misc/dirname.c misc/feclearexcept.c misc/fegetenv.c \
+	misc/fegetexceptflag.c misc/fegetround.c misc/feholdexcept.c \
+	misc/feraiseexcept.c misc/fesetenv.c misc/fesetexceptflag.c \
+	misc/fesetround.c misc/fetestexcept.c misc/feupdateenv.c \
+	misc/ftruncate.c misc/fwide.c misc/getlogin.c misc/getopt.c \
+	misc/gettimeofday.c misc/imaxabs.c misc/imaxdiv.c \
+	misc/isblank.c misc/iswblank.c misc/mbrtowc.c misc/mbsinit.c \
+	misc/mempcpy.c misc/mingw-aligned-malloc.c misc/mingw-fseek.c \
 	misc/mingw_matherr.c misc/mingw_mbwc_convert.c \
 	misc/mingw_usleep.c misc/mingw_wcstod.c misc/mingw_wcstof.c \
 	misc/mingw_wcstold.c misc/mkstemp.c misc/seterrno.c \
@@ -3515,6 +3535,7 @@ am__objects_119 = crt/libarm32_libmingwex_a-dllentry.$(OBJEXT) \
 	math/libarm32_libmingwex_a-fpclassifyf.$(OBJEXT) \
 	math/libarm32_libmingwex_a-fpclassifyl.$(OBJEXT) \
 	math/libarm32_libmingwex_a-frexpf.$(OBJEXT) \
+	math/libarm32_libmingwex_a-frexpl.$(OBJEXT) \
 	math/libarm32_libmingwex_a-hypotf.$(OBJEXT) \
 	math/libarm32_libmingwex_a-hypot.$(OBJEXT) \
 	math/libarm32_libmingwex_a-hypotl.$(OBJEXT) \
@@ -3845,22 +3866,24 @@ am__objects_125 = libarm32_libmoldname_a-_libm_dummy.$(OBJEXT)
 libarm32_libmoldname_a_OBJECTS = $(am_libarm32_libmoldname_a_OBJECTS)
 libarm32_libmsvcr110_a_LIBADD =
 am__libarm32_libmsvcr110_a_SOURCES_DIST = misc/onexit_table.c \
-	misc/register_tls_atexit.c stdio/acrt_iob_func.c
+	misc/register_tls_atexit.c stdio/acrt_iob_func.c math/frexp.c
 am__objects_126 = misc/libarm32_libmsvcr110_a-onexit_table.$(OBJEXT) \
 	misc/libarm32_libmsvcr110_a-register_tls_atexit.$(OBJEXT) \
-	stdio/libarm32_libmsvcr110_a-acrt_iob_func.$(OBJEXT)
+	stdio/libarm32_libmsvcr110_a-acrt_iob_func.$(OBJEXT) \
+	math/libarm32_libmsvcr110_a-frexp.$(OBJEXT)
 @LIBARM32_TRUE@@W32API_FALSE@am_libarm32_libmsvcr110_a_OBJECTS =  \
 @LIBARM32_TRUE@@W32API_FALSE@	$(am__objects_126)
 libarm32_libmsvcr110_a_OBJECTS = $(am_libarm32_libmsvcr110_a_OBJECTS)
 libarm32_libmsvcr120_app_a_LIBADD =
 am__libarm32_libmsvcr120_app_a_SOURCES_DIST = misc/onexit_table.c \
-	misc/register_tls_atexit.c stdio/acrt_iob_func.c \
+	misc/register_tls_atexit.c stdio/acrt_iob_func.c math/frexp.c \
 	misc/__set_app_type.c misc/_getpid.c \
 	libarm32/msvcr120_app.def.in
 am__objects_127 =  \
 	misc/libarm32_libmsvcr120_app_a-onexit_table.$(OBJEXT) \
 	misc/libarm32_libmsvcr120_app_a-register_tls_atexit.$(OBJEXT) \
-	stdio/libarm32_libmsvcr120_app_a-acrt_iob_func.$(OBJEXT)
+	stdio/libarm32_libmsvcr120_app_a-acrt_iob_func.$(OBJEXT) \
+	math/libarm32_libmsvcr120_app_a-frexp.$(OBJEXT)
 am__objects_128 = $(am__objects_127) \
 	misc/libarm32_libmsvcr120_app_a-__set_app_type.$(OBJEXT) \
 	misc/libarm32_libmsvcr120_app_a-_getpid.$(OBJEXT)
@@ -3870,7 +3893,7 @@ libarm32_libmsvcr120_app_a_OBJECTS =  \
 	$(am_libarm32_libmsvcr120_app_a_OBJECTS)
 libarm32_libmsvcrt_os_a_LIBADD =
 am__libarm32_libmsvcrt_os_a_SOURCES_DIST = misc/onexit_table.c \
-	misc/register_tls_atexit.c stdio/acrt_iob_func.c \
+	misc/register_tls_atexit.c stdio/acrt_iob_func.c math/frexp.c \
 	misc/_configthreadlocale.c misc/_get_current_locale.c \
 	misc/invalid_parameter_handler.c misc/output_format.c \
 	misc/purecall.c secapi/_access_s.c secapi/_cgets_s.c \
@@ -3911,7 +3934,8 @@ am__libarm32_libmsvcrt_os_a_SOURCES_DIST = misc/onexit_table.c \
 	lib-common/msvcrt.def.in
 am__objects_129 = misc/libarm32_libmsvcrt_os_a-onexit_table.$(OBJEXT) \
 	misc/libarm32_libmsvcrt_os_a-register_tls_atexit.$(OBJEXT) \
-	stdio/libarm32_libmsvcrt_os_a-acrt_iob_func.$(OBJEXT)
+	stdio/libarm32_libmsvcrt_os_a-acrt_iob_func.$(OBJEXT) \
+	math/libarm32_libmsvcrt_os_a-frexp.$(OBJEXT)
 am__objects_130 = $(am__objects_129) \
 	misc/libarm32_libmsvcrt_os_a-_configthreadlocale.$(OBJEXT) \
 	misc/libarm32_libmsvcrt_os_a-_get_current_locale.$(OBJEXT) \
@@ -4537,34 +4561,34 @@ am__libarm64_libmingwex_a_SOURCES_DIST = crt/dllentry.c crt/dllmain.c \
 	math/fmax.c math/fmaxf.c math/fmaxl.c math/fmin.c math/fminf.c \
 	math/fminl.c math/fp_consts.c math/fp_constsf.c \
 	math/fp_constsl.c math/fpclassify.c math/fpclassifyf.c \
-	math/fpclassifyl.c math/frexpf.c math/hypotf.c math/hypot.c \
-	math/hypotl.c math/isnan.c math/isnanf.c math/isnanl.c \
-	math/ldexpf.c math/lgamma.c math/lgammaf.c math/lgammal.c \
-	math/llrint.c math/signgam.c math/llrintf.c math/llrintl.c \
-	math/llround.c math/llroundf.c math/llroundl.c math/log10f.c \
-	math/logf.c math/lrint.c math/lrintf.c math/lrintl.c \
-	math/lround.c math/lroundf.c math/lroundl.c math/modf.c \
-	math/modff.c math/modfl.c math/nextafterf.c math/nextafterl.c \
-	math/nexttoward.c math/nexttowardf.c math/powf.c math/powi.c \
-	math/powif.c math/powil.c math/rint.c math/rintf.c \
-	math/rintl.c math/round.c math/roundf.c math/roundl.c \
-	math/s_erf.c math/sf_erf.c math/signbit.c math/signbitf.c \
-	math/signbitl.c math/sinhf.c math/sinhl.c math/sqrt.c \
-	math/sqrtf.c math/sqrtl.c math/tanhf.c math/tanhl.c \
-	math/tgamma.c math/tgammaf.c math/tgammal.c math/truncl.c \
-	math/powi.def.h math/sqrt.def.h math/cephes_emath.h \
-	math/cephes_mconf.h math/fp_consts.h math/abs64.c \
-	misc/mb_wc_common.h misc/longjmp.S misc/mingw_getsp.S \
-	misc/alarm.c misc/basename.c misc/btowc.c misc/delay-f.c \
-	misc/delay-n.c misc/delayimp.c misc/dirent.c misc/dirname.c \
-	misc/feclearexcept.c misc/fegetenv.c misc/fegetexceptflag.c \
-	misc/fegetround.c misc/feholdexcept.c misc/feraiseexcept.c \
-	misc/fesetenv.c misc/fesetexceptflag.c misc/fesetround.c \
-	misc/fetestexcept.c misc/feupdateenv.c misc/ftruncate.c \
-	misc/fwide.c misc/getlogin.c misc/getopt.c misc/gettimeofday.c \
-	misc/imaxabs.c misc/imaxdiv.c misc/isblank.c misc/iswblank.c \
-	misc/mbrtowc.c misc/mbsinit.c misc/mempcpy.c \
-	misc/mingw-aligned-malloc.c misc/mingw-fseek.c \
+	math/fpclassifyl.c math/frexpf.c math/frexpl.c math/hypotf.c \
+	math/hypot.c math/hypotl.c math/isnan.c math/isnanf.c \
+	math/isnanl.c math/ldexpf.c math/lgamma.c math/lgammaf.c \
+	math/lgammal.c math/llrint.c math/signgam.c math/llrintf.c \
+	math/llrintl.c math/llround.c math/llroundf.c math/llroundl.c \
+	math/log10f.c math/logf.c math/lrint.c math/lrintf.c \
+	math/lrintl.c math/lround.c math/lroundf.c math/lroundl.c \
+	math/modf.c math/modff.c math/modfl.c math/nextafterf.c \
+	math/nextafterl.c math/nexttoward.c math/nexttowardf.c \
+	math/powf.c math/powi.c math/powif.c math/powil.c math/rint.c \
+	math/rintf.c math/rintl.c math/round.c math/roundf.c \
+	math/roundl.c math/s_erf.c math/sf_erf.c math/signbit.c \
+	math/signbitf.c math/signbitl.c math/sinhf.c math/sinhl.c \
+	math/sqrt.c math/sqrtf.c math/sqrtl.c math/tanhf.c \
+	math/tanhl.c math/tgamma.c math/tgammaf.c math/tgammal.c \
+	math/truncl.c math/powi.def.h math/sqrt.def.h \
+	math/cephes_emath.h math/cephes_mconf.h math/fp_consts.h \
+	math/abs64.c misc/mb_wc_common.h misc/longjmp.S \
+	misc/mingw_getsp.S misc/alarm.c misc/basename.c misc/btowc.c \
+	misc/delay-f.c misc/delay-n.c misc/delayimp.c misc/dirent.c \
+	misc/dirname.c misc/feclearexcept.c misc/fegetenv.c \
+	misc/fegetexceptflag.c misc/fegetround.c misc/feholdexcept.c \
+	misc/feraiseexcept.c misc/fesetenv.c misc/fesetexceptflag.c \
+	misc/fesetround.c misc/fetestexcept.c misc/feupdateenv.c \
+	misc/ftruncate.c misc/fwide.c misc/getlogin.c misc/getopt.c \
+	misc/gettimeofday.c misc/imaxabs.c misc/imaxdiv.c \
+	misc/isblank.c misc/iswblank.c misc/mbrtowc.c misc/mbsinit.c \
+	misc/mempcpy.c misc/mingw-aligned-malloc.c misc/mingw-fseek.c \
 	misc/mingw_matherr.c misc/mingw_mbwc_convert.c \
 	misc/mingw_usleep.c misc/mingw_wcstod.c misc/mingw_wcstof.c \
 	misc/mingw_wcstold.c misc/mkstemp.c misc/seterrno.c \
@@ -4723,6 +4747,7 @@ am__objects_161 = crt/libarm64_libmingwex_a-dllentry.$(OBJEXT) \
 	math/libarm64_libmingwex_a-fpclassifyf.$(OBJEXT) \
 	math/libarm64_libmingwex_a-fpclassifyl.$(OBJEXT) \
 	math/libarm64_libmingwex_a-frexpf.$(OBJEXT) \
+	math/libarm64_libmingwex_a-frexpl.$(OBJEXT) \
 	math/libarm64_libmingwex_a-hypotf.$(OBJEXT) \
 	math/libarm64_libmingwex_a-hypot.$(OBJEXT) \
 	math/libarm64_libmingwex_a-hypotl.$(OBJEXT) \
@@ -4981,7 +5006,7 @@ am__objects_165 = libarm64_libmoldname_a-_libm_dummy.$(OBJEXT)
 libarm64_libmoldname_a_OBJECTS = $(am_libarm64_libmoldname_a_OBJECTS)
 libarm64_libmsvcrt_os_a_LIBADD =
 am__libarm64_libmsvcrt_os_a_SOURCES_DIST = misc/onexit_table.c \
-	misc/register_tls_atexit.c stdio/acrt_iob_func.c \
+	misc/register_tls_atexit.c stdio/acrt_iob_func.c math/frexp.c \
 	misc/_configthreadlocale.c misc/_get_current_locale.c \
 	misc/invalid_parameter_handler.c misc/output_format.c \
 	misc/purecall.c secapi/_access_s.c secapi/_cgets_s.c \
@@ -5022,7 +5047,8 @@ am__libarm64_libmsvcrt_os_a_SOURCES_DIST = misc/onexit_table.c \
 	misc/_getpid.c stdio/gets.c lib-common/msvcrt.def.in
 am__objects_166 = misc/libarm64_libmsvcrt_os_a-onexit_table.$(OBJEXT) \
 	misc/libarm64_libmsvcrt_os_a-register_tls_atexit.$(OBJEXT) \
-	stdio/libarm64_libmsvcrt_os_a-acrt_iob_func.$(OBJEXT)
+	stdio/libarm64_libmsvcrt_os_a-acrt_iob_func.$(OBJEXT) \
+	math/libarm64_libmsvcrt_os_a-frexp.$(OBJEXT)
 am__objects_167 = $(am__objects_166) \
 	misc/libarm64_libmsvcrt_os_a-_configthreadlocale.$(OBJEXT) \
 	misc/libarm64_libmsvcrt_os_a-_get_current_locale.$(OBJEXT) \
@@ -6990,7 +7016,8 @@ src_libws2_32 = libsrc/ws2_32.c \
 src_msvcrt_common = \
   misc/onexit_table.c \
   misc/register_tls_atexit.c \
-  stdio/acrt_iob_func.c
+  stdio/acrt_iob_func.c \
+  math/frexp.c
 
 src_msvcrt = \
   $(src_msvcrt_common) \
@@ -7166,7 +7193,7 @@ src_libmingwex = \
   math/fma.c            math/fmaf.c        math/fmal.c           \
   math/fmax.c           math/fmaxf.c       math/fmaxl.c          math/fmin.c          math/fminf.c         \
   math/fminl.c          math/fp_consts.c   math/fp_constsf.c     \
-  math/fp_constsl.c     math/fpclassify.c  math/fpclassifyf.c    math/fpclassifyl.c   math/frexpf.c        \
+  math/fp_constsl.c     math/fpclassify.c  math/fpclassifyf.c    math/fpclassifyl.c   math/frexpf.c        math/frexpl.c \
   math/hypotf.c         math/hypot.c  math/hypotl.c      math/isnan.c          math/isnanf.c        math/isnanl.c        \
   math/ldexpf.c         math/lgamma.c      math/lgammaf.c        math/lgammal.c       math/llrint.c        \
   math/signgam.c \
@@ -7237,7 +7264,7 @@ src_libmingwex_x86 = \
   math/x86/exp.c            math/x86/exp.def.h        math/x86/expl.c           math/x86/exp2.S           math/x86/exp2f.S          \
   math/x86/exp2l.S          math/x86/expm1.c          math/x86/expm1.def.h      math/x86/expm1f.c         math/x86/expm1l.c         \
   math/x86/fastmath.h       math/x86/floor.S          math/x86/floorf.S         math/x86/floorl.S         math/x86/fmod.c           \
-  math/x86/fmodf.c          math/x86/fmodl.c          math/x86/frexpl.S         math/x86/fucom.c          math/x86/ilogb.S          \
+  math/x86/fmodf.c          math/x86/fmodl.c          math/x86/fucom.c          math/x86/ilogb.S          \
   math/x86/ilogbf.S         math/x86/ilogbl.S         math/x86/internal_logl.S  math/x86/ldexp.c          math/x86/ldexpl.c         \
   math/x86/log.c            math/x86/log.def.h        math/x86/log10l.S         math/x86/log1p.S          math/x86/log1pf.S         \
   math/x86/log1pl.S         math/x86/log2.S           math/x86/log2f.S          math/x86/log2l.S          math/x86/logb.c           \
@@ -9776,6 +9803,14 @@ stdio/$(DEPDIR)/$(am__dirstamp):
 	@: > stdio/$(DEPDIR)/$(am__dirstamp)
 stdio/lib32_libcrtdll_a-acrt_iob_func.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
+math/$(am__dirstamp):
+	@$(MKDIR_P) math
+	@: > math/$(am__dirstamp)
+math/$(DEPDIR)/$(am__dirstamp):
+	@$(MKDIR_P) math/$(DEPDIR)
+	@: > math/$(DEPDIR)/$(am__dirstamp)
+math/lib32_libcrtdll_a-frexp.$(OBJEXT): math/$(am__dirstamp) \
+	math/$(DEPDIR)/$(am__dirstamp)
 
 lib32/libcrtdll.a: $(lib32_libcrtdll_a_OBJECTS) $(lib32_libcrtdll_a_DEPENDENCIES) $(EXTRA_lib32_libcrtdll_a_DEPENDENCIES) lib32/$(am__dirstamp)
 	$(AM_V_at)-rm -f lib32/libcrtdll.a
@@ -10300,12 +10335,6 @@ gdtoa/lib32_libmingwex_a-sum.$(OBJEXT): gdtoa/$(am__dirstamp) \
 	gdtoa/$(DEPDIR)/$(am__dirstamp)
 gdtoa/lib32_libmingwex_a-ulp.$(OBJEXT): gdtoa/$(am__dirstamp) \
 	gdtoa/$(DEPDIR)/$(am__dirstamp)
-math/$(am__dirstamp):
-	@$(MKDIR_P) math
-	@: > math/$(am__dirstamp)
-math/$(DEPDIR)/$(am__dirstamp):
-	@$(MKDIR_P) math/$(DEPDIR)
-	@: > math/$(DEPDIR)/$(am__dirstamp)
 math/lib32_libmingwex_a-cbrt.$(OBJEXT): math/$(am__dirstamp) \
 	math/$(DEPDIR)/$(am__dirstamp)
 math/lib32_libmingwex_a-cbrtf.$(OBJEXT): math/$(am__dirstamp) \
@@ -10369,6 +10398,8 @@ math/lib32_libmingwex_a-fpclassifyf.$(OBJEXT): math/$(am__dirstamp) \
 math/lib32_libmingwex_a-fpclassifyl.$(OBJEXT): math/$(am__dirstamp) \
 	math/$(DEPDIR)/$(am__dirstamp)
 math/lib32_libmingwex_a-frexpf.$(OBJEXT): math/$(am__dirstamp) \
+	math/$(DEPDIR)/$(am__dirstamp)
+math/lib32_libmingwex_a-frexpl.$(OBJEXT): math/$(am__dirstamp) \
 	math/$(DEPDIR)/$(am__dirstamp)
 math/lib32_libmingwex_a-hypotf.$(OBJEXT): math/$(am__dirstamp) \
 	math/$(DEPDIR)/$(am__dirstamp)
@@ -10898,8 +10929,6 @@ math/x86/lib32_libmingwex_a-fmodf.$(OBJEXT): math/x86/$(am__dirstamp) \
 	math/x86/$(DEPDIR)/$(am__dirstamp)
 math/x86/lib32_libmingwex_a-fmodl.$(OBJEXT): math/x86/$(am__dirstamp) \
 	math/x86/$(DEPDIR)/$(am__dirstamp)
-math/x86/lib32_libmingwex_a-frexpl.$(OBJEXT):  \
-	math/x86/$(am__dirstamp) math/x86/$(DEPDIR)/$(am__dirstamp)
 math/x86/lib32_libmingwex_a-fucom.$(OBJEXT): math/x86/$(am__dirstamp) \
 	math/x86/$(DEPDIR)/$(am__dirstamp)
 math/x86/lib32_libmingwex_a-ilogb.$(OBJEXT): math/x86/$(am__dirstamp) \
@@ -11035,6 +11064,8 @@ misc/lib32_libmsvcr100_a-register_tls_atexit.$(OBJEXT):  \
 	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 stdio/lib32_libmsvcr100_a-acrt_iob_func.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
+math/lib32_libmsvcr100_a-frexp.$(OBJEXT): math/$(am__dirstamp) \
+	math/$(DEPDIR)/$(am__dirstamp)
 
 lib32/libmsvcr100.a: $(lib32_libmsvcr100_a_OBJECTS) $(lib32_libmsvcr100_a_DEPENDENCIES) $(EXTRA_lib32_libmsvcr100_a_DEPENDENCIES) lib32/$(am__dirstamp)
 	$(AM_V_at)-rm -f lib32/libmsvcr100.a
@@ -11046,6 +11077,8 @@ misc/lib32_libmsvcr110_a-register_tls_atexit.$(OBJEXT):  \
 	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 stdio/lib32_libmsvcr110_a-acrt_iob_func.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
+math/lib32_libmsvcr110_a-frexp.$(OBJEXT): math/$(am__dirstamp) \
+	math/$(DEPDIR)/$(am__dirstamp)
 
 lib32/libmsvcr110.a: $(lib32_libmsvcr110_a_OBJECTS) $(lib32_libmsvcr110_a_DEPENDENCIES) $(EXTRA_lib32_libmsvcr110_a_DEPENDENCIES) lib32/$(am__dirstamp)
 	$(AM_V_at)-rm -f lib32/libmsvcr110.a
@@ -11057,6 +11090,8 @@ misc/lib32_libmsvcr120_a-register_tls_atexit.$(OBJEXT):  \
 	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 stdio/lib32_libmsvcr120_a-acrt_iob_func.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
+math/lib32_libmsvcr120_a-frexp.$(OBJEXT): math/$(am__dirstamp) \
+	math/$(DEPDIR)/$(am__dirstamp)
 
 lib32/libmsvcr120.a: $(lib32_libmsvcr120_a_OBJECTS) $(lib32_libmsvcr120_a_DEPENDENCIES) $(EXTRA_lib32_libmsvcr120_a_DEPENDENCIES) lib32/$(am__dirstamp)
 	$(AM_V_at)-rm -f lib32/libmsvcr120.a
@@ -11068,6 +11103,8 @@ misc/lib32_libmsvcr120_app_a-register_tls_atexit.$(OBJEXT):  \
 	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 stdio/lib32_libmsvcr120_app_a-acrt_iob_func.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
+math/lib32_libmsvcr120_app_a-frexp.$(OBJEXT): math/$(am__dirstamp) \
+	math/$(DEPDIR)/$(am__dirstamp)
 misc/lib32_libmsvcr120_app_a-__set_app_type.$(OBJEXT):  \
 	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 misc/lib32_libmsvcr120_app_a-_getpid.$(OBJEXT): misc/$(am__dirstamp) \
@@ -11083,6 +11120,8 @@ misc/lib32_libmsvcr120d_a-register_tls_atexit.$(OBJEXT):  \
 	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 stdio/lib32_libmsvcr120d_a-acrt_iob_func.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
+math/lib32_libmsvcr120d_a-frexp.$(OBJEXT): math/$(am__dirstamp) \
+	math/$(DEPDIR)/$(am__dirstamp)
 
 lib32/libmsvcr120d.a: $(lib32_libmsvcr120d_a_OBJECTS) $(lib32_libmsvcr120d_a_DEPENDENCIES) $(EXTRA_lib32_libmsvcr120d_a_DEPENDENCIES) lib32/$(am__dirstamp)
 	$(AM_V_at)-rm -f lib32/libmsvcr120d.a
@@ -11094,6 +11133,8 @@ misc/lib32_libmsvcr80_a-register_tls_atexit.$(OBJEXT):  \
 	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 stdio/lib32_libmsvcr80_a-acrt_iob_func.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
+math/lib32_libmsvcr80_a-frexp.$(OBJEXT): math/$(am__dirstamp) \
+	math/$(DEPDIR)/$(am__dirstamp)
 
 lib32/libmsvcr80.a: $(lib32_libmsvcr80_a_OBJECTS) $(lib32_libmsvcr80_a_DEPENDENCIES) $(EXTRA_lib32_libmsvcr80_a_DEPENDENCIES) lib32/$(am__dirstamp)
 	$(AM_V_at)-rm -f lib32/libmsvcr80.a
@@ -11105,6 +11146,8 @@ misc/lib32_libmsvcr90_a-register_tls_atexit.$(OBJEXT):  \
 	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 stdio/lib32_libmsvcr90_a-acrt_iob_func.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
+math/lib32_libmsvcr90_a-frexp.$(OBJEXT): math/$(am__dirstamp) \
+	math/$(DEPDIR)/$(am__dirstamp)
 
 lib32/libmsvcr90.a: $(lib32_libmsvcr90_a_OBJECTS) $(lib32_libmsvcr90_a_DEPENDENCIES) $(EXTRA_lib32_libmsvcr90_a_DEPENDENCIES) lib32/$(am__dirstamp)
 	$(AM_V_at)-rm -f lib32/libmsvcr90.a
@@ -11116,6 +11159,8 @@ misc/lib32_libmsvcr90d_a-register_tls_atexit.$(OBJEXT):  \
 	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 stdio/lib32_libmsvcr90d_a-acrt_iob_func.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
+math/lib32_libmsvcr90d_a-frexp.$(OBJEXT): math/$(am__dirstamp) \
+	math/$(DEPDIR)/$(am__dirstamp)
 
 lib32/libmsvcr90d.a: $(lib32_libmsvcr90d_a_OBJECTS) $(lib32_libmsvcr90d_a_DEPENDENCIES) $(EXTRA_lib32_libmsvcr90d_a_DEPENDENCIES) lib32/$(am__dirstamp)
 	$(AM_V_at)-rm -f lib32/libmsvcr90d.a
@@ -11127,6 +11172,8 @@ misc/lib32_libmsvcrt_os_a-register_tls_atexit.$(OBJEXT):  \
 	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 stdio/lib32_libmsvcrt_os_a-acrt_iob_func.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
+math/lib32_libmsvcrt_os_a-frexp.$(OBJEXT): math/$(am__dirstamp) \
+	math/$(DEPDIR)/$(am__dirstamp)
 misc/lib32_libmsvcrt_os_a-_configthreadlocale.$(OBJEXT):  \
 	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 misc/lib32_libmsvcrt_os_a-_get_current_locale.$(OBJEXT):  \
@@ -11630,6 +11677,8 @@ misc/lib64_libcrtdll_a-register_tls_atexit.$(OBJEXT):  \
 	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 stdio/lib64_libcrtdll_a-acrt_iob_func.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
+math/lib64_libcrtdll_a-frexp.$(OBJEXT): math/$(am__dirstamp) \
+	math/$(DEPDIR)/$(am__dirstamp)
 
 lib64/libcrtdll.a: $(lib64_libcrtdll_a_OBJECTS) $(lib64_libcrtdll_a_DEPENDENCIES) $(EXTRA_lib64_libcrtdll_a_DEPENDENCIES) lib64/$(am__dirstamp)
 	$(AM_V_at)-rm -f lib64/libcrtdll.a
@@ -12234,6 +12283,8 @@ math/lib64_libmingwex_a-fpclassifyl.$(OBJEXT): math/$(am__dirstamp) \
 	math/$(DEPDIR)/$(am__dirstamp)
 math/lib64_libmingwex_a-frexpf.$(OBJEXT): math/$(am__dirstamp) \
 	math/$(DEPDIR)/$(am__dirstamp)
+math/lib64_libmingwex_a-frexpl.$(OBJEXT): math/$(am__dirstamp) \
+	math/$(DEPDIR)/$(am__dirstamp)
 math/lib64_libmingwex_a-hypotf.$(OBJEXT): math/$(am__dirstamp) \
 	math/$(DEPDIR)/$(am__dirstamp)
 math/lib64_libmingwex_a-hypot.$(OBJEXT): math/$(am__dirstamp) \
@@ -12756,8 +12807,6 @@ math/x86/lib64_libmingwex_a-fmodf.$(OBJEXT): math/x86/$(am__dirstamp) \
 	math/x86/$(DEPDIR)/$(am__dirstamp)
 math/x86/lib64_libmingwex_a-fmodl.$(OBJEXT): math/x86/$(am__dirstamp) \
 	math/x86/$(DEPDIR)/$(am__dirstamp)
-math/x86/lib64_libmingwex_a-frexpl.$(OBJEXT):  \
-	math/x86/$(am__dirstamp) math/x86/$(DEPDIR)/$(am__dirstamp)
 math/x86/lib64_libmingwex_a-fucom.$(OBJEXT): math/x86/$(am__dirstamp) \
 	math/x86/$(DEPDIR)/$(am__dirstamp)
 math/x86/lib64_libmingwex_a-ilogb.$(OBJEXT): math/x86/$(am__dirstamp) \
@@ -12887,6 +12936,8 @@ misc/lib64_libmsvcr100_a-register_tls_atexit.$(OBJEXT):  \
 	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 stdio/lib64_libmsvcr100_a-acrt_iob_func.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
+math/lib64_libmsvcr100_a-frexp.$(OBJEXT): math/$(am__dirstamp) \
+	math/$(DEPDIR)/$(am__dirstamp)
 
 lib64/libmsvcr100.a: $(lib64_libmsvcr100_a_OBJECTS) $(lib64_libmsvcr100_a_DEPENDENCIES) $(EXTRA_lib64_libmsvcr100_a_DEPENDENCIES) lib64/$(am__dirstamp)
 	$(AM_V_at)-rm -f lib64/libmsvcr100.a
@@ -12898,6 +12949,8 @@ misc/lib64_libmsvcr110_a-register_tls_atexit.$(OBJEXT):  \
 	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 stdio/lib64_libmsvcr110_a-acrt_iob_func.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
+math/lib64_libmsvcr110_a-frexp.$(OBJEXT): math/$(am__dirstamp) \
+	math/$(DEPDIR)/$(am__dirstamp)
 
 lib64/libmsvcr110.a: $(lib64_libmsvcr110_a_OBJECTS) $(lib64_libmsvcr110_a_DEPENDENCIES) $(EXTRA_lib64_libmsvcr110_a_DEPENDENCIES) lib64/$(am__dirstamp)
 	$(AM_V_at)-rm -f lib64/libmsvcr110.a
@@ -12909,6 +12962,8 @@ misc/lib64_libmsvcr120_a-register_tls_atexit.$(OBJEXT):  \
 	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 stdio/lib64_libmsvcr120_a-acrt_iob_func.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
+math/lib64_libmsvcr120_a-frexp.$(OBJEXT): math/$(am__dirstamp) \
+	math/$(DEPDIR)/$(am__dirstamp)
 
 lib64/libmsvcr120.a: $(lib64_libmsvcr120_a_OBJECTS) $(lib64_libmsvcr120_a_DEPENDENCIES) $(EXTRA_lib64_libmsvcr120_a_DEPENDENCIES) lib64/$(am__dirstamp)
 	$(AM_V_at)-rm -f lib64/libmsvcr120.a
@@ -12920,6 +12975,8 @@ misc/lib64_libmsvcr120_app_a-register_tls_atexit.$(OBJEXT):  \
 	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 stdio/lib64_libmsvcr120_app_a-acrt_iob_func.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
+math/lib64_libmsvcr120_app_a-frexp.$(OBJEXT): math/$(am__dirstamp) \
+	math/$(DEPDIR)/$(am__dirstamp)
 misc/lib64_libmsvcr120_app_a-__set_app_type.$(OBJEXT):  \
 	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 misc/lib64_libmsvcr120_app_a-_getpid.$(OBJEXT): misc/$(am__dirstamp) \
@@ -12935,6 +12992,8 @@ misc/lib64_libmsvcr120d_a-register_tls_atexit.$(OBJEXT):  \
 	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 stdio/lib64_libmsvcr120d_a-acrt_iob_func.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
+math/lib64_libmsvcr120d_a-frexp.$(OBJEXT): math/$(am__dirstamp) \
+	math/$(DEPDIR)/$(am__dirstamp)
 
 lib64/libmsvcr120d.a: $(lib64_libmsvcr120d_a_OBJECTS) $(lib64_libmsvcr120d_a_DEPENDENCIES) $(EXTRA_lib64_libmsvcr120d_a_DEPENDENCIES) lib64/$(am__dirstamp)
 	$(AM_V_at)-rm -f lib64/libmsvcr120d.a
@@ -12946,6 +13005,8 @@ misc/lib64_libmsvcr80_a-register_tls_atexit.$(OBJEXT):  \
 	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 stdio/lib64_libmsvcr80_a-acrt_iob_func.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
+math/lib64_libmsvcr80_a-frexp.$(OBJEXT): math/$(am__dirstamp) \
+	math/$(DEPDIR)/$(am__dirstamp)
 misc/lib64_libmsvcr80_a-__p___argv.$(OBJEXT): misc/$(am__dirstamp) \
 	misc/$(DEPDIR)/$(am__dirstamp)
 misc/lib64_libmsvcr80_a-__p__acmdln.$(OBJEXT): misc/$(am__dirstamp) \
@@ -12965,6 +13026,8 @@ misc/lib64_libmsvcr90_a-register_tls_atexit.$(OBJEXT):  \
 	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 stdio/lib64_libmsvcr90_a-acrt_iob_func.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
+math/lib64_libmsvcr90_a-frexp.$(OBJEXT): math/$(am__dirstamp) \
+	math/$(DEPDIR)/$(am__dirstamp)
 
 lib64/libmsvcr90.a: $(lib64_libmsvcr90_a_OBJECTS) $(lib64_libmsvcr90_a_DEPENDENCIES) $(EXTRA_lib64_libmsvcr90_a_DEPENDENCIES) lib64/$(am__dirstamp)
 	$(AM_V_at)-rm -f lib64/libmsvcr90.a
@@ -12976,6 +13039,8 @@ misc/lib64_libmsvcr90d_a-register_tls_atexit.$(OBJEXT):  \
 	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 stdio/lib64_libmsvcr90d_a-acrt_iob_func.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
+math/lib64_libmsvcr90d_a-frexp.$(OBJEXT): math/$(am__dirstamp) \
+	math/$(DEPDIR)/$(am__dirstamp)
 
 lib64/libmsvcr90d.a: $(lib64_libmsvcr90d_a_OBJECTS) $(lib64_libmsvcr90d_a_DEPENDENCIES) $(EXTRA_lib64_libmsvcr90d_a_DEPENDENCIES) lib64/$(am__dirstamp)
 	$(AM_V_at)-rm -f lib64/libmsvcr90d.a
@@ -12987,6 +13052,8 @@ misc/lib64_libmsvcrt_os_a-register_tls_atexit.$(OBJEXT):  \
 	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 stdio/lib64_libmsvcrt_os_a-acrt_iob_func.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
+math/lib64_libmsvcrt_os_a-frexp.$(OBJEXT): math/$(am__dirstamp) \
+	math/$(DEPDIR)/$(am__dirstamp)
 misc/lib64_libmsvcrt_os_a-_configthreadlocale.$(OBJEXT):  \
 	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 misc/lib64_libmsvcrt_os_a-_get_current_locale.$(OBJEXT):  \
@@ -13955,6 +14022,8 @@ math/libarm32_libmingwex_a-fpclassifyl.$(OBJEXT):  \
 	math/$(am__dirstamp) math/$(DEPDIR)/$(am__dirstamp)
 math/libarm32_libmingwex_a-frexpf.$(OBJEXT): math/$(am__dirstamp) \
 	math/$(DEPDIR)/$(am__dirstamp)
+math/libarm32_libmingwex_a-frexpl.$(OBJEXT): math/$(am__dirstamp) \
+	math/$(DEPDIR)/$(am__dirstamp)
 math/libarm32_libmingwex_a-hypotf.$(OBJEXT): math/$(am__dirstamp) \
 	math/$(DEPDIR)/$(am__dirstamp)
 math/libarm32_libmingwex_a-hypot.$(OBJEXT): math/$(am__dirstamp) \
@@ -14682,6 +14751,8 @@ misc/libarm32_libmsvcr110_a-register_tls_atexit.$(OBJEXT):  \
 	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 stdio/libarm32_libmsvcr110_a-acrt_iob_func.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
+math/libarm32_libmsvcr110_a-frexp.$(OBJEXT): math/$(am__dirstamp) \
+	math/$(DEPDIR)/$(am__dirstamp)
 
 libarm32/libmsvcr110.a: $(libarm32_libmsvcr110_a_OBJECTS) $(libarm32_libmsvcr110_a_DEPENDENCIES) $(EXTRA_libarm32_libmsvcr110_a_DEPENDENCIES) libarm32/$(am__dirstamp)
 	$(AM_V_at)-rm -f libarm32/libmsvcr110.a
@@ -14693,6 +14764,8 @@ misc/libarm32_libmsvcr120_app_a-register_tls_atexit.$(OBJEXT):  \
 	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 stdio/libarm32_libmsvcr120_app_a-acrt_iob_func.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
+math/libarm32_libmsvcr120_app_a-frexp.$(OBJEXT): math/$(am__dirstamp) \
+	math/$(DEPDIR)/$(am__dirstamp)
 misc/libarm32_libmsvcr120_app_a-__set_app_type.$(OBJEXT):  \
 	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 misc/libarm32_libmsvcr120_app_a-_getpid.$(OBJEXT):  \
@@ -14708,6 +14781,8 @@ misc/libarm32_libmsvcrt_os_a-register_tls_atexit.$(OBJEXT):  \
 	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 stdio/libarm32_libmsvcrt_os_a-acrt_iob_func.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
+math/libarm32_libmsvcrt_os_a-frexp.$(OBJEXT): math/$(am__dirstamp) \
+	math/$(DEPDIR)/$(am__dirstamp)
 misc/libarm32_libmsvcrt_os_a-_configthreadlocale.$(OBJEXT):  \
 	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 misc/libarm32_libmsvcrt_os_a-_get_current_locale.$(OBJEXT):  \
@@ -15766,6 +15841,8 @@ math/libarm64_libmingwex_a-fpclassifyl.$(OBJEXT):  \
 	math/$(am__dirstamp) math/$(DEPDIR)/$(am__dirstamp)
 math/libarm64_libmingwex_a-frexpf.$(OBJEXT): math/$(am__dirstamp) \
 	math/$(DEPDIR)/$(am__dirstamp)
+math/libarm64_libmingwex_a-frexpl.$(OBJEXT): math/$(am__dirstamp) \
+	math/$(DEPDIR)/$(am__dirstamp)
 math/libarm64_libmingwex_a-hypotf.$(OBJEXT): math/$(am__dirstamp) \
 	math/$(DEPDIR)/$(am__dirstamp)
 math/libarm64_libmingwex_a-hypot.$(OBJEXT): math/$(am__dirstamp) \
@@ -16266,6 +16343,8 @@ misc/libarm64_libmsvcrt_os_a-register_tls_atexit.$(OBJEXT):  \
 	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 stdio/libarm64_libmsvcrt_os_a-acrt_iob_func.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
+math/libarm64_libmsvcrt_os_a-frexp.$(OBJEXT): math/$(am__dirstamp) \
+	math/$(DEPDIR)/$(am__dirstamp)
 misc/libarm64_libmsvcrt_os_a-_configthreadlocale.$(OBJEXT):  \
 	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 misc/libarm64_libmsvcrt_os_a-_get_current_locale.$(OBJEXT):  \
@@ -18927,6 +19006,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@libsrc/wspiapi/$(DEPDIR)/libarm64_libws2_32_a-WspiapiParseV4Address.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libsrc/wspiapi/$(DEPDIR)/libarm64_libws2_32_a-WspiapiQueryDNS.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libsrc/wspiapi/$(DEPDIR)/libarm64_libws2_32_a-WspiapiStrdup.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/lib32_libcrtdll_a-frexp.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/lib32_libmingwex_a-abs64.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/lib32_libmingwex_a-cbrt.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/lib32_libmingwex_a-cbrtf.Po@am__quote@
@@ -18960,6 +19040,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/lib32_libmingwex_a-fpclassifyf.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/lib32_libmingwex_a-fpclassifyl.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/lib32_libmingwex_a-frexpf.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/lib32_libmingwex_a-frexpl.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/lib32_libmingwex_a-hypot.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/lib32_libmingwex_a-hypotf.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/lib32_libmingwex_a-hypotl.Po@am__quote@
@@ -19018,6 +19099,16 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/lib32_libmingwex_a-tgammaf.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/lib32_libmingwex_a-tgammal.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/lib32_libmingwex_a-truncl.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/lib32_libmsvcr100_a-frexp.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/lib32_libmsvcr110_a-frexp.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/lib32_libmsvcr120_a-frexp.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/lib32_libmsvcr120_app_a-frexp.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/lib32_libmsvcr120d_a-frexp.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/lib32_libmsvcr80_a-frexp.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/lib32_libmsvcr90_a-frexp.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/lib32_libmsvcr90d_a-frexp.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/lib32_libmsvcrt_os_a-frexp.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/lib64_libcrtdll_a-frexp.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/lib64_libmingwex_a-abs64.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/lib64_libmingwex_a-cbrt.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/lib64_libmingwex_a-cbrtf.Po@am__quote@
@@ -19051,6 +19142,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/lib64_libmingwex_a-fpclassifyf.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/lib64_libmingwex_a-fpclassifyl.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/lib64_libmingwex_a-frexpf.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/lib64_libmingwex_a-frexpl.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/lib64_libmingwex_a-hypot.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/lib64_libmingwex_a-hypotf.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/lib64_libmingwex_a-hypotl.Po@am__quote@
@@ -19109,6 +19201,15 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/lib64_libmingwex_a-tgammaf.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/lib64_libmingwex_a-tgammal.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/lib64_libmingwex_a-truncl.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/lib64_libmsvcr100_a-frexp.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/lib64_libmsvcr110_a-frexp.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/lib64_libmsvcr120_a-frexp.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/lib64_libmsvcr120_app_a-frexp.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/lib64_libmsvcr120d_a-frexp.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/lib64_libmsvcr80_a-frexp.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/lib64_libmsvcr90_a-frexp.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/lib64_libmsvcr90d_a-frexp.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/lib64_libmsvcrt_os_a-frexp.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/libarm32_libmingwex_a-abs64.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/libarm32_libmingwex_a-cbrt.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/libarm32_libmingwex_a-cbrtf.Po@am__quote@
@@ -19142,6 +19243,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/libarm32_libmingwex_a-fpclassifyf.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/libarm32_libmingwex_a-fpclassifyl.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/libarm32_libmingwex_a-frexpf.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/libarm32_libmingwex_a-frexpl.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/libarm32_libmingwex_a-hypot.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/libarm32_libmingwex_a-hypotf.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/libarm32_libmingwex_a-hypotl.Po@am__quote@
@@ -19200,6 +19302,9 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/libarm32_libmingwex_a-tgammaf.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/libarm32_libmingwex_a-tgammal.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/libarm32_libmingwex_a-truncl.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/libarm32_libmsvcr110_a-frexp.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/libarm32_libmsvcr120_app_a-frexp.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/libarm32_libmsvcrt_os_a-frexp.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/libarm64_libmingwex_a-abs64.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/libarm64_libmingwex_a-cbrt.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/libarm64_libmingwex_a-cbrtf.Po@am__quote@
@@ -19233,6 +19338,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/libarm64_libmingwex_a-fpclassifyf.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/libarm64_libmingwex_a-fpclassifyl.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/libarm64_libmingwex_a-frexpf.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/libarm64_libmingwex_a-frexpl.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/libarm64_libmingwex_a-hypot.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/libarm64_libmingwex_a-hypotf.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/libarm64_libmingwex_a-hypotl.Po@am__quote@
@@ -19291,6 +19397,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/libarm64_libmingwex_a-tgammaf.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/libarm64_libmingwex_a-tgammal.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/libarm64_libmingwex_a-truncl.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/libarm64_libmsvcrt_os_a-frexp.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/DFP/$(DEPDIR)/lib32_libmingwex_a-__fpclassifyd128.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/DFP/$(DEPDIR)/lib32_libmingwex_a-__fpclassifyd32.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/DFP/$(DEPDIR)/lib32_libmingwex_a-__fpclassifyd64.Po@am__quote@
@@ -19526,7 +19633,6 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@math/x86/$(DEPDIR)/lib32_libmingwex_a-fmod.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/x86/$(DEPDIR)/lib32_libmingwex_a-fmodf.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/x86/$(DEPDIR)/lib32_libmingwex_a-fmodl.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@math/x86/$(DEPDIR)/lib32_libmingwex_a-frexpl.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/x86/$(DEPDIR)/lib32_libmingwex_a-fucom.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/x86/$(DEPDIR)/lib32_libmingwex_a-ilogb.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/x86/$(DEPDIR)/lib32_libmingwex_a-ilogbf.Po@am__quote@
@@ -19611,7 +19717,6 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@math/x86/$(DEPDIR)/lib64_libmingwex_a-fmod.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/x86/$(DEPDIR)/lib64_libmingwex_a-fmodf.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/x86/$(DEPDIR)/lib64_libmingwex_a-fmodl.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@math/x86/$(DEPDIR)/lib64_libmingwex_a-frexpl.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/x86/$(DEPDIR)/lib64_libmingwex_a-fucom.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/x86/$(DEPDIR)/lib64_libmingwex_a-ilogb.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@math/x86/$(DEPDIR)/lib64_libmingwex_a-ilogbf.Po@am__quote@
@@ -21224,20 +21329,6 @@ math/x86/lib32_libmingwex_a-floorl.obj: math/x86/floorl.S
 @AMDEP_TRUE@@am__fastdepCCAS_FALSE@	DEPDIR=$(DEPDIR) $(CCASDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCCAS_FALSE@	$(AM_V_CPPAS@am__nodep@)$(CCAS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CCASFLAGS) $(CCASFLAGS) -c -o math/x86/lib32_libmingwex_a-floorl.obj `if test -f 'math/x86/floorl.S'; then $(CYGPATH_W) 'math/x86/floorl.S'; else $(CYGPATH_W) '$(srcdir)/math/x86/floorl.S'; fi`
 
-math/x86/lib32_libmingwex_a-frexpl.o: math/x86/frexpl.S
-@am__fastdepCCAS_TRUE@	$(AM_V_CPPAS)$(CCAS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CCASFLAGS) $(CCASFLAGS) -MT math/x86/lib32_libmingwex_a-frexpl.o -MD -MP -MF math/x86/$(DEPDIR)/lib32_libmingwex_a-frexpl.Tpo -c -o math/x86/lib32_libmingwex_a-frexpl.o `test -f 'math/x86/frexpl.S' || echo '$(srcdir)/'`math/x86/frexpl.S
-@am__fastdepCCAS_TRUE@	$(AM_V_at)$(am__mv) math/x86/$(DEPDIR)/lib32_libmingwex_a-frexpl.Tpo math/x86/$(DEPDIR)/lib32_libmingwex_a-frexpl.Po
-@AMDEP_TRUE@@am__fastdepCCAS_FALSE@	$(AM_V_CPPAS)source='math/x86/frexpl.S' object='math/x86/lib32_libmingwex_a-frexpl.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCCAS_FALSE@	DEPDIR=$(DEPDIR) $(CCASDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCCAS_FALSE@	$(AM_V_CPPAS@am__nodep@)$(CCAS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CCASFLAGS) $(CCASFLAGS) -c -o math/x86/lib32_libmingwex_a-frexpl.o `test -f 'math/x86/frexpl.S' || echo '$(srcdir)/'`math/x86/frexpl.S
-
-math/x86/lib32_libmingwex_a-frexpl.obj: math/x86/frexpl.S
-@am__fastdepCCAS_TRUE@	$(AM_V_CPPAS)$(CCAS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CCASFLAGS) $(CCASFLAGS) -MT math/x86/lib32_libmingwex_a-frexpl.obj -MD -MP -MF math/x86/$(DEPDIR)/lib32_libmingwex_a-frexpl.Tpo -c -o math/x86/lib32_libmingwex_a-frexpl.obj `if test -f 'math/x86/frexpl.S'; then $(CYGPATH_W) 'math/x86/frexpl.S'; else $(CYGPATH_W) '$(srcdir)/math/x86/frexpl.S'; fi`
-@am__fastdepCCAS_TRUE@	$(AM_V_at)$(am__mv) math/x86/$(DEPDIR)/lib32_libmingwex_a-frexpl.Tpo math/x86/$(DEPDIR)/lib32_libmingwex_a-frexpl.Po
-@AMDEP_TRUE@@am__fastdepCCAS_FALSE@	$(AM_V_CPPAS)source='math/x86/frexpl.S' object='math/x86/lib32_libmingwex_a-frexpl.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCCAS_FALSE@	DEPDIR=$(DEPDIR) $(CCASDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCCAS_FALSE@	$(AM_V_CPPAS@am__nodep@)$(CCAS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CCASFLAGS) $(CCASFLAGS) -c -o math/x86/lib32_libmingwex_a-frexpl.obj `if test -f 'math/x86/frexpl.S'; then $(CYGPATH_W) 'math/x86/frexpl.S'; else $(CYGPATH_W) '$(srcdir)/math/x86/frexpl.S'; fi`
-
 math/x86/lib32_libmingwex_a-ilogb.o: math/x86/ilogb.S
 @am__fastdepCCAS_TRUE@	$(AM_V_CPPAS)$(CCAS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CCASFLAGS) $(CCASFLAGS) -MT math/x86/lib32_libmingwex_a-ilogb.o -MD -MP -MF math/x86/$(DEPDIR)/lib32_libmingwex_a-ilogb.Tpo -c -o math/x86/lib32_libmingwex_a-ilogb.o `test -f 'math/x86/ilogb.S' || echo '$(srcdir)/'`math/x86/ilogb.S
 @am__fastdepCCAS_TRUE@	$(AM_V_at)$(am__mv) math/x86/$(DEPDIR)/lib32_libmingwex_a-ilogb.Tpo math/x86/$(DEPDIR)/lib32_libmingwex_a-ilogb.Po
@@ -21923,20 +22014,6 @@ math/x86/lib64_libmingwex_a-floorl.obj: math/x86/floorl.S
 @AMDEP_TRUE@@am__fastdepCCAS_FALSE@	$(AM_V_CPPAS)source='math/x86/floorl.S' object='math/x86/lib64_libmingwex_a-floorl.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCCAS_FALSE@	DEPDIR=$(DEPDIR) $(CCASDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCCAS_FALSE@	$(AM_V_CPPAS@am__nodep@)$(CCAS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CCASFLAGS) $(CCASFLAGS) -c -o math/x86/lib64_libmingwex_a-floorl.obj `if test -f 'math/x86/floorl.S'; then $(CYGPATH_W) 'math/x86/floorl.S'; else $(CYGPATH_W) '$(srcdir)/math/x86/floorl.S'; fi`
-
-math/x86/lib64_libmingwex_a-frexpl.o: math/x86/frexpl.S
-@am__fastdepCCAS_TRUE@	$(AM_V_CPPAS)$(CCAS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CCASFLAGS) $(CCASFLAGS) -MT math/x86/lib64_libmingwex_a-frexpl.o -MD -MP -MF math/x86/$(DEPDIR)/lib64_libmingwex_a-frexpl.Tpo -c -o math/x86/lib64_libmingwex_a-frexpl.o `test -f 'math/x86/frexpl.S' || echo '$(srcdir)/'`math/x86/frexpl.S
-@am__fastdepCCAS_TRUE@	$(AM_V_at)$(am__mv) math/x86/$(DEPDIR)/lib64_libmingwex_a-frexpl.Tpo math/x86/$(DEPDIR)/lib64_libmingwex_a-frexpl.Po
-@AMDEP_TRUE@@am__fastdepCCAS_FALSE@	$(AM_V_CPPAS)source='math/x86/frexpl.S' object='math/x86/lib64_libmingwex_a-frexpl.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCCAS_FALSE@	DEPDIR=$(DEPDIR) $(CCASDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCCAS_FALSE@	$(AM_V_CPPAS@am__nodep@)$(CCAS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CCASFLAGS) $(CCASFLAGS) -c -o math/x86/lib64_libmingwex_a-frexpl.o `test -f 'math/x86/frexpl.S' || echo '$(srcdir)/'`math/x86/frexpl.S
-
-math/x86/lib64_libmingwex_a-frexpl.obj: math/x86/frexpl.S
-@am__fastdepCCAS_TRUE@	$(AM_V_CPPAS)$(CCAS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CCASFLAGS) $(CCASFLAGS) -MT math/x86/lib64_libmingwex_a-frexpl.obj -MD -MP -MF math/x86/$(DEPDIR)/lib64_libmingwex_a-frexpl.Tpo -c -o math/x86/lib64_libmingwex_a-frexpl.obj `if test -f 'math/x86/frexpl.S'; then $(CYGPATH_W) 'math/x86/frexpl.S'; else $(CYGPATH_W) '$(srcdir)/math/x86/frexpl.S'; fi`
-@am__fastdepCCAS_TRUE@	$(AM_V_at)$(am__mv) math/x86/$(DEPDIR)/lib64_libmingwex_a-frexpl.Tpo math/x86/$(DEPDIR)/lib64_libmingwex_a-frexpl.Po
-@AMDEP_TRUE@@am__fastdepCCAS_FALSE@	$(AM_V_CPPAS)source='math/x86/frexpl.S' object='math/x86/lib64_libmingwex_a-frexpl.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCCAS_FALSE@	DEPDIR=$(DEPDIR) $(CCASDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCCAS_FALSE@	$(AM_V_CPPAS@am__nodep@)$(CCAS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CCASFLAGS) $(CCASFLAGS) -c -o math/x86/lib64_libmingwex_a-frexpl.obj `if test -f 'math/x86/frexpl.S'; then $(CYGPATH_W) 'math/x86/frexpl.S'; else $(CYGPATH_W) '$(srcdir)/math/x86/frexpl.S'; fi`
 
 math/x86/lib64_libmingwex_a-ilogb.o: math/x86/ilogb.S
 @am__fastdepCCAS_TRUE@	$(AM_V_CPPAS)$(CCAS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CCASFLAGS) $(CCASFLAGS) -MT math/x86/lib64_libmingwex_a-ilogb.o -MD -MP -MF math/x86/$(DEPDIR)/lib64_libmingwex_a-ilogb.Tpo -c -o math/x86/lib64_libmingwex_a-ilogb.o `test -f 'math/x86/ilogb.S' || echo '$(srcdir)/'`math/x86/ilogb.S
@@ -22835,6 +22912,20 @@ stdio/lib32_libcrtdll_a-acrt_iob_func.obj: stdio/acrt_iob_func.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/acrt_iob_func.c' object='stdio/lib32_libcrtdll_a-acrt_iob_func.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libcrtdll_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/lib32_libcrtdll_a-acrt_iob_func.obj `if test -f 'stdio/acrt_iob_func.c'; then $(CYGPATH_W) 'stdio/acrt_iob_func.c'; else $(CYGPATH_W) '$(srcdir)/stdio/acrt_iob_func.c'; fi`
+
+math/lib32_libcrtdll_a-frexp.o: math/frexp.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libcrtdll_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib32_libcrtdll_a-frexp.o -MD -MP -MF math/$(DEPDIR)/lib32_libcrtdll_a-frexp.Tpo -c -o math/lib32_libcrtdll_a-frexp.o `test -f 'math/frexp.c' || echo '$(srcdir)/'`math/frexp.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/lib32_libcrtdll_a-frexp.Tpo math/$(DEPDIR)/lib32_libcrtdll_a-frexp.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/frexp.c' object='math/lib32_libcrtdll_a-frexp.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libcrtdll_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib32_libcrtdll_a-frexp.o `test -f 'math/frexp.c' || echo '$(srcdir)/'`math/frexp.c
+
+math/lib32_libcrtdll_a-frexp.obj: math/frexp.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libcrtdll_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib32_libcrtdll_a-frexp.obj -MD -MP -MF math/$(DEPDIR)/lib32_libcrtdll_a-frexp.Tpo -c -o math/lib32_libcrtdll_a-frexp.obj `if test -f 'math/frexp.c'; then $(CYGPATH_W) 'math/frexp.c'; else $(CYGPATH_W) '$(srcdir)/math/frexp.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/lib32_libcrtdll_a-frexp.Tpo math/$(DEPDIR)/lib32_libcrtdll_a-frexp.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/frexp.c' object='math/lib32_libcrtdll_a-frexp.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libcrtdll_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib32_libcrtdll_a-frexp.obj `if test -f 'math/frexp.c'; then $(CYGPATH_W) 'math/frexp.c'; else $(CYGPATH_W) '$(srcdir)/math/frexp.c'; fi`
 
 libsrc/lib32_libdinput_a-dinput_kbd.o: libsrc/dinput_kbd.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libdinput_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libsrc/lib32_libdinput_a-dinput_kbd.o -MD -MP -MF libsrc/$(DEPDIR)/lib32_libdinput_a-dinput_kbd.Tpo -c -o libsrc/lib32_libdinput_a-dinput_kbd.o `test -f 'libsrc/dinput_kbd.c' || echo '$(srcdir)/'`libsrc/dinput_kbd.c
@@ -26111,6 +26202,20 @@ math/lib32_libmingwex_a-frexpf.obj: math/frexpf.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/frexpf.c' object='math/lib32_libmingwex_a-frexpf.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib32_libmingwex_a-frexpf.obj `if test -f 'math/frexpf.c'; then $(CYGPATH_W) 'math/frexpf.c'; else $(CYGPATH_W) '$(srcdir)/math/frexpf.c'; fi`
+
+math/lib32_libmingwex_a-frexpl.o: math/frexpl.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib32_libmingwex_a-frexpl.o -MD -MP -MF math/$(DEPDIR)/lib32_libmingwex_a-frexpl.Tpo -c -o math/lib32_libmingwex_a-frexpl.o `test -f 'math/frexpl.c' || echo '$(srcdir)/'`math/frexpl.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/lib32_libmingwex_a-frexpl.Tpo math/$(DEPDIR)/lib32_libmingwex_a-frexpl.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/frexpl.c' object='math/lib32_libmingwex_a-frexpl.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib32_libmingwex_a-frexpl.o `test -f 'math/frexpl.c' || echo '$(srcdir)/'`math/frexpl.c
+
+math/lib32_libmingwex_a-frexpl.obj: math/frexpl.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib32_libmingwex_a-frexpl.obj -MD -MP -MF math/$(DEPDIR)/lib32_libmingwex_a-frexpl.Tpo -c -o math/lib32_libmingwex_a-frexpl.obj `if test -f 'math/frexpl.c'; then $(CYGPATH_W) 'math/frexpl.c'; else $(CYGPATH_W) '$(srcdir)/math/frexpl.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/lib32_libmingwex_a-frexpl.Tpo math/$(DEPDIR)/lib32_libmingwex_a-frexpl.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/frexpl.c' object='math/lib32_libmingwex_a-frexpl.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib32_libmingwex_a-frexpl.obj `if test -f 'math/frexpl.c'; then $(CYGPATH_W) 'math/frexpl.c'; else $(CYGPATH_W) '$(srcdir)/math/frexpl.c'; fi`
 
 math/lib32_libmingwex_a-hypotf.o: math/hypotf.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib32_libmingwex_a-hypotf.o -MD -MP -MF math/$(DEPDIR)/lib32_libmingwex_a-hypotf.Tpo -c -o math/lib32_libmingwex_a-hypotf.o `test -f 'math/hypotf.c' || echo '$(srcdir)/'`math/hypotf.c
@@ -29906,6 +30011,20 @@ stdio/lib32_libmsvcr100_a-acrt_iob_func.obj: stdio/acrt_iob_func.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr100_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/lib32_libmsvcr100_a-acrt_iob_func.obj `if test -f 'stdio/acrt_iob_func.c'; then $(CYGPATH_W) 'stdio/acrt_iob_func.c'; else $(CYGPATH_W) '$(srcdir)/stdio/acrt_iob_func.c'; fi`
 
+math/lib32_libmsvcr100_a-frexp.o: math/frexp.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr100_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib32_libmsvcr100_a-frexp.o -MD -MP -MF math/$(DEPDIR)/lib32_libmsvcr100_a-frexp.Tpo -c -o math/lib32_libmsvcr100_a-frexp.o `test -f 'math/frexp.c' || echo '$(srcdir)/'`math/frexp.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/lib32_libmsvcr100_a-frexp.Tpo math/$(DEPDIR)/lib32_libmsvcr100_a-frexp.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/frexp.c' object='math/lib32_libmsvcr100_a-frexp.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr100_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib32_libmsvcr100_a-frexp.o `test -f 'math/frexp.c' || echo '$(srcdir)/'`math/frexp.c
+
+math/lib32_libmsvcr100_a-frexp.obj: math/frexp.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr100_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib32_libmsvcr100_a-frexp.obj -MD -MP -MF math/$(DEPDIR)/lib32_libmsvcr100_a-frexp.Tpo -c -o math/lib32_libmsvcr100_a-frexp.obj `if test -f 'math/frexp.c'; then $(CYGPATH_W) 'math/frexp.c'; else $(CYGPATH_W) '$(srcdir)/math/frexp.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/lib32_libmsvcr100_a-frexp.Tpo math/$(DEPDIR)/lib32_libmsvcr100_a-frexp.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/frexp.c' object='math/lib32_libmsvcr100_a-frexp.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr100_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib32_libmsvcr100_a-frexp.obj `if test -f 'math/frexp.c'; then $(CYGPATH_W) 'math/frexp.c'; else $(CYGPATH_W) '$(srcdir)/math/frexp.c'; fi`
+
 misc/lib32_libmsvcr110_a-onexit_table.o: misc/onexit_table.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr110_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libmsvcr110_a-onexit_table.o -MD -MP -MF misc/$(DEPDIR)/lib32_libmsvcr110_a-onexit_table.Tpo -c -o misc/lib32_libmsvcr110_a-onexit_table.o `test -f 'misc/onexit_table.c' || echo '$(srcdir)/'`misc/onexit_table.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libmsvcr110_a-onexit_table.Tpo misc/$(DEPDIR)/lib32_libmsvcr110_a-onexit_table.Po
@@ -29947,6 +30066,20 @@ stdio/lib32_libmsvcr110_a-acrt_iob_func.obj: stdio/acrt_iob_func.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/acrt_iob_func.c' object='stdio/lib32_libmsvcr110_a-acrt_iob_func.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr110_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/lib32_libmsvcr110_a-acrt_iob_func.obj `if test -f 'stdio/acrt_iob_func.c'; then $(CYGPATH_W) 'stdio/acrt_iob_func.c'; else $(CYGPATH_W) '$(srcdir)/stdio/acrt_iob_func.c'; fi`
+
+math/lib32_libmsvcr110_a-frexp.o: math/frexp.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr110_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib32_libmsvcr110_a-frexp.o -MD -MP -MF math/$(DEPDIR)/lib32_libmsvcr110_a-frexp.Tpo -c -o math/lib32_libmsvcr110_a-frexp.o `test -f 'math/frexp.c' || echo '$(srcdir)/'`math/frexp.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/lib32_libmsvcr110_a-frexp.Tpo math/$(DEPDIR)/lib32_libmsvcr110_a-frexp.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/frexp.c' object='math/lib32_libmsvcr110_a-frexp.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr110_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib32_libmsvcr110_a-frexp.o `test -f 'math/frexp.c' || echo '$(srcdir)/'`math/frexp.c
+
+math/lib32_libmsvcr110_a-frexp.obj: math/frexp.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr110_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib32_libmsvcr110_a-frexp.obj -MD -MP -MF math/$(DEPDIR)/lib32_libmsvcr110_a-frexp.Tpo -c -o math/lib32_libmsvcr110_a-frexp.obj `if test -f 'math/frexp.c'; then $(CYGPATH_W) 'math/frexp.c'; else $(CYGPATH_W) '$(srcdir)/math/frexp.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/lib32_libmsvcr110_a-frexp.Tpo math/$(DEPDIR)/lib32_libmsvcr110_a-frexp.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/frexp.c' object='math/lib32_libmsvcr110_a-frexp.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr110_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib32_libmsvcr110_a-frexp.obj `if test -f 'math/frexp.c'; then $(CYGPATH_W) 'math/frexp.c'; else $(CYGPATH_W) '$(srcdir)/math/frexp.c'; fi`
 
 misc/lib32_libmsvcr120_a-onexit_table.o: misc/onexit_table.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr120_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libmsvcr120_a-onexit_table.o -MD -MP -MF misc/$(DEPDIR)/lib32_libmsvcr120_a-onexit_table.Tpo -c -o misc/lib32_libmsvcr120_a-onexit_table.o `test -f 'misc/onexit_table.c' || echo '$(srcdir)/'`misc/onexit_table.c
@@ -29990,6 +30123,20 @@ stdio/lib32_libmsvcr120_a-acrt_iob_func.obj: stdio/acrt_iob_func.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr120_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/lib32_libmsvcr120_a-acrt_iob_func.obj `if test -f 'stdio/acrt_iob_func.c'; then $(CYGPATH_W) 'stdio/acrt_iob_func.c'; else $(CYGPATH_W) '$(srcdir)/stdio/acrt_iob_func.c'; fi`
 
+math/lib32_libmsvcr120_a-frexp.o: math/frexp.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr120_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib32_libmsvcr120_a-frexp.o -MD -MP -MF math/$(DEPDIR)/lib32_libmsvcr120_a-frexp.Tpo -c -o math/lib32_libmsvcr120_a-frexp.o `test -f 'math/frexp.c' || echo '$(srcdir)/'`math/frexp.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/lib32_libmsvcr120_a-frexp.Tpo math/$(DEPDIR)/lib32_libmsvcr120_a-frexp.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/frexp.c' object='math/lib32_libmsvcr120_a-frexp.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr120_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib32_libmsvcr120_a-frexp.o `test -f 'math/frexp.c' || echo '$(srcdir)/'`math/frexp.c
+
+math/lib32_libmsvcr120_a-frexp.obj: math/frexp.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr120_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib32_libmsvcr120_a-frexp.obj -MD -MP -MF math/$(DEPDIR)/lib32_libmsvcr120_a-frexp.Tpo -c -o math/lib32_libmsvcr120_a-frexp.obj `if test -f 'math/frexp.c'; then $(CYGPATH_W) 'math/frexp.c'; else $(CYGPATH_W) '$(srcdir)/math/frexp.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/lib32_libmsvcr120_a-frexp.Tpo math/$(DEPDIR)/lib32_libmsvcr120_a-frexp.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/frexp.c' object='math/lib32_libmsvcr120_a-frexp.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr120_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib32_libmsvcr120_a-frexp.obj `if test -f 'math/frexp.c'; then $(CYGPATH_W) 'math/frexp.c'; else $(CYGPATH_W) '$(srcdir)/math/frexp.c'; fi`
+
 misc/lib32_libmsvcr120_app_a-onexit_table.o: misc/onexit_table.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr120_app_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libmsvcr120_app_a-onexit_table.o -MD -MP -MF misc/$(DEPDIR)/lib32_libmsvcr120_app_a-onexit_table.Tpo -c -o misc/lib32_libmsvcr120_app_a-onexit_table.o `test -f 'misc/onexit_table.c' || echo '$(srcdir)/'`misc/onexit_table.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libmsvcr120_app_a-onexit_table.Tpo misc/$(DEPDIR)/lib32_libmsvcr120_app_a-onexit_table.Po
@@ -30031,6 +30178,20 @@ stdio/lib32_libmsvcr120_app_a-acrt_iob_func.obj: stdio/acrt_iob_func.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/acrt_iob_func.c' object='stdio/lib32_libmsvcr120_app_a-acrt_iob_func.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr120_app_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/lib32_libmsvcr120_app_a-acrt_iob_func.obj `if test -f 'stdio/acrt_iob_func.c'; then $(CYGPATH_W) 'stdio/acrt_iob_func.c'; else $(CYGPATH_W) '$(srcdir)/stdio/acrt_iob_func.c'; fi`
+
+math/lib32_libmsvcr120_app_a-frexp.o: math/frexp.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr120_app_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib32_libmsvcr120_app_a-frexp.o -MD -MP -MF math/$(DEPDIR)/lib32_libmsvcr120_app_a-frexp.Tpo -c -o math/lib32_libmsvcr120_app_a-frexp.o `test -f 'math/frexp.c' || echo '$(srcdir)/'`math/frexp.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/lib32_libmsvcr120_app_a-frexp.Tpo math/$(DEPDIR)/lib32_libmsvcr120_app_a-frexp.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/frexp.c' object='math/lib32_libmsvcr120_app_a-frexp.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr120_app_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib32_libmsvcr120_app_a-frexp.o `test -f 'math/frexp.c' || echo '$(srcdir)/'`math/frexp.c
+
+math/lib32_libmsvcr120_app_a-frexp.obj: math/frexp.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr120_app_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib32_libmsvcr120_app_a-frexp.obj -MD -MP -MF math/$(DEPDIR)/lib32_libmsvcr120_app_a-frexp.Tpo -c -o math/lib32_libmsvcr120_app_a-frexp.obj `if test -f 'math/frexp.c'; then $(CYGPATH_W) 'math/frexp.c'; else $(CYGPATH_W) '$(srcdir)/math/frexp.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/lib32_libmsvcr120_app_a-frexp.Tpo math/$(DEPDIR)/lib32_libmsvcr120_app_a-frexp.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/frexp.c' object='math/lib32_libmsvcr120_app_a-frexp.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr120_app_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib32_libmsvcr120_app_a-frexp.obj `if test -f 'math/frexp.c'; then $(CYGPATH_W) 'math/frexp.c'; else $(CYGPATH_W) '$(srcdir)/math/frexp.c'; fi`
 
 misc/lib32_libmsvcr120_app_a-__set_app_type.o: misc/__set_app_type.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr120_app_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libmsvcr120_app_a-__set_app_type.o -MD -MP -MF misc/$(DEPDIR)/lib32_libmsvcr120_app_a-__set_app_type.Tpo -c -o misc/lib32_libmsvcr120_app_a-__set_app_type.o `test -f 'misc/__set_app_type.c' || echo '$(srcdir)/'`misc/__set_app_type.c
@@ -30102,6 +30263,20 @@ stdio/lib32_libmsvcr120d_a-acrt_iob_func.obj: stdio/acrt_iob_func.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr120d_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/lib32_libmsvcr120d_a-acrt_iob_func.obj `if test -f 'stdio/acrt_iob_func.c'; then $(CYGPATH_W) 'stdio/acrt_iob_func.c'; else $(CYGPATH_W) '$(srcdir)/stdio/acrt_iob_func.c'; fi`
 
+math/lib32_libmsvcr120d_a-frexp.o: math/frexp.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr120d_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib32_libmsvcr120d_a-frexp.o -MD -MP -MF math/$(DEPDIR)/lib32_libmsvcr120d_a-frexp.Tpo -c -o math/lib32_libmsvcr120d_a-frexp.o `test -f 'math/frexp.c' || echo '$(srcdir)/'`math/frexp.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/lib32_libmsvcr120d_a-frexp.Tpo math/$(DEPDIR)/lib32_libmsvcr120d_a-frexp.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/frexp.c' object='math/lib32_libmsvcr120d_a-frexp.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr120d_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib32_libmsvcr120d_a-frexp.o `test -f 'math/frexp.c' || echo '$(srcdir)/'`math/frexp.c
+
+math/lib32_libmsvcr120d_a-frexp.obj: math/frexp.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr120d_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib32_libmsvcr120d_a-frexp.obj -MD -MP -MF math/$(DEPDIR)/lib32_libmsvcr120d_a-frexp.Tpo -c -o math/lib32_libmsvcr120d_a-frexp.obj `if test -f 'math/frexp.c'; then $(CYGPATH_W) 'math/frexp.c'; else $(CYGPATH_W) '$(srcdir)/math/frexp.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/lib32_libmsvcr120d_a-frexp.Tpo math/$(DEPDIR)/lib32_libmsvcr120d_a-frexp.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/frexp.c' object='math/lib32_libmsvcr120d_a-frexp.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr120d_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib32_libmsvcr120d_a-frexp.obj `if test -f 'math/frexp.c'; then $(CYGPATH_W) 'math/frexp.c'; else $(CYGPATH_W) '$(srcdir)/math/frexp.c'; fi`
+
 misc/lib32_libmsvcr80_a-onexit_table.o: misc/onexit_table.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr80_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libmsvcr80_a-onexit_table.o -MD -MP -MF misc/$(DEPDIR)/lib32_libmsvcr80_a-onexit_table.Tpo -c -o misc/lib32_libmsvcr80_a-onexit_table.o `test -f 'misc/onexit_table.c' || echo '$(srcdir)/'`misc/onexit_table.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libmsvcr80_a-onexit_table.Tpo misc/$(DEPDIR)/lib32_libmsvcr80_a-onexit_table.Po
@@ -30143,6 +30318,20 @@ stdio/lib32_libmsvcr80_a-acrt_iob_func.obj: stdio/acrt_iob_func.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/acrt_iob_func.c' object='stdio/lib32_libmsvcr80_a-acrt_iob_func.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr80_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/lib32_libmsvcr80_a-acrt_iob_func.obj `if test -f 'stdio/acrt_iob_func.c'; then $(CYGPATH_W) 'stdio/acrt_iob_func.c'; else $(CYGPATH_W) '$(srcdir)/stdio/acrt_iob_func.c'; fi`
+
+math/lib32_libmsvcr80_a-frexp.o: math/frexp.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr80_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib32_libmsvcr80_a-frexp.o -MD -MP -MF math/$(DEPDIR)/lib32_libmsvcr80_a-frexp.Tpo -c -o math/lib32_libmsvcr80_a-frexp.o `test -f 'math/frexp.c' || echo '$(srcdir)/'`math/frexp.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/lib32_libmsvcr80_a-frexp.Tpo math/$(DEPDIR)/lib32_libmsvcr80_a-frexp.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/frexp.c' object='math/lib32_libmsvcr80_a-frexp.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr80_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib32_libmsvcr80_a-frexp.o `test -f 'math/frexp.c' || echo '$(srcdir)/'`math/frexp.c
+
+math/lib32_libmsvcr80_a-frexp.obj: math/frexp.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr80_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib32_libmsvcr80_a-frexp.obj -MD -MP -MF math/$(DEPDIR)/lib32_libmsvcr80_a-frexp.Tpo -c -o math/lib32_libmsvcr80_a-frexp.obj `if test -f 'math/frexp.c'; then $(CYGPATH_W) 'math/frexp.c'; else $(CYGPATH_W) '$(srcdir)/math/frexp.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/lib32_libmsvcr80_a-frexp.Tpo math/$(DEPDIR)/lib32_libmsvcr80_a-frexp.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/frexp.c' object='math/lib32_libmsvcr80_a-frexp.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr80_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib32_libmsvcr80_a-frexp.obj `if test -f 'math/frexp.c'; then $(CYGPATH_W) 'math/frexp.c'; else $(CYGPATH_W) '$(srcdir)/math/frexp.c'; fi`
 
 misc/lib32_libmsvcr90_a-onexit_table.o: misc/onexit_table.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr90_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libmsvcr90_a-onexit_table.o -MD -MP -MF misc/$(DEPDIR)/lib32_libmsvcr90_a-onexit_table.Tpo -c -o misc/lib32_libmsvcr90_a-onexit_table.o `test -f 'misc/onexit_table.c' || echo '$(srcdir)/'`misc/onexit_table.c
@@ -30186,6 +30375,20 @@ stdio/lib32_libmsvcr90_a-acrt_iob_func.obj: stdio/acrt_iob_func.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr90_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/lib32_libmsvcr90_a-acrt_iob_func.obj `if test -f 'stdio/acrt_iob_func.c'; then $(CYGPATH_W) 'stdio/acrt_iob_func.c'; else $(CYGPATH_W) '$(srcdir)/stdio/acrt_iob_func.c'; fi`
 
+math/lib32_libmsvcr90_a-frexp.o: math/frexp.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr90_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib32_libmsvcr90_a-frexp.o -MD -MP -MF math/$(DEPDIR)/lib32_libmsvcr90_a-frexp.Tpo -c -o math/lib32_libmsvcr90_a-frexp.o `test -f 'math/frexp.c' || echo '$(srcdir)/'`math/frexp.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/lib32_libmsvcr90_a-frexp.Tpo math/$(DEPDIR)/lib32_libmsvcr90_a-frexp.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/frexp.c' object='math/lib32_libmsvcr90_a-frexp.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr90_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib32_libmsvcr90_a-frexp.o `test -f 'math/frexp.c' || echo '$(srcdir)/'`math/frexp.c
+
+math/lib32_libmsvcr90_a-frexp.obj: math/frexp.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr90_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib32_libmsvcr90_a-frexp.obj -MD -MP -MF math/$(DEPDIR)/lib32_libmsvcr90_a-frexp.Tpo -c -o math/lib32_libmsvcr90_a-frexp.obj `if test -f 'math/frexp.c'; then $(CYGPATH_W) 'math/frexp.c'; else $(CYGPATH_W) '$(srcdir)/math/frexp.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/lib32_libmsvcr90_a-frexp.Tpo math/$(DEPDIR)/lib32_libmsvcr90_a-frexp.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/frexp.c' object='math/lib32_libmsvcr90_a-frexp.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr90_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib32_libmsvcr90_a-frexp.obj `if test -f 'math/frexp.c'; then $(CYGPATH_W) 'math/frexp.c'; else $(CYGPATH_W) '$(srcdir)/math/frexp.c'; fi`
+
 misc/lib32_libmsvcr90d_a-onexit_table.o: misc/onexit_table.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr90d_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libmsvcr90d_a-onexit_table.o -MD -MP -MF misc/$(DEPDIR)/lib32_libmsvcr90d_a-onexit_table.Tpo -c -o misc/lib32_libmsvcr90d_a-onexit_table.o `test -f 'misc/onexit_table.c' || echo '$(srcdir)/'`misc/onexit_table.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libmsvcr90d_a-onexit_table.Tpo misc/$(DEPDIR)/lib32_libmsvcr90d_a-onexit_table.Po
@@ -30228,6 +30431,20 @@ stdio/lib32_libmsvcr90d_a-acrt_iob_func.obj: stdio/acrt_iob_func.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr90d_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/lib32_libmsvcr90d_a-acrt_iob_func.obj `if test -f 'stdio/acrt_iob_func.c'; then $(CYGPATH_W) 'stdio/acrt_iob_func.c'; else $(CYGPATH_W) '$(srcdir)/stdio/acrt_iob_func.c'; fi`
 
+math/lib32_libmsvcr90d_a-frexp.o: math/frexp.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr90d_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib32_libmsvcr90d_a-frexp.o -MD -MP -MF math/$(DEPDIR)/lib32_libmsvcr90d_a-frexp.Tpo -c -o math/lib32_libmsvcr90d_a-frexp.o `test -f 'math/frexp.c' || echo '$(srcdir)/'`math/frexp.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/lib32_libmsvcr90d_a-frexp.Tpo math/$(DEPDIR)/lib32_libmsvcr90d_a-frexp.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/frexp.c' object='math/lib32_libmsvcr90d_a-frexp.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr90d_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib32_libmsvcr90d_a-frexp.o `test -f 'math/frexp.c' || echo '$(srcdir)/'`math/frexp.c
+
+math/lib32_libmsvcr90d_a-frexp.obj: math/frexp.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr90d_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib32_libmsvcr90d_a-frexp.obj -MD -MP -MF math/$(DEPDIR)/lib32_libmsvcr90d_a-frexp.Tpo -c -o math/lib32_libmsvcr90d_a-frexp.obj `if test -f 'math/frexp.c'; then $(CYGPATH_W) 'math/frexp.c'; else $(CYGPATH_W) '$(srcdir)/math/frexp.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/lib32_libmsvcr90d_a-frexp.Tpo math/$(DEPDIR)/lib32_libmsvcr90d_a-frexp.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/frexp.c' object='math/lib32_libmsvcr90d_a-frexp.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcr90d_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib32_libmsvcr90d_a-frexp.obj `if test -f 'math/frexp.c'; then $(CYGPATH_W) 'math/frexp.c'; else $(CYGPATH_W) '$(srcdir)/math/frexp.c'; fi`
+
 misc/lib32_libmsvcrt_os_a-onexit_table.o: misc/onexit_table.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libmsvcrt_os_a-onexit_table.o -MD -MP -MF misc/$(DEPDIR)/lib32_libmsvcrt_os_a-onexit_table.Tpo -c -o misc/lib32_libmsvcrt_os_a-onexit_table.o `test -f 'misc/onexit_table.c' || echo '$(srcdir)/'`misc/onexit_table.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libmsvcrt_os_a-onexit_table.Tpo misc/$(DEPDIR)/lib32_libmsvcrt_os_a-onexit_table.Po
@@ -30269,6 +30486,20 @@ stdio/lib32_libmsvcrt_os_a-acrt_iob_func.obj: stdio/acrt_iob_func.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/acrt_iob_func.c' object='stdio/lib32_libmsvcrt_os_a-acrt_iob_func.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/lib32_libmsvcrt_os_a-acrt_iob_func.obj `if test -f 'stdio/acrt_iob_func.c'; then $(CYGPATH_W) 'stdio/acrt_iob_func.c'; else $(CYGPATH_W) '$(srcdir)/stdio/acrt_iob_func.c'; fi`
+
+math/lib32_libmsvcrt_os_a-frexp.o: math/frexp.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib32_libmsvcrt_os_a-frexp.o -MD -MP -MF math/$(DEPDIR)/lib32_libmsvcrt_os_a-frexp.Tpo -c -o math/lib32_libmsvcrt_os_a-frexp.o `test -f 'math/frexp.c' || echo '$(srcdir)/'`math/frexp.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/lib32_libmsvcrt_os_a-frexp.Tpo math/$(DEPDIR)/lib32_libmsvcrt_os_a-frexp.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/frexp.c' object='math/lib32_libmsvcrt_os_a-frexp.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib32_libmsvcrt_os_a-frexp.o `test -f 'math/frexp.c' || echo '$(srcdir)/'`math/frexp.c
+
+math/lib32_libmsvcrt_os_a-frexp.obj: math/frexp.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib32_libmsvcrt_os_a-frexp.obj -MD -MP -MF math/$(DEPDIR)/lib32_libmsvcrt_os_a-frexp.Tpo -c -o math/lib32_libmsvcrt_os_a-frexp.obj `if test -f 'math/frexp.c'; then $(CYGPATH_W) 'math/frexp.c'; else $(CYGPATH_W) '$(srcdir)/math/frexp.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/lib32_libmsvcrt_os_a-frexp.Tpo math/$(DEPDIR)/lib32_libmsvcrt_os_a-frexp.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/frexp.c' object='math/lib32_libmsvcrt_os_a-frexp.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib32_libmsvcrt_os_a-frexp.obj `if test -f 'math/frexp.c'; then $(CYGPATH_W) 'math/frexp.c'; else $(CYGPATH_W) '$(srcdir)/math/frexp.c'; fi`
 
 misc/lib32_libmsvcrt_os_a-_configthreadlocale.o: misc/_configthreadlocale.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libmsvcrt_os_a-_configthreadlocale.o -MD -MP -MF misc/$(DEPDIR)/lib32_libmsvcrt_os_a-_configthreadlocale.Tpo -c -o misc/lib32_libmsvcrt_os_a-_configthreadlocale.o `test -f 'misc/_configthreadlocale.c' || echo '$(srcdir)/'`misc/_configthreadlocale.c
@@ -32705,6 +32936,20 @@ stdio/lib64_libcrtdll_a-acrt_iob_func.obj: stdio/acrt_iob_func.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/acrt_iob_func.c' object='stdio/lib64_libcrtdll_a-acrt_iob_func.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libcrtdll_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/lib64_libcrtdll_a-acrt_iob_func.obj `if test -f 'stdio/acrt_iob_func.c'; then $(CYGPATH_W) 'stdio/acrt_iob_func.c'; else $(CYGPATH_W) '$(srcdir)/stdio/acrt_iob_func.c'; fi`
+
+math/lib64_libcrtdll_a-frexp.o: math/frexp.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libcrtdll_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib64_libcrtdll_a-frexp.o -MD -MP -MF math/$(DEPDIR)/lib64_libcrtdll_a-frexp.Tpo -c -o math/lib64_libcrtdll_a-frexp.o `test -f 'math/frexp.c' || echo '$(srcdir)/'`math/frexp.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/lib64_libcrtdll_a-frexp.Tpo math/$(DEPDIR)/lib64_libcrtdll_a-frexp.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/frexp.c' object='math/lib64_libcrtdll_a-frexp.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libcrtdll_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib64_libcrtdll_a-frexp.o `test -f 'math/frexp.c' || echo '$(srcdir)/'`math/frexp.c
+
+math/lib64_libcrtdll_a-frexp.obj: math/frexp.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libcrtdll_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib64_libcrtdll_a-frexp.obj -MD -MP -MF math/$(DEPDIR)/lib64_libcrtdll_a-frexp.Tpo -c -o math/lib64_libcrtdll_a-frexp.obj `if test -f 'math/frexp.c'; then $(CYGPATH_W) 'math/frexp.c'; else $(CYGPATH_W) '$(srcdir)/math/frexp.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/lib64_libcrtdll_a-frexp.Tpo math/$(DEPDIR)/lib64_libcrtdll_a-frexp.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/frexp.c' object='math/lib64_libcrtdll_a-frexp.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libcrtdll_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib64_libcrtdll_a-frexp.obj `if test -f 'math/frexp.c'; then $(CYGPATH_W) 'math/frexp.c'; else $(CYGPATH_W) '$(srcdir)/math/frexp.c'; fi`
 
 libsrc/lib64_libdinput_a-dinput_kbd.o: libsrc/dinput_kbd.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libdinput_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libsrc/lib64_libdinput_a-dinput_kbd.o -MD -MP -MF libsrc/$(DEPDIR)/lib64_libdinput_a-dinput_kbd.Tpo -c -o libsrc/lib64_libdinput_a-dinput_kbd.o `test -f 'libsrc/dinput_kbd.c' || echo '$(srcdir)/'`libsrc/dinput_kbd.c
@@ -36303,6 +36548,20 @@ math/lib64_libmingwex_a-frexpf.obj: math/frexpf.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/frexpf.c' object='math/lib64_libmingwex_a-frexpf.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib64_libmingwex_a-frexpf.obj `if test -f 'math/frexpf.c'; then $(CYGPATH_W) 'math/frexpf.c'; else $(CYGPATH_W) '$(srcdir)/math/frexpf.c'; fi`
+
+math/lib64_libmingwex_a-frexpl.o: math/frexpl.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib64_libmingwex_a-frexpl.o -MD -MP -MF math/$(DEPDIR)/lib64_libmingwex_a-frexpl.Tpo -c -o math/lib64_libmingwex_a-frexpl.o `test -f 'math/frexpl.c' || echo '$(srcdir)/'`math/frexpl.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/lib64_libmingwex_a-frexpl.Tpo math/$(DEPDIR)/lib64_libmingwex_a-frexpl.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/frexpl.c' object='math/lib64_libmingwex_a-frexpl.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib64_libmingwex_a-frexpl.o `test -f 'math/frexpl.c' || echo '$(srcdir)/'`math/frexpl.c
+
+math/lib64_libmingwex_a-frexpl.obj: math/frexpl.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib64_libmingwex_a-frexpl.obj -MD -MP -MF math/$(DEPDIR)/lib64_libmingwex_a-frexpl.Tpo -c -o math/lib64_libmingwex_a-frexpl.obj `if test -f 'math/frexpl.c'; then $(CYGPATH_W) 'math/frexpl.c'; else $(CYGPATH_W) '$(srcdir)/math/frexpl.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/lib64_libmingwex_a-frexpl.Tpo math/$(DEPDIR)/lib64_libmingwex_a-frexpl.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/frexpl.c' object='math/lib64_libmingwex_a-frexpl.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib64_libmingwex_a-frexpl.obj `if test -f 'math/frexpl.c'; then $(CYGPATH_W) 'math/frexpl.c'; else $(CYGPATH_W) '$(srcdir)/math/frexpl.c'; fi`
 
 math/lib64_libmingwex_a-hypotf.o: math/hypotf.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib64_libmingwex_a-hypotf.o -MD -MP -MF math/$(DEPDIR)/lib64_libmingwex_a-hypotf.Tpo -c -o math/lib64_libmingwex_a-hypotf.o `test -f 'math/hypotf.c' || echo '$(srcdir)/'`math/hypotf.c
@@ -40098,6 +40357,20 @@ stdio/lib64_libmsvcr100_a-acrt_iob_func.obj: stdio/acrt_iob_func.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr100_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/lib64_libmsvcr100_a-acrt_iob_func.obj `if test -f 'stdio/acrt_iob_func.c'; then $(CYGPATH_W) 'stdio/acrt_iob_func.c'; else $(CYGPATH_W) '$(srcdir)/stdio/acrt_iob_func.c'; fi`
 
+math/lib64_libmsvcr100_a-frexp.o: math/frexp.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr100_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib64_libmsvcr100_a-frexp.o -MD -MP -MF math/$(DEPDIR)/lib64_libmsvcr100_a-frexp.Tpo -c -o math/lib64_libmsvcr100_a-frexp.o `test -f 'math/frexp.c' || echo '$(srcdir)/'`math/frexp.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/lib64_libmsvcr100_a-frexp.Tpo math/$(DEPDIR)/lib64_libmsvcr100_a-frexp.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/frexp.c' object='math/lib64_libmsvcr100_a-frexp.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr100_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib64_libmsvcr100_a-frexp.o `test -f 'math/frexp.c' || echo '$(srcdir)/'`math/frexp.c
+
+math/lib64_libmsvcr100_a-frexp.obj: math/frexp.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr100_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib64_libmsvcr100_a-frexp.obj -MD -MP -MF math/$(DEPDIR)/lib64_libmsvcr100_a-frexp.Tpo -c -o math/lib64_libmsvcr100_a-frexp.obj `if test -f 'math/frexp.c'; then $(CYGPATH_W) 'math/frexp.c'; else $(CYGPATH_W) '$(srcdir)/math/frexp.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/lib64_libmsvcr100_a-frexp.Tpo math/$(DEPDIR)/lib64_libmsvcr100_a-frexp.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/frexp.c' object='math/lib64_libmsvcr100_a-frexp.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr100_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib64_libmsvcr100_a-frexp.obj `if test -f 'math/frexp.c'; then $(CYGPATH_W) 'math/frexp.c'; else $(CYGPATH_W) '$(srcdir)/math/frexp.c'; fi`
+
 misc/lib64_libmsvcr110_a-onexit_table.o: misc/onexit_table.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr110_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib64_libmsvcr110_a-onexit_table.o -MD -MP -MF misc/$(DEPDIR)/lib64_libmsvcr110_a-onexit_table.Tpo -c -o misc/lib64_libmsvcr110_a-onexit_table.o `test -f 'misc/onexit_table.c' || echo '$(srcdir)/'`misc/onexit_table.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib64_libmsvcr110_a-onexit_table.Tpo misc/$(DEPDIR)/lib64_libmsvcr110_a-onexit_table.Po
@@ -40139,6 +40412,20 @@ stdio/lib64_libmsvcr110_a-acrt_iob_func.obj: stdio/acrt_iob_func.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/acrt_iob_func.c' object='stdio/lib64_libmsvcr110_a-acrt_iob_func.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr110_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/lib64_libmsvcr110_a-acrt_iob_func.obj `if test -f 'stdio/acrt_iob_func.c'; then $(CYGPATH_W) 'stdio/acrt_iob_func.c'; else $(CYGPATH_W) '$(srcdir)/stdio/acrt_iob_func.c'; fi`
+
+math/lib64_libmsvcr110_a-frexp.o: math/frexp.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr110_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib64_libmsvcr110_a-frexp.o -MD -MP -MF math/$(DEPDIR)/lib64_libmsvcr110_a-frexp.Tpo -c -o math/lib64_libmsvcr110_a-frexp.o `test -f 'math/frexp.c' || echo '$(srcdir)/'`math/frexp.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/lib64_libmsvcr110_a-frexp.Tpo math/$(DEPDIR)/lib64_libmsvcr110_a-frexp.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/frexp.c' object='math/lib64_libmsvcr110_a-frexp.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr110_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib64_libmsvcr110_a-frexp.o `test -f 'math/frexp.c' || echo '$(srcdir)/'`math/frexp.c
+
+math/lib64_libmsvcr110_a-frexp.obj: math/frexp.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr110_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib64_libmsvcr110_a-frexp.obj -MD -MP -MF math/$(DEPDIR)/lib64_libmsvcr110_a-frexp.Tpo -c -o math/lib64_libmsvcr110_a-frexp.obj `if test -f 'math/frexp.c'; then $(CYGPATH_W) 'math/frexp.c'; else $(CYGPATH_W) '$(srcdir)/math/frexp.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/lib64_libmsvcr110_a-frexp.Tpo math/$(DEPDIR)/lib64_libmsvcr110_a-frexp.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/frexp.c' object='math/lib64_libmsvcr110_a-frexp.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr110_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib64_libmsvcr110_a-frexp.obj `if test -f 'math/frexp.c'; then $(CYGPATH_W) 'math/frexp.c'; else $(CYGPATH_W) '$(srcdir)/math/frexp.c'; fi`
 
 misc/lib64_libmsvcr120_a-onexit_table.o: misc/onexit_table.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr120_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib64_libmsvcr120_a-onexit_table.o -MD -MP -MF misc/$(DEPDIR)/lib64_libmsvcr120_a-onexit_table.Tpo -c -o misc/lib64_libmsvcr120_a-onexit_table.o `test -f 'misc/onexit_table.c' || echo '$(srcdir)/'`misc/onexit_table.c
@@ -40182,6 +40469,20 @@ stdio/lib64_libmsvcr120_a-acrt_iob_func.obj: stdio/acrt_iob_func.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr120_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/lib64_libmsvcr120_a-acrt_iob_func.obj `if test -f 'stdio/acrt_iob_func.c'; then $(CYGPATH_W) 'stdio/acrt_iob_func.c'; else $(CYGPATH_W) '$(srcdir)/stdio/acrt_iob_func.c'; fi`
 
+math/lib64_libmsvcr120_a-frexp.o: math/frexp.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr120_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib64_libmsvcr120_a-frexp.o -MD -MP -MF math/$(DEPDIR)/lib64_libmsvcr120_a-frexp.Tpo -c -o math/lib64_libmsvcr120_a-frexp.o `test -f 'math/frexp.c' || echo '$(srcdir)/'`math/frexp.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/lib64_libmsvcr120_a-frexp.Tpo math/$(DEPDIR)/lib64_libmsvcr120_a-frexp.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/frexp.c' object='math/lib64_libmsvcr120_a-frexp.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr120_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib64_libmsvcr120_a-frexp.o `test -f 'math/frexp.c' || echo '$(srcdir)/'`math/frexp.c
+
+math/lib64_libmsvcr120_a-frexp.obj: math/frexp.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr120_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib64_libmsvcr120_a-frexp.obj -MD -MP -MF math/$(DEPDIR)/lib64_libmsvcr120_a-frexp.Tpo -c -o math/lib64_libmsvcr120_a-frexp.obj `if test -f 'math/frexp.c'; then $(CYGPATH_W) 'math/frexp.c'; else $(CYGPATH_W) '$(srcdir)/math/frexp.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/lib64_libmsvcr120_a-frexp.Tpo math/$(DEPDIR)/lib64_libmsvcr120_a-frexp.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/frexp.c' object='math/lib64_libmsvcr120_a-frexp.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr120_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib64_libmsvcr120_a-frexp.obj `if test -f 'math/frexp.c'; then $(CYGPATH_W) 'math/frexp.c'; else $(CYGPATH_W) '$(srcdir)/math/frexp.c'; fi`
+
 misc/lib64_libmsvcr120_app_a-onexit_table.o: misc/onexit_table.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr120_app_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib64_libmsvcr120_app_a-onexit_table.o -MD -MP -MF misc/$(DEPDIR)/lib64_libmsvcr120_app_a-onexit_table.Tpo -c -o misc/lib64_libmsvcr120_app_a-onexit_table.o `test -f 'misc/onexit_table.c' || echo '$(srcdir)/'`misc/onexit_table.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib64_libmsvcr120_app_a-onexit_table.Tpo misc/$(DEPDIR)/lib64_libmsvcr120_app_a-onexit_table.Po
@@ -40223,6 +40524,20 @@ stdio/lib64_libmsvcr120_app_a-acrt_iob_func.obj: stdio/acrt_iob_func.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/acrt_iob_func.c' object='stdio/lib64_libmsvcr120_app_a-acrt_iob_func.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr120_app_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/lib64_libmsvcr120_app_a-acrt_iob_func.obj `if test -f 'stdio/acrt_iob_func.c'; then $(CYGPATH_W) 'stdio/acrt_iob_func.c'; else $(CYGPATH_W) '$(srcdir)/stdio/acrt_iob_func.c'; fi`
+
+math/lib64_libmsvcr120_app_a-frexp.o: math/frexp.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr120_app_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib64_libmsvcr120_app_a-frexp.o -MD -MP -MF math/$(DEPDIR)/lib64_libmsvcr120_app_a-frexp.Tpo -c -o math/lib64_libmsvcr120_app_a-frexp.o `test -f 'math/frexp.c' || echo '$(srcdir)/'`math/frexp.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/lib64_libmsvcr120_app_a-frexp.Tpo math/$(DEPDIR)/lib64_libmsvcr120_app_a-frexp.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/frexp.c' object='math/lib64_libmsvcr120_app_a-frexp.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr120_app_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib64_libmsvcr120_app_a-frexp.o `test -f 'math/frexp.c' || echo '$(srcdir)/'`math/frexp.c
+
+math/lib64_libmsvcr120_app_a-frexp.obj: math/frexp.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr120_app_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib64_libmsvcr120_app_a-frexp.obj -MD -MP -MF math/$(DEPDIR)/lib64_libmsvcr120_app_a-frexp.Tpo -c -o math/lib64_libmsvcr120_app_a-frexp.obj `if test -f 'math/frexp.c'; then $(CYGPATH_W) 'math/frexp.c'; else $(CYGPATH_W) '$(srcdir)/math/frexp.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/lib64_libmsvcr120_app_a-frexp.Tpo math/$(DEPDIR)/lib64_libmsvcr120_app_a-frexp.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/frexp.c' object='math/lib64_libmsvcr120_app_a-frexp.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr120_app_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib64_libmsvcr120_app_a-frexp.obj `if test -f 'math/frexp.c'; then $(CYGPATH_W) 'math/frexp.c'; else $(CYGPATH_W) '$(srcdir)/math/frexp.c'; fi`
 
 misc/lib64_libmsvcr120_app_a-__set_app_type.o: misc/__set_app_type.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr120_app_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib64_libmsvcr120_app_a-__set_app_type.o -MD -MP -MF misc/$(DEPDIR)/lib64_libmsvcr120_app_a-__set_app_type.Tpo -c -o misc/lib64_libmsvcr120_app_a-__set_app_type.o `test -f 'misc/__set_app_type.c' || echo '$(srcdir)/'`misc/__set_app_type.c
@@ -40294,6 +40609,20 @@ stdio/lib64_libmsvcr120d_a-acrt_iob_func.obj: stdio/acrt_iob_func.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr120d_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/lib64_libmsvcr120d_a-acrt_iob_func.obj `if test -f 'stdio/acrt_iob_func.c'; then $(CYGPATH_W) 'stdio/acrt_iob_func.c'; else $(CYGPATH_W) '$(srcdir)/stdio/acrt_iob_func.c'; fi`
 
+math/lib64_libmsvcr120d_a-frexp.o: math/frexp.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr120d_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib64_libmsvcr120d_a-frexp.o -MD -MP -MF math/$(DEPDIR)/lib64_libmsvcr120d_a-frexp.Tpo -c -o math/lib64_libmsvcr120d_a-frexp.o `test -f 'math/frexp.c' || echo '$(srcdir)/'`math/frexp.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/lib64_libmsvcr120d_a-frexp.Tpo math/$(DEPDIR)/lib64_libmsvcr120d_a-frexp.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/frexp.c' object='math/lib64_libmsvcr120d_a-frexp.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr120d_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib64_libmsvcr120d_a-frexp.o `test -f 'math/frexp.c' || echo '$(srcdir)/'`math/frexp.c
+
+math/lib64_libmsvcr120d_a-frexp.obj: math/frexp.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr120d_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib64_libmsvcr120d_a-frexp.obj -MD -MP -MF math/$(DEPDIR)/lib64_libmsvcr120d_a-frexp.Tpo -c -o math/lib64_libmsvcr120d_a-frexp.obj `if test -f 'math/frexp.c'; then $(CYGPATH_W) 'math/frexp.c'; else $(CYGPATH_W) '$(srcdir)/math/frexp.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/lib64_libmsvcr120d_a-frexp.Tpo math/$(DEPDIR)/lib64_libmsvcr120d_a-frexp.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/frexp.c' object='math/lib64_libmsvcr120d_a-frexp.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr120d_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib64_libmsvcr120d_a-frexp.obj `if test -f 'math/frexp.c'; then $(CYGPATH_W) 'math/frexp.c'; else $(CYGPATH_W) '$(srcdir)/math/frexp.c'; fi`
+
 misc/lib64_libmsvcr80_a-onexit_table.o: misc/onexit_table.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr80_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib64_libmsvcr80_a-onexit_table.o -MD -MP -MF misc/$(DEPDIR)/lib64_libmsvcr80_a-onexit_table.Tpo -c -o misc/lib64_libmsvcr80_a-onexit_table.o `test -f 'misc/onexit_table.c' || echo '$(srcdir)/'`misc/onexit_table.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib64_libmsvcr80_a-onexit_table.Tpo misc/$(DEPDIR)/lib64_libmsvcr80_a-onexit_table.Po
@@ -40335,6 +40664,20 @@ stdio/lib64_libmsvcr80_a-acrt_iob_func.obj: stdio/acrt_iob_func.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/acrt_iob_func.c' object='stdio/lib64_libmsvcr80_a-acrt_iob_func.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr80_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/lib64_libmsvcr80_a-acrt_iob_func.obj `if test -f 'stdio/acrt_iob_func.c'; then $(CYGPATH_W) 'stdio/acrt_iob_func.c'; else $(CYGPATH_W) '$(srcdir)/stdio/acrt_iob_func.c'; fi`
+
+math/lib64_libmsvcr80_a-frexp.o: math/frexp.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr80_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib64_libmsvcr80_a-frexp.o -MD -MP -MF math/$(DEPDIR)/lib64_libmsvcr80_a-frexp.Tpo -c -o math/lib64_libmsvcr80_a-frexp.o `test -f 'math/frexp.c' || echo '$(srcdir)/'`math/frexp.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/lib64_libmsvcr80_a-frexp.Tpo math/$(DEPDIR)/lib64_libmsvcr80_a-frexp.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/frexp.c' object='math/lib64_libmsvcr80_a-frexp.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr80_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib64_libmsvcr80_a-frexp.o `test -f 'math/frexp.c' || echo '$(srcdir)/'`math/frexp.c
+
+math/lib64_libmsvcr80_a-frexp.obj: math/frexp.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr80_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib64_libmsvcr80_a-frexp.obj -MD -MP -MF math/$(DEPDIR)/lib64_libmsvcr80_a-frexp.Tpo -c -o math/lib64_libmsvcr80_a-frexp.obj `if test -f 'math/frexp.c'; then $(CYGPATH_W) 'math/frexp.c'; else $(CYGPATH_W) '$(srcdir)/math/frexp.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/lib64_libmsvcr80_a-frexp.Tpo math/$(DEPDIR)/lib64_libmsvcr80_a-frexp.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/frexp.c' object='math/lib64_libmsvcr80_a-frexp.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr80_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib64_libmsvcr80_a-frexp.obj `if test -f 'math/frexp.c'; then $(CYGPATH_W) 'math/frexp.c'; else $(CYGPATH_W) '$(srcdir)/math/frexp.c'; fi`
 
 misc/lib64_libmsvcr80_a-__p___argv.o: misc/__p___argv.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr80_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib64_libmsvcr80_a-__p___argv.o -MD -MP -MF misc/$(DEPDIR)/lib64_libmsvcr80_a-__p___argv.Tpo -c -o misc/lib64_libmsvcr80_a-__p___argv.o `test -f 'misc/__p___argv.c' || echo '$(srcdir)/'`misc/__p___argv.c
@@ -40434,6 +40777,20 @@ stdio/lib64_libmsvcr90_a-acrt_iob_func.obj: stdio/acrt_iob_func.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr90_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/lib64_libmsvcr90_a-acrt_iob_func.obj `if test -f 'stdio/acrt_iob_func.c'; then $(CYGPATH_W) 'stdio/acrt_iob_func.c'; else $(CYGPATH_W) '$(srcdir)/stdio/acrt_iob_func.c'; fi`
 
+math/lib64_libmsvcr90_a-frexp.o: math/frexp.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr90_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib64_libmsvcr90_a-frexp.o -MD -MP -MF math/$(DEPDIR)/lib64_libmsvcr90_a-frexp.Tpo -c -o math/lib64_libmsvcr90_a-frexp.o `test -f 'math/frexp.c' || echo '$(srcdir)/'`math/frexp.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/lib64_libmsvcr90_a-frexp.Tpo math/$(DEPDIR)/lib64_libmsvcr90_a-frexp.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/frexp.c' object='math/lib64_libmsvcr90_a-frexp.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr90_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib64_libmsvcr90_a-frexp.o `test -f 'math/frexp.c' || echo '$(srcdir)/'`math/frexp.c
+
+math/lib64_libmsvcr90_a-frexp.obj: math/frexp.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr90_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib64_libmsvcr90_a-frexp.obj -MD -MP -MF math/$(DEPDIR)/lib64_libmsvcr90_a-frexp.Tpo -c -o math/lib64_libmsvcr90_a-frexp.obj `if test -f 'math/frexp.c'; then $(CYGPATH_W) 'math/frexp.c'; else $(CYGPATH_W) '$(srcdir)/math/frexp.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/lib64_libmsvcr90_a-frexp.Tpo math/$(DEPDIR)/lib64_libmsvcr90_a-frexp.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/frexp.c' object='math/lib64_libmsvcr90_a-frexp.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr90_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib64_libmsvcr90_a-frexp.obj `if test -f 'math/frexp.c'; then $(CYGPATH_W) 'math/frexp.c'; else $(CYGPATH_W) '$(srcdir)/math/frexp.c'; fi`
+
 misc/lib64_libmsvcr90d_a-onexit_table.o: misc/onexit_table.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr90d_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib64_libmsvcr90d_a-onexit_table.o -MD -MP -MF misc/$(DEPDIR)/lib64_libmsvcr90d_a-onexit_table.Tpo -c -o misc/lib64_libmsvcr90d_a-onexit_table.o `test -f 'misc/onexit_table.c' || echo '$(srcdir)/'`misc/onexit_table.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib64_libmsvcr90d_a-onexit_table.Tpo misc/$(DEPDIR)/lib64_libmsvcr90d_a-onexit_table.Po
@@ -40476,6 +40833,20 @@ stdio/lib64_libmsvcr90d_a-acrt_iob_func.obj: stdio/acrt_iob_func.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr90d_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/lib64_libmsvcr90d_a-acrt_iob_func.obj `if test -f 'stdio/acrt_iob_func.c'; then $(CYGPATH_W) 'stdio/acrt_iob_func.c'; else $(CYGPATH_W) '$(srcdir)/stdio/acrt_iob_func.c'; fi`
 
+math/lib64_libmsvcr90d_a-frexp.o: math/frexp.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr90d_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib64_libmsvcr90d_a-frexp.o -MD -MP -MF math/$(DEPDIR)/lib64_libmsvcr90d_a-frexp.Tpo -c -o math/lib64_libmsvcr90d_a-frexp.o `test -f 'math/frexp.c' || echo '$(srcdir)/'`math/frexp.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/lib64_libmsvcr90d_a-frexp.Tpo math/$(DEPDIR)/lib64_libmsvcr90d_a-frexp.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/frexp.c' object='math/lib64_libmsvcr90d_a-frexp.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr90d_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib64_libmsvcr90d_a-frexp.o `test -f 'math/frexp.c' || echo '$(srcdir)/'`math/frexp.c
+
+math/lib64_libmsvcr90d_a-frexp.obj: math/frexp.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr90d_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib64_libmsvcr90d_a-frexp.obj -MD -MP -MF math/$(DEPDIR)/lib64_libmsvcr90d_a-frexp.Tpo -c -o math/lib64_libmsvcr90d_a-frexp.obj `if test -f 'math/frexp.c'; then $(CYGPATH_W) 'math/frexp.c'; else $(CYGPATH_W) '$(srcdir)/math/frexp.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/lib64_libmsvcr90d_a-frexp.Tpo math/$(DEPDIR)/lib64_libmsvcr90d_a-frexp.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/frexp.c' object='math/lib64_libmsvcr90d_a-frexp.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr90d_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib64_libmsvcr90d_a-frexp.obj `if test -f 'math/frexp.c'; then $(CYGPATH_W) 'math/frexp.c'; else $(CYGPATH_W) '$(srcdir)/math/frexp.c'; fi`
+
 misc/lib64_libmsvcrt_os_a-onexit_table.o: misc/onexit_table.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib64_libmsvcrt_os_a-onexit_table.o -MD -MP -MF misc/$(DEPDIR)/lib64_libmsvcrt_os_a-onexit_table.Tpo -c -o misc/lib64_libmsvcrt_os_a-onexit_table.o `test -f 'misc/onexit_table.c' || echo '$(srcdir)/'`misc/onexit_table.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib64_libmsvcrt_os_a-onexit_table.Tpo misc/$(DEPDIR)/lib64_libmsvcrt_os_a-onexit_table.Po
@@ -40517,6 +40888,20 @@ stdio/lib64_libmsvcrt_os_a-acrt_iob_func.obj: stdio/acrt_iob_func.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/acrt_iob_func.c' object='stdio/lib64_libmsvcrt_os_a-acrt_iob_func.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/lib64_libmsvcrt_os_a-acrt_iob_func.obj `if test -f 'stdio/acrt_iob_func.c'; then $(CYGPATH_W) 'stdio/acrt_iob_func.c'; else $(CYGPATH_W) '$(srcdir)/stdio/acrt_iob_func.c'; fi`
+
+math/lib64_libmsvcrt_os_a-frexp.o: math/frexp.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib64_libmsvcrt_os_a-frexp.o -MD -MP -MF math/$(DEPDIR)/lib64_libmsvcrt_os_a-frexp.Tpo -c -o math/lib64_libmsvcrt_os_a-frexp.o `test -f 'math/frexp.c' || echo '$(srcdir)/'`math/frexp.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/lib64_libmsvcrt_os_a-frexp.Tpo math/$(DEPDIR)/lib64_libmsvcrt_os_a-frexp.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/frexp.c' object='math/lib64_libmsvcrt_os_a-frexp.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib64_libmsvcrt_os_a-frexp.o `test -f 'math/frexp.c' || echo '$(srcdir)/'`math/frexp.c
+
+math/lib64_libmsvcrt_os_a-frexp.obj: math/frexp.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib64_libmsvcrt_os_a-frexp.obj -MD -MP -MF math/$(DEPDIR)/lib64_libmsvcrt_os_a-frexp.Tpo -c -o math/lib64_libmsvcrt_os_a-frexp.obj `if test -f 'math/frexp.c'; then $(CYGPATH_W) 'math/frexp.c'; else $(CYGPATH_W) '$(srcdir)/math/frexp.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/lib64_libmsvcrt_os_a-frexp.Tpo math/$(DEPDIR)/lib64_libmsvcrt_os_a-frexp.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/frexp.c' object='math/lib64_libmsvcrt_os_a-frexp.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib64_libmsvcrt_os_a-frexp.obj `if test -f 'math/frexp.c'; then $(CYGPATH_W) 'math/frexp.c'; else $(CYGPATH_W) '$(srcdir)/math/frexp.c'; fi`
 
 misc/lib64_libmsvcrt_os_a-_configthreadlocale.o: misc/_configthreadlocale.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib64_libmsvcrt_os_a-_configthreadlocale.o -MD -MP -MF misc/$(DEPDIR)/lib64_libmsvcrt_os_a-_configthreadlocale.Tpo -c -o misc/lib64_libmsvcrt_os_a-_configthreadlocale.o `test -f 'misc/_configthreadlocale.c' || echo '$(srcdir)/'`misc/_configthreadlocale.c
@@ -45894,6 +46279,20 @@ math/libarm32_libmingwex_a-frexpf.obj: math/frexpf.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/libarm32_libmingwex_a-frexpf.obj `if test -f 'math/frexpf.c'; then $(CYGPATH_W) 'math/frexpf.c'; else $(CYGPATH_W) '$(srcdir)/math/frexpf.c'; fi`
 
+math/libarm32_libmingwex_a-frexpl.o: math/frexpl.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/libarm32_libmingwex_a-frexpl.o -MD -MP -MF math/$(DEPDIR)/libarm32_libmingwex_a-frexpl.Tpo -c -o math/libarm32_libmingwex_a-frexpl.o `test -f 'math/frexpl.c' || echo '$(srcdir)/'`math/frexpl.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/libarm32_libmingwex_a-frexpl.Tpo math/$(DEPDIR)/libarm32_libmingwex_a-frexpl.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/frexpl.c' object='math/libarm32_libmingwex_a-frexpl.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/libarm32_libmingwex_a-frexpl.o `test -f 'math/frexpl.c' || echo '$(srcdir)/'`math/frexpl.c
+
+math/libarm32_libmingwex_a-frexpl.obj: math/frexpl.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/libarm32_libmingwex_a-frexpl.obj -MD -MP -MF math/$(DEPDIR)/libarm32_libmingwex_a-frexpl.Tpo -c -o math/libarm32_libmingwex_a-frexpl.obj `if test -f 'math/frexpl.c'; then $(CYGPATH_W) 'math/frexpl.c'; else $(CYGPATH_W) '$(srcdir)/math/frexpl.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/libarm32_libmingwex_a-frexpl.Tpo math/$(DEPDIR)/libarm32_libmingwex_a-frexpl.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/frexpl.c' object='math/libarm32_libmingwex_a-frexpl.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/libarm32_libmingwex_a-frexpl.obj `if test -f 'math/frexpl.c'; then $(CYGPATH_W) 'math/frexpl.c'; else $(CYGPATH_W) '$(srcdir)/math/frexpl.c'; fi`
+
 math/libarm32_libmingwex_a-hypotf.o: math/hypotf.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/libarm32_libmingwex_a-hypotf.o -MD -MP -MF math/$(DEPDIR)/libarm32_libmingwex_a-hypotf.Tpo -c -o math/libarm32_libmingwex_a-hypotf.o `test -f 'math/hypotf.c' || echo '$(srcdir)/'`math/hypotf.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/libarm32_libmingwex_a-hypotf.Tpo math/$(DEPDIR)/libarm32_libmingwex_a-hypotf.Po
@@ -50108,6 +50507,20 @@ stdio/libarm32_libmsvcr110_a-acrt_iob_func.obj: stdio/acrt_iob_func.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcr110_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/libarm32_libmsvcr110_a-acrt_iob_func.obj `if test -f 'stdio/acrt_iob_func.c'; then $(CYGPATH_W) 'stdio/acrt_iob_func.c'; else $(CYGPATH_W) '$(srcdir)/stdio/acrt_iob_func.c'; fi`
 
+math/libarm32_libmsvcr110_a-frexp.o: math/frexp.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcr110_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/libarm32_libmsvcr110_a-frexp.o -MD -MP -MF math/$(DEPDIR)/libarm32_libmsvcr110_a-frexp.Tpo -c -o math/libarm32_libmsvcr110_a-frexp.o `test -f 'math/frexp.c' || echo '$(srcdir)/'`math/frexp.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/libarm32_libmsvcr110_a-frexp.Tpo math/$(DEPDIR)/libarm32_libmsvcr110_a-frexp.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/frexp.c' object='math/libarm32_libmsvcr110_a-frexp.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcr110_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/libarm32_libmsvcr110_a-frexp.o `test -f 'math/frexp.c' || echo '$(srcdir)/'`math/frexp.c
+
+math/libarm32_libmsvcr110_a-frexp.obj: math/frexp.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcr110_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/libarm32_libmsvcr110_a-frexp.obj -MD -MP -MF math/$(DEPDIR)/libarm32_libmsvcr110_a-frexp.Tpo -c -o math/libarm32_libmsvcr110_a-frexp.obj `if test -f 'math/frexp.c'; then $(CYGPATH_W) 'math/frexp.c'; else $(CYGPATH_W) '$(srcdir)/math/frexp.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/libarm32_libmsvcr110_a-frexp.Tpo math/$(DEPDIR)/libarm32_libmsvcr110_a-frexp.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/frexp.c' object='math/libarm32_libmsvcr110_a-frexp.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcr110_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/libarm32_libmsvcr110_a-frexp.obj `if test -f 'math/frexp.c'; then $(CYGPATH_W) 'math/frexp.c'; else $(CYGPATH_W) '$(srcdir)/math/frexp.c'; fi`
+
 misc/libarm32_libmsvcr120_app_a-onexit_table.o: misc/onexit_table.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcr120_app_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/libarm32_libmsvcr120_app_a-onexit_table.o -MD -MP -MF misc/$(DEPDIR)/libarm32_libmsvcr120_app_a-onexit_table.Tpo -c -o misc/libarm32_libmsvcr120_app_a-onexit_table.o `test -f 'misc/onexit_table.c' || echo '$(srcdir)/'`misc/onexit_table.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/libarm32_libmsvcr120_app_a-onexit_table.Tpo misc/$(DEPDIR)/libarm32_libmsvcr120_app_a-onexit_table.Po
@@ -50149,6 +50562,20 @@ stdio/libarm32_libmsvcr120_app_a-acrt_iob_func.obj: stdio/acrt_iob_func.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/acrt_iob_func.c' object='stdio/libarm32_libmsvcr120_app_a-acrt_iob_func.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcr120_app_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/libarm32_libmsvcr120_app_a-acrt_iob_func.obj `if test -f 'stdio/acrt_iob_func.c'; then $(CYGPATH_W) 'stdio/acrt_iob_func.c'; else $(CYGPATH_W) '$(srcdir)/stdio/acrt_iob_func.c'; fi`
+
+math/libarm32_libmsvcr120_app_a-frexp.o: math/frexp.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcr120_app_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/libarm32_libmsvcr120_app_a-frexp.o -MD -MP -MF math/$(DEPDIR)/libarm32_libmsvcr120_app_a-frexp.Tpo -c -o math/libarm32_libmsvcr120_app_a-frexp.o `test -f 'math/frexp.c' || echo '$(srcdir)/'`math/frexp.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/libarm32_libmsvcr120_app_a-frexp.Tpo math/$(DEPDIR)/libarm32_libmsvcr120_app_a-frexp.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/frexp.c' object='math/libarm32_libmsvcr120_app_a-frexp.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcr120_app_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/libarm32_libmsvcr120_app_a-frexp.o `test -f 'math/frexp.c' || echo '$(srcdir)/'`math/frexp.c
+
+math/libarm32_libmsvcr120_app_a-frexp.obj: math/frexp.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcr120_app_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/libarm32_libmsvcr120_app_a-frexp.obj -MD -MP -MF math/$(DEPDIR)/libarm32_libmsvcr120_app_a-frexp.Tpo -c -o math/libarm32_libmsvcr120_app_a-frexp.obj `if test -f 'math/frexp.c'; then $(CYGPATH_W) 'math/frexp.c'; else $(CYGPATH_W) '$(srcdir)/math/frexp.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/libarm32_libmsvcr120_app_a-frexp.Tpo math/$(DEPDIR)/libarm32_libmsvcr120_app_a-frexp.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/frexp.c' object='math/libarm32_libmsvcr120_app_a-frexp.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcr120_app_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/libarm32_libmsvcr120_app_a-frexp.obj `if test -f 'math/frexp.c'; then $(CYGPATH_W) 'math/frexp.c'; else $(CYGPATH_W) '$(srcdir)/math/frexp.c'; fi`
 
 misc/libarm32_libmsvcr120_app_a-__set_app_type.o: misc/__set_app_type.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcr120_app_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/libarm32_libmsvcr120_app_a-__set_app_type.o -MD -MP -MF misc/$(DEPDIR)/libarm32_libmsvcr120_app_a-__set_app_type.Tpo -c -o misc/libarm32_libmsvcr120_app_a-__set_app_type.o `test -f 'misc/__set_app_type.c' || echo '$(srcdir)/'`misc/__set_app_type.c
@@ -50219,6 +50646,20 @@ stdio/libarm32_libmsvcrt_os_a-acrt_iob_func.obj: stdio/acrt_iob_func.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/acrt_iob_func.c' object='stdio/libarm32_libmsvcrt_os_a-acrt_iob_func.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/libarm32_libmsvcrt_os_a-acrt_iob_func.obj `if test -f 'stdio/acrt_iob_func.c'; then $(CYGPATH_W) 'stdio/acrt_iob_func.c'; else $(CYGPATH_W) '$(srcdir)/stdio/acrt_iob_func.c'; fi`
+
+math/libarm32_libmsvcrt_os_a-frexp.o: math/frexp.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/libarm32_libmsvcrt_os_a-frexp.o -MD -MP -MF math/$(DEPDIR)/libarm32_libmsvcrt_os_a-frexp.Tpo -c -o math/libarm32_libmsvcrt_os_a-frexp.o `test -f 'math/frexp.c' || echo '$(srcdir)/'`math/frexp.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/libarm32_libmsvcrt_os_a-frexp.Tpo math/$(DEPDIR)/libarm32_libmsvcrt_os_a-frexp.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/frexp.c' object='math/libarm32_libmsvcrt_os_a-frexp.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/libarm32_libmsvcrt_os_a-frexp.o `test -f 'math/frexp.c' || echo '$(srcdir)/'`math/frexp.c
+
+math/libarm32_libmsvcrt_os_a-frexp.obj: math/frexp.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/libarm32_libmsvcrt_os_a-frexp.obj -MD -MP -MF math/$(DEPDIR)/libarm32_libmsvcrt_os_a-frexp.Tpo -c -o math/libarm32_libmsvcrt_os_a-frexp.obj `if test -f 'math/frexp.c'; then $(CYGPATH_W) 'math/frexp.c'; else $(CYGPATH_W) '$(srcdir)/math/frexp.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/libarm32_libmsvcrt_os_a-frexp.Tpo math/$(DEPDIR)/libarm32_libmsvcrt_os_a-frexp.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/frexp.c' object='math/libarm32_libmsvcrt_os_a-frexp.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/libarm32_libmsvcrt_os_a-frexp.obj `if test -f 'math/frexp.c'; then $(CYGPATH_W) 'math/frexp.c'; else $(CYGPATH_W) '$(srcdir)/math/frexp.c'; fi`
 
 misc/libarm32_libmsvcrt_os_a-_configthreadlocale.o: misc/_configthreadlocale.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/libarm32_libmsvcrt_os_a-_configthreadlocale.o -MD -MP -MF misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-_configthreadlocale.Tpo -c -o misc/libarm32_libmsvcrt_os_a-_configthreadlocale.o `test -f 'misc/_configthreadlocale.c' || echo '$(srcdir)/'`misc/_configthreadlocale.c
@@ -56002,6 +56443,20 @@ math/libarm64_libmingwex_a-frexpf.obj: math/frexpf.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/libarm64_libmingwex_a-frexpf.obj `if test -f 'math/frexpf.c'; then $(CYGPATH_W) 'math/frexpf.c'; else $(CYGPATH_W) '$(srcdir)/math/frexpf.c'; fi`
 
+math/libarm64_libmingwex_a-frexpl.o: math/frexpl.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/libarm64_libmingwex_a-frexpl.o -MD -MP -MF math/$(DEPDIR)/libarm64_libmingwex_a-frexpl.Tpo -c -o math/libarm64_libmingwex_a-frexpl.o `test -f 'math/frexpl.c' || echo '$(srcdir)/'`math/frexpl.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/libarm64_libmingwex_a-frexpl.Tpo math/$(DEPDIR)/libarm64_libmingwex_a-frexpl.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/frexpl.c' object='math/libarm64_libmingwex_a-frexpl.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/libarm64_libmingwex_a-frexpl.o `test -f 'math/frexpl.c' || echo '$(srcdir)/'`math/frexpl.c
+
+math/libarm64_libmingwex_a-frexpl.obj: math/frexpl.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/libarm64_libmingwex_a-frexpl.obj -MD -MP -MF math/$(DEPDIR)/libarm64_libmingwex_a-frexpl.Tpo -c -o math/libarm64_libmingwex_a-frexpl.obj `if test -f 'math/frexpl.c'; then $(CYGPATH_W) 'math/frexpl.c'; else $(CYGPATH_W) '$(srcdir)/math/frexpl.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/libarm64_libmingwex_a-frexpl.Tpo math/$(DEPDIR)/libarm64_libmingwex_a-frexpl.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/frexpl.c' object='math/libarm64_libmingwex_a-frexpl.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/libarm64_libmingwex_a-frexpl.obj `if test -f 'math/frexpl.c'; then $(CYGPATH_W) 'math/frexpl.c'; else $(CYGPATH_W) '$(srcdir)/math/frexpl.c'; fi`
+
 math/libarm64_libmingwex_a-hypotf.o: math/hypotf.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/libarm64_libmingwex_a-hypotf.o -MD -MP -MF math/$(DEPDIR)/libarm64_libmingwex_a-hypotf.Tpo -c -o math/libarm64_libmingwex_a-hypotf.o `test -f 'math/hypotf.c' || echo '$(srcdir)/'`math/hypotf.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/libarm64_libmingwex_a-hypotf.Tpo math/$(DEPDIR)/libarm64_libmingwex_a-hypotf.Po
@@ -59207,6 +59662,20 @@ stdio/libarm64_libmsvcrt_os_a-acrt_iob_func.obj: stdio/acrt_iob_func.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/acrt_iob_func.c' object='stdio/libarm64_libmsvcrt_os_a-acrt_iob_func.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/libarm64_libmsvcrt_os_a-acrt_iob_func.obj `if test -f 'stdio/acrt_iob_func.c'; then $(CYGPATH_W) 'stdio/acrt_iob_func.c'; else $(CYGPATH_W) '$(srcdir)/stdio/acrt_iob_func.c'; fi`
+
+math/libarm64_libmsvcrt_os_a-frexp.o: math/frexp.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/libarm64_libmsvcrt_os_a-frexp.o -MD -MP -MF math/$(DEPDIR)/libarm64_libmsvcrt_os_a-frexp.Tpo -c -o math/libarm64_libmsvcrt_os_a-frexp.o `test -f 'math/frexp.c' || echo '$(srcdir)/'`math/frexp.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/libarm64_libmsvcrt_os_a-frexp.Tpo math/$(DEPDIR)/libarm64_libmsvcrt_os_a-frexp.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/frexp.c' object='math/libarm64_libmsvcrt_os_a-frexp.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/libarm64_libmsvcrt_os_a-frexp.o `test -f 'math/frexp.c' || echo '$(srcdir)/'`math/frexp.c
+
+math/libarm64_libmsvcrt_os_a-frexp.obj: math/frexp.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/libarm64_libmsvcrt_os_a-frexp.obj -MD -MP -MF math/$(DEPDIR)/libarm64_libmsvcrt_os_a-frexp.Tpo -c -o math/libarm64_libmsvcrt_os_a-frexp.obj `if test -f 'math/frexp.c'; then $(CYGPATH_W) 'math/frexp.c'; else $(CYGPATH_W) '$(srcdir)/math/frexp.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/libarm64_libmsvcrt_os_a-frexp.Tpo math/$(DEPDIR)/libarm64_libmsvcrt_os_a-frexp.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/frexp.c' object='math/libarm64_libmsvcrt_os_a-frexp.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/libarm64_libmsvcrt_os_a-frexp.obj `if test -f 'math/frexp.c'; then $(CYGPATH_W) 'math/frexp.c'; else $(CYGPATH_W) '$(srcdir)/math/frexp.c'; fi`
 
 misc/libarm64_libmsvcrt_os_a-_configthreadlocale.o: misc/_configthreadlocale.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/libarm64_libmsvcrt_os_a-_configthreadlocale.o -MD -MP -MF misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-_configthreadlocale.Tpo -c -o misc/libarm64_libmsvcrt_os_a-_configthreadlocale.o `test -f 'misc/_configthreadlocale.c' || echo '$(srcdir)/'`misc/_configthreadlocale.c
