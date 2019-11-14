@@ -8287,7 +8287,8 @@ src_intrincsarm64 =
 @LIB64_TRUE@	lib64/libwebclnt.a lib64/libwebhits.a \
 @LIB64_TRUE@	lib64/libwiadss.a lib64/libwiarpc.a \
 @LIB64_TRUE@	lib64/libwiaservc.a lib64/libwiashext.a \
-@LIB64_TRUE@	lib64/libwinfax.a lib64/libwininet.a \
+@LIB64_TRUE@	lib64/libwinfax.a lib64/libWinHvEmulation.a \
+@LIB64_TRUE@	lib64/libWinHvPlatform.a lib64/libwininet.a \
 @LIB64_TRUE@	lib64/libwinipsec.a lib64/libwinmm.a \
 @LIB64_TRUE@	lib64/libwinrnr.a lib64/libwinscard.a \
 @LIB64_TRUE@	lib64/libwinspool.a lib64/libwinsrv.a \
