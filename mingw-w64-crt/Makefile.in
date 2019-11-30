@@ -7102,9 +7102,9 @@ top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 @WITHSYSROOT_FALSE@sysincludes = 
-@WITHSYSROOT_TRUE@sysincludes = -I@TARGET_SYSTEM_ROOT@/include
+@WITHSYSROOT_TRUE@sysincludes = "-I@TARGET_SYSTEM_ROOT@/include"
 @WITHSYSROOT_FALSE@withsys = 
-@WITHSYSROOT_TRUE@withsys = --with-sysroot=@TARGET_SYSTEM_ROOT@
+@WITHSYSROOT_TRUE@withsys = "--with-sysroot=@TARGET_SYSTEM_ROOT@"
 AM_CPPFLAGS = $(sysincludes)
 AM_CFLAGS = -pipe -std=gnu99 -D_CRTBLD -D_WIN32_WINNT=0x0f00 -D__MSVCRT_VERSION__=0x700 @ADD_C_CXX_WARNING_FLAGS@ @ADD_C_ONLY_WARNING_FLAGS@
 AM_CXXFLAGS = @ADD_C_CXX_WARNING_FLAGS@ @ADD_CXX_ONLY_WARNING_FLAGS@
