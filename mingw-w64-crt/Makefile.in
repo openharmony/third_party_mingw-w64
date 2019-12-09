@@ -7093,7 +7093,6 @@ pdfdir = @pdfdir@
 prefix = @prefix@
 program_transform_name = @program_transform_name@
 psdir = @psdir@
-runstatedir = @runstatedir@
 sbindir = @sbindir@
 sharedstatedir = @sharedstatedir@
 srcdir = @srcdir@
@@ -7660,7 +7659,8 @@ src_intrincsarm64 =
 @LIB32_TRUE@	lib32/libcryptsp.a lib32/libcryptxml.a \
 @LIB32_TRUE@	lib32/libcscapi.a lib32/libctl3d32.a \
 @LIB32_TRUE@	lib32/libd2d1.a lib32/libd3d8.a lib32/libd3d9.a \
-@LIB32_TRUE@	lib32/libd3d11.a lib32/libd3dcompiler_33.a \
+@LIB32_TRUE@	lib32/libd3d10.a lib32/libd3d11.a \
+@LIB32_TRUE@	lib32/libd3dcompiler_33.a \
 @LIB32_TRUE@	lib32/libd3dcompiler_34.a \
 @LIB32_TRUE@	lib32/libd3dcompiler_35.a \
 @LIB32_TRUE@	lib32/libd3dcompiler_36.a \
@@ -8030,59 +8030,60 @@ src_intrincsarm64 =
 @LIB64_TRUE@	lib64/libcryptui.a lib64/libcscdll.a \
 @LIB64_TRUE@	lib64/libcscui.a lib64/libcsrsrv.a \
 @LIB64_TRUE@	lib64/libd3d8thk.a lib64/libd3d9.a \
-@LIB64_TRUE@	lib64/libd3dxof.a lib64/libdavclnt.a \
-@LIB64_TRUE@	lib64/libdbgeng.a lib64/libdbghelp.a \
-@LIB64_TRUE@	lib64/libdbnetlib.a lib64/libdbnmpntw.a \
-@LIB64_TRUE@	lib64/libdciman32.a lib64/libdcomp.a \
-@LIB64_TRUE@	lib64/libddraw.a lib64/libdevmgr.a \
-@LIB64_TRUE@	lib64/libdevobj.a lib64/libdevrtl.a \
-@LIB64_TRUE@	lib64/libdhcpcsvc.a lib64/libdhcpsapi.a \
-@LIB64_TRUE@	lib64/libdigest.a lib64/libdimsntfy.a \
-@LIB64_TRUE@	lib64/libdimsroam.a lib64/libdiskcopy.a \
-@LIB64_TRUE@	lib64/libdmconfig.a lib64/libdmdskmgr.a \
-@LIB64_TRUE@	lib64/libdmivcitf.a lib64/libdmutil.a \
-@LIB64_TRUE@	lib64/libdmvdsitf.a lib64/libdnsapi.a \
-@LIB64_TRUE@	lib64/libdnsrslvr.a lib64/libdpapi.a \
-@LIB64_TRUE@	lib64/libdpnaddr.a lib64/libdpnet.a \
-@LIB64_TRUE@	lib64/libdpnhupnp.a lib64/libdpnlobby.a \
-@LIB64_TRUE@	lib64/libdpvoice.a lib64/libdrprov.a \
-@LIB64_TRUE@	lib64/libds32gt.a lib64/libdsauth.a \
-@LIB64_TRUE@	lib64/libdskquota.a lib64/libdsound3d.a \
-@LIB64_TRUE@	lib64/libdsound.a lib64/libdsprop.a \
-@LIB64_TRUE@	lib64/libdsquery.a lib64/libdssec.a \
-@LIB64_TRUE@	lib64/libdssenh.a lib64/libdsuiext.a \
-@LIB64_TRUE@	lib64/libduser.a lib64/libefsadu.a lib64/libes.a \
-@LIB64_TRUE@	lib64/libesent.a lib64/libesentprf.a \
-@LIB64_TRUE@	lib64/libeventlog.a lib64/libevntagnt.a \
-@LIB64_TRUE@	lib64/libexstrace.a lib64/libfastprox.a \
-@LIB64_TRUE@	lib64/libfaultrep.a lib64/libfcachdll.a \
-@LIB64_TRUE@	lib64/libfdeploy.a lib64/libfeclient.a \
-@LIB64_TRUE@	lib64/libfilemgmt.a lib64/libfldrclnr.a \
-@LIB64_TRUE@	lib64/libfltlib.a lib64/libfmifs.a \
-@LIB64_TRUE@	lib64/libfontsub.a lib64/libframedyn.a \
-@LIB64_TRUE@	lib64/libftpctrs2.a lib64/libftpmib.a \
-@LIB64_TRUE@	lib64/libfxsapi.a lib64/libfxscfgwz.a \
-@LIB64_TRUE@	lib64/libfxsdrv.a lib64/libfxsocm.a \
-@LIB64_TRUE@	lib64/libfxsperf.a lib64/libfxsroute.a \
-@LIB64_TRUE@	lib64/libfxsst.a lib64/libfxst30.a \
-@LIB64_TRUE@	lib64/libfxstiff.a lib64/libfxsui.a \
-@LIB64_TRUE@	lib64/libfxswzrd.a lib64/libgdi32.a \
-@LIB64_TRUE@	lib64/libgetuname.a lib64/libglmf32.a \
-@LIB64_TRUE@	lib64/libglu32.a lib64/libgpedit.a \
-@LIB64_TRUE@	lib64/libgpkcsp.a lib64/libgptext.a \
-@LIB64_TRUE@	lib64/libguitrn.a lib64/libhal.a lib64/libhbaapi.a \
-@LIB64_TRUE@	lib64/libhgfs.a lib64/libhid.a lib64/libhidclass.a \
-@LIB64_TRUE@	lib64/libhidparse.a lib64/libhlink.a \
-@LIB64_TRUE@	lib64/libhmmapi.a lib64/libhnetcfg.a \
-@LIB64_TRUE@	lib64/libhnetwiz.a lib64/libhostmib.a \
-@LIB64_TRUE@	lib64/libhotplug.a lib64/libhtrn_jis.a \
-@LIB64_TRUE@	lib64/libhttpapi.a lib64/libhttpext.a \
-@LIB64_TRUE@	lib64/libhttpmib.a lib64/libhttpodbc.a \
-@LIB64_TRUE@	lib64/libhtui.a lib64/libhypertrm.a \
-@LIB64_TRUE@	lib64/libiashlpr.a lib64/libiaspolcy.a \
-@LIB64_TRUE@	lib64/libiassam.a lib64/libiassvcs.a \
-@LIB64_TRUE@	lib64/libicaapi.a lib64/libicfgnt5.a \
-@LIB64_TRUE@	lib64/libicm32.a lib64/libicmp.a lib64/libicmui.a \
+@LIB64_TRUE@	lib64/libd3d10.a lib64/libd3dxof.a \
+@LIB64_TRUE@	lib64/libdavclnt.a lib64/libdbgeng.a \
+@LIB64_TRUE@	lib64/libdbghelp.a lib64/libdbnetlib.a \
+@LIB64_TRUE@	lib64/libdbnmpntw.a lib64/libdciman32.a \
+@LIB64_TRUE@	lib64/libdcomp.a lib64/libddraw.a \
+@LIB64_TRUE@	lib64/libdevmgr.a lib64/libdevobj.a \
+@LIB64_TRUE@	lib64/libdevrtl.a lib64/libdhcpcsvc.a \
+@LIB64_TRUE@	lib64/libdhcpsapi.a lib64/libdigest.a \
+@LIB64_TRUE@	lib64/libdimsntfy.a lib64/libdimsroam.a \
+@LIB64_TRUE@	lib64/libdiskcopy.a lib64/libdmconfig.a \
+@LIB64_TRUE@	lib64/libdmdskmgr.a lib64/libdmivcitf.a \
+@LIB64_TRUE@	lib64/libdmutil.a lib64/libdmvdsitf.a \
+@LIB64_TRUE@	lib64/libdnsapi.a lib64/libdnsrslvr.a \
+@LIB64_TRUE@	lib64/libdpapi.a lib64/libdpnaddr.a \
+@LIB64_TRUE@	lib64/libdpnet.a lib64/libdpnhupnp.a \
+@LIB64_TRUE@	lib64/libdpnlobby.a lib64/libdpvoice.a \
+@LIB64_TRUE@	lib64/libdrprov.a lib64/libds32gt.a \
+@LIB64_TRUE@	lib64/libdsauth.a lib64/libdskquota.a \
+@LIB64_TRUE@	lib64/libdsound3d.a lib64/libdsound.a \
+@LIB64_TRUE@	lib64/libdsprop.a lib64/libdsquery.a \
+@LIB64_TRUE@	lib64/libdssec.a lib64/libdssenh.a \
+@LIB64_TRUE@	lib64/libdsuiext.a lib64/libduser.a \
+@LIB64_TRUE@	lib64/libefsadu.a lib64/libes.a lib64/libesent.a \
+@LIB64_TRUE@	lib64/libesentprf.a lib64/libeventlog.a \
+@LIB64_TRUE@	lib64/libevntagnt.a lib64/libexstrace.a \
+@LIB64_TRUE@	lib64/libfastprox.a lib64/libfaultrep.a \
+@LIB64_TRUE@	lib64/libfcachdll.a lib64/libfdeploy.a \
+@LIB64_TRUE@	lib64/libfeclient.a lib64/libfilemgmt.a \
+@LIB64_TRUE@	lib64/libfldrclnr.a lib64/libfltlib.a \
+@LIB64_TRUE@	lib64/libfmifs.a lib64/libfontsub.a \
+@LIB64_TRUE@	lib64/libframedyn.a lib64/libftpctrs2.a \
+@LIB64_TRUE@	lib64/libftpmib.a lib64/libfxsapi.a \
+@LIB64_TRUE@	lib64/libfxscfgwz.a lib64/libfxsdrv.a \
+@LIB64_TRUE@	lib64/libfxsocm.a lib64/libfxsperf.a \
+@LIB64_TRUE@	lib64/libfxsroute.a lib64/libfxsst.a \
+@LIB64_TRUE@	lib64/libfxst30.a lib64/libfxstiff.a \
+@LIB64_TRUE@	lib64/libfxsui.a lib64/libfxswzrd.a \
+@LIB64_TRUE@	lib64/libgdi32.a lib64/libgetuname.a \
+@LIB64_TRUE@	lib64/libglmf32.a lib64/libglu32.a \
+@LIB64_TRUE@	lib64/libgpedit.a lib64/libgpkcsp.a \
+@LIB64_TRUE@	lib64/libgptext.a lib64/libguitrn.a lib64/libhal.a \
+@LIB64_TRUE@	lib64/libhbaapi.a lib64/libhgfs.a lib64/libhid.a \
+@LIB64_TRUE@	lib64/libhidclass.a lib64/libhidparse.a \
+@LIB64_TRUE@	lib64/libhlink.a lib64/libhmmapi.a \
+@LIB64_TRUE@	lib64/libhnetcfg.a lib64/libhnetwiz.a \
+@LIB64_TRUE@	lib64/libhostmib.a lib64/libhotplug.a \
+@LIB64_TRUE@	lib64/libhtrn_jis.a lib64/libhttpapi.a \
+@LIB64_TRUE@	lib64/libhttpext.a lib64/libhttpmib.a \
+@LIB64_TRUE@	lib64/libhttpodbc.a lib64/libhtui.a \
+@LIB64_TRUE@	lib64/libhypertrm.a lib64/libiashlpr.a \
+@LIB64_TRUE@	lib64/libiaspolcy.a lib64/libiassam.a \
+@LIB64_TRUE@	lib64/libiassvcs.a lib64/libicaapi.a \
+@LIB64_TRUE@	lib64/libicfgnt5.a lib64/libicm32.a \
+@LIB64_TRUE@	lib64/libicmp.a lib64/libicmui.a \
 @LIB64_TRUE@	lib64/libicwconn.a lib64/libicwdial.a \
 @LIB64_TRUE@	lib64/libicwdl.a lib64/libicwphbk.a \
 @LIB64_TRUE@	lib64/libicwutil.a lib64/libidq.a \
@@ -9263,7 +9264,8 @@ src_intrincsarm64 =
 @LIBARM64_TRUE@	libarm64/libcryptsvc.a libarm64/libcryptui.a \
 @LIBARM64_TRUE@	libarm64/libcryptxml.a libarm64/libcscapi.a \
 @LIBARM64_TRUE@	libarm64/libd2d1.a libarm64/libd3d11.a \
-@LIBARM64_TRUE@	libarm64/libd3d9.a libarm64/libd3dcompiler_47.a \
+@LIBARM64_TRUE@	libarm64/libd3d9.a libarm64/libd3d10.a \
+@LIBARM64_TRUE@	libarm64/libd3dcompiler_47.a \
 @LIBARM64_TRUE@	libarm64/libdavclnt.a libarm64/libdavhlpr.a \
 @LIBARM64_TRUE@	libarm64/libdbgeng.a libarm64/libdbghelp.a \
 @LIBARM64_TRUE@	libarm64/libdbnetlib.a libarm64/libdbnmpntw.a \
