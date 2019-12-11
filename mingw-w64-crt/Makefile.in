@@ -8039,7 +8039,7 @@ src_intrincsarm64 =
 @LIB64_TRUE@	lib64/libcryptui.a lib64/libcscdll.a \
 @LIB64_TRUE@	lib64/libcscui.a lib64/libcsrsrv.a \
 @LIB64_TRUE@	lib64/libd3d8thk.a lib64/libd3d9.a \
-@LIB64_TRUE@	lib64/libd3d10.a lib64/libd3d12.a \
+@LIB64_TRUE@	lib64/libd3d10.a lib64/libd3d11.a lib64/libd3d12.a \
 @LIB64_TRUE@	lib64/libd3dxof.a lib64/libdavclnt.a \
 @LIB64_TRUE@	lib64/libdbgeng.a lib64/libdbghelp.a \
 @LIB64_TRUE@	lib64/libdbnetlib.a lib64/libdbnmpntw.a \
@@ -8388,9 +8388,8 @@ src_intrincsarm64 =
 @LIB64_TRUE@	lib64/libxinput1_2.a lib64/libxinput1_3.a \
 @LIB64_TRUE@	lib64/libxinput1_4.a lib64/libxinput9_1_0.a \
 @LIB64_TRUE@	lib64/libxaudio2_8.a lib64/libd3dcompiler_46.a \
-@LIB64_TRUE@	lib64/libd3dcsx_46.a lib64/libd3d11.a \
-@LIB64_TRUE@	lib64/libd3dcompiler_47.a lib64/libwinhttp.a \
-@LIB64_TRUE@	lib64/libruntimeobject.a \
+@LIB64_TRUE@	lib64/libd3dcsx_46.a lib64/libd3dcompiler_47.a \
+@LIB64_TRUE@	lib64/libwinhttp.a lib64/libruntimeobject.a \
 @LIB64_TRUE@	lib64/libsynchronization.a lib64/libwindowsapp.a \
 @LIB64_TRUE@	lib64/libwscapi.a lib64/libwslapi.a \
 @LIB64_TRUE@	$(am__append_15)
