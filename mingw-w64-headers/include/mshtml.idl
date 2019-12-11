@@ -83,7 +83,7 @@ interface IIE80DispatchEx : IDispatchEx {
 library MSHTML {
   importlib ("stdole2.tlb");
   import "ocidl.idl";
-  import "dxgitype.h";
+  import "dxgitype.idl";
 
   interface IDOMEvent;
   interface IElementBehavior;
