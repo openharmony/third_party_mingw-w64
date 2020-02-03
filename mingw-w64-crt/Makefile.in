@@ -11314,6 +11314,15 @@ src_intrincsarm64 =
 @LIB64_TRUE@lib64_libkernel32_a_CPPFLAGS = $(CPPFLAGS64) $(extra_include) $(AM_CPPFLAGS)
 @LIB64_TRUE@lib64_libkernel32_a_AR = $(DTDEF64) lib64/kernel32.def && $(AR) $(ARFLAGS)
 @LIB64_TRUE@EXTRA_lib64_libkernel32_a_DEPENDENCIES = lib64/kernel32.def
+#lib64_DATA += lib64/libcrtdll.a     # Specialized for W32API conditional
+#lib64_DATA += lib64/libdinput.a   # Handled by custom rule
+#lib64_DATA += lib64/libdinput8.a  # Handled by custom rule
+#lib64_DATA += lib64/libgdiplus.a  # Handled by custom rule
+#lib64_DATA += lib64/libkernel32.a  # Handled by custom rule
+#lib64_DATA += lib64/libksuser.a    # Handled by custom rule
+#lib64_DATA += lib64/libmsvcp60.a     # Specialized for W32API conditional
+#lib64_DATA += lib64/libshell32.a    # Handled by custom rule
+#lib64_DATA += lib64/libws2_32.a      # Handled by custom rule
 @LIB64_TRUE@lib64_DATA = $(am__append_11) lib64/libwinusb.a \
 @LIB64_TRUE@	lib64/libavrt.a lib64/libacledit.a \
 @LIB64_TRUE@	lib64/libaclui.a lib64/libactiveds.a \
@@ -11870,7 +11879,6 @@ src_intrincsarm64 =
 @LIBARM32_TRUE@libarm32_libkernel32_a_AR = $(DTDEFARM32) libarm32/kernel32.def && $(AR) $(ARFLAGS)
 @LIBARM32_TRUE@libarm32_libkernel32_a_CPPFLAGS = $(CPPFLAGSARM32) $(extra_include) $(AM_CPPFLAGS)
 @LIBARM32_TRUE@EXTRA_libarm32_libkernel32_a_DEPENDENCIES = libarm32/kernel32.def
-#libarm32_DATA += libarm32/libcrtdll.a     # Specialized for W32API conditional
 #libarm32_DATA += libarm32/libgdiplus.a  # Handled by custom rule
 #libarm32_DATA += libarm32/libkernel32.a  # Handled by custom rule
 #libarm32_DATA += libarm32/libksuser.a    # Handled by custom rule
