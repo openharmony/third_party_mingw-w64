@@ -12783,15 +12783,16 @@ src_intrincsarm64 =
 @LIBARM64_TRUE@	libarm64/libseclogon.a libarm64/libsecur32.a \
 @LIBARM64_TRUE@	libarm64/libsecurity.a libarm64/libsensapi.a \
 @LIBARM64_TRUE@	libarm64/libsens.a libarm64/libserialui.a \
-@LIBARM64_TRUE@	libarm64/libserwvdrv.a libarm64/libshcore.a \
-@LIBARM64_TRUE@	libarm64/libshfolder.a libarm64/libshimgvw.a \
-@LIBARM64_TRUE@	libarm64/libshlwapi.a libarm64/libshsvcs.a \
-@LIBARM64_TRUE@	libarm64/libsisbkup.a libarm64/libslcext.a \
-@LIBARM64_TRUE@	libarm64/libslwga.a libarm64/libsnmpapi.a \
-@LIBARM64_TRUE@	libarm64/libsoftpub.a libarm64/libsqlsrv32.a \
-@LIBARM64_TRUE@	libarm64/libsrvcli.a libarm64/libsrvsvc.a \
-@LIBARM64_TRUE@	libarm64/libsspicli.a libarm64/libstreamci.a \
-@LIBARM64_TRUE@	libarm64/libsxs.a libarm64/libsynchronization.a \
+@LIBARM64_TRUE@	libarm64/libserwvdrv.a libarm64/libsetupapi.a \
+@LIBARM64_TRUE@	libarm64/libshcore.a libarm64/libshfolder.a \
+@LIBARM64_TRUE@	libarm64/libshimgvw.a libarm64/libshlwapi.a \
+@LIBARM64_TRUE@	libarm64/libshsvcs.a libarm64/libsisbkup.a \
+@LIBARM64_TRUE@	libarm64/libslcext.a libarm64/libslwga.a \
+@LIBARM64_TRUE@	libarm64/libsnmpapi.a libarm64/libsoftpub.a \
+@LIBARM64_TRUE@	libarm64/libsqlsrv32.a libarm64/libsrvcli.a \
+@LIBARM64_TRUE@	libarm64/libsrvsvc.a libarm64/libsspicli.a \
+@LIBARM64_TRUE@	libarm64/libstreamci.a libarm64/libsxs.a \
+@LIBARM64_TRUE@	libarm64/libsynchronization.a \
 @LIBARM64_TRUE@	libarm64/libt2embed.a libarm64/libtapi32.a \
 @LIBARM64_TRUE@	libarm64/libtapiperf.a libarm64/libtbs.a \
 @LIBARM64_TRUE@	libarm64/libtdh.a libarm64/libtraffic.a \
