@@ -12156,6 +12156,7 @@ src_intrincsarm64 =
 @LIBARM32_TRUE@	libarm32/libkernelbase.a \
 @LIBARM32_TRUE@	libarm32/libkeyboardfiltercore.a \
 @LIBARM32_TRUE@	libarm32/libkeyiso.a libarm32/libkeymgr.a \
+@LIBARM32_TRUE@	libarm32/libks.a libarm32/libksecdd.a \
 @LIBARM32_TRUE@	libarm32/libktmw32.a libarm32/libl2gpstore.a \
 @LIBARM32_TRUE@	libarm32/liblangcleanupsysprepaction.a \
 @LIBARM32_TRUE@	libarm32/liblinkinfo.a libarm32/liblistsvc.a \
@@ -12235,8 +12236,9 @@ src_intrincsarm64 =
 @LIBARM32_TRUE@	libarm32/libnetapi32.a libarm32/libnetbios.a \
 @LIBARM32_TRUE@	libarm32/libnetcfgx.a libarm32/libnetdiagfx.a \
 @LIBARM32_TRUE@	libarm32/libnetfxperf.a libarm32/libnetid.a \
-@LIBARM32_TRUE@	libarm32/libnetjoin.a libarm32/libnetlogon.a \
-@LIBARM32_TRUE@	libarm32/libnetman.a libarm32/libnetplwiz.a \
+@LIBARM32_TRUE@	libarm32/libnetio.a libarm32/libnetjoin.a \
+@LIBARM32_TRUE@	libarm32/libnetlogon.a libarm32/libnetman.a \
+@LIBARM32_TRUE@	libarm32/libnetplwiz.a \
 @LIBARM32_TRUE@	libarm32/libnetprofmsvc.a \
 @LIBARM32_TRUE@	libarm32/libnetprovisionsp.a \
 @LIBARM32_TRUE@	libarm32/libnetsetupapi.a \
