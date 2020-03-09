@@ -1674,10 +1674,10 @@ lib32_libucrt_extra_a_LIBADD =
 am__lib32_libucrt_extra_a_SOURCES_DIST = crt/ucrtbase_compat.c \
 	stdio/ucrt_fprintf.c stdio/ucrt_fwprintf.c stdio/ucrt_printf.c \
 	stdio/ucrt__snwprintf.c stdio/ucrt_snprintf.c \
-	stdio/ucrt_sprintf.c stdio/ucrt__vsnprintf.c \
-	stdio/ucrt__vsnwprintf.c stdio/ucrt_vfprintf.c \
-	stdio/ucrt_vprintf.c stdio/ucrt_vsnprintf.c \
-	stdio/ucrt_vsprintf.c
+	stdio/ucrt_sprintf.c stdio/ucrt__vscprintf.c \
+	stdio/ucrt__vsnprintf.c stdio/ucrt__vsnwprintf.c \
+	stdio/ucrt_vfprintf.c stdio/ucrt_vprintf.c \
+	stdio/ucrt_vsnprintf.c stdio/ucrt_vsprintf.c
 am__objects_46 = crt/lib32_libucrt_extra_a-ucrtbase_compat.$(OBJEXT) \
 	stdio/lib32_libucrt_extra_a-ucrt_fprintf.$(OBJEXT) \
 	stdio/lib32_libucrt_extra_a-ucrt_fwprintf.$(OBJEXT) \
@@ -1685,6 +1685,7 @@ am__objects_46 = crt/lib32_libucrt_extra_a-ucrtbase_compat.$(OBJEXT) \
 	stdio/lib32_libucrt_extra_a-ucrt__snwprintf.$(OBJEXT) \
 	stdio/lib32_libucrt_extra_a-ucrt_snprintf.$(OBJEXT) \
 	stdio/lib32_libucrt_extra_a-ucrt_sprintf.$(OBJEXT) \
+	stdio/lib32_libucrt_extra_a-ucrt__vscprintf.$(OBJEXT) \
 	stdio/lib32_libucrt_extra_a-ucrt__vsnprintf.$(OBJEXT) \
 	stdio/lib32_libucrt_extra_a-ucrt__vsnwprintf.$(OBJEXT) \
 	stdio/lib32_libucrt_extra_a-ucrt_vfprintf.$(OBJEXT) \
@@ -1698,10 +1699,11 @@ lib32_libucrtbase_a_LIBADD =
 am__lib32_libucrtbase_a_SOURCES_DIST = crt/ucrtbase_compat.c \
 	stdio/ucrt_fprintf.c stdio/ucrt_fwprintf.c stdio/ucrt_printf.c \
 	stdio/ucrt__snwprintf.c stdio/ucrt_snprintf.c \
-	stdio/ucrt_sprintf.c stdio/ucrt__vsnprintf.c \
-	stdio/ucrt__vsnwprintf.c stdio/ucrt_vfprintf.c \
-	stdio/ucrt_vprintf.c stdio/ucrt_vsnprintf.c \
-	stdio/ucrt_vsprintf.c lib-common/ucrtbase.def.in
+	stdio/ucrt_sprintf.c stdio/ucrt__vscprintf.c \
+	stdio/ucrt__vsnprintf.c stdio/ucrt__vsnwprintf.c \
+	stdio/ucrt_vfprintf.c stdio/ucrt_vprintf.c \
+	stdio/ucrt_vsnprintf.c stdio/ucrt_vsprintf.c \
+	lib-common/ucrtbase.def.in
 am__objects_47 = crt/lib32_libucrtbase_a-ucrtbase_compat.$(OBJEXT) \
 	stdio/lib32_libucrtbase_a-ucrt_fprintf.$(OBJEXT) \
 	stdio/lib32_libucrtbase_a-ucrt_fwprintf.$(OBJEXT) \
@@ -1709,6 +1711,7 @@ am__objects_47 = crt/lib32_libucrtbase_a-ucrtbase_compat.$(OBJEXT) \
 	stdio/lib32_libucrtbase_a-ucrt__snwprintf.$(OBJEXT) \
 	stdio/lib32_libucrtbase_a-ucrt_snprintf.$(OBJEXT) \
 	stdio/lib32_libucrtbase_a-ucrt_sprintf.$(OBJEXT) \
+	stdio/lib32_libucrtbase_a-ucrt__vscprintf.$(OBJEXT) \
 	stdio/lib32_libucrtbase_a-ucrt__vsnprintf.$(OBJEXT) \
 	stdio/lib32_libucrtbase_a-ucrt__vsnwprintf.$(OBJEXT) \
 	stdio/lib32_libucrtbase_a-ucrt_vfprintf.$(OBJEXT) \
@@ -3131,10 +3134,10 @@ lib64_libucrt_extra_a_LIBADD =
 am__lib64_libucrt_extra_a_SOURCES_DIST = crt/ucrtbase_compat.c \
 	stdio/ucrt_fprintf.c stdio/ucrt_fwprintf.c stdio/ucrt_printf.c \
 	stdio/ucrt__snwprintf.c stdio/ucrt_snprintf.c \
-	stdio/ucrt_sprintf.c stdio/ucrt__vsnprintf.c \
-	stdio/ucrt__vsnwprintf.c stdio/ucrt_vfprintf.c \
-	stdio/ucrt_vprintf.c stdio/ucrt_vsnprintf.c \
-	stdio/ucrt_vsprintf.c
+	stdio/ucrt_sprintf.c stdio/ucrt__vscprintf.c \
+	stdio/ucrt__vsnprintf.c stdio/ucrt__vsnwprintf.c \
+	stdio/ucrt_vfprintf.c stdio/ucrt_vprintf.c \
+	stdio/ucrt_vsnprintf.c stdio/ucrt_vsprintf.c
 am__objects_97 = crt/lib64_libucrt_extra_a-ucrtbase_compat.$(OBJEXT) \
 	stdio/lib64_libucrt_extra_a-ucrt_fprintf.$(OBJEXT) \
 	stdio/lib64_libucrt_extra_a-ucrt_fwprintf.$(OBJEXT) \
@@ -3142,6 +3145,7 @@ am__objects_97 = crt/lib64_libucrt_extra_a-ucrtbase_compat.$(OBJEXT) \
 	stdio/lib64_libucrt_extra_a-ucrt__snwprintf.$(OBJEXT) \
 	stdio/lib64_libucrt_extra_a-ucrt_snprintf.$(OBJEXT) \
 	stdio/lib64_libucrt_extra_a-ucrt_sprintf.$(OBJEXT) \
+	stdio/lib64_libucrt_extra_a-ucrt__vscprintf.$(OBJEXT) \
 	stdio/lib64_libucrt_extra_a-ucrt__vsnprintf.$(OBJEXT) \
 	stdio/lib64_libucrt_extra_a-ucrt__vsnwprintf.$(OBJEXT) \
 	stdio/lib64_libucrt_extra_a-ucrt_vfprintf.$(OBJEXT) \
@@ -3155,10 +3159,11 @@ lib64_libucrtbase_a_LIBADD =
 am__lib64_libucrtbase_a_SOURCES_DIST = crt/ucrtbase_compat.c \
 	stdio/ucrt_fprintf.c stdio/ucrt_fwprintf.c stdio/ucrt_printf.c \
 	stdio/ucrt__snwprintf.c stdio/ucrt_snprintf.c \
-	stdio/ucrt_sprintf.c stdio/ucrt__vsnprintf.c \
-	stdio/ucrt__vsnwprintf.c stdio/ucrt_vfprintf.c \
-	stdio/ucrt_vprintf.c stdio/ucrt_vsnprintf.c \
-	stdio/ucrt_vsprintf.c lib-common/ucrtbase.def.in
+	stdio/ucrt_sprintf.c stdio/ucrt__vscprintf.c \
+	stdio/ucrt__vsnprintf.c stdio/ucrt__vsnwprintf.c \
+	stdio/ucrt_vfprintf.c stdio/ucrt_vprintf.c \
+	stdio/ucrt_vsnprintf.c stdio/ucrt_vsprintf.c \
+	lib-common/ucrtbase.def.in
 am__objects_98 = crt/lib64_libucrtbase_a-ucrtbase_compat.$(OBJEXT) \
 	stdio/lib64_libucrtbase_a-ucrt_fprintf.$(OBJEXT) \
 	stdio/lib64_libucrtbase_a-ucrt_fwprintf.$(OBJEXT) \
@@ -3166,6 +3171,7 @@ am__objects_98 = crt/lib64_libucrtbase_a-ucrtbase_compat.$(OBJEXT) \
 	stdio/lib64_libucrtbase_a-ucrt__snwprintf.$(OBJEXT) \
 	stdio/lib64_libucrtbase_a-ucrt_snprintf.$(OBJEXT) \
 	stdio/lib64_libucrtbase_a-ucrt_sprintf.$(OBJEXT) \
+	stdio/lib64_libucrtbase_a-ucrt__vscprintf.$(OBJEXT) \
 	stdio/lib64_libucrtbase_a-ucrt__vsnprintf.$(OBJEXT) \
 	stdio/lib64_libucrtbase_a-ucrt__vsnwprintf.$(OBJEXT) \
 	stdio/lib64_libucrtbase_a-ucrt_vfprintf.$(OBJEXT) \
@@ -4428,10 +4434,10 @@ libarm32_libucrt_extra_a_LIBADD =
 am__libarm32_libucrt_extra_a_SOURCES_DIST = crt/ucrtbase_compat.c \
 	stdio/ucrt_fprintf.c stdio/ucrt_fwprintf.c stdio/ucrt_printf.c \
 	stdio/ucrt__snwprintf.c stdio/ucrt_snprintf.c \
-	stdio/ucrt_sprintf.c stdio/ucrt__vsnprintf.c \
-	stdio/ucrt__vsnwprintf.c stdio/ucrt_vfprintf.c \
-	stdio/ucrt_vprintf.c stdio/ucrt_vsnprintf.c \
-	stdio/ucrt_vsprintf.c
+	stdio/ucrt_sprintf.c stdio/ucrt__vscprintf.c \
+	stdio/ucrt__vsnprintf.c stdio/ucrt__vsnwprintf.c \
+	stdio/ucrt_vfprintf.c stdio/ucrt_vprintf.c \
+	stdio/ucrt_vsnprintf.c stdio/ucrt_vsprintf.c
 am__objects_142 =  \
 	crt/libarm32_libucrt_extra_a-ucrtbase_compat.$(OBJEXT) \
 	stdio/libarm32_libucrt_extra_a-ucrt_fprintf.$(OBJEXT) \
@@ -4440,6 +4446,7 @@ am__objects_142 =  \
 	stdio/libarm32_libucrt_extra_a-ucrt__snwprintf.$(OBJEXT) \
 	stdio/libarm32_libucrt_extra_a-ucrt_snprintf.$(OBJEXT) \
 	stdio/libarm32_libucrt_extra_a-ucrt_sprintf.$(OBJEXT) \
+	stdio/libarm32_libucrt_extra_a-ucrt__vscprintf.$(OBJEXT) \
 	stdio/libarm32_libucrt_extra_a-ucrt__vsnprintf.$(OBJEXT) \
 	stdio/libarm32_libucrt_extra_a-ucrt__vsnwprintf.$(OBJEXT) \
 	stdio/libarm32_libucrt_extra_a-ucrt_vfprintf.$(OBJEXT) \
@@ -4454,10 +4461,11 @@ libarm32_libucrtbase_a_LIBADD =
 am__libarm32_libucrtbase_a_SOURCES_DIST = crt/ucrtbase_compat.c \
 	stdio/ucrt_fprintf.c stdio/ucrt_fwprintf.c stdio/ucrt_printf.c \
 	stdio/ucrt__snwprintf.c stdio/ucrt_snprintf.c \
-	stdio/ucrt_sprintf.c stdio/ucrt__vsnprintf.c \
-	stdio/ucrt__vsnwprintf.c stdio/ucrt_vfprintf.c \
-	stdio/ucrt_vprintf.c stdio/ucrt_vsnprintf.c \
-	stdio/ucrt_vsprintf.c lib-common/ucrtbase.def.in
+	stdio/ucrt_sprintf.c stdio/ucrt__vscprintf.c \
+	stdio/ucrt__vsnprintf.c stdio/ucrt__vsnwprintf.c \
+	stdio/ucrt_vfprintf.c stdio/ucrt_vprintf.c \
+	stdio/ucrt_vsnprintf.c stdio/ucrt_vsprintf.c \
+	lib-common/ucrtbase.def.in
 am__objects_143 =  \
 	crt/libarm32_libucrtbase_a-ucrtbase_compat.$(OBJEXT) \
 	stdio/libarm32_libucrtbase_a-ucrt_fprintf.$(OBJEXT) \
@@ -4466,6 +4474,7 @@ am__objects_143 =  \
 	stdio/libarm32_libucrtbase_a-ucrt__snwprintf.$(OBJEXT) \
 	stdio/libarm32_libucrtbase_a-ucrt_snprintf.$(OBJEXT) \
 	stdio/libarm32_libucrtbase_a-ucrt_sprintf.$(OBJEXT) \
+	stdio/libarm32_libucrtbase_a-ucrt__vscprintf.$(OBJEXT) \
 	stdio/libarm32_libucrtbase_a-ucrt__vsnprintf.$(OBJEXT) \
 	stdio/libarm32_libucrtbase_a-ucrt__vsnwprintf.$(OBJEXT) \
 	stdio/libarm32_libucrtbase_a-ucrt_vfprintf.$(OBJEXT) \
@@ -5574,10 +5583,10 @@ libarm64_libucrt_extra_a_LIBADD =
 am__libarm64_libucrt_extra_a_SOURCES_DIST = crt/ucrtbase_compat.c \
 	stdio/ucrt_fprintf.c stdio/ucrt_fwprintf.c stdio/ucrt_printf.c \
 	stdio/ucrt__snwprintf.c stdio/ucrt_snprintf.c \
-	stdio/ucrt_sprintf.c stdio/ucrt__vsnprintf.c \
-	stdio/ucrt__vsnwprintf.c stdio/ucrt_vfprintf.c \
-	stdio/ucrt_vprintf.c stdio/ucrt_vsnprintf.c \
-	stdio/ucrt_vsprintf.c
+	stdio/ucrt_sprintf.c stdio/ucrt__vscprintf.c \
+	stdio/ucrt__vsnprintf.c stdio/ucrt__vsnwprintf.c \
+	stdio/ucrt_vfprintf.c stdio/ucrt_vprintf.c \
+	stdio/ucrt_vsnprintf.c stdio/ucrt_vsprintf.c
 am__objects_180 =  \
 	crt/libarm64_libucrt_extra_a-ucrtbase_compat.$(OBJEXT) \
 	stdio/libarm64_libucrt_extra_a-ucrt_fprintf.$(OBJEXT) \
@@ -5586,6 +5595,7 @@ am__objects_180 =  \
 	stdio/libarm64_libucrt_extra_a-ucrt__snwprintf.$(OBJEXT) \
 	stdio/libarm64_libucrt_extra_a-ucrt_snprintf.$(OBJEXT) \
 	stdio/libarm64_libucrt_extra_a-ucrt_sprintf.$(OBJEXT) \
+	stdio/libarm64_libucrt_extra_a-ucrt__vscprintf.$(OBJEXT) \
 	stdio/libarm64_libucrt_extra_a-ucrt__vsnprintf.$(OBJEXT) \
 	stdio/libarm64_libucrt_extra_a-ucrt__vsnwprintf.$(OBJEXT) \
 	stdio/libarm64_libucrt_extra_a-ucrt_vfprintf.$(OBJEXT) \
@@ -5600,10 +5610,11 @@ libarm64_libucrtbase_a_LIBADD =
 am__libarm64_libucrtbase_a_SOURCES_DIST = crt/ucrtbase_compat.c \
 	stdio/ucrt_fprintf.c stdio/ucrt_fwprintf.c stdio/ucrt_printf.c \
 	stdio/ucrt__snwprintf.c stdio/ucrt_snprintf.c \
-	stdio/ucrt_sprintf.c stdio/ucrt__vsnprintf.c \
-	stdio/ucrt__vsnwprintf.c stdio/ucrt_vfprintf.c \
-	stdio/ucrt_vprintf.c stdio/ucrt_vsnprintf.c \
-	stdio/ucrt_vsprintf.c lib-common/ucrtbase.def.in
+	stdio/ucrt_sprintf.c stdio/ucrt__vscprintf.c \
+	stdio/ucrt__vsnprintf.c stdio/ucrt__vsnwprintf.c \
+	stdio/ucrt_vfprintf.c stdio/ucrt_vprintf.c \
+	stdio/ucrt_vsnprintf.c stdio/ucrt_vsprintf.c \
+	lib-common/ucrtbase.def.in
 am__objects_181 =  \
 	crt/libarm64_libucrtbase_a-ucrtbase_compat.$(OBJEXT) \
 	stdio/libarm64_libucrtbase_a-ucrt_fprintf.$(OBJEXT) \
@@ -5612,6 +5623,7 @@ am__objects_181 =  \
 	stdio/libarm64_libucrtbase_a-ucrt__snwprintf.$(OBJEXT) \
 	stdio/libarm64_libucrtbase_a-ucrt_snprintf.$(OBJEXT) \
 	stdio/libarm64_libucrtbase_a-ucrt_sprintf.$(OBJEXT) \
+	stdio/libarm64_libucrtbase_a-ucrt__vscprintf.$(OBJEXT) \
 	stdio/libarm64_libucrtbase_a-ucrt__vsnprintf.$(OBJEXT) \
 	stdio/libarm64_libucrtbase_a-ucrt__vsnwprintf.$(OBJEXT) \
 	stdio/libarm64_libucrtbase_a-ucrt_vfprintf.$(OBJEXT) \
@@ -9237,6 +9249,7 @@ am__depfiles_remade = ./$(DEPDIR)/lib32_libm_a-_libm_dummy.Po \
 	stdio/$(DEPDIR)/lib32_libmsvcrt_os_a-snprintf.Po \
 	stdio/$(DEPDIR)/lib32_libmsvcrt_os_a-vsnprintf.Po \
 	stdio/$(DEPDIR)/lib32_libucrt_extra_a-ucrt__snwprintf.Po \
+	stdio/$(DEPDIR)/lib32_libucrt_extra_a-ucrt__vscprintf.Po \
 	stdio/$(DEPDIR)/lib32_libucrt_extra_a-ucrt__vsnprintf.Po \
 	stdio/$(DEPDIR)/lib32_libucrt_extra_a-ucrt__vsnwprintf.Po \
 	stdio/$(DEPDIR)/lib32_libucrt_extra_a-ucrt_fprintf.Po \
@@ -9249,6 +9262,7 @@ am__depfiles_remade = ./$(DEPDIR)/lib32_libm_a-_libm_dummy.Po \
 	stdio/$(DEPDIR)/lib32_libucrt_extra_a-ucrt_vsnprintf.Po \
 	stdio/$(DEPDIR)/lib32_libucrt_extra_a-ucrt_vsprintf.Po \
 	stdio/$(DEPDIR)/lib32_libucrtbase_a-ucrt__snwprintf.Po \
+	stdio/$(DEPDIR)/lib32_libucrtbase_a-ucrt__vscprintf.Po \
 	stdio/$(DEPDIR)/lib32_libucrtbase_a-ucrt__vsnprintf.Po \
 	stdio/$(DEPDIR)/lib32_libucrtbase_a-ucrt__vsnwprintf.Po \
 	stdio/$(DEPDIR)/lib32_libucrtbase_a-ucrt_fprintf.Po \
@@ -9372,6 +9386,7 @@ am__depfiles_remade = ./$(DEPDIR)/lib32_libm_a-_libm_dummy.Po \
 	stdio/$(DEPDIR)/lib64_libmsvcrt_os_a-snprintf.Po \
 	stdio/$(DEPDIR)/lib64_libmsvcrt_os_a-vsnprintf.Po \
 	stdio/$(DEPDIR)/lib64_libucrt_extra_a-ucrt__snwprintf.Po \
+	stdio/$(DEPDIR)/lib64_libucrt_extra_a-ucrt__vscprintf.Po \
 	stdio/$(DEPDIR)/lib64_libucrt_extra_a-ucrt__vsnprintf.Po \
 	stdio/$(DEPDIR)/lib64_libucrt_extra_a-ucrt__vsnwprintf.Po \
 	stdio/$(DEPDIR)/lib64_libucrt_extra_a-ucrt_fprintf.Po \
@@ -9384,6 +9399,7 @@ am__depfiles_remade = ./$(DEPDIR)/lib32_libm_a-_libm_dummy.Po \
 	stdio/$(DEPDIR)/lib64_libucrt_extra_a-ucrt_vsnprintf.Po \
 	stdio/$(DEPDIR)/lib64_libucrt_extra_a-ucrt_vsprintf.Po \
 	stdio/$(DEPDIR)/lib64_libucrtbase_a-ucrt__snwprintf.Po \
+	stdio/$(DEPDIR)/lib64_libucrtbase_a-ucrt__vscprintf.Po \
 	stdio/$(DEPDIR)/lib64_libucrtbase_a-ucrt__vsnprintf.Po \
 	stdio/$(DEPDIR)/lib64_libucrtbase_a-ucrt__vsnwprintf.Po \
 	stdio/$(DEPDIR)/lib64_libucrtbase_a-ucrt_fprintf.Po \
@@ -9487,6 +9503,7 @@ am__depfiles_remade = ./$(DEPDIR)/lib32_libm_a-_libm_dummy.Po \
 	stdio/$(DEPDIR)/libarm32_libmsvcrt_os_a-snprintf.Po \
 	stdio/$(DEPDIR)/libarm32_libmsvcrt_os_a-vsnprintf.Po \
 	stdio/$(DEPDIR)/libarm32_libucrt_extra_a-ucrt__snwprintf.Po \
+	stdio/$(DEPDIR)/libarm32_libucrt_extra_a-ucrt__vscprintf.Po \
 	stdio/$(DEPDIR)/libarm32_libucrt_extra_a-ucrt__vsnprintf.Po \
 	stdio/$(DEPDIR)/libarm32_libucrt_extra_a-ucrt__vsnwprintf.Po \
 	stdio/$(DEPDIR)/libarm32_libucrt_extra_a-ucrt_fprintf.Po \
@@ -9499,6 +9516,7 @@ am__depfiles_remade = ./$(DEPDIR)/lib32_libm_a-_libm_dummy.Po \
 	stdio/$(DEPDIR)/libarm32_libucrt_extra_a-ucrt_vsnprintf.Po \
 	stdio/$(DEPDIR)/libarm32_libucrt_extra_a-ucrt_vsprintf.Po \
 	stdio/$(DEPDIR)/libarm32_libucrtbase_a-ucrt__snwprintf.Po \
+	stdio/$(DEPDIR)/libarm32_libucrtbase_a-ucrt__vscprintf.Po \
 	stdio/$(DEPDIR)/libarm32_libucrtbase_a-ucrt__vsnprintf.Po \
 	stdio/$(DEPDIR)/libarm32_libucrtbase_a-ucrt__vsnwprintf.Po \
 	stdio/$(DEPDIR)/libarm32_libucrtbase_a-ucrt_fprintf.Po \
@@ -9596,6 +9614,7 @@ am__depfiles_remade = ./$(DEPDIR)/lib32_libm_a-_libm_dummy.Po \
 	stdio/$(DEPDIR)/libarm64_libmsvcrt_os_a-snprintf.Po \
 	stdio/$(DEPDIR)/libarm64_libmsvcrt_os_a-vsnprintf.Po \
 	stdio/$(DEPDIR)/libarm64_libucrt_extra_a-ucrt__snwprintf.Po \
+	stdio/$(DEPDIR)/libarm64_libucrt_extra_a-ucrt__vscprintf.Po \
 	stdio/$(DEPDIR)/libarm64_libucrt_extra_a-ucrt__vsnprintf.Po \
 	stdio/$(DEPDIR)/libarm64_libucrt_extra_a-ucrt__vsnwprintf.Po \
 	stdio/$(DEPDIR)/libarm64_libucrt_extra_a-ucrt_fprintf.Po \
@@ -9608,6 +9627,7 @@ am__depfiles_remade = ./$(DEPDIR)/lib32_libm_a-_libm_dummy.Po \
 	stdio/$(DEPDIR)/libarm64_libucrt_extra_a-ucrt_vsnprintf.Po \
 	stdio/$(DEPDIR)/libarm64_libucrt_extra_a-ucrt_vsprintf.Po \
 	stdio/$(DEPDIR)/libarm64_libucrtbase_a-ucrt__snwprintf.Po \
+	stdio/$(DEPDIR)/libarm64_libucrtbase_a-ucrt__vscprintf.Po \
 	stdio/$(DEPDIR)/libarm64_libucrtbase_a-ucrt__vsnprintf.Po \
 	stdio/$(DEPDIR)/libarm64_libucrtbase_a-ucrt__vsnwprintf.Po \
 	stdio/$(DEPDIR)/libarm64_libucrtbase_a-ucrt_fprintf.Po \
@@ -10804,6 +10824,7 @@ src_ucrtbase = \
   stdio/ucrt__snwprintf.c \
   stdio/ucrt_snprintf.c \
   stdio/ucrt_sprintf.c \
+  stdio/ucrt__vscprintf.c \
   stdio/ucrt__vsnprintf.c \
   stdio/ucrt__vsnwprintf.c \
   stdio/ucrt_vfprintf.c \
@@ -15337,6 +15358,8 @@ stdio/lib32_libucrt_extra_a-ucrt_snprintf.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
 stdio/lib32_libucrt_extra_a-ucrt_sprintf.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
+stdio/lib32_libucrt_extra_a-ucrt__vscprintf.$(OBJEXT):  \
+	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
 stdio/lib32_libucrt_extra_a-ucrt__vsnprintf.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
 stdio/lib32_libucrt_extra_a-ucrt__vsnwprintf.$(OBJEXT):  \
@@ -15367,6 +15390,8 @@ stdio/lib32_libucrtbase_a-ucrt__snwprintf.$(OBJEXT):  \
 stdio/lib32_libucrtbase_a-ucrt_snprintf.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
 stdio/lib32_libucrtbase_a-ucrt_sprintf.$(OBJEXT):  \
+	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
+stdio/lib32_libucrtbase_a-ucrt__vscprintf.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
 stdio/lib32_libucrtbase_a-ucrt__vsnprintf.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
@@ -17374,6 +17399,8 @@ stdio/lib64_libucrt_extra_a-ucrt_snprintf.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
 stdio/lib64_libucrt_extra_a-ucrt_sprintf.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
+stdio/lib64_libucrt_extra_a-ucrt__vscprintf.$(OBJEXT):  \
+	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
 stdio/lib64_libucrt_extra_a-ucrt__vsnprintf.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
 stdio/lib64_libucrt_extra_a-ucrt__vsnwprintf.$(OBJEXT):  \
@@ -17404,6 +17431,8 @@ stdio/lib64_libucrtbase_a-ucrt__snwprintf.$(OBJEXT):  \
 stdio/lib64_libucrtbase_a-ucrt_snprintf.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
 stdio/lib64_libucrtbase_a-ucrt_sprintf.$(OBJEXT):  \
+	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
+stdio/lib64_libucrtbase_a-ucrt__vscprintf.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
 stdio/lib64_libucrtbase_a-ucrt__vsnprintf.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
@@ -19279,6 +19308,8 @@ stdio/libarm32_libucrt_extra_a-ucrt_snprintf.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
 stdio/libarm32_libucrt_extra_a-ucrt_sprintf.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
+stdio/libarm32_libucrt_extra_a-ucrt__vscprintf.$(OBJEXT):  \
+	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
 stdio/libarm32_libucrt_extra_a-ucrt__vsnprintf.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
 stdio/libarm32_libucrt_extra_a-ucrt__vsnwprintf.$(OBJEXT):  \
@@ -19309,6 +19340,8 @@ stdio/libarm32_libucrtbase_a-ucrt__snwprintf.$(OBJEXT):  \
 stdio/libarm32_libucrtbase_a-ucrt_snprintf.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
 stdio/libarm32_libucrtbase_a-ucrt_sprintf.$(OBJEXT):  \
+	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
+stdio/libarm32_libucrtbase_a-ucrt__vscprintf.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
 stdio/libarm32_libucrtbase_a-ucrt__vsnprintf.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
@@ -20902,6 +20935,8 @@ stdio/libarm64_libucrt_extra_a-ucrt_snprintf.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
 stdio/libarm64_libucrt_extra_a-ucrt_sprintf.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
+stdio/libarm64_libucrt_extra_a-ucrt__vscprintf.$(OBJEXT):  \
+	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
 stdio/libarm64_libucrt_extra_a-ucrt__vsnprintf.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
 stdio/libarm64_libucrt_extra_a-ucrt__vsnwprintf.$(OBJEXT):  \
@@ -20932,6 +20967,8 @@ stdio/libarm64_libucrtbase_a-ucrt__snwprintf.$(OBJEXT):  \
 stdio/libarm64_libucrtbase_a-ucrt_snprintf.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
 stdio/libarm64_libucrtbase_a-ucrt_sprintf.$(OBJEXT):  \
+	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
+stdio/libarm64_libucrtbase_a-ucrt__vscprintf.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
 stdio/libarm64_libucrtbase_a-ucrt__vsnprintf.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
@@ -24905,6 +24942,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib32_libmsvcrt_os_a-snprintf.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib32_libmsvcrt_os_a-vsnprintf.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib32_libucrt_extra_a-ucrt__snwprintf.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib32_libucrt_extra_a-ucrt__vscprintf.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib32_libucrt_extra_a-ucrt__vsnprintf.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib32_libucrt_extra_a-ucrt__vsnwprintf.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib32_libucrt_extra_a-ucrt_fprintf.Po@am__quote@ # am--include-marker
@@ -24917,6 +24955,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib32_libucrt_extra_a-ucrt_vsnprintf.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib32_libucrt_extra_a-ucrt_vsprintf.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib32_libucrtbase_a-ucrt__snwprintf.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib32_libucrtbase_a-ucrt__vscprintf.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib32_libucrtbase_a-ucrt__vsnprintf.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib32_libucrtbase_a-ucrt__vsnwprintf.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib32_libucrtbase_a-ucrt_fprintf.Po@am__quote@ # am--include-marker
@@ -25040,6 +25079,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib64_libmsvcrt_os_a-snprintf.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib64_libmsvcrt_os_a-vsnprintf.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib64_libucrt_extra_a-ucrt__snwprintf.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib64_libucrt_extra_a-ucrt__vscprintf.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib64_libucrt_extra_a-ucrt__vsnprintf.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib64_libucrt_extra_a-ucrt__vsnwprintf.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib64_libucrt_extra_a-ucrt_fprintf.Po@am__quote@ # am--include-marker
@@ -25052,6 +25092,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib64_libucrt_extra_a-ucrt_vsnprintf.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib64_libucrt_extra_a-ucrt_vsprintf.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib64_libucrtbase_a-ucrt__snwprintf.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib64_libucrtbase_a-ucrt__vscprintf.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib64_libucrtbase_a-ucrt__vsnprintf.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib64_libucrtbase_a-ucrt__vsnwprintf.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib64_libucrtbase_a-ucrt_fprintf.Po@am__quote@ # am--include-marker
@@ -25155,6 +25196,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/libarm32_libmsvcrt_os_a-snprintf.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/libarm32_libmsvcrt_os_a-vsnprintf.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/libarm32_libucrt_extra_a-ucrt__snwprintf.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/libarm32_libucrt_extra_a-ucrt__vscprintf.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/libarm32_libucrt_extra_a-ucrt__vsnprintf.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/libarm32_libucrt_extra_a-ucrt__vsnwprintf.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/libarm32_libucrt_extra_a-ucrt_fprintf.Po@am__quote@ # am--include-marker
@@ -25167,6 +25209,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/libarm32_libucrt_extra_a-ucrt_vsnprintf.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/libarm32_libucrt_extra_a-ucrt_vsprintf.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/libarm32_libucrtbase_a-ucrt__snwprintf.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/libarm32_libucrtbase_a-ucrt__vscprintf.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/libarm32_libucrtbase_a-ucrt__vsnprintf.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/libarm32_libucrtbase_a-ucrt__vsnwprintf.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/libarm32_libucrtbase_a-ucrt_fprintf.Po@am__quote@ # am--include-marker
@@ -25264,6 +25307,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/libarm64_libmsvcrt_os_a-snprintf.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/libarm64_libmsvcrt_os_a-vsnprintf.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/libarm64_libucrt_extra_a-ucrt__snwprintf.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/libarm64_libucrt_extra_a-ucrt__vscprintf.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/libarm64_libucrt_extra_a-ucrt__vsnprintf.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/libarm64_libucrt_extra_a-ucrt__vsnwprintf.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/libarm64_libucrt_extra_a-ucrt_fprintf.Po@am__quote@ # am--include-marker
@@ -25276,6 +25320,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/libarm64_libucrt_extra_a-ucrt_vsnprintf.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/libarm64_libucrt_extra_a-ucrt_vsprintf.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/libarm64_libucrtbase_a-ucrt__snwprintf.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/libarm64_libucrtbase_a-ucrt__vscprintf.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/libarm64_libucrtbase_a-ucrt__vsnprintf.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/libarm64_libucrtbase_a-ucrt__vsnwprintf.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/libarm64_libucrtbase_a-ucrt_fprintf.Po@am__quote@ # am--include-marker
@@ -37133,6 +37178,20 @@ stdio/lib32_libucrt_extra_a-ucrt_sprintf.obj: stdio/ucrt_sprintf.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libucrt_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/lib32_libucrt_extra_a-ucrt_sprintf.obj `if test -f 'stdio/ucrt_sprintf.c'; then $(CYGPATH_W) 'stdio/ucrt_sprintf.c'; else $(CYGPATH_W) '$(srcdir)/stdio/ucrt_sprintf.c'; fi`
 
+stdio/lib32_libucrt_extra_a-ucrt__vscprintf.o: stdio/ucrt__vscprintf.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libucrt_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/lib32_libucrt_extra_a-ucrt__vscprintf.o -MD -MP -MF stdio/$(DEPDIR)/lib32_libucrt_extra_a-ucrt__vscprintf.Tpo -c -o stdio/lib32_libucrt_extra_a-ucrt__vscprintf.o `test -f 'stdio/ucrt__vscprintf.c' || echo '$(srcdir)/'`stdio/ucrt__vscprintf.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) stdio/$(DEPDIR)/lib32_libucrt_extra_a-ucrt__vscprintf.Tpo stdio/$(DEPDIR)/lib32_libucrt_extra_a-ucrt__vscprintf.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/ucrt__vscprintf.c' object='stdio/lib32_libucrt_extra_a-ucrt__vscprintf.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libucrt_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/lib32_libucrt_extra_a-ucrt__vscprintf.o `test -f 'stdio/ucrt__vscprintf.c' || echo '$(srcdir)/'`stdio/ucrt__vscprintf.c
+
+stdio/lib32_libucrt_extra_a-ucrt__vscprintf.obj: stdio/ucrt__vscprintf.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libucrt_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/lib32_libucrt_extra_a-ucrt__vscprintf.obj -MD -MP -MF stdio/$(DEPDIR)/lib32_libucrt_extra_a-ucrt__vscprintf.Tpo -c -o stdio/lib32_libucrt_extra_a-ucrt__vscprintf.obj `if test -f 'stdio/ucrt__vscprintf.c'; then $(CYGPATH_W) 'stdio/ucrt__vscprintf.c'; else $(CYGPATH_W) '$(srcdir)/stdio/ucrt__vscprintf.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) stdio/$(DEPDIR)/lib32_libucrt_extra_a-ucrt__vscprintf.Tpo stdio/$(DEPDIR)/lib32_libucrt_extra_a-ucrt__vscprintf.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/ucrt__vscprintf.c' object='stdio/lib32_libucrt_extra_a-ucrt__vscprintf.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libucrt_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/lib32_libucrt_extra_a-ucrt__vscprintf.obj `if test -f 'stdio/ucrt__vscprintf.c'; then $(CYGPATH_W) 'stdio/ucrt__vscprintf.c'; else $(CYGPATH_W) '$(srcdir)/stdio/ucrt__vscprintf.c'; fi`
+
 stdio/lib32_libucrt_extra_a-ucrt__vsnprintf.o: stdio/ucrt__vsnprintf.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libucrt_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/lib32_libucrt_extra_a-ucrt__vsnprintf.o -MD -MP -MF stdio/$(DEPDIR)/lib32_libucrt_extra_a-ucrt__vsnprintf.Tpo -c -o stdio/lib32_libucrt_extra_a-ucrt__vsnprintf.o `test -f 'stdio/ucrt__vsnprintf.c' || echo '$(srcdir)/'`stdio/ucrt__vsnprintf.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) stdio/$(DEPDIR)/lib32_libucrt_extra_a-ucrt__vsnprintf.Tpo stdio/$(DEPDIR)/lib32_libucrt_extra_a-ucrt__vsnprintf.Po
@@ -37314,6 +37373,20 @@ stdio/lib32_libucrtbase_a-ucrt_sprintf.obj: stdio/ucrt_sprintf.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/ucrt_sprintf.c' object='stdio/lib32_libucrtbase_a-ucrt_sprintf.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libucrtbase_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/lib32_libucrtbase_a-ucrt_sprintf.obj `if test -f 'stdio/ucrt_sprintf.c'; then $(CYGPATH_W) 'stdio/ucrt_sprintf.c'; else $(CYGPATH_W) '$(srcdir)/stdio/ucrt_sprintf.c'; fi`
+
+stdio/lib32_libucrtbase_a-ucrt__vscprintf.o: stdio/ucrt__vscprintf.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libucrtbase_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/lib32_libucrtbase_a-ucrt__vscprintf.o -MD -MP -MF stdio/$(DEPDIR)/lib32_libucrtbase_a-ucrt__vscprintf.Tpo -c -o stdio/lib32_libucrtbase_a-ucrt__vscprintf.o `test -f 'stdio/ucrt__vscprintf.c' || echo '$(srcdir)/'`stdio/ucrt__vscprintf.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) stdio/$(DEPDIR)/lib32_libucrtbase_a-ucrt__vscprintf.Tpo stdio/$(DEPDIR)/lib32_libucrtbase_a-ucrt__vscprintf.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/ucrt__vscprintf.c' object='stdio/lib32_libucrtbase_a-ucrt__vscprintf.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libucrtbase_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/lib32_libucrtbase_a-ucrt__vscprintf.o `test -f 'stdio/ucrt__vscprintf.c' || echo '$(srcdir)/'`stdio/ucrt__vscprintf.c
+
+stdio/lib32_libucrtbase_a-ucrt__vscprintf.obj: stdio/ucrt__vscprintf.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libucrtbase_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/lib32_libucrtbase_a-ucrt__vscprintf.obj -MD -MP -MF stdio/$(DEPDIR)/lib32_libucrtbase_a-ucrt__vscprintf.Tpo -c -o stdio/lib32_libucrtbase_a-ucrt__vscprintf.obj `if test -f 'stdio/ucrt__vscprintf.c'; then $(CYGPATH_W) 'stdio/ucrt__vscprintf.c'; else $(CYGPATH_W) '$(srcdir)/stdio/ucrt__vscprintf.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) stdio/$(DEPDIR)/lib32_libucrtbase_a-ucrt__vscprintf.Tpo stdio/$(DEPDIR)/lib32_libucrtbase_a-ucrt__vscprintf.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/ucrt__vscprintf.c' object='stdio/lib32_libucrtbase_a-ucrt__vscprintf.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libucrtbase_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/lib32_libucrtbase_a-ucrt__vscprintf.obj `if test -f 'stdio/ucrt__vscprintf.c'; then $(CYGPATH_W) 'stdio/ucrt__vscprintf.c'; else $(CYGPATH_W) '$(srcdir)/stdio/ucrt__vscprintf.c'; fi`
 
 stdio/lib32_libucrtbase_a-ucrt__vsnprintf.o: stdio/ucrt__vsnprintf.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libucrtbase_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/lib32_libucrtbase_a-ucrt__vsnprintf.o -MD -MP -MF stdio/$(DEPDIR)/lib32_libucrtbase_a-ucrt__vsnprintf.Tpo -c -o stdio/lib32_libucrtbase_a-ucrt__vsnprintf.o `test -f 'stdio/ucrt__vsnprintf.c' || echo '$(srcdir)/'`stdio/ucrt__vsnprintf.c
@@ -48711,6 +48784,20 @@ stdio/lib64_libucrt_extra_a-ucrt_sprintf.obj: stdio/ucrt_sprintf.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libucrt_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/lib64_libucrt_extra_a-ucrt_sprintf.obj `if test -f 'stdio/ucrt_sprintf.c'; then $(CYGPATH_W) 'stdio/ucrt_sprintf.c'; else $(CYGPATH_W) '$(srcdir)/stdio/ucrt_sprintf.c'; fi`
 
+stdio/lib64_libucrt_extra_a-ucrt__vscprintf.o: stdio/ucrt__vscprintf.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libucrt_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/lib64_libucrt_extra_a-ucrt__vscprintf.o -MD -MP -MF stdio/$(DEPDIR)/lib64_libucrt_extra_a-ucrt__vscprintf.Tpo -c -o stdio/lib64_libucrt_extra_a-ucrt__vscprintf.o `test -f 'stdio/ucrt__vscprintf.c' || echo '$(srcdir)/'`stdio/ucrt__vscprintf.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) stdio/$(DEPDIR)/lib64_libucrt_extra_a-ucrt__vscprintf.Tpo stdio/$(DEPDIR)/lib64_libucrt_extra_a-ucrt__vscprintf.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/ucrt__vscprintf.c' object='stdio/lib64_libucrt_extra_a-ucrt__vscprintf.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libucrt_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/lib64_libucrt_extra_a-ucrt__vscprintf.o `test -f 'stdio/ucrt__vscprintf.c' || echo '$(srcdir)/'`stdio/ucrt__vscprintf.c
+
+stdio/lib64_libucrt_extra_a-ucrt__vscprintf.obj: stdio/ucrt__vscprintf.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libucrt_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/lib64_libucrt_extra_a-ucrt__vscprintf.obj -MD -MP -MF stdio/$(DEPDIR)/lib64_libucrt_extra_a-ucrt__vscprintf.Tpo -c -o stdio/lib64_libucrt_extra_a-ucrt__vscprintf.obj `if test -f 'stdio/ucrt__vscprintf.c'; then $(CYGPATH_W) 'stdio/ucrt__vscprintf.c'; else $(CYGPATH_W) '$(srcdir)/stdio/ucrt__vscprintf.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) stdio/$(DEPDIR)/lib64_libucrt_extra_a-ucrt__vscprintf.Tpo stdio/$(DEPDIR)/lib64_libucrt_extra_a-ucrt__vscprintf.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/ucrt__vscprintf.c' object='stdio/lib64_libucrt_extra_a-ucrt__vscprintf.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libucrt_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/lib64_libucrt_extra_a-ucrt__vscprintf.obj `if test -f 'stdio/ucrt__vscprintf.c'; then $(CYGPATH_W) 'stdio/ucrt__vscprintf.c'; else $(CYGPATH_W) '$(srcdir)/stdio/ucrt__vscprintf.c'; fi`
+
 stdio/lib64_libucrt_extra_a-ucrt__vsnprintf.o: stdio/ucrt__vsnprintf.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libucrt_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/lib64_libucrt_extra_a-ucrt__vsnprintf.o -MD -MP -MF stdio/$(DEPDIR)/lib64_libucrt_extra_a-ucrt__vsnprintf.Tpo -c -o stdio/lib64_libucrt_extra_a-ucrt__vsnprintf.o `test -f 'stdio/ucrt__vsnprintf.c' || echo '$(srcdir)/'`stdio/ucrt__vsnprintf.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) stdio/$(DEPDIR)/lib64_libucrt_extra_a-ucrt__vsnprintf.Tpo stdio/$(DEPDIR)/lib64_libucrt_extra_a-ucrt__vsnprintf.Po
@@ -48892,6 +48979,20 @@ stdio/lib64_libucrtbase_a-ucrt_sprintf.obj: stdio/ucrt_sprintf.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/ucrt_sprintf.c' object='stdio/lib64_libucrtbase_a-ucrt_sprintf.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libucrtbase_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/lib64_libucrtbase_a-ucrt_sprintf.obj `if test -f 'stdio/ucrt_sprintf.c'; then $(CYGPATH_W) 'stdio/ucrt_sprintf.c'; else $(CYGPATH_W) '$(srcdir)/stdio/ucrt_sprintf.c'; fi`
+
+stdio/lib64_libucrtbase_a-ucrt__vscprintf.o: stdio/ucrt__vscprintf.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libucrtbase_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/lib64_libucrtbase_a-ucrt__vscprintf.o -MD -MP -MF stdio/$(DEPDIR)/lib64_libucrtbase_a-ucrt__vscprintf.Tpo -c -o stdio/lib64_libucrtbase_a-ucrt__vscprintf.o `test -f 'stdio/ucrt__vscprintf.c' || echo '$(srcdir)/'`stdio/ucrt__vscprintf.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) stdio/$(DEPDIR)/lib64_libucrtbase_a-ucrt__vscprintf.Tpo stdio/$(DEPDIR)/lib64_libucrtbase_a-ucrt__vscprintf.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/ucrt__vscprintf.c' object='stdio/lib64_libucrtbase_a-ucrt__vscprintf.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libucrtbase_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/lib64_libucrtbase_a-ucrt__vscprintf.o `test -f 'stdio/ucrt__vscprintf.c' || echo '$(srcdir)/'`stdio/ucrt__vscprintf.c
+
+stdio/lib64_libucrtbase_a-ucrt__vscprintf.obj: stdio/ucrt__vscprintf.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libucrtbase_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/lib64_libucrtbase_a-ucrt__vscprintf.obj -MD -MP -MF stdio/$(DEPDIR)/lib64_libucrtbase_a-ucrt__vscprintf.Tpo -c -o stdio/lib64_libucrtbase_a-ucrt__vscprintf.obj `if test -f 'stdio/ucrt__vscprintf.c'; then $(CYGPATH_W) 'stdio/ucrt__vscprintf.c'; else $(CYGPATH_W) '$(srcdir)/stdio/ucrt__vscprintf.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) stdio/$(DEPDIR)/lib64_libucrtbase_a-ucrt__vscprintf.Tpo stdio/$(DEPDIR)/lib64_libucrtbase_a-ucrt__vscprintf.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/ucrt__vscprintf.c' object='stdio/lib64_libucrtbase_a-ucrt__vscprintf.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libucrtbase_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/lib64_libucrtbase_a-ucrt__vscprintf.obj `if test -f 'stdio/ucrt__vscprintf.c'; then $(CYGPATH_W) 'stdio/ucrt__vscprintf.c'; else $(CYGPATH_W) '$(srcdir)/stdio/ucrt__vscprintf.c'; fi`
 
 stdio/lib64_libucrtbase_a-ucrt__vsnprintf.o: stdio/ucrt__vsnprintf.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libucrtbase_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/lib64_libucrtbase_a-ucrt__vsnprintf.o -MD -MP -MF stdio/$(DEPDIR)/lib64_libucrtbase_a-ucrt__vsnprintf.Tpo -c -o stdio/lib64_libucrtbase_a-ucrt__vsnprintf.o `test -f 'stdio/ucrt__vsnprintf.c' || echo '$(srcdir)/'`stdio/ucrt__vsnprintf.c
@@ -59393,6 +59494,20 @@ stdio/libarm32_libucrt_extra_a-ucrt_sprintf.obj: stdio/ucrt_sprintf.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libucrt_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/libarm32_libucrt_extra_a-ucrt_sprintf.obj `if test -f 'stdio/ucrt_sprintf.c'; then $(CYGPATH_W) 'stdio/ucrt_sprintf.c'; else $(CYGPATH_W) '$(srcdir)/stdio/ucrt_sprintf.c'; fi`
 
+stdio/libarm32_libucrt_extra_a-ucrt__vscprintf.o: stdio/ucrt__vscprintf.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libucrt_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/libarm32_libucrt_extra_a-ucrt__vscprintf.o -MD -MP -MF stdio/$(DEPDIR)/libarm32_libucrt_extra_a-ucrt__vscprintf.Tpo -c -o stdio/libarm32_libucrt_extra_a-ucrt__vscprintf.o `test -f 'stdio/ucrt__vscprintf.c' || echo '$(srcdir)/'`stdio/ucrt__vscprintf.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) stdio/$(DEPDIR)/libarm32_libucrt_extra_a-ucrt__vscprintf.Tpo stdio/$(DEPDIR)/libarm32_libucrt_extra_a-ucrt__vscprintf.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/ucrt__vscprintf.c' object='stdio/libarm32_libucrt_extra_a-ucrt__vscprintf.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libucrt_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/libarm32_libucrt_extra_a-ucrt__vscprintf.o `test -f 'stdio/ucrt__vscprintf.c' || echo '$(srcdir)/'`stdio/ucrt__vscprintf.c
+
+stdio/libarm32_libucrt_extra_a-ucrt__vscprintf.obj: stdio/ucrt__vscprintf.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libucrt_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/libarm32_libucrt_extra_a-ucrt__vscprintf.obj -MD -MP -MF stdio/$(DEPDIR)/libarm32_libucrt_extra_a-ucrt__vscprintf.Tpo -c -o stdio/libarm32_libucrt_extra_a-ucrt__vscprintf.obj `if test -f 'stdio/ucrt__vscprintf.c'; then $(CYGPATH_W) 'stdio/ucrt__vscprintf.c'; else $(CYGPATH_W) '$(srcdir)/stdio/ucrt__vscprintf.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) stdio/$(DEPDIR)/libarm32_libucrt_extra_a-ucrt__vscprintf.Tpo stdio/$(DEPDIR)/libarm32_libucrt_extra_a-ucrt__vscprintf.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/ucrt__vscprintf.c' object='stdio/libarm32_libucrt_extra_a-ucrt__vscprintf.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libucrt_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/libarm32_libucrt_extra_a-ucrt__vscprintf.obj `if test -f 'stdio/ucrt__vscprintf.c'; then $(CYGPATH_W) 'stdio/ucrt__vscprintf.c'; else $(CYGPATH_W) '$(srcdir)/stdio/ucrt__vscprintf.c'; fi`
+
 stdio/libarm32_libucrt_extra_a-ucrt__vsnprintf.o: stdio/ucrt__vsnprintf.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libucrt_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/libarm32_libucrt_extra_a-ucrt__vsnprintf.o -MD -MP -MF stdio/$(DEPDIR)/libarm32_libucrt_extra_a-ucrt__vsnprintf.Tpo -c -o stdio/libarm32_libucrt_extra_a-ucrt__vsnprintf.o `test -f 'stdio/ucrt__vsnprintf.c' || echo '$(srcdir)/'`stdio/ucrt__vsnprintf.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) stdio/$(DEPDIR)/libarm32_libucrt_extra_a-ucrt__vsnprintf.Tpo stdio/$(DEPDIR)/libarm32_libucrt_extra_a-ucrt__vsnprintf.Po
@@ -59574,6 +59689,20 @@ stdio/libarm32_libucrtbase_a-ucrt_sprintf.obj: stdio/ucrt_sprintf.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/ucrt_sprintf.c' object='stdio/libarm32_libucrtbase_a-ucrt_sprintf.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libucrtbase_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/libarm32_libucrtbase_a-ucrt_sprintf.obj `if test -f 'stdio/ucrt_sprintf.c'; then $(CYGPATH_W) 'stdio/ucrt_sprintf.c'; else $(CYGPATH_W) '$(srcdir)/stdio/ucrt_sprintf.c'; fi`
+
+stdio/libarm32_libucrtbase_a-ucrt__vscprintf.o: stdio/ucrt__vscprintf.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libucrtbase_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/libarm32_libucrtbase_a-ucrt__vscprintf.o -MD -MP -MF stdio/$(DEPDIR)/libarm32_libucrtbase_a-ucrt__vscprintf.Tpo -c -o stdio/libarm32_libucrtbase_a-ucrt__vscprintf.o `test -f 'stdio/ucrt__vscprintf.c' || echo '$(srcdir)/'`stdio/ucrt__vscprintf.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) stdio/$(DEPDIR)/libarm32_libucrtbase_a-ucrt__vscprintf.Tpo stdio/$(DEPDIR)/libarm32_libucrtbase_a-ucrt__vscprintf.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/ucrt__vscprintf.c' object='stdio/libarm32_libucrtbase_a-ucrt__vscprintf.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libucrtbase_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/libarm32_libucrtbase_a-ucrt__vscprintf.o `test -f 'stdio/ucrt__vscprintf.c' || echo '$(srcdir)/'`stdio/ucrt__vscprintf.c
+
+stdio/libarm32_libucrtbase_a-ucrt__vscprintf.obj: stdio/ucrt__vscprintf.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libucrtbase_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/libarm32_libucrtbase_a-ucrt__vscprintf.obj -MD -MP -MF stdio/$(DEPDIR)/libarm32_libucrtbase_a-ucrt__vscprintf.Tpo -c -o stdio/libarm32_libucrtbase_a-ucrt__vscprintf.obj `if test -f 'stdio/ucrt__vscprintf.c'; then $(CYGPATH_W) 'stdio/ucrt__vscprintf.c'; else $(CYGPATH_W) '$(srcdir)/stdio/ucrt__vscprintf.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) stdio/$(DEPDIR)/libarm32_libucrtbase_a-ucrt__vscprintf.Tpo stdio/$(DEPDIR)/libarm32_libucrtbase_a-ucrt__vscprintf.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/ucrt__vscprintf.c' object='stdio/libarm32_libucrtbase_a-ucrt__vscprintf.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libucrtbase_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/libarm32_libucrtbase_a-ucrt__vscprintf.obj `if test -f 'stdio/ucrt__vscprintf.c'; then $(CYGPATH_W) 'stdio/ucrt__vscprintf.c'; else $(CYGPATH_W) '$(srcdir)/stdio/ucrt__vscprintf.c'; fi`
 
 stdio/libarm32_libucrtbase_a-ucrt__vsnprintf.o: stdio/ucrt__vsnprintf.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libucrtbase_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/libarm32_libucrtbase_a-ucrt__vsnprintf.o -MD -MP -MF stdio/$(DEPDIR)/libarm32_libucrtbase_a-ucrt__vsnprintf.Tpo -c -o stdio/libarm32_libucrtbase_a-ucrt__vsnprintf.o `test -f 'stdio/ucrt__vsnprintf.c' || echo '$(srcdir)/'`stdio/ucrt__vsnprintf.c
@@ -68633,6 +68762,20 @@ stdio/libarm64_libucrt_extra_a-ucrt_sprintf.obj: stdio/ucrt_sprintf.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libucrt_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/libarm64_libucrt_extra_a-ucrt_sprintf.obj `if test -f 'stdio/ucrt_sprintf.c'; then $(CYGPATH_W) 'stdio/ucrt_sprintf.c'; else $(CYGPATH_W) '$(srcdir)/stdio/ucrt_sprintf.c'; fi`
 
+stdio/libarm64_libucrt_extra_a-ucrt__vscprintf.o: stdio/ucrt__vscprintf.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libucrt_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/libarm64_libucrt_extra_a-ucrt__vscprintf.o -MD -MP -MF stdio/$(DEPDIR)/libarm64_libucrt_extra_a-ucrt__vscprintf.Tpo -c -o stdio/libarm64_libucrt_extra_a-ucrt__vscprintf.o `test -f 'stdio/ucrt__vscprintf.c' || echo '$(srcdir)/'`stdio/ucrt__vscprintf.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) stdio/$(DEPDIR)/libarm64_libucrt_extra_a-ucrt__vscprintf.Tpo stdio/$(DEPDIR)/libarm64_libucrt_extra_a-ucrt__vscprintf.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/ucrt__vscprintf.c' object='stdio/libarm64_libucrt_extra_a-ucrt__vscprintf.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libucrt_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/libarm64_libucrt_extra_a-ucrt__vscprintf.o `test -f 'stdio/ucrt__vscprintf.c' || echo '$(srcdir)/'`stdio/ucrt__vscprintf.c
+
+stdio/libarm64_libucrt_extra_a-ucrt__vscprintf.obj: stdio/ucrt__vscprintf.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libucrt_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/libarm64_libucrt_extra_a-ucrt__vscprintf.obj -MD -MP -MF stdio/$(DEPDIR)/libarm64_libucrt_extra_a-ucrt__vscprintf.Tpo -c -o stdio/libarm64_libucrt_extra_a-ucrt__vscprintf.obj `if test -f 'stdio/ucrt__vscprintf.c'; then $(CYGPATH_W) 'stdio/ucrt__vscprintf.c'; else $(CYGPATH_W) '$(srcdir)/stdio/ucrt__vscprintf.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) stdio/$(DEPDIR)/libarm64_libucrt_extra_a-ucrt__vscprintf.Tpo stdio/$(DEPDIR)/libarm64_libucrt_extra_a-ucrt__vscprintf.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/ucrt__vscprintf.c' object='stdio/libarm64_libucrt_extra_a-ucrt__vscprintf.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libucrt_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/libarm64_libucrt_extra_a-ucrt__vscprintf.obj `if test -f 'stdio/ucrt__vscprintf.c'; then $(CYGPATH_W) 'stdio/ucrt__vscprintf.c'; else $(CYGPATH_W) '$(srcdir)/stdio/ucrt__vscprintf.c'; fi`
+
 stdio/libarm64_libucrt_extra_a-ucrt__vsnprintf.o: stdio/ucrt__vsnprintf.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libucrt_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/libarm64_libucrt_extra_a-ucrt__vsnprintf.o -MD -MP -MF stdio/$(DEPDIR)/libarm64_libucrt_extra_a-ucrt__vsnprintf.Tpo -c -o stdio/libarm64_libucrt_extra_a-ucrt__vsnprintf.o `test -f 'stdio/ucrt__vsnprintf.c' || echo '$(srcdir)/'`stdio/ucrt__vsnprintf.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) stdio/$(DEPDIR)/libarm64_libucrt_extra_a-ucrt__vsnprintf.Tpo stdio/$(DEPDIR)/libarm64_libucrt_extra_a-ucrt__vsnprintf.Po
@@ -68814,6 +68957,20 @@ stdio/libarm64_libucrtbase_a-ucrt_sprintf.obj: stdio/ucrt_sprintf.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/ucrt_sprintf.c' object='stdio/libarm64_libucrtbase_a-ucrt_sprintf.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libucrtbase_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/libarm64_libucrtbase_a-ucrt_sprintf.obj `if test -f 'stdio/ucrt_sprintf.c'; then $(CYGPATH_W) 'stdio/ucrt_sprintf.c'; else $(CYGPATH_W) '$(srcdir)/stdio/ucrt_sprintf.c'; fi`
+
+stdio/libarm64_libucrtbase_a-ucrt__vscprintf.o: stdio/ucrt__vscprintf.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libucrtbase_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/libarm64_libucrtbase_a-ucrt__vscprintf.o -MD -MP -MF stdio/$(DEPDIR)/libarm64_libucrtbase_a-ucrt__vscprintf.Tpo -c -o stdio/libarm64_libucrtbase_a-ucrt__vscprintf.o `test -f 'stdio/ucrt__vscprintf.c' || echo '$(srcdir)/'`stdio/ucrt__vscprintf.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) stdio/$(DEPDIR)/libarm64_libucrtbase_a-ucrt__vscprintf.Tpo stdio/$(DEPDIR)/libarm64_libucrtbase_a-ucrt__vscprintf.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/ucrt__vscprintf.c' object='stdio/libarm64_libucrtbase_a-ucrt__vscprintf.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libucrtbase_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/libarm64_libucrtbase_a-ucrt__vscprintf.o `test -f 'stdio/ucrt__vscprintf.c' || echo '$(srcdir)/'`stdio/ucrt__vscprintf.c
+
+stdio/libarm64_libucrtbase_a-ucrt__vscprintf.obj: stdio/ucrt__vscprintf.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libucrtbase_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/libarm64_libucrtbase_a-ucrt__vscprintf.obj -MD -MP -MF stdio/$(DEPDIR)/libarm64_libucrtbase_a-ucrt__vscprintf.Tpo -c -o stdio/libarm64_libucrtbase_a-ucrt__vscprintf.obj `if test -f 'stdio/ucrt__vscprintf.c'; then $(CYGPATH_W) 'stdio/ucrt__vscprintf.c'; else $(CYGPATH_W) '$(srcdir)/stdio/ucrt__vscprintf.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) stdio/$(DEPDIR)/libarm64_libucrtbase_a-ucrt__vscprintf.Tpo stdio/$(DEPDIR)/libarm64_libucrtbase_a-ucrt__vscprintf.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/ucrt__vscprintf.c' object='stdio/libarm64_libucrtbase_a-ucrt__vscprintf.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libucrtbase_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/libarm64_libucrtbase_a-ucrt__vscprintf.obj `if test -f 'stdio/ucrt__vscprintf.c'; then $(CYGPATH_W) 'stdio/ucrt__vscprintf.c'; else $(CYGPATH_W) '$(srcdir)/stdio/ucrt__vscprintf.c'; fi`
 
 stdio/libarm64_libucrtbase_a-ucrt__vsnprintf.o: stdio/ucrt__vsnprintf.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libucrtbase_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/libarm64_libucrtbase_a-ucrt__vsnprintf.o -MD -MP -MF stdio/$(DEPDIR)/libarm64_libucrtbase_a-ucrt__vsnprintf.Tpo -c -o stdio/libarm64_libucrtbase_a-ucrt__vsnprintf.o `test -f 'stdio/ucrt__vsnprintf.c' || echo '$(srcdir)/'`stdio/ucrt__vsnprintf.c
@@ -76517,6 +76674,7 @@ distclean: distclean-am
 	-rm -f stdio/$(DEPDIR)/lib32_libmsvcrt_os_a-snprintf.Po
 	-rm -f stdio/$(DEPDIR)/lib32_libmsvcrt_os_a-vsnprintf.Po
 	-rm -f stdio/$(DEPDIR)/lib32_libucrt_extra_a-ucrt__snwprintf.Po
+	-rm -f stdio/$(DEPDIR)/lib32_libucrt_extra_a-ucrt__vscprintf.Po
 	-rm -f stdio/$(DEPDIR)/lib32_libucrt_extra_a-ucrt__vsnprintf.Po
 	-rm -f stdio/$(DEPDIR)/lib32_libucrt_extra_a-ucrt__vsnwprintf.Po
 	-rm -f stdio/$(DEPDIR)/lib32_libucrt_extra_a-ucrt_fprintf.Po
@@ -76529,6 +76687,7 @@ distclean: distclean-am
 	-rm -f stdio/$(DEPDIR)/lib32_libucrt_extra_a-ucrt_vsnprintf.Po
 	-rm -f stdio/$(DEPDIR)/lib32_libucrt_extra_a-ucrt_vsprintf.Po
 	-rm -f stdio/$(DEPDIR)/lib32_libucrtbase_a-ucrt__snwprintf.Po
+	-rm -f stdio/$(DEPDIR)/lib32_libucrtbase_a-ucrt__vscprintf.Po
 	-rm -f stdio/$(DEPDIR)/lib32_libucrtbase_a-ucrt__vsnprintf.Po
 	-rm -f stdio/$(DEPDIR)/lib32_libucrtbase_a-ucrt__vsnwprintf.Po
 	-rm -f stdio/$(DEPDIR)/lib32_libucrtbase_a-ucrt_fprintf.Po
@@ -76652,6 +76811,7 @@ distclean: distclean-am
 	-rm -f stdio/$(DEPDIR)/lib64_libmsvcrt_os_a-snprintf.Po
 	-rm -f stdio/$(DEPDIR)/lib64_libmsvcrt_os_a-vsnprintf.Po
 	-rm -f stdio/$(DEPDIR)/lib64_libucrt_extra_a-ucrt__snwprintf.Po
+	-rm -f stdio/$(DEPDIR)/lib64_libucrt_extra_a-ucrt__vscprintf.Po
 	-rm -f stdio/$(DEPDIR)/lib64_libucrt_extra_a-ucrt__vsnprintf.Po
 	-rm -f stdio/$(DEPDIR)/lib64_libucrt_extra_a-ucrt__vsnwprintf.Po
 	-rm -f stdio/$(DEPDIR)/lib64_libucrt_extra_a-ucrt_fprintf.Po
@@ -76664,6 +76824,7 @@ distclean: distclean-am
 	-rm -f stdio/$(DEPDIR)/lib64_libucrt_extra_a-ucrt_vsnprintf.Po
 	-rm -f stdio/$(DEPDIR)/lib64_libucrt_extra_a-ucrt_vsprintf.Po
 	-rm -f stdio/$(DEPDIR)/lib64_libucrtbase_a-ucrt__snwprintf.Po
+	-rm -f stdio/$(DEPDIR)/lib64_libucrtbase_a-ucrt__vscprintf.Po
 	-rm -f stdio/$(DEPDIR)/lib64_libucrtbase_a-ucrt__vsnprintf.Po
 	-rm -f stdio/$(DEPDIR)/lib64_libucrtbase_a-ucrt__vsnwprintf.Po
 	-rm -f stdio/$(DEPDIR)/lib64_libucrtbase_a-ucrt_fprintf.Po
@@ -76767,6 +76928,7 @@ distclean: distclean-am
 	-rm -f stdio/$(DEPDIR)/libarm32_libmsvcrt_os_a-snprintf.Po
 	-rm -f stdio/$(DEPDIR)/libarm32_libmsvcrt_os_a-vsnprintf.Po
 	-rm -f stdio/$(DEPDIR)/libarm32_libucrt_extra_a-ucrt__snwprintf.Po
+	-rm -f stdio/$(DEPDIR)/libarm32_libucrt_extra_a-ucrt__vscprintf.Po
 	-rm -f stdio/$(DEPDIR)/libarm32_libucrt_extra_a-ucrt__vsnprintf.Po
 	-rm -f stdio/$(DEPDIR)/libarm32_libucrt_extra_a-ucrt__vsnwprintf.Po
 	-rm -f stdio/$(DEPDIR)/libarm32_libucrt_extra_a-ucrt_fprintf.Po
@@ -76779,6 +76941,7 @@ distclean: distclean-am
 	-rm -f stdio/$(DEPDIR)/libarm32_libucrt_extra_a-ucrt_vsnprintf.Po
 	-rm -f stdio/$(DEPDIR)/libarm32_libucrt_extra_a-ucrt_vsprintf.Po
 	-rm -f stdio/$(DEPDIR)/libarm32_libucrtbase_a-ucrt__snwprintf.Po
+	-rm -f stdio/$(DEPDIR)/libarm32_libucrtbase_a-ucrt__vscprintf.Po
 	-rm -f stdio/$(DEPDIR)/libarm32_libucrtbase_a-ucrt__vsnprintf.Po
 	-rm -f stdio/$(DEPDIR)/libarm32_libucrtbase_a-ucrt__vsnwprintf.Po
 	-rm -f stdio/$(DEPDIR)/libarm32_libucrtbase_a-ucrt_fprintf.Po
@@ -76876,6 +77039,7 @@ distclean: distclean-am
 	-rm -f stdio/$(DEPDIR)/libarm64_libmsvcrt_os_a-snprintf.Po
 	-rm -f stdio/$(DEPDIR)/libarm64_libmsvcrt_os_a-vsnprintf.Po
 	-rm -f stdio/$(DEPDIR)/libarm64_libucrt_extra_a-ucrt__snwprintf.Po
+	-rm -f stdio/$(DEPDIR)/libarm64_libucrt_extra_a-ucrt__vscprintf.Po
 	-rm -f stdio/$(DEPDIR)/libarm64_libucrt_extra_a-ucrt__vsnprintf.Po
 	-rm -f stdio/$(DEPDIR)/libarm64_libucrt_extra_a-ucrt__vsnwprintf.Po
 	-rm -f stdio/$(DEPDIR)/libarm64_libucrt_extra_a-ucrt_fprintf.Po
@@ -76888,6 +77052,7 @@ distclean: distclean-am
 	-rm -f stdio/$(DEPDIR)/libarm64_libucrt_extra_a-ucrt_vsnprintf.Po
 	-rm -f stdio/$(DEPDIR)/libarm64_libucrt_extra_a-ucrt_vsprintf.Po
 	-rm -f stdio/$(DEPDIR)/libarm64_libucrtbase_a-ucrt__snwprintf.Po
+	-rm -f stdio/$(DEPDIR)/libarm64_libucrtbase_a-ucrt__vscprintf.Po
 	-rm -f stdio/$(DEPDIR)/libarm64_libucrtbase_a-ucrt__vsnprintf.Po
 	-rm -f stdio/$(DEPDIR)/libarm64_libucrtbase_a-ucrt__vsnwprintf.Po
 	-rm -f stdio/$(DEPDIR)/libarm64_libucrtbase_a-ucrt_fprintf.Po
@@ -79953,6 +80118,7 @@ maintainer-clean: maintainer-clean-am
 	-rm -f stdio/$(DEPDIR)/lib32_libmsvcrt_os_a-snprintf.Po
 	-rm -f stdio/$(DEPDIR)/lib32_libmsvcrt_os_a-vsnprintf.Po
 	-rm -f stdio/$(DEPDIR)/lib32_libucrt_extra_a-ucrt__snwprintf.Po
+	-rm -f stdio/$(DEPDIR)/lib32_libucrt_extra_a-ucrt__vscprintf.Po
 	-rm -f stdio/$(DEPDIR)/lib32_libucrt_extra_a-ucrt__vsnprintf.Po
 	-rm -f stdio/$(DEPDIR)/lib32_libucrt_extra_a-ucrt__vsnwprintf.Po
 	-rm -f stdio/$(DEPDIR)/lib32_libucrt_extra_a-ucrt_fprintf.Po
@@ -79965,6 +80131,7 @@ maintainer-clean: maintainer-clean-am
 	-rm -f stdio/$(DEPDIR)/lib32_libucrt_extra_a-ucrt_vsnprintf.Po
 	-rm -f stdio/$(DEPDIR)/lib32_libucrt_extra_a-ucrt_vsprintf.Po
 	-rm -f stdio/$(DEPDIR)/lib32_libucrtbase_a-ucrt__snwprintf.Po
+	-rm -f stdio/$(DEPDIR)/lib32_libucrtbase_a-ucrt__vscprintf.Po
 	-rm -f stdio/$(DEPDIR)/lib32_libucrtbase_a-ucrt__vsnprintf.Po
 	-rm -f stdio/$(DEPDIR)/lib32_libucrtbase_a-ucrt__vsnwprintf.Po
 	-rm -f stdio/$(DEPDIR)/lib32_libucrtbase_a-ucrt_fprintf.Po
@@ -80088,6 +80255,7 @@ maintainer-clean: maintainer-clean-am
 	-rm -f stdio/$(DEPDIR)/lib64_libmsvcrt_os_a-snprintf.Po
 	-rm -f stdio/$(DEPDIR)/lib64_libmsvcrt_os_a-vsnprintf.Po
 	-rm -f stdio/$(DEPDIR)/lib64_libucrt_extra_a-ucrt__snwprintf.Po
+	-rm -f stdio/$(DEPDIR)/lib64_libucrt_extra_a-ucrt__vscprintf.Po
 	-rm -f stdio/$(DEPDIR)/lib64_libucrt_extra_a-ucrt__vsnprintf.Po
 	-rm -f stdio/$(DEPDIR)/lib64_libucrt_extra_a-ucrt__vsnwprintf.Po
 	-rm -f stdio/$(DEPDIR)/lib64_libucrt_extra_a-ucrt_fprintf.Po
@@ -80100,6 +80268,7 @@ maintainer-clean: maintainer-clean-am
 	-rm -f stdio/$(DEPDIR)/lib64_libucrt_extra_a-ucrt_vsnprintf.Po
 	-rm -f stdio/$(DEPDIR)/lib64_libucrt_extra_a-ucrt_vsprintf.Po
 	-rm -f stdio/$(DEPDIR)/lib64_libucrtbase_a-ucrt__snwprintf.Po
+	-rm -f stdio/$(DEPDIR)/lib64_libucrtbase_a-ucrt__vscprintf.Po
 	-rm -f stdio/$(DEPDIR)/lib64_libucrtbase_a-ucrt__vsnprintf.Po
 	-rm -f stdio/$(DEPDIR)/lib64_libucrtbase_a-ucrt__vsnwprintf.Po
 	-rm -f stdio/$(DEPDIR)/lib64_libucrtbase_a-ucrt_fprintf.Po
@@ -80203,6 +80372,7 @@ maintainer-clean: maintainer-clean-am
 	-rm -f stdio/$(DEPDIR)/libarm32_libmsvcrt_os_a-snprintf.Po
 	-rm -f stdio/$(DEPDIR)/libarm32_libmsvcrt_os_a-vsnprintf.Po
 	-rm -f stdio/$(DEPDIR)/libarm32_libucrt_extra_a-ucrt__snwprintf.Po
+	-rm -f stdio/$(DEPDIR)/libarm32_libucrt_extra_a-ucrt__vscprintf.Po
 	-rm -f stdio/$(DEPDIR)/libarm32_libucrt_extra_a-ucrt__vsnprintf.Po
 	-rm -f stdio/$(DEPDIR)/libarm32_libucrt_extra_a-ucrt__vsnwprintf.Po
 	-rm -f stdio/$(DEPDIR)/libarm32_libucrt_extra_a-ucrt_fprintf.Po
@@ -80215,6 +80385,7 @@ maintainer-clean: maintainer-clean-am
 	-rm -f stdio/$(DEPDIR)/libarm32_libucrt_extra_a-ucrt_vsnprintf.Po
 	-rm -f stdio/$(DEPDIR)/libarm32_libucrt_extra_a-ucrt_vsprintf.Po
 	-rm -f stdio/$(DEPDIR)/libarm32_libucrtbase_a-ucrt__snwprintf.Po
+	-rm -f stdio/$(DEPDIR)/libarm32_libucrtbase_a-ucrt__vscprintf.Po
 	-rm -f stdio/$(DEPDIR)/libarm32_libucrtbase_a-ucrt__vsnprintf.Po
 	-rm -f stdio/$(DEPDIR)/libarm32_libucrtbase_a-ucrt__vsnwprintf.Po
 	-rm -f stdio/$(DEPDIR)/libarm32_libucrtbase_a-ucrt_fprintf.Po
@@ -80312,6 +80483,7 @@ maintainer-clean: maintainer-clean-am
 	-rm -f stdio/$(DEPDIR)/libarm64_libmsvcrt_os_a-snprintf.Po
 	-rm -f stdio/$(DEPDIR)/libarm64_libmsvcrt_os_a-vsnprintf.Po
 	-rm -f stdio/$(DEPDIR)/libarm64_libucrt_extra_a-ucrt__snwprintf.Po
+	-rm -f stdio/$(DEPDIR)/libarm64_libucrt_extra_a-ucrt__vscprintf.Po
 	-rm -f stdio/$(DEPDIR)/libarm64_libucrt_extra_a-ucrt__vsnprintf.Po
 	-rm -f stdio/$(DEPDIR)/libarm64_libucrt_extra_a-ucrt__vsnwprintf.Po
 	-rm -f stdio/$(DEPDIR)/libarm64_libucrt_extra_a-ucrt_fprintf.Po
@@ -80324,6 +80496,7 @@ maintainer-clean: maintainer-clean-am
 	-rm -f stdio/$(DEPDIR)/libarm64_libucrt_extra_a-ucrt_vsnprintf.Po
 	-rm -f stdio/$(DEPDIR)/libarm64_libucrt_extra_a-ucrt_vsprintf.Po
 	-rm -f stdio/$(DEPDIR)/libarm64_libucrtbase_a-ucrt__snwprintf.Po
+	-rm -f stdio/$(DEPDIR)/libarm64_libucrtbase_a-ucrt__vscprintf.Po
 	-rm -f stdio/$(DEPDIR)/libarm64_libucrtbase_a-ucrt__vsnprintf.Po
 	-rm -f stdio/$(DEPDIR)/libarm64_libucrtbase_a-ucrt__vsnwprintf.Po
 	-rm -f stdio/$(DEPDIR)/libarm64_libucrtbase_a-ucrt_fprintf.Po
