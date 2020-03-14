@@ -12803,21 +12803,21 @@ src_intrincsarm64 =
 @LIBARM64_TRUE@	libarm64/libbrowcli.a libarm64/libbrowser.a \
 @LIBARM64_TRUE@	libarm64/libbthci.a libarm64/libcabinet.a \
 @LIBARM64_TRUE@	libarm64/libcabview.a libarm64/libcfgbkend.a \
-@LIBARM64_TRUE@	libarm64/libclbcatq.a libarm64/libclb.a \
-@LIBARM64_TRUE@	libarm64/libcliconfg.a libarm64/libclusapi.a \
-@LIBARM64_TRUE@	libarm64/libcnvfat.a libarm64/libcolbact.a \
-@LIBARM64_TRUE@	libarm64/libcomctl32.a libarm64/libcomdlg32.a \
-@LIBARM64_TRUE@	libarm64/libcompstui.a libarm64/libcomsnap.a \
-@LIBARM64_TRUE@	libarm64/libcomuid.a libarm64/libconnect.a \
-@LIBARM64_TRUE@	libarm64/libconsole.a libarm64/libcredui.a \
-@LIBARM64_TRUE@	libarm64/libcrypt32.a libarm64/libcryptdlg.a \
-@LIBARM64_TRUE@	libarm64/libcryptdll.a libarm64/libcryptext.a \
-@LIBARM64_TRUE@	libarm64/libcryptnet.a libarm64/libcryptsp.a \
-@LIBARM64_TRUE@	libarm64/libcryptsvc.a libarm64/libcryptui.a \
-@LIBARM64_TRUE@	libarm64/libcryptxml.a libarm64/libcscapi.a \
-@LIBARM64_TRUE@	libarm64/libd2d1.a libarm64/libd3d9.a \
-@LIBARM64_TRUE@	libarm64/libd3d10.a libarm64/libd3d11.a \
-@LIBARM64_TRUE@	libarm64/libd3d12.a \
+@LIBARM64_TRUE@	libarm64/libcfgmgr32.a libarm64/libclbcatq.a \
+@LIBARM64_TRUE@	libarm64/libclb.a libarm64/libcliconfg.a \
+@LIBARM64_TRUE@	libarm64/libclusapi.a libarm64/libcnvfat.a \
+@LIBARM64_TRUE@	libarm64/libcolbact.a libarm64/libcomctl32.a \
+@LIBARM64_TRUE@	libarm64/libcomdlg32.a libarm64/libcompstui.a \
+@LIBARM64_TRUE@	libarm64/libcomsnap.a libarm64/libcomuid.a \
+@LIBARM64_TRUE@	libarm64/libconnect.a libarm64/libconsole.a \
+@LIBARM64_TRUE@	libarm64/libcredui.a libarm64/libcrypt32.a \
+@LIBARM64_TRUE@	libarm64/libcryptdlg.a libarm64/libcryptdll.a \
+@LIBARM64_TRUE@	libarm64/libcryptext.a libarm64/libcryptnet.a \
+@LIBARM64_TRUE@	libarm64/libcryptsp.a libarm64/libcryptsvc.a \
+@LIBARM64_TRUE@	libarm64/libcryptui.a libarm64/libcryptxml.a \
+@LIBARM64_TRUE@	libarm64/libcscapi.a libarm64/libd2d1.a \
+@LIBARM64_TRUE@	libarm64/libd3d9.a libarm64/libd3d10.a \
+@LIBARM64_TRUE@	libarm64/libd3d11.a libarm64/libd3d12.a \
 @LIBARM64_TRUE@	libarm64/libd3dcompiler_47.a \
 @LIBARM64_TRUE@	libarm64/libdavclnt.a libarm64/libdavhlpr.a \
 @LIBARM64_TRUE@	libarm64/libdbgeng.a libarm64/libdbghelp.a \
