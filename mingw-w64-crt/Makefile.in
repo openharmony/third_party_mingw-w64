@@ -2950,8 +2950,8 @@ am__lib64_libmsvcr80_a_SOURCES_DIST = misc/mbrtowc.c misc/mbsinit.c \
 	misc/uchar_mbrtoc16.c misc/uchar_mbrtoc32.c misc/wcrtomb.c \
 	stdio/acrt_iob_func.c stdio/snprintf.c stdio/snprintf_alias.c \
 	stdio/vsnprintf.c stdio/vsnprintf_alias.c math/frexp.c \
-	misc/__p___argv.c misc/__p__acmdln.c misc/__p__fmode.c \
-	misc/__p__wcmdln.c lib64/msvcr80.def.in
+	misc/__p___argv.c misc/__p__acmdln.c misc/__p__commode.c \
+	misc/__p__fmode.c misc/__p__wcmdln.c lib64/msvcr80.def.in
 am__objects_83 = misc/lib64_libmsvcr80_a-mbrtowc.$(OBJEXT) \
 	misc/lib64_libmsvcr80_a-mbsinit.$(OBJEXT) \
 	misc/lib64_libmsvcr80_a-onexit_table.$(OBJEXT) \
@@ -2970,6 +2970,7 @@ am__objects_83 = misc/lib64_libmsvcr80_a-mbrtowc.$(OBJEXT) \
 am__objects_84 = $(am__objects_83) \
 	misc/lib64_libmsvcr80_a-__p___argv.$(OBJEXT) \
 	misc/lib64_libmsvcr80_a-__p__acmdln.$(OBJEXT) \
+	misc/lib64_libmsvcr80_a-__p__commode.$(OBJEXT) \
 	misc/lib64_libmsvcr80_a-__p__fmode.$(OBJEXT) \
 	misc/lib64_libmsvcr80_a-__p__wcmdln.$(OBJEXT)
 @LIB64_TRUE@@W32API_FALSE@am_lib64_libmsvcr80_a_OBJECTS =  \
@@ -3053,9 +3054,10 @@ am__lib64_libmsvcrt_os_a_SOURCES_DIST = misc/mbrtowc.c misc/mbsinit.c \
 	secapi/memmove_s.c secapi/rand_s.c secapi/sprintf_s.c \
 	secapi/strerror_s.c secapi/vsprintf_s.c secapi/wmemcpy_s.c \
 	secapi/wmemmove_s.c stdio/fseeki64.c stdio/mingw_lock.c \
-	misc/__p___argv.c misc/__p__acmdln.c misc/__p__fmode.c \
-	misc/__p__wcmdln.c misc/_create_locale.c misc/_free_locale.c \
-	misc/_get_current_locale.c lib-common/msvcrt.def.in
+	misc/__p___argv.c misc/__p__acmdln.c misc/__p__commode.c \
+	misc/__p__fmode.c misc/__p__wcmdln.c misc/_create_locale.c \
+	misc/_free_locale.c misc/_get_current_locale.c \
+	lib-common/msvcrt.def.in
 am__objects_87 = misc/lib64_libmsvcrt_os_a-mbrtowc.$(OBJEXT) \
 	misc/lib64_libmsvcrt_os_a-mbsinit.$(OBJEXT) \
 	misc/lib64_libmsvcrt_os_a-onexit_table.$(OBJEXT) \
@@ -3124,6 +3126,7 @@ am__objects_88 = $(am__objects_87) \
 am__objects_89 = $(am__objects_88) \
 	misc/lib64_libmsvcrt_os_a-__p___argv.$(OBJEXT) \
 	misc/lib64_libmsvcrt_os_a-__p__acmdln.$(OBJEXT) \
+	misc/lib64_libmsvcrt_os_a-__p__commode.$(OBJEXT) \
 	misc/lib64_libmsvcrt_os_a-__p__fmode.$(OBJEXT) \
 	misc/lib64_libmsvcrt_os_a-__p__wcmdln.$(OBJEXT) \
 	misc/lib64_libmsvcrt_os_a-_create_locale.$(OBJEXT) \
@@ -4305,27 +4308,28 @@ am__libarm32_libmsvcrt_os_a_SOURCES_DIST = misc/mbrtowc.c \
 	secapi/memmove_s.c secapi/rand_s.c secapi/sprintf_s.c \
 	secapi/strerror_s.c secapi/vsprintf_s.c secapi/wmemcpy_s.c \
 	secapi/wmemmove_s.c stdio/fseeki64.c stdio/mingw_lock.c \
-	misc/__p___argv.c misc/__p__acmdln.c misc/__p__fmode.c \
-	misc/__p__wcmdln.c misc/_getpid.c stdio/gets.c math/arm/exp2.c \
-	math/arm/nearbyint.S math/arm/nearbyintf.S \
-	math/arm/nearbyintl.S math/arm/s_trunc.c math/arm/s_truncf.c \
-	math/arm-common/acosh.c math/arm-common/acoshf.c \
-	math/arm-common/acoshl.c math/arm-common/asinh.c \
-	math/arm-common/asinhf.c math/arm-common/asinhl.c \
-	math/arm-common/atanh.c math/arm-common/atanhf.c \
-	math/arm-common/atanhl.c math/arm-common/copysignl.c \
-	math/arm-common/expm1.c math/arm-common/expm1f.c \
-	math/arm-common/expm1l.c math/arm-common/ilogb.c \
-	math/arm-common/ilogbf.c math/arm-common/ilogbl.c \
-	math/arm-common/log1p.c math/arm-common/log1pf.c \
-	math/arm-common/log1pl.c math/arm-common/log2.c \
-	math/arm-common/logb.c math/arm-common/logbf.c \
-	math/arm-common/logbl.c math/arm-common/pow.c \
-	math/arm-common/powf.c math/arm-common/powl.c \
-	math/arm-common/remainder.c math/arm-common/remainderf.c \
-	math/arm-common/remainderl.c math/arm-common/remquol.c \
-	math/arm-common/s_remquo.c math/arm-common/s_remquof.c \
-	math/arm-common/scalbn.c lib-common/msvcrt.def.in
+	misc/__p___argv.c misc/__p__acmdln.c misc/__p__commode.c \
+	misc/__p__fmode.c misc/__p__wcmdln.c misc/_getpid.c \
+	stdio/gets.c math/arm/exp2.c math/arm/nearbyint.S \
+	math/arm/nearbyintf.S math/arm/nearbyintl.S math/arm/s_trunc.c \
+	math/arm/s_truncf.c math/arm-common/acosh.c \
+	math/arm-common/acoshf.c math/arm-common/acoshl.c \
+	math/arm-common/asinh.c math/arm-common/asinhf.c \
+	math/arm-common/asinhl.c math/arm-common/atanh.c \
+	math/arm-common/atanhf.c math/arm-common/atanhl.c \
+	math/arm-common/copysignl.c math/arm-common/expm1.c \
+	math/arm-common/expm1f.c math/arm-common/expm1l.c \
+	math/arm-common/ilogb.c math/arm-common/ilogbf.c \
+	math/arm-common/ilogbl.c math/arm-common/log1p.c \
+	math/arm-common/log1pf.c math/arm-common/log1pl.c \
+	math/arm-common/log2.c math/arm-common/logb.c \
+	math/arm-common/logbf.c math/arm-common/logbl.c \
+	math/arm-common/pow.c math/arm-common/powf.c \
+	math/arm-common/powl.c math/arm-common/remainder.c \
+	math/arm-common/remainderf.c math/arm-common/remainderl.c \
+	math/arm-common/remquol.c math/arm-common/s_remquo.c \
+	math/arm-common/s_remquof.c math/arm-common/scalbn.c \
+	lib-common/msvcrt.def.in
 am__objects_131 = misc/libarm32_libmsvcrt_os_a-mbrtowc.$(OBJEXT) \
 	misc/libarm32_libmsvcrt_os_a-mbsinit.$(OBJEXT) \
 	misc/libarm32_libmsvcrt_os_a-onexit_table.$(OBJEXT) \
@@ -4433,6 +4437,7 @@ am__objects_132 = $(am__objects_131) \
 am__objects_134 = $(am__objects_132) \
 	misc/libarm32_libmsvcrt_os_a-__p___argv.$(OBJEXT) \
 	misc/libarm32_libmsvcrt_os_a-__p__acmdln.$(OBJEXT) \
+	misc/libarm32_libmsvcrt_os_a-__p__commode.$(OBJEXT) \
 	misc/libarm32_libmsvcrt_os_a-__p__fmode.$(OBJEXT) \
 	misc/libarm32_libmsvcrt_os_a-__p__wcmdln.$(OBJEXT) \
 	misc/libarm32_libmsvcrt_os_a-_getpid.$(OBJEXT) \
@@ -5475,9 +5480,9 @@ am__libarm64_libmsvcrt_os_a_SOURCES_DIST = misc/mbrtowc.c \
 	math/arm-common/scalbn.c math/arm64/exp2.S math/arm64/exp2f.S \
 	math/arm64/nearbyint.S math/arm64/nearbyintf.S \
 	math/arm64/nearbyintl.S math/arm64/trunc.S math/arm64/truncf.S \
-	misc/__p___argv.c misc/__p__acmdln.c misc/__p__fmode.c \
-	misc/__p__wcmdln.c misc/_getpid.c stdio/gets.c \
-	lib-common/msvcrt.def.in
+	misc/__p___argv.c misc/__p__acmdln.c misc/__p__commode.c \
+	misc/__p__fmode.c misc/__p__wcmdln.c misc/_getpid.c \
+	stdio/gets.c lib-common/msvcrt.def.in
 am__objects_170 = misc/libarm64_libmsvcrt_os_a-mbrtowc.$(OBJEXT) \
 	misc/libarm64_libmsvcrt_os_a-mbsinit.$(OBJEXT) \
 	misc/libarm64_libmsvcrt_os_a-onexit_table.$(OBJEXT) \
@@ -5586,6 +5591,7 @@ am__objects_172 = $(am__objects_171) \
 	math/arm64/libarm64_libmsvcrt_os_a-truncf.$(OBJEXT) \
 	misc/libarm64_libmsvcrt_os_a-__p___argv.$(OBJEXT) \
 	misc/libarm64_libmsvcrt_os_a-__p__acmdln.$(OBJEXT) \
+	misc/libarm64_libmsvcrt_os_a-__p__commode.$(OBJEXT) \
 	misc/libarm64_libmsvcrt_os_a-__p__fmode.$(OBJEXT) \
 	misc/libarm64_libmsvcrt_os_a-__p__wcmdln.$(OBJEXT) \
 	misc/libarm64_libmsvcrt_os_a-_getpid.$(OBJEXT) \
@@ -8775,6 +8781,7 @@ am__depfiles_remade = ./$(DEPDIR)/lib32_libm_a-_libm_dummy.Po \
 	misc/$(DEPDIR)/lib64_libmsvcr120d_a-wcrtomb.Po \
 	misc/$(DEPDIR)/lib64_libmsvcr80_a-__p___argv.Po \
 	misc/$(DEPDIR)/lib64_libmsvcr80_a-__p__acmdln.Po \
+	misc/$(DEPDIR)/lib64_libmsvcr80_a-__p__commode.Po \
 	misc/$(DEPDIR)/lib64_libmsvcr80_a-__p__fmode.Po \
 	misc/$(DEPDIR)/lib64_libmsvcr80_a-__p__wcmdln.Po \
 	misc/$(DEPDIR)/lib64_libmsvcr80_a-mbrtowc.Po \
@@ -8806,6 +8813,7 @@ am__depfiles_remade = ./$(DEPDIR)/lib32_libm_a-_libm_dummy.Po \
 	misc/$(DEPDIR)/lib64_libmsvcr90d_a-wcrtomb.Po \
 	misc/$(DEPDIR)/lib64_libmsvcrt_os_a-__p___argv.Po \
 	misc/$(DEPDIR)/lib64_libmsvcrt_os_a-__p__acmdln.Po \
+	misc/$(DEPDIR)/lib64_libmsvcrt_os_a-__p__commode.Po \
 	misc/$(DEPDIR)/lib64_libmsvcrt_os_a-__p__fmode.Po \
 	misc/$(DEPDIR)/lib64_libmsvcrt_os_a-__p__wcmdln.Po \
 	misc/$(DEPDIR)/lib64_libmsvcrt_os_a-_configthreadlocale.Po \
@@ -8918,6 +8926,7 @@ am__depfiles_remade = ./$(DEPDIR)/lib32_libm_a-_libm_dummy.Po \
 	misc/$(DEPDIR)/libarm32_libmsvcr120_app_a-wcrtomb.Po \
 	misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-__p___argv.Po \
 	misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-__p__acmdln.Po \
+	misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-__p__commode.Po \
 	misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-__p__fmode.Po \
 	misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-__p__wcmdln.Po \
 	misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-_configthreadlocale.Po \
@@ -9008,6 +9017,7 @@ am__depfiles_remade = ./$(DEPDIR)/lib32_libm_a-_libm_dummy.Po \
 	misc/$(DEPDIR)/libarm64_libmingwex_a-wmemset.Po \
 	misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-__p___argv.Po \
 	misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-__p__acmdln.Po \
+	misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-__p__commode.Po \
 	misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-__p__fmode.Po \
 	misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-__p__wcmdln.Po \
 	misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-_configthreadlocale.Po \
@@ -10963,6 +10973,7 @@ src_msvcrt64 = \
   $(src_msvcrt) \
   misc/__p___argv.c \
   misc/__p__acmdln.c \
+  misc/__p__commode.c \
   misc/__p__fmode.c \
   misc/__p__wcmdln.c \
   misc/_create_locale.c \
@@ -10970,8 +10981,8 @@ src_msvcrt64 = \
   misc/_get_current_locale.c
 
 src_msvcrtarm32 = $(src_msvcrt) misc/__p___argv.c misc/__p__acmdln.c \
-	misc/__p__fmode.c misc/__p__wcmdln.c misc/_getpid.c \
-	stdio/gets.c $(am__append_2)
+	misc/__p__commode.c misc/__p__fmode.c misc/__p__wcmdln.c \
+	misc/_getpid.c stdio/gets.c $(am__append_2)
 src_msvcrtarm64 = \
   $(src_msvcrt) \
   math/arm-common/acosh.c \
@@ -11016,6 +11027,7 @@ src_msvcrtarm64 = \
   math/arm64/truncf.S \
   misc/__p___argv.c \
   misc/__p__acmdln.c \
+  misc/__p__commode.c \
   misc/__p__fmode.c \
   misc/__p__wcmdln.c \
   misc/_getpid.c \
@@ -11025,6 +11037,7 @@ src_msvcr80_64 = \
   $(src_msvcrt_common) \
   misc/__p___argv.c \
   misc/__p__acmdln.c \
+  misc/__p__commode.c \
   misc/__p__fmode.c \
   misc/__p__wcmdln.c
 
@@ -17291,6 +17304,8 @@ misc/lib64_libmsvcr80_a-__p___argv.$(OBJEXT): misc/$(am__dirstamp) \
 	misc/$(DEPDIR)/$(am__dirstamp)
 misc/lib64_libmsvcr80_a-__p__acmdln.$(OBJEXT): misc/$(am__dirstamp) \
 	misc/$(DEPDIR)/$(am__dirstamp)
+misc/lib64_libmsvcr80_a-__p__commode.$(OBJEXT): misc/$(am__dirstamp) \
+	misc/$(DEPDIR)/$(am__dirstamp)
 misc/lib64_libmsvcr80_a-__p__fmode.$(OBJEXT): misc/$(am__dirstamp) \
 	misc/$(DEPDIR)/$(am__dirstamp)
 misc/lib64_libmsvcr80_a-__p__wcmdln.$(OBJEXT): misc/$(am__dirstamp) \
@@ -17502,6 +17517,8 @@ misc/lib64_libmsvcrt_os_a-__p___argv.$(OBJEXT): misc/$(am__dirstamp) \
 	misc/$(DEPDIR)/$(am__dirstamp)
 misc/lib64_libmsvcrt_os_a-__p__acmdln.$(OBJEXT): misc/$(am__dirstamp) \
 	misc/$(DEPDIR)/$(am__dirstamp)
+misc/lib64_libmsvcrt_os_a-__p__commode.$(OBJEXT):  \
+	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 misc/lib64_libmsvcrt_os_a-__p__fmode.$(OBJEXT): misc/$(am__dirstamp) \
 	misc/$(DEPDIR)/$(am__dirstamp)
 misc/lib64_libmsvcrt_os_a-__p__wcmdln.$(OBJEXT): misc/$(am__dirstamp) \
@@ -19321,6 +19338,8 @@ misc/libarm32_libmsvcrt_os_a-__p___argv.$(OBJEXT):  \
 	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 misc/libarm32_libmsvcrt_os_a-__p__acmdln.$(OBJEXT):  \
 	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
+misc/libarm32_libmsvcrt_os_a-__p__commode.$(OBJEXT):  \
+	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 misc/libarm32_libmsvcrt_os_a-__p__fmode.$(OBJEXT):  \
 	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 misc/libarm32_libmsvcrt_os_a-__p__wcmdln.$(OBJEXT):  \
@@ -21062,6 +21081,8 @@ math/arm64/libarm64_libmsvcrt_os_a-truncf.$(OBJEXT):  \
 misc/libarm64_libmsvcrt_os_a-__p___argv.$(OBJEXT):  \
 	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 misc/libarm64_libmsvcrt_os_a-__p__acmdln.$(OBJEXT):  \
+	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
+misc/libarm64_libmsvcrt_os_a-__p__commode.$(OBJEXT):  \
 	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 misc/libarm64_libmsvcrt_os_a-__p__fmode.$(OBJEXT):  \
 	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
@@ -24615,6 +24636,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmsvcr120d_a-wcrtomb.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmsvcr80_a-__p___argv.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmsvcr80_a-__p__acmdln.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmsvcr80_a-__p__commode.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmsvcr80_a-__p__fmode.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmsvcr80_a-__p__wcmdln.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmsvcr80_a-mbrtowc.Po@am__quote@ # am--include-marker
@@ -24646,6 +24668,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmsvcr90d_a-wcrtomb.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmsvcrt_os_a-__p___argv.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmsvcrt_os_a-__p__acmdln.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmsvcrt_os_a-__p__commode.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmsvcrt_os_a-__p__fmode.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmsvcrt_os_a-__p__wcmdln.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmsvcrt_os_a-_configthreadlocale.Po@am__quote@ # am--include-marker
@@ -24758,6 +24781,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm32_libmsvcr120_app_a-wcrtomb.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-__p___argv.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-__p__acmdln.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-__p__commode.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-__p__fmode.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-__p__wcmdln.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-_configthreadlocale.Po@am__quote@ # am--include-marker
@@ -24848,6 +24872,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm64_libmingwex_a-wmemset.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-__p___argv.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-__p__acmdln.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-__p__commode.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-__p__fmode.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-__p__wcmdln.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-_configthreadlocale.Po@am__quote@ # am--include-marker
@@ -47954,6 +47979,20 @@ misc/lib64_libmsvcr80_a-__p__acmdln.obj: misc/__p__acmdln.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr80_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib64_libmsvcr80_a-__p__acmdln.obj `if test -f 'misc/__p__acmdln.c'; then $(CYGPATH_W) 'misc/__p__acmdln.c'; else $(CYGPATH_W) '$(srcdir)/misc/__p__acmdln.c'; fi`
 
+misc/lib64_libmsvcr80_a-__p__commode.o: misc/__p__commode.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr80_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib64_libmsvcr80_a-__p__commode.o -MD -MP -MF misc/$(DEPDIR)/lib64_libmsvcr80_a-__p__commode.Tpo -c -o misc/lib64_libmsvcr80_a-__p__commode.o `test -f 'misc/__p__commode.c' || echo '$(srcdir)/'`misc/__p__commode.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib64_libmsvcr80_a-__p__commode.Tpo misc/$(DEPDIR)/lib64_libmsvcr80_a-__p__commode.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/__p__commode.c' object='misc/lib64_libmsvcr80_a-__p__commode.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr80_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib64_libmsvcr80_a-__p__commode.o `test -f 'misc/__p__commode.c' || echo '$(srcdir)/'`misc/__p__commode.c
+
+misc/lib64_libmsvcr80_a-__p__commode.obj: misc/__p__commode.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr80_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib64_libmsvcr80_a-__p__commode.obj -MD -MP -MF misc/$(DEPDIR)/lib64_libmsvcr80_a-__p__commode.Tpo -c -o misc/lib64_libmsvcr80_a-__p__commode.obj `if test -f 'misc/__p__commode.c'; then $(CYGPATH_W) 'misc/__p__commode.c'; else $(CYGPATH_W) '$(srcdir)/misc/__p__commode.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib64_libmsvcr80_a-__p__commode.Tpo misc/$(DEPDIR)/lib64_libmsvcr80_a-__p__commode.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/__p__commode.c' object='misc/lib64_libmsvcr80_a-__p__commode.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr80_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib64_libmsvcr80_a-__p__commode.obj `if test -f 'misc/__p__commode.c'; then $(CYGPATH_W) 'misc/__p__commode.c'; else $(CYGPATH_W) '$(srcdir)/misc/__p__commode.c'; fi`
+
 misc/lib64_libmsvcr80_a-__p__fmode.o: misc/__p__fmode.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcr80_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib64_libmsvcr80_a-__p__fmode.o -MD -MP -MF misc/$(DEPDIR)/lib64_libmsvcr80_a-__p__fmode.Tpo -c -o misc/lib64_libmsvcr80_a-__p__fmode.o `test -f 'misc/__p__fmode.c' || echo '$(srcdir)/'`misc/__p__fmode.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib64_libmsvcr80_a-__p__fmode.Tpo misc/$(DEPDIR)/lib64_libmsvcr80_a-__p__fmode.Po
@@ -49325,6 +49364,20 @@ misc/lib64_libmsvcrt_os_a-__p__acmdln.obj: misc/__p__acmdln.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/__p__acmdln.c' object='misc/lib64_libmsvcrt_os_a-__p__acmdln.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib64_libmsvcrt_os_a-__p__acmdln.obj `if test -f 'misc/__p__acmdln.c'; then $(CYGPATH_W) 'misc/__p__acmdln.c'; else $(CYGPATH_W) '$(srcdir)/misc/__p__acmdln.c'; fi`
+
+misc/lib64_libmsvcrt_os_a-__p__commode.o: misc/__p__commode.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib64_libmsvcrt_os_a-__p__commode.o -MD -MP -MF misc/$(DEPDIR)/lib64_libmsvcrt_os_a-__p__commode.Tpo -c -o misc/lib64_libmsvcrt_os_a-__p__commode.o `test -f 'misc/__p__commode.c' || echo '$(srcdir)/'`misc/__p__commode.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib64_libmsvcrt_os_a-__p__commode.Tpo misc/$(DEPDIR)/lib64_libmsvcrt_os_a-__p__commode.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/__p__commode.c' object='misc/lib64_libmsvcrt_os_a-__p__commode.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib64_libmsvcrt_os_a-__p__commode.o `test -f 'misc/__p__commode.c' || echo '$(srcdir)/'`misc/__p__commode.c
+
+misc/lib64_libmsvcrt_os_a-__p__commode.obj: misc/__p__commode.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib64_libmsvcrt_os_a-__p__commode.obj -MD -MP -MF misc/$(DEPDIR)/lib64_libmsvcrt_os_a-__p__commode.Tpo -c -o misc/lib64_libmsvcrt_os_a-__p__commode.obj `if test -f 'misc/__p__commode.c'; then $(CYGPATH_W) 'misc/__p__commode.c'; else $(CYGPATH_W) '$(srcdir)/misc/__p__commode.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib64_libmsvcrt_os_a-__p__commode.Tpo misc/$(DEPDIR)/lib64_libmsvcrt_os_a-__p__commode.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/__p__commode.c' object='misc/lib64_libmsvcrt_os_a-__p__commode.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib64_libmsvcrt_os_a-__p__commode.obj `if test -f 'misc/__p__commode.c'; then $(CYGPATH_W) 'misc/__p__commode.c'; else $(CYGPATH_W) '$(srcdir)/misc/__p__commode.c'; fi`
 
 misc/lib64_libmsvcrt_os_a-__p__fmode.o: misc/__p__fmode.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib64_libmsvcrt_os_a-__p__fmode.o -MD -MP -MF misc/$(DEPDIR)/lib64_libmsvcrt_os_a-__p__fmode.Tpo -c -o misc/lib64_libmsvcrt_os_a-__p__fmode.o `test -f 'misc/__p__fmode.c' || echo '$(srcdir)/'`misc/__p__fmode.c
@@ -59644,6 +59697,20 @@ misc/libarm32_libmsvcrt_os_a-__p__acmdln.obj: misc/__p__acmdln.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/libarm32_libmsvcrt_os_a-__p__acmdln.obj `if test -f 'misc/__p__acmdln.c'; then $(CYGPATH_W) 'misc/__p__acmdln.c'; else $(CYGPATH_W) '$(srcdir)/misc/__p__acmdln.c'; fi`
 
+misc/libarm32_libmsvcrt_os_a-__p__commode.o: misc/__p__commode.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/libarm32_libmsvcrt_os_a-__p__commode.o -MD -MP -MF misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-__p__commode.Tpo -c -o misc/libarm32_libmsvcrt_os_a-__p__commode.o `test -f 'misc/__p__commode.c' || echo '$(srcdir)/'`misc/__p__commode.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-__p__commode.Tpo misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-__p__commode.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/__p__commode.c' object='misc/libarm32_libmsvcrt_os_a-__p__commode.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/libarm32_libmsvcrt_os_a-__p__commode.o `test -f 'misc/__p__commode.c' || echo '$(srcdir)/'`misc/__p__commode.c
+
+misc/libarm32_libmsvcrt_os_a-__p__commode.obj: misc/__p__commode.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/libarm32_libmsvcrt_os_a-__p__commode.obj -MD -MP -MF misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-__p__commode.Tpo -c -o misc/libarm32_libmsvcrt_os_a-__p__commode.obj `if test -f 'misc/__p__commode.c'; then $(CYGPATH_W) 'misc/__p__commode.c'; else $(CYGPATH_W) '$(srcdir)/misc/__p__commode.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-__p__commode.Tpo misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-__p__commode.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/__p__commode.c' object='misc/libarm32_libmsvcrt_os_a-__p__commode.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/libarm32_libmsvcrt_os_a-__p__commode.obj `if test -f 'misc/__p__commode.c'; then $(CYGPATH_W) 'misc/__p__commode.c'; else $(CYGPATH_W) '$(srcdir)/misc/__p__commode.c'; fi`
+
 misc/libarm32_libmsvcrt_os_a-__p__fmode.o: misc/__p__fmode.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/libarm32_libmsvcrt_os_a-__p__fmode.o -MD -MP -MF misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-__p__fmode.Tpo -c -o misc/libarm32_libmsvcrt_os_a-__p__fmode.o `test -f 'misc/__p__fmode.c' || echo '$(srcdir)/'`misc/__p__fmode.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-__p__fmode.Tpo misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-__p__fmode.Po
@@ -69444,6 +69511,20 @@ misc/libarm64_libmsvcrt_os_a-__p__acmdln.obj: misc/__p__acmdln.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/libarm64_libmsvcrt_os_a-__p__acmdln.obj `if test -f 'misc/__p__acmdln.c'; then $(CYGPATH_W) 'misc/__p__acmdln.c'; else $(CYGPATH_W) '$(srcdir)/misc/__p__acmdln.c'; fi`
 
+misc/libarm64_libmsvcrt_os_a-__p__commode.o: misc/__p__commode.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/libarm64_libmsvcrt_os_a-__p__commode.o -MD -MP -MF misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-__p__commode.Tpo -c -o misc/libarm64_libmsvcrt_os_a-__p__commode.o `test -f 'misc/__p__commode.c' || echo '$(srcdir)/'`misc/__p__commode.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-__p__commode.Tpo misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-__p__commode.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/__p__commode.c' object='misc/libarm64_libmsvcrt_os_a-__p__commode.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/libarm64_libmsvcrt_os_a-__p__commode.o `test -f 'misc/__p__commode.c' || echo '$(srcdir)/'`misc/__p__commode.c
+
+misc/libarm64_libmsvcrt_os_a-__p__commode.obj: misc/__p__commode.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/libarm64_libmsvcrt_os_a-__p__commode.obj -MD -MP -MF misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-__p__commode.Tpo -c -o misc/libarm64_libmsvcrt_os_a-__p__commode.obj `if test -f 'misc/__p__commode.c'; then $(CYGPATH_W) 'misc/__p__commode.c'; else $(CYGPATH_W) '$(srcdir)/misc/__p__commode.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-__p__commode.Tpo misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-__p__commode.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/__p__commode.c' object='misc/libarm64_libmsvcrt_os_a-__p__commode.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/libarm64_libmsvcrt_os_a-__p__commode.obj `if test -f 'misc/__p__commode.c'; then $(CYGPATH_W) 'misc/__p__commode.c'; else $(CYGPATH_W) '$(srcdir)/misc/__p__commode.c'; fi`
+
 misc/libarm64_libmsvcrt_os_a-__p__fmode.o: misc/__p__fmode.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/libarm64_libmsvcrt_os_a-__p__fmode.o -MD -MP -MF misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-__p__fmode.Tpo -c -o misc/libarm64_libmsvcrt_os_a-__p__fmode.o `test -f 'misc/__p__fmode.c' || echo '$(srcdir)/'`misc/__p__fmode.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-__p__fmode.Tpo misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-__p__fmode.Po
@@ -77067,6 +77148,7 @@ distclean: distclean-am
 	-rm -f misc/$(DEPDIR)/lib64_libmsvcr120d_a-wcrtomb.Po
 	-rm -f misc/$(DEPDIR)/lib64_libmsvcr80_a-__p___argv.Po
 	-rm -f misc/$(DEPDIR)/lib64_libmsvcr80_a-__p__acmdln.Po
+	-rm -f misc/$(DEPDIR)/lib64_libmsvcr80_a-__p__commode.Po
 	-rm -f misc/$(DEPDIR)/lib64_libmsvcr80_a-__p__fmode.Po
 	-rm -f misc/$(DEPDIR)/lib64_libmsvcr80_a-__p__wcmdln.Po
 	-rm -f misc/$(DEPDIR)/lib64_libmsvcr80_a-mbrtowc.Po
@@ -77098,6 +77180,7 @@ distclean: distclean-am
 	-rm -f misc/$(DEPDIR)/lib64_libmsvcr90d_a-wcrtomb.Po
 	-rm -f misc/$(DEPDIR)/lib64_libmsvcrt_os_a-__p___argv.Po
 	-rm -f misc/$(DEPDIR)/lib64_libmsvcrt_os_a-__p__acmdln.Po
+	-rm -f misc/$(DEPDIR)/lib64_libmsvcrt_os_a-__p__commode.Po
 	-rm -f misc/$(DEPDIR)/lib64_libmsvcrt_os_a-__p__fmode.Po
 	-rm -f misc/$(DEPDIR)/lib64_libmsvcrt_os_a-__p__wcmdln.Po
 	-rm -f misc/$(DEPDIR)/lib64_libmsvcrt_os_a-_configthreadlocale.Po
@@ -77210,6 +77293,7 @@ distclean: distclean-am
 	-rm -f misc/$(DEPDIR)/libarm32_libmsvcr120_app_a-wcrtomb.Po
 	-rm -f misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-__p___argv.Po
 	-rm -f misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-__p__acmdln.Po
+	-rm -f misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-__p__commode.Po
 	-rm -f misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-__p__fmode.Po
 	-rm -f misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-__p__wcmdln.Po
 	-rm -f misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-_configthreadlocale.Po
@@ -77300,6 +77384,7 @@ distclean: distclean-am
 	-rm -f misc/$(DEPDIR)/libarm64_libmingwex_a-wmemset.Po
 	-rm -f misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-__p___argv.Po
 	-rm -f misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-__p__acmdln.Po
+	-rm -f misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-__p__commode.Po
 	-rm -f misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-__p__fmode.Po
 	-rm -f misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-__p__wcmdln.Po
 	-rm -f misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-_configthreadlocale.Po
@@ -80559,6 +80644,7 @@ maintainer-clean: maintainer-clean-am
 	-rm -f misc/$(DEPDIR)/lib64_libmsvcr120d_a-wcrtomb.Po
 	-rm -f misc/$(DEPDIR)/lib64_libmsvcr80_a-__p___argv.Po
 	-rm -f misc/$(DEPDIR)/lib64_libmsvcr80_a-__p__acmdln.Po
+	-rm -f misc/$(DEPDIR)/lib64_libmsvcr80_a-__p__commode.Po
 	-rm -f misc/$(DEPDIR)/lib64_libmsvcr80_a-__p__fmode.Po
 	-rm -f misc/$(DEPDIR)/lib64_libmsvcr80_a-__p__wcmdln.Po
 	-rm -f misc/$(DEPDIR)/lib64_libmsvcr80_a-mbrtowc.Po
@@ -80590,6 +80676,7 @@ maintainer-clean: maintainer-clean-am
 	-rm -f misc/$(DEPDIR)/lib64_libmsvcr90d_a-wcrtomb.Po
 	-rm -f misc/$(DEPDIR)/lib64_libmsvcrt_os_a-__p___argv.Po
 	-rm -f misc/$(DEPDIR)/lib64_libmsvcrt_os_a-__p__acmdln.Po
+	-rm -f misc/$(DEPDIR)/lib64_libmsvcrt_os_a-__p__commode.Po
 	-rm -f misc/$(DEPDIR)/lib64_libmsvcrt_os_a-__p__fmode.Po
 	-rm -f misc/$(DEPDIR)/lib64_libmsvcrt_os_a-__p__wcmdln.Po
 	-rm -f misc/$(DEPDIR)/lib64_libmsvcrt_os_a-_configthreadlocale.Po
@@ -80702,6 +80789,7 @@ maintainer-clean: maintainer-clean-am
 	-rm -f misc/$(DEPDIR)/libarm32_libmsvcr120_app_a-wcrtomb.Po
 	-rm -f misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-__p___argv.Po
 	-rm -f misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-__p__acmdln.Po
+	-rm -f misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-__p__commode.Po
 	-rm -f misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-__p__fmode.Po
 	-rm -f misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-__p__wcmdln.Po
 	-rm -f misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-_configthreadlocale.Po
@@ -80792,6 +80880,7 @@ maintainer-clean: maintainer-clean-am
 	-rm -f misc/$(DEPDIR)/libarm64_libmingwex_a-wmemset.Po
 	-rm -f misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-__p___argv.Po
 	-rm -f misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-__p__acmdln.Po
+	-rm -f misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-__p__commode.Po
 	-rm -f misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-__p__fmode.Po
 	-rm -f misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-__p__wcmdln.Po
 	-rm -f misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-_configthreadlocale.Po
