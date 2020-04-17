@@ -153,7 +153,8 @@ build_triplet = @build@
 host_triplet = @host@
 @DELAY_IMPORT_LIBS_TRUE@am__append_1 = --output-delaylib $@.delayimp.a
 @ENABLE_SOFTMATH_FALSE@am__append_2 = \
-@ENABLE_SOFTMATH_FALSE@  math/arm/exp2.c \
+@ENABLE_SOFTMATH_FALSE@  math/arm/exp2.S \
+@ENABLE_SOFTMATH_FALSE@  math/arm/exp2f.S \
 @ENABLE_SOFTMATH_FALSE@  math/arm/nearbyint.S \
 @ENABLE_SOFTMATH_FALSE@  math/arm/nearbyintf.S \
 @ENABLE_SOFTMATH_FALSE@  math/arm/nearbyintl.S \
@@ -4310,26 +4311,26 @@ am__libarm32_libmsvcrt_os_a_SOURCES_DIST = misc/mbrtowc.c \
 	secapi/wmemmove_s.c stdio/fseeki64.c stdio/mingw_lock.c \
 	misc/__p___argv.c misc/__p__acmdln.c misc/__p__commode.c \
 	misc/__p__fmode.c misc/__p__wcmdln.c misc/_getpid.c \
-	stdio/gets.c math/arm/exp2.c math/arm/nearbyint.S \
-	math/arm/nearbyintf.S math/arm/nearbyintl.S math/arm/s_trunc.c \
-	math/arm/s_truncf.c math/arm-common/acosh.c \
-	math/arm-common/acoshf.c math/arm-common/acoshl.c \
-	math/arm-common/asinh.c math/arm-common/asinhf.c \
-	math/arm-common/asinhl.c math/arm-common/atanh.c \
-	math/arm-common/atanhf.c math/arm-common/atanhl.c \
-	math/arm-common/copysignl.c math/arm-common/expm1.c \
-	math/arm-common/expm1f.c math/arm-common/expm1l.c \
-	math/arm-common/ilogb.c math/arm-common/ilogbf.c \
-	math/arm-common/ilogbl.c math/arm-common/log1p.c \
-	math/arm-common/log1pf.c math/arm-common/log1pl.c \
-	math/arm-common/log2.c math/arm-common/logb.c \
-	math/arm-common/logbf.c math/arm-common/logbl.c \
-	math/arm-common/pow.c math/arm-common/powf.c \
-	math/arm-common/powl.c math/arm-common/remainder.c \
-	math/arm-common/remainderf.c math/arm-common/remainderl.c \
-	math/arm-common/remquol.c math/arm-common/s_remquo.c \
-	math/arm-common/s_remquof.c math/arm-common/scalbn.c \
-	lib-common/msvcrt.def.in
+	stdio/gets.c math/arm/exp2.S math/arm/exp2f.S \
+	math/arm/nearbyint.S math/arm/nearbyintf.S \
+	math/arm/nearbyintl.S math/arm/s_trunc.c math/arm/s_truncf.c \
+	math/arm-common/acosh.c math/arm-common/acoshf.c \
+	math/arm-common/acoshl.c math/arm-common/asinh.c \
+	math/arm-common/asinhf.c math/arm-common/asinhl.c \
+	math/arm-common/atanh.c math/arm-common/atanhf.c \
+	math/arm-common/atanhl.c math/arm-common/copysignl.c \
+	math/arm-common/expm1.c math/arm-common/expm1f.c \
+	math/arm-common/expm1l.c math/arm-common/ilogb.c \
+	math/arm-common/ilogbf.c math/arm-common/ilogbl.c \
+	math/arm-common/log1p.c math/arm-common/log1pf.c \
+	math/arm-common/log1pl.c math/arm-common/log2.c \
+	math/arm-common/logb.c math/arm-common/logbf.c \
+	math/arm-common/logbl.c math/arm-common/pow.c \
+	math/arm-common/powf.c math/arm-common/powl.c \
+	math/arm-common/remainder.c math/arm-common/remainderf.c \
+	math/arm-common/remainderl.c math/arm-common/remquol.c \
+	math/arm-common/s_remquo.c math/arm-common/s_remquof.c \
+	math/arm-common/scalbn.c lib-common/msvcrt.def.in
 am__objects_131 = misc/libarm32_libmsvcrt_os_a-mbrtowc.$(OBJEXT) \
 	misc/libarm32_libmsvcrt_os_a-mbsinit.$(OBJEXT) \
 	misc/libarm32_libmsvcrt_os_a-onexit_table.$(OBJEXT) \
@@ -4396,6 +4397,7 @@ am__objects_132 = $(am__objects_131) \
 	stdio/libarm32_libmsvcrt_os_a-fseeki64.$(OBJEXT) \
 	stdio/libarm32_libmsvcrt_os_a-mingw_lock.$(OBJEXT)
 @ENABLE_SOFTMATH_FALSE@am__objects_133 = math/arm/libarm32_libmsvcrt_os_a-exp2.$(OBJEXT) \
+@ENABLE_SOFTMATH_FALSE@	math/arm/libarm32_libmsvcrt_os_a-exp2f.$(OBJEXT) \
 @ENABLE_SOFTMATH_FALSE@	math/arm/libarm32_libmsvcrt_os_a-nearbyint.$(OBJEXT) \
 @ENABLE_SOFTMATH_FALSE@	math/arm/libarm32_libmsvcrt_os_a-nearbyintf.$(OBJEXT) \
 @ENABLE_SOFTMATH_FALSE@	math/arm/libarm32_libmsvcrt_os_a-nearbyintl.$(OBJEXT) \
@@ -8219,6 +8221,7 @@ am__depfiles_remade = ./$(DEPDIR)/lib32_libm_a-_libm_dummy.Po \
 	math/arm/$(DEPDIR)/libarm32_libmingwex_a-s_rint.Po \
 	math/arm/$(DEPDIR)/libarm32_libmingwex_a-s_rintf.Po \
 	math/arm/$(DEPDIR)/libarm32_libmsvcrt_os_a-exp2.Po \
+	math/arm/$(DEPDIR)/libarm32_libmsvcrt_os_a-exp2f.Po \
 	math/arm/$(DEPDIR)/libarm32_libmsvcrt_os_a-nearbyint.Po \
 	math/arm/$(DEPDIR)/libarm32_libmsvcrt_os_a-nearbyintf.Po \
 	math/arm/$(DEPDIR)/libarm32_libmsvcrt_os_a-nearbyintl.Po \
@@ -19350,6 +19353,8 @@ stdio/libarm32_libmsvcrt_os_a-gets.$(OBJEXT): stdio/$(am__dirstamp) \
 	stdio/$(DEPDIR)/$(am__dirstamp)
 math/arm/libarm32_libmsvcrt_os_a-exp2.$(OBJEXT):  \
 	math/arm/$(am__dirstamp) math/arm/$(DEPDIR)/$(am__dirstamp)
+math/arm/libarm32_libmsvcrt_os_a-exp2f.$(OBJEXT):  \
+	math/arm/$(am__dirstamp) math/arm/$(DEPDIR)/$(am__dirstamp)
 math/arm/libarm32_libmsvcrt_os_a-nearbyint.$(OBJEXT):  \
 	math/arm/$(am__dirstamp) math/arm/$(DEPDIR)/$(am__dirstamp)
 math/arm/libarm32_libmsvcrt_os_a-nearbyintf.$(OBJEXT):  \
@@ -24074,6 +24079,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@math/arm/$(DEPDIR)/libarm32_libmingwex_a-s_rint.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@math/arm/$(DEPDIR)/libarm32_libmingwex_a-s_rintf.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@math/arm/$(DEPDIR)/libarm32_libmsvcrt_os_a-exp2.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@math/arm/$(DEPDIR)/libarm32_libmsvcrt_os_a-exp2f.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@math/arm/$(DEPDIR)/libarm32_libmsvcrt_os_a-nearbyint.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@math/arm/$(DEPDIR)/libarm32_libmsvcrt_os_a-nearbyintf.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@math/arm/$(DEPDIR)/libarm32_libmsvcrt_os_a-nearbyintl.Po@am__quote@ # am--include-marker
@@ -27354,6 +27360,34 @@ math/arm/libarm32_libmingwex_a-_chgsignl.obj: math/arm/_chgsignl.S
 @AMDEP_TRUE@@am__fastdepCCAS_FALSE@	$(AM_V_CPPAS)source='math/arm/_chgsignl.S' object='math/arm/libarm32_libmingwex_a-_chgsignl.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCCAS_FALSE@	DEPDIR=$(DEPDIR) $(CCASDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCCAS_FALSE@	$(AM_V_CPPAS@am__nodep@)$(CCAS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CCASFLAGS) $(CCASFLAGS) -c -o math/arm/libarm32_libmingwex_a-_chgsignl.obj `if test -f 'math/arm/_chgsignl.S'; then $(CYGPATH_W) 'math/arm/_chgsignl.S'; else $(CYGPATH_W) '$(srcdir)/math/arm/_chgsignl.S'; fi`
+
+math/arm/libarm32_libmsvcrt_os_a-exp2.o: math/arm/exp2.S
+@am__fastdepCCAS_TRUE@	$(AM_V_CPPAS)$(CCAS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CCASFLAGS) $(CCASFLAGS) -MT math/arm/libarm32_libmsvcrt_os_a-exp2.o -MD -MP -MF math/arm/$(DEPDIR)/libarm32_libmsvcrt_os_a-exp2.Tpo -c -o math/arm/libarm32_libmsvcrt_os_a-exp2.o `test -f 'math/arm/exp2.S' || echo '$(srcdir)/'`math/arm/exp2.S
+@am__fastdepCCAS_TRUE@	$(AM_V_at)$(am__mv) math/arm/$(DEPDIR)/libarm32_libmsvcrt_os_a-exp2.Tpo math/arm/$(DEPDIR)/libarm32_libmsvcrt_os_a-exp2.Po
+@AMDEP_TRUE@@am__fastdepCCAS_FALSE@	$(AM_V_CPPAS)source='math/arm/exp2.S' object='math/arm/libarm32_libmsvcrt_os_a-exp2.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCCAS_FALSE@	DEPDIR=$(DEPDIR) $(CCASDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCCAS_FALSE@	$(AM_V_CPPAS@am__nodep@)$(CCAS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CCASFLAGS) $(CCASFLAGS) -c -o math/arm/libarm32_libmsvcrt_os_a-exp2.o `test -f 'math/arm/exp2.S' || echo '$(srcdir)/'`math/arm/exp2.S
+
+math/arm/libarm32_libmsvcrt_os_a-exp2.obj: math/arm/exp2.S
+@am__fastdepCCAS_TRUE@	$(AM_V_CPPAS)$(CCAS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CCASFLAGS) $(CCASFLAGS) -MT math/arm/libarm32_libmsvcrt_os_a-exp2.obj -MD -MP -MF math/arm/$(DEPDIR)/libarm32_libmsvcrt_os_a-exp2.Tpo -c -o math/arm/libarm32_libmsvcrt_os_a-exp2.obj `if test -f 'math/arm/exp2.S'; then $(CYGPATH_W) 'math/arm/exp2.S'; else $(CYGPATH_W) '$(srcdir)/math/arm/exp2.S'; fi`
+@am__fastdepCCAS_TRUE@	$(AM_V_at)$(am__mv) math/arm/$(DEPDIR)/libarm32_libmsvcrt_os_a-exp2.Tpo math/arm/$(DEPDIR)/libarm32_libmsvcrt_os_a-exp2.Po
+@AMDEP_TRUE@@am__fastdepCCAS_FALSE@	$(AM_V_CPPAS)source='math/arm/exp2.S' object='math/arm/libarm32_libmsvcrt_os_a-exp2.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCCAS_FALSE@	DEPDIR=$(DEPDIR) $(CCASDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCCAS_FALSE@	$(AM_V_CPPAS@am__nodep@)$(CCAS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CCASFLAGS) $(CCASFLAGS) -c -o math/arm/libarm32_libmsvcrt_os_a-exp2.obj `if test -f 'math/arm/exp2.S'; then $(CYGPATH_W) 'math/arm/exp2.S'; else $(CYGPATH_W) '$(srcdir)/math/arm/exp2.S'; fi`
+
+math/arm/libarm32_libmsvcrt_os_a-exp2f.o: math/arm/exp2f.S
+@am__fastdepCCAS_TRUE@	$(AM_V_CPPAS)$(CCAS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CCASFLAGS) $(CCASFLAGS) -MT math/arm/libarm32_libmsvcrt_os_a-exp2f.o -MD -MP -MF math/arm/$(DEPDIR)/libarm32_libmsvcrt_os_a-exp2f.Tpo -c -o math/arm/libarm32_libmsvcrt_os_a-exp2f.o `test -f 'math/arm/exp2f.S' || echo '$(srcdir)/'`math/arm/exp2f.S
+@am__fastdepCCAS_TRUE@	$(AM_V_at)$(am__mv) math/arm/$(DEPDIR)/libarm32_libmsvcrt_os_a-exp2f.Tpo math/arm/$(DEPDIR)/libarm32_libmsvcrt_os_a-exp2f.Po
+@AMDEP_TRUE@@am__fastdepCCAS_FALSE@	$(AM_V_CPPAS)source='math/arm/exp2f.S' object='math/arm/libarm32_libmsvcrt_os_a-exp2f.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCCAS_FALSE@	DEPDIR=$(DEPDIR) $(CCASDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCCAS_FALSE@	$(AM_V_CPPAS@am__nodep@)$(CCAS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CCASFLAGS) $(CCASFLAGS) -c -o math/arm/libarm32_libmsvcrt_os_a-exp2f.o `test -f 'math/arm/exp2f.S' || echo '$(srcdir)/'`math/arm/exp2f.S
+
+math/arm/libarm32_libmsvcrt_os_a-exp2f.obj: math/arm/exp2f.S
+@am__fastdepCCAS_TRUE@	$(AM_V_CPPAS)$(CCAS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CCASFLAGS) $(CCASFLAGS) -MT math/arm/libarm32_libmsvcrt_os_a-exp2f.obj -MD -MP -MF math/arm/$(DEPDIR)/libarm32_libmsvcrt_os_a-exp2f.Tpo -c -o math/arm/libarm32_libmsvcrt_os_a-exp2f.obj `if test -f 'math/arm/exp2f.S'; then $(CYGPATH_W) 'math/arm/exp2f.S'; else $(CYGPATH_W) '$(srcdir)/math/arm/exp2f.S'; fi`
+@am__fastdepCCAS_TRUE@	$(AM_V_at)$(am__mv) math/arm/$(DEPDIR)/libarm32_libmsvcrt_os_a-exp2f.Tpo math/arm/$(DEPDIR)/libarm32_libmsvcrt_os_a-exp2f.Po
+@AMDEP_TRUE@@am__fastdepCCAS_FALSE@	$(AM_V_CPPAS)source='math/arm/exp2f.S' object='math/arm/libarm32_libmsvcrt_os_a-exp2f.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCCAS_FALSE@	DEPDIR=$(DEPDIR) $(CCASDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCCAS_FALSE@	$(AM_V_CPPAS@am__nodep@)$(CCAS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CCASFLAGS) $(CCASFLAGS) -c -o math/arm/libarm32_libmsvcrt_os_a-exp2f.obj `if test -f 'math/arm/exp2f.S'; then $(CYGPATH_W) 'math/arm/exp2f.S'; else $(CYGPATH_W) '$(srcdir)/math/arm/exp2f.S'; fi`
 
 math/arm/libarm32_libmsvcrt_os_a-nearbyint.o: math/arm/nearbyint.S
 @am__fastdepCCAS_TRUE@	$(AM_V_CPPAS)$(CCAS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CCASFLAGS) $(CCASFLAGS) -MT math/arm/libarm32_libmsvcrt_os_a-nearbyint.o -MD -MP -MF math/arm/$(DEPDIR)/libarm32_libmsvcrt_os_a-nearbyint.Tpo -c -o math/arm/libarm32_libmsvcrt_os_a-nearbyint.o `test -f 'math/arm/nearbyint.S' || echo '$(srcdir)/'`math/arm/nearbyint.S
@@ -59767,20 +59801,6 @@ stdio/libarm32_libmsvcrt_os_a-gets.obj: stdio/gets.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/libarm32_libmsvcrt_os_a-gets.obj `if test -f 'stdio/gets.c'; then $(CYGPATH_W) 'stdio/gets.c'; else $(CYGPATH_W) '$(srcdir)/stdio/gets.c'; fi`
 
-math/arm/libarm32_libmsvcrt_os_a-exp2.o: math/arm/exp2.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/arm/libarm32_libmsvcrt_os_a-exp2.o -MD -MP -MF math/arm/$(DEPDIR)/libarm32_libmsvcrt_os_a-exp2.Tpo -c -o math/arm/libarm32_libmsvcrt_os_a-exp2.o `test -f 'math/arm/exp2.c' || echo '$(srcdir)/'`math/arm/exp2.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/arm/$(DEPDIR)/libarm32_libmsvcrt_os_a-exp2.Tpo math/arm/$(DEPDIR)/libarm32_libmsvcrt_os_a-exp2.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/arm/exp2.c' object='math/arm/libarm32_libmsvcrt_os_a-exp2.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/arm/libarm32_libmsvcrt_os_a-exp2.o `test -f 'math/arm/exp2.c' || echo '$(srcdir)/'`math/arm/exp2.c
-
-math/arm/libarm32_libmsvcrt_os_a-exp2.obj: math/arm/exp2.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/arm/libarm32_libmsvcrt_os_a-exp2.obj -MD -MP -MF math/arm/$(DEPDIR)/libarm32_libmsvcrt_os_a-exp2.Tpo -c -o math/arm/libarm32_libmsvcrt_os_a-exp2.obj `if test -f 'math/arm/exp2.c'; then $(CYGPATH_W) 'math/arm/exp2.c'; else $(CYGPATH_W) '$(srcdir)/math/arm/exp2.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/arm/$(DEPDIR)/libarm32_libmsvcrt_os_a-exp2.Tpo math/arm/$(DEPDIR)/libarm32_libmsvcrt_os_a-exp2.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/arm/exp2.c' object='math/arm/libarm32_libmsvcrt_os_a-exp2.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/arm/libarm32_libmsvcrt_os_a-exp2.obj `if test -f 'math/arm/exp2.c'; then $(CYGPATH_W) 'math/arm/exp2.c'; else $(CYGPATH_W) '$(srcdir)/math/arm/exp2.c'; fi`
-
 math/arm/libarm32_libmsvcrt_os_a-s_trunc.o: math/arm/s_trunc.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/arm/libarm32_libmsvcrt_os_a-s_trunc.o -MD -MP -MF math/arm/$(DEPDIR)/libarm32_libmsvcrt_os_a-s_trunc.Tpo -c -o math/arm/libarm32_libmsvcrt_os_a-s_trunc.o `test -f 'math/arm/s_trunc.c' || echo '$(srcdir)/'`math/arm/s_trunc.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/arm/$(DEPDIR)/libarm32_libmsvcrt_os_a-s_trunc.Tpo math/arm/$(DEPDIR)/libarm32_libmsvcrt_os_a-s_trunc.Po
@@ -76586,6 +76606,7 @@ distclean: distclean-am
 	-rm -f math/arm/$(DEPDIR)/libarm32_libmingwex_a-s_rint.Po
 	-rm -f math/arm/$(DEPDIR)/libarm32_libmingwex_a-s_rintf.Po
 	-rm -f math/arm/$(DEPDIR)/libarm32_libmsvcrt_os_a-exp2.Po
+	-rm -f math/arm/$(DEPDIR)/libarm32_libmsvcrt_os_a-exp2f.Po
 	-rm -f math/arm/$(DEPDIR)/libarm32_libmsvcrt_os_a-nearbyint.Po
 	-rm -f math/arm/$(DEPDIR)/libarm32_libmsvcrt_os_a-nearbyintf.Po
 	-rm -f math/arm/$(DEPDIR)/libarm32_libmsvcrt_os_a-nearbyintl.Po
@@ -80082,6 +80103,7 @@ maintainer-clean: maintainer-clean-am
 	-rm -f math/arm/$(DEPDIR)/libarm32_libmingwex_a-s_rint.Po
 	-rm -f math/arm/$(DEPDIR)/libarm32_libmingwex_a-s_rintf.Po
 	-rm -f math/arm/$(DEPDIR)/libarm32_libmsvcrt_os_a-exp2.Po
+	-rm -f math/arm/$(DEPDIR)/libarm32_libmsvcrt_os_a-exp2f.Po
 	-rm -f math/arm/$(DEPDIR)/libarm32_libmsvcrt_os_a-nearbyint.Po
 	-rm -f math/arm/$(DEPDIR)/libarm32_libmsvcrt_os_a-nearbyintf.Po
 	-rm -f math/arm/$(DEPDIR)/libarm32_libmsvcrt_os_a-nearbyintl.Po
