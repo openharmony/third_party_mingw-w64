@@ -13034,19 +13034,19 @@ src_intrincsarm64 =
 @LIBARM64_TRUE@	libarm64/libperfdisk.a libarm64/libperfnet.a \
 @LIBARM64_TRUE@	libarm64/libperfos.a libarm64/libperfproc.a \
 @LIBARM64_TRUE@	libarm64/libperfts.a libarm64/libphotowiz.a \
-@LIBARM64_TRUE@	libarm64/libpropsys.a libarm64/libpsapi.a \
-@LIBARM64_TRUE@	libarm64/libpstorec.a libarm64/libqutil.a \
-@LIBARM64_TRUE@	libarm64/libqwave.a libarm64/librasadhlp.a \
-@LIBARM64_TRUE@	libarm64/librasauto.a libarm64/libraschap.a \
-@LIBARM64_TRUE@	libarm64/librasctrs.a libarm64/librasmontr.a \
-@LIBARM64_TRUE@	libarm64/librasmxs.a libarm64/librasser.a \
-@LIBARM64_TRUE@	libarm64/librastapi.a libarm64/librdpcfgex.a \
-@LIBARM64_TRUE@	libarm64/libregapi.a libarm64/libregsvc.a \
-@LIBARM64_TRUE@	libarm64/libresutils.a libarm64/libriched20.a \
-@LIBARM64_TRUE@	libarm64/librnr20.a libarm64/librpcns4.a \
-@LIBARM64_TRUE@	libarm64/librpcrt4.a libarm64/librpcss.a \
-@LIBARM64_TRUE@	libarm64/librsaenh.a libarm64/librstrtmgr.a \
-@LIBARM64_TRUE@	libarm64/librtutils.a \
+@LIBARM64_TRUE@	libarm64/libpowrprof.a libarm64/libpropsys.a \
+@LIBARM64_TRUE@	libarm64/libpsapi.a libarm64/libpstorec.a \
+@LIBARM64_TRUE@	libarm64/libqutil.a libarm64/libqwave.a \
+@LIBARM64_TRUE@	libarm64/librasadhlp.a libarm64/librasauto.a \
+@LIBARM64_TRUE@	libarm64/libraschap.a libarm64/librasctrs.a \
+@LIBARM64_TRUE@	libarm64/librasmontr.a libarm64/librasmxs.a \
+@LIBARM64_TRUE@	libarm64/librasser.a libarm64/librastapi.a \
+@LIBARM64_TRUE@	libarm64/librdpcfgex.a libarm64/libregapi.a \
+@LIBARM64_TRUE@	libarm64/libregsvc.a libarm64/libresutils.a \
+@LIBARM64_TRUE@	libarm64/libriched20.a libarm64/librnr20.a \
+@LIBARM64_TRUE@	libarm64/librpcns4.a libarm64/librpcrt4.a \
+@LIBARM64_TRUE@	libarm64/librpcss.a libarm64/librsaenh.a \
+@LIBARM64_TRUE@	libarm64/librstrtmgr.a libarm64/librtutils.a \
 @LIBARM64_TRUE@	libarm64/libruntimeobject.a \
 @LIBARM64_TRUE@	libarm64/libsamcli.a libarm64/libscarddlg.a \
 @LIBARM64_TRUE@	libarm64/libscesrv.a libarm64/libschannel.a \
