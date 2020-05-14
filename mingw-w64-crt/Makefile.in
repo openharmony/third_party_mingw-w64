@@ -1758,17 +1758,17 @@ am__lib32_libuuid_a_SOURCES_DIST = libsrc/ativscp-uuid.c \
 	libsrc/fwp-uuid.c libsrc/guid_nul.c libsrc/hlguids-uuid.c \
 	libsrc/hlink-uuid.c libsrc/mlang-uuid.c libsrc/msctf-uuid.c \
 	libsrc/mshtmhst-uuid.c libsrc/mshtml-uuid.c \
-	libsrc/msxml-uuid.c libsrc/netcon-uuid.c libsrc/ntddkbd-uuid.c \
-	libsrc/ntddmou-uuid.c libsrc/ntddpar-uuid.c \
-	libsrc/ntddscsi-uuid.c libsrc/ntddser-uuid.c \
-	libsrc/ntddstor-uuid.c libsrc/ntddvdeo-uuid.c \
-	libsrc/oaidl-uuid.c libsrc/objidl-uuid.c libsrc/objsafe-uuid.c \
-	libsrc/ocidl-uuid.c libsrc/oleacc-uuid.c \
-	libsrc/olectlid-uuid.c libsrc/oleidl-uuid.c \
-	libsrc/power-uuid.c libsrc/powrprof-uuid.c \
-	libsrc/uianimation-uuid.c libsrc/usbcamdi-uuid.c \
-	libsrc/usbiodef-uuid.c libsrc/uuid.c libsrc/vds-uuid.c \
-	libsrc/virtdisk-uuid.c libsrc/wia-uuid.c
+	libsrc/msxml-uuid.c libsrc/netcfg-uuid.c libsrc/netcon-uuid.c \
+	libsrc/ntddkbd-uuid.c libsrc/ntddmou-uuid.c \
+	libsrc/ntddpar-uuid.c libsrc/ntddscsi-uuid.c \
+	libsrc/ntddser-uuid.c libsrc/ntddstor-uuid.c \
+	libsrc/ntddvdeo-uuid.c libsrc/oaidl-uuid.c \
+	libsrc/objidl-uuid.c libsrc/objsafe-uuid.c libsrc/ocidl-uuid.c \
+	libsrc/oleacc-uuid.c libsrc/olectlid-uuid.c \
+	libsrc/oleidl-uuid.c libsrc/power-uuid.c \
+	libsrc/powrprof-uuid.c libsrc/uianimation-uuid.c \
+	libsrc/usbcamdi-uuid.c libsrc/usbiodef-uuid.c libsrc/uuid.c \
+	libsrc/vds-uuid.c libsrc/virtdisk-uuid.c libsrc/wia-uuid.c
 am__objects_48 = libsrc/lib32_libuuid_a-ativscp-uuid.$(OBJEXT) \
 	libsrc/lib32_libuuid_a-atsmedia-uuid.$(OBJEXT) \
 	libsrc/lib32_libuuid_a-bth-uuid.$(OBJEXT) \
@@ -1788,6 +1788,7 @@ am__objects_48 = libsrc/lib32_libuuid_a-ativscp-uuid.$(OBJEXT) \
 	libsrc/lib32_libuuid_a-mshtmhst-uuid.$(OBJEXT) \
 	libsrc/lib32_libuuid_a-mshtml-uuid.$(OBJEXT) \
 	libsrc/lib32_libuuid_a-msxml-uuid.$(OBJEXT) \
+	libsrc/lib32_libuuid_a-netcfg-uuid.$(OBJEXT) \
 	libsrc/lib32_libuuid_a-netcon-uuid.$(OBJEXT) \
 	libsrc/lib32_libuuid_a-ntddkbd-uuid.$(OBJEXT) \
 	libsrc/lib32_libuuid_a-ntddmou-uuid.$(OBJEXT) \
@@ -3247,17 +3248,17 @@ am__lib64_libuuid_a_SOURCES_DIST = libsrc/ativscp-uuid.c \
 	libsrc/fwp-uuid.c libsrc/guid_nul.c libsrc/hlguids-uuid.c \
 	libsrc/hlink-uuid.c libsrc/mlang-uuid.c libsrc/msctf-uuid.c \
 	libsrc/mshtmhst-uuid.c libsrc/mshtml-uuid.c \
-	libsrc/msxml-uuid.c libsrc/netcon-uuid.c libsrc/ntddkbd-uuid.c \
-	libsrc/ntddmou-uuid.c libsrc/ntddpar-uuid.c \
-	libsrc/ntddscsi-uuid.c libsrc/ntddser-uuid.c \
-	libsrc/ntddstor-uuid.c libsrc/ntddvdeo-uuid.c \
-	libsrc/oaidl-uuid.c libsrc/objidl-uuid.c libsrc/objsafe-uuid.c \
-	libsrc/ocidl-uuid.c libsrc/oleacc-uuid.c \
-	libsrc/olectlid-uuid.c libsrc/oleidl-uuid.c \
-	libsrc/power-uuid.c libsrc/powrprof-uuid.c \
-	libsrc/uianimation-uuid.c libsrc/usbcamdi-uuid.c \
-	libsrc/usbiodef-uuid.c libsrc/uuid.c libsrc/vds-uuid.c \
-	libsrc/virtdisk-uuid.c libsrc/wia-uuid.c
+	libsrc/msxml-uuid.c libsrc/netcfg-uuid.c libsrc/netcon-uuid.c \
+	libsrc/ntddkbd-uuid.c libsrc/ntddmou-uuid.c \
+	libsrc/ntddpar-uuid.c libsrc/ntddscsi-uuid.c \
+	libsrc/ntddser-uuid.c libsrc/ntddstor-uuid.c \
+	libsrc/ntddvdeo-uuid.c libsrc/oaidl-uuid.c \
+	libsrc/objidl-uuid.c libsrc/objsafe-uuid.c libsrc/ocidl-uuid.c \
+	libsrc/oleacc-uuid.c libsrc/olectlid-uuid.c \
+	libsrc/oleidl-uuid.c libsrc/power-uuid.c \
+	libsrc/powrprof-uuid.c libsrc/uianimation-uuid.c \
+	libsrc/usbcamdi-uuid.c libsrc/usbiodef-uuid.c libsrc/uuid.c \
+	libsrc/vds-uuid.c libsrc/virtdisk-uuid.c libsrc/wia-uuid.c
 am__objects_99 = libsrc/lib64_libuuid_a-ativscp-uuid.$(OBJEXT) \
 	libsrc/lib64_libuuid_a-atsmedia-uuid.$(OBJEXT) \
 	libsrc/lib64_libuuid_a-bth-uuid.$(OBJEXT) \
@@ -3277,6 +3278,7 @@ am__objects_99 = libsrc/lib64_libuuid_a-ativscp-uuid.$(OBJEXT) \
 	libsrc/lib64_libuuid_a-mshtmhst-uuid.$(OBJEXT) \
 	libsrc/lib64_libuuid_a-mshtml-uuid.$(OBJEXT) \
 	libsrc/lib64_libuuid_a-msxml-uuid.$(OBJEXT) \
+	libsrc/lib64_libuuid_a-netcfg-uuid.$(OBJEXT) \
 	libsrc/lib64_libuuid_a-netcon-uuid.$(OBJEXT) \
 	libsrc/lib64_libuuid_a-ntddkbd-uuid.$(OBJEXT) \
 	libsrc/lib64_libuuid_a-ntddmou-uuid.$(OBJEXT) \
@@ -4560,17 +4562,17 @@ am__libarm32_libuuid_a_SOURCES_DIST = libsrc/ativscp-uuid.c \
 	libsrc/fwp-uuid.c libsrc/guid_nul.c libsrc/hlguids-uuid.c \
 	libsrc/hlink-uuid.c libsrc/mlang-uuid.c libsrc/msctf-uuid.c \
 	libsrc/mshtmhst-uuid.c libsrc/mshtml-uuid.c \
-	libsrc/msxml-uuid.c libsrc/netcon-uuid.c libsrc/ntddkbd-uuid.c \
-	libsrc/ntddmou-uuid.c libsrc/ntddpar-uuid.c \
-	libsrc/ntddscsi-uuid.c libsrc/ntddser-uuid.c \
-	libsrc/ntddstor-uuid.c libsrc/ntddvdeo-uuid.c \
-	libsrc/oaidl-uuid.c libsrc/objidl-uuid.c libsrc/objsafe-uuid.c \
-	libsrc/ocidl-uuid.c libsrc/oleacc-uuid.c \
-	libsrc/olectlid-uuid.c libsrc/oleidl-uuid.c \
-	libsrc/power-uuid.c libsrc/powrprof-uuid.c \
-	libsrc/uianimation-uuid.c libsrc/usbcamdi-uuid.c \
-	libsrc/usbiodef-uuid.c libsrc/uuid.c libsrc/vds-uuid.c \
-	libsrc/virtdisk-uuid.c libsrc/wia-uuid.c
+	libsrc/msxml-uuid.c libsrc/netcfg-uuid.c libsrc/netcon-uuid.c \
+	libsrc/ntddkbd-uuid.c libsrc/ntddmou-uuid.c \
+	libsrc/ntddpar-uuid.c libsrc/ntddscsi-uuid.c \
+	libsrc/ntddser-uuid.c libsrc/ntddstor-uuid.c \
+	libsrc/ntddvdeo-uuid.c libsrc/oaidl-uuid.c \
+	libsrc/objidl-uuid.c libsrc/objsafe-uuid.c libsrc/ocidl-uuid.c \
+	libsrc/oleacc-uuid.c libsrc/olectlid-uuid.c \
+	libsrc/oleidl-uuid.c libsrc/power-uuid.c \
+	libsrc/powrprof-uuid.c libsrc/uianimation-uuid.c \
+	libsrc/usbcamdi-uuid.c libsrc/usbiodef-uuid.c libsrc/uuid.c \
+	libsrc/vds-uuid.c libsrc/virtdisk-uuid.c libsrc/wia-uuid.c
 am__objects_144 = libsrc/libarm32_libuuid_a-ativscp-uuid.$(OBJEXT) \
 	libsrc/libarm32_libuuid_a-atsmedia-uuid.$(OBJEXT) \
 	libsrc/libarm32_libuuid_a-bth-uuid.$(OBJEXT) \
@@ -4590,6 +4592,7 @@ am__objects_144 = libsrc/libarm32_libuuid_a-ativscp-uuid.$(OBJEXT) \
 	libsrc/libarm32_libuuid_a-mshtmhst-uuid.$(OBJEXT) \
 	libsrc/libarm32_libuuid_a-mshtml-uuid.$(OBJEXT) \
 	libsrc/libarm32_libuuid_a-msxml-uuid.$(OBJEXT) \
+	libsrc/libarm32_libuuid_a-netcfg-uuid.$(OBJEXT) \
 	libsrc/libarm32_libuuid_a-netcon-uuid.$(OBJEXT) \
 	libsrc/libarm32_libuuid_a-ntddkbd-uuid.$(OBJEXT) \
 	libsrc/libarm32_libuuid_a-ntddmou-uuid.$(OBJEXT) \
@@ -5712,17 +5715,17 @@ am__libarm64_libuuid_a_SOURCES_DIST = libsrc/ativscp-uuid.c \
 	libsrc/fwp-uuid.c libsrc/guid_nul.c libsrc/hlguids-uuid.c \
 	libsrc/hlink-uuid.c libsrc/mlang-uuid.c libsrc/msctf-uuid.c \
 	libsrc/mshtmhst-uuid.c libsrc/mshtml-uuid.c \
-	libsrc/msxml-uuid.c libsrc/netcon-uuid.c libsrc/ntddkbd-uuid.c \
-	libsrc/ntddmou-uuid.c libsrc/ntddpar-uuid.c \
-	libsrc/ntddscsi-uuid.c libsrc/ntddser-uuid.c \
-	libsrc/ntddstor-uuid.c libsrc/ntddvdeo-uuid.c \
-	libsrc/oaidl-uuid.c libsrc/objidl-uuid.c libsrc/objsafe-uuid.c \
-	libsrc/ocidl-uuid.c libsrc/oleacc-uuid.c \
-	libsrc/olectlid-uuid.c libsrc/oleidl-uuid.c \
-	libsrc/power-uuid.c libsrc/powrprof-uuid.c \
-	libsrc/uianimation-uuid.c libsrc/usbcamdi-uuid.c \
-	libsrc/usbiodef-uuid.c libsrc/uuid.c libsrc/vds-uuid.c \
-	libsrc/virtdisk-uuid.c libsrc/wia-uuid.c
+	libsrc/msxml-uuid.c libsrc/netcfg-uuid.c libsrc/netcon-uuid.c \
+	libsrc/ntddkbd-uuid.c libsrc/ntddmou-uuid.c \
+	libsrc/ntddpar-uuid.c libsrc/ntddscsi-uuid.c \
+	libsrc/ntddser-uuid.c libsrc/ntddstor-uuid.c \
+	libsrc/ntddvdeo-uuid.c libsrc/oaidl-uuid.c \
+	libsrc/objidl-uuid.c libsrc/objsafe-uuid.c libsrc/ocidl-uuid.c \
+	libsrc/oleacc-uuid.c libsrc/olectlid-uuid.c \
+	libsrc/oleidl-uuid.c libsrc/power-uuid.c \
+	libsrc/powrprof-uuid.c libsrc/uianimation-uuid.c \
+	libsrc/usbcamdi-uuid.c libsrc/usbiodef-uuid.c libsrc/uuid.c \
+	libsrc/vds-uuid.c libsrc/virtdisk-uuid.c libsrc/wia-uuid.c
 am__objects_182 = libsrc/libarm64_libuuid_a-ativscp-uuid.$(OBJEXT) \
 	libsrc/libarm64_libuuid_a-atsmedia-uuid.$(OBJEXT) \
 	libsrc/libarm64_libuuid_a-bth-uuid.$(OBJEXT) \
@@ -5742,6 +5745,7 @@ am__objects_182 = libsrc/libarm64_libuuid_a-ativscp-uuid.$(OBJEXT) \
 	libsrc/libarm64_libuuid_a-mshtmhst-uuid.$(OBJEXT) \
 	libsrc/libarm64_libuuid_a-mshtml-uuid.$(OBJEXT) \
 	libsrc/libarm64_libuuid_a-msxml-uuid.$(OBJEXT) \
+	libsrc/libarm64_libuuid_a-netcfg-uuid.$(OBJEXT) \
 	libsrc/libarm64_libuuid_a-netcon-uuid.$(OBJEXT) \
 	libsrc/libarm64_libuuid_a-ntddkbd-uuid.$(OBJEXT) \
 	libsrc/libarm64_libuuid_a-ntddmou-uuid.$(OBJEXT) \
@@ -7307,6 +7311,7 @@ am__depfiles_remade = ./$(DEPDIR)/lib32_libm_a-_libm_dummy.Po \
 	libsrc/$(DEPDIR)/lib32_libuuid_a-mshtmhst-uuid.Po \
 	libsrc/$(DEPDIR)/lib32_libuuid_a-mshtml-uuid.Po \
 	libsrc/$(DEPDIR)/lib32_libuuid_a-msxml-uuid.Po \
+	libsrc/$(DEPDIR)/lib32_libuuid_a-netcfg-uuid.Po \
 	libsrc/$(DEPDIR)/lib32_libuuid_a-netcon-uuid.Po \
 	libsrc/$(DEPDIR)/lib32_libuuid_a-ntddkbd-uuid.Po \
 	libsrc/$(DEPDIR)/lib32_libuuid_a-ntddmou-uuid.Po \
@@ -7386,6 +7391,7 @@ am__depfiles_remade = ./$(DEPDIR)/lib32_libm_a-_libm_dummy.Po \
 	libsrc/$(DEPDIR)/lib64_libuuid_a-mshtmhst-uuid.Po \
 	libsrc/$(DEPDIR)/lib64_libuuid_a-mshtml-uuid.Po \
 	libsrc/$(DEPDIR)/lib64_libuuid_a-msxml-uuid.Po \
+	libsrc/$(DEPDIR)/lib64_libuuid_a-netcfg-uuid.Po \
 	libsrc/$(DEPDIR)/lib64_libuuid_a-netcon-uuid.Po \
 	libsrc/$(DEPDIR)/lib64_libuuid_a-ntddkbd-uuid.Po \
 	libsrc/$(DEPDIR)/lib64_libuuid_a-ntddmou-uuid.Po \
@@ -7464,6 +7470,7 @@ am__depfiles_remade = ./$(DEPDIR)/lib32_libm_a-_libm_dummy.Po \
 	libsrc/$(DEPDIR)/libarm32_libuuid_a-mshtmhst-uuid.Po \
 	libsrc/$(DEPDIR)/libarm32_libuuid_a-mshtml-uuid.Po \
 	libsrc/$(DEPDIR)/libarm32_libuuid_a-msxml-uuid.Po \
+	libsrc/$(DEPDIR)/libarm32_libuuid_a-netcfg-uuid.Po \
 	libsrc/$(DEPDIR)/libarm32_libuuid_a-netcon-uuid.Po \
 	libsrc/$(DEPDIR)/libarm32_libuuid_a-ntddkbd-uuid.Po \
 	libsrc/$(DEPDIR)/libarm32_libuuid_a-ntddmou-uuid.Po \
@@ -7542,6 +7549,7 @@ am__depfiles_remade = ./$(DEPDIR)/lib32_libm_a-_libm_dummy.Po \
 	libsrc/$(DEPDIR)/libarm64_libuuid_a-mshtmhst-uuid.Po \
 	libsrc/$(DEPDIR)/libarm64_libuuid_a-mshtml-uuid.Po \
 	libsrc/$(DEPDIR)/libarm64_libuuid_a-msxml-uuid.Po \
+	libsrc/$(DEPDIR)/libarm64_libuuid_a-netcfg-uuid.Po \
 	libsrc/$(DEPDIR)/libarm64_libuuid_a-netcon-uuid.Po \
 	libsrc/$(DEPDIR)/libarm64_libuuid_a-ntddkbd-uuid.Po \
 	libsrc/$(DEPDIR)/libarm64_libuuid_a-ntddmou-uuid.Po \
@@ -10840,15 +10848,15 @@ src_libstrmiids = libsrc/strmiids.c
 src_libmingwthrd = libsrc/mingwthrd_mt.c
 src_libgdiplus = libsrc/gdiplus.c
 src_libuuid = \
-  libsrc/ativscp-uuid.c   libsrc/atsmedia-uuid.c    libsrc/bth-uuid.c       libsrc/cguid-uuid.c     libsrc/comcat-uuid.c  \
-  libsrc/devguid.c        libsrc/docobj-uuid.c      libsrc/dxva-uuid.c      libsrc/exdisp-uuid.c    libsrc/extras-uuid.c  \
-  libsrc/fwp-uuid.c       libsrc/guid_nul.c         libsrc/hlguids-uuid.c   libsrc/hlink-uuid.c     libsrc/mlang-uuid.c   \
-  libsrc/msctf-uuid.c     libsrc/mshtmhst-uuid.c    libsrc/mshtml-uuid.c    libsrc/msxml-uuid.c     libsrc/netcon-uuid.c  \
-  libsrc/ntddkbd-uuid.c   libsrc/ntddmou-uuid.c     libsrc/ntddpar-uuid.c   libsrc/ntddscsi-uuid.c  libsrc/ntddser-uuid.c \
-  libsrc/ntddstor-uuid.c  libsrc/ntddvdeo-uuid.c    libsrc/oaidl-uuid.c     libsrc/objidl-uuid.c    libsrc/objsafe-uuid.c \
-  libsrc/ocidl-uuid.c     libsrc/oleacc-uuid.c      libsrc/olectlid-uuid.c  libsrc/oleidl-uuid.c    libsrc/power-uuid.c   \
-  libsrc/powrprof-uuid.c  libsrc/uianimation-uuid.c libsrc/usbcamdi-uuid.c  libsrc/usbiodef-uuid.c  libsrc/uuid.c         \
-  libsrc/vds-uuid.c       libsrc/virtdisk-uuid.c    libsrc/wia-uuid.c
+  libsrc/ativscp-uuid.c   libsrc/atsmedia-uuid.c    libsrc/bth-uuid.c         libsrc/cguid-uuid.c     libsrc/comcat-uuid.c   \
+  libsrc/devguid.c        libsrc/docobj-uuid.c      libsrc/dxva-uuid.c        libsrc/exdisp-uuid.c    libsrc/extras-uuid.c   \
+  libsrc/fwp-uuid.c       libsrc/guid_nul.c         libsrc/hlguids-uuid.c     libsrc/hlink-uuid.c     libsrc/mlang-uuid.c    \
+  libsrc/msctf-uuid.c     libsrc/mshtmhst-uuid.c    libsrc/mshtml-uuid.c      libsrc/msxml-uuid.c     libsrc/netcfg-uuid.c   \
+  libsrc/netcon-uuid.c    libsrc/ntddkbd-uuid.c     libsrc/ntddmou-uuid.c     libsrc/ntddpar-uuid.c   libsrc/ntddscsi-uuid.c \
+  libsrc/ntddser-uuid.c   libsrc/ntddstor-uuid.c    libsrc/ntddvdeo-uuid.c    libsrc/oaidl-uuid.c     libsrc/objidl-uuid.c   \
+  libsrc/objsafe-uuid.c   libsrc/ocidl-uuid.c       libsrc/oleacc-uuid.c      libsrc/olectlid-uuid.c  libsrc/oleidl-uuid.c   \
+  libsrc/power-uuid.c     libsrc/powrprof-uuid.c    libsrc/uianimation-uuid.c libsrc/usbcamdi-uuid.c  libsrc/usbiodef-uuid.c \
+  libsrc/uuid.c           libsrc/vds-uuid.c         libsrc/virtdisk-uuid.c    libsrc/wia-uuid.c
 
 src_libws2_32 = libsrc/ws2_32.c \
   \
@@ -15608,6 +15616,8 @@ libsrc/lib32_libuuid_a-mshtml-uuid.$(OBJEXT): libsrc/$(am__dirstamp) \
 	libsrc/$(DEPDIR)/$(am__dirstamp)
 libsrc/lib32_libuuid_a-msxml-uuid.$(OBJEXT): libsrc/$(am__dirstamp) \
 	libsrc/$(DEPDIR)/$(am__dirstamp)
+libsrc/lib32_libuuid_a-netcfg-uuid.$(OBJEXT): libsrc/$(am__dirstamp) \
+	libsrc/$(DEPDIR)/$(am__dirstamp)
 libsrc/lib32_libuuid_a-netcon-uuid.$(OBJEXT): libsrc/$(am__dirstamp) \
 	libsrc/$(DEPDIR)/$(am__dirstamp)
 libsrc/lib32_libuuid_a-ntddkbd-uuid.$(OBJEXT): libsrc/$(am__dirstamp) \
@@ -17689,6 +17699,8 @@ libsrc/lib64_libuuid_a-mshtml-uuid.$(OBJEXT): libsrc/$(am__dirstamp) \
 	libsrc/$(DEPDIR)/$(am__dirstamp)
 libsrc/lib64_libuuid_a-msxml-uuid.$(OBJEXT): libsrc/$(am__dirstamp) \
 	libsrc/$(DEPDIR)/$(am__dirstamp)
+libsrc/lib64_libuuid_a-netcfg-uuid.$(OBJEXT): libsrc/$(am__dirstamp) \
+	libsrc/$(DEPDIR)/$(am__dirstamp)
 libsrc/lib64_libuuid_a-netcon-uuid.$(OBJEXT): libsrc/$(am__dirstamp) \
 	libsrc/$(DEPDIR)/$(am__dirstamp)
 libsrc/lib64_libuuid_a-ntddkbd-uuid.$(OBJEXT): libsrc/$(am__dirstamp) \
@@ -19611,6 +19623,8 @@ libsrc/libarm32_libuuid_a-mshtml-uuid.$(OBJEXT):  \
 	libsrc/$(am__dirstamp) libsrc/$(DEPDIR)/$(am__dirstamp)
 libsrc/libarm32_libuuid_a-msxml-uuid.$(OBJEXT):  \
 	libsrc/$(am__dirstamp) libsrc/$(DEPDIR)/$(am__dirstamp)
+libsrc/libarm32_libuuid_a-netcfg-uuid.$(OBJEXT):  \
+	libsrc/$(am__dirstamp) libsrc/$(DEPDIR)/$(am__dirstamp)
 libsrc/libarm32_libuuid_a-netcon-uuid.$(OBJEXT):  \
 	libsrc/$(am__dirstamp) libsrc/$(DEPDIR)/$(am__dirstamp)
 libsrc/libarm32_libuuid_a-ntddkbd-uuid.$(OBJEXT):  \
@@ -21242,6 +21256,8 @@ libsrc/libarm64_libuuid_a-mshtmhst-uuid.$(OBJEXT):  \
 libsrc/libarm64_libuuid_a-mshtml-uuid.$(OBJEXT):  \
 	libsrc/$(am__dirstamp) libsrc/$(DEPDIR)/$(am__dirstamp)
 libsrc/libarm64_libuuid_a-msxml-uuid.$(OBJEXT):  \
+	libsrc/$(am__dirstamp) libsrc/$(DEPDIR)/$(am__dirstamp)
+libsrc/libarm64_libuuid_a-netcfg-uuid.$(OBJEXT):  \
 	libsrc/$(am__dirstamp) libsrc/$(DEPDIR)/$(am__dirstamp)
 libsrc/libarm64_libuuid_a-netcon-uuid.$(OBJEXT):  \
 	libsrc/$(am__dirstamp) libsrc/$(DEPDIR)/$(am__dirstamp)
@@ -23148,6 +23164,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/lib32_libuuid_a-mshtmhst-uuid.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/lib32_libuuid_a-mshtml-uuid.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/lib32_libuuid_a-msxml-uuid.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/lib32_libuuid_a-netcfg-uuid.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/lib32_libuuid_a-netcon-uuid.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/lib32_libuuid_a-ntddkbd-uuid.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/lib32_libuuid_a-ntddmou-uuid.Po@am__quote@ # am--include-marker
@@ -23227,6 +23244,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/lib64_libuuid_a-mshtmhst-uuid.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/lib64_libuuid_a-mshtml-uuid.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/lib64_libuuid_a-msxml-uuid.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/lib64_libuuid_a-netcfg-uuid.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/lib64_libuuid_a-netcon-uuid.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/lib64_libuuid_a-ntddkbd-uuid.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/lib64_libuuid_a-ntddmou-uuid.Po@am__quote@ # am--include-marker
@@ -23305,6 +23323,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/libarm32_libuuid_a-mshtmhst-uuid.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/libarm32_libuuid_a-mshtml-uuid.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/libarm32_libuuid_a-msxml-uuid.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/libarm32_libuuid_a-netcfg-uuid.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/libarm32_libuuid_a-netcon-uuid.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/libarm32_libuuid_a-ntddkbd-uuid.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/libarm32_libuuid_a-ntddmou-uuid.Po@am__quote@ # am--include-marker
@@ -23383,6 +23402,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/libarm64_libuuid_a-mshtmhst-uuid.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/libarm64_libuuid_a-mshtml-uuid.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/libarm64_libuuid_a-msxml-uuid.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/libarm64_libuuid_a-netcfg-uuid.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/libarm64_libuuid_a-netcon-uuid.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/libarm64_libuuid_a-ntddkbd-uuid.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/libarm64_libuuid_a-ntddmou-uuid.Po@am__quote@ # am--include-marker
@@ -38339,6 +38359,20 @@ libsrc/lib32_libuuid_a-msxml-uuid.obj: libsrc/msxml-uuid.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libuuid_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libsrc/lib32_libuuid_a-msxml-uuid.obj `if test -f 'libsrc/msxml-uuid.c'; then $(CYGPATH_W) 'libsrc/msxml-uuid.c'; else $(CYGPATH_W) '$(srcdir)/libsrc/msxml-uuid.c'; fi`
 
+libsrc/lib32_libuuid_a-netcfg-uuid.o: libsrc/netcfg-uuid.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libuuid_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libsrc/lib32_libuuid_a-netcfg-uuid.o -MD -MP -MF libsrc/$(DEPDIR)/lib32_libuuid_a-netcfg-uuid.Tpo -c -o libsrc/lib32_libuuid_a-netcfg-uuid.o `test -f 'libsrc/netcfg-uuid.c' || echo '$(srcdir)/'`libsrc/netcfg-uuid.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libsrc/$(DEPDIR)/lib32_libuuid_a-netcfg-uuid.Tpo libsrc/$(DEPDIR)/lib32_libuuid_a-netcfg-uuid.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libsrc/netcfg-uuid.c' object='libsrc/lib32_libuuid_a-netcfg-uuid.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libuuid_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libsrc/lib32_libuuid_a-netcfg-uuid.o `test -f 'libsrc/netcfg-uuid.c' || echo '$(srcdir)/'`libsrc/netcfg-uuid.c
+
+libsrc/lib32_libuuid_a-netcfg-uuid.obj: libsrc/netcfg-uuid.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libuuid_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libsrc/lib32_libuuid_a-netcfg-uuid.obj -MD -MP -MF libsrc/$(DEPDIR)/lib32_libuuid_a-netcfg-uuid.Tpo -c -o libsrc/lib32_libuuid_a-netcfg-uuid.obj `if test -f 'libsrc/netcfg-uuid.c'; then $(CYGPATH_W) 'libsrc/netcfg-uuid.c'; else $(CYGPATH_W) '$(srcdir)/libsrc/netcfg-uuid.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libsrc/$(DEPDIR)/lib32_libuuid_a-netcfg-uuid.Tpo libsrc/$(DEPDIR)/lib32_libuuid_a-netcfg-uuid.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libsrc/netcfg-uuid.c' object='libsrc/lib32_libuuid_a-netcfg-uuid.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libuuid_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libsrc/lib32_libuuid_a-netcfg-uuid.obj `if test -f 'libsrc/netcfg-uuid.c'; then $(CYGPATH_W) 'libsrc/netcfg-uuid.c'; else $(CYGPATH_W) '$(srcdir)/libsrc/netcfg-uuid.c'; fi`
+
 libsrc/lib32_libuuid_a-netcon-uuid.o: libsrc/netcon-uuid.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libuuid_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libsrc/lib32_libuuid_a-netcon-uuid.o -MD -MP -MF libsrc/$(DEPDIR)/lib32_libuuid_a-netcon-uuid.Tpo -c -o libsrc/lib32_libuuid_a-netcon-uuid.o `test -f 'libsrc/netcon-uuid.c' || echo '$(srcdir)/'`libsrc/netcon-uuid.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libsrc/$(DEPDIR)/lib32_libuuid_a-netcon-uuid.Tpo libsrc/$(DEPDIR)/lib32_libuuid_a-netcon-uuid.Po
@@ -50225,6 +50259,20 @@ libsrc/lib64_libuuid_a-msxml-uuid.obj: libsrc/msxml-uuid.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libuuid_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libsrc/lib64_libuuid_a-msxml-uuid.obj `if test -f 'libsrc/msxml-uuid.c'; then $(CYGPATH_W) 'libsrc/msxml-uuid.c'; else $(CYGPATH_W) '$(srcdir)/libsrc/msxml-uuid.c'; fi`
 
+libsrc/lib64_libuuid_a-netcfg-uuid.o: libsrc/netcfg-uuid.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libuuid_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libsrc/lib64_libuuid_a-netcfg-uuid.o -MD -MP -MF libsrc/$(DEPDIR)/lib64_libuuid_a-netcfg-uuid.Tpo -c -o libsrc/lib64_libuuid_a-netcfg-uuid.o `test -f 'libsrc/netcfg-uuid.c' || echo '$(srcdir)/'`libsrc/netcfg-uuid.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libsrc/$(DEPDIR)/lib64_libuuid_a-netcfg-uuid.Tpo libsrc/$(DEPDIR)/lib64_libuuid_a-netcfg-uuid.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libsrc/netcfg-uuid.c' object='libsrc/lib64_libuuid_a-netcfg-uuid.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libuuid_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libsrc/lib64_libuuid_a-netcfg-uuid.o `test -f 'libsrc/netcfg-uuid.c' || echo '$(srcdir)/'`libsrc/netcfg-uuid.c
+
+libsrc/lib64_libuuid_a-netcfg-uuid.obj: libsrc/netcfg-uuid.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libuuid_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libsrc/lib64_libuuid_a-netcfg-uuid.obj -MD -MP -MF libsrc/$(DEPDIR)/lib64_libuuid_a-netcfg-uuid.Tpo -c -o libsrc/lib64_libuuid_a-netcfg-uuid.obj `if test -f 'libsrc/netcfg-uuid.c'; then $(CYGPATH_W) 'libsrc/netcfg-uuid.c'; else $(CYGPATH_W) '$(srcdir)/libsrc/netcfg-uuid.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libsrc/$(DEPDIR)/lib64_libuuid_a-netcfg-uuid.Tpo libsrc/$(DEPDIR)/lib64_libuuid_a-netcfg-uuid.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libsrc/netcfg-uuid.c' object='libsrc/lib64_libuuid_a-netcfg-uuid.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libuuid_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libsrc/lib64_libuuid_a-netcfg-uuid.obj `if test -f 'libsrc/netcfg-uuid.c'; then $(CYGPATH_W) 'libsrc/netcfg-uuid.c'; else $(CYGPATH_W) '$(srcdir)/libsrc/netcfg-uuid.c'; fi`
+
 libsrc/lib64_libuuid_a-netcon-uuid.o: libsrc/netcon-uuid.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libuuid_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libsrc/lib64_libuuid_a-netcon-uuid.o -MD -MP -MF libsrc/$(DEPDIR)/lib64_libuuid_a-netcon-uuid.Tpo -c -o libsrc/lib64_libuuid_a-netcon-uuid.o `test -f 'libsrc/netcon-uuid.c' || echo '$(srcdir)/'`libsrc/netcon-uuid.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libsrc/$(DEPDIR)/lib64_libuuid_a-netcon-uuid.Tpo libsrc/$(DEPDIR)/lib64_libuuid_a-netcon-uuid.Po
@@ -60977,6 +61025,20 @@ libsrc/libarm32_libuuid_a-msxml-uuid.obj: libsrc/msxml-uuid.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libuuid_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libsrc/libarm32_libuuid_a-msxml-uuid.obj `if test -f 'libsrc/msxml-uuid.c'; then $(CYGPATH_W) 'libsrc/msxml-uuid.c'; else $(CYGPATH_W) '$(srcdir)/libsrc/msxml-uuid.c'; fi`
 
+libsrc/libarm32_libuuid_a-netcfg-uuid.o: libsrc/netcfg-uuid.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libuuid_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libsrc/libarm32_libuuid_a-netcfg-uuid.o -MD -MP -MF libsrc/$(DEPDIR)/libarm32_libuuid_a-netcfg-uuid.Tpo -c -o libsrc/libarm32_libuuid_a-netcfg-uuid.o `test -f 'libsrc/netcfg-uuid.c' || echo '$(srcdir)/'`libsrc/netcfg-uuid.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libsrc/$(DEPDIR)/libarm32_libuuid_a-netcfg-uuid.Tpo libsrc/$(DEPDIR)/libarm32_libuuid_a-netcfg-uuid.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libsrc/netcfg-uuid.c' object='libsrc/libarm32_libuuid_a-netcfg-uuid.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libuuid_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libsrc/libarm32_libuuid_a-netcfg-uuid.o `test -f 'libsrc/netcfg-uuid.c' || echo '$(srcdir)/'`libsrc/netcfg-uuid.c
+
+libsrc/libarm32_libuuid_a-netcfg-uuid.obj: libsrc/netcfg-uuid.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libuuid_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libsrc/libarm32_libuuid_a-netcfg-uuid.obj -MD -MP -MF libsrc/$(DEPDIR)/libarm32_libuuid_a-netcfg-uuid.Tpo -c -o libsrc/libarm32_libuuid_a-netcfg-uuid.obj `if test -f 'libsrc/netcfg-uuid.c'; then $(CYGPATH_W) 'libsrc/netcfg-uuid.c'; else $(CYGPATH_W) '$(srcdir)/libsrc/netcfg-uuid.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libsrc/$(DEPDIR)/libarm32_libuuid_a-netcfg-uuid.Tpo libsrc/$(DEPDIR)/libarm32_libuuid_a-netcfg-uuid.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libsrc/netcfg-uuid.c' object='libsrc/libarm32_libuuid_a-netcfg-uuid.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libuuid_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libsrc/libarm32_libuuid_a-netcfg-uuid.obj `if test -f 'libsrc/netcfg-uuid.c'; then $(CYGPATH_W) 'libsrc/netcfg-uuid.c'; else $(CYGPATH_W) '$(srcdir)/libsrc/netcfg-uuid.c'; fi`
+
 libsrc/libarm32_libuuid_a-netcon-uuid.o: libsrc/netcon-uuid.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libuuid_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libsrc/libarm32_libuuid_a-netcon-uuid.o -MD -MP -MF libsrc/$(DEPDIR)/libarm32_libuuid_a-netcon-uuid.Tpo -c -o libsrc/libarm32_libuuid_a-netcon-uuid.o `test -f 'libsrc/netcon-uuid.c' || echo '$(srcdir)/'`libsrc/netcon-uuid.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libsrc/$(DEPDIR)/libarm32_libuuid_a-netcon-uuid.Tpo libsrc/$(DEPDIR)/libarm32_libuuid_a-netcon-uuid.Po
@@ -70245,6 +70307,20 @@ libsrc/libarm64_libuuid_a-msxml-uuid.obj: libsrc/msxml-uuid.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libuuid_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libsrc/libarm64_libuuid_a-msxml-uuid.obj `if test -f 'libsrc/msxml-uuid.c'; then $(CYGPATH_W) 'libsrc/msxml-uuid.c'; else $(CYGPATH_W) '$(srcdir)/libsrc/msxml-uuid.c'; fi`
 
+libsrc/libarm64_libuuid_a-netcfg-uuid.o: libsrc/netcfg-uuid.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libuuid_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libsrc/libarm64_libuuid_a-netcfg-uuid.o -MD -MP -MF libsrc/$(DEPDIR)/libarm64_libuuid_a-netcfg-uuid.Tpo -c -o libsrc/libarm64_libuuid_a-netcfg-uuid.o `test -f 'libsrc/netcfg-uuid.c' || echo '$(srcdir)/'`libsrc/netcfg-uuid.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libsrc/$(DEPDIR)/libarm64_libuuid_a-netcfg-uuid.Tpo libsrc/$(DEPDIR)/libarm64_libuuid_a-netcfg-uuid.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libsrc/netcfg-uuid.c' object='libsrc/libarm64_libuuid_a-netcfg-uuid.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libuuid_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libsrc/libarm64_libuuid_a-netcfg-uuid.o `test -f 'libsrc/netcfg-uuid.c' || echo '$(srcdir)/'`libsrc/netcfg-uuid.c
+
+libsrc/libarm64_libuuid_a-netcfg-uuid.obj: libsrc/netcfg-uuid.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libuuid_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libsrc/libarm64_libuuid_a-netcfg-uuid.obj -MD -MP -MF libsrc/$(DEPDIR)/libarm64_libuuid_a-netcfg-uuid.Tpo -c -o libsrc/libarm64_libuuid_a-netcfg-uuid.obj `if test -f 'libsrc/netcfg-uuid.c'; then $(CYGPATH_W) 'libsrc/netcfg-uuid.c'; else $(CYGPATH_W) '$(srcdir)/libsrc/netcfg-uuid.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libsrc/$(DEPDIR)/libarm64_libuuid_a-netcfg-uuid.Tpo libsrc/$(DEPDIR)/libarm64_libuuid_a-netcfg-uuid.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libsrc/netcfg-uuid.c' object='libsrc/libarm64_libuuid_a-netcfg-uuid.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libuuid_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libsrc/libarm64_libuuid_a-netcfg-uuid.obj `if test -f 'libsrc/netcfg-uuid.c'; then $(CYGPATH_W) 'libsrc/netcfg-uuid.c'; else $(CYGPATH_W) '$(srcdir)/libsrc/netcfg-uuid.c'; fi`
+
 libsrc/libarm64_libuuid_a-netcon-uuid.o: libsrc/netcon-uuid.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libuuid_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libsrc/libarm64_libuuid_a-netcon-uuid.o -MD -MP -MF libsrc/$(DEPDIR)/libarm64_libuuid_a-netcon-uuid.Tpo -c -o libsrc/libarm64_libuuid_a-netcon-uuid.o `test -f 'libsrc/netcon-uuid.c' || echo '$(srcdir)/'`libsrc/netcon-uuid.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libsrc/$(DEPDIR)/libarm64_libuuid_a-netcon-uuid.Tpo libsrc/$(DEPDIR)/libarm64_libuuid_a-netcon-uuid.Po
@@ -75585,6 +75661,7 @@ distclean: distclean-am
 	-rm -f libsrc/$(DEPDIR)/lib32_libuuid_a-mshtmhst-uuid.Po
 	-rm -f libsrc/$(DEPDIR)/lib32_libuuid_a-mshtml-uuid.Po
 	-rm -f libsrc/$(DEPDIR)/lib32_libuuid_a-msxml-uuid.Po
+	-rm -f libsrc/$(DEPDIR)/lib32_libuuid_a-netcfg-uuid.Po
 	-rm -f libsrc/$(DEPDIR)/lib32_libuuid_a-netcon-uuid.Po
 	-rm -f libsrc/$(DEPDIR)/lib32_libuuid_a-ntddkbd-uuid.Po
 	-rm -f libsrc/$(DEPDIR)/lib32_libuuid_a-ntddmou-uuid.Po
@@ -75664,6 +75741,7 @@ distclean: distclean-am
 	-rm -f libsrc/$(DEPDIR)/lib64_libuuid_a-mshtmhst-uuid.Po
 	-rm -f libsrc/$(DEPDIR)/lib64_libuuid_a-mshtml-uuid.Po
 	-rm -f libsrc/$(DEPDIR)/lib64_libuuid_a-msxml-uuid.Po
+	-rm -f libsrc/$(DEPDIR)/lib64_libuuid_a-netcfg-uuid.Po
 	-rm -f libsrc/$(DEPDIR)/lib64_libuuid_a-netcon-uuid.Po
 	-rm -f libsrc/$(DEPDIR)/lib64_libuuid_a-ntddkbd-uuid.Po
 	-rm -f libsrc/$(DEPDIR)/lib64_libuuid_a-ntddmou-uuid.Po
@@ -75742,6 +75820,7 @@ distclean: distclean-am
 	-rm -f libsrc/$(DEPDIR)/libarm32_libuuid_a-mshtmhst-uuid.Po
 	-rm -f libsrc/$(DEPDIR)/libarm32_libuuid_a-mshtml-uuid.Po
 	-rm -f libsrc/$(DEPDIR)/libarm32_libuuid_a-msxml-uuid.Po
+	-rm -f libsrc/$(DEPDIR)/libarm32_libuuid_a-netcfg-uuid.Po
 	-rm -f libsrc/$(DEPDIR)/libarm32_libuuid_a-netcon-uuid.Po
 	-rm -f libsrc/$(DEPDIR)/libarm32_libuuid_a-ntddkbd-uuid.Po
 	-rm -f libsrc/$(DEPDIR)/libarm32_libuuid_a-ntddmou-uuid.Po
@@ -75820,6 +75899,7 @@ distclean: distclean-am
 	-rm -f libsrc/$(DEPDIR)/libarm64_libuuid_a-mshtmhst-uuid.Po
 	-rm -f libsrc/$(DEPDIR)/libarm64_libuuid_a-mshtml-uuid.Po
 	-rm -f libsrc/$(DEPDIR)/libarm64_libuuid_a-msxml-uuid.Po
+	-rm -f libsrc/$(DEPDIR)/libarm64_libuuid_a-netcfg-uuid.Po
 	-rm -f libsrc/$(DEPDIR)/libarm64_libuuid_a-netcon-uuid.Po
 	-rm -f libsrc/$(DEPDIR)/libarm64_libuuid_a-ntddkbd-uuid.Po
 	-rm -f libsrc/$(DEPDIR)/libarm64_libuuid_a-ntddmou-uuid.Po
@@ -79076,6 +79156,7 @@ maintainer-clean: maintainer-clean-am
 	-rm -f libsrc/$(DEPDIR)/lib32_libuuid_a-mshtmhst-uuid.Po
 	-rm -f libsrc/$(DEPDIR)/lib32_libuuid_a-mshtml-uuid.Po
 	-rm -f libsrc/$(DEPDIR)/lib32_libuuid_a-msxml-uuid.Po
+	-rm -f libsrc/$(DEPDIR)/lib32_libuuid_a-netcfg-uuid.Po
 	-rm -f libsrc/$(DEPDIR)/lib32_libuuid_a-netcon-uuid.Po
 	-rm -f libsrc/$(DEPDIR)/lib32_libuuid_a-ntddkbd-uuid.Po
 	-rm -f libsrc/$(DEPDIR)/lib32_libuuid_a-ntddmou-uuid.Po
@@ -79155,6 +79236,7 @@ maintainer-clean: maintainer-clean-am
 	-rm -f libsrc/$(DEPDIR)/lib64_libuuid_a-mshtmhst-uuid.Po
 	-rm -f libsrc/$(DEPDIR)/lib64_libuuid_a-mshtml-uuid.Po
 	-rm -f libsrc/$(DEPDIR)/lib64_libuuid_a-msxml-uuid.Po
+	-rm -f libsrc/$(DEPDIR)/lib64_libuuid_a-netcfg-uuid.Po
 	-rm -f libsrc/$(DEPDIR)/lib64_libuuid_a-netcon-uuid.Po
 	-rm -f libsrc/$(DEPDIR)/lib64_libuuid_a-ntddkbd-uuid.Po
 	-rm -f libsrc/$(DEPDIR)/lib64_libuuid_a-ntddmou-uuid.Po
@@ -79233,6 +79315,7 @@ maintainer-clean: maintainer-clean-am
 	-rm -f libsrc/$(DEPDIR)/libarm32_libuuid_a-mshtmhst-uuid.Po
 	-rm -f libsrc/$(DEPDIR)/libarm32_libuuid_a-mshtml-uuid.Po
 	-rm -f libsrc/$(DEPDIR)/libarm32_libuuid_a-msxml-uuid.Po
+	-rm -f libsrc/$(DEPDIR)/libarm32_libuuid_a-netcfg-uuid.Po
 	-rm -f libsrc/$(DEPDIR)/libarm32_libuuid_a-netcon-uuid.Po
 	-rm -f libsrc/$(DEPDIR)/libarm32_libuuid_a-ntddkbd-uuid.Po
 	-rm -f libsrc/$(DEPDIR)/libarm32_libuuid_a-ntddmou-uuid.Po
@@ -79311,6 +79394,7 @@ maintainer-clean: maintainer-clean-am
 	-rm -f libsrc/$(DEPDIR)/libarm64_libuuid_a-mshtmhst-uuid.Po
 	-rm -f libsrc/$(DEPDIR)/libarm64_libuuid_a-mshtml-uuid.Po
 	-rm -f libsrc/$(DEPDIR)/libarm64_libuuid_a-msxml-uuid.Po
+	-rm -f libsrc/$(DEPDIR)/libarm64_libuuid_a-netcfg-uuid.Po
 	-rm -f libsrc/$(DEPDIR)/libarm64_libuuid_a-netcon-uuid.Po
 	-rm -f libsrc/$(DEPDIR)/libarm64_libuuid_a-ntddkbd-uuid.Po
 	-rm -f libsrc/$(DEPDIR)/libarm64_libuuid_a-ntddmou-uuid.Po
