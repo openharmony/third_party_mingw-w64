@@ -232,7 +232,7 @@ host_triplet = @host@
 @LIB32_TRUE@@W32API_FALSE@	lib32/libmsvcr120.a \
 @LIB32_TRUE@@W32API_FALSE@	lib32/libmsvcr120d.a \
 @LIB32_TRUE@@W32API_FALSE@	lib32/libmsvcr120_app.a \
-@LIB32_TRUE@@W32API_FALSE@	lib32/libucrtbase.a lib32/libucrt.a
+@LIB32_TRUE@@W32API_FALSE@	lib32/libucrtbase.a
 @LIB32_TRUE@@W32API_FALSE@am__append_8 = lib32/msvcrt.def lib32/msvcr80.def lib32/msvcr90.def lib32/msvcr90d.def lib32/msvcr100.def lib32/msvcr110.def lib32/msvcr120.def lib32/msvcr120d.def \
 @LIB32_TRUE@@W32API_FALSE@				  lib32/msvcr120_app.def lib32/msvcp120_app.def lib32/ucrtbase.def \
 @LIB32_TRUE@@W32API_FALSE@				  lib32/api-ms-win-crt-math-l1-1-0.def lib32/api-ms-win-crt-private-l1-1-0.def lib32/api-ms-win-crt-runtime-l1-1-0.def \
@@ -241,6 +241,7 @@ host_triplet = @host@
 @LIB32_TRUE@@W32API_FALSE@am__append_9 = lib32/libglut.a \
 @LIB32_TRUE@@W32API_FALSE@	lib32/libmsvcp60.a \
 @LIB32_TRUE@@W32API_FALSE@	lib32/libmsvcp120_app.a \
+@LIB32_TRUE@@W32API_FALSE@	lib32/libucrt.a \
 @LIB32_TRUE@@W32API_FALSE@	lib32/libvcruntime140_app.a
 @LIB32_TRUE@@W32API_FALSE@am__append_10 = lib32/libucrt_extra.a
 @LIB64_TRUE@@W32API_FALSE@am__append_11 = lib64/libmsvcrt.a
@@ -260,7 +261,7 @@ host_triplet = @host@
 @LIB64_TRUE@@W32API_FALSE@	lib64/libmsvcr120.a \
 @LIB64_TRUE@@W32API_FALSE@	lib64/libmsvcr120d.a \
 @LIB64_TRUE@@W32API_FALSE@	lib64/libmsvcr120_app.a \
-@LIB64_TRUE@@W32API_FALSE@	lib64/libucrtbase.a lib64/libucrt.a
+@LIB64_TRUE@@W32API_FALSE@	lib64/libucrtbase.a
 @LIB64_TRUE@@W32API_FALSE@am__append_14 = lib64/msvcrt.def lib64/msvcr80.def lib64/msvcr90.def lib64/msvcr90d.def \
 @LIB64_TRUE@@W32API_FALSE@				  lib64/msvcr100.def lib64/msvcr110.def lib64/msvcr120.def lib64/msvcr120d.def \
 @LIB64_TRUE@@W32API_FALSE@				  lib64/msvcr120_app.def lib64/msvcp120_app.def lib64/ucrtbase.def \
@@ -271,6 +272,7 @@ host_triplet = @host@
 
 @LIB64_TRUE@@W32API_FALSE@am__append_15 = lib64/libmsvcp60.a \
 @LIB64_TRUE@@W32API_FALSE@	lib64/libmsvcp120_app.a \
+@LIB64_TRUE@@W32API_FALSE@	lib64/libucrt.a \
 @LIB64_TRUE@@W32API_FALSE@	lib64/libvcruntime140_app.a
 @LIB64_TRUE@@W32API_FALSE@am__append_16 = lib64/libucrt_extra.a
 @LIBARM32_TRUE@@W32API_FALSE@am__append_17 = libarm32/libmsvcrt.a
@@ -291,8 +293,7 @@ host_triplet = @host@
 @LIBARM32_TRUE@@W32API_FALSE@	libarm32/libmingwthrd.a \
 @LIBARM32_TRUE@@W32API_FALSE@	libarm32/libmsvcr110.a \
 @LIBARM32_TRUE@@W32API_FALSE@	libarm32/libmsvcr120_app.a \
-@LIBARM32_TRUE@@W32API_FALSE@	libarm32/libucrtbase.a \
-@LIBARM32_TRUE@@W32API_FALSE@	libarm32/libucrt.a
+@LIBARM32_TRUE@@W32API_FALSE@	libarm32/libucrtbase.a
 @LIBARM32_TRUE@@W32API_FALSE@am__append_20 = libarm32/msvcrt.def libarm32/msvcr80.def libarm32/msvcr90.def libarm32/msvcr90d.def libarm32/msvcr100.def libarm32/msvcr110.def libarm32/msvcr120_app.def libarm32/ucrtbase.def \
 @LIBARM32_TRUE@@W32API_FALSE@				  libarm32/advapi32.def libarm32/clbcatq.def libarm32/kernel32.def libarm32/ole32.def libarm32/oleaut32.def \
 @LIBARM32_TRUE@@W32API_FALSE@				  libarm32/user32.def libarm32/ws2_32.def \
@@ -300,6 +301,7 @@ host_triplet = @host@
 @LIBARM32_TRUE@@W32API_FALSE@				  libarm32/vcruntime140_app.def
 
 @LIBARM32_TRUE@@W32API_FALSE@am__append_21 = libarm32/libmsvcp60.a \
+@LIBARM32_TRUE@@W32API_FALSE@	libarm32/libucrt.a \
 @LIBARM32_TRUE@@W32API_FALSE@	libarm32/libvcruntime140_app.a
 @LIBARM32_TRUE@@W32API_FALSE@am__append_22 = libarm32/libucrt_extra.a
 @LIBARM64_TRUE@@W32API_FALSE@am__append_23 = libarm64/libmsvcrt.a
@@ -318,16 +320,16 @@ host_triplet = @host@
 @LIBARM64_TRUE@@W32API_FALSE@	libarm64/libmingwex.a \
 @LIBARM64_TRUE@@W32API_FALSE@	libarm64/libmoldname.a \
 @LIBARM64_TRUE@@W32API_FALSE@	libarm64/libmingwthrd.a \
-@LIBARM64_TRUE@@W32API_FALSE@	libarm64/libucrtbase.a \
-@LIBARM64_TRUE@@W32API_FALSE@	libarm64/libucrt.a
+@LIBARM64_TRUE@@W32API_FALSE@	libarm64/libucrtbase.a
 @LIBARM64_TRUE@@W32API_FALSE@am__append_26 = libarm64/msvcrt.def libarm64/ucrtbase.def \
 @LIBARM64_TRUE@@W32API_FALSE@				  libarm64/advapi32.def libarm64/clbcatq.def libarm64/kernel32.def libarm64/ole32.def libarm64/oleaut32.def \
 @LIBARM64_TRUE@@W32API_FALSE@				  libarm64/user32.def libarm64/ws2_32.def \
 @LIBARM64_TRUE@@W32API_FALSE@				  libarm64/api-ms-win-crt-math-l1-1-0.def libarm64/api-ms-win-crt-private-l1-1-0.def libarm64/api-ms-win-crt-runtime-l1-1-0.def \
 @LIBARM64_TRUE@@W32API_FALSE@				  libarm64/vcruntime140_app.def
 
-@LIBARM64_TRUE@@W32API_FALSE@am__append_27 = libarm64/libucrt_extra.a
-@LIBARM64_TRUE@@W32API_FALSE@am__append_28 = libarm64/libvcruntime140_app.a
+@LIBARM64_TRUE@@W32API_FALSE@am__append_27 = libarm64/libucrt.a \
+@LIBARM64_TRUE@@W32API_FALSE@	libarm64/libvcruntime140_app.a
+@LIBARM64_TRUE@@W32API_FALSE@am__append_28 = libarm64/libucrt_extra.a
 @ENABLE_TESTS_UNICODE_TRUE@am__append_29 = testcases/t_municode testcases/t_tmain
 check_PROGRAMS = $(am__EXEEXT_2) $(am__EXEEXT_4) $(am__EXEEXT_6)
 TESTS = $(am__EXEEXT_2) $(am__EXEEXT_4) $(am__EXEEXT_6)
@@ -1667,10 +1669,6 @@ am__lib32_libtaskschd_a_SOURCES_DIST = libsrc/taskschd.c
 am__objects_45 = libsrc/lib32_libtaskschd_a-taskschd.$(OBJEXT)
 @LIB32_TRUE@am_lib32_libtaskschd_a_OBJECTS = $(am__objects_45)
 lib32_libtaskschd_a_OBJECTS = $(am_lib32_libtaskschd_a_OBJECTS)
-lib32_libucrt_a_AR = $(AR) $(ARFLAGS)
-lib32_libucrt_a_LIBADD =
-lib32_libucrt_a_SOURCES = lib32/libucrt.c
-lib32_libucrt_a_OBJECTS = lib32/libucrt.$(OBJEXT)
 lib32_libucrt_extra_a_AR = $(AR) $(ARFLAGS)
 lib32_libucrt_extra_a_LIBADD =
 am__lib32_libucrt_extra_a_SOURCES_DIST = crt/ucrtbase_compat.c \
@@ -3132,10 +3130,6 @@ am__lib64_libtaskschd_a_SOURCES_DIST = libsrc/taskschd.c
 am__objects_96 = libsrc/lib64_libtaskschd_a-taskschd.$(OBJEXT)
 @LIB64_TRUE@am_lib64_libtaskschd_a_OBJECTS = $(am__objects_96)
 lib64_libtaskschd_a_OBJECTS = $(am_lib64_libtaskschd_a_OBJECTS)
-lib64_libucrt_a_AR = $(AR) $(ARFLAGS)
-lib64_libucrt_a_LIBADD =
-lib64_libucrt_a_SOURCES = lib64/libucrt.c
-lib64_libucrt_a_OBJECTS = lib64/libucrt.$(OBJEXT)
 lib64_libucrt_extra_a_AR = $(AR) $(ARFLAGS)
 lib64_libucrt_extra_a_LIBADD =
 am__lib64_libucrt_extra_a_SOURCES_DIST = crt/ucrtbase_compat.c \
@@ -4438,10 +4432,6 @@ am__libarm32_libstrmiids_a_SOURCES_DIST = libsrc/strmiids.c
 am__objects_141 = libsrc/libarm32_libstrmiids_a-strmiids.$(OBJEXT)
 @LIBARM32_TRUE@am_libarm32_libstrmiids_a_OBJECTS = $(am__objects_141)
 libarm32_libstrmiids_a_OBJECTS = $(am_libarm32_libstrmiids_a_OBJECTS)
-libarm32_libucrt_a_AR = $(AR) $(ARFLAGS)
-libarm32_libucrt_a_LIBADD =
-libarm32_libucrt_a_SOURCES = libarm32/libucrt.c
-libarm32_libucrt_a_OBJECTS = libarm32/libucrt.$(OBJEXT)
 libarm32_libucrt_extra_a_AR = $(AR) $(ARFLAGS)
 libarm32_libucrt_extra_a_LIBADD =
 am__libarm32_libucrt_extra_a_SOURCES_DIST = crt/ucrtbase_compat.c \
@@ -5591,10 +5581,6 @@ am__libarm64_libstrmiids_a_SOURCES_DIST = libsrc/strmiids.c
 am__objects_179 = libsrc/libarm64_libstrmiids_a-strmiids.$(OBJEXT)
 @LIBARM64_TRUE@am_libarm64_libstrmiids_a_OBJECTS = $(am__objects_179)
 libarm64_libstrmiids_a_OBJECTS = $(am_libarm64_libstrmiids_a_OBJECTS)
-libarm64_libucrt_a_AR = $(AR) $(ARFLAGS)
-libarm64_libucrt_a_LIBADD =
-libarm64_libucrt_a_SOURCES = libarm64/libucrt.c
-libarm64_libucrt_a_OBJECTS = libarm64/libucrt.$(OBJEXT)
 libarm64_libucrt_extra_a_AR = $(AR) $(ARFLAGS)
 libarm64_libucrt_extra_a_LIBADD =
 am__libarm64_libucrt_extra_a_SOURCES_DIST = crt/ucrtbase_compat.c \
@@ -7201,8 +7187,6 @@ am__depfiles_remade = ./$(DEPDIR)/lib32_libm_a-_libm_dummy.Po \
 	intrincs/$(DEPDIR)/libarm64_libkernel32_a-writecr3.Po \
 	intrincs/$(DEPDIR)/libarm64_libkernel32_a-writecr4.Po \
 	intrincs/$(DEPDIR)/libarm64_libkernel32_a-writemsr.Po \
-	lib32/$(DEPDIR)/libucrt.Po lib64/$(DEPDIR)/libucrt.Po \
-	libarm32/$(DEPDIR)/libucrt.Po libarm64/$(DEPDIR)/libucrt.Po \
 	libsrc/$(DEPDIR)/lib32_libamstrmid_a-amstrmid.Po \
 	libsrc/$(DEPDIR)/lib32_libdinput8_a-dinput_joy.Po \
 	libsrc/$(DEPDIR)/lib32_libdinput8_a-dinput_joy2.Po \
@@ -9926,7 +9910,7 @@ SOURCES = $(lib32_libamstrmid_a_SOURCES) $(lib32_libcrtdll_a_SOURCES) \
 	$(lib32_libscrnsavw_a_SOURCES) \
 	$(lib32_libsensorsapi_a_SOURCES) $(lib32_libshell32_a_SOURCES) \
 	$(lib32_libstrmiids_a_SOURCES) $(lib32_libtaskschd_a_SOURCES) \
-	lib32/libucrt.c $(lib32_libucrt_extra_a_SOURCES) \
+	$(lib32_libucrt_extra_a_SOURCES) \
 	$(lib32_libucrtbase_a_SOURCES) $(lib32_libuuid_a_SOURCES) \
 	$(lib32_libwbemuuid_a_SOURCES) \
 	$(lib32_libwindowscodecs_a_SOURCES) \
@@ -9954,7 +9938,7 @@ SOURCES = $(lib32_libamstrmid_a_SOURCES) $(lib32_libcrtdll_a_SOURCES) \
 	$(lib64_libscrnsavw_a_SOURCES) \
 	$(lib64_libsensorsapi_a_SOURCES) $(lib64_libshell32_a_SOURCES) \
 	$(lib64_libstrmiids_a_SOURCES) $(lib64_libtaskschd_a_SOURCES) \
-	lib64/libucrt.c $(lib64_libucrt_extra_a_SOURCES) \
+	$(lib64_libucrt_extra_a_SOURCES) \
 	$(lib64_libucrtbase_a_SOURCES) $(lib64_libuuid_a_SOURCES) \
 	$(lib64_libwbemuuid_a_SOURCES) \
 	$(lib64_libwindowscodecs_a_SOURCES) \
@@ -9988,7 +9972,7 @@ SOURCES = $(lib32_libamstrmid_a_SOURCES) $(lib32_libcrtdll_a_SOURCES) \
 	$(libarm32_libscrnsavw_a_SOURCES) \
 	$(libarm32_libsensorsapi_a_SOURCES) \
 	$(libarm32_libshell32_a_SOURCES) \
-	$(libarm32_libstrmiids_a_SOURCES) libarm32/libucrt.c \
+	$(libarm32_libstrmiids_a_SOURCES) \
 	$(libarm32_libucrt_extra_a_SOURCES) \
 	$(libarm32_libucrtbase_a_SOURCES) \
 	$(libarm32_libuuid_a_SOURCES) \
@@ -10023,7 +10007,7 @@ SOURCES = $(lib32_libamstrmid_a_SOURCES) $(lib32_libcrtdll_a_SOURCES) \
 	$(libarm64_libscrnsavw_a_SOURCES) \
 	$(libarm64_libsensorsapi_a_SOURCES) \
 	$(libarm64_libshell32_a_SOURCES) \
-	$(libarm64_libstrmiids_a_SOURCES) libarm64/libucrt.c \
+	$(libarm64_libstrmiids_a_SOURCES) \
 	$(libarm64_libucrt_extra_a_SOURCES) \
 	$(libarm64_libucrtbase_a_SOURCES) \
 	$(libarm64_libuuid_a_SOURCES) \
@@ -10109,7 +10093,7 @@ DIST_SOURCES = $(am__lib32_libamstrmid_a_SOURCES_DIST) \
 	$(am__lib32_libsensorsapi_a_SOURCES_DIST) \
 	$(am__lib32_libshell32_a_SOURCES_DIST) \
 	$(am__lib32_libstrmiids_a_SOURCES_DIST) \
-	$(am__lib32_libtaskschd_a_SOURCES_DIST) lib32/libucrt.c \
+	$(am__lib32_libtaskschd_a_SOURCES_DIST) \
 	$(am__lib32_libucrt_extra_a_SOURCES_DIST) \
 	$(am__lib32_libucrtbase_a_SOURCES_DIST) \
 	$(am__lib32_libuuid_a_SOURCES_DIST) \
@@ -10154,7 +10138,7 @@ DIST_SOURCES = $(am__lib32_libamstrmid_a_SOURCES_DIST) \
 	$(am__lib64_libsensorsapi_a_SOURCES_DIST) \
 	$(am__lib64_libshell32_a_SOURCES_DIST) \
 	$(am__lib64_libstrmiids_a_SOURCES_DIST) \
-	$(am__lib64_libtaskschd_a_SOURCES_DIST) lib64/libucrt.c \
+	$(am__lib64_libtaskschd_a_SOURCES_DIST) \
 	$(am__lib64_libucrt_extra_a_SOURCES_DIST) \
 	$(am__lib64_libucrtbase_a_SOURCES_DIST) \
 	$(am__lib64_libuuid_a_SOURCES_DIST) \
@@ -10190,7 +10174,7 @@ DIST_SOURCES = $(am__lib32_libamstrmid_a_SOURCES_DIST) \
 	$(am__libarm32_libscrnsavw_a_SOURCES_DIST) \
 	$(am__libarm32_libsensorsapi_a_SOURCES_DIST) \
 	$(am__libarm32_libshell32_a_SOURCES_DIST) \
-	$(am__libarm32_libstrmiids_a_SOURCES_DIST) libarm32/libucrt.c \
+	$(am__libarm32_libstrmiids_a_SOURCES_DIST) \
 	$(am__libarm32_libucrt_extra_a_SOURCES_DIST) \
 	$(am__libarm32_libucrtbase_a_SOURCES_DIST) \
 	$(am__libarm32_libuuid_a_SOURCES_DIST) \
@@ -10224,7 +10208,7 @@ DIST_SOURCES = $(am__lib32_libamstrmid_a_SOURCES_DIST) \
 	$(am__libarm64_libscrnsavw_a_SOURCES_DIST) \
 	$(am__libarm64_libsensorsapi_a_SOURCES_DIST) \
 	$(am__libarm64_libshell32_a_SOURCES_DIST) \
-	$(am__libarm64_libstrmiids_a_SOURCES_DIST) libarm64/libucrt.c \
+	$(am__libarm64_libstrmiids_a_SOURCES_DIST) \
 	$(am__libarm64_libucrt_extra_a_SOURCES_DIST) \
 	$(am__libarm64_libucrtbase_a_SOURCES_DIST) \
 	$(am__libarm64_libuuid_a_SOURCES_DIST) \
@@ -10692,7 +10676,7 @@ extra_include = -I$(top_srcdir)/include
 processed_defs = $(am__append_8) $(am__append_14) $(am__append_20) \
 	$(am__append_26)
 noinst_LIBRARIES = $(am__append_10) $(am__append_16) $(am__append_22) \
-	$(am__append_27)
+	$(am__append_28)
 
 # default directx import library names
 xinput = xinput1_3
@@ -12987,7 +12971,7 @@ src_intrincsarm64 =
 @LIBARM64_TRUE@	libarm64/libwshbth.a libarm64/libwslapi.a \
 @LIBARM64_TRUE@	libarm64/libwsock32.a libarm64/libwtsapi32.a \
 @LIBARM64_TRUE@	libarm64/libxaudio2_8.a libarm64/libxinput1_4.a \
-@LIBARM64_TRUE@	$(am__append_28)
+@LIBARM64_TRUE@	$(am__append_27)
 @LIBARM64_TRUE@@W32API_FALSE@libarm64_libmsvcrt_os_a_SOURCES = $(src_msvcrtarm64) lib-common/msvcrt.def.in
 @LIBARM64_TRUE@@W32API_FALSE@libarm64_libmsvcrt_os_a_AR = $(DTDEFARM64) libarm64/msvcrt.def && $(AR) $(ARFLAGS)
 @LIBARM64_TRUE@@W32API_FALSE@libarm64_libmsvcrt_os_a_CPPFLAGS = $(CPPFLAGSARM64) -D__LIBMSVCRT__ $(extra_include) $(sysincludes)
@@ -15368,16 +15352,6 @@ lib32/libtaskschd.a: $(lib32_libtaskschd_a_OBJECTS) $(lib32_libtaskschd_a_DEPEND
 	$(AM_V_at)-rm -f lib32/libtaskschd.a
 	$(AM_V_AR)$(lib32_libtaskschd_a_AR) lib32/libtaskschd.a $(lib32_libtaskschd_a_OBJECTS) $(lib32_libtaskschd_a_LIBADD)
 	$(AM_V_at)$(RANLIB) lib32/libtaskschd.a
-lib32/$(DEPDIR)/$(am__dirstamp):
-	@$(MKDIR_P) lib32/$(DEPDIR)
-	@: > lib32/$(DEPDIR)/$(am__dirstamp)
-lib32/libucrt.$(OBJEXT): lib32/$(am__dirstamp) \
-	lib32/$(DEPDIR)/$(am__dirstamp)
-
-@LIB32_FALSE@lib32/libucrt.a: $(lib32_libucrt_a_OBJECTS) $(lib32_libucrt_a_DEPENDENCIES) $(EXTRA_lib32_libucrt_a_DEPENDENCIES) lib32/$(am__dirstamp)
-@LIB32_FALSE@	$(AM_V_at)-rm -f lib32/libucrt.a
-@LIB32_FALSE@	$(AM_V_AR)$(lib32_libucrt_a_AR) lib32/libucrt.a $(lib32_libucrt_a_OBJECTS) $(lib32_libucrt_a_LIBADD)
-@LIB32_FALSE@	$(AM_V_at)$(RANLIB) lib32/libucrt.a
 crt/lib32_libucrt_extra_a-ucrtbase_compat.$(OBJEXT):  \
 	crt/$(am__dirstamp) crt/$(DEPDIR)/$(am__dirstamp)
 stdio/lib32_libucrt_extra_a-ucrt_fprintf.$(OBJEXT):  \
@@ -17415,16 +17389,6 @@ lib64/libtaskschd.a: $(lib64_libtaskschd_a_OBJECTS) $(lib64_libtaskschd_a_DEPEND
 	$(AM_V_at)-rm -f lib64/libtaskschd.a
 	$(AM_V_AR)$(lib64_libtaskschd_a_AR) lib64/libtaskschd.a $(lib64_libtaskschd_a_OBJECTS) $(lib64_libtaskschd_a_LIBADD)
 	$(AM_V_at)$(RANLIB) lib64/libtaskschd.a
-lib64/$(DEPDIR)/$(am__dirstamp):
-	@$(MKDIR_P) lib64/$(DEPDIR)
-	@: > lib64/$(DEPDIR)/$(am__dirstamp)
-lib64/libucrt.$(OBJEXT): lib64/$(am__dirstamp) \
-	lib64/$(DEPDIR)/$(am__dirstamp)
-
-@LIB64_FALSE@lib64/libucrt.a: $(lib64_libucrt_a_OBJECTS) $(lib64_libucrt_a_DEPENDENCIES) $(EXTRA_lib64_libucrt_a_DEPENDENCIES) lib64/$(am__dirstamp)
-@LIB64_FALSE@	$(AM_V_at)-rm -f lib64/libucrt.a
-@LIB64_FALSE@	$(AM_V_AR)$(lib64_libucrt_a_AR) lib64/libucrt.a $(lib64_libucrt_a_OBJECTS) $(lib64_libucrt_a_LIBADD)
-@LIB64_FALSE@	$(AM_V_at)$(RANLIB) lib64/libucrt.a
 crt/lib64_libucrt_extra_a-ucrtbase_compat.$(OBJEXT):  \
 	crt/$(am__dirstamp) crt/$(DEPDIR)/$(am__dirstamp)
 stdio/lib64_libucrt_extra_a-ucrt_fprintf.$(OBJEXT):  \
@@ -19331,16 +19295,6 @@ libarm32/libstrmiids.a: $(libarm32_libstrmiids_a_OBJECTS) $(libarm32_libstrmiids
 	$(AM_V_at)-rm -f libarm32/libstrmiids.a
 	$(AM_V_AR)$(libarm32_libstrmiids_a_AR) libarm32/libstrmiids.a $(libarm32_libstrmiids_a_OBJECTS) $(libarm32_libstrmiids_a_LIBADD)
 	$(AM_V_at)$(RANLIB) libarm32/libstrmiids.a
-libarm32/$(DEPDIR)/$(am__dirstamp):
-	@$(MKDIR_P) libarm32/$(DEPDIR)
-	@: > libarm32/$(DEPDIR)/$(am__dirstamp)
-libarm32/libucrt.$(OBJEXT): libarm32/$(am__dirstamp) \
-	libarm32/$(DEPDIR)/$(am__dirstamp)
-
-@LIBARM32_FALSE@libarm32/libucrt.a: $(libarm32_libucrt_a_OBJECTS) $(libarm32_libucrt_a_DEPENDENCIES) $(EXTRA_libarm32_libucrt_a_DEPENDENCIES) libarm32/$(am__dirstamp)
-@LIBARM32_FALSE@	$(AM_V_at)-rm -f libarm32/libucrt.a
-@LIBARM32_FALSE@	$(AM_V_AR)$(libarm32_libucrt_a_AR) libarm32/libucrt.a $(libarm32_libucrt_a_OBJECTS) $(libarm32_libucrt_a_LIBADD)
-@LIBARM32_FALSE@	$(AM_V_at)$(RANLIB) libarm32/libucrt.a
 crt/libarm32_libucrt_extra_a-ucrtbase_compat.$(OBJEXT):  \
 	crt/$(am__dirstamp) crt/$(DEPDIR)/$(am__dirstamp)
 stdio/libarm32_libucrt_extra_a-ucrt_fprintf.$(OBJEXT):  \
@@ -20965,16 +20919,6 @@ libarm64/libstrmiids.a: $(libarm64_libstrmiids_a_OBJECTS) $(libarm64_libstrmiids
 	$(AM_V_at)-rm -f libarm64/libstrmiids.a
 	$(AM_V_AR)$(libarm64_libstrmiids_a_AR) libarm64/libstrmiids.a $(libarm64_libstrmiids_a_OBJECTS) $(libarm64_libstrmiids_a_LIBADD)
 	$(AM_V_at)$(RANLIB) libarm64/libstrmiids.a
-libarm64/$(DEPDIR)/$(am__dirstamp):
-	@$(MKDIR_P) libarm64/$(DEPDIR)
-	@: > libarm64/$(DEPDIR)/$(am__dirstamp)
-libarm64/libucrt.$(OBJEXT): libarm64/$(am__dirstamp) \
-	libarm64/$(DEPDIR)/$(am__dirstamp)
-
-@LIBARM64_FALSE@libarm64/libucrt.a: $(libarm64_libucrt_a_OBJECTS) $(libarm64_libucrt_a_DEPENDENCIES) $(EXTRA_libarm64_libucrt_a_DEPENDENCIES) libarm64/$(am__dirstamp)
-@LIBARM64_FALSE@	$(AM_V_at)-rm -f libarm64/libucrt.a
-@LIBARM64_FALSE@	$(AM_V_AR)$(libarm64_libucrt_a_AR) libarm64/libucrt.a $(libarm64_libucrt_a_OBJECTS) $(libarm64_libucrt_a_LIBADD)
-@LIBARM64_FALSE@	$(AM_V_at)$(RANLIB) libarm64/libucrt.a
 crt/libarm64_libucrt_extra_a-ucrtbase_compat.$(OBJEXT):  \
 	crt/$(am__dirstamp) crt/$(DEPDIR)/$(am__dirstamp)
 stdio/libarm64_libucrt_extra_a-ucrt_fprintf.$(OBJEXT):  \
@@ -22173,10 +22117,6 @@ mostlyclean-compile:
 	-rm -f crt/*.$(OBJEXT)
 	-rm -f gdtoa/*.$(OBJEXT)
 	-rm -f intrincs/*.$(OBJEXT)
-	-rm -f lib32/*.$(OBJEXT)
-	-rm -f lib64/*.$(OBJEXT)
-	-rm -f libarm32/*.$(OBJEXT)
-	-rm -f libarm64/*.$(OBJEXT)
 	-rm -f libsrc/*.$(OBJEXT)
 	-rm -f libsrc/ws2tcpip/*.$(OBJEXT)
 	-rm -f libsrc/wspiapi/*.$(OBJEXT)
@@ -22930,10 +22870,6 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@intrincs/$(DEPDIR)/libarm64_libkernel32_a-writecr3.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@intrincs/$(DEPDIR)/libarm64_libkernel32_a-writecr4.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@intrincs/$(DEPDIR)/libarm64_libkernel32_a-writemsr.Po@am__quote@ # am--include-marker
-@AMDEP_TRUE@@am__include@ @am__quote@lib32/$(DEPDIR)/libucrt.Po@am__quote@ # am--include-marker
-@AMDEP_TRUE@@am__include@ @am__quote@lib64/$(DEPDIR)/libucrt.Po@am__quote@ # am--include-marker
-@AMDEP_TRUE@@am__include@ @am__quote@libarm32/$(DEPDIR)/libucrt.Po@am__quote@ # am--include-marker
-@AMDEP_TRUE@@am__include@ @am__quote@libarm64/$(DEPDIR)/libucrt.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/lib32_libamstrmid_a-amstrmid.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/lib32_libdinput8_a-dinput_joy.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/lib32_libdinput8_a-dinput_joy2.Po@am__quote@ # am--include-marker
@@ -74044,13 +73980,9 @@ distclean-generic:
 	-rm -f gdtoa/$(am__dirstamp)
 	-rm -f intrincs/$(DEPDIR)/$(am__dirstamp)
 	-rm -f intrincs/$(am__dirstamp)
-	-rm -f lib32/$(DEPDIR)/$(am__dirstamp)
 	-rm -f lib32/$(am__dirstamp)
-	-rm -f lib64/$(DEPDIR)/$(am__dirstamp)
 	-rm -f lib64/$(am__dirstamp)
-	-rm -f libarm32/$(DEPDIR)/$(am__dirstamp)
 	-rm -f libarm32/$(am__dirstamp)
-	-rm -f libarm64/$(DEPDIR)/$(am__dirstamp)
 	-rm -f libarm64/$(am__dirstamp)
 	-rm -f libsrc/$(DEPDIR)/$(am__dirstamp)
 	-rm -f libsrc/$(am__dirstamp)
@@ -74833,10 +74765,6 @@ distclean: distclean-am
 	-rm -f intrincs/$(DEPDIR)/libarm64_libkernel32_a-writecr3.Po
 	-rm -f intrincs/$(DEPDIR)/libarm64_libkernel32_a-writecr4.Po
 	-rm -f intrincs/$(DEPDIR)/libarm64_libkernel32_a-writemsr.Po
-	-rm -f lib32/$(DEPDIR)/libucrt.Po
-	-rm -f lib64/$(DEPDIR)/libucrt.Po
-	-rm -f libarm32/$(DEPDIR)/libucrt.Po
-	-rm -f libarm64/$(DEPDIR)/libucrt.Po
 	-rm -f libsrc/$(DEPDIR)/lib32_libamstrmid_a-amstrmid.Po
 	-rm -f libsrc/$(DEPDIR)/lib32_libdinput8_a-dinput_joy.Po
 	-rm -f libsrc/$(DEPDIR)/lib32_libdinput8_a-dinput_joy2.Po
@@ -78288,10 +78216,6 @@ maintainer-clean: maintainer-clean-am
 	-rm -f intrincs/$(DEPDIR)/libarm64_libkernel32_a-writecr3.Po
 	-rm -f intrincs/$(DEPDIR)/libarm64_libkernel32_a-writecr4.Po
 	-rm -f intrincs/$(DEPDIR)/libarm64_libkernel32_a-writemsr.Po
-	-rm -f lib32/$(DEPDIR)/libucrt.Po
-	-rm -f lib64/$(DEPDIR)/libucrt.Po
-	-rm -f libarm32/$(DEPDIR)/libucrt.Po
-	-rm -f libarm64/$(DEPDIR)/libucrt.Po
 	-rm -f libsrc/$(DEPDIR)/lib32_libamstrmid_a-amstrmid.Po
 	-rm -f libsrc/$(DEPDIR)/lib32_libdinput8_a-dinput_joy.Po
 	-rm -f libsrc/$(DEPDIR)/lib32_libdinput8_a-dinput_joy2.Po
@@ -81049,16 +80973,6 @@ _libm_dummy.c:
 @LIB32_TRUE@lib32/lib%.a: lib-common/%.def
 @LIB32_TRUE@	$(DTDEF32) $<
 
-@LIB32_TRUE@lib32/libucrt.a: lib32/ucrt.mri lib32/libucrt_extra.a \
-@LIB32_TRUE@		lib32/libapi-ms-win-crt-conio-l1-1-0.a lib32/libapi-ms-win-crt-convert-l1-1-0.a lib32/libapi-ms-win-crt-environment-l1-1-0.a \
-@LIB32_TRUE@		lib32/libapi-ms-win-crt-filesystem-l1-1-0.a lib32/libapi-ms-win-crt-heap-l1-1-0.a lib32/libapi-ms-win-crt-locale-l1-1-0.a \
-@LIB32_TRUE@		lib32/libapi-ms-win-crt-math-l1-1-0.a lib32/libapi-ms-win-crt-multibyte-l1-1-0.a lib32/libapi-ms-win-crt-private-l1-1-0.a \
-@LIB32_TRUE@		lib32/libapi-ms-win-crt-process-l1-1-0.a lib32/libapi-ms-win-crt-runtime-l1-1-0.a lib32/libapi-ms-win-crt-stdio-l1-1-0.a \
-@LIB32_TRUE@		lib32/libapi-ms-win-crt-string-l1-1-0.a lib32/libapi-ms-win-crt-time-l1-1-0.a lib32/libapi-ms-win-crt-utility-l1-1-0.a
-@LIB32_TRUE@	rm -f $@
-@LIB32_TRUE@	$(AR) -M < $<
-@LIB32_TRUE@	$(RANLIB) $@
-
 @LIB32_TRUE@lib32/libxinput.a: lib32/$(xinput).def
 @LIB32_TRUE@	$(DTDEF32) $<
 @LIB32_TRUE@lib32/libxapofx.a: lib32/$(xapofx).def
@@ -81105,16 +81019,6 @@ _libm_dummy.c:
 
 @LIB64_TRUE@lib64/lib%.a: lib-common/%.def
 @LIB64_TRUE@	$(DTDEF64) $<
-
-@LIB64_TRUE@lib64/libucrt.a: lib64/ucrt.mri lib64/libucrt_extra.a \
-@LIB64_TRUE@		lib64/libapi-ms-win-crt-conio-l1-1-0.a lib64/libapi-ms-win-crt-convert-l1-1-0.a lib64/libapi-ms-win-crt-environment-l1-1-0.a \
-@LIB64_TRUE@		lib64/libapi-ms-win-crt-filesystem-l1-1-0.a lib64/libapi-ms-win-crt-heap-l1-1-0.a lib64/libapi-ms-win-crt-locale-l1-1-0.a \
-@LIB64_TRUE@		lib64/libapi-ms-win-crt-math-l1-1-0.a lib64/libapi-ms-win-crt-multibyte-l1-1-0.a lib64/libapi-ms-win-crt-private-l1-1-0.a \
-@LIB64_TRUE@		lib64/libapi-ms-win-crt-process-l1-1-0.a lib64/libapi-ms-win-crt-runtime-l1-1-0.a lib64/libapi-ms-win-crt-stdio-l1-1-0.a \
-@LIB64_TRUE@		lib64/libapi-ms-win-crt-string-l1-1-0.a lib64/libapi-ms-win-crt-time-l1-1-0.a lib64/libapi-ms-win-crt-utility-l1-1-0.a
-@LIB64_TRUE@	rm -f $@
-@LIB64_TRUE@	$(AR) -M < $<
-@LIB64_TRUE@	$(RANLIB) $@
 
 @LIB64_TRUE@lib64/libxinput.a: lib64/$(xinput).def
 @LIB64_TRUE@	$(DTDEF64) $<
@@ -81163,16 +81067,6 @@ _libm_dummy.c:
 @LIBARM32_TRUE@libarm32/lib%.a: lib-common/%.def
 @LIBARM32_TRUE@	$(DTDEFARM32) $<
 
-@LIBARM32_TRUE@libarm32/libucrt.a: libarm32/ucrt.mri libarm32/libucrt_extra.a \
-@LIBARM32_TRUE@		libarm32/libapi-ms-win-crt-conio-l1-1-0.a libarm32/libapi-ms-win-crt-convert-l1-1-0.a libarm32/libapi-ms-win-crt-environment-l1-1-0.a \
-@LIBARM32_TRUE@		libarm32/libapi-ms-win-crt-filesystem-l1-1-0.a libarm32/libapi-ms-win-crt-heap-l1-1-0.a libarm32/libapi-ms-win-crt-locale-l1-1-0.a \
-@LIBARM32_TRUE@		libarm32/libapi-ms-win-crt-math-l1-1-0.a libarm32/libapi-ms-win-crt-multibyte-l1-1-0.a libarm32/libapi-ms-win-crt-private-l1-1-0.a \
-@LIBARM32_TRUE@		libarm32/libapi-ms-win-crt-process-l1-1-0.a libarm32/libapi-ms-win-crt-runtime-l1-1-0.a libarm32/libapi-ms-win-crt-stdio-l1-1-0.a \
-@LIBARM32_TRUE@		libarm32/libapi-ms-win-crt-string-l1-1-0.a libarm32/libapi-ms-win-crt-time-l1-1-0.a libarm32/libapi-ms-win-crt-utility-l1-1-0.a
-@LIBARM32_TRUE@	rm -f $@
-@LIBARM32_TRUE@	$(AR) -M < $<
-@LIBARM32_TRUE@	$(RANLIB) $@
-
 @LIBARM32_TRUE@libarm32/libxinput.a: lib-common/xinput1_4.def
 @LIBARM32_TRUE@	$(DTDEFARM32) $<
 @LIBARM32_TRUE@libarm32/libd3dcompiler.a: lib-common/d3dcompiler_47.def
@@ -81207,16 +81101,6 @@ _libm_dummy.c:
 
 @LIBARM64_TRUE@libarm64/lib%.a: lib-common/%.def
 @LIBARM64_TRUE@	$(DTDEFARM64) $<
-
-@LIBARM64_TRUE@libarm64/libucrt.a: libarm64/ucrt.mri libarm64/libucrt_extra.a \
-@LIBARM64_TRUE@		libarm64/libapi-ms-win-crt-conio-l1-1-0.a libarm64/libapi-ms-win-crt-convert-l1-1-0.a libarm64/libapi-ms-win-crt-environment-l1-1-0.a \
-@LIBARM64_TRUE@		libarm64/libapi-ms-win-crt-filesystem-l1-1-0.a libarm64/libapi-ms-win-crt-heap-l1-1-0.a libarm64/libapi-ms-win-crt-locale-l1-1-0.a \
-@LIBARM64_TRUE@		libarm64/libapi-ms-win-crt-math-l1-1-0.a libarm64/libapi-ms-win-crt-multibyte-l1-1-0.a libarm64/libapi-ms-win-crt-private-l1-1-0.a \
-@LIBARM64_TRUE@		libarm64/libapi-ms-win-crt-process-l1-1-0.a libarm64/libapi-ms-win-crt-runtime-l1-1-0.a libarm64/libapi-ms-win-crt-stdio-l1-1-0.a \
-@LIBARM64_TRUE@		libarm64/libapi-ms-win-crt-string-l1-1-0.a libarm64/libapi-ms-win-crt-time-l1-1-0.a libarm64/libapi-ms-win-crt-utility-l1-1-0.a
-@LIBARM64_TRUE@	rm -f $@
-@LIBARM64_TRUE@	$(AR) -M < $<
-@LIBARM64_TRUE@	$(RANLIB) $@
 
 @LIBARM64_TRUE@libarm64/libxinput.a: lib-common/xinput1_4.def
 @LIBARM64_TRUE@	$(DTDEFARM64) $<
@@ -81526,6 +81410,16 @@ _libm_dummy.c:
 		%/libmsvfw32.a \
 		%/libavifil32.a \
 		%/libavicap32.a
+	rm -f $@
+	cd $(dir $@) && $(AR) -M < $(abspath $<)
+	$(RANLIB) $@
+
+%/libucrt.a: lib-common/ucrt.mri %/libucrt_extra.a \
+		%/libapi-ms-win-crt-conio-l1-1-0.a %/libapi-ms-win-crt-convert-l1-1-0.a %/libapi-ms-win-crt-environment-l1-1-0.a \
+		%/libapi-ms-win-crt-filesystem-l1-1-0.a %/libapi-ms-win-crt-heap-l1-1-0.a %/libapi-ms-win-crt-locale-l1-1-0.a \
+		%/libapi-ms-win-crt-math-l1-1-0.a %/libapi-ms-win-crt-multibyte-l1-1-0.a %/libapi-ms-win-crt-private-l1-1-0.a \
+		%/libapi-ms-win-crt-process-l1-1-0.a %/libapi-ms-win-crt-runtime-l1-1-0.a %/libapi-ms-win-crt-stdio-l1-1-0.a \
+		%/libapi-ms-win-crt-string-l1-1-0.a %/libapi-ms-win-crt-time-l1-1-0.a %/libapi-ms-win-crt-utility-l1-1-0.a
 	rm -f $@
 	cd $(dir $@) && $(AR) -M < $(abspath $<)
 	$(RANLIB) $@
