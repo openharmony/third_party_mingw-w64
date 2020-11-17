@@ -4307,26 +4307,27 @@ am__libarm32_libmsvcrt_os_a_SOURCES_DIST = misc/mbrtowc.c \
 	secapi/wmemmove_s.c stdio/fseeki64.c stdio/mingw_lock.c \
 	misc/__p___argv.c misc/__p__acmdln.c misc/__p__commode.c \
 	misc/__p__fmode.c misc/__p__wcmdln.c misc/_getpid.c \
-	stdio/_setmaxstdio.c stdio/gets.c math/arm/exp2.S \
-	math/arm/exp2f.S math/arm/nearbyint.S math/arm/nearbyintf.S \
-	math/arm/nearbyintl.S math/arm/s_trunc.c math/arm/s_truncf.c \
-	math/arm-common/acosh.c math/arm-common/acoshf.c \
-	math/arm-common/acoshl.c math/arm-common/asinh.c \
-	math/arm-common/asinhf.c math/arm-common/asinhl.c \
-	math/arm-common/atanh.c math/arm-common/atanhf.c \
-	math/arm-common/atanhl.c math/arm-common/copysignl.c \
-	math/arm-common/expm1.c math/arm-common/expm1f.c \
-	math/arm-common/expm1l.c math/arm-common/ilogb.c \
-	math/arm-common/ilogbf.c math/arm-common/ilogbl.c \
-	math/arm-common/log1p.c math/arm-common/log1pf.c \
-	math/arm-common/log1pl.c math/arm-common/log2.c \
-	math/arm-common/logb.c math/arm-common/logbf.c \
-	math/arm-common/logbl.c math/arm-common/pow.c \
-	math/arm-common/powf.c math/arm-common/powl.c \
-	math/arm-common/remainder.c math/arm-common/remainderf.c \
-	math/arm-common/remainderl.c math/arm-common/remquol.c \
-	math/arm-common/s_remquo.c math/arm-common/s_remquof.c \
-	math/arm-common/scalbn.c lib-common/msvcrt.def.in
+	misc/initenv.c stdio/_setmaxstdio.c stdio/gets.c \
+	math/arm/exp2.S math/arm/exp2f.S math/arm/nearbyint.S \
+	math/arm/nearbyintf.S math/arm/nearbyintl.S math/arm/s_trunc.c \
+	math/arm/s_truncf.c math/arm-common/acosh.c \
+	math/arm-common/acoshf.c math/arm-common/acoshl.c \
+	math/arm-common/asinh.c math/arm-common/asinhf.c \
+	math/arm-common/asinhl.c math/arm-common/atanh.c \
+	math/arm-common/atanhf.c math/arm-common/atanhl.c \
+	math/arm-common/copysignl.c math/arm-common/expm1.c \
+	math/arm-common/expm1f.c math/arm-common/expm1l.c \
+	math/arm-common/ilogb.c math/arm-common/ilogbf.c \
+	math/arm-common/ilogbl.c math/arm-common/log1p.c \
+	math/arm-common/log1pf.c math/arm-common/log1pl.c \
+	math/arm-common/log2.c math/arm-common/logb.c \
+	math/arm-common/logbf.c math/arm-common/logbl.c \
+	math/arm-common/pow.c math/arm-common/powf.c \
+	math/arm-common/powl.c math/arm-common/remainder.c \
+	math/arm-common/remainderf.c math/arm-common/remainderl.c \
+	math/arm-common/remquol.c math/arm-common/s_remquo.c \
+	math/arm-common/s_remquof.c math/arm-common/scalbn.c \
+	lib-common/msvcrt.def.in
 am__objects_133 = misc/libarm32_libmsvcrt_os_a-mbrtowc.$(OBJEXT) \
 	misc/libarm32_libmsvcrt_os_a-mbsinit.$(OBJEXT) \
 	misc/libarm32_libmsvcrt_os_a-onexit_table.$(OBJEXT) \
@@ -4437,6 +4438,7 @@ am__objects_136 = $(am__objects_134) \
 	misc/libarm32_libmsvcrt_os_a-__p__fmode.$(OBJEXT) \
 	misc/libarm32_libmsvcrt_os_a-__p__wcmdln.$(OBJEXT) \
 	misc/libarm32_libmsvcrt_os_a-_getpid.$(OBJEXT) \
+	misc/libarm32_libmsvcrt_os_a-initenv.$(OBJEXT) \
 	stdio/libarm32_libmsvcrt_os_a-_setmaxstdio.$(OBJEXT) \
 	stdio/libarm32_libmsvcrt_os_a-gets.$(OBJEXT) \
 	$(am__objects_135)
@@ -5504,7 +5506,8 @@ am__libarm64_libmsvcrt_os_a_SOURCES_DIST = misc/mbrtowc.c \
 	math/arm64/nearbyintl.S math/arm64/trunc.S math/arm64/truncf.S \
 	misc/__p___argv.c misc/__p__acmdln.c misc/__p__commode.c \
 	misc/__p__fmode.c misc/__p__wcmdln.c misc/_getpid.c \
-	stdio/_setmaxstdio.c stdio/gets.c lib-common/msvcrt.def.in
+	misc/initenv.c stdio/_setmaxstdio.c stdio/gets.c \
+	lib-common/msvcrt.def.in
 am__objects_173 = misc/libarm64_libmsvcrt_os_a-mbrtowc.$(OBJEXT) \
 	misc/libarm64_libmsvcrt_os_a-mbsinit.$(OBJEXT) \
 	misc/libarm64_libmsvcrt_os_a-onexit_table.$(OBJEXT) \
@@ -5615,6 +5618,7 @@ am__objects_175 = $(am__objects_174) \
 	misc/libarm64_libmsvcrt_os_a-__p__fmode.$(OBJEXT) \
 	misc/libarm64_libmsvcrt_os_a-__p__wcmdln.$(OBJEXT) \
 	misc/libarm64_libmsvcrt_os_a-_getpid.$(OBJEXT) \
+	misc/libarm64_libmsvcrt_os_a-initenv.$(OBJEXT) \
 	stdio/libarm64_libmsvcrt_os_a-_setmaxstdio.$(OBJEXT) \
 	stdio/libarm64_libmsvcrt_os_a-gets.$(OBJEXT)
 @LIBARM64_TRUE@@W32API_FALSE@am_libarm64_libmsvcrt_os_a_OBJECTS =  \
@@ -8982,6 +8986,7 @@ am__depfiles_remade = ./$(DEPDIR)/lib32_libm_a-_libm_dummy.Po \
 	misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-__p__wcmdln.Po \
 	misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-_configthreadlocale.Po \
 	misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-_getpid.Po \
+	misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-initenv.Po \
 	misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-invalid_parameter_handler.Po \
 	misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-mbrtowc.Po \
 	misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-mbsinit.Po \
@@ -9074,6 +9079,7 @@ am__depfiles_remade = ./$(DEPDIR)/lib32_libm_a-_libm_dummy.Po \
 	misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-__p__wcmdln.Po \
 	misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-_configthreadlocale.Po \
 	misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-_getpid.Po \
+	misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-initenv.Po \
 	misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-invalid_parameter_handler.Po \
 	misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-mbrtowc.Po \
 	misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-mbsinit.Po \
@@ -11069,8 +11075,8 @@ src_msvcrt64 = \
 
 src_msvcrtarm32 = $(src_msvcrt) misc/__p___argv.c misc/__p__acmdln.c \
 	misc/__p__commode.c misc/__p__fmode.c misc/__p__wcmdln.c \
-	misc/_getpid.c stdio/_setmaxstdio.c stdio/gets.c \
-	$(am__append_2)
+	misc/_getpid.c misc/initenv.c stdio/_setmaxstdio.c \
+	stdio/gets.c $(am__append_2)
 src_msvcrtarm64 = \
   $(src_msvcrt) \
   math/arm-common/acosh.c \
@@ -11119,6 +11125,7 @@ src_msvcrtarm64 = \
   misc/__p__fmode.c \
   misc/__p__wcmdln.c \
   misc/_getpid.c \
+  misc/initenv.c \
   stdio/_setmaxstdio.c \
   stdio/gets.c
 
@@ -19429,6 +19436,8 @@ misc/libarm32_libmsvcrt_os_a-__p__wcmdln.$(OBJEXT):  \
 	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 misc/libarm32_libmsvcrt_os_a-_getpid.$(OBJEXT): misc/$(am__dirstamp) \
 	misc/$(DEPDIR)/$(am__dirstamp)
+misc/libarm32_libmsvcrt_os_a-initenv.$(OBJEXT): misc/$(am__dirstamp) \
+	misc/$(DEPDIR)/$(am__dirstamp)
 stdio/libarm32_libmsvcrt_os_a-_setmaxstdio.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
 stdio/libarm32_libmsvcrt_os_a-gets.$(OBJEXT): stdio/$(am__dirstamp) \
@@ -21202,6 +21211,8 @@ misc/libarm64_libmsvcrt_os_a-__p__fmode.$(OBJEXT):  \
 misc/libarm64_libmsvcrt_os_a-__p__wcmdln.$(OBJEXT):  \
 	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 misc/libarm64_libmsvcrt_os_a-_getpid.$(OBJEXT): misc/$(am__dirstamp) \
+	misc/$(DEPDIR)/$(am__dirstamp)
+misc/libarm64_libmsvcrt_os_a-initenv.$(OBJEXT): misc/$(am__dirstamp) \
 	misc/$(DEPDIR)/$(am__dirstamp)
 stdio/libarm64_libmsvcrt_os_a-_setmaxstdio.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
@@ -24929,6 +24940,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-__p__wcmdln.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-_configthreadlocale.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-_getpid.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-initenv.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-invalid_parameter_handler.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-mbrtowc.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-mbsinit.Po@am__quote@ # am--include-marker
@@ -25021,6 +25033,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-__p__wcmdln.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-_configthreadlocale.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-_getpid.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-initenv.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-invalid_parameter_handler.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-mbrtowc.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-mbsinit.Po@am__quote@ # am--include-marker
@@ -59839,6 +59852,20 @@ misc/libarm32_libmsvcrt_os_a-_getpid.obj: misc/_getpid.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/libarm32_libmsvcrt_os_a-_getpid.obj `if test -f 'misc/_getpid.c'; then $(CYGPATH_W) 'misc/_getpid.c'; else $(CYGPATH_W) '$(srcdir)/misc/_getpid.c'; fi`
 
+misc/libarm32_libmsvcrt_os_a-initenv.o: misc/initenv.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/libarm32_libmsvcrt_os_a-initenv.o -MD -MP -MF misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-initenv.Tpo -c -o misc/libarm32_libmsvcrt_os_a-initenv.o `test -f 'misc/initenv.c' || echo '$(srcdir)/'`misc/initenv.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-initenv.Tpo misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-initenv.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/initenv.c' object='misc/libarm32_libmsvcrt_os_a-initenv.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/libarm32_libmsvcrt_os_a-initenv.o `test -f 'misc/initenv.c' || echo '$(srcdir)/'`misc/initenv.c
+
+misc/libarm32_libmsvcrt_os_a-initenv.obj: misc/initenv.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/libarm32_libmsvcrt_os_a-initenv.obj -MD -MP -MF misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-initenv.Tpo -c -o misc/libarm32_libmsvcrt_os_a-initenv.obj `if test -f 'misc/initenv.c'; then $(CYGPATH_W) 'misc/initenv.c'; else $(CYGPATH_W) '$(srcdir)/misc/initenv.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-initenv.Tpo misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-initenv.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/initenv.c' object='misc/libarm32_libmsvcrt_os_a-initenv.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/libarm32_libmsvcrt_os_a-initenv.obj `if test -f 'misc/initenv.c'; then $(CYGPATH_W) 'misc/initenv.c'; else $(CYGPATH_W) '$(srcdir)/misc/initenv.c'; fi`
+
 stdio/libarm32_libmsvcrt_os_a-_setmaxstdio.o: stdio/_setmaxstdio.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/libarm32_libmsvcrt_os_a-_setmaxstdio.o -MD -MP -MF stdio/$(DEPDIR)/libarm32_libmsvcrt_os_a-_setmaxstdio.Tpo -c -o stdio/libarm32_libmsvcrt_os_a-_setmaxstdio.o `test -f 'stdio/_setmaxstdio.c' || echo '$(srcdir)/'`stdio/_setmaxstdio.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) stdio/$(DEPDIR)/libarm32_libmsvcrt_os_a-_setmaxstdio.Tpo stdio/$(DEPDIR)/libarm32_libmsvcrt_os_a-_setmaxstdio.Po
@@ -69807,6 +69834,20 @@ misc/libarm64_libmsvcrt_os_a-_getpid.obj: misc/_getpid.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/libarm64_libmsvcrt_os_a-_getpid.obj `if test -f 'misc/_getpid.c'; then $(CYGPATH_W) 'misc/_getpid.c'; else $(CYGPATH_W) '$(srcdir)/misc/_getpid.c'; fi`
 
+misc/libarm64_libmsvcrt_os_a-initenv.o: misc/initenv.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/libarm64_libmsvcrt_os_a-initenv.o -MD -MP -MF misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-initenv.Tpo -c -o misc/libarm64_libmsvcrt_os_a-initenv.o `test -f 'misc/initenv.c' || echo '$(srcdir)/'`misc/initenv.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-initenv.Tpo misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-initenv.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/initenv.c' object='misc/libarm64_libmsvcrt_os_a-initenv.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/libarm64_libmsvcrt_os_a-initenv.o `test -f 'misc/initenv.c' || echo '$(srcdir)/'`misc/initenv.c
+
+misc/libarm64_libmsvcrt_os_a-initenv.obj: misc/initenv.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/libarm64_libmsvcrt_os_a-initenv.obj -MD -MP -MF misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-initenv.Tpo -c -o misc/libarm64_libmsvcrt_os_a-initenv.obj `if test -f 'misc/initenv.c'; then $(CYGPATH_W) 'misc/initenv.c'; else $(CYGPATH_W) '$(srcdir)/misc/initenv.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-initenv.Tpo misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-initenv.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/initenv.c' object='misc/libarm64_libmsvcrt_os_a-initenv.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/libarm64_libmsvcrt_os_a-initenv.obj `if test -f 'misc/initenv.c'; then $(CYGPATH_W) 'misc/initenv.c'; else $(CYGPATH_W) '$(srcdir)/misc/initenv.c'; fi`
+
 stdio/libarm64_libmsvcrt_os_a-_setmaxstdio.o: stdio/_setmaxstdio.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_os_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/libarm64_libmsvcrt_os_a-_setmaxstdio.o -MD -MP -MF stdio/$(DEPDIR)/libarm64_libmsvcrt_os_a-_setmaxstdio.Tpo -c -o stdio/libarm64_libmsvcrt_os_a-_setmaxstdio.o `test -f 'stdio/_setmaxstdio.c' || echo '$(srcdir)/'`stdio/_setmaxstdio.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) stdio/$(DEPDIR)/libarm64_libmsvcrt_os_a-_setmaxstdio.Tpo stdio/$(DEPDIR)/libarm64_libmsvcrt_os_a-_setmaxstdio.Po
@@ -77756,6 +77797,7 @@ distclean: distclean-am
 	-rm -f misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-__p__wcmdln.Po
 	-rm -f misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-_configthreadlocale.Po
 	-rm -f misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-_getpid.Po
+	-rm -f misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-initenv.Po
 	-rm -f misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-invalid_parameter_handler.Po
 	-rm -f misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-mbrtowc.Po
 	-rm -f misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-mbsinit.Po
@@ -77848,6 +77890,7 @@ distclean: distclean-am
 	-rm -f misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-__p__wcmdln.Po
 	-rm -f misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-_configthreadlocale.Po
 	-rm -f misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-_getpid.Po
+	-rm -f misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-initenv.Po
 	-rm -f misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-invalid_parameter_handler.Po
 	-rm -f misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-mbrtowc.Po
 	-rm -f misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-mbsinit.Po
@@ -81269,6 +81312,7 @@ maintainer-clean: maintainer-clean-am
 	-rm -f misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-__p__wcmdln.Po
 	-rm -f misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-_configthreadlocale.Po
 	-rm -f misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-_getpid.Po
+	-rm -f misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-initenv.Po
 	-rm -f misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-invalid_parameter_handler.Po
 	-rm -f misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-mbrtowc.Po
 	-rm -f misc/$(DEPDIR)/libarm32_libmsvcrt_os_a-mbsinit.Po
@@ -81361,6 +81405,7 @@ maintainer-clean: maintainer-clean-am
 	-rm -f misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-__p__wcmdln.Po
 	-rm -f misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-_configthreadlocale.Po
 	-rm -f misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-_getpid.Po
+	-rm -f misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-initenv.Po
 	-rm -f misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-invalid_parameter_handler.Po
 	-rm -f misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-mbrtowc.Po
 	-rm -f misc/$(DEPDIR)/libarm64_libmsvcrt_os_a-mbsinit.Po
