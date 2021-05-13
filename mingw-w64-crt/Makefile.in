@@ -11706,20 +11706,21 @@ src_intrincsarm64 =
 @LIB32_TRUE@	lib32/libwkscli.a lib32/libwlanapi.a \
 @LIB32_TRUE@	lib32/libwlanui.a lib32/libwlanutil.a \
 @LIB32_TRUE@	lib32/libwldap32.a lib32/libwmilib.a \
-@LIB32_TRUE@	lib32/libwow32.a lib32/libwsdapi.a \
-@LIB32_TRUE@	lib32/libwsnmp32.a lib32/libwsock32.a \
-@LIB32_TRUE@	lib32/libwst.a lib32/libwtsapi32.a \
-@LIB32_TRUE@	lib32/libx3daudio1_2.a lib32/libx3daudio1_3.a \
-@LIB32_TRUE@	lib32/libx3daudio1_4.a lib32/libx3daudio1_5.a \
-@LIB32_TRUE@	lib32/libx3daudio1_6.a lib32/libx3daudio1_7.a \
-@LIB32_TRUE@	lib32/libx3daudiod1_7.a lib32/libxapofx1_0.a \
-@LIB32_TRUE@	lib32/libxapofx1_1.a lib32/libxapofx1_2.a \
-@LIB32_TRUE@	lib32/libxapofx1_3.a lib32/libxapofx1_4.a \
-@LIB32_TRUE@	lib32/libxapofx1_5.a lib32/libxapofxd1_5.a \
-@LIB32_TRUE@	lib32/libxaudio2_8.a lib32/libxinput1_1.a \
-@LIB32_TRUE@	lib32/libxinput1_2.a lib32/libxinput1_3.a \
-@LIB32_TRUE@	lib32/libxinput1_4.a lib32/libxinput9_1_0.a \
-@LIB32_TRUE@	lib32/libwindowsapp.a $(am__append_9)
+@LIB32_TRUE@	lib32/libwofutil.a lib32/libwow32.a \
+@LIB32_TRUE@	lib32/libwsdapi.a lib32/libwsnmp32.a \
+@LIB32_TRUE@	lib32/libwsock32.a lib32/libwst.a \
+@LIB32_TRUE@	lib32/libwtsapi32.a lib32/libx3daudio1_2.a \
+@LIB32_TRUE@	lib32/libx3daudio1_3.a lib32/libx3daudio1_4.a \
+@LIB32_TRUE@	lib32/libx3daudio1_5.a lib32/libx3daudio1_6.a \
+@LIB32_TRUE@	lib32/libx3daudio1_7.a lib32/libx3daudiod1_7.a \
+@LIB32_TRUE@	lib32/libxapofx1_0.a lib32/libxapofx1_1.a \
+@LIB32_TRUE@	lib32/libxapofx1_2.a lib32/libxapofx1_3.a \
+@LIB32_TRUE@	lib32/libxapofx1_4.a lib32/libxapofx1_5.a \
+@LIB32_TRUE@	lib32/libxapofxd1_5.a lib32/libxaudio2_8.a \
+@LIB32_TRUE@	lib32/libxinput1_1.a lib32/libxinput1_2.a \
+@LIB32_TRUE@	lib32/libxinput1_3.a lib32/libxinput1_4.a \
+@LIB32_TRUE@	lib32/libxinput9_1_0.a lib32/libwindowsapp.a \
+@LIB32_TRUE@	$(am__append_9)
 @LIB32_TRUE@@W32API_FALSE@lib32_libmsvcrt_os_a_SOURCES = $(src_msvcrt32) lib-common/msvcrt.def.in
 @LIB32_TRUE@@W32API_FALSE@lib32_libmsvcrt_os_a_AR = $(DTDEF32) lib32/msvcrt.def && $(AR) $(ARFLAGS)
 @LIB32_TRUE@@W32API_FALSE@lib32_libmsvcrt_os_a_CPPFLAGS = $(CPPFLAGS32) -D__LIBMSVCRT__ $(extra_include) $(sysincludes)
@@ -12271,9 +12272,9 @@ src_intrincsarm64 =
 @LIB64_TRUE@	lib64/libwdscore.a lib64/libcryptsp.a \
 @LIB64_TRUE@	lib64/libwdsclient.a lib64/libwdsupgcompl.a \
 @LIB64_TRUE@	lib64/libwdsclientapi.a lib64/libwdsutil.a \
-@LIB64_TRUE@	lib64/libwdsimage.a lib64/libvirtdisk.a \
-@LIB64_TRUE@	lib64/libcryptxml.a lib64/libsspicli.a \
-@LIB64_TRUE@	lib64/libd3dcompiler_33.a \
+@LIB64_TRUE@	lib64/libwdsimage.a lib64/libwofutil.a \
+@LIB64_TRUE@	lib64/libvirtdisk.a lib64/libcryptxml.a \
+@LIB64_TRUE@	lib64/libsspicli.a lib64/libd3dcompiler_33.a \
 @LIB64_TRUE@	lib64/libd3dcompiler_34.a \
 @LIB64_TRUE@	lib64/libd3dcompiler_35.a \
 @LIB64_TRUE@	lib64/libd3dcompiler_36.a \
@@ -13363,12 +13364,13 @@ src_intrincsarm64 =
 @LIBARM64_TRUE@	libarm64/libwkssvc.a libarm64/libwlanapi.a \
 @LIBARM64_TRUE@	libarm64/libwlanui.a libarm64/libwlanutil.a \
 @LIBARM64_TRUE@	libarm64/libwldap32.a libarm64/libwmi.a \
-@LIBARM64_TRUE@	libarm64/libwmiprop.a libarm64/libwpd_ci.a \
-@LIBARM64_TRUE@	libarm64/libws2help.a libarm64/libwscapi.a \
-@LIBARM64_TRUE@	libarm64/libwscsvc.a libarm64/libwshbth.a \
-@LIBARM64_TRUE@	libarm64/libwslapi.a libarm64/libwsock32.a \
-@LIBARM64_TRUE@	libarm64/libwtsapi32.a libarm64/libxaudio2_8.a \
-@LIBARM64_TRUE@	libarm64/libxinput1_4.a $(am__append_27)
+@LIBARM64_TRUE@	libarm64/libwmiprop.a libarm64/libwofutil.a \
+@LIBARM64_TRUE@	libarm64/libwpd_ci.a libarm64/libws2help.a \
+@LIBARM64_TRUE@	libarm64/libwscapi.a libarm64/libwscsvc.a \
+@LIBARM64_TRUE@	libarm64/libwshbth.a libarm64/libwslapi.a \
+@LIBARM64_TRUE@	libarm64/libwsock32.a libarm64/libwtsapi32.a \
+@LIBARM64_TRUE@	libarm64/libxaudio2_8.a libarm64/libxinput1_4.a \
+@LIBARM64_TRUE@	$(am__append_27)
 @LIBARM64_TRUE@@W32API_FALSE@libarm64_libmsvcrt_os_a_SOURCES = $(src_msvcrtarm64) lib-common/msvcrt.def.in
 @LIBARM64_TRUE@@W32API_FALSE@libarm64_libmsvcrt_os_a_AR = $(DTDEFARM64) libarm64/msvcrt.def && $(AR) $(ARFLAGS)
 @LIBARM64_TRUE@@W32API_FALSE@libarm64_libmsvcrt_os_a_CPPFLAGS = $(CPPFLAGSARM64) -D__LIBMSVCRT__ $(extra_include) $(sysincludes)
