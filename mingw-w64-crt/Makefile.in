@@ -1680,15 +1680,17 @@ lib32_libtaskschd_a_OBJECTS = $(am_lib32_libtaskschd_a_OBJECTS)
 lib32_libucrt_extra_a_AR = $(AR) $(ARFLAGS)
 lib32_libucrt_extra_a_LIBADD =
 am__lib32_libucrt_extra_a_SOURCES_DIST = crt/ucrtbase_compat.c \
-	stdio/ucrt_fprintf.c stdio/ucrt_fscanf.c stdio/ucrt_fwprintf.c \
-	stdio/ucrt_printf.c stdio/ucrt_scanf.c stdio/ucrt__snwprintf.c \
-	stdio/ucrt_snprintf.c stdio/ucrt_sprintf.c stdio/ucrt_sscanf.c \
+	math/_huge.c stdio/ucrt_fprintf.c stdio/ucrt_fscanf.c \
+	stdio/ucrt_fwprintf.c stdio/ucrt_printf.c stdio/ucrt_scanf.c \
+	stdio/ucrt__snwprintf.c stdio/ucrt_snprintf.c \
+	stdio/ucrt_sprintf.c stdio/ucrt_sscanf.c \
 	stdio/ucrt__vscprintf.c stdio/ucrt__vsnprintf.c \
 	stdio/ucrt__vsnwprintf.c stdio/ucrt_vfprintf.c \
 	stdio/ucrt_vfscanf.c stdio/ucrt_vprintf.c stdio/ucrt_vscanf.c \
 	stdio/ucrt_vsnprintf.c stdio/ucrt_vsprintf.c \
 	stdio/ucrt_vsscanf.c
 am__objects_47 = crt/lib32_libucrt_extra_a-ucrtbase_compat.$(OBJEXT) \
+	math/lib32_libucrt_extra_a-_huge.$(OBJEXT) \
 	stdio/lib32_libucrt_extra_a-ucrt_fprintf.$(OBJEXT) \
 	stdio/lib32_libucrt_extra_a-ucrt_fscanf.$(OBJEXT) \
 	stdio/lib32_libucrt_extra_a-ucrt_fwprintf.$(OBJEXT) \
@@ -1741,15 +1743,17 @@ lib32_libucrtapp_extra_a_OBJECTS =  \
 	$(am_lib32_libucrtapp_extra_a_OBJECTS)
 lib32_libucrtbase_a_LIBADD =
 am__lib32_libucrtbase_a_SOURCES_DIST = crt/ucrtbase_compat.c \
-	stdio/ucrt_fprintf.c stdio/ucrt_fscanf.c stdio/ucrt_fwprintf.c \
-	stdio/ucrt_printf.c stdio/ucrt_scanf.c stdio/ucrt__snwprintf.c \
-	stdio/ucrt_snprintf.c stdio/ucrt_sprintf.c stdio/ucrt_sscanf.c \
+	math/_huge.c stdio/ucrt_fprintf.c stdio/ucrt_fscanf.c \
+	stdio/ucrt_fwprintf.c stdio/ucrt_printf.c stdio/ucrt_scanf.c \
+	stdio/ucrt__snwprintf.c stdio/ucrt_snprintf.c \
+	stdio/ucrt_sprintf.c stdio/ucrt_sscanf.c \
 	stdio/ucrt__vscprintf.c stdio/ucrt__vsnprintf.c \
 	stdio/ucrt__vsnwprintf.c stdio/ucrt_vfprintf.c \
 	stdio/ucrt_vfscanf.c stdio/ucrt_vprintf.c stdio/ucrt_vscanf.c \
 	stdio/ucrt_vsnprintf.c stdio/ucrt_vsprintf.c \
 	stdio/ucrt_vsscanf.c lib-common/ucrtbase.def.in
 am__objects_49 = crt/lib32_libucrtbase_a-ucrtbase_compat.$(OBJEXT) \
+	math/lib32_libucrtbase_a-_huge.$(OBJEXT) \
 	stdio/lib32_libucrtbase_a-ucrt_fprintf.$(OBJEXT) \
 	stdio/lib32_libucrtbase_a-ucrt_fscanf.$(OBJEXT) \
 	stdio/lib32_libucrtbase_a-ucrt_fwprintf.$(OBJEXT) \
@@ -3190,15 +3194,17 @@ lib64_libtaskschd_a_OBJECTS = $(am_lib64_libtaskschd_a_OBJECTS)
 lib64_libucrt_extra_a_AR = $(AR) $(ARFLAGS)
 lib64_libucrt_extra_a_LIBADD =
 am__lib64_libucrt_extra_a_SOURCES_DIST = crt/ucrtbase_compat.c \
-	stdio/ucrt_fprintf.c stdio/ucrt_fscanf.c stdio/ucrt_fwprintf.c \
-	stdio/ucrt_printf.c stdio/ucrt_scanf.c stdio/ucrt__snwprintf.c \
-	stdio/ucrt_snprintf.c stdio/ucrt_sprintf.c stdio/ucrt_sscanf.c \
+	math/_huge.c stdio/ucrt_fprintf.c stdio/ucrt_fscanf.c \
+	stdio/ucrt_fwprintf.c stdio/ucrt_printf.c stdio/ucrt_scanf.c \
+	stdio/ucrt__snwprintf.c stdio/ucrt_snprintf.c \
+	stdio/ucrt_sprintf.c stdio/ucrt_sscanf.c \
 	stdio/ucrt__vscprintf.c stdio/ucrt__vsnprintf.c \
 	stdio/ucrt__vsnwprintf.c stdio/ucrt_vfprintf.c \
 	stdio/ucrt_vfscanf.c stdio/ucrt_vprintf.c stdio/ucrt_vscanf.c \
 	stdio/ucrt_vsnprintf.c stdio/ucrt_vsprintf.c \
 	stdio/ucrt_vsscanf.c
 am__objects_100 = crt/lib64_libucrt_extra_a-ucrtbase_compat.$(OBJEXT) \
+	math/lib64_libucrt_extra_a-_huge.$(OBJEXT) \
 	stdio/lib64_libucrt_extra_a-ucrt_fprintf.$(OBJEXT) \
 	stdio/lib64_libucrt_extra_a-ucrt_fscanf.$(OBJEXT) \
 	stdio/lib64_libucrt_extra_a-ucrt_fwprintf.$(OBJEXT) \
@@ -3251,15 +3257,17 @@ lib64_libucrtapp_extra_a_OBJECTS =  \
 	$(am_lib64_libucrtapp_extra_a_OBJECTS)
 lib64_libucrtbase_a_LIBADD =
 am__lib64_libucrtbase_a_SOURCES_DIST = crt/ucrtbase_compat.c \
-	stdio/ucrt_fprintf.c stdio/ucrt_fscanf.c stdio/ucrt_fwprintf.c \
-	stdio/ucrt_printf.c stdio/ucrt_scanf.c stdio/ucrt__snwprintf.c \
-	stdio/ucrt_snprintf.c stdio/ucrt_sprintf.c stdio/ucrt_sscanf.c \
+	math/_huge.c stdio/ucrt_fprintf.c stdio/ucrt_fscanf.c \
+	stdio/ucrt_fwprintf.c stdio/ucrt_printf.c stdio/ucrt_scanf.c \
+	stdio/ucrt__snwprintf.c stdio/ucrt_snprintf.c \
+	stdio/ucrt_sprintf.c stdio/ucrt_sscanf.c \
 	stdio/ucrt__vscprintf.c stdio/ucrt__vsnprintf.c \
 	stdio/ucrt__vsnwprintf.c stdio/ucrt_vfprintf.c \
 	stdio/ucrt_vfscanf.c stdio/ucrt_vprintf.c stdio/ucrt_vscanf.c \
 	stdio/ucrt_vsnprintf.c stdio/ucrt_vsprintf.c \
 	stdio/ucrt_vsscanf.c lib-common/ucrtbase.def.in
 am__objects_102 = crt/lib64_libucrtbase_a-ucrtbase_compat.$(OBJEXT) \
+	math/lib64_libucrtbase_a-_huge.$(OBJEXT) \
 	stdio/lib64_libucrtbase_a-ucrt_fprintf.$(OBJEXT) \
 	stdio/lib64_libucrtbase_a-ucrt_fscanf.$(OBJEXT) \
 	stdio/lib64_libucrtbase_a-ucrt_fwprintf.$(OBJEXT) \
@@ -4544,9 +4552,10 @@ libarm32_libstrmiids_a_OBJECTS = $(am_libarm32_libstrmiids_a_OBJECTS)
 libarm32_libucrt_extra_a_AR = $(AR) $(ARFLAGS)
 libarm32_libucrt_extra_a_LIBADD =
 am__libarm32_libucrt_extra_a_SOURCES_DIST = crt/ucrtbase_compat.c \
-	stdio/ucrt_fprintf.c stdio/ucrt_fscanf.c stdio/ucrt_fwprintf.c \
-	stdio/ucrt_printf.c stdio/ucrt_scanf.c stdio/ucrt__snwprintf.c \
-	stdio/ucrt_snprintf.c stdio/ucrt_sprintf.c stdio/ucrt_sscanf.c \
+	math/_huge.c stdio/ucrt_fprintf.c stdio/ucrt_fscanf.c \
+	stdio/ucrt_fwprintf.c stdio/ucrt_printf.c stdio/ucrt_scanf.c \
+	stdio/ucrt__snwprintf.c stdio/ucrt_snprintf.c \
+	stdio/ucrt_sprintf.c stdio/ucrt_sscanf.c \
 	stdio/ucrt__vscprintf.c stdio/ucrt__vsnprintf.c \
 	stdio/ucrt__vsnwprintf.c stdio/ucrt_vfprintf.c \
 	stdio/ucrt_vfscanf.c stdio/ucrt_vprintf.c stdio/ucrt_vscanf.c \
@@ -4554,6 +4563,7 @@ am__libarm32_libucrt_extra_a_SOURCES_DIST = crt/ucrtbase_compat.c \
 	stdio/ucrt_vsscanf.c
 am__objects_147 =  \
 	crt/libarm32_libucrt_extra_a-ucrtbase_compat.$(OBJEXT) \
+	math/libarm32_libucrt_extra_a-_huge.$(OBJEXT) \
 	stdio/libarm32_libucrt_extra_a-ucrt_fprintf.$(OBJEXT) \
 	stdio/libarm32_libucrt_extra_a-ucrt_fscanf.$(OBJEXT) \
 	stdio/libarm32_libucrt_extra_a-ucrt_fwprintf.$(OBJEXT) \
@@ -4606,9 +4616,10 @@ libarm32_libucrtapp_extra_a_OBJECTS =  \
 	$(am_libarm32_libucrtapp_extra_a_OBJECTS)
 libarm32_libucrtbase_a_LIBADD =
 am__libarm32_libucrtbase_a_SOURCES_DIST = crt/ucrtbase_compat.c \
-	stdio/ucrt_fprintf.c stdio/ucrt_fscanf.c stdio/ucrt_fwprintf.c \
-	stdio/ucrt_printf.c stdio/ucrt_scanf.c stdio/ucrt__snwprintf.c \
-	stdio/ucrt_snprintf.c stdio/ucrt_sprintf.c stdio/ucrt_sscanf.c \
+	math/_huge.c stdio/ucrt_fprintf.c stdio/ucrt_fscanf.c \
+	stdio/ucrt_fwprintf.c stdio/ucrt_printf.c stdio/ucrt_scanf.c \
+	stdio/ucrt__snwprintf.c stdio/ucrt_snprintf.c \
+	stdio/ucrt_sprintf.c stdio/ucrt_sscanf.c \
 	stdio/ucrt__vscprintf.c stdio/ucrt__vsnprintf.c \
 	stdio/ucrt__vsnwprintf.c stdio/ucrt_vfprintf.c \
 	stdio/ucrt_vfscanf.c stdio/ucrt_vprintf.c stdio/ucrt_vscanf.c \
@@ -4616,6 +4627,7 @@ am__libarm32_libucrtbase_a_SOURCES_DIST = crt/ucrtbase_compat.c \
 	stdio/ucrt_vsscanf.c lib-common/ucrtbase.def.in
 am__objects_149 =  \
 	crt/libarm32_libucrtbase_a-ucrtbase_compat.$(OBJEXT) \
+	math/libarm32_libucrtbase_a-_huge.$(OBJEXT) \
 	stdio/libarm32_libucrtbase_a-ucrt_fprintf.$(OBJEXT) \
 	stdio/libarm32_libucrtbase_a-ucrt_fscanf.$(OBJEXT) \
 	stdio/libarm32_libucrtbase_a-ucrt_fwprintf.$(OBJEXT) \
@@ -5744,9 +5756,10 @@ libarm64_libstrmiids_a_OBJECTS = $(am_libarm64_libstrmiids_a_OBJECTS)
 libarm64_libucrt_extra_a_AR = $(AR) $(ARFLAGS)
 libarm64_libucrt_extra_a_LIBADD =
 am__libarm64_libucrt_extra_a_SOURCES_DIST = crt/ucrtbase_compat.c \
-	stdio/ucrt_fprintf.c stdio/ucrt_fscanf.c stdio/ucrt_fwprintf.c \
-	stdio/ucrt_printf.c stdio/ucrt_scanf.c stdio/ucrt__snwprintf.c \
-	stdio/ucrt_snprintf.c stdio/ucrt_sprintf.c stdio/ucrt_sscanf.c \
+	math/_huge.c stdio/ucrt_fprintf.c stdio/ucrt_fscanf.c \
+	stdio/ucrt_fwprintf.c stdio/ucrt_printf.c stdio/ucrt_scanf.c \
+	stdio/ucrt__snwprintf.c stdio/ucrt_snprintf.c \
+	stdio/ucrt_sprintf.c stdio/ucrt_sscanf.c \
 	stdio/ucrt__vscprintf.c stdio/ucrt__vsnprintf.c \
 	stdio/ucrt__vsnwprintf.c stdio/ucrt_vfprintf.c \
 	stdio/ucrt_vfscanf.c stdio/ucrt_vprintf.c stdio/ucrt_vscanf.c \
@@ -5754,6 +5767,7 @@ am__libarm64_libucrt_extra_a_SOURCES_DIST = crt/ucrtbase_compat.c \
 	stdio/ucrt_vsscanf.c
 am__objects_187 =  \
 	crt/libarm64_libucrt_extra_a-ucrtbase_compat.$(OBJEXT) \
+	math/libarm64_libucrt_extra_a-_huge.$(OBJEXT) \
 	stdio/libarm64_libucrt_extra_a-ucrt_fprintf.$(OBJEXT) \
 	stdio/libarm64_libucrt_extra_a-ucrt_fscanf.$(OBJEXT) \
 	stdio/libarm64_libucrt_extra_a-ucrt_fwprintf.$(OBJEXT) \
@@ -5806,9 +5820,10 @@ libarm64_libucrtapp_extra_a_OBJECTS =  \
 	$(am_libarm64_libucrtapp_extra_a_OBJECTS)
 libarm64_libucrtbase_a_LIBADD =
 am__libarm64_libucrtbase_a_SOURCES_DIST = crt/ucrtbase_compat.c \
-	stdio/ucrt_fprintf.c stdio/ucrt_fscanf.c stdio/ucrt_fwprintf.c \
-	stdio/ucrt_printf.c stdio/ucrt_scanf.c stdio/ucrt__snwprintf.c \
-	stdio/ucrt_snprintf.c stdio/ucrt_sprintf.c stdio/ucrt_sscanf.c \
+	math/_huge.c stdio/ucrt_fprintf.c stdio/ucrt_fscanf.c \
+	stdio/ucrt_fwprintf.c stdio/ucrt_printf.c stdio/ucrt_scanf.c \
+	stdio/ucrt__snwprintf.c stdio/ucrt_snprintf.c \
+	stdio/ucrt_sprintf.c stdio/ucrt_sscanf.c \
 	stdio/ucrt__vscprintf.c stdio/ucrt__vsnprintf.c \
 	stdio/ucrt__vsnwprintf.c stdio/ucrt_vfprintf.c \
 	stdio/ucrt_vfscanf.c stdio/ucrt_vprintf.c stdio/ucrt_vscanf.c \
@@ -5816,6 +5831,7 @@ am__libarm64_libucrtbase_a_SOURCES_DIST = crt/ucrtbase_compat.c \
 	stdio/ucrt_vsscanf.c lib-common/ucrtbase.def.in
 am__objects_189 =  \
 	crt/libarm64_libucrtbase_a-ucrtbase_compat.$(OBJEXT) \
+	math/libarm64_libucrtbase_a-_huge.$(OBJEXT) \
 	stdio/libarm64_libucrtbase_a-ucrt_fprintf.$(OBJEXT) \
 	stdio/libarm64_libucrtbase_a-ucrt_fscanf.$(OBJEXT) \
 	stdio/libarm64_libucrtbase_a-ucrt_fwprintf.$(OBJEXT) \
@@ -7952,6 +7968,8 @@ am__depfiles_remade = ./$(DEPDIR)/lib32_libm_a-_libm_dummy.Po \
 	math/$(DEPDIR)/lib32_libmsvcr90_a-frexp.Po \
 	math/$(DEPDIR)/lib32_libmsvcr90d_a-frexp.Po \
 	math/$(DEPDIR)/lib32_libmsvcrt_os_a-frexp.Po \
+	math/$(DEPDIR)/lib32_libucrt_extra_a-_huge.Po \
+	math/$(DEPDIR)/lib32_libucrtbase_a-_huge.Po \
 	math/$(DEPDIR)/lib64_libcrtdll_a-frexp.Po \
 	math/$(DEPDIR)/lib64_libmingwex_a-abs64.Po \
 	math/$(DEPDIR)/lib64_libmingwex_a-cbrt.Po \
@@ -8052,6 +8070,8 @@ am__depfiles_remade = ./$(DEPDIR)/lib32_libm_a-_libm_dummy.Po \
 	math/$(DEPDIR)/lib64_libmsvcr90_a-frexp.Po \
 	math/$(DEPDIR)/lib64_libmsvcr90d_a-frexp.Po \
 	math/$(DEPDIR)/lib64_libmsvcrt_os_a-frexp.Po \
+	math/$(DEPDIR)/lib64_libucrt_extra_a-_huge.Po \
+	math/$(DEPDIR)/lib64_libucrtbase_a-_huge.Po \
 	math/$(DEPDIR)/libarm32_libmingwex_a-abs64.Po \
 	math/$(DEPDIR)/libarm32_libmingwex_a-cbrt.Po \
 	math/$(DEPDIR)/libarm32_libmingwex_a-cbrtf.Po \
@@ -8145,6 +8165,8 @@ am__depfiles_remade = ./$(DEPDIR)/lib32_libm_a-_libm_dummy.Po \
 	math/$(DEPDIR)/libarm32_libmsvcr110_a-frexp.Po \
 	math/$(DEPDIR)/libarm32_libmsvcr120_app_a-frexp.Po \
 	math/$(DEPDIR)/libarm32_libmsvcrt_os_a-frexp.Po \
+	math/$(DEPDIR)/libarm32_libucrt_extra_a-_huge.Po \
+	math/$(DEPDIR)/libarm32_libucrtbase_a-_huge.Po \
 	math/$(DEPDIR)/libarm64_libmingwex_a-abs64.Po \
 	math/$(DEPDIR)/libarm64_libmingwex_a-cbrt.Po \
 	math/$(DEPDIR)/libarm64_libmingwex_a-cbrtf.Po \
@@ -8236,6 +8258,8 @@ am__depfiles_remade = ./$(DEPDIR)/lib32_libm_a-_libm_dummy.Po \
 	math/$(DEPDIR)/libarm64_libmingwex_a-tgammal.Po \
 	math/$(DEPDIR)/libarm64_libmingwex_a-truncl.Po \
 	math/$(DEPDIR)/libarm64_libmsvcrt_os_a-frexp.Po \
+	math/$(DEPDIR)/libarm64_libucrt_extra_a-_huge.Po \
+	math/$(DEPDIR)/libarm64_libucrtbase_a-_huge.Po \
 	math/DFP/$(DEPDIR)/lib32_libmingwex_a-__fpclassifyd128.Po \
 	math/DFP/$(DEPDIR)/lib32_libmingwex_a-__fpclassifyd32.Po \
 	math/DFP/$(DEPDIR)/lib32_libmingwex_a-__fpclassifyd64.Po \
@@ -11167,6 +11191,7 @@ src_msvcrt = \
 
 src_ucrtbase = \
   crt/ucrtbase_compat.c \
+  math/_huge.c \
   stdio/ucrt_fprintf.c \
   stdio/ucrt_fscanf.c \
   stdio/ucrt_fwprintf.c \
@@ -15764,6 +15789,8 @@ lib32/libtaskschd.a: $(lib32_libtaskschd_a_OBJECTS) $(lib32_libtaskschd_a_DEPEND
 	$(AM_V_at)$(RANLIB) lib32/libtaskschd.a
 crt/lib32_libucrt_extra_a-ucrtbase_compat.$(OBJEXT):  \
 	crt/$(am__dirstamp) crt/$(DEPDIR)/$(am__dirstamp)
+math/lib32_libucrt_extra_a-_huge.$(OBJEXT): math/$(am__dirstamp) \
+	math/$(DEPDIR)/$(am__dirstamp)
 stdio/lib32_libucrt_extra_a-ucrt_fprintf.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
 stdio/lib32_libucrt_extra_a-ucrt_fscanf.$(OBJEXT):  \
@@ -15850,6 +15877,8 @@ lib32/libucrtapp_extra.a: $(lib32_libucrtapp_extra_a_OBJECTS) $(lib32_libucrtapp
 	$(AM_V_at)$(RANLIB) lib32/libucrtapp_extra.a
 crt/lib32_libucrtbase_a-ucrtbase_compat.$(OBJEXT):  \
 	crt/$(am__dirstamp) crt/$(DEPDIR)/$(am__dirstamp)
+math/lib32_libucrtbase_a-_huge.$(OBJEXT): math/$(am__dirstamp) \
+	math/$(DEPDIR)/$(am__dirstamp)
 stdio/lib32_libucrtbase_a-ucrt_fprintf.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
 stdio/lib32_libucrtbase_a-ucrt_fscanf.$(OBJEXT):  \
@@ -17873,6 +17902,8 @@ lib64/libtaskschd.a: $(lib64_libtaskschd_a_OBJECTS) $(lib64_libtaskschd_a_DEPEND
 	$(AM_V_at)$(RANLIB) lib64/libtaskschd.a
 crt/lib64_libucrt_extra_a-ucrtbase_compat.$(OBJEXT):  \
 	crt/$(am__dirstamp) crt/$(DEPDIR)/$(am__dirstamp)
+math/lib64_libucrt_extra_a-_huge.$(OBJEXT): math/$(am__dirstamp) \
+	math/$(DEPDIR)/$(am__dirstamp)
 stdio/lib64_libucrt_extra_a-ucrt_fprintf.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
 stdio/lib64_libucrt_extra_a-ucrt_fscanf.$(OBJEXT):  \
@@ -17953,6 +17984,8 @@ lib64/libucrtapp_extra.a: $(lib64_libucrtapp_extra_a_OBJECTS) $(lib64_libucrtapp
 	$(AM_V_at)$(RANLIB) lib64/libucrtapp_extra.a
 crt/lib64_libucrtbase_a-ucrtbase_compat.$(OBJEXT):  \
 	crt/$(am__dirstamp) crt/$(DEPDIR)/$(am__dirstamp)
+math/lib64_libucrtbase_a-_huge.$(OBJEXT): math/$(am__dirstamp) \
+	math/$(DEPDIR)/$(am__dirstamp)
 stdio/lib64_libucrtbase_a-ucrt_fprintf.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
 stdio/lib64_libucrtbase_a-ucrt_fscanf.$(OBJEXT):  \
@@ -19849,6 +19882,8 @@ libarm32/libstrmiids.a: $(libarm32_libstrmiids_a_OBJECTS) $(libarm32_libstrmiids
 	$(AM_V_at)$(RANLIB) libarm32/libstrmiids.a
 crt/libarm32_libucrt_extra_a-ucrtbase_compat.$(OBJEXT):  \
 	crt/$(am__dirstamp) crt/$(DEPDIR)/$(am__dirstamp)
+math/libarm32_libucrt_extra_a-_huge.$(OBJEXT): math/$(am__dirstamp) \
+	math/$(DEPDIR)/$(am__dirstamp)
 stdio/libarm32_libucrt_extra_a-ucrt_fprintf.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
 stdio/libarm32_libucrt_extra_a-ucrt_fscanf.$(OBJEXT):  \
@@ -19929,6 +19964,8 @@ libarm32/libucrtapp_extra.a: $(libarm32_libucrtapp_extra_a_OBJECTS) $(libarm32_l
 	$(AM_V_at)$(RANLIB) libarm32/libucrtapp_extra.a
 crt/libarm32_libucrtbase_a-ucrtbase_compat.$(OBJEXT):  \
 	crt/$(am__dirstamp) crt/$(DEPDIR)/$(am__dirstamp)
+math/libarm32_libucrtbase_a-_huge.$(OBJEXT): math/$(am__dirstamp) \
+	math/$(DEPDIR)/$(am__dirstamp)
 stdio/libarm32_libucrtbase_a-ucrt_fprintf.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
 stdio/libarm32_libucrtbase_a-ucrt_fscanf.$(OBJEXT):  \
@@ -21543,6 +21580,8 @@ libarm64/libstrmiids.a: $(libarm64_libstrmiids_a_OBJECTS) $(libarm64_libstrmiids
 	$(AM_V_at)$(RANLIB) libarm64/libstrmiids.a
 crt/libarm64_libucrt_extra_a-ucrtbase_compat.$(OBJEXT):  \
 	crt/$(am__dirstamp) crt/$(DEPDIR)/$(am__dirstamp)
+math/libarm64_libucrt_extra_a-_huge.$(OBJEXT): math/$(am__dirstamp) \
+	math/$(DEPDIR)/$(am__dirstamp)
 stdio/libarm64_libucrt_extra_a-ucrt_fprintf.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
 stdio/libarm64_libucrt_extra_a-ucrt_fscanf.$(OBJEXT):  \
@@ -21623,6 +21662,8 @@ libarm64/libucrtapp_extra.a: $(libarm64_libucrtapp_extra_a_OBJECTS) $(libarm64_l
 	$(AM_V_at)$(RANLIB) libarm64/libucrtapp_extra.a
 crt/libarm64_libucrtbase_a-ucrtbase_compat.$(OBJEXT):  \
 	crt/$(am__dirstamp) crt/$(DEPDIR)/$(am__dirstamp)
+math/libarm64_libucrtbase_a-_huge.$(OBJEXT): math/$(am__dirstamp) \
+	math/$(DEPDIR)/$(am__dirstamp)
 stdio/libarm64_libucrtbase_a-ucrt_fprintf.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
 stdio/libarm64_libucrtbase_a-ucrt_fscanf.$(OBJEXT):  \
@@ -24115,6 +24156,8 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/lib32_libmsvcr90_a-frexp.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/lib32_libmsvcr90d_a-frexp.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/lib32_libmsvcrt_os_a-frexp.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/lib32_libucrt_extra_a-_huge.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/lib32_libucrtbase_a-_huge.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/lib64_libcrtdll_a-frexp.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/lib64_libmingwex_a-abs64.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/lib64_libmingwex_a-cbrt.Po@am__quote@ # am--include-marker
@@ -24215,6 +24258,8 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/lib64_libmsvcr90_a-frexp.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/lib64_libmsvcr90d_a-frexp.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/lib64_libmsvcrt_os_a-frexp.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/lib64_libucrt_extra_a-_huge.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/lib64_libucrtbase_a-_huge.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/libarm32_libmingwex_a-abs64.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/libarm32_libmingwex_a-cbrt.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/libarm32_libmingwex_a-cbrtf.Po@am__quote@ # am--include-marker
@@ -24308,6 +24353,8 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/libarm32_libmsvcr110_a-frexp.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/libarm32_libmsvcr120_app_a-frexp.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/libarm32_libmsvcrt_os_a-frexp.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/libarm32_libucrt_extra_a-_huge.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/libarm32_libucrtbase_a-_huge.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/libarm64_libmingwex_a-abs64.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/libarm64_libmingwex_a-cbrt.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/libarm64_libmingwex_a-cbrtf.Po@am__quote@ # am--include-marker
@@ -24399,6 +24446,8 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/libarm64_libmingwex_a-tgammal.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/libarm64_libmingwex_a-truncl.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/libarm64_libmsvcrt_os_a-frexp.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/libarm64_libucrt_extra_a-_huge.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@math/$(DEPDIR)/libarm64_libucrtbase_a-_huge.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@math/DFP/$(DEPDIR)/lib32_libmingwex_a-__fpclassifyd128.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@math/DFP/$(DEPDIR)/lib32_libmingwex_a-__fpclassifyd32.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@math/DFP/$(DEPDIR)/lib32_libmingwex_a-__fpclassifyd64.Po@am__quote@ # am--include-marker
@@ -38105,6 +38154,20 @@ crt/lib32_libucrt_extra_a-ucrtbase_compat.obj: crt/ucrtbase_compat.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libucrt_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o crt/lib32_libucrt_extra_a-ucrtbase_compat.obj `if test -f 'crt/ucrtbase_compat.c'; then $(CYGPATH_W) 'crt/ucrtbase_compat.c'; else $(CYGPATH_W) '$(srcdir)/crt/ucrtbase_compat.c'; fi`
 
+math/lib32_libucrt_extra_a-_huge.o: math/_huge.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libucrt_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib32_libucrt_extra_a-_huge.o -MD -MP -MF math/$(DEPDIR)/lib32_libucrt_extra_a-_huge.Tpo -c -o math/lib32_libucrt_extra_a-_huge.o `test -f 'math/_huge.c' || echo '$(srcdir)/'`math/_huge.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/lib32_libucrt_extra_a-_huge.Tpo math/$(DEPDIR)/lib32_libucrt_extra_a-_huge.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/_huge.c' object='math/lib32_libucrt_extra_a-_huge.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libucrt_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib32_libucrt_extra_a-_huge.o `test -f 'math/_huge.c' || echo '$(srcdir)/'`math/_huge.c
+
+math/lib32_libucrt_extra_a-_huge.obj: math/_huge.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libucrt_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib32_libucrt_extra_a-_huge.obj -MD -MP -MF math/$(DEPDIR)/lib32_libucrt_extra_a-_huge.Tpo -c -o math/lib32_libucrt_extra_a-_huge.obj `if test -f 'math/_huge.c'; then $(CYGPATH_W) 'math/_huge.c'; else $(CYGPATH_W) '$(srcdir)/math/_huge.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/lib32_libucrt_extra_a-_huge.Tpo math/$(DEPDIR)/lib32_libucrt_extra_a-_huge.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/_huge.c' object='math/lib32_libucrt_extra_a-_huge.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libucrt_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib32_libucrt_extra_a-_huge.obj `if test -f 'math/_huge.c'; then $(CYGPATH_W) 'math/_huge.c'; else $(CYGPATH_W) '$(srcdir)/math/_huge.c'; fi`
+
 stdio/lib32_libucrt_extra_a-ucrt_fprintf.o: stdio/ucrt_fprintf.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libucrt_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/lib32_libucrt_extra_a-ucrt_fprintf.o -MD -MP -MF stdio/$(DEPDIR)/lib32_libucrt_extra_a-ucrt_fprintf.Tpo -c -o stdio/lib32_libucrt_extra_a-ucrt_fprintf.o `test -f 'stdio/ucrt_fprintf.c' || echo '$(srcdir)/'`stdio/ucrt_fprintf.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) stdio/$(DEPDIR)/lib32_libucrt_extra_a-ucrt_fprintf.Tpo stdio/$(DEPDIR)/lib32_libucrt_extra_a-ucrt_fprintf.Po
@@ -38566,6 +38629,20 @@ crt/lib32_libucrtbase_a-ucrtbase_compat.obj: crt/ucrtbase_compat.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='crt/ucrtbase_compat.c' object='crt/lib32_libucrtbase_a-ucrtbase_compat.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libucrtbase_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o crt/lib32_libucrtbase_a-ucrtbase_compat.obj `if test -f 'crt/ucrtbase_compat.c'; then $(CYGPATH_W) 'crt/ucrtbase_compat.c'; else $(CYGPATH_W) '$(srcdir)/crt/ucrtbase_compat.c'; fi`
+
+math/lib32_libucrtbase_a-_huge.o: math/_huge.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libucrtbase_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib32_libucrtbase_a-_huge.o -MD -MP -MF math/$(DEPDIR)/lib32_libucrtbase_a-_huge.Tpo -c -o math/lib32_libucrtbase_a-_huge.o `test -f 'math/_huge.c' || echo '$(srcdir)/'`math/_huge.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/lib32_libucrtbase_a-_huge.Tpo math/$(DEPDIR)/lib32_libucrtbase_a-_huge.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/_huge.c' object='math/lib32_libucrtbase_a-_huge.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libucrtbase_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib32_libucrtbase_a-_huge.o `test -f 'math/_huge.c' || echo '$(srcdir)/'`math/_huge.c
+
+math/lib32_libucrtbase_a-_huge.obj: math/_huge.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libucrtbase_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib32_libucrtbase_a-_huge.obj -MD -MP -MF math/$(DEPDIR)/lib32_libucrtbase_a-_huge.Tpo -c -o math/lib32_libucrtbase_a-_huge.obj `if test -f 'math/_huge.c'; then $(CYGPATH_W) 'math/_huge.c'; else $(CYGPATH_W) '$(srcdir)/math/_huge.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/lib32_libucrtbase_a-_huge.Tpo math/$(DEPDIR)/lib32_libucrtbase_a-_huge.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/_huge.c' object='math/lib32_libucrtbase_a-_huge.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libucrtbase_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib32_libucrtbase_a-_huge.obj `if test -f 'math/_huge.c'; then $(CYGPATH_W) 'math/_huge.c'; else $(CYGPATH_W) '$(srcdir)/math/_huge.c'; fi`
 
 stdio/lib32_libucrtbase_a-ucrt_fprintf.o: stdio/ucrt_fprintf.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libucrtbase_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/lib32_libucrtbase_a-ucrt_fprintf.o -MD -MP -MF stdio/$(DEPDIR)/lib32_libucrtbase_a-ucrt_fprintf.Tpo -c -o stdio/lib32_libucrtbase_a-ucrt_fprintf.o `test -f 'stdio/ucrt_fprintf.c' || echo '$(srcdir)/'`stdio/ucrt_fprintf.c
@@ -50117,6 +50194,20 @@ crt/lib64_libucrt_extra_a-ucrtbase_compat.obj: crt/ucrtbase_compat.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libucrt_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o crt/lib64_libucrt_extra_a-ucrtbase_compat.obj `if test -f 'crt/ucrtbase_compat.c'; then $(CYGPATH_W) 'crt/ucrtbase_compat.c'; else $(CYGPATH_W) '$(srcdir)/crt/ucrtbase_compat.c'; fi`
 
+math/lib64_libucrt_extra_a-_huge.o: math/_huge.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libucrt_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib64_libucrt_extra_a-_huge.o -MD -MP -MF math/$(DEPDIR)/lib64_libucrt_extra_a-_huge.Tpo -c -o math/lib64_libucrt_extra_a-_huge.o `test -f 'math/_huge.c' || echo '$(srcdir)/'`math/_huge.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/lib64_libucrt_extra_a-_huge.Tpo math/$(DEPDIR)/lib64_libucrt_extra_a-_huge.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/_huge.c' object='math/lib64_libucrt_extra_a-_huge.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libucrt_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib64_libucrt_extra_a-_huge.o `test -f 'math/_huge.c' || echo '$(srcdir)/'`math/_huge.c
+
+math/lib64_libucrt_extra_a-_huge.obj: math/_huge.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libucrt_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib64_libucrt_extra_a-_huge.obj -MD -MP -MF math/$(DEPDIR)/lib64_libucrt_extra_a-_huge.Tpo -c -o math/lib64_libucrt_extra_a-_huge.obj `if test -f 'math/_huge.c'; then $(CYGPATH_W) 'math/_huge.c'; else $(CYGPATH_W) '$(srcdir)/math/_huge.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/lib64_libucrt_extra_a-_huge.Tpo math/$(DEPDIR)/lib64_libucrt_extra_a-_huge.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/_huge.c' object='math/lib64_libucrt_extra_a-_huge.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libucrt_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib64_libucrt_extra_a-_huge.obj `if test -f 'math/_huge.c'; then $(CYGPATH_W) 'math/_huge.c'; else $(CYGPATH_W) '$(srcdir)/math/_huge.c'; fi`
+
 stdio/lib64_libucrt_extra_a-ucrt_fprintf.o: stdio/ucrt_fprintf.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libucrt_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/lib64_libucrt_extra_a-ucrt_fprintf.o -MD -MP -MF stdio/$(DEPDIR)/lib64_libucrt_extra_a-ucrt_fprintf.Tpo -c -o stdio/lib64_libucrt_extra_a-ucrt_fprintf.o `test -f 'stdio/ucrt_fprintf.c' || echo '$(srcdir)/'`stdio/ucrt_fprintf.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) stdio/$(DEPDIR)/lib64_libucrt_extra_a-ucrt_fprintf.Tpo stdio/$(DEPDIR)/lib64_libucrt_extra_a-ucrt_fprintf.Po
@@ -50578,6 +50669,20 @@ crt/lib64_libucrtbase_a-ucrtbase_compat.obj: crt/ucrtbase_compat.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='crt/ucrtbase_compat.c' object='crt/lib64_libucrtbase_a-ucrtbase_compat.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libucrtbase_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o crt/lib64_libucrtbase_a-ucrtbase_compat.obj `if test -f 'crt/ucrtbase_compat.c'; then $(CYGPATH_W) 'crt/ucrtbase_compat.c'; else $(CYGPATH_W) '$(srcdir)/crt/ucrtbase_compat.c'; fi`
+
+math/lib64_libucrtbase_a-_huge.o: math/_huge.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libucrtbase_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib64_libucrtbase_a-_huge.o -MD -MP -MF math/$(DEPDIR)/lib64_libucrtbase_a-_huge.Tpo -c -o math/lib64_libucrtbase_a-_huge.o `test -f 'math/_huge.c' || echo '$(srcdir)/'`math/_huge.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/lib64_libucrtbase_a-_huge.Tpo math/$(DEPDIR)/lib64_libucrtbase_a-_huge.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/_huge.c' object='math/lib64_libucrtbase_a-_huge.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libucrtbase_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib64_libucrtbase_a-_huge.o `test -f 'math/_huge.c' || echo '$(srcdir)/'`math/_huge.c
+
+math/lib64_libucrtbase_a-_huge.obj: math/_huge.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libucrtbase_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/lib64_libucrtbase_a-_huge.obj -MD -MP -MF math/$(DEPDIR)/lib64_libucrtbase_a-_huge.Tpo -c -o math/lib64_libucrtbase_a-_huge.obj `if test -f 'math/_huge.c'; then $(CYGPATH_W) 'math/_huge.c'; else $(CYGPATH_W) '$(srcdir)/math/_huge.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/lib64_libucrtbase_a-_huge.Tpo math/$(DEPDIR)/lib64_libucrtbase_a-_huge.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/_huge.c' object='math/lib64_libucrtbase_a-_huge.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libucrtbase_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/lib64_libucrtbase_a-_huge.obj `if test -f 'math/_huge.c'; then $(CYGPATH_W) 'math/_huge.c'; else $(CYGPATH_W) '$(srcdir)/math/_huge.c'; fi`
 
 stdio/lib64_libucrtbase_a-ucrt_fprintf.o: stdio/ucrt_fprintf.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libucrtbase_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/lib64_libucrtbase_a-ucrt_fprintf.o -MD -MP -MF stdio/$(DEPDIR)/lib64_libucrtbase_a-ucrt_fprintf.Tpo -c -o stdio/lib64_libucrtbase_a-ucrt_fprintf.o `test -f 'stdio/ucrt_fprintf.c' || echo '$(srcdir)/'`stdio/ucrt_fprintf.c
@@ -61219,6 +61324,20 @@ crt/libarm32_libucrt_extra_a-ucrtbase_compat.obj: crt/ucrtbase_compat.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libucrt_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o crt/libarm32_libucrt_extra_a-ucrtbase_compat.obj `if test -f 'crt/ucrtbase_compat.c'; then $(CYGPATH_W) 'crt/ucrtbase_compat.c'; else $(CYGPATH_W) '$(srcdir)/crt/ucrtbase_compat.c'; fi`
 
+math/libarm32_libucrt_extra_a-_huge.o: math/_huge.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libucrt_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/libarm32_libucrt_extra_a-_huge.o -MD -MP -MF math/$(DEPDIR)/libarm32_libucrt_extra_a-_huge.Tpo -c -o math/libarm32_libucrt_extra_a-_huge.o `test -f 'math/_huge.c' || echo '$(srcdir)/'`math/_huge.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/libarm32_libucrt_extra_a-_huge.Tpo math/$(DEPDIR)/libarm32_libucrt_extra_a-_huge.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/_huge.c' object='math/libarm32_libucrt_extra_a-_huge.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libucrt_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/libarm32_libucrt_extra_a-_huge.o `test -f 'math/_huge.c' || echo '$(srcdir)/'`math/_huge.c
+
+math/libarm32_libucrt_extra_a-_huge.obj: math/_huge.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libucrt_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/libarm32_libucrt_extra_a-_huge.obj -MD -MP -MF math/$(DEPDIR)/libarm32_libucrt_extra_a-_huge.Tpo -c -o math/libarm32_libucrt_extra_a-_huge.obj `if test -f 'math/_huge.c'; then $(CYGPATH_W) 'math/_huge.c'; else $(CYGPATH_W) '$(srcdir)/math/_huge.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/libarm32_libucrt_extra_a-_huge.Tpo math/$(DEPDIR)/libarm32_libucrt_extra_a-_huge.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/_huge.c' object='math/libarm32_libucrt_extra_a-_huge.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libucrt_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/libarm32_libucrt_extra_a-_huge.obj `if test -f 'math/_huge.c'; then $(CYGPATH_W) 'math/_huge.c'; else $(CYGPATH_W) '$(srcdir)/math/_huge.c'; fi`
+
 stdio/libarm32_libucrt_extra_a-ucrt_fprintf.o: stdio/ucrt_fprintf.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libucrt_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/libarm32_libucrt_extra_a-ucrt_fprintf.o -MD -MP -MF stdio/$(DEPDIR)/libarm32_libucrt_extra_a-ucrt_fprintf.Tpo -c -o stdio/libarm32_libucrt_extra_a-ucrt_fprintf.o `test -f 'stdio/ucrt_fprintf.c' || echo '$(srcdir)/'`stdio/ucrt_fprintf.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) stdio/$(DEPDIR)/libarm32_libucrt_extra_a-ucrt_fprintf.Tpo stdio/$(DEPDIR)/libarm32_libucrt_extra_a-ucrt_fprintf.Po
@@ -61680,6 +61799,20 @@ crt/libarm32_libucrtbase_a-ucrtbase_compat.obj: crt/ucrtbase_compat.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='crt/ucrtbase_compat.c' object='crt/libarm32_libucrtbase_a-ucrtbase_compat.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libucrtbase_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o crt/libarm32_libucrtbase_a-ucrtbase_compat.obj `if test -f 'crt/ucrtbase_compat.c'; then $(CYGPATH_W) 'crt/ucrtbase_compat.c'; else $(CYGPATH_W) '$(srcdir)/crt/ucrtbase_compat.c'; fi`
+
+math/libarm32_libucrtbase_a-_huge.o: math/_huge.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libucrtbase_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/libarm32_libucrtbase_a-_huge.o -MD -MP -MF math/$(DEPDIR)/libarm32_libucrtbase_a-_huge.Tpo -c -o math/libarm32_libucrtbase_a-_huge.o `test -f 'math/_huge.c' || echo '$(srcdir)/'`math/_huge.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/libarm32_libucrtbase_a-_huge.Tpo math/$(DEPDIR)/libarm32_libucrtbase_a-_huge.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/_huge.c' object='math/libarm32_libucrtbase_a-_huge.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libucrtbase_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/libarm32_libucrtbase_a-_huge.o `test -f 'math/_huge.c' || echo '$(srcdir)/'`math/_huge.c
+
+math/libarm32_libucrtbase_a-_huge.obj: math/_huge.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libucrtbase_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/libarm32_libucrtbase_a-_huge.obj -MD -MP -MF math/$(DEPDIR)/libarm32_libucrtbase_a-_huge.Tpo -c -o math/libarm32_libucrtbase_a-_huge.obj `if test -f 'math/_huge.c'; then $(CYGPATH_W) 'math/_huge.c'; else $(CYGPATH_W) '$(srcdir)/math/_huge.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/libarm32_libucrtbase_a-_huge.Tpo math/$(DEPDIR)/libarm32_libucrtbase_a-_huge.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/_huge.c' object='math/libarm32_libucrtbase_a-_huge.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libucrtbase_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/libarm32_libucrtbase_a-_huge.obj `if test -f 'math/_huge.c'; then $(CYGPATH_W) 'math/_huge.c'; else $(CYGPATH_W) '$(srcdir)/math/_huge.c'; fi`
 
 stdio/libarm32_libucrtbase_a-ucrt_fprintf.o: stdio/ucrt_fprintf.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libucrtbase_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/libarm32_libucrtbase_a-ucrt_fprintf.o -MD -MP -MF stdio/$(DEPDIR)/libarm32_libucrtbase_a-ucrt_fprintf.Tpo -c -o stdio/libarm32_libucrtbase_a-ucrt_fprintf.o `test -f 'stdio/ucrt_fprintf.c' || echo '$(srcdir)/'`stdio/ucrt_fprintf.c
@@ -70893,6 +71026,20 @@ crt/libarm64_libucrt_extra_a-ucrtbase_compat.obj: crt/ucrtbase_compat.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libucrt_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o crt/libarm64_libucrt_extra_a-ucrtbase_compat.obj `if test -f 'crt/ucrtbase_compat.c'; then $(CYGPATH_W) 'crt/ucrtbase_compat.c'; else $(CYGPATH_W) '$(srcdir)/crt/ucrtbase_compat.c'; fi`
 
+math/libarm64_libucrt_extra_a-_huge.o: math/_huge.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libucrt_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/libarm64_libucrt_extra_a-_huge.o -MD -MP -MF math/$(DEPDIR)/libarm64_libucrt_extra_a-_huge.Tpo -c -o math/libarm64_libucrt_extra_a-_huge.o `test -f 'math/_huge.c' || echo '$(srcdir)/'`math/_huge.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/libarm64_libucrt_extra_a-_huge.Tpo math/$(DEPDIR)/libarm64_libucrt_extra_a-_huge.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/_huge.c' object='math/libarm64_libucrt_extra_a-_huge.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libucrt_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/libarm64_libucrt_extra_a-_huge.o `test -f 'math/_huge.c' || echo '$(srcdir)/'`math/_huge.c
+
+math/libarm64_libucrt_extra_a-_huge.obj: math/_huge.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libucrt_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/libarm64_libucrt_extra_a-_huge.obj -MD -MP -MF math/$(DEPDIR)/libarm64_libucrt_extra_a-_huge.Tpo -c -o math/libarm64_libucrt_extra_a-_huge.obj `if test -f 'math/_huge.c'; then $(CYGPATH_W) 'math/_huge.c'; else $(CYGPATH_W) '$(srcdir)/math/_huge.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/libarm64_libucrt_extra_a-_huge.Tpo math/$(DEPDIR)/libarm64_libucrt_extra_a-_huge.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/_huge.c' object='math/libarm64_libucrt_extra_a-_huge.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libucrt_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/libarm64_libucrt_extra_a-_huge.obj `if test -f 'math/_huge.c'; then $(CYGPATH_W) 'math/_huge.c'; else $(CYGPATH_W) '$(srcdir)/math/_huge.c'; fi`
+
 stdio/libarm64_libucrt_extra_a-ucrt_fprintf.o: stdio/ucrt_fprintf.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libucrt_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/libarm64_libucrt_extra_a-ucrt_fprintf.o -MD -MP -MF stdio/$(DEPDIR)/libarm64_libucrt_extra_a-ucrt_fprintf.Tpo -c -o stdio/libarm64_libucrt_extra_a-ucrt_fprintf.o `test -f 'stdio/ucrt_fprintf.c' || echo '$(srcdir)/'`stdio/ucrt_fprintf.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) stdio/$(DEPDIR)/libarm64_libucrt_extra_a-ucrt_fprintf.Tpo stdio/$(DEPDIR)/libarm64_libucrt_extra_a-ucrt_fprintf.Po
@@ -71354,6 +71501,20 @@ crt/libarm64_libucrtbase_a-ucrtbase_compat.obj: crt/ucrtbase_compat.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='crt/ucrtbase_compat.c' object='crt/libarm64_libucrtbase_a-ucrtbase_compat.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libucrtbase_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o crt/libarm64_libucrtbase_a-ucrtbase_compat.obj `if test -f 'crt/ucrtbase_compat.c'; then $(CYGPATH_W) 'crt/ucrtbase_compat.c'; else $(CYGPATH_W) '$(srcdir)/crt/ucrtbase_compat.c'; fi`
+
+math/libarm64_libucrtbase_a-_huge.o: math/_huge.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libucrtbase_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/libarm64_libucrtbase_a-_huge.o -MD -MP -MF math/$(DEPDIR)/libarm64_libucrtbase_a-_huge.Tpo -c -o math/libarm64_libucrtbase_a-_huge.o `test -f 'math/_huge.c' || echo '$(srcdir)/'`math/_huge.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/libarm64_libucrtbase_a-_huge.Tpo math/$(DEPDIR)/libarm64_libucrtbase_a-_huge.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/_huge.c' object='math/libarm64_libucrtbase_a-_huge.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libucrtbase_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/libarm64_libucrtbase_a-_huge.o `test -f 'math/_huge.c' || echo '$(srcdir)/'`math/_huge.c
+
+math/libarm64_libucrtbase_a-_huge.obj: math/_huge.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libucrtbase_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT math/libarm64_libucrtbase_a-_huge.obj -MD -MP -MF math/$(DEPDIR)/libarm64_libucrtbase_a-_huge.Tpo -c -o math/libarm64_libucrtbase_a-_huge.obj `if test -f 'math/_huge.c'; then $(CYGPATH_W) 'math/_huge.c'; else $(CYGPATH_W) '$(srcdir)/math/_huge.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) math/$(DEPDIR)/libarm64_libucrtbase_a-_huge.Tpo math/$(DEPDIR)/libarm64_libucrtbase_a-_huge.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='math/_huge.c' object='math/libarm64_libucrtbase_a-_huge.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libucrtbase_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o math/libarm64_libucrtbase_a-_huge.obj `if test -f 'math/_huge.c'; then $(CYGPATH_W) 'math/_huge.c'; else $(CYGPATH_W) '$(srcdir)/math/_huge.c'; fi`
 
 stdio/libarm64_libucrtbase_a-ucrt_fprintf.o: stdio/ucrt_fprintf.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libucrtbase_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/libarm64_libucrtbase_a-ucrt_fprintf.o -MD -MP -MF stdio/$(DEPDIR)/libarm64_libucrtbase_a-ucrt_fprintf.Tpo -c -o stdio/libarm64_libucrtbase_a-ucrt_fprintf.o `test -f 'stdio/ucrt_fprintf.c' || echo '$(srcdir)/'`stdio/ucrt_fprintf.c
@@ -77753,6 +77914,8 @@ distclean: distclean-am
 	-rm -f math/$(DEPDIR)/lib32_libmsvcr90_a-frexp.Po
 	-rm -f math/$(DEPDIR)/lib32_libmsvcr90d_a-frexp.Po
 	-rm -f math/$(DEPDIR)/lib32_libmsvcrt_os_a-frexp.Po
+	-rm -f math/$(DEPDIR)/lib32_libucrt_extra_a-_huge.Po
+	-rm -f math/$(DEPDIR)/lib32_libucrtbase_a-_huge.Po
 	-rm -f math/$(DEPDIR)/lib64_libcrtdll_a-frexp.Po
 	-rm -f math/$(DEPDIR)/lib64_libmingwex_a-abs64.Po
 	-rm -f math/$(DEPDIR)/lib64_libmingwex_a-cbrt.Po
@@ -77853,6 +78016,8 @@ distclean: distclean-am
 	-rm -f math/$(DEPDIR)/lib64_libmsvcr90_a-frexp.Po
 	-rm -f math/$(DEPDIR)/lib64_libmsvcr90d_a-frexp.Po
 	-rm -f math/$(DEPDIR)/lib64_libmsvcrt_os_a-frexp.Po
+	-rm -f math/$(DEPDIR)/lib64_libucrt_extra_a-_huge.Po
+	-rm -f math/$(DEPDIR)/lib64_libucrtbase_a-_huge.Po
 	-rm -f math/$(DEPDIR)/libarm32_libmingwex_a-abs64.Po
 	-rm -f math/$(DEPDIR)/libarm32_libmingwex_a-cbrt.Po
 	-rm -f math/$(DEPDIR)/libarm32_libmingwex_a-cbrtf.Po
@@ -77946,6 +78111,8 @@ distclean: distclean-am
 	-rm -f math/$(DEPDIR)/libarm32_libmsvcr110_a-frexp.Po
 	-rm -f math/$(DEPDIR)/libarm32_libmsvcr120_app_a-frexp.Po
 	-rm -f math/$(DEPDIR)/libarm32_libmsvcrt_os_a-frexp.Po
+	-rm -f math/$(DEPDIR)/libarm32_libucrt_extra_a-_huge.Po
+	-rm -f math/$(DEPDIR)/libarm32_libucrtbase_a-_huge.Po
 	-rm -f math/$(DEPDIR)/libarm64_libmingwex_a-abs64.Po
 	-rm -f math/$(DEPDIR)/libarm64_libmingwex_a-cbrt.Po
 	-rm -f math/$(DEPDIR)/libarm64_libmingwex_a-cbrtf.Po
@@ -78037,6 +78204,8 @@ distclean: distclean-am
 	-rm -f math/$(DEPDIR)/libarm64_libmingwex_a-tgammal.Po
 	-rm -f math/$(DEPDIR)/libarm64_libmingwex_a-truncl.Po
 	-rm -f math/$(DEPDIR)/libarm64_libmsvcrt_os_a-frexp.Po
+	-rm -f math/$(DEPDIR)/libarm64_libucrt_extra_a-_huge.Po
+	-rm -f math/$(DEPDIR)/libarm64_libucrtbase_a-_huge.Po
 	-rm -f math/DFP/$(DEPDIR)/lib32_libmingwex_a-__fpclassifyd128.Po
 	-rm -f math/DFP/$(DEPDIR)/lib32_libmingwex_a-__fpclassifyd32.Po
 	-rm -f math/DFP/$(DEPDIR)/lib32_libmingwex_a-__fpclassifyd64.Po
@@ -81320,6 +81489,8 @@ maintainer-clean: maintainer-clean-am
 	-rm -f math/$(DEPDIR)/lib32_libmsvcr90_a-frexp.Po
 	-rm -f math/$(DEPDIR)/lib32_libmsvcr90d_a-frexp.Po
 	-rm -f math/$(DEPDIR)/lib32_libmsvcrt_os_a-frexp.Po
+	-rm -f math/$(DEPDIR)/lib32_libucrt_extra_a-_huge.Po
+	-rm -f math/$(DEPDIR)/lib32_libucrtbase_a-_huge.Po
 	-rm -f math/$(DEPDIR)/lib64_libcrtdll_a-frexp.Po
 	-rm -f math/$(DEPDIR)/lib64_libmingwex_a-abs64.Po
 	-rm -f math/$(DEPDIR)/lib64_libmingwex_a-cbrt.Po
@@ -81420,6 +81591,8 @@ maintainer-clean: maintainer-clean-am
 	-rm -f math/$(DEPDIR)/lib64_libmsvcr90_a-frexp.Po
 	-rm -f math/$(DEPDIR)/lib64_libmsvcr90d_a-frexp.Po
 	-rm -f math/$(DEPDIR)/lib64_libmsvcrt_os_a-frexp.Po
+	-rm -f math/$(DEPDIR)/lib64_libucrt_extra_a-_huge.Po
+	-rm -f math/$(DEPDIR)/lib64_libucrtbase_a-_huge.Po
 	-rm -f math/$(DEPDIR)/libarm32_libmingwex_a-abs64.Po
 	-rm -f math/$(DEPDIR)/libarm32_libmingwex_a-cbrt.Po
 	-rm -f math/$(DEPDIR)/libarm32_libmingwex_a-cbrtf.Po
@@ -81513,6 +81686,8 @@ maintainer-clean: maintainer-clean-am
 	-rm -f math/$(DEPDIR)/libarm32_libmsvcr110_a-frexp.Po
 	-rm -f math/$(DEPDIR)/libarm32_libmsvcr120_app_a-frexp.Po
 	-rm -f math/$(DEPDIR)/libarm32_libmsvcrt_os_a-frexp.Po
+	-rm -f math/$(DEPDIR)/libarm32_libucrt_extra_a-_huge.Po
+	-rm -f math/$(DEPDIR)/libarm32_libucrtbase_a-_huge.Po
 	-rm -f math/$(DEPDIR)/libarm64_libmingwex_a-abs64.Po
 	-rm -f math/$(DEPDIR)/libarm64_libmingwex_a-cbrt.Po
 	-rm -f math/$(DEPDIR)/libarm64_libmingwex_a-cbrtf.Po
@@ -81604,6 +81779,8 @@ maintainer-clean: maintainer-clean-am
 	-rm -f math/$(DEPDIR)/libarm64_libmingwex_a-tgammal.Po
 	-rm -f math/$(DEPDIR)/libarm64_libmingwex_a-truncl.Po
 	-rm -f math/$(DEPDIR)/libarm64_libmsvcrt_os_a-frexp.Po
+	-rm -f math/$(DEPDIR)/libarm64_libucrt_extra_a-_huge.Po
+	-rm -f math/$(DEPDIR)/libarm64_libucrtbase_a-_huge.Po
 	-rm -f math/DFP/$(DEPDIR)/lib32_libmingwex_a-__fpclassifyd128.Po
 	-rm -f math/DFP/$(DEPDIR)/lib32_libmingwex_a-__fpclassifyd32.Po
 	-rm -f math/DFP/$(DEPDIR)/lib32_libmingwex_a-__fpclassifyd64.Po
