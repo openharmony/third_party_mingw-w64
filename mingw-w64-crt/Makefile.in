@@ -151,8 +151,9 @@ PRE_UNINSTALL = :
 POST_UNINSTALL = :
 build_triplet = @build@
 host_triplet = @host@
-@DELAY_IMPORT_LIBS_TRUE@am__append_1 = --output-delaylib $@.delayimp.a
-@ENABLE_SOFTMATH_FALSE@am__append_2 = \
+@DLLTOOL_HAS_TEMP_PREFIX_TRUE@am__append_1 = --temp-prefix $$(basename $@ .a)
+@DELAY_IMPORT_LIBS_TRUE@am__append_2 = --output-delaylib $@.delayimp.a
+@ENABLE_SOFTMATH_FALSE@am__append_3 = \
 @ENABLE_SOFTMATH_FALSE@  math/arm/exp2.S \
 @ENABLE_SOFTMATH_FALSE@  math/arm/exp2f.S \
 @ENABLE_SOFTMATH_FALSE@  math/arm/nearbyint.S \
@@ -194,7 +195,7 @@ host_triplet = @host@
 @ENABLE_SOFTMATH_FALSE@  math/arm-common/s_remquof.c \
 @ENABLE_SOFTMATH_FALSE@  math/arm-common/scalbn.c
 
-@ENABLE_SOFTMATH_TRUE@am__append_3 = \
+@ENABLE_SOFTMATH_TRUE@am__append_4 = \
 @ENABLE_SOFTMATH_TRUE@  math/softmath/e_fmod.c    math/softmath/e_fmodf.c   math/softmath/e_powf.c    math/softmath/e_pow.c \
 @ENABLE_SOFTMATH_TRUE@  math/softmath/acosf.c     math/softmath/acosh.c     math/softmath/acosl.c     math/softmath/acoshf.c    math/softmath/acoshl.c    \
 @ENABLE_SOFTMATH_TRUE@  math/softmath/asinf.c     math/softmath/asinh.c     math/softmath/asinl.c     math/softmath/asinhf.c    math/softmath/asinhl.c    \
@@ -212,24 +213,24 @@ host_triplet = @host@
 @ENABLE_SOFTMATH_TRUE@  math/softmath/scalbnl.c   math/softmath/sin.c       math/softmath/sincos.c    math/softmath/sincosf.c   math/softmath/sincosl.c   \
 @ENABLE_SOFTMATH_TRUE@  math/softmath/sinf.c      math/softmath/sinl.c      math/softmath/tanf.c      math/softmath/tanl.c
 
-@ENABLE_SOFTMATH_FALSE@am__append_4 = \
+@ENABLE_SOFTMATH_FALSE@am__append_5 = \
 @ENABLE_SOFTMATH_FALSE@  math/arm-common/ldexpl.c  math/arm/sincos.S         math/arm/sincosf.S
 
-@LIB32_TRUE@@W32API_FALSE@am__append_5 = lib32/libmsvcrt.a \
+@LIB32_TRUE@@W32API_FALSE@am__append_6 = lib32/libmsvcrt.a \
 @LIB32_TRUE@@W32API_FALSE@	lib32/libmsvcrt-os.a
-@LIB32_TRUE@@W32API_FALSE@am__append_6 = lib32/libdelayimp.a \
+@LIB32_TRUE@@W32API_FALSE@am__append_7 = lib32/libdelayimp.a \
 @LIB32_TRUE@@W32API_FALSE@	lib32/libm.a lib32/libgmon.a \
 @LIB32_TRUE@@W32API_FALSE@	lib32/liblargeint.a \
 @LIB32_TRUE@@W32API_FALSE@	lib32/libmingw32.a \
 @LIB32_TRUE@@W32API_FALSE@	lib32/libmingwex.a \
 @LIB32_TRUE@@W32API_FALSE@	lib32/libmoldname.a \
 @LIB32_TRUE@@W32API_FALSE@	lib32/libmingwthrd.a
-@LIB32_TRUE@@W32API_FALSE@am__append_7 = lib32/msvcrt.def lib32/msvcr80.def lib32/msvcr90.def lib32/msvcr90d.def lib32/msvcr100.def lib32/msvcr110.def lib32/msvcr120.def lib32/msvcr120d.def \
+@LIB32_TRUE@@W32API_FALSE@am__append_8 = lib32/msvcrt.def lib32/msvcr80.def lib32/msvcr90.def lib32/msvcr90d.def lib32/msvcr100.def lib32/msvcr110.def lib32/msvcr120.def lib32/msvcr120d.def \
 @LIB32_TRUE@@W32API_FALSE@				  lib32/msvcr120_app.def lib32/msvcp120_app.def lib32/ucrtbase.def \
 @LIB32_TRUE@@W32API_FALSE@				  lib32/api-ms-win-crt-math-l1-1-0.def lib32/api-ms-win-crt-private-l1-1-0.def lib32/api-ms-win-crt-runtime-l1-1-0.def \
 @LIB32_TRUE@@W32API_FALSE@				  lib32/vcruntime140_app.def
 
-@LIB32_TRUE@@W32API_FALSE@am__append_8 = lib32/libglut.a \
+@LIB32_TRUE@@W32API_FALSE@am__append_9 = lib32/libglut.a \
 @LIB32_TRUE@@W32API_FALSE@	lib32/libmsvcp60.a \
 @LIB32_TRUE@@W32API_FALSE@	lib32/libmsvcp120_app.a \
 @LIB32_TRUE@@W32API_FALSE@	lib32/libcrtdll.a lib32/libmsvcr80.a \
@@ -243,17 +244,17 @@ host_triplet = @host@
 @LIB32_TRUE@@W32API_FALSE@	lib32/libucrtbase.a lib32/libucrt.a \
 @LIB32_TRUE@@W32API_FALSE@	lib32/libucrtapp.a \
 @LIB32_TRUE@@W32API_FALSE@	lib32/libvcruntime140_app.a
-@LIB32_TRUE@@W32API_FALSE@am__append_9 = lib32/libmsvcrt_common.a lib32/libmsvcrt_extra.a lib32/libmsvcr120_app_extra.a lib32/libucrt_extra.a lib32/libucrtapp_extra.a
-@LIB64_TRUE@@W32API_FALSE@am__append_10 = lib64/libmsvcrt.a \
+@LIB32_TRUE@@W32API_FALSE@am__append_10 = lib32/libmsvcrt_common.a lib32/libmsvcrt_extra.a lib32/libmsvcr120_app_extra.a lib32/libucrt_extra.a lib32/libucrtapp_extra.a
+@LIB64_TRUE@@W32API_FALSE@am__append_11 = lib64/libmsvcrt.a \
 @LIB64_TRUE@@W32API_FALSE@	lib64/libmsvcrt-os.a
-@LIB64_TRUE@@W32API_FALSE@am__append_11 = lib64/libdelayimp.a \
+@LIB64_TRUE@@W32API_FALSE@am__append_12 = lib64/libdelayimp.a \
 @LIB64_TRUE@@W32API_FALSE@	lib64/libm.a lib64/libgmon.a \
 @LIB64_TRUE@@W32API_FALSE@	lib64/liblargeint.a \
 @LIB64_TRUE@@W32API_FALSE@	lib64/libmingw32.a \
 @LIB64_TRUE@@W32API_FALSE@	lib64/libmingwex.a \
 @LIB64_TRUE@@W32API_FALSE@	lib64/libmoldname.a \
 @LIB64_TRUE@@W32API_FALSE@	lib64/libmingwthrd.a
-@LIB64_TRUE@@W32API_FALSE@am__append_12 = lib64/msvcrt.def lib64/msvcr80.def lib64/msvcr90.def lib64/msvcr90d.def \
+@LIB64_TRUE@@W32API_FALSE@am__append_13 = lib64/msvcrt.def lib64/msvcr80.def lib64/msvcr90.def lib64/msvcr90d.def \
 @LIB64_TRUE@@W32API_FALSE@				  lib64/msvcr100.def lib64/msvcr110.def lib64/msvcr120.def lib64/msvcr120d.def \
 @LIB64_TRUE@@W32API_FALSE@				  lib64/msvcr120_app.def lib64/msvcp120_app.def lib64/ucrtbase.def \
 @LIB64_TRUE@@W32API_FALSE@				  lib64/advapi32.def lib64/clbcatq.def lib64/kernel32.def lib64/ole32.def \
@@ -261,7 +262,7 @@ host_triplet = @host@
 @LIB64_TRUE@@W32API_FALSE@				  lib64/api-ms-win-crt-math-l1-1-0.def lib64/api-ms-win-crt-private-l1-1-0.def lib64/api-ms-win-crt-runtime-l1-1-0.def \
 @LIB64_TRUE@@W32API_FALSE@				  lib64/vcruntime140_app.def
 
-@LIB64_TRUE@@W32API_FALSE@am__append_13 = lib64/libmsvcp60.a \
+@LIB64_TRUE@@W32API_FALSE@am__append_14 = lib64/libmsvcp60.a \
 @LIB64_TRUE@@W32API_FALSE@	lib64/libmsvcp120_app.a \
 @LIB64_TRUE@@W32API_FALSE@	lib64/libcrtdll.a lib64/libmsvcr80.a \
 @LIB64_TRUE@@W32API_FALSE@	lib64/libmsvcr90.a \
@@ -274,8 +275,8 @@ host_triplet = @host@
 @LIB64_TRUE@@W32API_FALSE@	lib64/libucrtbase.a lib64/libucrt.a \
 @LIB64_TRUE@@W32API_FALSE@	lib64/libucrtapp.a \
 @LIB64_TRUE@@W32API_FALSE@	lib64/libvcruntime140_app.a
-@LIB64_TRUE@@W32API_FALSE@am__append_14 = lib64/libmsvcrt_common.a lib64/libmsvcrt_extra.a lib64/libmsvcr80_extra.a lib64/libmsvcr120_app_extra.a lib64/libucrt_extra.a lib64/libucrtapp_extra.a
-@LIBARM32_TRUE@@W32API_FALSE@am__append_15 = libarm32/libmsvcrt.a \
+@LIB64_TRUE@@W32API_FALSE@am__append_15 = lib64/libmsvcrt_common.a lib64/libmsvcrt_extra.a lib64/libmsvcr80_extra.a lib64/libmsvcr120_app_extra.a lib64/libucrt_extra.a lib64/libucrtapp_extra.a
+@LIBARM32_TRUE@@W32API_FALSE@am__append_16 = libarm32/libmsvcrt.a \
 @LIBARM32_TRUE@@W32API_FALSE@	libarm32/libmsvcrt-os.a
 
 #libarm32_LIBRARIES += libarm32/libgmon.a
@@ -284,28 +285,28 @@ host_triplet = @host@
 #  profile/gmon.h   profile/gmon.c \
 #  profile/mcountFunc.S
 #libarm32_libgmon_a_CPPFLAGS=$(CPPFLAGSARM32) $(sysincludes)
-@LIBARM32_TRUE@@W32API_FALSE@am__append_16 = libarm32/libdelayimp.a \
+@LIBARM32_TRUE@@W32API_FALSE@am__append_17 = libarm32/libdelayimp.a \
 @LIBARM32_TRUE@@W32API_FALSE@	libarm32/libm.a \
 @LIBARM32_TRUE@@W32API_FALSE@	libarm32/liblargeint.a \
 @LIBARM32_TRUE@@W32API_FALSE@	libarm32/libmingw32.a \
 @LIBARM32_TRUE@@W32API_FALSE@	libarm32/libmingwex.a \
 @LIBARM32_TRUE@@W32API_FALSE@	libarm32/libmoldname.a \
 @LIBARM32_TRUE@@W32API_FALSE@	libarm32/libmingwthrd.a
-@LIBARM32_TRUE@@W32API_FALSE@am__append_17 = libarm32/msvcrt.def libarm32/msvcr80.def libarm32/msvcr90.def libarm32/msvcr90d.def libarm32/msvcr100.def libarm32/msvcr110.def libarm32/msvcr120_app.def libarm32/ucrtbase.def \
+@LIBARM32_TRUE@@W32API_FALSE@am__append_18 = libarm32/msvcrt.def libarm32/msvcr80.def libarm32/msvcr90.def libarm32/msvcr90d.def libarm32/msvcr100.def libarm32/msvcr110.def libarm32/msvcr120_app.def libarm32/ucrtbase.def \
 @LIBARM32_TRUE@@W32API_FALSE@				  libarm32/advapi32.def libarm32/clbcatq.def libarm32/kernel32.def libarm32/ole32.def libarm32/oleaut32.def \
 @LIBARM32_TRUE@@W32API_FALSE@				  libarm32/user32.def libarm32/ws2_32.def \
 @LIBARM32_TRUE@@W32API_FALSE@				  libarm32/api-ms-win-crt-math-l1-1-0.def libarm32/api-ms-win-crt-private-l1-1-0.def libarm32/api-ms-win-crt-runtime-l1-1-0.def \
 @LIBARM32_TRUE@@W32API_FALSE@				  libarm32/vcruntime140_app.def
 
-@LIBARM32_TRUE@@W32API_FALSE@am__append_18 = libarm32/libmsvcp60.a \
+@LIBARM32_TRUE@@W32API_FALSE@am__append_19 = libarm32/libmsvcp60.a \
 @LIBARM32_TRUE@@W32API_FALSE@	libarm32/libmsvcr110.a \
 @LIBARM32_TRUE@@W32API_FALSE@	libarm32/libmsvcr120_app.a \
 @LIBARM32_TRUE@@W32API_FALSE@	libarm32/libucrtbase.a \
 @LIBARM32_TRUE@@W32API_FALSE@	libarm32/libucrt.a \
 @LIBARM32_TRUE@@W32API_FALSE@	libarm32/libucrtapp.a \
 @LIBARM32_TRUE@@W32API_FALSE@	libarm32/libvcruntime140_app.a
-@LIBARM32_TRUE@@W32API_FALSE@am__append_19 = libarm32/libmsvcrt_common.a libarm32/libmsvcrt_extra.a libarm32/libmsvcr120_app_extra.a libarm32/libucrt_extra.a libarm32/libucrtapp_extra.a
-@LIBARM64_TRUE@@W32API_FALSE@am__append_20 = libarm64/libmsvcrt.a \
+@LIBARM32_TRUE@@W32API_FALSE@am__append_20 = libarm32/libmsvcrt_common.a libarm32/libmsvcrt_extra.a libarm32/libmsvcr120_app_extra.a libarm32/libucrt_extra.a libarm32/libucrtapp_extra.a
+@LIBARM64_TRUE@@W32API_FALSE@am__append_21 = libarm64/libmsvcrt.a \
 @LIBARM64_TRUE@@W32API_FALSE@	libarm64/libmsvcrt-os.a
 
 #libarm64_LIBRARIES += libarm64/libgmon.a
@@ -314,50 +315,50 @@ host_triplet = @host@
 #  profile/gmon.h   profile/gmon.c \
 #  profile/mcountFunc.S
 #libarm64_libgmon_a_CPPFLAGS=$(CPPFLAGSARM64) $(sysincludes)
-@LIBARM64_TRUE@@W32API_FALSE@am__append_21 = libarm64/libdelayimp.a \
+@LIBARM64_TRUE@@W32API_FALSE@am__append_22 = libarm64/libdelayimp.a \
 @LIBARM64_TRUE@@W32API_FALSE@	libarm64/libm.a \
 @LIBARM64_TRUE@@W32API_FALSE@	libarm64/liblargeint.a \
 @LIBARM64_TRUE@@W32API_FALSE@	libarm64/libmingw32.a \
 @LIBARM64_TRUE@@W32API_FALSE@	libarm64/libmingwex.a \
 @LIBARM64_TRUE@@W32API_FALSE@	libarm64/libmoldname.a \
 @LIBARM64_TRUE@@W32API_FALSE@	libarm64/libmingwthrd.a
-@LIBARM64_TRUE@@W32API_FALSE@am__append_22 = libarm64/msvcrt.def libarm64/ucrtbase.def \
+@LIBARM64_TRUE@@W32API_FALSE@am__append_23 = libarm64/msvcrt.def libarm64/ucrtbase.def \
 @LIBARM64_TRUE@@W32API_FALSE@				  libarm64/advapi32.def libarm64/clbcatq.def libarm64/kernel32.def libarm64/ole32.def libarm64/oleaut32.def \
 @LIBARM64_TRUE@@W32API_FALSE@				  libarm64/user32.def libarm64/ws2_32.def \
 @LIBARM64_TRUE@@W32API_FALSE@				  libarm64/api-ms-win-crt-math-l1-1-0.def libarm64/api-ms-win-crt-private-l1-1-0.def libarm64/api-ms-win-crt-runtime-l1-1-0.def \
 @LIBARM64_TRUE@@W32API_FALSE@				  libarm64/vcruntime140_app.def
 
-@LIBARM64_TRUE@@W32API_FALSE@am__append_23 = libarm64/libucrtbase.a \
+@LIBARM64_TRUE@@W32API_FALSE@am__append_24 = libarm64/libucrtbase.a \
 @LIBARM64_TRUE@@W32API_FALSE@	libarm64/libucrt.a \
 @LIBARM64_TRUE@@W32API_FALSE@	libarm64/libucrtapp.a \
 @LIBARM64_TRUE@@W32API_FALSE@	libarm64/libvcruntime140_app.a
-@LIBARM64_TRUE@@W32API_FALSE@am__append_24 = libarm64/libmsvcrt_common.a libarm64/libmsvcrt_extra.a libarm64/libucrt_extra.a libarm64/libucrtapp_extra.a
-@ENABLE_TESTS_UNICODE_TRUE@am__append_25 = testcases/t_municode testcases/t_tmain
+@LIBARM64_TRUE@@W32API_FALSE@am__append_25 = libarm64/libmsvcrt_common.a libarm64/libmsvcrt_extra.a libarm64/libucrt_extra.a libarm64/libucrtapp_extra.a
+@ENABLE_TESTS_UNICODE_TRUE@am__append_26 = testcases/t_municode testcases/t_tmain
 check_PROGRAMS = $(am__EXEEXT_2) $(am__EXEEXT_4) $(am__EXEEXT_6)
 TESTS = $(am__EXEEXT_2) $(am__EXEEXT_4) $(am__EXEEXT_6)
 XFAIL_TESTS = testcases/t_nullptrexception$(EXEEXT) $(am__EXEEXT_7) \
 	$(am__EXEEXT_7)
 
 # Build the libraries
-@LIB32_TRUE@am__append_26 = $(newcomplex_test_lib32)
+@LIB32_TRUE@am__append_27 = $(newcomplex_test_lib32)
 
 # Build the programs during make check.
-@LIB32_TRUE@am__append_27 = $(newcomplex_tests32)
+@LIB32_TRUE@am__append_28 = $(newcomplex_tests32)
 
 # Declare the tests.
-@LIB32_TRUE@am__append_28 = $(newcomplex_tests32)
+@LIB32_TRUE@am__append_29 = $(newcomplex_tests32)
 # Remove these when completed.
-@LIB32_TRUE@am__append_29 = 
+@LIB32_TRUE@am__append_30 = 
 
 # Build the libraries
-@LIB64_TRUE@am__append_30 = $(newcomplex_test_lib64)
+@LIB64_TRUE@am__append_31 = $(newcomplex_test_lib64)
 
 # Build the programs during make check.
-@LIB64_TRUE@am__append_31 = $(newcomplex_tests64)
+@LIB64_TRUE@am__append_32 = $(newcomplex_tests64)
 
 # Declare the tests.
-@LIB64_TRUE@am__append_32 = $(newcomplex_tests64)
-@LIB64_TRUE@am__append_33 = 
+@LIB64_TRUE@am__append_33 = $(newcomplex_tests64)
+@LIB64_TRUE@am__append_34 = 
 subdir = .
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/configure.ac
@@ -10064,8 +10065,9 @@ CPPFLAGSARM32 = -mfpu=vfpv3
 CPPFLAGS32 = -m32
 CPPFLAGS64 = -m64
 @WITH_GENLIB_FALSE@AM_DLLTOOLFLAGS = -k --as=$(AS) --output-lib $@ \
-@WITH_GENLIB_FALSE@	$(am__append_1)
-@WITH_GENLIB_TRUE@AM_DLLTOOLFLAGS = -o $@ $(am__append_1)
+@WITH_GENLIB_FALSE@	$(am__append_1) $(am__append_2)
+@WITH_GENLIB_TRUE@AM_DLLTOOLFLAGS = -o $@ $(am__append_1) \
+@WITH_GENLIB_TRUE@	$(am__append_2)
 @WITH_GENLIB_FALSE@DLLTOOLFLAGSARM32 = -m arm
 @WITH_GENLIB_TRUE@DLLTOOLFLAGSARM32 = -a arm
 @WITH_GENLIB_FALSE@DLLTOOLFLAGSARM64 = -m arm64
@@ -10091,10 +10093,10 @@ LDFLAGSARM64 = -L$(top_builddir)/libarm64
 LDFLAGS32 = -m32 -L$(top_builddir)/lib32
 LDFLAGS64 = -m64 -L$(top_builddir)/lib64
 extra_include = -I$(top_srcdir)/include
-processed_defs = $(am__append_7) $(am__append_12) $(am__append_17) \
-	$(am__append_22)
-noinst_LIBRARIES = $(am__append_9) $(am__append_14) $(am__append_19) \
-	$(am__append_24)
+processed_defs = $(am__append_8) $(am__append_13) $(am__append_18) \
+	$(am__append_23)
+noinst_LIBRARIES = $(am__append_10) $(am__append_15) $(am__append_20) \
+	$(am__append_25)
 
 # default directx import library names
 xinput = xinput1_3
@@ -10315,7 +10317,7 @@ src_msvcrt64 = \
 src_msvcrtarm32 = $(src_msvcrt) misc/__p___argv.c misc/__p__acmdln.c \
 	misc/__p__commode.c misc/__p__fmode.c misc/__p__wcmdln.c \
 	misc/_getpid.c misc/initenv.c stdio/_setmaxstdio.c \
-	stdio/gets.c $(am__append_2)
+	stdio/gets.c $(am__append_3)
 src_msvcrtarm64 = \
   $(src_msvcrt) \
   math/arm-common/acosh.c \
@@ -10501,7 +10503,7 @@ src_libmingwex64 = $(src_libmingwex_x86)
 
 # these only go into the ARM32 version:
 src_libmingwexarm32 = math/arm/_chgsignl.S math/arm/s_rint.c \
-	math/arm/s_rintf.c $(am__append_3) $(am__append_4)
+	math/arm/s_rintf.c $(am__append_4) $(am__append_5)
 
 # these only go into the ARM64 version:
 src_libmingwexarm64 = \
@@ -10616,7 +10618,7 @@ src_intrincsarm64 =
 @LIB32_TRUE@	lib32/libuuid.a lib32/libgdiplus.a \
 @LIB32_TRUE@	lib32/libws2_32.a lib32/libtaskschd.a \
 @LIB32_TRUE@	lib32/libntoskrnl.a lib32/libadsiid.a \
-@LIB32_TRUE@	$(am__append_6)
+@LIB32_TRUE@	$(am__append_7)
 @LIB32_TRUE@lib32_libkernel32_a_SOURCES = $(src_intrincs) $(src_intrincs32)
 @LIB32_TRUE@lib32_libkernel32_a_AR = $(DTLIB32) && $(AR) $(ARFLAGS)
 @LIB32_TRUE@lib32_libkernel32_a_CPPFLAGS = $(CPPFLAGS32) $(extra_include) $(AM_CPPFLAGS)
@@ -10630,7 +10632,7 @@ src_intrincsarm64 =
 #lib32_DATA += lib32/libmsvcp60.a     # Specialized for W32API conditional
 #lib32_DATA += lib32/libshell32.a    # Handled by custom rule
 #lib32_DATA += lib32/libws2_32.a      # Handled by custom rule
-@LIB32_TRUE@lib32_DATA = $(am__append_5) lib32/libaclui.a \
+@LIB32_TRUE@lib32_DATA = $(am__append_6) lib32/libaclui.a \
 @LIB32_TRUE@	lib32/libactiveds.a lib32/libadsldpc.a \
 @LIB32_TRUE@	lib32/libadvapi32.a lib32/libapcups.a \
 @LIB32_TRUE@	lib32/libruntimeobject.a \
@@ -10804,7 +10806,7 @@ src_intrincsarm64 =
 @LIB32_TRUE@	lib32/libxinput1_1.a lib32/libxinput1_2.a \
 @LIB32_TRUE@	lib32/libxinput1_3.a lib32/libxinput1_4.a \
 @LIB32_TRUE@	lib32/libxinput9_1_0.a lib32/libwindowsapp.a \
-@LIB32_TRUE@	$(am__append_8)
+@LIB32_TRUE@	$(am__append_9)
 @LIB32_TRUE@lib32_libshell32_a_SOURCES = $(src_libshell32)
 @LIB32_TRUE@lib32_libshell32_a_AR = $(DTLIB32) && $(AR) $(ARFLAGS)
 @LIB32_TRUE@lib32_libshell32_a_CPPFLAGS = $(CPPFLAGS32) $(sysincludes)
@@ -10944,7 +10946,7 @@ src_intrincsarm64 =
 @LIB64_TRUE@	lib64/libscrnsavw.a lib64/libstrmiids.a \
 @LIB64_TRUE@	lib64/libuuid.a lib64/libgdiplus.a \
 @LIB64_TRUE@	lib64/libws2_32.a lib64/libtaskschd.a \
-@LIB64_TRUE@	lib64/libadsiid.a $(am__append_11)
+@LIB64_TRUE@	lib64/libadsiid.a $(am__append_12)
 @LIB64_TRUE@lib64_libkernel32_a_SOURCES = $(src_intrincs) $(src_intrincs64) lib-common/kernel32.def.in
 @LIB64_TRUE@lib64_libkernel32_a_CPPFLAGS = $(CPPFLAGS64) $(extra_include) $(AM_CPPFLAGS)
 @LIB64_TRUE@lib64_libkernel32_a_AR = $(DTDEF64) lib64/kernel32.def && $(AR) $(ARFLAGS)
@@ -10958,7 +10960,7 @@ src_intrincsarm64 =
 #lib64_DATA += lib64/libmsvcp60.a     # Specialized for W32API conditional
 #lib64_DATA += lib64/libshell32.a    # Handled by custom rule
 #lib64_DATA += lib64/libws2_32.a      # Handled by custom rule
-@LIB64_TRUE@lib64_DATA = $(am__append_10) lib64/libwinusb.a \
+@LIB64_TRUE@lib64_DATA = $(am__append_11) lib64/libwinusb.a \
 @LIB64_TRUE@	lib64/libavrt.a lib64/libacledit.a \
 @LIB64_TRUE@	lib64/libaclui.a lib64/libactiveds.a \
 @LIB64_TRUE@	lib64/libadmparse.a lib64/libadmwprox.a \
@@ -11365,7 +11367,7 @@ src_intrincsarm64 =
 @LIB64_TRUE@	lib64/libruntimeobject.a \
 @LIB64_TRUE@	lib64/libsynchronization.a lib64/libwindowsapp.a \
 @LIB64_TRUE@	lib64/libwscapi.a lib64/libwslapi.a \
-@LIB64_TRUE@	$(am__append_13)
+@LIB64_TRUE@	$(am__append_14)
 @LIB64_TRUE@lib64_libshell32_a_SOURCES = $(src_libshell32)
 @LIB64_TRUE@lib64_libshell32_a_CPPFLAGS = $(CPPFLAGS64) $(sysincludes)
 @LIB64_TRUE@lib64_libshell32_a_AR = $(DTDEF64) $(top_srcdir)/lib-common/shell32.def && $(AR) $(ARFLAGS)
@@ -11487,7 +11489,7 @@ src_intrincsarm64 =
 @LIBARM32_TRUE@	libarm32/libscrnsave.a libarm32/libscrnsavw.a \
 @LIBARM32_TRUE@	libarm32/libstrmiids.a libarm32/libuuid.a \
 @LIBARM32_TRUE@	libarm32/libgdiplus.a libarm32/libws2_32.a \
-@LIBARM32_TRUE@	libarm32/libadsiid.a $(am__append_16)
+@LIBARM32_TRUE@	libarm32/libadsiid.a $(am__append_17)
 @LIBARM32_TRUE@libarm32_libkernel32_a_SOURCES = $(src_intrincs) $(src_intrincsarm32) lib-common/kernel32.def.in
 @LIBARM32_TRUE@libarm32_libkernel32_a_AR = $(DTDEFARM32) libarm32/kernel32.def && $(AR) $(ARFLAGS)
 @LIBARM32_TRUE@libarm32_libkernel32_a_CPPFLAGS = $(CPPFLAGSARM32) $(extra_include) $(AM_CPPFLAGS)
@@ -11500,7 +11502,7 @@ src_intrincsarm64 =
 #libarm32_DATA += libarm32/libmsvcp60.a     # Specialized for W32API conditional
 #libarm32_DATA += libarm32/libshell32.a    # Handled by custom rule
 #libarm32_DATA += libarm32/libws2_32.a      # Handled by custom rule
-@LIBARM32_TRUE@libarm32_DATA = $(am__append_15) libarm32/libacledit.a \
+@LIBARM32_TRUE@libarm32_DATA = $(am__append_16) libarm32/libacledit.a \
 @LIBARM32_TRUE@	libarm32/libaclui.a libarm32/libacppage.a \
 @LIBARM32_TRUE@	libarm32/libacproxy.a libarm32/libactionqueue.a \
 @LIBARM32_TRUE@	libarm32/libactiveds.a libarm32/libadhapi.a \
@@ -12082,7 +12084,7 @@ src_intrincsarm64 =
 @LIBARM32_TRUE@	libarm32/libxpsprint.a \
 @LIBARM32_TRUE@	libarm32/libxpsrasterservice.a \
 @LIBARM32_TRUE@	libarm32/libxpssvcs.a libarm32/libxwizards.a \
-@LIBARM32_TRUE@	libarm32/libzipfldr.a $(am__append_18)
+@LIBARM32_TRUE@	libarm32/libzipfldr.a $(am__append_19)
 @LIBARM32_TRUE@libarm32_libshell32_a_SOURCES = $(src_libshell32)
 @LIBARM32_TRUE@libarm32_libshell32_a_AR = $(DTDEFARM32) $(top_srcdir)/lib-common/shell32.def && $(AR) $(ARFLAGS)
 @LIBARM32_TRUE@libarm32_libshell32_a_CPPFLAGS = $(CPPFLAGSARM32) $(sysincludes)
@@ -12188,7 +12190,7 @@ src_intrincsarm64 =
 @LIBARM64_TRUE@	libarm64/libscrnsave.a libarm64/libscrnsavw.a \
 @LIBARM64_TRUE@	libarm64/libstrmiids.a libarm64/libuuid.a \
 @LIBARM64_TRUE@	libarm64/libgdiplus.a libarm64/libws2_32.a \
-@LIBARM64_TRUE@	libarm64/libadsiid.a $(am__append_21)
+@LIBARM64_TRUE@	libarm64/libadsiid.a $(am__append_22)
 @LIBARM64_TRUE@libarm64_libkernel32_a_SOURCES = $(src_intrincs) $(src_intrincsarm64) lib-common/kernel32.def.in
 @LIBARM64_TRUE@libarm64_libkernel32_a_AR = $(DTDEFARM64) libarm64/kernel32.def && $(AR) $(ARFLAGS)
 @LIBARM64_TRUE@libarm64_libkernel32_a_CPPFLAGS = $(CPPFLAGSARM64) $(extra_include) $(AM_CPPFLAGS)
@@ -12200,7 +12202,7 @@ src_intrincsarm64 =
 #libarm64_DATA += libarm64/libksuser.a    # Handled by custom rule
 #libarm64_DATA += libarm64/libshell32.a    # Handled by custom rule
 #libarm64_DATA += libarm64/libws2_32.a      # Handled by custom rule
-@LIBARM64_TRUE@libarm64_DATA = $(am__append_20) libarm64/libacledit.a \
+@LIBARM64_TRUE@libarm64_DATA = $(am__append_21) libarm64/libacledit.a \
 @LIBARM64_TRUE@	libarm64/libactiveds.a libarm64/libadvapi32.a \
 @LIBARM64_TRUE@	libarm64/libadvpack.a libarm64/libappmgmts.a \
 @LIBARM64_TRUE@	libarm64/libappmgr.a libarm64/libasycfilt.a \
@@ -12371,7 +12373,7 @@ src_intrincsarm64 =
 @LIBARM64_TRUE@	libarm64/libwshbth.a libarm64/libwslapi.a \
 @LIBARM64_TRUE@	libarm64/libwsock32.a libarm64/libwtsapi32.a \
 @LIBARM64_TRUE@	libarm64/libxaudio2_8.a libarm64/libxinput1_4.a \
-@LIBARM64_TRUE@	$(am__append_23)
+@LIBARM64_TRUE@	$(am__append_24)
 @LIBARM64_TRUE@libarm64_libshell32_a_SOURCES = $(src_libshell32)
 @LIBARM64_TRUE@libarm64_libshell32_a_AR = $(DTDEFARM64) $(top_srcdir)/lib-common/shell32.def && $(AR) $(ARFLAGS)
 @LIBARM64_TRUE@libarm64_libshell32_a_CPPFLAGS = $(CPPFLAGSARM64) $(sysincludes)
@@ -12504,7 +12506,7 @@ testcase_progs = testcases/tstmainc testcases/tstmaincpp \
 	testcases/t_setjmp testcases/t_sigv testcases/t_speed_powl \
 	testcases/t_stat testcases/t_stdint testcases/t_time \
 	testcases/t_tls1 testcases/t_trycatch testcases/t_stat_slash \
-	testcases/t_wreaddir testcases/t_fseeko64 $(am__append_25)
+	testcases/t_wreaddir testcases/t_fseeko64 $(am__append_26)
 testcases_tstmaincpp_SOURCES = testcases/tstmaincpp.cpp
 testcases_t_trycatch_SOURCES = testcases/t_trycatch.cpp
 testcases_t_intrinc_CFLAGS = -std=c99
@@ -12513,7 +12515,7 @@ testcases_t_intrinc_CFLAGS = -std=c99
 
 # Do not specify TESTS = check_PROGRAMS, because some TESTS
 # may not be check_PROGRAMS.
-check_LIBRARIES = $(am__append_26) $(am__append_30)
+check_LIBRARIES = $(am__append_27) $(am__append_31)
 
 # Complex library check sources.
 check_complex_lib_sources = \
