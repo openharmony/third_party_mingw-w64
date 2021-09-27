@@ -82,14 +82,90 @@ Note:If the text contains special characters, please escape them according to th
 			<filefilter name="defaultPolicyFilter" desc="Filters for compatibility，license header policies">
                 <filteritem type="filepath" name="COPYING" desc="license本身"/>
                 <filteritem type="filepath" name="DISCLAIMER" desc="license本身"/>
+                <filteritem type="filepath" name="DISCLAIMER.PD" desc="license本身"/>
                 <filteritem type="filepath" name="mingw-w64-crt/profile/.*" desc="包含Cygwin license协议，其中包含red hat exception以免除使用被GPL协议影响。使用符合该exception"/>
                 <filteritem type="filepath" name="mingw-w64-headers/include/ChangeLog.2011" desc="ChangeLog文件，无License"/>
+                <filteritem type="filepath" name="mingw-w64-libraries/pseh/INSTALL" desc="doc文件，无License"/>
                 <filteritem type="filepath" name="mingw-w64-libraries/pseh/src/i386/.*" desc="包含License不对使用及分发作任何限制"/>
-                <filteritem type="filepath" name="mingw-w64-headers/include/GL/.*" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-headers/include/GL/.*" desc=" "/>
                 <filteritem type="filepath" name="mingw-w64-headers/include/KHR/khrplatform.h" desc="包含License不对使用及分发作任何限制"/>
                 <filteritem type="filepath" name="mingw-w64-headers/include/msdrm.h" desc="public domain"/>
                 <filteritem type="filepath" name="mingw-w64-headers/include/slpublic.h" desc="public domain"/>
-                
+                <filteritem type="filepath" name="mingw-w64-crt/libsrc/.*" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-crt/misc/.*" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-crt/gdtoa/.*" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-headers/ddk/.*" desc="包含License不对使用及分发作任何限制或public domain"/>
+                <filteritem type="filepath" name="mingw-w64-headers/include/gdiplus/.*" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-crt/crt/pseudo-reloc.c" desc="包含License不对使用及分发作任何限制或public domain"/>
+                <filteritem type="filepath" name="mingw-w64-crt/math/softmath/e_fmod.c" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-crt/math/softmath/e_remainderf.c" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-crt/math/softmath/e_powf.c" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-crt/math/softmath/bsd_private.h" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-crt/math/softmath/softmath_private.h" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-crt/math/softmath/e_remainder.c" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-crt/math/softmath/e_pow.c" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-crt/math/softmath/e_fmodf.c" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-crt/math/softmath/bsd_privatef.h" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-crt/math/sf_erf.c" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-crt/math/s_erf.c" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-headers/crt/stdint.h" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-headers/crt/sys/param.h" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-headers/crt/uchar.h" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-headers/crt/getopt.h" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-headers/crt/dir.h" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-headers/crt/complex.h" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-headers/include/winsplp.h" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-headers/include/winddi.h" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-headers/include/usbrpmif.h" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-headers/include/usbcamdi.h" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-headers/include/unknown.h" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-headers/include/tdiinfo.h" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-headers/include/tdi.h" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-headers/include/prntfont.h" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-headers/include/ntiologc.h" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-headers/include/ntdef.h" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-headers/include/ntddvol.h" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-headers/include/ntddvdeo.h" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-headers/include/ntddtdi.h" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-headers/include/ntddtape.h" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-headers/include/ntddstor.h" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-headers/include/ntddser.h" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-headers/include/ntddpar.h" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-headers/include/ntddmou.h" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-headers/include/ntddkbd.h" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-headers/include/ntddft.h" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-headers/include/ntdddisk.h" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-headers/include/ntddchgr.h" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-headers/include/ntddcdvd.h" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-headers/include/ntddcdrm.h" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-headers/include/ntdd8042.h" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-headers/include/newdev.h" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-headers/include/nettypes.h" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-headers/include/netevent.h" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-headers/include/lmon.h" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-headers/include/ksdebug.h" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-headers/include/kcom.h" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-headers/include/hidusage.h" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-headers/include/hidsdi.h" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-headers/include/hidpi.h" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-headers/include/evntprov.h" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-headers/include/dpfilter.h" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-headers/include/devpropdef.h" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-headers/include/devioctl.h" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-headers/include/compstui.h" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-headers/include/bdamedia.h" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-headers/include/atsmedia.h" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-crt/stdio/strtok_r.c" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-crt/stdio/mingw_pformat.h" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-crt/stdio/mingw_fprintf.c" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-crt/stdio/mingw_snprintf.c" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-crt/stdio/mingw_vsprintf.c" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-crt/stdio/mingw_vsnprintf.c" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-crt/stdio/mingw_vprintf.c" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-crt/stdio/mingw_vfprintf.c" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-crt/stdio/mingw_sprintf.c" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-crt/stdio/mingw_printf.c" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-crt/stdio/mingw_pformat.c" desc="包含License不对使用及分发作任何限制"/>
 			</filefilter>
 			<filefilter name="copyrightPolicyFilter" desc="Filters for copyright header policies" >		
 			</filefilter>				
@@ -103,6 +179,5 @@ Note:If the text contains special characters, please escape them according to th
 			</filefilter>				
 	
 		</filefilterlist>
-	
     </oatconfig>
 </configuration>
