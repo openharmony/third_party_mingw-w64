@@ -87,7 +87,7 @@ Note:If the text contains special characters, please escape them according to th
                 <filteritem type="filepath" name="mingw-w64-headers/include/ChangeLog.2011" desc="ChangeLog文件，无License"/>
                 <filteritem type="filepath" name="mingw-w64-libraries/pseh/INSTALL" desc="doc文件，无License"/>
                 <filteritem type="filepath" name="mingw-w64-libraries/pseh/src/i386/.*" desc="包含License不对使用及分发作任何限制"/>
-                <filteritem type="filepath" name="mingw-w64-headers/include/GL/.*" desc=" "/>
+                <filteritem type="filepath" name="mingw-w64-headers/include/GL/.*" desc="包含License不对使用及分发作任何限制"/>
                 <filteritem type="filepath" name="mingw-w64-headers/include/KHR/khrplatform.h" desc="包含License不对使用及分发作任何限制"/>
                 <filteritem type="filepath" name="mingw-w64-headers/include/msdrm.h" desc="public domain"/>
                 <filteritem type="filepath" name="mingw-w64-headers/include/slpublic.h" desc="public domain"/>
