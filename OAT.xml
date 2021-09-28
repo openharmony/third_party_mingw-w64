@@ -167,6 +167,15 @@ Note:If the text contains special characters, please escape them according to th
                 <filteritem type="filepath" name="mingw-w64-crt/stdio/mingw_printf.c" desc="包含License不对使用及分发作任何限制"/>
                 <filteritem type="filepath" name="mingw-w64-crt/stdio/mingw_pformat.c" desc="包含License不对使用及分发作任何限制"/>
 			</filefilter>
+            <filefilter name="binaryFileTypePolicyFilter" desc="Filters for binary header policies" >
+                <filteritem type="filepath" name="mingw-w64-libraries/libmangle/html/doxygen.png" desc="三方图片二进制不涉及License"/>
+                <filteritem type="filepath" name="mingw-w64-libraries/libmangle/html/tab_b.gif" desc="三方图片二进制不涉及License"/>
+                <filteritem type="filepath" name="mingw-w64-libraries/libmangle/html/tab_l.gif" desc="三方图片二进制不涉及License"/>
+                <filteritem type="filepath" name="mingw-w64-libraries/libmangle/html/tab_r.gif" desc="三方图片二进制不涉及License"/>
+                <filteritem type="filepath" name="mingw-w64-headers/direct-x/COPYING.LIB" desc="三方图片二进制不涉及License"/>
+                <filteritem type="filepath" name="mingw-w64-headers/tlb/oleacc.tlb" desc="三方图片二进制不涉及License"/>
+                <filteritem type="filepath" name="mingw-w64-headers/tlb/stdole2.tlb" desc="三方图片二进制不涉及License"/>
+            </filefilter>
 			<filefilter name="copyrightPolicyFilter" desc="Filters for copyright header policies" >		
 			</filefilter>				
 			<filefilter name="licenseFileNamePolicyFilter" desc="Filters for LICENSE file policies" >	
