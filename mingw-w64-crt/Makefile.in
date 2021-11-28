@@ -10758,8 +10758,8 @@ src_intrincsarm64 =
 @LIB32_TRUE@	lib32/libeappprxy.a lib32/libelscore.a \
 @LIB32_TRUE@	lib32/libesent.a lib32/libevr.a \
 @LIB32_TRUE@	lib32/libfaultrep.a lib32/libfeclient.a \
-@LIB32_TRUE@	lib32/libfwpuclnt.a lib32/libgdi32.a \
-@LIB32_TRUE@	lib32/libglaux.a lib32/libglu32.a \
+@LIB32_TRUE@	lib32/libfontsub.a lib32/libfwpuclnt.a \
+@LIB32_TRUE@	lib32/libgdi32.a lib32/libglaux.a lib32/libglu32.a \
 @LIB32_TRUE@	lib32/libglut32.a lib32/libgpapi.a \
 @LIB32_TRUE@	lib32/libgpedit.a lib32/libgpprefcl.a \
 @LIB32_TRUE@	lib32/libgpscript.a lib32/libgptext.a \
