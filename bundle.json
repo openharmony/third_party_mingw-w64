@@ -1,0 +1,39 @@
+{
+    "name": "@ohos/mingw_w64",
+    "version": "",
+    "description": "Third-party open-source software mingw-w64 | 三方开源软件mingw-w64",
+    "homePage": "https://gitee.com/openharmony",
+    "license": "Zope Public License V2.1",
+    "repository": "https://gitee.com/openharmony/third_party_mingw-w64",
+    "domain": "os",
+    "language": "",
+    "publishAs": "code-segment",
+    "private": false,
+    "scripts": {},
+    "tags": [
+        "third_party"
+    ],
+    "keywords": [
+        "third-party",
+        "mingw-w64"
+    ],
+    "envs": [],
+    "dirs": [],
+    "segment": {
+        "destPath": "third_party/mingw-w64"
+    },
+    "component": {
+        "name": "thirdparty_mingw-w64",
+        "subsystem": "",
+        "syscap": [],
+        "features": [],
+        "adapted_system_type": [],
+        "rom": "",
+        "ram": "",
+        "build": {
+            "sub_component": [],
+            "inner_kits": [],
+            "test": []
+        }
+    }
+}
