@@ -1370,7 +1370,8 @@ am__lib32_libmsvcrt_extra_a_SOURCES_DIST = misc/_configthreadlocale.c \
 	stdio/mingw_lock.c math/x86/_copysignf.c \
 	misc/___mb_cur_max_func.c misc/_create_locale.c \
 	misc/_free_locale.c misc/_get_current_locale.c \
-	misc/lc_locale_func.c misc/wassert.c stdio/_vscprintf.c
+	misc/lc_locale_func.c misc/wassert.c stdio/_scprintf.c \
+	stdio/_vscprintf.c
 am__objects_28 =  \
 	misc/lib32_libmsvcrt_extra_a-_configthreadlocale.$(OBJEXT) \
 	misc/lib32_libmsvcrt_extra_a-invalid_parameter_handler.$(OBJEXT) \
@@ -1429,6 +1430,7 @@ am__objects_29 = $(am__objects_28) \
 	misc/lib32_libmsvcrt_extra_a-_get_current_locale.$(OBJEXT) \
 	misc/lib32_libmsvcrt_extra_a-lc_locale_func.$(OBJEXT) \
 	misc/lib32_libmsvcrt_extra_a-wassert.$(OBJEXT) \
+	stdio/lib32_libmsvcrt_extra_a-_scprintf.$(OBJEXT) \
 	stdio/lib32_libmsvcrt_extra_a-_vscprintf.$(OBJEXT)
 @LIB32_TRUE@@W32API_FALSE@am_lib32_libmsvcrt_extra_a_OBJECTS =  \
 @LIB32_TRUE@@W32API_FALSE@	$(am__objects_29)
@@ -8735,6 +8737,7 @@ am__depfiles_remade = ./$(DEPDIR)/lib32_libm_a-_libm_dummy.Po \
 	stdio/$(DEPDIR)/lib32_libmsvcrt_common_a-acrt_iob_func.Po \
 	stdio/$(DEPDIR)/lib32_libmsvcrt_common_a-snprintf_alias.Po \
 	stdio/$(DEPDIR)/lib32_libmsvcrt_common_a-vsnprintf_alias.Po \
+	stdio/$(DEPDIR)/lib32_libmsvcrt_extra_a-_scprintf.Po \
 	stdio/$(DEPDIR)/lib32_libmsvcrt_extra_a-_vscprintf.Po \
 	stdio/$(DEPDIR)/lib32_libmsvcrt_extra_a-fseeki64.Po \
 	stdio/$(DEPDIR)/lib32_libmsvcrt_extra_a-mingw_lock.Po \
@@ -10357,6 +10360,7 @@ src_msvcrt32 = \
   misc/_get_current_locale.c \
   misc/lc_locale_func.c \
   misc/wassert.c \
+  stdio/_scprintf.c \
   stdio/_vscprintf.c
 
 src_msvcrt64 = \
@@ -14504,6 +14508,8 @@ misc/lib32_libmsvcrt_extra_a-lc_locale_func.$(OBJEXT):  \
 	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 misc/lib32_libmsvcrt_extra_a-wassert.$(OBJEXT): misc/$(am__dirstamp) \
 	misc/$(DEPDIR)/$(am__dirstamp)
+stdio/lib32_libmsvcrt_extra_a-_scprintf.$(OBJEXT):  \
+	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
 stdio/lib32_libmsvcrt_extra_a-_vscprintf.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
 
@@ -23755,6 +23761,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib32_libmsvcrt_common_a-acrt_iob_func.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib32_libmsvcrt_common_a-snprintf_alias.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib32_libmsvcrt_common_a-vsnprintf_alias.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib32_libmsvcrt_extra_a-_scprintf.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib32_libmsvcrt_extra_a-_vscprintf.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib32_libmsvcrt_extra_a-fseeki64.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib32_libmsvcrt_extra_a-mingw_lock.Po@am__quote@ # am--include-marker
@@ -34323,6 +34330,20 @@ misc/lib32_libmsvcrt_extra_a-wassert.obj: misc/wassert.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/wassert.c' object='misc/lib32_libmsvcrt_extra_a-wassert.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcrt_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib32_libmsvcrt_extra_a-wassert.obj `if test -f 'misc/wassert.c'; then $(CYGPATH_W) 'misc/wassert.c'; else $(CYGPATH_W) '$(srcdir)/misc/wassert.c'; fi`
+
+stdio/lib32_libmsvcrt_extra_a-_scprintf.o: stdio/_scprintf.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcrt_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/lib32_libmsvcrt_extra_a-_scprintf.o -MD -MP -MF stdio/$(DEPDIR)/lib32_libmsvcrt_extra_a-_scprintf.Tpo -c -o stdio/lib32_libmsvcrt_extra_a-_scprintf.o `test -f 'stdio/_scprintf.c' || echo '$(srcdir)/'`stdio/_scprintf.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) stdio/$(DEPDIR)/lib32_libmsvcrt_extra_a-_scprintf.Tpo stdio/$(DEPDIR)/lib32_libmsvcrt_extra_a-_scprintf.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/_scprintf.c' object='stdio/lib32_libmsvcrt_extra_a-_scprintf.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcrt_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/lib32_libmsvcrt_extra_a-_scprintf.o `test -f 'stdio/_scprintf.c' || echo '$(srcdir)/'`stdio/_scprintf.c
+
+stdio/lib32_libmsvcrt_extra_a-_scprintf.obj: stdio/_scprintf.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcrt_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/lib32_libmsvcrt_extra_a-_scprintf.obj -MD -MP -MF stdio/$(DEPDIR)/lib32_libmsvcrt_extra_a-_scprintf.Tpo -c -o stdio/lib32_libmsvcrt_extra_a-_scprintf.obj `if test -f 'stdio/_scprintf.c'; then $(CYGPATH_W) 'stdio/_scprintf.c'; else $(CYGPATH_W) '$(srcdir)/stdio/_scprintf.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) stdio/$(DEPDIR)/lib32_libmsvcrt_extra_a-_scprintf.Tpo stdio/$(DEPDIR)/lib32_libmsvcrt_extra_a-_scprintf.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/_scprintf.c' object='stdio/lib32_libmsvcrt_extra_a-_scprintf.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcrt_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/lib32_libmsvcrt_extra_a-_scprintf.obj `if test -f 'stdio/_scprintf.c'; then $(CYGPATH_W) 'stdio/_scprintf.c'; else $(CYGPATH_W) '$(srcdir)/stdio/_scprintf.c'; fi`
 
 stdio/lib32_libmsvcrt_extra_a-_vscprintf.o: stdio/_vscprintf.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcrt_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/lib32_libmsvcrt_extra_a-_vscprintf.o -MD -MP -MF stdio/$(DEPDIR)/lib32_libmsvcrt_extra_a-_vscprintf.Tpo -c -o stdio/lib32_libmsvcrt_extra_a-_vscprintf.o `test -f 'stdio/_vscprintf.c' || echo '$(srcdir)/'`stdio/_vscprintf.c
@@ -72368,6 +72389,7 @@ distclean: distclean-am
 	-rm -f stdio/$(DEPDIR)/lib32_libmsvcrt_common_a-acrt_iob_func.Po
 	-rm -f stdio/$(DEPDIR)/lib32_libmsvcrt_common_a-snprintf_alias.Po
 	-rm -f stdio/$(DEPDIR)/lib32_libmsvcrt_common_a-vsnprintf_alias.Po
+	-rm -f stdio/$(DEPDIR)/lib32_libmsvcrt_extra_a-_scprintf.Po
 	-rm -f stdio/$(DEPDIR)/lib32_libmsvcrt_extra_a-_vscprintf.Po
 	-rm -f stdio/$(DEPDIR)/lib32_libmsvcrt_extra_a-fseeki64.Po
 	-rm -f stdio/$(DEPDIR)/lib32_libmsvcrt_extra_a-mingw_lock.Po
@@ -75600,6 +75622,7 @@ maintainer-clean: maintainer-clean-am
 	-rm -f stdio/$(DEPDIR)/lib32_libmsvcrt_common_a-acrt_iob_func.Po
 	-rm -f stdio/$(DEPDIR)/lib32_libmsvcrt_common_a-snprintf_alias.Po
 	-rm -f stdio/$(DEPDIR)/lib32_libmsvcrt_common_a-vsnprintf_alias.Po
+	-rm -f stdio/$(DEPDIR)/lib32_libmsvcrt_extra_a-_scprintf.Po
 	-rm -f stdio/$(DEPDIR)/lib32_libmsvcrt_extra_a-_vscprintf.Po
 	-rm -f stdio/$(DEPDIR)/lib32_libmsvcrt_extra_a-fseeki64.Po
 	-rm -f stdio/$(DEPDIR)/lib32_libmsvcrt_extra_a-mingw_lock.Po
