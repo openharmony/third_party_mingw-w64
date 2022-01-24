@@ -264,7 +264,7 @@ host_triplet = @host@
 
 @LIB64_TRUE@@W32API_FALSE@am__append_14 = lib64/libmsvcp60.a \
 @LIB64_TRUE@@W32API_FALSE@	lib64/libmsvcp120_app.a \
-@LIB64_TRUE@@W32API_FALSE@	lib64/libcrtdll.a lib64/libmsvcr80.a \
+@LIB64_TRUE@@W32API_FALSE@	lib64/libmsvcr80.a \
 @LIB64_TRUE@@W32API_FALSE@	lib64/libmsvcr90.a \
 @LIB64_TRUE@@W32API_FALSE@	lib64/libmsvcr90d.a \
 @LIB64_TRUE@@W32API_FALSE@	lib64/libmsvcr100.a \
@@ -76334,8 +76334,6 @@ _libm_dummy.c:
 @LIB64_TRUE@@W32API_FALSE@lib64/libmsvcrt.a: lib64/@MSVCRT_LIB@
 @LIB64_TRUE@@W32API_FALSE@	cp $< $@
 @LIB64_TRUE@@W32API_FALSE@lib64/libmsvcrt-os.a: lib-common/msvcrt-os.mri lib64/libmsvcrt_def.a lib64/libmsvcrt_common.a lib64/libmsvcrt_extra.a
-@LIB64_TRUE@@W32API_FALSE@	cd $(dir $@) && $(AR) -M < $(abspath $<)
-@LIB64_TRUE@@W32API_FALSE@lib64/libcrtdll.a: lib-common/crtdll.mri lib64/libcrtdll_def.a lib64/libmsvcrt_common.a
 @LIB64_TRUE@@W32API_FALSE@	cd $(dir $@) && $(AR) -M < $(abspath $<)
 @LIB64_TRUE@@W32API_FALSE@lib64/libmsvcr80.a: lib-common/msvcr80_64.mri lib64/libmsvcr80_def.a lib64/libmsvcrt_common.a lib64/libmsvcr80_extra.a
 @LIB64_TRUE@@W32API_FALSE@	cd $(dir $@) && $(AR) -M < $(abspath $<)
