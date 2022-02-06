@@ -76260,7 +76260,7 @@ _libm_dummy.c:
 @LIB32_TRUE@@W32API_FALSE@	cp $< $@
 @LIB32_TRUE@@W32API_FALSE@lib32/libmsvcrt-os.a: lib-common/msvcrt-os.mri lib32/libmsvcrt_def.a lib32/libmsvcrt_common.a lib32/libmsvcrt_extra.a
 @LIB32_TRUE@@W32API_FALSE@	cd $(dir $@) && $(AR) -M < $(abspath $<)
-@LIB32_TRUE@@W32API_FALSE@lib32/libcrtdll.a: lib-common/crtdll.mri lib32/libcrtdll_def.a lib32/libmsvcrt_common.a
+@LIB32_TRUE@@W32API_FALSE@lib32/libcrtdll.a: lib32/crtdll.mri lib32/libcrtdll_def.a lib32/libmsvcrt_common.a
 @LIB32_TRUE@@W32API_FALSE@	cd $(dir $@) && $(AR) -M < $(abspath $<)
 @LIB32_TRUE@@W32API_FALSE@lib32/libmsvcr80.a: lib-common/msvcr80.mri lib32/libmsvcr80_def.a lib32/libmsvcrt_common.a
 @LIB32_TRUE@@W32API_FALSE@	cd $(dir $@) && $(AR) -M < $(abspath $<)
