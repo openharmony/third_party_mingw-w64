@@ -244,7 +244,7 @@ host_triplet = @host@
 @LIB32_TRUE@@W32API_FALSE@	lib32/libucrtbase.a lib32/libucrt.a \
 @LIB32_TRUE@@W32API_FALSE@	lib32/libucrtapp.a \
 @LIB32_TRUE@@W32API_FALSE@	lib32/libvcruntime140_app.a
-@LIB32_TRUE@@W32API_FALSE@am__append_10 = lib32/libmsvcrt_common.a lib32/libmsvcrt_extra.a lib32/libmsvcr120_app_extra.a lib32/libucrt_extra.a lib32/libucrtapp_extra.a
+@LIB32_TRUE@@W32API_FALSE@am__append_10 = lib32/libcrtdll_extra.a lib32/libmsvcrt_common.a lib32/libmsvcrt_extra.a lib32/libmsvcr120_app_extra.a lib32/libucrt_extra.a lib32/libucrtapp_extra.a
 @LIB64_TRUE@@W32API_FALSE@am__append_11 = lib64/libmsvcrt.a \
 @LIB64_TRUE@@W32API_FALSE@	lib64/libmsvcrt-os.a
 @LIB64_TRUE@@W32API_FALSE@am__append_12 = lib64/libdelayimp.a \
@@ -478,6 +478,27 @@ am__lib32_libbits_a_SOURCES_DIST = libsrc/bits.c
 am__objects_3 = libsrc/lib32_libbits_a-bits.$(OBJEXT)
 @LIB32_TRUE@am_lib32_libbits_a_OBJECTS = $(am__objects_3)
 lib32_libbits_a_OBJECTS = $(am_lib32_libbits_a_OBJECTS)
+lib32_libcrtdll_extra_a_AR = $(AR) $(ARFLAGS)
+lib32_libcrtdll_extra_a_LIBADD =
+am__lib32_libcrtdll_extra_a_SOURCES_DIST = crt/crtdll_compat.c \
+	misc/___mb_cur_max_func.c misc/__p___argv.c misc/__p__acmdln.c \
+	misc/__p__commode.c misc/__p__fmode.c misc/__set_app_type.c \
+	misc/invalid_parameter_handler.c misc/lc_locale_func.c \
+	stdio/mingw_lock.c
+am__objects_4 = crt/lib32_libcrtdll_extra_a-crtdll_compat.$(OBJEXT) \
+	misc/lib32_libcrtdll_extra_a-___mb_cur_max_func.$(OBJEXT) \
+	misc/lib32_libcrtdll_extra_a-__p___argv.$(OBJEXT) \
+	misc/lib32_libcrtdll_extra_a-__p__acmdln.$(OBJEXT) \
+	misc/lib32_libcrtdll_extra_a-__p__commode.$(OBJEXT) \
+	misc/lib32_libcrtdll_extra_a-__p__fmode.$(OBJEXT) \
+	misc/lib32_libcrtdll_extra_a-__set_app_type.$(OBJEXT) \
+	misc/lib32_libcrtdll_extra_a-invalid_parameter_handler.$(OBJEXT) \
+	misc/lib32_libcrtdll_extra_a-lc_locale_func.$(OBJEXT) \
+	stdio/lib32_libcrtdll_extra_a-mingw_lock.$(OBJEXT)
+@LIB32_TRUE@@W32API_FALSE@am_lib32_libcrtdll_extra_a_OBJECTS =  \
+@LIB32_TRUE@@W32API_FALSE@	$(am__objects_4)
+lib32_libcrtdll_extra_a_OBJECTS =  \
+	$(am_lib32_libcrtdll_extra_a_OBJECTS)
 lib32_libdelayimp_a_AR = $(AR) $(ARFLAGS)
 lib32_libdelayimp_a_LIBADD =
 am_lib32_libdelayimp_a_OBJECTS =
@@ -486,54 +507,54 @@ lib32_libdinput_a_LIBADD =
 am__lib32_libdinput_a_SOURCES_DIST = libsrc/dinput_kbd.c \
 	libsrc/dinput_joy.c libsrc/dinput_joy2.c libsrc/dinput_mouse.c \
 	libsrc/dinput_mouse2.c
-am__objects_4 = libsrc/lib32_libdinput_a-dinput_kbd.$(OBJEXT) \
+am__objects_5 = libsrc/lib32_libdinput_a-dinput_kbd.$(OBJEXT) \
 	libsrc/lib32_libdinput_a-dinput_joy.$(OBJEXT) \
 	libsrc/lib32_libdinput_a-dinput_joy2.$(OBJEXT) \
 	libsrc/lib32_libdinput_a-dinput_mouse.$(OBJEXT) \
 	libsrc/lib32_libdinput_a-dinput_mouse2.$(OBJEXT)
-@LIB32_TRUE@am_lib32_libdinput_a_OBJECTS = $(am__objects_4)
+@LIB32_TRUE@am_lib32_libdinput_a_OBJECTS = $(am__objects_5)
 lib32_libdinput_a_OBJECTS = $(am_lib32_libdinput_a_OBJECTS)
 lib32_libdinput8_a_LIBADD =
 am__lib32_libdinput8_a_SOURCES_DIST = libsrc/dinput_private.h \
 	libsrc/dinput_joy.c libsrc/dinput_joy2.c libsrc/dinput_mouse.c \
 	libsrc/dinput_mouse2.c libsrc/dinput_kbd.c
-am__objects_5 = libsrc/lib32_libdinput8_a-dinput_joy.$(OBJEXT) \
+am__objects_6 = libsrc/lib32_libdinput8_a-dinput_joy.$(OBJEXT) \
 	libsrc/lib32_libdinput8_a-dinput_joy2.$(OBJEXT) \
 	libsrc/lib32_libdinput8_a-dinput_mouse.$(OBJEXT) \
 	libsrc/lib32_libdinput8_a-dinput_mouse2.$(OBJEXT) \
 	libsrc/lib32_libdinput8_a-dinput_kbd.$(OBJEXT)
-@LIB32_TRUE@am_lib32_libdinput8_a_OBJECTS = $(am__objects_5)
+@LIB32_TRUE@am_lib32_libdinput8_a_OBJECTS = $(am__objects_6)
 lib32_libdinput8_a_OBJECTS = $(am_lib32_libdinput8_a_OBJECTS)
 lib32_libdmoguids_a_AR = $(AR) $(ARFLAGS)
 lib32_libdmoguids_a_LIBADD =
 am__lib32_libdmoguids_a_SOURCES_DIST = libsrc/dmoguids.c
-am__objects_6 = libsrc/lib32_libdmoguids_a-dmoguids.$(OBJEXT)
-@LIB32_TRUE@am_lib32_libdmoguids_a_OBJECTS = $(am__objects_6)
+am__objects_7 = libsrc/lib32_libdmoguids_a-dmoguids.$(OBJEXT)
+@LIB32_TRUE@am_lib32_libdmoguids_a_OBJECTS = $(am__objects_7)
 lib32_libdmoguids_a_OBJECTS = $(am_lib32_libdmoguids_a_OBJECTS)
 lib32_libdxerr8_a_AR = $(AR) $(ARFLAGS)
 lib32_libdxerr8_a_LIBADD =
 am__lib32_libdxerr8_a_SOURCES_DIST = libsrc/dxerr8.c libsrc/dxerr8w.c
-am__objects_7 = libsrc/lib32_libdxerr8_a-dxerr8.$(OBJEXT) \
+am__objects_8 = libsrc/lib32_libdxerr8_a-dxerr8.$(OBJEXT) \
 	libsrc/lib32_libdxerr8_a-dxerr8w.$(OBJEXT)
-@LIB32_TRUE@am_lib32_libdxerr8_a_OBJECTS = $(am__objects_7)
+@LIB32_TRUE@am_lib32_libdxerr8_a_OBJECTS = $(am__objects_8)
 lib32_libdxerr8_a_OBJECTS = $(am_lib32_libdxerr8_a_OBJECTS)
 lib32_libdxerr9_a_AR = $(AR) $(ARFLAGS)
 lib32_libdxerr9_a_LIBADD =
 am__lib32_libdxerr9_a_SOURCES_DIST = libsrc/dxerr9.c libsrc/dxerr9w.c
-am__objects_8 = libsrc/lib32_libdxerr9_a-dxerr9.$(OBJEXT) \
+am__objects_9 = libsrc/lib32_libdxerr9_a-dxerr9.$(OBJEXT) \
 	libsrc/lib32_libdxerr9_a-dxerr9w.$(OBJEXT)
-@LIB32_TRUE@am_lib32_libdxerr9_a_OBJECTS = $(am__objects_8)
+@LIB32_TRUE@am_lib32_libdxerr9_a_OBJECTS = $(am__objects_9)
 lib32_libdxerr9_a_OBJECTS = $(am_lib32_libdxerr9_a_OBJECTS)
 lib32_libdxguid_a_AR = $(AR) $(ARFLAGS)
 lib32_libdxguid_a_LIBADD =
 am__lib32_libdxguid_a_SOURCES_DIST = libsrc/dxguid.c
-am__objects_9 = libsrc/lib32_libdxguid_a-dxguid.$(OBJEXT)
-@LIB32_TRUE@am_lib32_libdxguid_a_OBJECTS = $(am__objects_9)
+am__objects_10 = libsrc/lib32_libdxguid_a-dxguid.$(OBJEXT)
+@LIB32_TRUE@am_lib32_libdxguid_a_OBJECTS = $(am__objects_10)
 lib32_libdxguid_a_OBJECTS = $(am_lib32_libdxguid_a_OBJECTS)
 lib32_libgdiplus_a_LIBADD =
 am__lib32_libgdiplus_a_SOURCES_DIST = libsrc/gdiplus.c
-am__objects_10 = libsrc/lib32_libgdiplus_a-gdiplus.$(OBJEXT)
-@LIB32_TRUE@am_lib32_libgdiplus_a_OBJECTS = $(am__objects_10)
+am__objects_11 = libsrc/lib32_libgdiplus_a-gdiplus.$(OBJEXT)
+@LIB32_TRUE@am_lib32_libgdiplus_a_OBJECTS = $(am__objects_11)
 lib32_libgdiplus_a_OBJECTS = $(am_lib32_libgdiplus_a_OBJECTS)
 lib32_libgmon_a_AR = $(AR) $(ARFLAGS)
 lib32_libgmon_a_LIBADD =
@@ -575,7 +596,7 @@ am__lib32_libkernel32_a_SOURCES_DIST = intrincs/__movsb.c \
 	intrincs/readfsbyte.c intrincs/readfsword.c \
 	intrincs/readfsdword.c intrincs/writefsbyte.c \
 	intrincs/writefsword.c intrincs/writefsdword.c
-am__objects_11 = intrincs/lib32_libkernel32_a-__movsb.$(OBJEXT) \
+am__objects_12 = intrincs/lib32_libkernel32_a-__movsb.$(OBJEXT) \
 	intrincs/lib32_libkernel32_a-__movsd.$(OBJEXT) \
 	intrincs/lib32_libkernel32_a-__movsw.$(OBJEXT) \
 	intrincs/lib32_libkernel32_a-__stosb.$(OBJEXT) \
@@ -639,51 +660,51 @@ am__objects_11 = intrincs/lib32_libkernel32_a-__movsb.$(OBJEXT) \
 	intrincs/lib32_libkernel32_a-writemsr.$(OBJEXT) \
 	intrincs/lib32_libkernel32_a-__int2c.$(OBJEXT) \
 	intrincs/lib32_libkernel32_a-RtlSecureZeroMemory.$(OBJEXT)
-am__objects_12 = intrincs/lib32_libkernel32_a-rdtsc.$(OBJEXT) \
+am__objects_13 = intrincs/lib32_libkernel32_a-rdtsc.$(OBJEXT) \
 	intrincs/lib32_libkernel32_a-readfsbyte.$(OBJEXT) \
 	intrincs/lib32_libkernel32_a-readfsword.$(OBJEXT) \
 	intrincs/lib32_libkernel32_a-readfsdword.$(OBJEXT) \
 	intrincs/lib32_libkernel32_a-writefsbyte.$(OBJEXT) \
 	intrincs/lib32_libkernel32_a-writefsword.$(OBJEXT) \
 	intrincs/lib32_libkernel32_a-writefsdword.$(OBJEXT)
-@LIB32_TRUE@am_lib32_libkernel32_a_OBJECTS = $(am__objects_11) \
-@LIB32_TRUE@	$(am__objects_12)
+@LIB32_TRUE@am_lib32_libkernel32_a_OBJECTS = $(am__objects_12) \
+@LIB32_TRUE@	$(am__objects_13)
 lib32_libkernel32_a_OBJECTS = $(am_lib32_libkernel32_a_OBJECTS)
 lib32_libksguid_a_AR = $(AR) $(ARFLAGS)
 lib32_libksguid_a_LIBADD =
 am__lib32_libksguid_a_SOURCES_DIST = libsrc/ksuser.c
-am__objects_13 = libsrc/lib32_libksguid_a-ksuser.$(OBJEXT)
-@LIB32_TRUE@am_lib32_libksguid_a_OBJECTS = $(am__objects_13)
+am__objects_14 = libsrc/lib32_libksguid_a-ksuser.$(OBJEXT)
+@LIB32_TRUE@am_lib32_libksguid_a_OBJECTS = $(am__objects_14)
 lib32_libksguid_a_OBJECTS = $(am_lib32_libksguid_a_OBJECTS)
 lib32_libksuser_a_LIBADD =
 am__lib32_libksuser_a_SOURCES_DIST = libsrc/ksuser.c
-am__objects_14 = libsrc/lib32_libksuser_a-ksuser.$(OBJEXT)
-@LIB32_TRUE@am_lib32_libksuser_a_OBJECTS = $(am__objects_14)
+am__objects_15 = libsrc/lib32_libksuser_a-ksuser.$(OBJEXT)
+@LIB32_TRUE@am_lib32_libksuser_a_OBJECTS = $(am__objects_15)
 lib32_libksuser_a_OBJECTS = $(am_lib32_libksuser_a_OBJECTS)
 lib32_liblargeint_a_AR = $(AR) $(ARFLAGS)
 lib32_liblargeint_a_LIBADD =
 am__lib32_liblargeint_a_SOURCES_DIST = libsrc/largeint.c
-am__objects_15 = libsrc/lib32_liblargeint_a-largeint.$(OBJEXT)
+am__objects_16 = libsrc/lib32_liblargeint_a-largeint.$(OBJEXT)
 @LIB32_TRUE@@W32API_FALSE@am_lib32_liblargeint_a_OBJECTS =  \
-@LIB32_TRUE@@W32API_FALSE@	$(am__objects_15)
+@LIB32_TRUE@@W32API_FALSE@	$(am__objects_16)
 lib32_liblargeint_a_OBJECTS = $(am_lib32_liblargeint_a_OBJECTS)
 lib32_liblocationapi_a_AR = $(AR) $(ARFLAGS)
 lib32_liblocationapi_a_LIBADD =
 am__lib32_liblocationapi_a_SOURCES_DIST = libsrc/locationapi.c
-am__objects_16 = libsrc/lib32_liblocationapi_a-locationapi.$(OBJEXT)
-@LIB32_TRUE@am_lib32_liblocationapi_a_OBJECTS = $(am__objects_16)
+am__objects_17 = libsrc/lib32_liblocationapi_a-locationapi.$(OBJEXT)
+@LIB32_TRUE@am_lib32_liblocationapi_a_OBJECTS = $(am__objects_17)
 lib32_liblocationapi_a_OBJECTS = $(am_lib32_liblocationapi_a_OBJECTS)
 lib32_libm_a_AR = $(AR) $(ARFLAGS)
 lib32_libm_a_LIBADD =
-am__objects_17 = lib32_libm_a-_libm_dummy.$(OBJEXT)
+am__objects_18 = lib32_libm_a-_libm_dummy.$(OBJEXT)
 @LIB32_TRUE@@W32API_FALSE@nodist_lib32_libm_a_OBJECTS =  \
-@LIB32_TRUE@@W32API_FALSE@	$(am__objects_17)
+@LIB32_TRUE@@W32API_FALSE@	$(am__objects_18)
 lib32_libm_a_OBJECTS = $(nodist_lib32_libm_a_OBJECTS)
 lib32_libmfuuid_a_AR = $(AR) $(ARFLAGS)
 lib32_libmfuuid_a_LIBADD =
 am__lib32_libmfuuid_a_SOURCES_DIST = libsrc/mfuuid.c
-am__objects_18 = libsrc/lib32_libmfuuid_a-mfuuid.$(OBJEXT)
-@LIB32_TRUE@am_lib32_libmfuuid_a_OBJECTS = $(am__objects_18)
+am__objects_19 = libsrc/lib32_libmfuuid_a-mfuuid.$(OBJEXT)
+@LIB32_TRUE@am_lib32_libmfuuid_a_OBJECTS = $(am__objects_19)
 lib32_libmfuuid_a_OBJECTS = $(am_lib32_libmfuuid_a_OBJECTS)
 lib32_libmingw32_a_AR = $(AR) $(ARFLAGS)
 lib32_libmingw32_a_LIBADD =
@@ -698,7 +719,7 @@ am__lib32_libmingw32_a_SOURCES_DIST = include/oscalls.h \
 	crt/usermatherr.c crt/xtxtmode.c crt/crt_handler.c \
 	crt/tlsthrd.c crt/tlsmthread.c crt/tlsmcrt.c crt/cxa_atexit.c \
 	crt/cxa_thread_atexit.c crt/tls_atexit.c
-am__objects_19 = crt/lib32_libmingw32_a-crt0_c.$(OBJEXT) \
+am__objects_20 = crt/lib32_libmingw32_a-crt0_c.$(OBJEXT) \
 	crt/lib32_libmingw32_a-dll_argv.$(OBJEXT) \
 	crt/lib32_libmingw32_a-gccmain.$(OBJEXT) \
 	crt/lib32_libmingw32_a-natstart.$(OBJEXT) \
@@ -730,7 +751,7 @@ am__objects_19 = crt/lib32_libmingw32_a-crt0_c.$(OBJEXT) \
 	crt/lib32_libmingw32_a-cxa_thread_atexit.$(OBJEXT) \
 	crt/lib32_libmingw32_a-tls_atexit.$(OBJEXT)
 @LIB32_TRUE@@W32API_FALSE@am_lib32_libmingw32_a_OBJECTS =  \
-@LIB32_TRUE@@W32API_FALSE@	$(am__objects_19)
+@LIB32_TRUE@@W32API_FALSE@	$(am__objects_20)
 lib32_libmingw32_a_OBJECTS = $(am_lib32_libmingw32_a_OBJECTS)
 lib32_libmingwex_a_AR = $(AR) $(ARFLAGS)
 lib32_libmingwex_a_LIBADD =
@@ -877,7 +898,7 @@ am__lib32_libmingwex_a_SOURCES_DIST = crt/dllentry.c crt/dllmain.c \
 	math/DFP/__signbitd32.c math/DFP/__signbitd64.c \
 	math/DFP/__signbitd128.c math/DFP/isinfd32.c \
 	math/DFP/isinfd64.c math/DFP/isinfd128.c
-am__objects_20 = crt/lib32_libmingwex_a-dllentry.$(OBJEXT) \
+am__objects_21 = crt/lib32_libmingwex_a-dllentry.$(OBJEXT) \
 	crt/lib32_libmingwex_a-dllmain.$(OBJEXT) \
 	complex/lib32_libmingwex_a-_cabs.$(OBJEXT) \
 	complex/lib32_libmingwex_a-cabs.$(OBJEXT) \
@@ -1187,7 +1208,7 @@ am__objects_20 = crt/lib32_libmingwex_a-dllentry.$(OBJEXT) \
 	stdio/lib32_libmingwex_a-wtoll.$(OBJEXT) \
 	stdio/lib32_libmingwex_a-mingw_asprintf.$(OBJEXT) \
 	stdio/lib32_libmingwex_a-mingw_vasprintf.$(OBJEXT)
-am__objects_21 = math/x86/lib32_libmingwex_a-_chgsignl.$(OBJEXT) \
+am__objects_22 = math/x86/lib32_libmingwex_a-_chgsignl.$(OBJEXT) \
 	math/x86/lib32_libmingwex_a-acosf.$(OBJEXT) \
 	math/x86/lib32_libmingwex_a-acosh.$(OBJEXT) \
 	math/x86/lib32_libmingwex_a-acosl.$(OBJEXT) \
@@ -1272,8 +1293,8 @@ am__objects_21 = math/x86/lib32_libmingwex_a-_chgsignl.$(OBJEXT) \
 	math/x86/lib32_libmingwex_a-tanl.$(OBJEXT) \
 	math/x86/lib32_libmingwex_a-trunc.$(OBJEXT) \
 	math/x86/lib32_libmingwex_a-truncf.$(OBJEXT)
-am__objects_22 = $(am__objects_21)
-@ENABLE_DFP_TRUE@am__objects_23 = math/DFP/lib32_libmingwex_a-__fpclassifyd32.$(OBJEXT) \
+am__objects_23 = $(am__objects_22)
+@ENABLE_DFP_TRUE@am__objects_24 = math/DFP/lib32_libmingwex_a-__fpclassifyd32.$(OBJEXT) \
 @ENABLE_DFP_TRUE@	math/DFP/lib32_libmingwex_a-__fpclassifyd64.$(OBJEXT) \
 @ENABLE_DFP_TRUE@	math/DFP/lib32_libmingwex_a-__fpclassifyd128.$(OBJEXT) \
 @ENABLE_DFP_TRUE@	math/DFP/lib32_libmingwex_a-__isnand32.$(OBJEXT) \
@@ -1286,32 +1307,32 @@ am__objects_22 = $(am__objects_21)
 @ENABLE_DFP_TRUE@	math/DFP/lib32_libmingwex_a-isinfd64.$(OBJEXT) \
 @ENABLE_DFP_TRUE@	math/DFP/lib32_libmingwex_a-isinfd128.$(OBJEXT)
 @LIB32_TRUE@@W32API_FALSE@am_lib32_libmingwex_a_OBJECTS =  \
-@LIB32_TRUE@@W32API_FALSE@	$(am__objects_20) $(am__objects_22) \
-@LIB32_TRUE@@W32API_FALSE@	$(am__objects_23)
+@LIB32_TRUE@@W32API_FALSE@	$(am__objects_21) $(am__objects_23) \
+@LIB32_TRUE@@W32API_FALSE@	$(am__objects_24)
 lib32_libmingwex_a_OBJECTS = $(am_lib32_libmingwex_a_OBJECTS)
 lib32_libmingwthrd_a_AR = $(AR) $(ARFLAGS)
 lib32_libmingwthrd_a_LIBADD =
 am__lib32_libmingwthrd_a_SOURCES_DIST = libsrc/mingwthrd_mt.c
-am__objects_24 = libsrc/lib32_libmingwthrd_a-mingwthrd_mt.$(OBJEXT)
+am__objects_25 = libsrc/lib32_libmingwthrd_a-mingwthrd_mt.$(OBJEXT)
 @LIB32_TRUE@@W32API_FALSE@am_lib32_libmingwthrd_a_OBJECTS =  \
-@LIB32_TRUE@@W32API_FALSE@	$(am__objects_24)
+@LIB32_TRUE@@W32API_FALSE@	$(am__objects_25)
 lib32_libmingwthrd_a_OBJECTS = $(am_lib32_libmingwthrd_a_OBJECTS)
 lib32_libmoldname_a_AR = $(AR) $(ARFLAGS)
 lib32_libmoldname_a_LIBADD =
 am__lib32_libmoldname_a_SOURCES_DIST = _libm_dummy.c
-am__objects_25 = lib32_libmoldname_a-_libm_dummy.$(OBJEXT)
+am__objects_26 = lib32_libmoldname_a-_libm_dummy.$(OBJEXT)
 @LIB32_TRUE@@W32API_FALSE@am_lib32_libmoldname_a_OBJECTS =  \
-@LIB32_TRUE@@W32API_FALSE@	$(am__objects_25)
+@LIB32_TRUE@@W32API_FALSE@	$(am__objects_26)
 lib32_libmoldname_a_OBJECTS = $(am_lib32_libmoldname_a_OBJECTS)
 lib32_libmsvcr120_app_extra_a_AR = $(AR) $(ARFLAGS)
 lib32_libmsvcr120_app_extra_a_LIBADD =
 am__lib32_libmsvcr120_app_extra_a_SOURCES_DIST =  \
 	misc/__set_app_type.c misc/_getpid.c
-am__objects_26 =  \
+am__objects_27 =  \
 	misc/lib32_libmsvcr120_app_extra_a-__set_app_type.$(OBJEXT) \
 	misc/lib32_libmsvcr120_app_extra_a-_getpid.$(OBJEXT)
 @LIB32_TRUE@@W32API_FALSE@am_lib32_libmsvcr120_app_extra_a_OBJECTS =  \
-@LIB32_TRUE@@W32API_FALSE@	$(am__objects_26)
+@LIB32_TRUE@@W32API_FALSE@	$(am__objects_27)
 lib32_libmsvcr120_app_extra_a_OBJECTS =  \
 	$(am_lib32_libmsvcr120_app_extra_a_OBJECTS)
 lib32_libmsvcrt_common_a_AR = $(AR) $(ARFLAGS)
@@ -1324,7 +1345,7 @@ am__lib32_libmsvcrt_common_a_SOURCES_DIST = misc/mbrtowc.c \
 	stdio/_putc_nolock.c stdio/_putwc_nolock.c \
 	stdio/acrt_iob_func.c stdio/snprintf_alias.c \
 	stdio/vsnprintf_alias.c math/frexp.c
-am__objects_27 = misc/lib32_libmsvcrt_common_a-mbrtowc.$(OBJEXT) \
+am__objects_28 = misc/lib32_libmsvcrt_common_a-mbrtowc.$(OBJEXT) \
 	misc/lib32_libmsvcrt_common_a-mbsinit.$(OBJEXT) \
 	misc/lib32_libmsvcrt_common_a-onexit_table.$(OBJEXT) \
 	misc/lib32_libmsvcrt_common_a-register_tls_atexit.$(OBJEXT) \
@@ -1342,7 +1363,7 @@ am__objects_27 = misc/lib32_libmsvcrt_common_a-mbrtowc.$(OBJEXT) \
 	stdio/lib32_libmsvcrt_common_a-vsnprintf_alias.$(OBJEXT) \
 	math/lib32_libmsvcrt_common_a-frexp.$(OBJEXT)
 @LIB32_TRUE@@W32API_FALSE@am_lib32_libmsvcrt_common_a_OBJECTS =  \
-@LIB32_TRUE@@W32API_FALSE@	$(am__objects_27)
+@LIB32_TRUE@@W32API_FALSE@	$(am__objects_28)
 lib32_libmsvcrt_common_a_OBJECTS =  \
 	$(am_lib32_libmsvcrt_common_a_OBJECTS)
 lib32_libmsvcrt_extra_a_AR = $(AR) $(ARFLAGS)
@@ -1371,7 +1392,7 @@ am__lib32_libmsvcrt_extra_a_SOURCES_DIST = misc/_configthreadlocale.c \
 	misc/_free_locale.c misc/_get_current_locale.c \
 	misc/lc_locale_func.c misc/seterrno.c misc/wassert.c \
 	stdio/_scprintf.c stdio/_vscprintf.c
-am__objects_28 =  \
+am__objects_29 =  \
 	misc/lib32_libmsvcrt_extra_a-_configthreadlocale.$(OBJEXT) \
 	misc/lib32_libmsvcrt_extra_a-invalid_parameter_handler.$(OBJEXT) \
 	misc/lib32_libmsvcrt_extra_a-output_format.$(OBJEXT) \
@@ -1421,7 +1442,7 @@ am__objects_28 =  \
 	secapi/lib32_libmsvcrt_extra_a-wmemmove_s.$(OBJEXT) \
 	stdio/lib32_libmsvcrt_extra_a-fseeki64.$(OBJEXT) \
 	stdio/lib32_libmsvcrt_extra_a-mingw_lock.$(OBJEXT)
-am__objects_29 = $(am__objects_28) \
+am__objects_30 = $(am__objects_29) \
 	math/x86/lib32_libmsvcrt_extra_a-_copysignf.$(OBJEXT) \
 	misc/lib32_libmsvcrt_extra_a-___mb_cur_max_func.$(OBJEXT) \
 	misc/lib32_libmsvcrt_extra_a-_create_locale.$(OBJEXT) \
@@ -1433,63 +1454,63 @@ am__objects_29 = $(am__objects_28) \
 	stdio/lib32_libmsvcrt_extra_a-_scprintf.$(OBJEXT) \
 	stdio/lib32_libmsvcrt_extra_a-_vscprintf.$(OBJEXT)
 @LIB32_TRUE@@W32API_FALSE@am_lib32_libmsvcrt_extra_a_OBJECTS =  \
-@LIB32_TRUE@@W32API_FALSE@	$(am__objects_29)
+@LIB32_TRUE@@W32API_FALSE@	$(am__objects_30)
 lib32_libmsvcrt_extra_a_OBJECTS =  \
 	$(am_lib32_libmsvcrt_extra_a_OBJECTS)
 lib32_libntoskrnl_a_LIBADD =
 am__lib32_libntoskrnl_a_SOURCES_DIST = libsrc/memcmp.c
-am__objects_30 = libsrc/lib32_libntoskrnl_a-memcmp.$(OBJEXT)
-@LIB32_TRUE@am_lib32_libntoskrnl_a_OBJECTS = $(am__objects_30)
+am__objects_31 = libsrc/lib32_libntoskrnl_a-memcmp.$(OBJEXT)
+@LIB32_TRUE@am_lib32_libntoskrnl_a_OBJECTS = $(am__objects_31)
 lib32_libntoskrnl_a_OBJECTS = $(am_lib32_libntoskrnl_a_OBJECTS)
 lib32_libportabledeviceguids_a_AR = $(AR) $(ARFLAGS)
 lib32_libportabledeviceguids_a_LIBADD =
 am__lib32_libportabledeviceguids_a_SOURCES_DIST =  \
 	libsrc/portabledeviceguids.c
-am__objects_31 = libsrc/lib32_libportabledeviceguids_a-portabledeviceguids.$(OBJEXT)
+am__objects_32 = libsrc/lib32_libportabledeviceguids_a-portabledeviceguids.$(OBJEXT)
 @LIB32_TRUE@am_lib32_libportabledeviceguids_a_OBJECTS =  \
-@LIB32_TRUE@	$(am__objects_31)
+@LIB32_TRUE@	$(am__objects_32)
 lib32_libportabledeviceguids_a_OBJECTS =  \
 	$(am_lib32_libportabledeviceguids_a_OBJECTS)
 lib32_libsapi_a_AR = $(AR) $(ARFLAGS)
 lib32_libsapi_a_LIBADD =
 am__lib32_libsapi_a_SOURCES_DIST = libsrc/sapi.c
-am__objects_32 = libsrc/lib32_libsapi_a-sapi.$(OBJEXT)
-@LIB32_TRUE@am_lib32_libsapi_a_OBJECTS = $(am__objects_32)
+am__objects_33 = libsrc/lib32_libsapi_a-sapi.$(OBJEXT)
+@LIB32_TRUE@am_lib32_libsapi_a_OBJECTS = $(am__objects_33)
 lib32_libsapi_a_OBJECTS = $(am_lib32_libsapi_a_OBJECTS)
 lib32_libscrnsave_a_AR = $(AR) $(ARFLAGS)
 lib32_libscrnsave_a_LIBADD =
 am__lib32_libscrnsave_a_SOURCES_DIST = libsrc/scrnsave.c
-am__objects_33 = libsrc/lib32_libscrnsave_a-scrnsave.$(OBJEXT)
-@LIB32_TRUE@am_lib32_libscrnsave_a_OBJECTS = $(am__objects_33)
+am__objects_34 = libsrc/lib32_libscrnsave_a-scrnsave.$(OBJEXT)
+@LIB32_TRUE@am_lib32_libscrnsave_a_OBJECTS = $(am__objects_34)
 lib32_libscrnsave_a_OBJECTS = $(am_lib32_libscrnsave_a_OBJECTS)
 lib32_libscrnsavw_a_AR = $(AR) $(ARFLAGS)
 lib32_libscrnsavw_a_LIBADD =
 am__lib32_libscrnsavw_a_SOURCES_DIST = libsrc/scrnsave.c
-am__objects_34 = libsrc/lib32_libscrnsavw_a-scrnsave.$(OBJEXT)
-@LIB32_TRUE@am_lib32_libscrnsavw_a_OBJECTS = $(am__objects_34)
+am__objects_35 = libsrc/lib32_libscrnsavw_a-scrnsave.$(OBJEXT)
+@LIB32_TRUE@am_lib32_libscrnsavw_a_OBJECTS = $(am__objects_35)
 lib32_libscrnsavw_a_OBJECTS = $(am_lib32_libscrnsavw_a_OBJECTS)
 lib32_libsensorsapi_a_AR = $(AR) $(ARFLAGS)
 lib32_libsensorsapi_a_LIBADD =
 am__lib32_libsensorsapi_a_SOURCES_DIST = libsrc/sensorsapi.c
-am__objects_35 = libsrc/lib32_libsensorsapi_a-sensorsapi.$(OBJEXT)
-@LIB32_TRUE@am_lib32_libsensorsapi_a_OBJECTS = $(am__objects_35)
+am__objects_36 = libsrc/lib32_libsensorsapi_a-sensorsapi.$(OBJEXT)
+@LIB32_TRUE@am_lib32_libsensorsapi_a_OBJECTS = $(am__objects_36)
 lib32_libsensorsapi_a_OBJECTS = $(am_lib32_libsensorsapi_a_OBJECTS)
 lib32_libshell32_a_LIBADD =
 am__lib32_libshell32_a_SOURCES_DIST = libsrc/shell32.c
-am__objects_36 = libsrc/lib32_libshell32_a-shell32.$(OBJEXT)
-@LIB32_TRUE@am_lib32_libshell32_a_OBJECTS = $(am__objects_36)
+am__objects_37 = libsrc/lib32_libshell32_a-shell32.$(OBJEXT)
+@LIB32_TRUE@am_lib32_libshell32_a_OBJECTS = $(am__objects_37)
 lib32_libshell32_a_OBJECTS = $(am_lib32_libshell32_a_OBJECTS)
 lib32_libstrmiids_a_AR = $(AR) $(ARFLAGS)
 lib32_libstrmiids_a_LIBADD =
 am__lib32_libstrmiids_a_SOURCES_DIST = libsrc/strmiids.c
-am__objects_37 = libsrc/lib32_libstrmiids_a-strmiids.$(OBJEXT)
-@LIB32_TRUE@am_lib32_libstrmiids_a_OBJECTS = $(am__objects_37)
+am__objects_38 = libsrc/lib32_libstrmiids_a-strmiids.$(OBJEXT)
+@LIB32_TRUE@am_lib32_libstrmiids_a_OBJECTS = $(am__objects_38)
 lib32_libstrmiids_a_OBJECTS = $(am_lib32_libstrmiids_a_OBJECTS)
 lib32_libtaskschd_a_AR = $(AR) $(ARFLAGS)
 lib32_libtaskschd_a_LIBADD =
 am__lib32_libtaskschd_a_SOURCES_DIST = libsrc/taskschd.c
-am__objects_38 = libsrc/lib32_libtaskschd_a-taskschd.$(OBJEXT)
-@LIB32_TRUE@am_lib32_libtaskschd_a_OBJECTS = $(am__objects_38)
+am__objects_39 = libsrc/lib32_libtaskschd_a-taskschd.$(OBJEXT)
+@LIB32_TRUE@am_lib32_libtaskschd_a_OBJECTS = $(am__objects_39)
 lib32_libtaskschd_a_OBJECTS = $(am_lib32_libtaskschd_a_OBJECTS)
 lib32_libucrt_extra_a_AR = $(AR) $(ARFLAGS)
 lib32_libucrt_extra_a_LIBADD =
@@ -1503,7 +1524,7 @@ am__lib32_libucrt_extra_a_SOURCES_DIST = crt/ucrtbase_compat.c \
 	stdio/ucrt_vfscanf.c stdio/ucrt_vprintf.c stdio/ucrt_vscanf.c \
 	stdio/ucrt_vsnprintf.c stdio/ucrt_vsprintf.c \
 	stdio/ucrt_vsscanf.c
-am__objects_39 = crt/lib32_libucrt_extra_a-ucrtbase_compat.$(OBJEXT) \
+am__objects_40 = crt/lib32_libucrt_extra_a-ucrtbase_compat.$(OBJEXT) \
 	math/lib32_libucrt_extra_a-_huge.$(OBJEXT) \
 	stdio/lib32_libucrt_extra_a-ucrt_fprintf.$(OBJEXT) \
 	stdio/lib32_libucrt_extra_a-ucrt_fscanf.$(OBJEXT) \
@@ -1525,7 +1546,7 @@ am__objects_39 = crt/lib32_libucrt_extra_a-ucrtbase_compat.$(OBJEXT) \
 	stdio/lib32_libucrt_extra_a-ucrt_vsprintf.$(OBJEXT) \
 	stdio/lib32_libucrt_extra_a-ucrt_vsscanf.$(OBJEXT)
 @LIB32_TRUE@@W32API_FALSE@am_lib32_libucrt_extra_a_OBJECTS =  \
-@LIB32_TRUE@@W32API_FALSE@	$(am__objects_39)
+@LIB32_TRUE@@W32API_FALSE@	$(am__objects_40)
 lib32_libucrt_extra_a_OBJECTS = $(am_lib32_libucrt_extra_a_OBJECTS)
 lib32_libucrtapp_extra_a_AR = $(AR) $(ARFLAGS)
 lib32_libucrtapp_extra_a_LIBADD =
@@ -1535,7 +1556,7 @@ am__lib32_libucrtapp_extra_a_SOURCES_DIST =  \
 	string/memmove.c string/memrchr.c string/strchr.c \
 	string/strchrnul.c string/strrchr.c string/strstr.c \
 	string/wcschr.c string/wcsrchr.c string/wcsstr.c
-am__objects_40 =  \
+am__objects_41 =  \
 	crt/lib32_libucrtapp_extra_a-__C_specific_handler.$(OBJEXT) \
 	misc/lib32_libucrtapp_extra_a-longjmp.$(OBJEXT) \
 	misc/lib32_libucrtapp_extra_a-setjmp.$(OBJEXT) \
@@ -1552,7 +1573,7 @@ am__objects_40 =  \
 	string/lib32_libucrtapp_extra_a-wcsrchr.$(OBJEXT) \
 	string/lib32_libucrtapp_extra_a-wcsstr.$(OBJEXT)
 @LIB32_TRUE@@W32API_FALSE@am_lib32_libucrtapp_extra_a_OBJECTS =  \
-@LIB32_TRUE@@W32API_FALSE@	$(am__objects_40)
+@LIB32_TRUE@@W32API_FALSE@	$(am__objects_41)
 lib32_libucrtapp_extra_a_OBJECTS =  \
 	$(am_lib32_libucrtapp_extra_a_OBJECTS)
 lib32_libuuid_a_AR = $(AR) $(ARFLAGS)
@@ -1576,7 +1597,7 @@ am__lib32_libuuid_a_SOURCES_DIST = libsrc/ativscp-uuid.c \
 	libsrc/usbcamdi-uuid.c libsrc/usbiodef-uuid.c libsrc/uuid.c \
 	libsrc/vds-uuid.c libsrc/virtdisk-uuid.c libsrc/wia-uuid.c \
 	libsrc/windowscodecs.c
-am__objects_41 = libsrc/lib32_libuuid_a-ativscp-uuid.$(OBJEXT) \
+am__objects_42 = libsrc/lib32_libuuid_a-ativscp-uuid.$(OBJEXT) \
 	libsrc/lib32_libuuid_a-atsmedia-uuid.$(OBJEXT) \
 	libsrc/lib32_libuuid_a-bth-uuid.$(OBJEXT) \
 	libsrc/lib32_libuuid_a-cguid-uuid.$(OBJEXT) \
@@ -1621,27 +1642,27 @@ am__objects_41 = libsrc/lib32_libuuid_a-ativscp-uuid.$(OBJEXT) \
 	libsrc/lib32_libuuid_a-virtdisk-uuid.$(OBJEXT) \
 	libsrc/lib32_libuuid_a-wia-uuid.$(OBJEXT) \
 	libsrc/lib32_libuuid_a-windowscodecs.$(OBJEXT)
-@LIB32_TRUE@am_lib32_libuuid_a_OBJECTS = $(am__objects_41)
+@LIB32_TRUE@am_lib32_libuuid_a_OBJECTS = $(am__objects_42)
 lib32_libuuid_a_OBJECTS = $(am_lib32_libuuid_a_OBJECTS)
 lib32_libwbemuuid_a_AR = $(AR) $(ARFLAGS)
 lib32_libwbemuuid_a_LIBADD =
 am__lib32_libwbemuuid_a_SOURCES_DIST = libsrc/wbemuuid.c
-am__objects_42 = libsrc/lib32_libwbemuuid_a-wbemuuid.$(OBJEXT)
-@LIB32_TRUE@am_lib32_libwbemuuid_a_OBJECTS = $(am__objects_42)
+am__objects_43 = libsrc/lib32_libwbemuuid_a-wbemuuid.$(OBJEXT)
+@LIB32_TRUE@am_lib32_libwbemuuid_a_OBJECTS = $(am__objects_43)
 lib32_libwbemuuid_a_OBJECTS = $(am_lib32_libwbemuuid_a_OBJECTS)
 lib32_libwindowscodecs_a_LIBADD =
 am__lib32_libwindowscodecs_a_SOURCES_DIST = libsrc/windowscodecs.c
-am__objects_43 =  \
+am__objects_44 =  \
 	libsrc/lib32_libwindowscodecs_a-windowscodecs.$(OBJEXT)
-@LIB32_TRUE@am_lib32_libwindowscodecs_a_OBJECTS = $(am__objects_43)
+@LIB32_TRUE@am_lib32_libwindowscodecs_a_OBJECTS = $(am__objects_44)
 lib32_libwindowscodecs_a_OBJECTS =  \
 	$(am_lib32_libwindowscodecs_a_OBJECTS)
 lib32_libwmcodecdspuuid_a_AR = $(AR) $(ARFLAGS)
 lib32_libwmcodecdspuuid_a_LIBADD =
 am__lib32_libwmcodecdspuuid_a_SOURCES_DIST = libsrc/wmcodecdspuuid.c
-am__objects_44 =  \
+am__objects_45 =  \
 	libsrc/lib32_libwmcodecdspuuid_a-wmcodecdspuuid.$(OBJEXT)
-@LIB32_TRUE@am_lib32_libwmcodecdspuuid_a_OBJECTS = $(am__objects_44)
+@LIB32_TRUE@am_lib32_libwmcodecdspuuid_a_OBJECTS = $(am__objects_45)
 lib32_libwmcodecdspuuid_a_OBJECTS =  \
 	$(am_lib32_libwmcodecdspuuid_a_OBJECTS)
 lib32_libws2_32_a_LIBADD =
@@ -1679,7 +1700,7 @@ am__lib32_libws2_32_a_SOURCES_DIST = libsrc/ws2_32.c \
 	libsrc/wspiapi/WspiapiGetAddrInfo.c \
 	libsrc/wspiapi/WspiapiGetNameInfo.c \
 	libsrc/wspiapi/WspiapiFreeAddrInfo.c
-am__objects_45 = libsrc/lib32_libws2_32_a-ws2_32.$(OBJEXT) \
+am__objects_46 = libsrc/lib32_libws2_32_a-ws2_32.$(OBJEXT) \
 	libsrc/ws2tcpip/lib32_libws2_32_a-in6_addr_equal.$(OBJEXT) \
 	libsrc/ws2tcpip/lib32_libws2_32_a-in6addr_isany.$(OBJEXT) \
 	libsrc/ws2tcpip/lib32_libws2_32_a-in6addr_isloopback.$(OBJEXT) \
@@ -1714,25 +1735,25 @@ am__objects_45 = libsrc/lib32_libws2_32_a-ws2_32.$(OBJEXT) \
 	libsrc/wspiapi/lib32_libws2_32_a-WspiapiGetAddrInfo.$(OBJEXT) \
 	libsrc/wspiapi/lib32_libws2_32_a-WspiapiGetNameInfo.$(OBJEXT) \
 	libsrc/wspiapi/lib32_libws2_32_a-WspiapiFreeAddrInfo.$(OBJEXT)
-@LIB32_TRUE@am_lib32_libws2_32_a_OBJECTS = $(am__objects_45)
+@LIB32_TRUE@am_lib32_libws2_32_a_OBJECTS = $(am__objects_46)
 lib32_libws2_32_a_OBJECTS = $(am_lib32_libws2_32_a_OBJECTS)
 lib64_libadsiid_a_AR = $(AR) $(ARFLAGS)
 lib64_libadsiid_a_LIBADD =
 am__lib64_libadsiid_a_SOURCES_DIST = libsrc/activeds-uuid.c
-am__objects_46 = libsrc/lib64_libadsiid_a-activeds-uuid.$(OBJEXT)
-@LIB64_TRUE@am_lib64_libadsiid_a_OBJECTS = $(am__objects_46)
+am__objects_47 = libsrc/lib64_libadsiid_a-activeds-uuid.$(OBJEXT)
+@LIB64_TRUE@am_lib64_libadsiid_a_OBJECTS = $(am__objects_47)
 lib64_libadsiid_a_OBJECTS = $(am_lib64_libadsiid_a_OBJECTS)
 lib64_libamstrmid_a_AR = $(AR) $(ARFLAGS)
 lib64_libamstrmid_a_LIBADD =
 am__lib64_libamstrmid_a_SOURCES_DIST = libsrc/amstrmid.c
-am__objects_47 = libsrc/lib64_libamstrmid_a-amstrmid.$(OBJEXT)
-@LIB64_TRUE@am_lib64_libamstrmid_a_OBJECTS = $(am__objects_47)
+am__objects_48 = libsrc/lib64_libamstrmid_a-amstrmid.$(OBJEXT)
+@LIB64_TRUE@am_lib64_libamstrmid_a_OBJECTS = $(am__objects_48)
 lib64_libamstrmid_a_OBJECTS = $(am_lib64_libamstrmid_a_OBJECTS)
 lib64_libbits_a_AR = $(AR) $(ARFLAGS)
 lib64_libbits_a_LIBADD =
 am__lib64_libbits_a_SOURCES_DIST = libsrc/bits.c
-am__objects_48 = libsrc/lib64_libbits_a-bits.$(OBJEXT)
-@LIB64_TRUE@am_lib64_libbits_a_OBJECTS = $(am__objects_48)
+am__objects_49 = libsrc/lib64_libbits_a-bits.$(OBJEXT)
+@LIB64_TRUE@am_lib64_libbits_a_OBJECTS = $(am__objects_49)
 lib64_libbits_a_OBJECTS = $(am_lib64_libbits_a_OBJECTS)
 lib64_libdelayimp_a_AR = $(AR) $(ARFLAGS)
 lib64_libdelayimp_a_LIBADD =
@@ -1742,54 +1763,54 @@ lib64_libdinput_a_LIBADD =
 am__lib64_libdinput_a_SOURCES_DIST = libsrc/dinput_kbd.c \
 	libsrc/dinput_joy.c libsrc/dinput_joy2.c libsrc/dinput_mouse.c \
 	libsrc/dinput_mouse2.c
-am__objects_49 = libsrc/lib64_libdinput_a-dinput_kbd.$(OBJEXT) \
+am__objects_50 = libsrc/lib64_libdinput_a-dinput_kbd.$(OBJEXT) \
 	libsrc/lib64_libdinput_a-dinput_joy.$(OBJEXT) \
 	libsrc/lib64_libdinput_a-dinput_joy2.$(OBJEXT) \
 	libsrc/lib64_libdinput_a-dinput_mouse.$(OBJEXT) \
 	libsrc/lib64_libdinput_a-dinput_mouse2.$(OBJEXT)
-@LIB64_TRUE@am_lib64_libdinput_a_OBJECTS = $(am__objects_49)
+@LIB64_TRUE@am_lib64_libdinput_a_OBJECTS = $(am__objects_50)
 lib64_libdinput_a_OBJECTS = $(am_lib64_libdinput_a_OBJECTS)
 lib64_libdinput8_a_LIBADD =
 am__lib64_libdinput8_a_SOURCES_DIST = libsrc/dinput_private.h \
 	libsrc/dinput_joy.c libsrc/dinput_joy2.c libsrc/dinput_mouse.c \
 	libsrc/dinput_mouse2.c libsrc/dinput_kbd.c
-am__objects_50 = libsrc/lib64_libdinput8_a-dinput_joy.$(OBJEXT) \
+am__objects_51 = libsrc/lib64_libdinput8_a-dinput_joy.$(OBJEXT) \
 	libsrc/lib64_libdinput8_a-dinput_joy2.$(OBJEXT) \
 	libsrc/lib64_libdinput8_a-dinput_mouse.$(OBJEXT) \
 	libsrc/lib64_libdinput8_a-dinput_mouse2.$(OBJEXT) \
 	libsrc/lib64_libdinput8_a-dinput_kbd.$(OBJEXT)
-@LIB64_TRUE@am_lib64_libdinput8_a_OBJECTS = $(am__objects_50)
+@LIB64_TRUE@am_lib64_libdinput8_a_OBJECTS = $(am__objects_51)
 lib64_libdinput8_a_OBJECTS = $(am_lib64_libdinput8_a_OBJECTS)
 lib64_libdmoguids_a_AR = $(AR) $(ARFLAGS)
 lib64_libdmoguids_a_LIBADD =
 am__lib64_libdmoguids_a_SOURCES_DIST = libsrc/dmoguids.c
-am__objects_51 = libsrc/lib64_libdmoguids_a-dmoguids.$(OBJEXT)
-@LIB64_TRUE@am_lib64_libdmoguids_a_OBJECTS = $(am__objects_51)
+am__objects_52 = libsrc/lib64_libdmoguids_a-dmoguids.$(OBJEXT)
+@LIB64_TRUE@am_lib64_libdmoguids_a_OBJECTS = $(am__objects_52)
 lib64_libdmoguids_a_OBJECTS = $(am_lib64_libdmoguids_a_OBJECTS)
 lib64_libdxerr8_a_AR = $(AR) $(ARFLAGS)
 lib64_libdxerr8_a_LIBADD =
 am__lib64_libdxerr8_a_SOURCES_DIST = libsrc/dxerr8.c libsrc/dxerr8w.c
-am__objects_52 = libsrc/lib64_libdxerr8_a-dxerr8.$(OBJEXT) \
+am__objects_53 = libsrc/lib64_libdxerr8_a-dxerr8.$(OBJEXT) \
 	libsrc/lib64_libdxerr8_a-dxerr8w.$(OBJEXT)
-@LIB64_TRUE@am_lib64_libdxerr8_a_OBJECTS = $(am__objects_52)
+@LIB64_TRUE@am_lib64_libdxerr8_a_OBJECTS = $(am__objects_53)
 lib64_libdxerr8_a_OBJECTS = $(am_lib64_libdxerr8_a_OBJECTS)
 lib64_libdxerr9_a_AR = $(AR) $(ARFLAGS)
 lib64_libdxerr9_a_LIBADD =
 am__lib64_libdxerr9_a_SOURCES_DIST = libsrc/dxerr9.c libsrc/dxerr9w.c
-am__objects_53 = libsrc/lib64_libdxerr9_a-dxerr9.$(OBJEXT) \
+am__objects_54 = libsrc/lib64_libdxerr9_a-dxerr9.$(OBJEXT) \
 	libsrc/lib64_libdxerr9_a-dxerr9w.$(OBJEXT)
-@LIB64_TRUE@am_lib64_libdxerr9_a_OBJECTS = $(am__objects_53)
+@LIB64_TRUE@am_lib64_libdxerr9_a_OBJECTS = $(am__objects_54)
 lib64_libdxerr9_a_OBJECTS = $(am_lib64_libdxerr9_a_OBJECTS)
 lib64_libdxguid_a_AR = $(AR) $(ARFLAGS)
 lib64_libdxguid_a_LIBADD =
 am__lib64_libdxguid_a_SOURCES_DIST = libsrc/dxguid.c
-am__objects_54 = libsrc/lib64_libdxguid_a-dxguid.$(OBJEXT)
-@LIB64_TRUE@am_lib64_libdxguid_a_OBJECTS = $(am__objects_54)
+am__objects_55 = libsrc/lib64_libdxguid_a-dxguid.$(OBJEXT)
+@LIB64_TRUE@am_lib64_libdxguid_a_OBJECTS = $(am__objects_55)
 lib64_libdxguid_a_OBJECTS = $(am_lib64_libdxguid_a_OBJECTS)
 lib64_libgdiplus_a_LIBADD =
 am__lib64_libgdiplus_a_SOURCES_DIST = libsrc/gdiplus.c
-am__objects_55 = libsrc/lib64_libgdiplus_a-gdiplus.$(OBJEXT)
-@LIB64_TRUE@am_lib64_libgdiplus_a_OBJECTS = $(am__objects_55)
+am__objects_56 = libsrc/lib64_libgdiplus_a-gdiplus.$(OBJEXT)
+@LIB64_TRUE@am_lib64_libgdiplus_a_OBJECTS = $(am__objects_56)
 lib64_libgdiplus_a_OBJECTS = $(am_lib64_libgdiplus_a_OBJECTS)
 lib64_libgmon_a_AR = $(AR) $(ARFLAGS)
 lib64_libgmon_a_LIBADD =
@@ -1842,7 +1863,7 @@ am__lib64_libkernel32_a_SOURCES_DIST = intrincs/__movsb.c \
 	intrincs/__faststorefence.c intrincs/__shiftleft128.c \
 	intrincs/readcr8.c intrincs/writecr8.c \
 	lib-common/kernel32.def.in
-am__objects_56 = intrincs/lib64_libkernel32_a-__movsb.$(OBJEXT) \
+am__objects_57 = intrincs/lib64_libkernel32_a-__movsb.$(OBJEXT) \
 	intrincs/lib64_libkernel32_a-__movsd.$(OBJEXT) \
 	intrincs/lib64_libkernel32_a-__movsw.$(OBJEXT) \
 	intrincs/lib64_libkernel32_a-__stosb.$(OBJEXT) \
@@ -1906,7 +1927,7 @@ am__objects_56 = intrincs/lib64_libkernel32_a-__movsb.$(OBJEXT) \
 	intrincs/lib64_libkernel32_a-writemsr.$(OBJEXT) \
 	intrincs/lib64_libkernel32_a-__int2c.$(OBJEXT) \
 	intrincs/lib64_libkernel32_a-RtlSecureZeroMemory.$(OBJEXT)
-am__objects_57 = intrincs/lib64_libkernel32_a-bittest64.$(OBJEXT) \
+am__objects_58 = intrincs/lib64_libkernel32_a-bittest64.$(OBJEXT) \
 	intrincs/lib64_libkernel32_a-bittestc64.$(OBJEXT) \
 	intrincs/lib64_libkernel32_a-bittestr64.$(OBJEXT) \
 	intrincs/lib64_libkernel32_a-bittestri64.$(OBJEXT) \
@@ -1936,44 +1957,44 @@ am__objects_57 = intrincs/lib64_libkernel32_a-bittest64.$(OBJEXT) \
 	intrincs/lib64_libkernel32_a-__shiftleft128.$(OBJEXT) \
 	intrincs/lib64_libkernel32_a-readcr8.$(OBJEXT) \
 	intrincs/lib64_libkernel32_a-writecr8.$(OBJEXT)
-@LIB64_TRUE@am_lib64_libkernel32_a_OBJECTS = $(am__objects_56) \
-@LIB64_TRUE@	$(am__objects_57)
+@LIB64_TRUE@am_lib64_libkernel32_a_OBJECTS = $(am__objects_57) \
+@LIB64_TRUE@	$(am__objects_58)
 lib64_libkernel32_a_OBJECTS = $(am_lib64_libkernel32_a_OBJECTS)
 lib64_libksguid_a_AR = $(AR) $(ARFLAGS)
 lib64_libksguid_a_LIBADD =
 am__lib64_libksguid_a_SOURCES_DIST = libsrc/ksuser.c
-am__objects_58 = libsrc/lib64_libksguid_a-ksuser.$(OBJEXT)
-@LIB64_TRUE@am_lib64_libksguid_a_OBJECTS = $(am__objects_58)
+am__objects_59 = libsrc/lib64_libksguid_a-ksuser.$(OBJEXT)
+@LIB64_TRUE@am_lib64_libksguid_a_OBJECTS = $(am__objects_59)
 lib64_libksguid_a_OBJECTS = $(am_lib64_libksguid_a_OBJECTS)
 lib64_libksuser_a_LIBADD =
 am__lib64_libksuser_a_SOURCES_DIST = libsrc/ksuser.c
-am__objects_59 = libsrc/lib64_libksuser_a-ksuser.$(OBJEXT)
-@LIB64_TRUE@am_lib64_libksuser_a_OBJECTS = $(am__objects_59)
+am__objects_60 = libsrc/lib64_libksuser_a-ksuser.$(OBJEXT)
+@LIB64_TRUE@am_lib64_libksuser_a_OBJECTS = $(am__objects_60)
 lib64_libksuser_a_OBJECTS = $(am_lib64_libksuser_a_OBJECTS)
 lib64_liblargeint_a_AR = $(AR) $(ARFLAGS)
 lib64_liblargeint_a_LIBADD =
 am__lib64_liblargeint_a_SOURCES_DIST = libsrc/largeint.c
-am__objects_60 = libsrc/lib64_liblargeint_a-largeint.$(OBJEXT)
+am__objects_61 = libsrc/lib64_liblargeint_a-largeint.$(OBJEXT)
 @LIB64_TRUE@@W32API_FALSE@am_lib64_liblargeint_a_OBJECTS =  \
-@LIB64_TRUE@@W32API_FALSE@	$(am__objects_60)
+@LIB64_TRUE@@W32API_FALSE@	$(am__objects_61)
 lib64_liblargeint_a_OBJECTS = $(am_lib64_liblargeint_a_OBJECTS)
 lib64_liblocationapi_a_AR = $(AR) $(ARFLAGS)
 lib64_liblocationapi_a_LIBADD =
 am__lib64_liblocationapi_a_SOURCES_DIST = libsrc/locationapi.c
-am__objects_61 = libsrc/lib64_liblocationapi_a-locationapi.$(OBJEXT)
-@LIB64_TRUE@am_lib64_liblocationapi_a_OBJECTS = $(am__objects_61)
+am__objects_62 = libsrc/lib64_liblocationapi_a-locationapi.$(OBJEXT)
+@LIB64_TRUE@am_lib64_liblocationapi_a_OBJECTS = $(am__objects_62)
 lib64_liblocationapi_a_OBJECTS = $(am_lib64_liblocationapi_a_OBJECTS)
 lib64_libm_a_AR = $(AR) $(ARFLAGS)
 lib64_libm_a_LIBADD =
-am__objects_62 = lib64_libm_a-_libm_dummy.$(OBJEXT)
+am__objects_63 = lib64_libm_a-_libm_dummy.$(OBJEXT)
 @LIB64_TRUE@@W32API_FALSE@nodist_lib64_libm_a_OBJECTS =  \
-@LIB64_TRUE@@W32API_FALSE@	$(am__objects_62)
+@LIB64_TRUE@@W32API_FALSE@	$(am__objects_63)
 lib64_libm_a_OBJECTS = $(nodist_lib64_libm_a_OBJECTS)
 lib64_libmfuuid_a_AR = $(AR) $(ARFLAGS)
 lib64_libmfuuid_a_LIBADD =
 am__lib64_libmfuuid_a_SOURCES_DIST = libsrc/mfuuid.c
-am__objects_63 = libsrc/lib64_libmfuuid_a-mfuuid.$(OBJEXT)
-@LIB64_TRUE@am_lib64_libmfuuid_a_OBJECTS = $(am__objects_63)
+am__objects_64 = libsrc/lib64_libmfuuid_a-mfuuid.$(OBJEXT)
+@LIB64_TRUE@am_lib64_libmfuuid_a_OBJECTS = $(am__objects_64)
 lib64_libmfuuid_a_OBJECTS = $(am_lib64_libmfuuid_a_OBJECTS)
 lib64_libmingw32_a_AR = $(AR) $(ARFLAGS)
 lib64_libmingw32_a_LIBADD =
@@ -1988,7 +2009,7 @@ am__lib64_libmingw32_a_SOURCES_DIST = include/oscalls.h \
 	crt/usermatherr.c crt/xtxtmode.c crt/crt_handler.c \
 	crt/tlsthrd.c crt/tlsmthread.c crt/tlsmcrt.c crt/cxa_atexit.c \
 	crt/cxa_thread_atexit.c crt/tls_atexit.c
-am__objects_64 = crt/lib64_libmingw32_a-crt0_c.$(OBJEXT) \
+am__objects_65 = crt/lib64_libmingw32_a-crt0_c.$(OBJEXT) \
 	crt/lib64_libmingw32_a-dll_argv.$(OBJEXT) \
 	crt/lib64_libmingw32_a-gccmain.$(OBJEXT) \
 	crt/lib64_libmingw32_a-natstart.$(OBJEXT) \
@@ -2020,7 +2041,7 @@ am__objects_64 = crt/lib64_libmingw32_a-crt0_c.$(OBJEXT) \
 	crt/lib64_libmingw32_a-cxa_thread_atexit.$(OBJEXT) \
 	crt/lib64_libmingw32_a-tls_atexit.$(OBJEXT)
 @LIB64_TRUE@@W32API_FALSE@am_lib64_libmingw32_a_OBJECTS =  \
-@LIB64_TRUE@@W32API_FALSE@	$(am__objects_64)
+@LIB64_TRUE@@W32API_FALSE@	$(am__objects_65)
 lib64_libmingw32_a_OBJECTS = $(am_lib64_libmingw32_a_OBJECTS)
 lib64_libmingwex_a_AR = $(AR) $(ARFLAGS)
 lib64_libmingwex_a_LIBADD =
@@ -2167,7 +2188,7 @@ am__lib64_libmingwex_a_SOURCES_DIST = crt/dllentry.c crt/dllmain.c \
 	math/DFP/__signbitd32.c math/DFP/__signbitd64.c \
 	math/DFP/__signbitd128.c math/DFP/isinfd32.c \
 	math/DFP/isinfd64.c math/DFP/isinfd128.c
-am__objects_65 = crt/lib64_libmingwex_a-dllentry.$(OBJEXT) \
+am__objects_66 = crt/lib64_libmingwex_a-dllentry.$(OBJEXT) \
 	crt/lib64_libmingwex_a-dllmain.$(OBJEXT) \
 	complex/lib64_libmingwex_a-_cabs.$(OBJEXT) \
 	complex/lib64_libmingwex_a-cabs.$(OBJEXT) \
@@ -2477,7 +2498,7 @@ am__objects_65 = crt/lib64_libmingwex_a-dllentry.$(OBJEXT) \
 	stdio/lib64_libmingwex_a-wtoll.$(OBJEXT) \
 	stdio/lib64_libmingwex_a-mingw_asprintf.$(OBJEXT) \
 	stdio/lib64_libmingwex_a-mingw_vasprintf.$(OBJEXT)
-am__objects_66 = math/x86/lib64_libmingwex_a-_chgsignl.$(OBJEXT) \
+am__objects_67 = math/x86/lib64_libmingwex_a-_chgsignl.$(OBJEXT) \
 	math/x86/lib64_libmingwex_a-acosf.$(OBJEXT) \
 	math/x86/lib64_libmingwex_a-acosh.$(OBJEXT) \
 	math/x86/lib64_libmingwex_a-acosl.$(OBJEXT) \
@@ -2562,8 +2583,8 @@ am__objects_66 = math/x86/lib64_libmingwex_a-_chgsignl.$(OBJEXT) \
 	math/x86/lib64_libmingwex_a-tanl.$(OBJEXT) \
 	math/x86/lib64_libmingwex_a-trunc.$(OBJEXT) \
 	math/x86/lib64_libmingwex_a-truncf.$(OBJEXT)
-am__objects_67 = $(am__objects_66)
-@ENABLE_DFP_TRUE@am__objects_68 = math/DFP/lib64_libmingwex_a-__fpclassifyd32.$(OBJEXT) \
+am__objects_68 = $(am__objects_67)
+@ENABLE_DFP_TRUE@am__objects_69 = math/DFP/lib64_libmingwex_a-__fpclassifyd32.$(OBJEXT) \
 @ENABLE_DFP_TRUE@	math/DFP/lib64_libmingwex_a-__fpclassifyd64.$(OBJEXT) \
 @ENABLE_DFP_TRUE@	math/DFP/lib64_libmingwex_a-__fpclassifyd128.$(OBJEXT) \
 @ENABLE_DFP_TRUE@	math/DFP/lib64_libmingwex_a-__isnand32.$(OBJEXT) \
@@ -2576,32 +2597,32 @@ am__objects_67 = $(am__objects_66)
 @ENABLE_DFP_TRUE@	math/DFP/lib64_libmingwex_a-isinfd64.$(OBJEXT) \
 @ENABLE_DFP_TRUE@	math/DFP/lib64_libmingwex_a-isinfd128.$(OBJEXT)
 @LIB64_TRUE@@W32API_FALSE@am_lib64_libmingwex_a_OBJECTS =  \
-@LIB64_TRUE@@W32API_FALSE@	$(am__objects_65) $(am__objects_67) \
-@LIB64_TRUE@@W32API_FALSE@	$(am__objects_68)
+@LIB64_TRUE@@W32API_FALSE@	$(am__objects_66) $(am__objects_68) \
+@LIB64_TRUE@@W32API_FALSE@	$(am__objects_69)
 lib64_libmingwex_a_OBJECTS = $(am_lib64_libmingwex_a_OBJECTS)
 lib64_libmingwthrd_a_AR = $(AR) $(ARFLAGS)
 lib64_libmingwthrd_a_LIBADD =
 am__lib64_libmingwthrd_a_SOURCES_DIST = libsrc/mingwthrd_mt.c
-am__objects_69 = libsrc/lib64_libmingwthrd_a-mingwthrd_mt.$(OBJEXT)
+am__objects_70 = libsrc/lib64_libmingwthrd_a-mingwthrd_mt.$(OBJEXT)
 @LIB64_TRUE@@W32API_FALSE@am_lib64_libmingwthrd_a_OBJECTS =  \
-@LIB64_TRUE@@W32API_FALSE@	$(am__objects_69)
+@LIB64_TRUE@@W32API_FALSE@	$(am__objects_70)
 lib64_libmingwthrd_a_OBJECTS = $(am_lib64_libmingwthrd_a_OBJECTS)
 lib64_libmoldname_a_AR = $(AR) $(ARFLAGS)
 lib64_libmoldname_a_LIBADD =
 am__lib64_libmoldname_a_SOURCES_DIST = _libm_dummy.c
-am__objects_70 = lib64_libmoldname_a-_libm_dummy.$(OBJEXT)
+am__objects_71 = lib64_libmoldname_a-_libm_dummy.$(OBJEXT)
 @LIB64_TRUE@@W32API_FALSE@am_lib64_libmoldname_a_OBJECTS =  \
-@LIB64_TRUE@@W32API_FALSE@	$(am__objects_70)
+@LIB64_TRUE@@W32API_FALSE@	$(am__objects_71)
 lib64_libmoldname_a_OBJECTS = $(am_lib64_libmoldname_a_OBJECTS)
 lib64_libmsvcr120_app_extra_a_AR = $(AR) $(ARFLAGS)
 lib64_libmsvcr120_app_extra_a_LIBADD =
 am__lib64_libmsvcr120_app_extra_a_SOURCES_DIST =  \
 	misc/__set_app_type.c misc/_getpid.c
-am__objects_71 =  \
+am__objects_72 =  \
 	misc/lib64_libmsvcr120_app_extra_a-__set_app_type.$(OBJEXT) \
 	misc/lib64_libmsvcr120_app_extra_a-_getpid.$(OBJEXT)
 @LIB64_TRUE@@W32API_FALSE@am_lib64_libmsvcr120_app_extra_a_OBJECTS =  \
-@LIB64_TRUE@@W32API_FALSE@	$(am__objects_71)
+@LIB64_TRUE@@W32API_FALSE@	$(am__objects_72)
 lib64_libmsvcr120_app_extra_a_OBJECTS =  \
 	$(am_lib64_libmsvcr120_app_extra_a_OBJECTS)
 lib64_libmsvcr80_extra_a_AR = $(AR) $(ARFLAGS)
@@ -2609,13 +2630,13 @@ lib64_libmsvcr80_extra_a_LIBADD =
 am__lib64_libmsvcr80_extra_a_SOURCES_DIST = misc/__p___argv.c \
 	misc/__p__acmdln.c misc/__p__commode.c misc/__p__fmode.c \
 	misc/__p__wcmdln.c
-am__objects_72 = misc/lib64_libmsvcr80_extra_a-__p___argv.$(OBJEXT) \
+am__objects_73 = misc/lib64_libmsvcr80_extra_a-__p___argv.$(OBJEXT) \
 	misc/lib64_libmsvcr80_extra_a-__p__acmdln.$(OBJEXT) \
 	misc/lib64_libmsvcr80_extra_a-__p__commode.$(OBJEXT) \
 	misc/lib64_libmsvcr80_extra_a-__p__fmode.$(OBJEXT) \
 	misc/lib64_libmsvcr80_extra_a-__p__wcmdln.$(OBJEXT)
 @LIB64_TRUE@@W32API_FALSE@am_lib64_libmsvcr80_extra_a_OBJECTS =  \
-@LIB64_TRUE@@W32API_FALSE@	$(am__objects_72)
+@LIB64_TRUE@@W32API_FALSE@	$(am__objects_73)
 lib64_libmsvcr80_extra_a_OBJECTS =  \
 	$(am_lib64_libmsvcr80_extra_a_OBJECTS)
 lib64_libmsvcrt_common_a_AR = $(AR) $(ARFLAGS)
@@ -2628,7 +2649,7 @@ am__lib64_libmsvcrt_common_a_SOURCES_DIST = misc/mbrtowc.c \
 	stdio/_putc_nolock.c stdio/_putwc_nolock.c \
 	stdio/acrt_iob_func.c stdio/snprintf_alias.c \
 	stdio/vsnprintf_alias.c math/frexp.c
-am__objects_73 = misc/lib64_libmsvcrt_common_a-mbrtowc.$(OBJEXT) \
+am__objects_74 = misc/lib64_libmsvcrt_common_a-mbrtowc.$(OBJEXT) \
 	misc/lib64_libmsvcrt_common_a-mbsinit.$(OBJEXT) \
 	misc/lib64_libmsvcrt_common_a-onexit_table.$(OBJEXT) \
 	misc/lib64_libmsvcrt_common_a-register_tls_atexit.$(OBJEXT) \
@@ -2646,7 +2667,7 @@ am__objects_73 = misc/lib64_libmsvcrt_common_a-mbrtowc.$(OBJEXT) \
 	stdio/lib64_libmsvcrt_common_a-vsnprintf_alias.$(OBJEXT) \
 	math/lib64_libmsvcrt_common_a-frexp.$(OBJEXT)
 @LIB64_TRUE@@W32API_FALSE@am_lib64_libmsvcrt_common_a_OBJECTS =  \
-@LIB64_TRUE@@W32API_FALSE@	$(am__objects_73)
+@LIB64_TRUE@@W32API_FALSE@	$(am__objects_74)
 lib64_libmsvcrt_common_a_OBJECTS =  \
 	$(am_lib64_libmsvcrt_common_a_OBJECTS)
 lib64_libmsvcrt_extra_a_AR = $(AR) $(ARFLAGS)
@@ -2674,7 +2695,7 @@ am__lib64_libmsvcrt_extra_a_SOURCES_DIST = misc/_configthreadlocale.c \
 	misc/__p__commode.c misc/__p__fmode.c misc/__p__wcmdln.c \
 	misc/_create_locale.c misc/_free_locale.c \
 	misc/_get_current_locale.c misc/seterrno.c
-am__objects_74 =  \
+am__objects_75 =  \
 	misc/lib64_libmsvcrt_extra_a-_configthreadlocale.$(OBJEXT) \
 	misc/lib64_libmsvcrt_extra_a-invalid_parameter_handler.$(OBJEXT) \
 	misc/lib64_libmsvcrt_extra_a-output_format.$(OBJEXT) \
@@ -2724,7 +2745,7 @@ am__objects_74 =  \
 	secapi/lib64_libmsvcrt_extra_a-wmemmove_s.$(OBJEXT) \
 	stdio/lib64_libmsvcrt_extra_a-fseeki64.$(OBJEXT) \
 	stdio/lib64_libmsvcrt_extra_a-mingw_lock.$(OBJEXT)
-am__objects_75 = $(am__objects_74) \
+am__objects_76 = $(am__objects_75) \
 	misc/lib64_libmsvcrt_extra_a-__p___argv.$(OBJEXT) \
 	misc/lib64_libmsvcrt_extra_a-__p__acmdln.$(OBJEXT) \
 	misc/lib64_libmsvcrt_extra_a-__p__commode.$(OBJEXT) \
@@ -2735,29 +2756,29 @@ am__objects_75 = $(am__objects_74) \
 	misc/lib64_libmsvcrt_extra_a-_get_current_locale.$(OBJEXT) \
 	misc/lib64_libmsvcrt_extra_a-seterrno.$(OBJEXT)
 @LIB64_TRUE@@W32API_FALSE@am_lib64_libmsvcrt_extra_a_OBJECTS =  \
-@LIB64_TRUE@@W32API_FALSE@	$(am__objects_75)
+@LIB64_TRUE@@W32API_FALSE@	$(am__objects_76)
 lib64_libmsvcrt_extra_a_OBJECTS =  \
 	$(am_lib64_libmsvcrt_extra_a_OBJECTS)
 lib64_libportabledeviceguids_a_AR = $(AR) $(ARFLAGS)
 lib64_libportabledeviceguids_a_LIBADD =
 am__lib64_libportabledeviceguids_a_SOURCES_DIST =  \
 	libsrc/portabledeviceguids.c
-am__objects_76 = libsrc/lib64_libportabledeviceguids_a-portabledeviceguids.$(OBJEXT)
+am__objects_77 = libsrc/lib64_libportabledeviceguids_a-portabledeviceguids.$(OBJEXT)
 @LIB64_TRUE@am_lib64_libportabledeviceguids_a_OBJECTS =  \
-@LIB64_TRUE@	$(am__objects_76)
+@LIB64_TRUE@	$(am__objects_77)
 lib64_libportabledeviceguids_a_OBJECTS =  \
 	$(am_lib64_libportabledeviceguids_a_OBJECTS)
 lib64_libsapi_a_AR = $(AR) $(ARFLAGS)
 lib64_libsapi_a_LIBADD =
 am__lib64_libsapi_a_SOURCES_DIST = libsrc/sapi.c
-am__objects_77 = libsrc/lib64_libsapi_a-sapi.$(OBJEXT)
-@LIB64_TRUE@am_lib64_libsapi_a_OBJECTS = $(am__objects_77)
+am__objects_78 = libsrc/lib64_libsapi_a-sapi.$(OBJEXT)
+@LIB64_TRUE@am_lib64_libsapi_a_OBJECTS = $(am__objects_78)
 lib64_libsapi_a_OBJECTS = $(am_lib64_libsapi_a_OBJECTS)
 lib64_libscrnsave_a_AR = $(AR) $(ARFLAGS)
 lib64_libscrnsave_a_LIBADD =
 am__lib64_libscrnsave_a_SOURCES_DIST = libsrc/scrnsave.c
-am__objects_78 = libsrc/lib64_libscrnsave_a-scrnsave.$(OBJEXT)
-@LIB64_TRUE@am_lib64_libscrnsave_a_OBJECTS = $(am__objects_78)
+am__objects_79 = libsrc/lib64_libscrnsave_a-scrnsave.$(OBJEXT)
+@LIB64_TRUE@am_lib64_libscrnsave_a_OBJECTS = $(am__objects_79)
 lib64_libscrnsave_a_OBJECTS = $(am_lib64_libscrnsave_a_OBJECTS)
 lib64_libscrnsavw_a_AR = $(AR) $(ARFLAGS)
 lib64_libscrnsavw_a_LIBADD =
@@ -2768,25 +2789,25 @@ lib64_libscrnsavw_a_OBJECTS = $(am_lib64_libscrnsavw_a_OBJECTS)
 lib64_libsensorsapi_a_AR = $(AR) $(ARFLAGS)
 lib64_libsensorsapi_a_LIBADD =
 am__lib64_libsensorsapi_a_SOURCES_DIST = libsrc/sensorsapi.c
-am__objects_79 = libsrc/lib64_libsensorsapi_a-sensorsapi.$(OBJEXT)
-@LIB64_TRUE@am_lib64_libsensorsapi_a_OBJECTS = $(am__objects_79)
+am__objects_80 = libsrc/lib64_libsensorsapi_a-sensorsapi.$(OBJEXT)
+@LIB64_TRUE@am_lib64_libsensorsapi_a_OBJECTS = $(am__objects_80)
 lib64_libsensorsapi_a_OBJECTS = $(am_lib64_libsensorsapi_a_OBJECTS)
 lib64_libshell32_a_LIBADD =
 am__lib64_libshell32_a_SOURCES_DIST = libsrc/shell32.c
-am__objects_80 = libsrc/lib64_libshell32_a-shell32.$(OBJEXT)
-@LIB64_TRUE@am_lib64_libshell32_a_OBJECTS = $(am__objects_80)
+am__objects_81 = libsrc/lib64_libshell32_a-shell32.$(OBJEXT)
+@LIB64_TRUE@am_lib64_libshell32_a_OBJECTS = $(am__objects_81)
 lib64_libshell32_a_OBJECTS = $(am_lib64_libshell32_a_OBJECTS)
 lib64_libstrmiids_a_AR = $(AR) $(ARFLAGS)
 lib64_libstrmiids_a_LIBADD =
 am__lib64_libstrmiids_a_SOURCES_DIST = libsrc/strmiids.c
-am__objects_81 = libsrc/lib64_libstrmiids_a-strmiids.$(OBJEXT)
-@LIB64_TRUE@am_lib64_libstrmiids_a_OBJECTS = $(am__objects_81)
+am__objects_82 = libsrc/lib64_libstrmiids_a-strmiids.$(OBJEXT)
+@LIB64_TRUE@am_lib64_libstrmiids_a_OBJECTS = $(am__objects_82)
 lib64_libstrmiids_a_OBJECTS = $(am_lib64_libstrmiids_a_OBJECTS)
 lib64_libtaskschd_a_AR = $(AR) $(ARFLAGS)
 lib64_libtaskschd_a_LIBADD =
 am__lib64_libtaskschd_a_SOURCES_DIST = libsrc/taskschd.c
-am__objects_82 = libsrc/lib64_libtaskschd_a-taskschd.$(OBJEXT)
-@LIB64_TRUE@am_lib64_libtaskschd_a_OBJECTS = $(am__objects_82)
+am__objects_83 = libsrc/lib64_libtaskschd_a-taskschd.$(OBJEXT)
+@LIB64_TRUE@am_lib64_libtaskschd_a_OBJECTS = $(am__objects_83)
 lib64_libtaskschd_a_OBJECTS = $(am_lib64_libtaskschd_a_OBJECTS)
 lib64_libucrt_extra_a_AR = $(AR) $(ARFLAGS)
 lib64_libucrt_extra_a_LIBADD =
@@ -2800,7 +2821,7 @@ am__lib64_libucrt_extra_a_SOURCES_DIST = crt/ucrtbase_compat.c \
 	stdio/ucrt_vfscanf.c stdio/ucrt_vprintf.c stdio/ucrt_vscanf.c \
 	stdio/ucrt_vsnprintf.c stdio/ucrt_vsprintf.c \
 	stdio/ucrt_vsscanf.c
-am__objects_83 = crt/lib64_libucrt_extra_a-ucrtbase_compat.$(OBJEXT) \
+am__objects_84 = crt/lib64_libucrt_extra_a-ucrtbase_compat.$(OBJEXT) \
 	math/lib64_libucrt_extra_a-_huge.$(OBJEXT) \
 	stdio/lib64_libucrt_extra_a-ucrt_fprintf.$(OBJEXT) \
 	stdio/lib64_libucrt_extra_a-ucrt_fscanf.$(OBJEXT) \
@@ -2822,7 +2843,7 @@ am__objects_83 = crt/lib64_libucrt_extra_a-ucrtbase_compat.$(OBJEXT) \
 	stdio/lib64_libucrt_extra_a-ucrt_vsprintf.$(OBJEXT) \
 	stdio/lib64_libucrt_extra_a-ucrt_vsscanf.$(OBJEXT)
 @LIB64_TRUE@@W32API_FALSE@am_lib64_libucrt_extra_a_OBJECTS =  \
-@LIB64_TRUE@@W32API_FALSE@	$(am__objects_83)
+@LIB64_TRUE@@W32API_FALSE@	$(am__objects_84)
 lib64_libucrt_extra_a_OBJECTS = $(am_lib64_libucrt_extra_a_OBJECTS)
 lib64_libucrtapp_extra_a_AR = $(AR) $(ARFLAGS)
 lib64_libucrtapp_extra_a_LIBADD =
@@ -2832,7 +2853,7 @@ am__lib64_libucrtapp_extra_a_SOURCES_DIST =  \
 	string/memmove.c string/memrchr.c string/strchr.c \
 	string/strchrnul.c string/strrchr.c string/strstr.c \
 	string/wcschr.c string/wcsrchr.c string/wcsstr.c
-am__objects_84 =  \
+am__objects_85 =  \
 	crt/lib64_libucrtapp_extra_a-__C_specific_handler.$(OBJEXT) \
 	misc/lib64_libucrtapp_extra_a-longjmp.$(OBJEXT) \
 	misc/lib64_libucrtapp_extra_a-setjmp.$(OBJEXT) \
@@ -2849,7 +2870,7 @@ am__objects_84 =  \
 	string/lib64_libucrtapp_extra_a-wcsrchr.$(OBJEXT) \
 	string/lib64_libucrtapp_extra_a-wcsstr.$(OBJEXT)
 @LIB64_TRUE@@W32API_FALSE@am_lib64_libucrtapp_extra_a_OBJECTS =  \
-@LIB64_TRUE@@W32API_FALSE@	$(am__objects_84)
+@LIB64_TRUE@@W32API_FALSE@	$(am__objects_85)
 lib64_libucrtapp_extra_a_OBJECTS =  \
 	$(am_lib64_libucrtapp_extra_a_OBJECTS)
 lib64_libuuid_a_AR = $(AR) $(ARFLAGS)
@@ -2873,7 +2894,7 @@ am__lib64_libuuid_a_SOURCES_DIST = libsrc/ativscp-uuid.c \
 	libsrc/usbcamdi-uuid.c libsrc/usbiodef-uuid.c libsrc/uuid.c \
 	libsrc/vds-uuid.c libsrc/virtdisk-uuid.c libsrc/wia-uuid.c \
 	libsrc/windowscodecs.c
-am__objects_85 = libsrc/lib64_libuuid_a-ativscp-uuid.$(OBJEXT) \
+am__objects_86 = libsrc/lib64_libuuid_a-ativscp-uuid.$(OBJEXT) \
 	libsrc/lib64_libuuid_a-atsmedia-uuid.$(OBJEXT) \
 	libsrc/lib64_libuuid_a-bth-uuid.$(OBJEXT) \
 	libsrc/lib64_libuuid_a-cguid-uuid.$(OBJEXT) \
@@ -2918,27 +2939,27 @@ am__objects_85 = libsrc/lib64_libuuid_a-ativscp-uuid.$(OBJEXT) \
 	libsrc/lib64_libuuid_a-virtdisk-uuid.$(OBJEXT) \
 	libsrc/lib64_libuuid_a-wia-uuid.$(OBJEXT) \
 	libsrc/lib64_libuuid_a-windowscodecs.$(OBJEXT)
-@LIB64_TRUE@am_lib64_libuuid_a_OBJECTS = $(am__objects_85)
+@LIB64_TRUE@am_lib64_libuuid_a_OBJECTS = $(am__objects_86)
 lib64_libuuid_a_OBJECTS = $(am_lib64_libuuid_a_OBJECTS)
 lib64_libwbemuuid_a_AR = $(AR) $(ARFLAGS)
 lib64_libwbemuuid_a_LIBADD =
 am__lib64_libwbemuuid_a_SOURCES_DIST = libsrc/wbemuuid.c
-am__objects_86 = libsrc/lib64_libwbemuuid_a-wbemuuid.$(OBJEXT)
-@LIB64_TRUE@am_lib64_libwbemuuid_a_OBJECTS = $(am__objects_86)
+am__objects_87 = libsrc/lib64_libwbemuuid_a-wbemuuid.$(OBJEXT)
+@LIB64_TRUE@am_lib64_libwbemuuid_a_OBJECTS = $(am__objects_87)
 lib64_libwbemuuid_a_OBJECTS = $(am_lib64_libwbemuuid_a_OBJECTS)
 lib64_libwindowscodecs_a_LIBADD =
 am__lib64_libwindowscodecs_a_SOURCES_DIST = libsrc/windowscodecs.c
-am__objects_87 =  \
+am__objects_88 =  \
 	libsrc/lib64_libwindowscodecs_a-windowscodecs.$(OBJEXT)
-@LIB64_TRUE@am_lib64_libwindowscodecs_a_OBJECTS = $(am__objects_87)
+@LIB64_TRUE@am_lib64_libwindowscodecs_a_OBJECTS = $(am__objects_88)
 lib64_libwindowscodecs_a_OBJECTS =  \
 	$(am_lib64_libwindowscodecs_a_OBJECTS)
 lib64_libwmcodecdspuuid_a_AR = $(AR) $(ARFLAGS)
 lib64_libwmcodecdspuuid_a_LIBADD =
 am__lib64_libwmcodecdspuuid_a_SOURCES_DIST = libsrc/wmcodecdspuuid.c
-am__objects_88 =  \
+am__objects_89 =  \
 	libsrc/lib64_libwmcodecdspuuid_a-wmcodecdspuuid.$(OBJEXT)
-@LIB64_TRUE@am_lib64_libwmcodecdspuuid_a_OBJECTS = $(am__objects_88)
+@LIB64_TRUE@am_lib64_libwmcodecdspuuid_a_OBJECTS = $(am__objects_89)
 lib64_libwmcodecdspuuid_a_OBJECTS =  \
 	$(am_lib64_libwmcodecdspuuid_a_OBJECTS)
 lib64_libws2_32_a_LIBADD =
@@ -2976,7 +2997,7 @@ am__lib64_libws2_32_a_SOURCES_DIST = libsrc/ws2_32.c \
 	libsrc/wspiapi/WspiapiGetAddrInfo.c \
 	libsrc/wspiapi/WspiapiGetNameInfo.c \
 	libsrc/wspiapi/WspiapiFreeAddrInfo.c lib-common/ws2_32.def.in
-am__objects_89 = libsrc/lib64_libws2_32_a-ws2_32.$(OBJEXT) \
+am__objects_90 = libsrc/lib64_libws2_32_a-ws2_32.$(OBJEXT) \
 	libsrc/ws2tcpip/lib64_libws2_32_a-in6_addr_equal.$(OBJEXT) \
 	libsrc/ws2tcpip/lib64_libws2_32_a-in6addr_isany.$(OBJEXT) \
 	libsrc/ws2tcpip/lib64_libws2_32_a-in6addr_isloopback.$(OBJEXT) \
@@ -3011,25 +3032,25 @@ am__objects_89 = libsrc/lib64_libws2_32_a-ws2_32.$(OBJEXT) \
 	libsrc/wspiapi/lib64_libws2_32_a-WspiapiGetAddrInfo.$(OBJEXT) \
 	libsrc/wspiapi/lib64_libws2_32_a-WspiapiGetNameInfo.$(OBJEXT) \
 	libsrc/wspiapi/lib64_libws2_32_a-WspiapiFreeAddrInfo.$(OBJEXT)
-@LIB64_TRUE@am_lib64_libws2_32_a_OBJECTS = $(am__objects_89)
+@LIB64_TRUE@am_lib64_libws2_32_a_OBJECTS = $(am__objects_90)
 lib64_libws2_32_a_OBJECTS = $(am_lib64_libws2_32_a_OBJECTS)
 libarm32_libadsiid_a_AR = $(AR) $(ARFLAGS)
 libarm32_libadsiid_a_LIBADD =
 am__libarm32_libadsiid_a_SOURCES_DIST = libsrc/activeds-uuid.c
-am__objects_90 = libsrc/libarm32_libadsiid_a-activeds-uuid.$(OBJEXT)
-@LIBARM32_TRUE@am_libarm32_libadsiid_a_OBJECTS = $(am__objects_90)
+am__objects_91 = libsrc/libarm32_libadsiid_a-activeds-uuid.$(OBJEXT)
+@LIBARM32_TRUE@am_libarm32_libadsiid_a_OBJECTS = $(am__objects_91)
 libarm32_libadsiid_a_OBJECTS = $(am_libarm32_libadsiid_a_OBJECTS)
 libarm32_libamstrmid_a_AR = $(AR) $(ARFLAGS)
 libarm32_libamstrmid_a_LIBADD =
 am__libarm32_libamstrmid_a_SOURCES_DIST = libsrc/amstrmid.c
-am__objects_91 = libsrc/libarm32_libamstrmid_a-amstrmid.$(OBJEXT)
-@LIBARM32_TRUE@am_libarm32_libamstrmid_a_OBJECTS = $(am__objects_91)
+am__objects_92 = libsrc/libarm32_libamstrmid_a-amstrmid.$(OBJEXT)
+@LIBARM32_TRUE@am_libarm32_libamstrmid_a_OBJECTS = $(am__objects_92)
 libarm32_libamstrmid_a_OBJECTS = $(am_libarm32_libamstrmid_a_OBJECTS)
 libarm32_libbits_a_AR = $(AR) $(ARFLAGS)
 libarm32_libbits_a_LIBADD =
 am__libarm32_libbits_a_SOURCES_DIST = libsrc/bits.c
-am__objects_92 = libsrc/libarm32_libbits_a-bits.$(OBJEXT)
-@LIBARM32_TRUE@am_libarm32_libbits_a_OBJECTS = $(am__objects_92)
+am__objects_93 = libsrc/libarm32_libbits_a-bits.$(OBJEXT)
+@LIBARM32_TRUE@am_libarm32_libbits_a_OBJECTS = $(am__objects_93)
 libarm32_libbits_a_OBJECTS = $(am_libarm32_libbits_a_OBJECTS)
 libarm32_libdelayimp_a_AR = $(AR) $(ARFLAGS)
 libarm32_libdelayimp_a_LIBADD =
@@ -3039,56 +3060,56 @@ libarm32_libdinput_a_LIBADD =
 am__libarm32_libdinput_a_SOURCES_DIST = libsrc/dinput_kbd.c \
 	libsrc/dinput_joy.c libsrc/dinput_joy2.c libsrc/dinput_mouse.c \
 	libsrc/dinput_mouse2.c
-am__objects_93 = libsrc/libarm32_libdinput_a-dinput_kbd.$(OBJEXT) \
+am__objects_94 = libsrc/libarm32_libdinput_a-dinput_kbd.$(OBJEXT) \
 	libsrc/libarm32_libdinput_a-dinput_joy.$(OBJEXT) \
 	libsrc/libarm32_libdinput_a-dinput_joy2.$(OBJEXT) \
 	libsrc/libarm32_libdinput_a-dinput_mouse.$(OBJEXT) \
 	libsrc/libarm32_libdinput_a-dinput_mouse2.$(OBJEXT)
-@LIBARM32_TRUE@am_libarm32_libdinput_a_OBJECTS = $(am__objects_93)
+@LIBARM32_TRUE@am_libarm32_libdinput_a_OBJECTS = $(am__objects_94)
 libarm32_libdinput_a_OBJECTS = $(am_libarm32_libdinput_a_OBJECTS)
 libarm32_libdinput8_a_LIBADD =
 am__libarm32_libdinput8_a_SOURCES_DIST = libsrc/dinput_private.h \
 	libsrc/dinput_joy.c libsrc/dinput_joy2.c libsrc/dinput_mouse.c \
 	libsrc/dinput_mouse2.c libsrc/dinput_kbd.c
-am__objects_94 = libsrc/libarm32_libdinput8_a-dinput_joy.$(OBJEXT) \
+am__objects_95 = libsrc/libarm32_libdinput8_a-dinput_joy.$(OBJEXT) \
 	libsrc/libarm32_libdinput8_a-dinput_joy2.$(OBJEXT) \
 	libsrc/libarm32_libdinput8_a-dinput_mouse.$(OBJEXT) \
 	libsrc/libarm32_libdinput8_a-dinput_mouse2.$(OBJEXT) \
 	libsrc/libarm32_libdinput8_a-dinput_kbd.$(OBJEXT)
-@LIBARM32_TRUE@am_libarm32_libdinput8_a_OBJECTS = $(am__objects_94)
+@LIBARM32_TRUE@am_libarm32_libdinput8_a_OBJECTS = $(am__objects_95)
 libarm32_libdinput8_a_OBJECTS = $(am_libarm32_libdinput8_a_OBJECTS)
 libarm32_libdmoguids_a_AR = $(AR) $(ARFLAGS)
 libarm32_libdmoguids_a_LIBADD =
 am__libarm32_libdmoguids_a_SOURCES_DIST = libsrc/dmoguids.c
-am__objects_95 = libsrc/libarm32_libdmoguids_a-dmoguids.$(OBJEXT)
-@LIBARM32_TRUE@am_libarm32_libdmoguids_a_OBJECTS = $(am__objects_95)
+am__objects_96 = libsrc/libarm32_libdmoguids_a-dmoguids.$(OBJEXT)
+@LIBARM32_TRUE@am_libarm32_libdmoguids_a_OBJECTS = $(am__objects_96)
 libarm32_libdmoguids_a_OBJECTS = $(am_libarm32_libdmoguids_a_OBJECTS)
 libarm32_libdxerr8_a_AR = $(AR) $(ARFLAGS)
 libarm32_libdxerr8_a_LIBADD =
 am__libarm32_libdxerr8_a_SOURCES_DIST = libsrc/dxerr8.c \
 	libsrc/dxerr8w.c
-am__objects_96 = libsrc/libarm32_libdxerr8_a-dxerr8.$(OBJEXT) \
+am__objects_97 = libsrc/libarm32_libdxerr8_a-dxerr8.$(OBJEXT) \
 	libsrc/libarm32_libdxerr8_a-dxerr8w.$(OBJEXT)
-@LIBARM32_TRUE@am_libarm32_libdxerr8_a_OBJECTS = $(am__objects_96)
+@LIBARM32_TRUE@am_libarm32_libdxerr8_a_OBJECTS = $(am__objects_97)
 libarm32_libdxerr8_a_OBJECTS = $(am_libarm32_libdxerr8_a_OBJECTS)
 libarm32_libdxerr9_a_AR = $(AR) $(ARFLAGS)
 libarm32_libdxerr9_a_LIBADD =
 am__libarm32_libdxerr9_a_SOURCES_DIST = libsrc/dxerr9.c \
 	libsrc/dxerr9w.c
-am__objects_97 = libsrc/libarm32_libdxerr9_a-dxerr9.$(OBJEXT) \
+am__objects_98 = libsrc/libarm32_libdxerr9_a-dxerr9.$(OBJEXT) \
 	libsrc/libarm32_libdxerr9_a-dxerr9w.$(OBJEXT)
-@LIBARM32_TRUE@am_libarm32_libdxerr9_a_OBJECTS = $(am__objects_97)
+@LIBARM32_TRUE@am_libarm32_libdxerr9_a_OBJECTS = $(am__objects_98)
 libarm32_libdxerr9_a_OBJECTS = $(am_libarm32_libdxerr9_a_OBJECTS)
 libarm32_libdxguid_a_AR = $(AR) $(ARFLAGS)
 libarm32_libdxguid_a_LIBADD =
 am__libarm32_libdxguid_a_SOURCES_DIST = libsrc/dxguid.c
-am__objects_98 = libsrc/libarm32_libdxguid_a-dxguid.$(OBJEXT)
-@LIBARM32_TRUE@am_libarm32_libdxguid_a_OBJECTS = $(am__objects_98)
+am__objects_99 = libsrc/libarm32_libdxguid_a-dxguid.$(OBJEXT)
+@LIBARM32_TRUE@am_libarm32_libdxguid_a_OBJECTS = $(am__objects_99)
 libarm32_libdxguid_a_OBJECTS = $(am_libarm32_libdxguid_a_OBJECTS)
 libarm32_libgdiplus_a_LIBADD =
 am__libarm32_libgdiplus_a_SOURCES_DIST = libsrc/gdiplus.c
-am__objects_99 = libsrc/libarm32_libgdiplus_a-gdiplus.$(OBJEXT)
-@LIBARM32_TRUE@am_libarm32_libgdiplus_a_OBJECTS = $(am__objects_99)
+am__objects_100 = libsrc/libarm32_libgdiplus_a-gdiplus.$(OBJEXT)
+@LIBARM32_TRUE@am_libarm32_libgdiplus_a_OBJECTS = $(am__objects_100)
 libarm32_libgdiplus_a_OBJECTS = $(am_libarm32_libgdiplus_a_OBJECTS)
 libarm32_libkernel32_a_LIBADD =
 am__libarm32_libkernel32_a_SOURCES_DIST = intrincs/__movsb.c \
@@ -3117,7 +3138,7 @@ am__libarm32_libkernel32_a_SOURCES_DIST = intrincs/__movsb.c \
 	intrincs/writecr0.c intrincs/writecr2.c intrincs/writecr3.c \
 	intrincs/writecr4.c intrincs/writemsr.c intrincs/__int2c.c \
 	intrincs/RtlSecureZeroMemory.c lib-common/kernel32.def.in
-am__objects_100 = intrincs/libarm32_libkernel32_a-__movsb.$(OBJEXT) \
+am__objects_101 = intrincs/libarm32_libkernel32_a-__movsb.$(OBJEXT) \
 	intrincs/libarm32_libkernel32_a-__movsd.$(OBJEXT) \
 	intrincs/libarm32_libkernel32_a-__movsw.$(OBJEXT) \
 	intrincs/libarm32_libkernel32_a-__stosb.$(OBJEXT) \
@@ -3181,48 +3202,48 @@ am__objects_100 = intrincs/libarm32_libkernel32_a-__movsb.$(OBJEXT) \
 	intrincs/libarm32_libkernel32_a-writemsr.$(OBJEXT) \
 	intrincs/libarm32_libkernel32_a-__int2c.$(OBJEXT) \
 	intrincs/libarm32_libkernel32_a-RtlSecureZeroMemory.$(OBJEXT)
-am__objects_101 =
-@LIBARM32_TRUE@am_libarm32_libkernel32_a_OBJECTS = $(am__objects_100) \
-@LIBARM32_TRUE@	$(am__objects_101)
+am__objects_102 =
+@LIBARM32_TRUE@am_libarm32_libkernel32_a_OBJECTS = $(am__objects_101) \
+@LIBARM32_TRUE@	$(am__objects_102)
 libarm32_libkernel32_a_OBJECTS = $(am_libarm32_libkernel32_a_OBJECTS)
 libarm32_libksguid_a_AR = $(AR) $(ARFLAGS)
 libarm32_libksguid_a_LIBADD =
 am__libarm32_libksguid_a_SOURCES_DIST = libsrc/ksuser.c
-am__objects_102 = libsrc/libarm32_libksguid_a-ksuser.$(OBJEXT)
-@LIBARM32_TRUE@am_libarm32_libksguid_a_OBJECTS = $(am__objects_102)
+am__objects_103 = libsrc/libarm32_libksguid_a-ksuser.$(OBJEXT)
+@LIBARM32_TRUE@am_libarm32_libksguid_a_OBJECTS = $(am__objects_103)
 libarm32_libksguid_a_OBJECTS = $(am_libarm32_libksguid_a_OBJECTS)
 libarm32_libksuser_a_LIBADD =
 am__libarm32_libksuser_a_SOURCES_DIST = libsrc/ksuser.c
-am__objects_103 = libsrc/libarm32_libksuser_a-ksuser.$(OBJEXT)
-@LIBARM32_TRUE@am_libarm32_libksuser_a_OBJECTS = $(am__objects_103)
+am__objects_104 = libsrc/libarm32_libksuser_a-ksuser.$(OBJEXT)
+@LIBARM32_TRUE@am_libarm32_libksuser_a_OBJECTS = $(am__objects_104)
 libarm32_libksuser_a_OBJECTS = $(am_libarm32_libksuser_a_OBJECTS)
 libarm32_liblargeint_a_AR = $(AR) $(ARFLAGS)
 libarm32_liblargeint_a_LIBADD =
 am__libarm32_liblargeint_a_SOURCES_DIST = libsrc/largeint.c
-am__objects_104 = libsrc/libarm32_liblargeint_a-largeint.$(OBJEXT)
+am__objects_105 = libsrc/libarm32_liblargeint_a-largeint.$(OBJEXT)
 @LIBARM32_TRUE@@W32API_FALSE@am_libarm32_liblargeint_a_OBJECTS =  \
-@LIBARM32_TRUE@@W32API_FALSE@	$(am__objects_104)
+@LIBARM32_TRUE@@W32API_FALSE@	$(am__objects_105)
 libarm32_liblargeint_a_OBJECTS = $(am_libarm32_liblargeint_a_OBJECTS)
 libarm32_liblocationapi_a_AR = $(AR) $(ARFLAGS)
 libarm32_liblocationapi_a_LIBADD =
 am__libarm32_liblocationapi_a_SOURCES_DIST = libsrc/locationapi.c
-am__objects_105 =  \
+am__objects_106 =  \
 	libsrc/libarm32_liblocationapi_a-locationapi.$(OBJEXT)
 @LIBARM32_TRUE@am_libarm32_liblocationapi_a_OBJECTS =  \
-@LIBARM32_TRUE@	$(am__objects_105)
+@LIBARM32_TRUE@	$(am__objects_106)
 libarm32_liblocationapi_a_OBJECTS =  \
 	$(am_libarm32_liblocationapi_a_OBJECTS)
 libarm32_libm_a_AR = $(AR) $(ARFLAGS)
 libarm32_libm_a_LIBADD =
-am__objects_106 = libarm32_libm_a-_libm_dummy.$(OBJEXT)
+am__objects_107 = libarm32_libm_a-_libm_dummy.$(OBJEXT)
 @LIBARM32_TRUE@@W32API_FALSE@nodist_libarm32_libm_a_OBJECTS =  \
-@LIBARM32_TRUE@@W32API_FALSE@	$(am__objects_106)
+@LIBARM32_TRUE@@W32API_FALSE@	$(am__objects_107)
 libarm32_libm_a_OBJECTS = $(nodist_libarm32_libm_a_OBJECTS)
 libarm32_libmfuuid_a_AR = $(AR) $(ARFLAGS)
 libarm32_libmfuuid_a_LIBADD =
 am__libarm32_libmfuuid_a_SOURCES_DIST = libsrc/mfuuid.c
-am__objects_107 = libsrc/libarm32_libmfuuid_a-mfuuid.$(OBJEXT)
-@LIBARM32_TRUE@am_libarm32_libmfuuid_a_OBJECTS = $(am__objects_107)
+am__objects_108 = libsrc/libarm32_libmfuuid_a-mfuuid.$(OBJEXT)
+@LIBARM32_TRUE@am_libarm32_libmfuuid_a_OBJECTS = $(am__objects_108)
 libarm32_libmfuuid_a_OBJECTS = $(am_libarm32_libmfuuid_a_OBJECTS)
 libarm32_libmingw32_a_AR = $(AR) $(ARFLAGS)
 libarm32_libmingw32_a_LIBADD =
@@ -3237,7 +3258,7 @@ am__libarm32_libmingw32_a_SOURCES_DIST = include/oscalls.h \
 	crt/usermatherr.c crt/xtxtmode.c crt/crt_handler.c \
 	crt/tlsthrd.c crt/tlsmthread.c crt/tlsmcrt.c crt/cxa_atexit.c \
 	crt/cxa_thread_atexit.c crt/tls_atexit.c
-am__objects_108 = crt/libarm32_libmingw32_a-crt0_c.$(OBJEXT) \
+am__objects_109 = crt/libarm32_libmingw32_a-crt0_c.$(OBJEXT) \
 	crt/libarm32_libmingw32_a-dll_argv.$(OBJEXT) \
 	crt/libarm32_libmingw32_a-gccmain.$(OBJEXT) \
 	crt/libarm32_libmingw32_a-natstart.$(OBJEXT) \
@@ -3269,7 +3290,7 @@ am__objects_108 = crt/libarm32_libmingw32_a-crt0_c.$(OBJEXT) \
 	crt/libarm32_libmingw32_a-cxa_thread_atexit.$(OBJEXT) \
 	crt/libarm32_libmingw32_a-tls_atexit.$(OBJEXT)
 @LIBARM32_TRUE@@W32API_FALSE@am_libarm32_libmingw32_a_OBJECTS =  \
-@LIBARM32_TRUE@@W32API_FALSE@	$(am__objects_108)
+@LIBARM32_TRUE@@W32API_FALSE@	$(am__objects_109)
 libarm32_libmingw32_a_OBJECTS = $(am_libarm32_libmingw32_a_OBJECTS)
 libarm32_libmingwex_a_AR = $(AR) $(ARFLAGS)
 libarm32_libmingwex_a_LIBADD =
@@ -3422,7 +3443,7 @@ am__libarm32_libmingwex_a_SOURCES_DIST = crt/dllentry.c crt/dllmain.c \
 	math/DFP/__signbitd32.c math/DFP/__signbitd64.c \
 	math/DFP/__signbitd128.c math/DFP/isinfd32.c \
 	math/DFP/isinfd64.c math/DFP/isinfd128.c
-am__objects_109 = crt/libarm32_libmingwex_a-dllentry.$(OBJEXT) \
+am__objects_110 = crt/libarm32_libmingwex_a-dllentry.$(OBJEXT) \
 	crt/libarm32_libmingwex_a-dllmain.$(OBJEXT) \
 	complex/libarm32_libmingwex_a-_cabs.$(OBJEXT) \
 	complex/libarm32_libmingwex_a-cabs.$(OBJEXT) \
@@ -3732,7 +3753,7 @@ am__objects_109 = crt/libarm32_libmingwex_a-dllentry.$(OBJEXT) \
 	stdio/libarm32_libmingwex_a-wtoll.$(OBJEXT) \
 	stdio/libarm32_libmingwex_a-mingw_asprintf.$(OBJEXT) \
 	stdio/libarm32_libmingwex_a-mingw_vasprintf.$(OBJEXT)
-@ENABLE_SOFTMATH_TRUE@am__objects_110 = math/softmath/libarm32_libmingwex_a-e_fmod.$(OBJEXT) \
+@ENABLE_SOFTMATH_TRUE@am__objects_111 = math/softmath/libarm32_libmingwex_a-e_fmod.$(OBJEXT) \
 @ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-e_fmodf.$(OBJEXT) \
 @ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-e_powf.$(OBJEXT) \
 @ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-e_pow.$(OBJEXT) \
@@ -3804,14 +3825,14 @@ am__objects_109 = crt/libarm32_libmingwex_a-dllentry.$(OBJEXT) \
 @ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-sinl.$(OBJEXT) \
 @ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-tanf.$(OBJEXT) \
 @ENABLE_SOFTMATH_TRUE@	math/softmath/libarm32_libmingwex_a-tanl.$(OBJEXT)
-@ENABLE_SOFTMATH_FALSE@am__objects_111 = math/arm-common/libarm32_libmingwex_a-ldexpl.$(OBJEXT) \
+@ENABLE_SOFTMATH_FALSE@am__objects_112 = math/arm-common/libarm32_libmingwex_a-ldexpl.$(OBJEXT) \
 @ENABLE_SOFTMATH_FALSE@	math/arm/libarm32_libmingwex_a-sincos.$(OBJEXT) \
 @ENABLE_SOFTMATH_FALSE@	math/arm/libarm32_libmingwex_a-sincosf.$(OBJEXT)
-am__objects_112 = math/arm/libarm32_libmingwex_a-_chgsignl.$(OBJEXT) \
+am__objects_113 = math/arm/libarm32_libmingwex_a-_chgsignl.$(OBJEXT) \
 	math/arm/libarm32_libmingwex_a-s_rint.$(OBJEXT) \
 	math/arm/libarm32_libmingwex_a-s_rintf.$(OBJEXT) \
-	$(am__objects_110) $(am__objects_111)
-@ENABLE_DFP_TRUE@am__objects_113 = math/DFP/libarm32_libmingwex_a-__fpclassifyd32.$(OBJEXT) \
+	$(am__objects_111) $(am__objects_112)
+@ENABLE_DFP_TRUE@am__objects_114 = math/DFP/libarm32_libmingwex_a-__fpclassifyd32.$(OBJEXT) \
 @ENABLE_DFP_TRUE@	math/DFP/libarm32_libmingwex_a-__fpclassifyd64.$(OBJEXT) \
 @ENABLE_DFP_TRUE@	math/DFP/libarm32_libmingwex_a-__fpclassifyd128.$(OBJEXT) \
 @ENABLE_DFP_TRUE@	math/DFP/libarm32_libmingwex_a-__isnand32.$(OBJEXT) \
@@ -3824,34 +3845,34 @@ am__objects_112 = math/arm/libarm32_libmingwex_a-_chgsignl.$(OBJEXT) \
 @ENABLE_DFP_TRUE@	math/DFP/libarm32_libmingwex_a-isinfd64.$(OBJEXT) \
 @ENABLE_DFP_TRUE@	math/DFP/libarm32_libmingwex_a-isinfd128.$(OBJEXT)
 @LIBARM32_TRUE@@W32API_FALSE@am_libarm32_libmingwex_a_OBJECTS =  \
-@LIBARM32_TRUE@@W32API_FALSE@	$(am__objects_109) \
-@LIBARM32_TRUE@@W32API_FALSE@	$(am__objects_112) \
-@LIBARM32_TRUE@@W32API_FALSE@	$(am__objects_113)
+@LIBARM32_TRUE@@W32API_FALSE@	$(am__objects_110) \
+@LIBARM32_TRUE@@W32API_FALSE@	$(am__objects_113) \
+@LIBARM32_TRUE@@W32API_FALSE@	$(am__objects_114)
 libarm32_libmingwex_a_OBJECTS = $(am_libarm32_libmingwex_a_OBJECTS)
 libarm32_libmingwthrd_a_AR = $(AR) $(ARFLAGS)
 libarm32_libmingwthrd_a_LIBADD =
 am__libarm32_libmingwthrd_a_SOURCES_DIST = libsrc/mingwthrd_mt.c
-am__objects_114 =  \
+am__objects_115 =  \
 	libsrc/libarm32_libmingwthrd_a-mingwthrd_mt.$(OBJEXT)
 @LIBARM32_TRUE@@W32API_FALSE@am_libarm32_libmingwthrd_a_OBJECTS =  \
-@LIBARM32_TRUE@@W32API_FALSE@	$(am__objects_114)
+@LIBARM32_TRUE@@W32API_FALSE@	$(am__objects_115)
 libarm32_libmingwthrd_a_OBJECTS =  \
 	$(am_libarm32_libmingwthrd_a_OBJECTS)
 libarm32_libmoldname_a_AR = $(AR) $(ARFLAGS)
 libarm32_libmoldname_a_LIBADD =
 am__libarm32_libmoldname_a_SOURCES_DIST = _libm_dummy.c
-am__objects_115 = libarm32_libmoldname_a-_libm_dummy.$(OBJEXT)
+am__objects_116 = libarm32_libmoldname_a-_libm_dummy.$(OBJEXT)
 @LIBARM32_TRUE@@W32API_FALSE@am_libarm32_libmoldname_a_OBJECTS =  \
-@LIBARM32_TRUE@@W32API_FALSE@	$(am__objects_115)
+@LIBARM32_TRUE@@W32API_FALSE@	$(am__objects_116)
 libarm32_libmoldname_a_OBJECTS = $(am_libarm32_libmoldname_a_OBJECTS)
 libarm32_libmsvcr120_app_extra_a_AR = $(AR) $(ARFLAGS)
 libarm32_libmsvcr120_app_extra_a_LIBADD =
 am__libarm32_libmsvcr120_app_extra_a_SOURCES_DIST =  \
 	misc/__set_app_type.c misc/_getpid.c
-am__objects_116 = misc/libarm32_libmsvcr120_app_extra_a-__set_app_type.$(OBJEXT) \
+am__objects_117 = misc/libarm32_libmsvcr120_app_extra_a-__set_app_type.$(OBJEXT) \
 	misc/libarm32_libmsvcr120_app_extra_a-_getpid.$(OBJEXT)
 @LIBARM32_TRUE@@W32API_FALSE@am_libarm32_libmsvcr120_app_extra_a_OBJECTS =  \
-@LIBARM32_TRUE@@W32API_FALSE@	$(am__objects_116)
+@LIBARM32_TRUE@@W32API_FALSE@	$(am__objects_117)
 libarm32_libmsvcr120_app_extra_a_OBJECTS =  \
 	$(am_libarm32_libmsvcr120_app_extra_a_OBJECTS)
 libarm32_libmsvcrt_common_a_AR = $(AR) $(ARFLAGS)
@@ -3864,7 +3885,7 @@ am__libarm32_libmsvcrt_common_a_SOURCES_DIST = misc/mbrtowc.c \
 	stdio/_putc_nolock.c stdio/_putwc_nolock.c \
 	stdio/acrt_iob_func.c stdio/snprintf_alias.c \
 	stdio/vsnprintf_alias.c math/frexp.c
-am__objects_117 = misc/libarm32_libmsvcrt_common_a-mbrtowc.$(OBJEXT) \
+am__objects_118 = misc/libarm32_libmsvcrt_common_a-mbrtowc.$(OBJEXT) \
 	misc/libarm32_libmsvcrt_common_a-mbsinit.$(OBJEXT) \
 	misc/libarm32_libmsvcrt_common_a-onexit_table.$(OBJEXT) \
 	misc/libarm32_libmsvcrt_common_a-register_tls_atexit.$(OBJEXT) \
@@ -3882,7 +3903,7 @@ am__objects_117 = misc/libarm32_libmsvcrt_common_a-mbrtowc.$(OBJEXT) \
 	stdio/libarm32_libmsvcrt_common_a-vsnprintf_alias.$(OBJEXT) \
 	math/libarm32_libmsvcrt_common_a-frexp.$(OBJEXT)
 @LIBARM32_TRUE@@W32API_FALSE@am_libarm32_libmsvcrt_common_a_OBJECTS =  \
-@LIBARM32_TRUE@@W32API_FALSE@	$(am__objects_117)
+@LIBARM32_TRUE@@W32API_FALSE@	$(am__objects_118)
 libarm32_libmsvcrt_common_a_OBJECTS =  \
 	$(am_libarm32_libmsvcrt_common_a_OBJECTS)
 libarm32_libmsvcrt_extra_a_AR = $(AR) $(ARFLAGS)
@@ -3929,7 +3950,7 @@ am__libarm32_libmsvcrt_extra_a_SOURCES_DIST =  \
 	math/arm-common/remainderf.c math/arm-common/remainderl.c \
 	math/arm-common/remquol.c math/arm-common/s_remquo.c \
 	math/arm-common/s_remquof.c math/arm-common/scalbn.c
-am__objects_118 =  \
+am__objects_119 =  \
 	misc/libarm32_libmsvcrt_extra_a-_configthreadlocale.$(OBJEXT) \
 	misc/libarm32_libmsvcrt_extra_a-invalid_parameter_handler.$(OBJEXT) \
 	misc/libarm32_libmsvcrt_extra_a-output_format.$(OBJEXT) \
@@ -3979,7 +4000,7 @@ am__objects_118 =  \
 	secapi/libarm32_libmsvcrt_extra_a-wmemmove_s.$(OBJEXT) \
 	stdio/libarm32_libmsvcrt_extra_a-fseeki64.$(OBJEXT) \
 	stdio/libarm32_libmsvcrt_extra_a-mingw_lock.$(OBJEXT)
-@ENABLE_SOFTMATH_FALSE@am__objects_119 = math/arm/libarm32_libmsvcrt_extra_a-exp2.$(OBJEXT) \
+@ENABLE_SOFTMATH_FALSE@am__objects_120 = math/arm/libarm32_libmsvcrt_extra_a-exp2.$(OBJEXT) \
 @ENABLE_SOFTMATH_FALSE@	math/arm/libarm32_libmsvcrt_extra_a-exp2f.$(OBJEXT) \
 @ENABLE_SOFTMATH_FALSE@	math/arm/libarm32_libmsvcrt_extra_a-nearbyint.$(OBJEXT) \
 @ENABLE_SOFTMATH_FALSE@	math/arm/libarm32_libmsvcrt_extra_a-nearbyintf.$(OBJEXT) \
@@ -4019,7 +4040,7 @@ am__objects_118 =  \
 @ENABLE_SOFTMATH_FALSE@	math/arm-common/libarm32_libmsvcrt_extra_a-s_remquo.$(OBJEXT) \
 @ENABLE_SOFTMATH_FALSE@	math/arm-common/libarm32_libmsvcrt_extra_a-s_remquof.$(OBJEXT) \
 @ENABLE_SOFTMATH_FALSE@	math/arm-common/libarm32_libmsvcrt_extra_a-scalbn.$(OBJEXT)
-am__objects_120 = $(am__objects_118) \
+am__objects_121 = $(am__objects_119) \
 	misc/libarm32_libmsvcrt_extra_a-__p___argv.$(OBJEXT) \
 	misc/libarm32_libmsvcrt_extra_a-__p__acmdln.$(OBJEXT) \
 	misc/libarm32_libmsvcrt_extra_a-__p__commode.$(OBJEXT) \
@@ -4029,57 +4050,57 @@ am__objects_120 = $(am__objects_118) \
 	misc/libarm32_libmsvcrt_extra_a-initenv.$(OBJEXT) \
 	stdio/libarm32_libmsvcrt_extra_a-_setmaxstdio.$(OBJEXT) \
 	stdio/libarm32_libmsvcrt_extra_a-gets.$(OBJEXT) \
-	$(am__objects_119)
+	$(am__objects_120)
 @LIBARM32_TRUE@@W32API_FALSE@am_libarm32_libmsvcrt_extra_a_OBJECTS =  \
-@LIBARM32_TRUE@@W32API_FALSE@	$(am__objects_120)
+@LIBARM32_TRUE@@W32API_FALSE@	$(am__objects_121)
 libarm32_libmsvcrt_extra_a_OBJECTS =  \
 	$(am_libarm32_libmsvcrt_extra_a_OBJECTS)
 libarm32_libportabledeviceguids_a_AR = $(AR) $(ARFLAGS)
 libarm32_libportabledeviceguids_a_LIBADD =
 am__libarm32_libportabledeviceguids_a_SOURCES_DIST =  \
 	libsrc/portabledeviceguids.c
-am__objects_121 = libsrc/libarm32_libportabledeviceguids_a-portabledeviceguids.$(OBJEXT)
+am__objects_122 = libsrc/libarm32_libportabledeviceguids_a-portabledeviceguids.$(OBJEXT)
 @LIBARM32_TRUE@am_libarm32_libportabledeviceguids_a_OBJECTS =  \
-@LIBARM32_TRUE@	$(am__objects_121)
+@LIBARM32_TRUE@	$(am__objects_122)
 libarm32_libportabledeviceguids_a_OBJECTS =  \
 	$(am_libarm32_libportabledeviceguids_a_OBJECTS)
 libarm32_libsapi_a_AR = $(AR) $(ARFLAGS)
 libarm32_libsapi_a_LIBADD =
 am__libarm32_libsapi_a_SOURCES_DIST = libsrc/sapi.c
-am__objects_122 = libsrc/libarm32_libsapi_a-sapi.$(OBJEXT)
-@LIBARM32_TRUE@am_libarm32_libsapi_a_OBJECTS = $(am__objects_122)
+am__objects_123 = libsrc/libarm32_libsapi_a-sapi.$(OBJEXT)
+@LIBARM32_TRUE@am_libarm32_libsapi_a_OBJECTS = $(am__objects_123)
 libarm32_libsapi_a_OBJECTS = $(am_libarm32_libsapi_a_OBJECTS)
 libarm32_libscrnsave_a_AR = $(AR) $(ARFLAGS)
 libarm32_libscrnsave_a_LIBADD =
 am__libarm32_libscrnsave_a_SOURCES_DIST = libsrc/scrnsave.c
-am__objects_123 = libsrc/libarm32_libscrnsave_a-scrnsave.$(OBJEXT)
-@LIBARM32_TRUE@am_libarm32_libscrnsave_a_OBJECTS = $(am__objects_123)
+am__objects_124 = libsrc/libarm32_libscrnsave_a-scrnsave.$(OBJEXT)
+@LIBARM32_TRUE@am_libarm32_libscrnsave_a_OBJECTS = $(am__objects_124)
 libarm32_libscrnsave_a_OBJECTS = $(am_libarm32_libscrnsave_a_OBJECTS)
 libarm32_libscrnsavw_a_AR = $(AR) $(ARFLAGS)
 libarm32_libscrnsavw_a_LIBADD =
 am__libarm32_libscrnsavw_a_SOURCES_DIST = libsrc/scrnsave.c
-am__objects_124 = libsrc/libarm32_libscrnsavw_a-scrnsave.$(OBJEXT)
-@LIBARM32_TRUE@am_libarm32_libscrnsavw_a_OBJECTS = $(am__objects_124)
+am__objects_125 = libsrc/libarm32_libscrnsavw_a-scrnsave.$(OBJEXT)
+@LIBARM32_TRUE@am_libarm32_libscrnsavw_a_OBJECTS = $(am__objects_125)
 libarm32_libscrnsavw_a_OBJECTS = $(am_libarm32_libscrnsavw_a_OBJECTS)
 libarm32_libsensorsapi_a_AR = $(AR) $(ARFLAGS)
 libarm32_libsensorsapi_a_LIBADD =
 am__libarm32_libsensorsapi_a_SOURCES_DIST = libsrc/sensorsapi.c
-am__objects_125 =  \
+am__objects_126 =  \
 	libsrc/libarm32_libsensorsapi_a-sensorsapi.$(OBJEXT)
 @LIBARM32_TRUE@am_libarm32_libsensorsapi_a_OBJECTS =  \
-@LIBARM32_TRUE@	$(am__objects_125)
+@LIBARM32_TRUE@	$(am__objects_126)
 libarm32_libsensorsapi_a_OBJECTS =  \
 	$(am_libarm32_libsensorsapi_a_OBJECTS)
 libarm32_libshell32_a_LIBADD =
 am__libarm32_libshell32_a_SOURCES_DIST = libsrc/shell32.c
-am__objects_126 = libsrc/libarm32_libshell32_a-shell32.$(OBJEXT)
-@LIBARM32_TRUE@am_libarm32_libshell32_a_OBJECTS = $(am__objects_126)
+am__objects_127 = libsrc/libarm32_libshell32_a-shell32.$(OBJEXT)
+@LIBARM32_TRUE@am_libarm32_libshell32_a_OBJECTS = $(am__objects_127)
 libarm32_libshell32_a_OBJECTS = $(am_libarm32_libshell32_a_OBJECTS)
 libarm32_libstrmiids_a_AR = $(AR) $(ARFLAGS)
 libarm32_libstrmiids_a_LIBADD =
 am__libarm32_libstrmiids_a_SOURCES_DIST = libsrc/strmiids.c
-am__objects_127 = libsrc/libarm32_libstrmiids_a-strmiids.$(OBJEXT)
-@LIBARM32_TRUE@am_libarm32_libstrmiids_a_OBJECTS = $(am__objects_127)
+am__objects_128 = libsrc/libarm32_libstrmiids_a-strmiids.$(OBJEXT)
+@LIBARM32_TRUE@am_libarm32_libstrmiids_a_OBJECTS = $(am__objects_128)
 libarm32_libstrmiids_a_OBJECTS = $(am_libarm32_libstrmiids_a_OBJECTS)
 libarm32_libucrt_extra_a_AR = $(AR) $(ARFLAGS)
 libarm32_libucrt_extra_a_LIBADD =
@@ -4093,7 +4114,7 @@ am__libarm32_libucrt_extra_a_SOURCES_DIST = crt/ucrtbase_compat.c \
 	stdio/ucrt_vfscanf.c stdio/ucrt_vprintf.c stdio/ucrt_vscanf.c \
 	stdio/ucrt_vsnprintf.c stdio/ucrt_vsprintf.c \
 	stdio/ucrt_vsscanf.c
-am__objects_128 =  \
+am__objects_129 =  \
 	crt/libarm32_libucrt_extra_a-ucrtbase_compat.$(OBJEXT) \
 	math/libarm32_libucrt_extra_a-_huge.$(OBJEXT) \
 	stdio/libarm32_libucrt_extra_a-ucrt_fprintf.$(OBJEXT) \
@@ -4116,7 +4137,7 @@ am__objects_128 =  \
 	stdio/libarm32_libucrt_extra_a-ucrt_vsprintf.$(OBJEXT) \
 	stdio/libarm32_libucrt_extra_a-ucrt_vsscanf.$(OBJEXT)
 @LIBARM32_TRUE@@W32API_FALSE@am_libarm32_libucrt_extra_a_OBJECTS =  \
-@LIBARM32_TRUE@@W32API_FALSE@	$(am__objects_128)
+@LIBARM32_TRUE@@W32API_FALSE@	$(am__objects_129)
 libarm32_libucrt_extra_a_OBJECTS =  \
 	$(am_libarm32_libucrt_extra_a_OBJECTS)
 libarm32_libucrtapp_extra_a_AR = $(AR) $(ARFLAGS)
@@ -4127,7 +4148,7 @@ am__libarm32_libucrtapp_extra_a_SOURCES_DIST =  \
 	string/memmove.c string/memrchr.c string/strchr.c \
 	string/strchrnul.c string/strrchr.c string/strstr.c \
 	string/wcschr.c string/wcsrchr.c string/wcsstr.c
-am__objects_129 = crt/libarm32_libucrtapp_extra_a-__C_specific_handler.$(OBJEXT) \
+am__objects_130 = crt/libarm32_libucrtapp_extra_a-__C_specific_handler.$(OBJEXT) \
 	misc/libarm32_libucrtapp_extra_a-longjmp.$(OBJEXT) \
 	misc/libarm32_libucrtapp_extra_a-setjmp.$(OBJEXT) \
 	string/libarm32_libucrtapp_extra_a-memchr.$(OBJEXT) \
@@ -4143,7 +4164,7 @@ am__objects_129 = crt/libarm32_libucrtapp_extra_a-__C_specific_handler.$(OBJEXT)
 	string/libarm32_libucrtapp_extra_a-wcsrchr.$(OBJEXT) \
 	string/libarm32_libucrtapp_extra_a-wcsstr.$(OBJEXT)
 @LIBARM32_TRUE@@W32API_FALSE@am_libarm32_libucrtapp_extra_a_OBJECTS =  \
-@LIBARM32_TRUE@@W32API_FALSE@	$(am__objects_129)
+@LIBARM32_TRUE@@W32API_FALSE@	$(am__objects_130)
 libarm32_libucrtapp_extra_a_OBJECTS =  \
 	$(am_libarm32_libucrtapp_extra_a_OBJECTS)
 libarm32_libuuid_a_AR = $(AR) $(ARFLAGS)
@@ -4167,7 +4188,7 @@ am__libarm32_libuuid_a_SOURCES_DIST = libsrc/ativscp-uuid.c \
 	libsrc/usbcamdi-uuid.c libsrc/usbiodef-uuid.c libsrc/uuid.c \
 	libsrc/vds-uuid.c libsrc/virtdisk-uuid.c libsrc/wia-uuid.c \
 	libsrc/windowscodecs.c
-am__objects_130 = libsrc/libarm32_libuuid_a-ativscp-uuid.$(OBJEXT) \
+am__objects_131 = libsrc/libarm32_libuuid_a-ativscp-uuid.$(OBJEXT) \
 	libsrc/libarm32_libuuid_a-atsmedia-uuid.$(OBJEXT) \
 	libsrc/libarm32_libuuid_a-bth-uuid.$(OBJEXT) \
 	libsrc/libarm32_libuuid_a-cguid-uuid.$(OBJEXT) \
@@ -4212,30 +4233,30 @@ am__objects_130 = libsrc/libarm32_libuuid_a-ativscp-uuid.$(OBJEXT) \
 	libsrc/libarm32_libuuid_a-virtdisk-uuid.$(OBJEXT) \
 	libsrc/libarm32_libuuid_a-wia-uuid.$(OBJEXT) \
 	libsrc/libarm32_libuuid_a-windowscodecs.$(OBJEXT)
-@LIBARM32_TRUE@am_libarm32_libuuid_a_OBJECTS = $(am__objects_130)
+@LIBARM32_TRUE@am_libarm32_libuuid_a_OBJECTS = $(am__objects_131)
 libarm32_libuuid_a_OBJECTS = $(am_libarm32_libuuid_a_OBJECTS)
 libarm32_libwbemuuid_a_AR = $(AR) $(ARFLAGS)
 libarm32_libwbemuuid_a_LIBADD =
 am__libarm32_libwbemuuid_a_SOURCES_DIST = libsrc/wbemuuid.c
-am__objects_131 = libsrc/libarm32_libwbemuuid_a-wbemuuid.$(OBJEXT)
-@LIBARM32_TRUE@am_libarm32_libwbemuuid_a_OBJECTS = $(am__objects_131)
+am__objects_132 = libsrc/libarm32_libwbemuuid_a-wbemuuid.$(OBJEXT)
+@LIBARM32_TRUE@am_libarm32_libwbemuuid_a_OBJECTS = $(am__objects_132)
 libarm32_libwbemuuid_a_OBJECTS = $(am_libarm32_libwbemuuid_a_OBJECTS)
 libarm32_libwindowscodecs_a_LIBADD =
 am__libarm32_libwindowscodecs_a_SOURCES_DIST = libsrc/windowscodecs.c
-am__objects_132 =  \
+am__objects_133 =  \
 	libsrc/libarm32_libwindowscodecs_a-windowscodecs.$(OBJEXT)
 @LIBARM32_TRUE@am_libarm32_libwindowscodecs_a_OBJECTS =  \
-@LIBARM32_TRUE@	$(am__objects_132)
+@LIBARM32_TRUE@	$(am__objects_133)
 libarm32_libwindowscodecs_a_OBJECTS =  \
 	$(am_libarm32_libwindowscodecs_a_OBJECTS)
 libarm32_libwmcodecdspuuid_a_AR = $(AR) $(ARFLAGS)
 libarm32_libwmcodecdspuuid_a_LIBADD =
 am__libarm32_libwmcodecdspuuid_a_SOURCES_DIST =  \
 	libsrc/wmcodecdspuuid.c
-am__objects_133 =  \
+am__objects_134 =  \
 	libsrc/libarm32_libwmcodecdspuuid_a-wmcodecdspuuid.$(OBJEXT)
 @LIBARM32_TRUE@am_libarm32_libwmcodecdspuuid_a_OBJECTS =  \
-@LIBARM32_TRUE@	$(am__objects_133)
+@LIBARM32_TRUE@	$(am__objects_134)
 libarm32_libwmcodecdspuuid_a_OBJECTS =  \
 	$(am_libarm32_libwmcodecdspuuid_a_OBJECTS)
 libarm32_libws2_32_a_LIBADD =
@@ -4274,7 +4295,7 @@ am__libarm32_libws2_32_a_SOURCES_DIST = libsrc/ws2_32.c \
 	libsrc/wspiapi/WspiapiGetNameInfo.c \
 	libsrc/wspiapi/WspiapiFreeAddrInfo.c \
 	lib-common/libws2_32.def.in
-am__objects_134 = libsrc/libarm32_libws2_32_a-ws2_32.$(OBJEXT) \
+am__objects_135 = libsrc/libarm32_libws2_32_a-ws2_32.$(OBJEXT) \
 	libsrc/ws2tcpip/libarm32_libws2_32_a-in6_addr_equal.$(OBJEXT) \
 	libsrc/ws2tcpip/libarm32_libws2_32_a-in6addr_isany.$(OBJEXT) \
 	libsrc/ws2tcpip/libarm32_libws2_32_a-in6addr_isloopback.$(OBJEXT) \
@@ -4309,25 +4330,25 @@ am__objects_134 = libsrc/libarm32_libws2_32_a-ws2_32.$(OBJEXT) \
 	libsrc/wspiapi/libarm32_libws2_32_a-WspiapiGetAddrInfo.$(OBJEXT) \
 	libsrc/wspiapi/libarm32_libws2_32_a-WspiapiGetNameInfo.$(OBJEXT) \
 	libsrc/wspiapi/libarm32_libws2_32_a-WspiapiFreeAddrInfo.$(OBJEXT)
-@LIBARM32_TRUE@am_libarm32_libws2_32_a_OBJECTS = $(am__objects_134)
+@LIBARM32_TRUE@am_libarm32_libws2_32_a_OBJECTS = $(am__objects_135)
 libarm32_libws2_32_a_OBJECTS = $(am_libarm32_libws2_32_a_OBJECTS)
 libarm64_libadsiid_a_AR = $(AR) $(ARFLAGS)
 libarm64_libadsiid_a_LIBADD =
 am__libarm64_libadsiid_a_SOURCES_DIST = libsrc/activeds-uuid.c
-am__objects_135 = libsrc/libarm64_libadsiid_a-activeds-uuid.$(OBJEXT)
-@LIBARM64_TRUE@am_libarm64_libadsiid_a_OBJECTS = $(am__objects_135)
+am__objects_136 = libsrc/libarm64_libadsiid_a-activeds-uuid.$(OBJEXT)
+@LIBARM64_TRUE@am_libarm64_libadsiid_a_OBJECTS = $(am__objects_136)
 libarm64_libadsiid_a_OBJECTS = $(am_libarm64_libadsiid_a_OBJECTS)
 libarm64_libamstrmid_a_AR = $(AR) $(ARFLAGS)
 libarm64_libamstrmid_a_LIBADD =
 am__libarm64_libamstrmid_a_SOURCES_DIST = libsrc/amstrmid.c
-am__objects_136 = libsrc/libarm64_libamstrmid_a-amstrmid.$(OBJEXT)
-@LIBARM64_TRUE@am_libarm64_libamstrmid_a_OBJECTS = $(am__objects_136)
+am__objects_137 = libsrc/libarm64_libamstrmid_a-amstrmid.$(OBJEXT)
+@LIBARM64_TRUE@am_libarm64_libamstrmid_a_OBJECTS = $(am__objects_137)
 libarm64_libamstrmid_a_OBJECTS = $(am_libarm64_libamstrmid_a_OBJECTS)
 libarm64_libbits_a_AR = $(AR) $(ARFLAGS)
 libarm64_libbits_a_LIBADD =
 am__libarm64_libbits_a_SOURCES_DIST = libsrc/bits.c
-am__objects_137 = libsrc/libarm64_libbits_a-bits.$(OBJEXT)
-@LIBARM64_TRUE@am_libarm64_libbits_a_OBJECTS = $(am__objects_137)
+am__objects_138 = libsrc/libarm64_libbits_a-bits.$(OBJEXT)
+@LIBARM64_TRUE@am_libarm64_libbits_a_OBJECTS = $(am__objects_138)
 libarm64_libbits_a_OBJECTS = $(am_libarm64_libbits_a_OBJECTS)
 libarm64_libdelayimp_a_AR = $(AR) $(ARFLAGS)
 libarm64_libdelayimp_a_LIBADD =
@@ -4337,56 +4358,56 @@ libarm64_libdinput_a_LIBADD =
 am__libarm64_libdinput_a_SOURCES_DIST = libsrc/dinput_kbd.c \
 	libsrc/dinput_joy.c libsrc/dinput_joy2.c libsrc/dinput_mouse.c \
 	libsrc/dinput_mouse2.c
-am__objects_138 = libsrc/libarm64_libdinput_a-dinput_kbd.$(OBJEXT) \
+am__objects_139 = libsrc/libarm64_libdinput_a-dinput_kbd.$(OBJEXT) \
 	libsrc/libarm64_libdinput_a-dinput_joy.$(OBJEXT) \
 	libsrc/libarm64_libdinput_a-dinput_joy2.$(OBJEXT) \
 	libsrc/libarm64_libdinput_a-dinput_mouse.$(OBJEXT) \
 	libsrc/libarm64_libdinput_a-dinput_mouse2.$(OBJEXT)
-@LIBARM64_TRUE@am_libarm64_libdinput_a_OBJECTS = $(am__objects_138)
+@LIBARM64_TRUE@am_libarm64_libdinput_a_OBJECTS = $(am__objects_139)
 libarm64_libdinput_a_OBJECTS = $(am_libarm64_libdinput_a_OBJECTS)
 libarm64_libdinput8_a_LIBADD =
 am__libarm64_libdinput8_a_SOURCES_DIST = libsrc/dinput_private.h \
 	libsrc/dinput_joy.c libsrc/dinput_joy2.c libsrc/dinput_mouse.c \
 	libsrc/dinput_mouse2.c libsrc/dinput_kbd.c
-am__objects_139 = libsrc/libarm64_libdinput8_a-dinput_joy.$(OBJEXT) \
+am__objects_140 = libsrc/libarm64_libdinput8_a-dinput_joy.$(OBJEXT) \
 	libsrc/libarm64_libdinput8_a-dinput_joy2.$(OBJEXT) \
 	libsrc/libarm64_libdinput8_a-dinput_mouse.$(OBJEXT) \
 	libsrc/libarm64_libdinput8_a-dinput_mouse2.$(OBJEXT) \
 	libsrc/libarm64_libdinput8_a-dinput_kbd.$(OBJEXT)
-@LIBARM64_TRUE@am_libarm64_libdinput8_a_OBJECTS = $(am__objects_139)
+@LIBARM64_TRUE@am_libarm64_libdinput8_a_OBJECTS = $(am__objects_140)
 libarm64_libdinput8_a_OBJECTS = $(am_libarm64_libdinput8_a_OBJECTS)
 libarm64_libdmoguids_a_AR = $(AR) $(ARFLAGS)
 libarm64_libdmoguids_a_LIBADD =
 am__libarm64_libdmoguids_a_SOURCES_DIST = libsrc/dmoguids.c
-am__objects_140 = libsrc/libarm64_libdmoguids_a-dmoguids.$(OBJEXT)
-@LIBARM64_TRUE@am_libarm64_libdmoguids_a_OBJECTS = $(am__objects_140)
+am__objects_141 = libsrc/libarm64_libdmoguids_a-dmoguids.$(OBJEXT)
+@LIBARM64_TRUE@am_libarm64_libdmoguids_a_OBJECTS = $(am__objects_141)
 libarm64_libdmoguids_a_OBJECTS = $(am_libarm64_libdmoguids_a_OBJECTS)
 libarm64_libdxerr8_a_AR = $(AR) $(ARFLAGS)
 libarm64_libdxerr8_a_LIBADD =
 am__libarm64_libdxerr8_a_SOURCES_DIST = libsrc/dxerr8.c \
 	libsrc/dxerr8w.c
-am__objects_141 = libsrc/libarm64_libdxerr8_a-dxerr8.$(OBJEXT) \
+am__objects_142 = libsrc/libarm64_libdxerr8_a-dxerr8.$(OBJEXT) \
 	libsrc/libarm64_libdxerr8_a-dxerr8w.$(OBJEXT)
-@LIBARM64_TRUE@am_libarm64_libdxerr8_a_OBJECTS = $(am__objects_141)
+@LIBARM64_TRUE@am_libarm64_libdxerr8_a_OBJECTS = $(am__objects_142)
 libarm64_libdxerr8_a_OBJECTS = $(am_libarm64_libdxerr8_a_OBJECTS)
 libarm64_libdxerr9_a_AR = $(AR) $(ARFLAGS)
 libarm64_libdxerr9_a_LIBADD =
 am__libarm64_libdxerr9_a_SOURCES_DIST = libsrc/dxerr9.c \
 	libsrc/dxerr9w.c
-am__objects_142 = libsrc/libarm64_libdxerr9_a-dxerr9.$(OBJEXT) \
+am__objects_143 = libsrc/libarm64_libdxerr9_a-dxerr9.$(OBJEXT) \
 	libsrc/libarm64_libdxerr9_a-dxerr9w.$(OBJEXT)
-@LIBARM64_TRUE@am_libarm64_libdxerr9_a_OBJECTS = $(am__objects_142)
+@LIBARM64_TRUE@am_libarm64_libdxerr9_a_OBJECTS = $(am__objects_143)
 libarm64_libdxerr9_a_OBJECTS = $(am_libarm64_libdxerr9_a_OBJECTS)
 libarm64_libdxguid_a_AR = $(AR) $(ARFLAGS)
 libarm64_libdxguid_a_LIBADD =
 am__libarm64_libdxguid_a_SOURCES_DIST = libsrc/dxguid.c
-am__objects_143 = libsrc/libarm64_libdxguid_a-dxguid.$(OBJEXT)
-@LIBARM64_TRUE@am_libarm64_libdxguid_a_OBJECTS = $(am__objects_143)
+am__objects_144 = libsrc/libarm64_libdxguid_a-dxguid.$(OBJEXT)
+@LIBARM64_TRUE@am_libarm64_libdxguid_a_OBJECTS = $(am__objects_144)
 libarm64_libdxguid_a_OBJECTS = $(am_libarm64_libdxguid_a_OBJECTS)
 libarm64_libgdiplus_a_LIBADD =
 am__libarm64_libgdiplus_a_SOURCES_DIST = libsrc/gdiplus.c
-am__objects_144 = libsrc/libarm64_libgdiplus_a-gdiplus.$(OBJEXT)
-@LIBARM64_TRUE@am_libarm64_libgdiplus_a_OBJECTS = $(am__objects_144)
+am__objects_145 = libsrc/libarm64_libgdiplus_a-gdiplus.$(OBJEXT)
+@LIBARM64_TRUE@am_libarm64_libgdiplus_a_OBJECTS = $(am__objects_145)
 libarm64_libgdiplus_a_OBJECTS = $(am_libarm64_libgdiplus_a_OBJECTS)
 libarm64_libkernel32_a_LIBADD =
 am__libarm64_libkernel32_a_SOURCES_DIST = intrincs/__movsb.c \
@@ -4415,7 +4436,7 @@ am__libarm64_libkernel32_a_SOURCES_DIST = intrincs/__movsb.c \
 	intrincs/writecr0.c intrincs/writecr2.c intrincs/writecr3.c \
 	intrincs/writecr4.c intrincs/writemsr.c intrincs/__int2c.c \
 	intrincs/RtlSecureZeroMemory.c lib-common/kernel32.def.in
-am__objects_145 = intrincs/libarm64_libkernel32_a-__movsb.$(OBJEXT) \
+am__objects_146 = intrincs/libarm64_libkernel32_a-__movsb.$(OBJEXT) \
 	intrincs/libarm64_libkernel32_a-__movsd.$(OBJEXT) \
 	intrincs/libarm64_libkernel32_a-__movsw.$(OBJEXT) \
 	intrincs/libarm64_libkernel32_a-__stosb.$(OBJEXT) \
@@ -4479,47 +4500,47 @@ am__objects_145 = intrincs/libarm64_libkernel32_a-__movsb.$(OBJEXT) \
 	intrincs/libarm64_libkernel32_a-writemsr.$(OBJEXT) \
 	intrincs/libarm64_libkernel32_a-__int2c.$(OBJEXT) \
 	intrincs/libarm64_libkernel32_a-RtlSecureZeroMemory.$(OBJEXT)
-@LIBARM64_TRUE@am_libarm64_libkernel32_a_OBJECTS = $(am__objects_145) \
-@LIBARM64_TRUE@	$(am__objects_101)
+@LIBARM64_TRUE@am_libarm64_libkernel32_a_OBJECTS = $(am__objects_146) \
+@LIBARM64_TRUE@	$(am__objects_102)
 libarm64_libkernel32_a_OBJECTS = $(am_libarm64_libkernel32_a_OBJECTS)
 libarm64_libksguid_a_AR = $(AR) $(ARFLAGS)
 libarm64_libksguid_a_LIBADD =
 am__libarm64_libksguid_a_SOURCES_DIST = libsrc/ksuser.c
-am__objects_146 = libsrc/libarm64_libksguid_a-ksuser.$(OBJEXT)
-@LIBARM64_TRUE@am_libarm64_libksguid_a_OBJECTS = $(am__objects_146)
+am__objects_147 = libsrc/libarm64_libksguid_a-ksuser.$(OBJEXT)
+@LIBARM64_TRUE@am_libarm64_libksguid_a_OBJECTS = $(am__objects_147)
 libarm64_libksguid_a_OBJECTS = $(am_libarm64_libksguid_a_OBJECTS)
 libarm64_libksuser_a_LIBADD =
 am__libarm64_libksuser_a_SOURCES_DIST = libsrc/ksuser.c
-am__objects_147 = libsrc/libarm64_libksuser_a-ksuser.$(OBJEXT)
-@LIBARM64_TRUE@am_libarm64_libksuser_a_OBJECTS = $(am__objects_147)
+am__objects_148 = libsrc/libarm64_libksuser_a-ksuser.$(OBJEXT)
+@LIBARM64_TRUE@am_libarm64_libksuser_a_OBJECTS = $(am__objects_148)
 libarm64_libksuser_a_OBJECTS = $(am_libarm64_libksuser_a_OBJECTS)
 libarm64_liblargeint_a_AR = $(AR) $(ARFLAGS)
 libarm64_liblargeint_a_LIBADD =
 am__libarm64_liblargeint_a_SOURCES_DIST = libsrc/largeint.c
-am__objects_148 = libsrc/libarm64_liblargeint_a-largeint.$(OBJEXT)
+am__objects_149 = libsrc/libarm64_liblargeint_a-largeint.$(OBJEXT)
 @LIBARM64_TRUE@@W32API_FALSE@am_libarm64_liblargeint_a_OBJECTS =  \
-@LIBARM64_TRUE@@W32API_FALSE@	$(am__objects_148)
+@LIBARM64_TRUE@@W32API_FALSE@	$(am__objects_149)
 libarm64_liblargeint_a_OBJECTS = $(am_libarm64_liblargeint_a_OBJECTS)
 libarm64_liblocationapi_a_AR = $(AR) $(ARFLAGS)
 libarm64_liblocationapi_a_LIBADD =
 am__libarm64_liblocationapi_a_SOURCES_DIST = libsrc/locationapi.c
-am__objects_149 =  \
+am__objects_150 =  \
 	libsrc/libarm64_liblocationapi_a-locationapi.$(OBJEXT)
 @LIBARM64_TRUE@am_libarm64_liblocationapi_a_OBJECTS =  \
-@LIBARM64_TRUE@	$(am__objects_149)
+@LIBARM64_TRUE@	$(am__objects_150)
 libarm64_liblocationapi_a_OBJECTS =  \
 	$(am_libarm64_liblocationapi_a_OBJECTS)
 libarm64_libm_a_AR = $(AR) $(ARFLAGS)
 libarm64_libm_a_LIBADD =
-am__objects_150 = libarm64_libm_a-_libm_dummy.$(OBJEXT)
+am__objects_151 = libarm64_libm_a-_libm_dummy.$(OBJEXT)
 @LIBARM64_TRUE@@W32API_FALSE@nodist_libarm64_libm_a_OBJECTS =  \
-@LIBARM64_TRUE@@W32API_FALSE@	$(am__objects_150)
+@LIBARM64_TRUE@@W32API_FALSE@	$(am__objects_151)
 libarm64_libm_a_OBJECTS = $(nodist_libarm64_libm_a_OBJECTS)
 libarm64_libmfuuid_a_AR = $(AR) $(ARFLAGS)
 libarm64_libmfuuid_a_LIBADD =
 am__libarm64_libmfuuid_a_SOURCES_DIST = libsrc/mfuuid.c
-am__objects_151 = libsrc/libarm64_libmfuuid_a-mfuuid.$(OBJEXT)
-@LIBARM64_TRUE@am_libarm64_libmfuuid_a_OBJECTS = $(am__objects_151)
+am__objects_152 = libsrc/libarm64_libmfuuid_a-mfuuid.$(OBJEXT)
+@LIBARM64_TRUE@am_libarm64_libmfuuid_a_OBJECTS = $(am__objects_152)
 libarm64_libmfuuid_a_OBJECTS = $(am_libarm64_libmfuuid_a_OBJECTS)
 libarm64_libmingw32_a_AR = $(AR) $(ARFLAGS)
 libarm64_libmingw32_a_LIBADD =
@@ -4534,7 +4555,7 @@ am__libarm64_libmingw32_a_SOURCES_DIST = include/oscalls.h \
 	crt/usermatherr.c crt/xtxtmode.c crt/crt_handler.c \
 	crt/tlsthrd.c crt/tlsmthread.c crt/tlsmcrt.c crt/cxa_atexit.c \
 	crt/cxa_thread_atexit.c crt/tls_atexit.c
-am__objects_152 = crt/libarm64_libmingw32_a-crt0_c.$(OBJEXT) \
+am__objects_153 = crt/libarm64_libmingw32_a-crt0_c.$(OBJEXT) \
 	crt/libarm64_libmingw32_a-dll_argv.$(OBJEXT) \
 	crt/libarm64_libmingw32_a-gccmain.$(OBJEXT) \
 	crt/libarm64_libmingw32_a-natstart.$(OBJEXT) \
@@ -4566,7 +4587,7 @@ am__objects_152 = crt/libarm64_libmingw32_a-crt0_c.$(OBJEXT) \
 	crt/libarm64_libmingw32_a-cxa_thread_atexit.$(OBJEXT) \
 	crt/libarm64_libmingw32_a-tls_atexit.$(OBJEXT)
 @LIBARM64_TRUE@@W32API_FALSE@am_libarm64_libmingw32_a_OBJECTS =  \
-@LIBARM64_TRUE@@W32API_FALSE@	$(am__objects_152)
+@LIBARM64_TRUE@@W32API_FALSE@	$(am__objects_153)
 libarm64_libmingw32_a_OBJECTS = $(am_libarm64_libmingw32_a_OBJECTS)
 libarm64_libmingwex_a_AR = $(AR) $(ARFLAGS)
 libarm64_libmingwex_a_LIBADD =
@@ -4684,7 +4705,7 @@ am__libarm64_libmingwex_a_SOURCES_DIST = crt/dllentry.c crt/dllmain.c \
 	math/DFP/__isnand128.c math/DFP/__signbitd32.c \
 	math/DFP/__signbitd64.c math/DFP/__signbitd128.c \
 	math/DFP/isinfd32.c math/DFP/isinfd64.c math/DFP/isinfd128.c
-am__objects_153 = crt/libarm64_libmingwex_a-dllentry.$(OBJEXT) \
+am__objects_154 = crt/libarm64_libmingwex_a-dllentry.$(OBJEXT) \
 	crt/libarm64_libmingwex_a-dllmain.$(OBJEXT) \
 	complex/libarm64_libmingwex_a-_cabs.$(OBJEXT) \
 	complex/libarm64_libmingwex_a-cabs.$(OBJEXT) \
@@ -4994,14 +5015,14 @@ am__objects_153 = crt/libarm64_libmingwex_a-dllentry.$(OBJEXT) \
 	stdio/libarm64_libmingwex_a-wtoll.$(OBJEXT) \
 	stdio/libarm64_libmingwex_a-mingw_asprintf.$(OBJEXT) \
 	stdio/libarm64_libmingwex_a-mingw_vasprintf.$(OBJEXT)
-am__objects_154 =  \
+am__objects_155 =  \
 	math/arm64/libarm64_libmingwex_a-_chgsignl.$(OBJEXT) \
 	math/arm64/libarm64_libmingwex_a-rint.$(OBJEXT) \
 	math/arm64/libarm64_libmingwex_a-rintf.$(OBJEXT) \
 	math/arm64/libarm64_libmingwex_a-sincos.$(OBJEXT) \
 	math/arm64/libarm64_libmingwex_a-sincosf.$(OBJEXT) \
 	math/arm-common/libarm64_libmingwex_a-ldexpl.$(OBJEXT)
-@ENABLE_DFP_TRUE@am__objects_155 = math/DFP/libarm64_libmingwex_a-__fpclassifyd32.$(OBJEXT) \
+@ENABLE_DFP_TRUE@am__objects_156 = math/DFP/libarm64_libmingwex_a-__fpclassifyd32.$(OBJEXT) \
 @ENABLE_DFP_TRUE@	math/DFP/libarm64_libmingwex_a-__fpclassifyd64.$(OBJEXT) \
 @ENABLE_DFP_TRUE@	math/DFP/libarm64_libmingwex_a-__fpclassifyd128.$(OBJEXT) \
 @ENABLE_DFP_TRUE@	math/DFP/libarm64_libmingwex_a-__isnand32.$(OBJEXT) \
@@ -5014,25 +5035,25 @@ am__objects_154 =  \
 @ENABLE_DFP_TRUE@	math/DFP/libarm64_libmingwex_a-isinfd64.$(OBJEXT) \
 @ENABLE_DFP_TRUE@	math/DFP/libarm64_libmingwex_a-isinfd128.$(OBJEXT)
 @LIBARM64_TRUE@@W32API_FALSE@am_libarm64_libmingwex_a_OBJECTS =  \
-@LIBARM64_TRUE@@W32API_FALSE@	$(am__objects_153) \
 @LIBARM64_TRUE@@W32API_FALSE@	$(am__objects_154) \
-@LIBARM64_TRUE@@W32API_FALSE@	$(am__objects_155)
+@LIBARM64_TRUE@@W32API_FALSE@	$(am__objects_155) \
+@LIBARM64_TRUE@@W32API_FALSE@	$(am__objects_156)
 libarm64_libmingwex_a_OBJECTS = $(am_libarm64_libmingwex_a_OBJECTS)
 libarm64_libmingwthrd_a_AR = $(AR) $(ARFLAGS)
 libarm64_libmingwthrd_a_LIBADD =
 am__libarm64_libmingwthrd_a_SOURCES_DIST = libsrc/mingwthrd_mt.c
-am__objects_156 =  \
+am__objects_157 =  \
 	libsrc/libarm64_libmingwthrd_a-mingwthrd_mt.$(OBJEXT)
 @LIBARM64_TRUE@@W32API_FALSE@am_libarm64_libmingwthrd_a_OBJECTS =  \
-@LIBARM64_TRUE@@W32API_FALSE@	$(am__objects_156)
+@LIBARM64_TRUE@@W32API_FALSE@	$(am__objects_157)
 libarm64_libmingwthrd_a_OBJECTS =  \
 	$(am_libarm64_libmingwthrd_a_OBJECTS)
 libarm64_libmoldname_a_AR = $(AR) $(ARFLAGS)
 libarm64_libmoldname_a_LIBADD =
 am__libarm64_libmoldname_a_SOURCES_DIST = _libm_dummy.c
-am__objects_157 = libarm64_libmoldname_a-_libm_dummy.$(OBJEXT)
+am__objects_158 = libarm64_libmoldname_a-_libm_dummy.$(OBJEXT)
 @LIBARM64_TRUE@@W32API_FALSE@am_libarm64_libmoldname_a_OBJECTS =  \
-@LIBARM64_TRUE@@W32API_FALSE@	$(am__objects_157)
+@LIBARM64_TRUE@@W32API_FALSE@	$(am__objects_158)
 libarm64_libmoldname_a_OBJECTS = $(am_libarm64_libmoldname_a_OBJECTS)
 libarm64_libmsvcrt_common_a_AR = $(AR) $(ARFLAGS)
 libarm64_libmsvcrt_common_a_LIBADD =
@@ -5044,7 +5065,7 @@ am__libarm64_libmsvcrt_common_a_SOURCES_DIST = misc/mbrtowc.c \
 	stdio/_putc_nolock.c stdio/_putwc_nolock.c \
 	stdio/acrt_iob_func.c stdio/snprintf_alias.c \
 	stdio/vsnprintf_alias.c math/frexp.c
-am__objects_158 = misc/libarm64_libmsvcrt_common_a-mbrtowc.$(OBJEXT) \
+am__objects_159 = misc/libarm64_libmsvcrt_common_a-mbrtowc.$(OBJEXT) \
 	misc/libarm64_libmsvcrt_common_a-mbsinit.$(OBJEXT) \
 	misc/libarm64_libmsvcrt_common_a-onexit_table.$(OBJEXT) \
 	misc/libarm64_libmsvcrt_common_a-register_tls_atexit.$(OBJEXT) \
@@ -5062,7 +5083,7 @@ am__objects_158 = misc/libarm64_libmsvcrt_common_a-mbrtowc.$(OBJEXT) \
 	stdio/libarm64_libmsvcrt_common_a-vsnprintf_alias.$(OBJEXT) \
 	math/libarm64_libmsvcrt_common_a-frexp.$(OBJEXT)
 @LIBARM64_TRUE@@W32API_FALSE@am_libarm64_libmsvcrt_common_a_OBJECTS =  \
-@LIBARM64_TRUE@@W32API_FALSE@	$(am__objects_158)
+@LIBARM64_TRUE@@W32API_FALSE@	$(am__objects_159)
 libarm64_libmsvcrt_common_a_OBJECTS =  \
 	$(am_libarm64_libmsvcrt_common_a_OBJECTS)
 libarm64_libmsvcrt_extra_a_AR = $(AR) $(ARFLAGS)
@@ -5109,7 +5130,7 @@ am__libarm64_libmsvcrt_extra_a_SOURCES_DIST =  \
 	misc/__p___argv.c misc/__p__acmdln.c misc/__p__commode.c \
 	misc/__p__fmode.c misc/__p__wcmdln.c misc/_getpid.c \
 	misc/initenv.c stdio/_setmaxstdio.c stdio/gets.c
-am__objects_159 =  \
+am__objects_160 =  \
 	misc/libarm64_libmsvcrt_extra_a-_configthreadlocale.$(OBJEXT) \
 	misc/libarm64_libmsvcrt_extra_a-invalid_parameter_handler.$(OBJEXT) \
 	misc/libarm64_libmsvcrt_extra_a-output_format.$(OBJEXT) \
@@ -5159,7 +5180,7 @@ am__objects_159 =  \
 	secapi/libarm64_libmsvcrt_extra_a-wmemmove_s.$(OBJEXT) \
 	stdio/libarm64_libmsvcrt_extra_a-fseeki64.$(OBJEXT) \
 	stdio/libarm64_libmsvcrt_extra_a-mingw_lock.$(OBJEXT)
-am__objects_160 = $(am__objects_159) \
+am__objects_161 = $(am__objects_160) \
 	math/arm-common/libarm64_libmsvcrt_extra_a-acosh.$(OBJEXT) \
 	math/arm-common/libarm64_libmsvcrt_extra_a-acoshf.$(OBJEXT) \
 	math/arm-common/libarm64_libmsvcrt_extra_a-acoshl.$(OBJEXT) \
@@ -5210,55 +5231,55 @@ am__objects_160 = $(am__objects_159) \
 	stdio/libarm64_libmsvcrt_extra_a-_setmaxstdio.$(OBJEXT) \
 	stdio/libarm64_libmsvcrt_extra_a-gets.$(OBJEXT)
 @LIBARM64_TRUE@@W32API_FALSE@am_libarm64_libmsvcrt_extra_a_OBJECTS =  \
-@LIBARM64_TRUE@@W32API_FALSE@	$(am__objects_160)
+@LIBARM64_TRUE@@W32API_FALSE@	$(am__objects_161)
 libarm64_libmsvcrt_extra_a_OBJECTS =  \
 	$(am_libarm64_libmsvcrt_extra_a_OBJECTS)
 libarm64_libportabledeviceguids_a_AR = $(AR) $(ARFLAGS)
 libarm64_libportabledeviceguids_a_LIBADD =
 am__libarm64_libportabledeviceguids_a_SOURCES_DIST =  \
 	libsrc/portabledeviceguids.c
-am__objects_161 = libsrc/libarm64_libportabledeviceguids_a-portabledeviceguids.$(OBJEXT)
+am__objects_162 = libsrc/libarm64_libportabledeviceguids_a-portabledeviceguids.$(OBJEXT)
 @LIBARM64_TRUE@am_libarm64_libportabledeviceguids_a_OBJECTS =  \
-@LIBARM64_TRUE@	$(am__objects_161)
+@LIBARM64_TRUE@	$(am__objects_162)
 libarm64_libportabledeviceguids_a_OBJECTS =  \
 	$(am_libarm64_libportabledeviceguids_a_OBJECTS)
 libarm64_libsapi_a_AR = $(AR) $(ARFLAGS)
 libarm64_libsapi_a_LIBADD =
 am__libarm64_libsapi_a_SOURCES_DIST = libsrc/sapi.c
-am__objects_162 = libsrc/libarm64_libsapi_a-sapi.$(OBJEXT)
-@LIBARM64_TRUE@am_libarm64_libsapi_a_OBJECTS = $(am__objects_162)
+am__objects_163 = libsrc/libarm64_libsapi_a-sapi.$(OBJEXT)
+@LIBARM64_TRUE@am_libarm64_libsapi_a_OBJECTS = $(am__objects_163)
 libarm64_libsapi_a_OBJECTS = $(am_libarm64_libsapi_a_OBJECTS)
 libarm64_libscrnsave_a_AR = $(AR) $(ARFLAGS)
 libarm64_libscrnsave_a_LIBADD =
 am__libarm64_libscrnsave_a_SOURCES_DIST = libsrc/scrnsave.c
-am__objects_163 = libsrc/libarm64_libscrnsave_a-scrnsave.$(OBJEXT)
-@LIBARM64_TRUE@am_libarm64_libscrnsave_a_OBJECTS = $(am__objects_163)
+am__objects_164 = libsrc/libarm64_libscrnsave_a-scrnsave.$(OBJEXT)
+@LIBARM64_TRUE@am_libarm64_libscrnsave_a_OBJECTS = $(am__objects_164)
 libarm64_libscrnsave_a_OBJECTS = $(am_libarm64_libscrnsave_a_OBJECTS)
 libarm64_libscrnsavw_a_AR = $(AR) $(ARFLAGS)
 libarm64_libscrnsavw_a_LIBADD =
 am__libarm64_libscrnsavw_a_SOURCES_DIST = libsrc/scrnsave.c
-am__objects_164 = libsrc/libarm64_libscrnsavw_a-scrnsave.$(OBJEXT)
-@LIBARM64_TRUE@am_libarm64_libscrnsavw_a_OBJECTS = $(am__objects_164)
+am__objects_165 = libsrc/libarm64_libscrnsavw_a-scrnsave.$(OBJEXT)
+@LIBARM64_TRUE@am_libarm64_libscrnsavw_a_OBJECTS = $(am__objects_165)
 libarm64_libscrnsavw_a_OBJECTS = $(am_libarm64_libscrnsavw_a_OBJECTS)
 libarm64_libsensorsapi_a_AR = $(AR) $(ARFLAGS)
 libarm64_libsensorsapi_a_LIBADD =
 am__libarm64_libsensorsapi_a_SOURCES_DIST = libsrc/sensorsapi.c
-am__objects_165 =  \
+am__objects_166 =  \
 	libsrc/libarm64_libsensorsapi_a-sensorsapi.$(OBJEXT)
 @LIBARM64_TRUE@am_libarm64_libsensorsapi_a_OBJECTS =  \
-@LIBARM64_TRUE@	$(am__objects_165)
+@LIBARM64_TRUE@	$(am__objects_166)
 libarm64_libsensorsapi_a_OBJECTS =  \
 	$(am_libarm64_libsensorsapi_a_OBJECTS)
 libarm64_libshell32_a_LIBADD =
 am__libarm64_libshell32_a_SOURCES_DIST = libsrc/shell32.c
-am__objects_166 = libsrc/libarm64_libshell32_a-shell32.$(OBJEXT)
-@LIBARM64_TRUE@am_libarm64_libshell32_a_OBJECTS = $(am__objects_166)
+am__objects_167 = libsrc/libarm64_libshell32_a-shell32.$(OBJEXT)
+@LIBARM64_TRUE@am_libarm64_libshell32_a_OBJECTS = $(am__objects_167)
 libarm64_libshell32_a_OBJECTS = $(am_libarm64_libshell32_a_OBJECTS)
 libarm64_libstrmiids_a_AR = $(AR) $(ARFLAGS)
 libarm64_libstrmiids_a_LIBADD =
 am__libarm64_libstrmiids_a_SOURCES_DIST = libsrc/strmiids.c
-am__objects_167 = libsrc/libarm64_libstrmiids_a-strmiids.$(OBJEXT)
-@LIBARM64_TRUE@am_libarm64_libstrmiids_a_OBJECTS = $(am__objects_167)
+am__objects_168 = libsrc/libarm64_libstrmiids_a-strmiids.$(OBJEXT)
+@LIBARM64_TRUE@am_libarm64_libstrmiids_a_OBJECTS = $(am__objects_168)
 libarm64_libstrmiids_a_OBJECTS = $(am_libarm64_libstrmiids_a_OBJECTS)
 libarm64_libucrt_extra_a_AR = $(AR) $(ARFLAGS)
 libarm64_libucrt_extra_a_LIBADD =
@@ -5272,7 +5293,7 @@ am__libarm64_libucrt_extra_a_SOURCES_DIST = crt/ucrtbase_compat.c \
 	stdio/ucrt_vfscanf.c stdio/ucrt_vprintf.c stdio/ucrt_vscanf.c \
 	stdio/ucrt_vsnprintf.c stdio/ucrt_vsprintf.c \
 	stdio/ucrt_vsscanf.c
-am__objects_168 =  \
+am__objects_169 =  \
 	crt/libarm64_libucrt_extra_a-ucrtbase_compat.$(OBJEXT) \
 	math/libarm64_libucrt_extra_a-_huge.$(OBJEXT) \
 	stdio/libarm64_libucrt_extra_a-ucrt_fprintf.$(OBJEXT) \
@@ -5295,7 +5316,7 @@ am__objects_168 =  \
 	stdio/libarm64_libucrt_extra_a-ucrt_vsprintf.$(OBJEXT) \
 	stdio/libarm64_libucrt_extra_a-ucrt_vsscanf.$(OBJEXT)
 @LIBARM64_TRUE@@W32API_FALSE@am_libarm64_libucrt_extra_a_OBJECTS =  \
-@LIBARM64_TRUE@@W32API_FALSE@	$(am__objects_168)
+@LIBARM64_TRUE@@W32API_FALSE@	$(am__objects_169)
 libarm64_libucrt_extra_a_OBJECTS =  \
 	$(am_libarm64_libucrt_extra_a_OBJECTS)
 libarm64_libucrtapp_extra_a_AR = $(AR) $(ARFLAGS)
@@ -5306,7 +5327,7 @@ am__libarm64_libucrtapp_extra_a_SOURCES_DIST =  \
 	string/memmove.c string/memrchr.c string/strchr.c \
 	string/strchrnul.c string/strrchr.c string/strstr.c \
 	string/wcschr.c string/wcsrchr.c string/wcsstr.c
-am__objects_169 = crt/libarm64_libucrtapp_extra_a-__C_specific_handler.$(OBJEXT) \
+am__objects_170 = crt/libarm64_libucrtapp_extra_a-__C_specific_handler.$(OBJEXT) \
 	misc/libarm64_libucrtapp_extra_a-longjmp.$(OBJEXT) \
 	misc/libarm64_libucrtapp_extra_a-setjmp.$(OBJEXT) \
 	string/libarm64_libucrtapp_extra_a-memchr.$(OBJEXT) \
@@ -5322,7 +5343,7 @@ am__objects_169 = crt/libarm64_libucrtapp_extra_a-__C_specific_handler.$(OBJEXT)
 	string/libarm64_libucrtapp_extra_a-wcsrchr.$(OBJEXT) \
 	string/libarm64_libucrtapp_extra_a-wcsstr.$(OBJEXT)
 @LIBARM64_TRUE@@W32API_FALSE@am_libarm64_libucrtapp_extra_a_OBJECTS =  \
-@LIBARM64_TRUE@@W32API_FALSE@	$(am__objects_169)
+@LIBARM64_TRUE@@W32API_FALSE@	$(am__objects_170)
 libarm64_libucrtapp_extra_a_OBJECTS =  \
 	$(am_libarm64_libucrtapp_extra_a_OBJECTS)
 libarm64_libuuid_a_AR = $(AR) $(ARFLAGS)
@@ -5346,7 +5367,7 @@ am__libarm64_libuuid_a_SOURCES_DIST = libsrc/ativscp-uuid.c \
 	libsrc/usbcamdi-uuid.c libsrc/usbiodef-uuid.c libsrc/uuid.c \
 	libsrc/vds-uuid.c libsrc/virtdisk-uuid.c libsrc/wia-uuid.c \
 	libsrc/windowscodecs.c
-am__objects_170 = libsrc/libarm64_libuuid_a-ativscp-uuid.$(OBJEXT) \
+am__objects_171 = libsrc/libarm64_libuuid_a-ativscp-uuid.$(OBJEXT) \
 	libsrc/libarm64_libuuid_a-atsmedia-uuid.$(OBJEXT) \
 	libsrc/libarm64_libuuid_a-bth-uuid.$(OBJEXT) \
 	libsrc/libarm64_libuuid_a-cguid-uuid.$(OBJEXT) \
@@ -5391,30 +5412,30 @@ am__objects_170 = libsrc/libarm64_libuuid_a-ativscp-uuid.$(OBJEXT) \
 	libsrc/libarm64_libuuid_a-virtdisk-uuid.$(OBJEXT) \
 	libsrc/libarm64_libuuid_a-wia-uuid.$(OBJEXT) \
 	libsrc/libarm64_libuuid_a-windowscodecs.$(OBJEXT)
-@LIBARM64_TRUE@am_libarm64_libuuid_a_OBJECTS = $(am__objects_170)
+@LIBARM64_TRUE@am_libarm64_libuuid_a_OBJECTS = $(am__objects_171)
 libarm64_libuuid_a_OBJECTS = $(am_libarm64_libuuid_a_OBJECTS)
 libarm64_libwbemuuid_a_AR = $(AR) $(ARFLAGS)
 libarm64_libwbemuuid_a_LIBADD =
 am__libarm64_libwbemuuid_a_SOURCES_DIST = libsrc/wbemuuid.c
-am__objects_171 = libsrc/libarm64_libwbemuuid_a-wbemuuid.$(OBJEXT)
-@LIBARM64_TRUE@am_libarm64_libwbemuuid_a_OBJECTS = $(am__objects_171)
+am__objects_172 = libsrc/libarm64_libwbemuuid_a-wbemuuid.$(OBJEXT)
+@LIBARM64_TRUE@am_libarm64_libwbemuuid_a_OBJECTS = $(am__objects_172)
 libarm64_libwbemuuid_a_OBJECTS = $(am_libarm64_libwbemuuid_a_OBJECTS)
 libarm64_libwindowscodecs_a_LIBADD =
 am__libarm64_libwindowscodecs_a_SOURCES_DIST = libsrc/windowscodecs.c
-am__objects_172 =  \
+am__objects_173 =  \
 	libsrc/libarm64_libwindowscodecs_a-windowscodecs.$(OBJEXT)
 @LIBARM64_TRUE@am_libarm64_libwindowscodecs_a_OBJECTS =  \
-@LIBARM64_TRUE@	$(am__objects_172)
+@LIBARM64_TRUE@	$(am__objects_173)
 libarm64_libwindowscodecs_a_OBJECTS =  \
 	$(am_libarm64_libwindowscodecs_a_OBJECTS)
 libarm64_libwmcodecdspuuid_a_AR = $(AR) $(ARFLAGS)
 libarm64_libwmcodecdspuuid_a_LIBADD =
 am__libarm64_libwmcodecdspuuid_a_SOURCES_DIST =  \
 	libsrc/wmcodecdspuuid.c
-am__objects_173 =  \
+am__objects_174 =  \
 	libsrc/libarm64_libwmcodecdspuuid_a-wmcodecdspuuid.$(OBJEXT)
 @LIBARM64_TRUE@am_libarm64_libwmcodecdspuuid_a_OBJECTS =  \
-@LIBARM64_TRUE@	$(am__objects_173)
+@LIBARM64_TRUE@	$(am__objects_174)
 libarm64_libwmcodecdspuuid_a_OBJECTS =  \
 	$(am_libarm64_libwmcodecdspuuid_a_OBJECTS)
 libarm64_libws2_32_a_LIBADD =
@@ -5453,7 +5474,7 @@ am__libarm64_libws2_32_a_SOURCES_DIST = libsrc/ws2_32.c \
 	libsrc/wspiapi/WspiapiGetNameInfo.c \
 	libsrc/wspiapi/WspiapiFreeAddrInfo.c \
 	lib-common/libws2_32.def.in
-am__objects_174 = libsrc/libarm64_libws2_32_a-ws2_32.$(OBJEXT) \
+am__objects_175 = libsrc/libarm64_libws2_32_a-ws2_32.$(OBJEXT) \
 	libsrc/ws2tcpip/libarm64_libws2_32_a-in6_addr_equal.$(OBJEXT) \
 	libsrc/ws2tcpip/libarm64_libws2_32_a-in6addr_isany.$(OBJEXT) \
 	libsrc/ws2tcpip/libarm64_libws2_32_a-in6addr_isloopback.$(OBJEXT) \
@@ -5488,7 +5509,7 @@ am__objects_174 = libsrc/libarm64_libws2_32_a-ws2_32.$(OBJEXT) \
 	libsrc/wspiapi/libarm64_libws2_32_a-WspiapiGetAddrInfo.$(OBJEXT) \
 	libsrc/wspiapi/libarm64_libws2_32_a-WspiapiGetNameInfo.$(OBJEXT) \
 	libsrc/wspiapi/libarm64_libws2_32_a-WspiapiFreeAddrInfo.$(OBJEXT)
-@LIBARM64_TRUE@am_libarm64_libws2_32_a_OBJECTS = $(am__objects_174)
+@LIBARM64_TRUE@am_libarm64_libws2_32_a_OBJECTS = $(am__objects_175)
 libarm64_libws2_32_a_OBJECTS = $(am_libarm64_libws2_32_a_OBJECTS)
 tests32_libnewcomplextests_a_AR = $(AR) $(ARFLAGS)
 tests32_libnewcomplextests_a_LIBADD =
@@ -5505,7 +5526,7 @@ am__tests32_libnewcomplextests_a_SOURCES_DIST =  \
 	testcases/complex/csin.c testcases/complex/csinh.c \
 	testcases/complex/csqrt.c testcases/complex/ctan.c \
 	testcases/complex/ctanh.c
-am__objects_175 =  \
+am__objects_176 =  \
 	testcases/complex/tests32_libnewcomplextests_a-cabs.$(OBJEXT) \
 	testcases/complex/tests32_libnewcomplextests_a-cacos.$(OBJEXT) \
 	testcases/complex/tests32_libnewcomplextests_a-cacosh.$(OBJEXT) \
@@ -5529,7 +5550,7 @@ am__objects_175 =  \
 	testcases/complex/tests32_libnewcomplextests_a-ctan.$(OBJEXT) \
 	testcases/complex/tests32_libnewcomplextests_a-ctanh.$(OBJEXT)
 @LIB32_TRUE@am_tests32_libnewcomplextests_a_OBJECTS =  \
-@LIB32_TRUE@	$(am__objects_175)
+@LIB32_TRUE@	$(am__objects_176)
 tests32_libnewcomplextests_a_OBJECTS =  \
 	$(am_tests32_libnewcomplextests_a_OBJECTS)
 tests32_libnewcomplextestsf_a_AR = $(AR) $(ARFLAGS)
@@ -5547,7 +5568,7 @@ am__tests32_libnewcomplextestsf_a_SOURCES_DIST =  \
 	testcases/complex/csin.c testcases/complex/csinh.c \
 	testcases/complex/csqrt.c testcases/complex/ctan.c \
 	testcases/complex/ctanh.c
-am__objects_176 = testcases/complex/tests32_libnewcomplextestsf_a-cabs.$(OBJEXT) \
+am__objects_177 = testcases/complex/tests32_libnewcomplextestsf_a-cabs.$(OBJEXT) \
 	testcases/complex/tests32_libnewcomplextestsf_a-cacos.$(OBJEXT) \
 	testcases/complex/tests32_libnewcomplextestsf_a-cacosh.$(OBJEXT) \
 	testcases/complex/tests32_libnewcomplextestsf_a-carg.$(OBJEXT) \
@@ -5570,7 +5591,7 @@ am__objects_176 = testcases/complex/tests32_libnewcomplextestsf_a-cabs.$(OBJEXT)
 	testcases/complex/tests32_libnewcomplextestsf_a-ctan.$(OBJEXT) \
 	testcases/complex/tests32_libnewcomplextestsf_a-ctanh.$(OBJEXT)
 @LIB32_TRUE@am_tests32_libnewcomplextestsf_a_OBJECTS =  \
-@LIB32_TRUE@	$(am__objects_176)
+@LIB32_TRUE@	$(am__objects_177)
 tests32_libnewcomplextestsf_a_OBJECTS =  \
 	$(am_tests32_libnewcomplextestsf_a_OBJECTS)
 tests32_libnewcomplextestsld_a_AR = $(AR) $(ARFLAGS)
@@ -5588,7 +5609,7 @@ am__tests32_libnewcomplextestsld_a_SOURCES_DIST =  \
 	testcases/complex/csin.c testcases/complex/csinh.c \
 	testcases/complex/csqrt.c testcases/complex/ctan.c \
 	testcases/complex/ctanh.c
-am__objects_177 = testcases/complex/tests32_libnewcomplextestsld_a-cabs.$(OBJEXT) \
+am__objects_178 = testcases/complex/tests32_libnewcomplextestsld_a-cabs.$(OBJEXT) \
 	testcases/complex/tests32_libnewcomplextestsld_a-cacos.$(OBJEXT) \
 	testcases/complex/tests32_libnewcomplextestsld_a-cacosh.$(OBJEXT) \
 	testcases/complex/tests32_libnewcomplextestsld_a-carg.$(OBJEXT) \
@@ -5611,7 +5632,7 @@ am__objects_177 = testcases/complex/tests32_libnewcomplextestsld_a-cabs.$(OBJEXT
 	testcases/complex/tests32_libnewcomplextestsld_a-ctan.$(OBJEXT) \
 	testcases/complex/tests32_libnewcomplextestsld_a-ctanh.$(OBJEXT)
 @LIB32_TRUE@am_tests32_libnewcomplextestsld_a_OBJECTS =  \
-@LIB32_TRUE@	$(am__objects_177)
+@LIB32_TRUE@	$(am__objects_178)
 tests32_libnewcomplextestsld_a_OBJECTS =  \
 	$(am_tests32_libnewcomplextestsld_a_OBJECTS)
 tests64_libnewcomplextests_a_AR = $(AR) $(ARFLAGS)
@@ -5629,7 +5650,7 @@ am__tests64_libnewcomplextests_a_SOURCES_DIST =  \
 	testcases/complex/csin.c testcases/complex/csinh.c \
 	testcases/complex/csqrt.c testcases/complex/ctan.c \
 	testcases/complex/ctanh.c
-am__objects_178 =  \
+am__objects_179 =  \
 	testcases/complex/tests64_libnewcomplextests_a-cabs.$(OBJEXT) \
 	testcases/complex/tests64_libnewcomplextests_a-cacos.$(OBJEXT) \
 	testcases/complex/tests64_libnewcomplextests_a-cacosh.$(OBJEXT) \
@@ -5653,7 +5674,7 @@ am__objects_178 =  \
 	testcases/complex/tests64_libnewcomplextests_a-ctan.$(OBJEXT) \
 	testcases/complex/tests64_libnewcomplextests_a-ctanh.$(OBJEXT)
 @LIB64_TRUE@am_tests64_libnewcomplextests_a_OBJECTS =  \
-@LIB64_TRUE@	$(am__objects_178)
+@LIB64_TRUE@	$(am__objects_179)
 tests64_libnewcomplextests_a_OBJECTS =  \
 	$(am_tests64_libnewcomplextests_a_OBJECTS)
 tests64_libnewcomplextestsf_a_AR = $(AR) $(ARFLAGS)
@@ -5671,7 +5692,7 @@ am__tests64_libnewcomplextestsf_a_SOURCES_DIST =  \
 	testcases/complex/csin.c testcases/complex/csinh.c \
 	testcases/complex/csqrt.c testcases/complex/ctan.c \
 	testcases/complex/ctanh.c
-am__objects_179 = testcases/complex/tests64_libnewcomplextestsf_a-cabs.$(OBJEXT) \
+am__objects_180 = testcases/complex/tests64_libnewcomplextestsf_a-cabs.$(OBJEXT) \
 	testcases/complex/tests64_libnewcomplextestsf_a-cacos.$(OBJEXT) \
 	testcases/complex/tests64_libnewcomplextestsf_a-cacosh.$(OBJEXT) \
 	testcases/complex/tests64_libnewcomplextestsf_a-carg.$(OBJEXT) \
@@ -5694,7 +5715,7 @@ am__objects_179 = testcases/complex/tests64_libnewcomplextestsf_a-cabs.$(OBJEXT)
 	testcases/complex/tests64_libnewcomplextestsf_a-ctan.$(OBJEXT) \
 	testcases/complex/tests64_libnewcomplextestsf_a-ctanh.$(OBJEXT)
 @LIB64_TRUE@am_tests64_libnewcomplextestsf_a_OBJECTS =  \
-@LIB64_TRUE@	$(am__objects_179)
+@LIB64_TRUE@	$(am__objects_180)
 tests64_libnewcomplextestsf_a_OBJECTS =  \
 	$(am_tests64_libnewcomplextestsf_a_OBJECTS)
 tests64_libnewcomplextestsld_a_AR = $(AR) $(ARFLAGS)
@@ -5712,7 +5733,7 @@ am__tests64_libnewcomplextestsld_a_SOURCES_DIST =  \
 	testcases/complex/csin.c testcases/complex/csinh.c \
 	testcases/complex/csqrt.c testcases/complex/ctan.c \
 	testcases/complex/ctanh.c
-am__objects_180 = testcases/complex/tests64_libnewcomplextestsld_a-cabs.$(OBJEXT) \
+am__objects_181 = testcases/complex/tests64_libnewcomplextestsld_a-cabs.$(OBJEXT) \
 	testcases/complex/tests64_libnewcomplextestsld_a-cacos.$(OBJEXT) \
 	testcases/complex/tests64_libnewcomplextestsld_a-cacosh.$(OBJEXT) \
 	testcases/complex/tests64_libnewcomplextestsld_a-carg.$(OBJEXT) \
@@ -5735,7 +5756,7 @@ am__objects_180 = testcases/complex/tests64_libnewcomplextestsld_a-cabs.$(OBJEXT
 	testcases/complex/tests64_libnewcomplextestsld_a-ctan.$(OBJEXT) \
 	testcases/complex/tests64_libnewcomplextestsld_a-ctanh.$(OBJEXT)
 @LIB64_TRUE@am_tests64_libnewcomplextestsld_a_OBJECTS =  \
-@LIB64_TRUE@	$(am__objects_180)
+@LIB64_TRUE@	$(am__objects_181)
 tests64_libnewcomplextestsld_a_OBJECTS =  \
 	$(am_tests64_libnewcomplextestsld_a_OBJECTS)
 testcases_t_ansi_io_SOURCES = testcases/t_ansi_io.c
@@ -6361,6 +6382,7 @@ am__depfiles_remade = ./$(DEPDIR)/lib32_libm_a-_libm_dummy.Po \
 	complex/$(DEPDIR)/libarm64_libmingwex_a-ctan.Po \
 	complex/$(DEPDIR)/libarm64_libmingwex_a-ctanf.Po \
 	complex/$(DEPDIR)/libarm64_libmingwex_a-ctanl.Po \
+	crt/$(DEPDIR)/lib32_libcrtdll_extra_a-crtdll_compat.Po \
 	crt/$(DEPDIR)/lib32_libmingw32_a-CRT_fp10.Po \
 	crt/$(DEPDIR)/lib32_libmingw32_a-_newmode.Po \
 	crt/$(DEPDIR)/lib32_libmingw32_a-charmax.Po \
@@ -8092,6 +8114,14 @@ am__depfiles_remade = ./$(DEPDIR)/lib32_libm_a-_libm_dummy.Po \
 	math/x86/$(DEPDIR)/lib64_libmingwex_a-tanl.Po \
 	math/x86/$(DEPDIR)/lib64_libmingwex_a-trunc.Po \
 	math/x86/$(DEPDIR)/lib64_libmingwex_a-truncf.Po \
+	misc/$(DEPDIR)/lib32_libcrtdll_extra_a-___mb_cur_max_func.Po \
+	misc/$(DEPDIR)/lib32_libcrtdll_extra_a-__p___argv.Po \
+	misc/$(DEPDIR)/lib32_libcrtdll_extra_a-__p__acmdln.Po \
+	misc/$(DEPDIR)/lib32_libcrtdll_extra_a-__p__commode.Po \
+	misc/$(DEPDIR)/lib32_libcrtdll_extra_a-__p__fmode.Po \
+	misc/$(DEPDIR)/lib32_libcrtdll_extra_a-__set_app_type.Po \
+	misc/$(DEPDIR)/lib32_libcrtdll_extra_a-invalid_parameter_handler.Po \
+	misc/$(DEPDIR)/lib32_libcrtdll_extra_a-lc_locale_func.Po \
 	misc/$(DEPDIR)/lib32_libmingwex_a-alarm.Po \
 	misc/$(DEPDIR)/lib32_libmingwex_a-basename.Po \
 	misc/$(DEPDIR)/lib32_libmingwex_a-btowc.Po \
@@ -8649,6 +8679,7 @@ am__depfiles_remade = ./$(DEPDIR)/lib32_libm_a-_libm_dummy.Po \
 	secapi/$(DEPDIR)/libarm64_libmsvcrt_extra_a-vsprintf_s.Po \
 	secapi/$(DEPDIR)/libarm64_libmsvcrt_extra_a-wmemcpy_s.Po \
 	secapi/$(DEPDIR)/libarm64_libmsvcrt_extra_a-wmemmove_s.Po \
+	stdio/$(DEPDIR)/lib32_libcrtdll_extra_a-mingw_lock.Po \
 	stdio/$(DEPDIR)/lib32_libmingwex_a-_Exit.Po \
 	stdio/$(DEPDIR)/lib32_libmingwex_a-_findfirst64i32.Po \
 	stdio/$(DEPDIR)/lib32_libmingwex_a-_findnext64i32.Po \
@@ -9359,13 +9390,14 @@ am__v_CXXLD_ = $(am__v_CXXLD_@AM_DEFAULT_V@)
 am__v_CXXLD_0 = @echo "  CXXLD   " $@;
 am__v_CXXLD_1 = 
 SOURCES = $(lib32_libadsiid_a_SOURCES) $(lib32_libamstrmid_a_SOURCES) \
-	$(lib32_libbits_a_SOURCES) $(lib32_libdelayimp_a_SOURCES) \
-	$(lib32_libdinput_a_SOURCES) $(lib32_libdinput8_a_SOURCES) \
-	$(lib32_libdmoguids_a_SOURCES) $(lib32_libdxerr8_a_SOURCES) \
-	$(lib32_libdxerr9_a_SOURCES) $(lib32_libdxguid_a_SOURCES) \
-	$(lib32_libgdiplus_a_SOURCES) $(lib32_libgmon_a_SOURCES) \
-	$(lib32_libkernel32_a_SOURCES) $(lib32_libksguid_a_SOURCES) \
-	$(lib32_libksuser_a_SOURCES) $(lib32_liblargeint_a_SOURCES) \
+	$(lib32_libbits_a_SOURCES) $(lib32_libcrtdll_extra_a_SOURCES) \
+	$(lib32_libdelayimp_a_SOURCES) $(lib32_libdinput_a_SOURCES) \
+	$(lib32_libdinput8_a_SOURCES) $(lib32_libdmoguids_a_SOURCES) \
+	$(lib32_libdxerr8_a_SOURCES) $(lib32_libdxerr9_a_SOURCES) \
+	$(lib32_libdxguid_a_SOURCES) $(lib32_libgdiplus_a_SOURCES) \
+	$(lib32_libgmon_a_SOURCES) $(lib32_libkernel32_a_SOURCES) \
+	$(lib32_libksguid_a_SOURCES) $(lib32_libksuser_a_SOURCES) \
+	$(lib32_liblargeint_a_SOURCES) \
 	$(lib32_liblocationapi_a_SOURCES) \
 	$(nodist_lib32_libm_a_SOURCES) $(lib32_libmfuuid_a_SOURCES) \
 	$(lib32_libmingw32_a_SOURCES) $(lib32_libmingwex_a_SOURCES) \
@@ -9531,6 +9563,7 @@ SOURCES = $(lib32_libadsiid_a_SOURCES) $(lib32_libamstrmid_a_SOURCES) \
 DIST_SOURCES = $(am__lib32_libadsiid_a_SOURCES_DIST) \
 	$(am__lib32_libamstrmid_a_SOURCES_DIST) \
 	$(am__lib32_libbits_a_SOURCES_DIST) \
+	$(am__lib32_libcrtdll_extra_a_SOURCES_DIST) \
 	$(lib32_libdelayimp_a_SOURCES) \
 	$(am__lib32_libdinput_a_SOURCES_DIST) \
 	$(am__lib32_libdinput8_a_SOURCES_DIST) \
@@ -10435,6 +10468,18 @@ src_msvcr80_64 = \
   misc/__p__fmode.c \
   misc/__p__wcmdln.c
 
+src_crtdll = \
+  crt/crtdll_compat.c \
+  misc/___mb_cur_max_func.c \
+  misc/__p___argv.c \
+  misc/__p__acmdln.c \
+  misc/__p__commode.c \
+  misc/__p__fmode.c \
+  misc/__set_app_type.c \
+  misc/invalid_parameter_handler.c \
+  misc/lc_locale_func.c \
+  stdio/mingw_lock.c
+
 src_msvcr120_app = \
   misc/__set_app_type.c \
   misc/_getpid.c
@@ -10952,6 +10997,8 @@ src_intrincsarm64 =
 @LIB32_TRUE@@W32API_FALSE@lib32_libmoldname_a_SOURCES = $(src_libm)
 @LIB32_TRUE@@W32API_FALSE@lib32_libmingwthrd_a_SOURCES = $(src_libmingwthrd)
 @LIB32_TRUE@@W32API_FALSE@lib32_libmingwthrd_a_CPPFLAGS = $(CPPFLAGS32) $(sysincludes)
+@LIB32_TRUE@@W32API_FALSE@lib32_libcrtdll_extra_a_SOURCES = $(src_crtdll)
+@LIB32_TRUE@@W32API_FALSE@lib32_libcrtdll_extra_a_CPPFLAGS = $(CPPFLAGS32) -D__LIBMSVCRT__ $(extra_include) $(sysincludes)
 @LIB32_TRUE@@W32API_FALSE@lib32_libmsvcrt_common_a_SOURCES = $(src_msvcrt_common)
 @LIB32_TRUE@@W32API_FALSE@lib32_libmsvcrt_common_a_CPPFLAGS = $(CPPFLAGS32) -D__LIBMSVCRT__ $(extra_include) $(sysincludes)
 @LIB32_TRUE@@W32API_FALSE@lib32_libmsvcrt_extra_a_SOURCES = $(src_msvcrt32)
@@ -13106,6 +13153,49 @@ lib32/libbits.a: $(lib32_libbits_a_OBJECTS) $(lib32_libbits_a_DEPENDENCIES) $(EX
 	$(AM_V_at)-rm -f lib32/libbits.a
 	$(AM_V_AR)$(lib32_libbits_a_AR) lib32/libbits.a $(lib32_libbits_a_OBJECTS) $(lib32_libbits_a_LIBADD)
 	$(AM_V_at)$(RANLIB) lib32/libbits.a
+crt/$(am__dirstamp):
+	@$(MKDIR_P) crt
+	@: > crt/$(am__dirstamp)
+crt/$(DEPDIR)/$(am__dirstamp):
+	@$(MKDIR_P) crt/$(DEPDIR)
+	@: > crt/$(DEPDIR)/$(am__dirstamp)
+crt/lib32_libcrtdll_extra_a-crtdll_compat.$(OBJEXT):  \
+	crt/$(am__dirstamp) crt/$(DEPDIR)/$(am__dirstamp)
+misc/$(am__dirstamp):
+	@$(MKDIR_P) misc
+	@: > misc/$(am__dirstamp)
+misc/$(DEPDIR)/$(am__dirstamp):
+	@$(MKDIR_P) misc/$(DEPDIR)
+	@: > misc/$(DEPDIR)/$(am__dirstamp)
+misc/lib32_libcrtdll_extra_a-___mb_cur_max_func.$(OBJEXT):  \
+	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
+misc/lib32_libcrtdll_extra_a-__p___argv.$(OBJEXT):  \
+	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
+misc/lib32_libcrtdll_extra_a-__p__acmdln.$(OBJEXT):  \
+	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
+misc/lib32_libcrtdll_extra_a-__p__commode.$(OBJEXT):  \
+	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
+misc/lib32_libcrtdll_extra_a-__p__fmode.$(OBJEXT):  \
+	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
+misc/lib32_libcrtdll_extra_a-__set_app_type.$(OBJEXT):  \
+	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
+misc/lib32_libcrtdll_extra_a-invalid_parameter_handler.$(OBJEXT):  \
+	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
+misc/lib32_libcrtdll_extra_a-lc_locale_func.$(OBJEXT):  \
+	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
+stdio/$(am__dirstamp):
+	@$(MKDIR_P) stdio
+	@: > stdio/$(am__dirstamp)
+stdio/$(DEPDIR)/$(am__dirstamp):
+	@$(MKDIR_P) stdio/$(DEPDIR)
+	@: > stdio/$(DEPDIR)/$(am__dirstamp)
+stdio/lib32_libcrtdll_extra_a-mingw_lock.$(OBJEXT):  \
+	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
+
+lib32/libcrtdll_extra.a: $(lib32_libcrtdll_extra_a_OBJECTS) $(lib32_libcrtdll_extra_a_DEPENDENCIES) $(EXTRA_lib32_libcrtdll_extra_a_DEPENDENCIES) lib32/$(am__dirstamp)
+	$(AM_V_at)-rm -f lib32/libcrtdll_extra.a
+	$(AM_V_AR)$(lib32_libcrtdll_extra_a_AR) lib32/libcrtdll_extra.a $(lib32_libcrtdll_extra_a_OBJECTS) $(lib32_libcrtdll_extra_a_LIBADD)
+	$(AM_V_at)$(RANLIB) lib32/libcrtdll_extra.a
 
 lib32/libdelayimp.a: $(lib32_libdelayimp_a_OBJECTS) $(lib32_libdelayimp_a_DEPENDENCIES) $(EXTRA_lib32_libdelayimp_a_DEPENDENCIES) lib32/$(am__dirstamp)
 	$(AM_V_at)-rm -f lib32/libdelayimp.a
@@ -13392,12 +13482,6 @@ lib32/libmfuuid.a: $(lib32_libmfuuid_a_OBJECTS) $(lib32_libmfuuid_a_DEPENDENCIES
 	$(AM_V_at)-rm -f lib32/libmfuuid.a
 	$(AM_V_AR)$(lib32_libmfuuid_a_AR) lib32/libmfuuid.a $(lib32_libmfuuid_a_OBJECTS) $(lib32_libmfuuid_a_LIBADD)
 	$(AM_V_at)$(RANLIB) lib32/libmfuuid.a
-crt/$(am__dirstamp):
-	@$(MKDIR_P) crt
-	@: > crt/$(am__dirstamp)
-crt/$(DEPDIR)/$(am__dirstamp):
-	@$(MKDIR_P) crt/$(DEPDIR)
-	@: > crt/$(DEPDIR)/$(am__dirstamp)
 crt/lib32_libmingw32_a-crt0_c.$(OBJEXT): crt/$(am__dirstamp) \
 	crt/$(DEPDIR)/$(am__dirstamp)
 crt/lib32_libmingw32_a-dll_argv.$(OBJEXT): crt/$(am__dirstamp) \
@@ -13811,12 +13895,6 @@ math/lib32_libmingwex_a-truncl.$(OBJEXT): math/$(am__dirstamp) \
 	math/$(DEPDIR)/$(am__dirstamp)
 math/lib32_libmingwex_a-abs64.$(OBJEXT): math/$(am__dirstamp) \
 	math/$(DEPDIR)/$(am__dirstamp)
-misc/$(am__dirstamp):
-	@$(MKDIR_P) misc
-	@: > misc/$(am__dirstamp)
-misc/$(DEPDIR)/$(am__dirstamp):
-	@$(MKDIR_P) misc/$(DEPDIR)
-	@: > misc/$(DEPDIR)/$(am__dirstamp)
 misc/lib32_libmingwex_a-mingw_longjmp.$(OBJEXT): misc/$(am__dirstamp) \
 	misc/$(DEPDIR)/$(am__dirstamp)
 misc/lib32_libmingwex_a-mingw_getsp.$(OBJEXT): misc/$(am__dirstamp) \
@@ -13955,12 +14033,6 @@ misc/lib32_libmingwex_a-ftw64.$(OBJEXT): misc/$(am__dirstamp) \
 	misc/$(DEPDIR)/$(am__dirstamp)
 misc/lib32_libmingwex_a-mingw-access.$(OBJEXT): misc/$(am__dirstamp) \
 	misc/$(DEPDIR)/$(am__dirstamp)
-stdio/$(am__dirstamp):
-	@$(MKDIR_P) stdio
-	@: > stdio/$(am__dirstamp)
-stdio/$(DEPDIR)/$(am__dirstamp):
-	@$(MKDIR_P) stdio/$(DEPDIR)
-	@: > stdio/$(DEPDIR)/$(am__dirstamp)
 stdio/lib32_libmingwex_a-vfscanf2.$(OBJEXT): stdio/$(am__dirstamp) \
 	stdio/$(DEPDIR)/$(am__dirstamp)
 stdio/lib32_libmingwex_a-vfwscanf2.$(OBJEXT): stdio/$(am__dirstamp) \
@@ -21381,6 +21453,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@complex/$(DEPDIR)/libarm64_libmingwex_a-ctan.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@complex/$(DEPDIR)/libarm64_libmingwex_a-ctanf.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@complex/$(DEPDIR)/libarm64_libmingwex_a-ctanl.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@crt/$(DEPDIR)/lib32_libcrtdll_extra_a-crtdll_compat.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@crt/$(DEPDIR)/lib32_libmingw32_a-CRT_fp10.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@crt/$(DEPDIR)/lib32_libmingw32_a-_newmode.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@crt/$(DEPDIR)/lib32_libmingw32_a-charmax.Po@am__quote@ # am--include-marker
@@ -23112,6 +23185,14 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@math/x86/$(DEPDIR)/lib64_libmingwex_a-tanl.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@math/x86/$(DEPDIR)/lib64_libmingwex_a-trunc.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@math/x86/$(DEPDIR)/lib64_libmingwex_a-truncf.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libcrtdll_extra_a-___mb_cur_max_func.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libcrtdll_extra_a-__p___argv.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libcrtdll_extra_a-__p__acmdln.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libcrtdll_extra_a-__p__commode.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libcrtdll_extra_a-__p__fmode.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libcrtdll_extra_a-__set_app_type.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libcrtdll_extra_a-invalid_parameter_handler.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libcrtdll_extra_a-lc_locale_func.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmingwex_a-alarm.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmingwex_a-basename.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmingwex_a-btowc.Po@am__quote@ # am--include-marker
@@ -23669,6 +23750,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@secapi/$(DEPDIR)/libarm64_libmsvcrt_extra_a-vsprintf_s.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@secapi/$(DEPDIR)/libarm64_libmsvcrt_extra_a-wmemcpy_s.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@secapi/$(DEPDIR)/libarm64_libmsvcrt_extra_a-wmemmove_s.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib32_libcrtdll_extra_a-mingw_lock.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib32_libmingwex_a-_Exit.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib32_libmingwex_a-_findfirst64i32.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib32_libmingwex_a-_findnext64i32.Po@am__quote@ # am--include-marker
@@ -26412,6 +26494,146 @@ libsrc/lib32_libbits_a-bits.obj: libsrc/bits.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libsrc/bits.c' object='libsrc/lib32_libbits_a-bits.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libbits_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libsrc/lib32_libbits_a-bits.obj `if test -f 'libsrc/bits.c'; then $(CYGPATH_W) 'libsrc/bits.c'; else $(CYGPATH_W) '$(srcdir)/libsrc/bits.c'; fi`
+
+crt/lib32_libcrtdll_extra_a-crtdll_compat.o: crt/crtdll_compat.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libcrtdll_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT crt/lib32_libcrtdll_extra_a-crtdll_compat.o -MD -MP -MF crt/$(DEPDIR)/lib32_libcrtdll_extra_a-crtdll_compat.Tpo -c -o crt/lib32_libcrtdll_extra_a-crtdll_compat.o `test -f 'crt/crtdll_compat.c' || echo '$(srcdir)/'`crt/crtdll_compat.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) crt/$(DEPDIR)/lib32_libcrtdll_extra_a-crtdll_compat.Tpo crt/$(DEPDIR)/lib32_libcrtdll_extra_a-crtdll_compat.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='crt/crtdll_compat.c' object='crt/lib32_libcrtdll_extra_a-crtdll_compat.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libcrtdll_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o crt/lib32_libcrtdll_extra_a-crtdll_compat.o `test -f 'crt/crtdll_compat.c' || echo '$(srcdir)/'`crt/crtdll_compat.c
+
+crt/lib32_libcrtdll_extra_a-crtdll_compat.obj: crt/crtdll_compat.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libcrtdll_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT crt/lib32_libcrtdll_extra_a-crtdll_compat.obj -MD -MP -MF crt/$(DEPDIR)/lib32_libcrtdll_extra_a-crtdll_compat.Tpo -c -o crt/lib32_libcrtdll_extra_a-crtdll_compat.obj `if test -f 'crt/crtdll_compat.c'; then $(CYGPATH_W) 'crt/crtdll_compat.c'; else $(CYGPATH_W) '$(srcdir)/crt/crtdll_compat.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) crt/$(DEPDIR)/lib32_libcrtdll_extra_a-crtdll_compat.Tpo crt/$(DEPDIR)/lib32_libcrtdll_extra_a-crtdll_compat.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='crt/crtdll_compat.c' object='crt/lib32_libcrtdll_extra_a-crtdll_compat.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libcrtdll_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o crt/lib32_libcrtdll_extra_a-crtdll_compat.obj `if test -f 'crt/crtdll_compat.c'; then $(CYGPATH_W) 'crt/crtdll_compat.c'; else $(CYGPATH_W) '$(srcdir)/crt/crtdll_compat.c'; fi`
+
+misc/lib32_libcrtdll_extra_a-___mb_cur_max_func.o: misc/___mb_cur_max_func.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libcrtdll_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libcrtdll_extra_a-___mb_cur_max_func.o -MD -MP -MF misc/$(DEPDIR)/lib32_libcrtdll_extra_a-___mb_cur_max_func.Tpo -c -o misc/lib32_libcrtdll_extra_a-___mb_cur_max_func.o `test -f 'misc/___mb_cur_max_func.c' || echo '$(srcdir)/'`misc/___mb_cur_max_func.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libcrtdll_extra_a-___mb_cur_max_func.Tpo misc/$(DEPDIR)/lib32_libcrtdll_extra_a-___mb_cur_max_func.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/___mb_cur_max_func.c' object='misc/lib32_libcrtdll_extra_a-___mb_cur_max_func.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libcrtdll_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib32_libcrtdll_extra_a-___mb_cur_max_func.o `test -f 'misc/___mb_cur_max_func.c' || echo '$(srcdir)/'`misc/___mb_cur_max_func.c
+
+misc/lib32_libcrtdll_extra_a-___mb_cur_max_func.obj: misc/___mb_cur_max_func.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libcrtdll_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libcrtdll_extra_a-___mb_cur_max_func.obj -MD -MP -MF misc/$(DEPDIR)/lib32_libcrtdll_extra_a-___mb_cur_max_func.Tpo -c -o misc/lib32_libcrtdll_extra_a-___mb_cur_max_func.obj `if test -f 'misc/___mb_cur_max_func.c'; then $(CYGPATH_W) 'misc/___mb_cur_max_func.c'; else $(CYGPATH_W) '$(srcdir)/misc/___mb_cur_max_func.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libcrtdll_extra_a-___mb_cur_max_func.Tpo misc/$(DEPDIR)/lib32_libcrtdll_extra_a-___mb_cur_max_func.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/___mb_cur_max_func.c' object='misc/lib32_libcrtdll_extra_a-___mb_cur_max_func.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libcrtdll_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib32_libcrtdll_extra_a-___mb_cur_max_func.obj `if test -f 'misc/___mb_cur_max_func.c'; then $(CYGPATH_W) 'misc/___mb_cur_max_func.c'; else $(CYGPATH_W) '$(srcdir)/misc/___mb_cur_max_func.c'; fi`
+
+misc/lib32_libcrtdll_extra_a-__p___argv.o: misc/__p___argv.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libcrtdll_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libcrtdll_extra_a-__p___argv.o -MD -MP -MF misc/$(DEPDIR)/lib32_libcrtdll_extra_a-__p___argv.Tpo -c -o misc/lib32_libcrtdll_extra_a-__p___argv.o `test -f 'misc/__p___argv.c' || echo '$(srcdir)/'`misc/__p___argv.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libcrtdll_extra_a-__p___argv.Tpo misc/$(DEPDIR)/lib32_libcrtdll_extra_a-__p___argv.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/__p___argv.c' object='misc/lib32_libcrtdll_extra_a-__p___argv.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libcrtdll_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib32_libcrtdll_extra_a-__p___argv.o `test -f 'misc/__p___argv.c' || echo '$(srcdir)/'`misc/__p___argv.c
+
+misc/lib32_libcrtdll_extra_a-__p___argv.obj: misc/__p___argv.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libcrtdll_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libcrtdll_extra_a-__p___argv.obj -MD -MP -MF misc/$(DEPDIR)/lib32_libcrtdll_extra_a-__p___argv.Tpo -c -o misc/lib32_libcrtdll_extra_a-__p___argv.obj `if test -f 'misc/__p___argv.c'; then $(CYGPATH_W) 'misc/__p___argv.c'; else $(CYGPATH_W) '$(srcdir)/misc/__p___argv.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libcrtdll_extra_a-__p___argv.Tpo misc/$(DEPDIR)/lib32_libcrtdll_extra_a-__p___argv.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/__p___argv.c' object='misc/lib32_libcrtdll_extra_a-__p___argv.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libcrtdll_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib32_libcrtdll_extra_a-__p___argv.obj `if test -f 'misc/__p___argv.c'; then $(CYGPATH_W) 'misc/__p___argv.c'; else $(CYGPATH_W) '$(srcdir)/misc/__p___argv.c'; fi`
+
+misc/lib32_libcrtdll_extra_a-__p__acmdln.o: misc/__p__acmdln.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libcrtdll_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libcrtdll_extra_a-__p__acmdln.o -MD -MP -MF misc/$(DEPDIR)/lib32_libcrtdll_extra_a-__p__acmdln.Tpo -c -o misc/lib32_libcrtdll_extra_a-__p__acmdln.o `test -f 'misc/__p__acmdln.c' || echo '$(srcdir)/'`misc/__p__acmdln.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libcrtdll_extra_a-__p__acmdln.Tpo misc/$(DEPDIR)/lib32_libcrtdll_extra_a-__p__acmdln.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/__p__acmdln.c' object='misc/lib32_libcrtdll_extra_a-__p__acmdln.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libcrtdll_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib32_libcrtdll_extra_a-__p__acmdln.o `test -f 'misc/__p__acmdln.c' || echo '$(srcdir)/'`misc/__p__acmdln.c
+
+misc/lib32_libcrtdll_extra_a-__p__acmdln.obj: misc/__p__acmdln.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libcrtdll_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libcrtdll_extra_a-__p__acmdln.obj -MD -MP -MF misc/$(DEPDIR)/lib32_libcrtdll_extra_a-__p__acmdln.Tpo -c -o misc/lib32_libcrtdll_extra_a-__p__acmdln.obj `if test -f 'misc/__p__acmdln.c'; then $(CYGPATH_W) 'misc/__p__acmdln.c'; else $(CYGPATH_W) '$(srcdir)/misc/__p__acmdln.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libcrtdll_extra_a-__p__acmdln.Tpo misc/$(DEPDIR)/lib32_libcrtdll_extra_a-__p__acmdln.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/__p__acmdln.c' object='misc/lib32_libcrtdll_extra_a-__p__acmdln.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libcrtdll_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib32_libcrtdll_extra_a-__p__acmdln.obj `if test -f 'misc/__p__acmdln.c'; then $(CYGPATH_W) 'misc/__p__acmdln.c'; else $(CYGPATH_W) '$(srcdir)/misc/__p__acmdln.c'; fi`
+
+misc/lib32_libcrtdll_extra_a-__p__commode.o: misc/__p__commode.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libcrtdll_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libcrtdll_extra_a-__p__commode.o -MD -MP -MF misc/$(DEPDIR)/lib32_libcrtdll_extra_a-__p__commode.Tpo -c -o misc/lib32_libcrtdll_extra_a-__p__commode.o `test -f 'misc/__p__commode.c' || echo '$(srcdir)/'`misc/__p__commode.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libcrtdll_extra_a-__p__commode.Tpo misc/$(DEPDIR)/lib32_libcrtdll_extra_a-__p__commode.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/__p__commode.c' object='misc/lib32_libcrtdll_extra_a-__p__commode.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libcrtdll_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib32_libcrtdll_extra_a-__p__commode.o `test -f 'misc/__p__commode.c' || echo '$(srcdir)/'`misc/__p__commode.c
+
+misc/lib32_libcrtdll_extra_a-__p__commode.obj: misc/__p__commode.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libcrtdll_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libcrtdll_extra_a-__p__commode.obj -MD -MP -MF misc/$(DEPDIR)/lib32_libcrtdll_extra_a-__p__commode.Tpo -c -o misc/lib32_libcrtdll_extra_a-__p__commode.obj `if test -f 'misc/__p__commode.c'; then $(CYGPATH_W) 'misc/__p__commode.c'; else $(CYGPATH_W) '$(srcdir)/misc/__p__commode.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libcrtdll_extra_a-__p__commode.Tpo misc/$(DEPDIR)/lib32_libcrtdll_extra_a-__p__commode.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/__p__commode.c' object='misc/lib32_libcrtdll_extra_a-__p__commode.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libcrtdll_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib32_libcrtdll_extra_a-__p__commode.obj `if test -f 'misc/__p__commode.c'; then $(CYGPATH_W) 'misc/__p__commode.c'; else $(CYGPATH_W) '$(srcdir)/misc/__p__commode.c'; fi`
+
+misc/lib32_libcrtdll_extra_a-__p__fmode.o: misc/__p__fmode.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libcrtdll_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libcrtdll_extra_a-__p__fmode.o -MD -MP -MF misc/$(DEPDIR)/lib32_libcrtdll_extra_a-__p__fmode.Tpo -c -o misc/lib32_libcrtdll_extra_a-__p__fmode.o `test -f 'misc/__p__fmode.c' || echo '$(srcdir)/'`misc/__p__fmode.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libcrtdll_extra_a-__p__fmode.Tpo misc/$(DEPDIR)/lib32_libcrtdll_extra_a-__p__fmode.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/__p__fmode.c' object='misc/lib32_libcrtdll_extra_a-__p__fmode.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libcrtdll_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib32_libcrtdll_extra_a-__p__fmode.o `test -f 'misc/__p__fmode.c' || echo '$(srcdir)/'`misc/__p__fmode.c
+
+misc/lib32_libcrtdll_extra_a-__p__fmode.obj: misc/__p__fmode.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libcrtdll_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libcrtdll_extra_a-__p__fmode.obj -MD -MP -MF misc/$(DEPDIR)/lib32_libcrtdll_extra_a-__p__fmode.Tpo -c -o misc/lib32_libcrtdll_extra_a-__p__fmode.obj `if test -f 'misc/__p__fmode.c'; then $(CYGPATH_W) 'misc/__p__fmode.c'; else $(CYGPATH_W) '$(srcdir)/misc/__p__fmode.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libcrtdll_extra_a-__p__fmode.Tpo misc/$(DEPDIR)/lib32_libcrtdll_extra_a-__p__fmode.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/__p__fmode.c' object='misc/lib32_libcrtdll_extra_a-__p__fmode.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libcrtdll_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib32_libcrtdll_extra_a-__p__fmode.obj `if test -f 'misc/__p__fmode.c'; then $(CYGPATH_W) 'misc/__p__fmode.c'; else $(CYGPATH_W) '$(srcdir)/misc/__p__fmode.c'; fi`
+
+misc/lib32_libcrtdll_extra_a-__set_app_type.o: misc/__set_app_type.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libcrtdll_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libcrtdll_extra_a-__set_app_type.o -MD -MP -MF misc/$(DEPDIR)/lib32_libcrtdll_extra_a-__set_app_type.Tpo -c -o misc/lib32_libcrtdll_extra_a-__set_app_type.o `test -f 'misc/__set_app_type.c' || echo '$(srcdir)/'`misc/__set_app_type.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libcrtdll_extra_a-__set_app_type.Tpo misc/$(DEPDIR)/lib32_libcrtdll_extra_a-__set_app_type.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/__set_app_type.c' object='misc/lib32_libcrtdll_extra_a-__set_app_type.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libcrtdll_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib32_libcrtdll_extra_a-__set_app_type.o `test -f 'misc/__set_app_type.c' || echo '$(srcdir)/'`misc/__set_app_type.c
+
+misc/lib32_libcrtdll_extra_a-__set_app_type.obj: misc/__set_app_type.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libcrtdll_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libcrtdll_extra_a-__set_app_type.obj -MD -MP -MF misc/$(DEPDIR)/lib32_libcrtdll_extra_a-__set_app_type.Tpo -c -o misc/lib32_libcrtdll_extra_a-__set_app_type.obj `if test -f 'misc/__set_app_type.c'; then $(CYGPATH_W) 'misc/__set_app_type.c'; else $(CYGPATH_W) '$(srcdir)/misc/__set_app_type.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libcrtdll_extra_a-__set_app_type.Tpo misc/$(DEPDIR)/lib32_libcrtdll_extra_a-__set_app_type.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/__set_app_type.c' object='misc/lib32_libcrtdll_extra_a-__set_app_type.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libcrtdll_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib32_libcrtdll_extra_a-__set_app_type.obj `if test -f 'misc/__set_app_type.c'; then $(CYGPATH_W) 'misc/__set_app_type.c'; else $(CYGPATH_W) '$(srcdir)/misc/__set_app_type.c'; fi`
+
+misc/lib32_libcrtdll_extra_a-invalid_parameter_handler.o: misc/invalid_parameter_handler.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libcrtdll_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libcrtdll_extra_a-invalid_parameter_handler.o -MD -MP -MF misc/$(DEPDIR)/lib32_libcrtdll_extra_a-invalid_parameter_handler.Tpo -c -o misc/lib32_libcrtdll_extra_a-invalid_parameter_handler.o `test -f 'misc/invalid_parameter_handler.c' || echo '$(srcdir)/'`misc/invalid_parameter_handler.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libcrtdll_extra_a-invalid_parameter_handler.Tpo misc/$(DEPDIR)/lib32_libcrtdll_extra_a-invalid_parameter_handler.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/invalid_parameter_handler.c' object='misc/lib32_libcrtdll_extra_a-invalid_parameter_handler.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libcrtdll_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib32_libcrtdll_extra_a-invalid_parameter_handler.o `test -f 'misc/invalid_parameter_handler.c' || echo '$(srcdir)/'`misc/invalid_parameter_handler.c
+
+misc/lib32_libcrtdll_extra_a-invalid_parameter_handler.obj: misc/invalid_parameter_handler.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libcrtdll_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libcrtdll_extra_a-invalid_parameter_handler.obj -MD -MP -MF misc/$(DEPDIR)/lib32_libcrtdll_extra_a-invalid_parameter_handler.Tpo -c -o misc/lib32_libcrtdll_extra_a-invalid_parameter_handler.obj `if test -f 'misc/invalid_parameter_handler.c'; then $(CYGPATH_W) 'misc/invalid_parameter_handler.c'; else $(CYGPATH_W) '$(srcdir)/misc/invalid_parameter_handler.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libcrtdll_extra_a-invalid_parameter_handler.Tpo misc/$(DEPDIR)/lib32_libcrtdll_extra_a-invalid_parameter_handler.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/invalid_parameter_handler.c' object='misc/lib32_libcrtdll_extra_a-invalid_parameter_handler.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libcrtdll_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib32_libcrtdll_extra_a-invalid_parameter_handler.obj `if test -f 'misc/invalid_parameter_handler.c'; then $(CYGPATH_W) 'misc/invalid_parameter_handler.c'; else $(CYGPATH_W) '$(srcdir)/misc/invalid_parameter_handler.c'; fi`
+
+misc/lib32_libcrtdll_extra_a-lc_locale_func.o: misc/lc_locale_func.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libcrtdll_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libcrtdll_extra_a-lc_locale_func.o -MD -MP -MF misc/$(DEPDIR)/lib32_libcrtdll_extra_a-lc_locale_func.Tpo -c -o misc/lib32_libcrtdll_extra_a-lc_locale_func.o `test -f 'misc/lc_locale_func.c' || echo '$(srcdir)/'`misc/lc_locale_func.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libcrtdll_extra_a-lc_locale_func.Tpo misc/$(DEPDIR)/lib32_libcrtdll_extra_a-lc_locale_func.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/lc_locale_func.c' object='misc/lib32_libcrtdll_extra_a-lc_locale_func.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libcrtdll_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib32_libcrtdll_extra_a-lc_locale_func.o `test -f 'misc/lc_locale_func.c' || echo '$(srcdir)/'`misc/lc_locale_func.c
+
+misc/lib32_libcrtdll_extra_a-lc_locale_func.obj: misc/lc_locale_func.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libcrtdll_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libcrtdll_extra_a-lc_locale_func.obj -MD -MP -MF misc/$(DEPDIR)/lib32_libcrtdll_extra_a-lc_locale_func.Tpo -c -o misc/lib32_libcrtdll_extra_a-lc_locale_func.obj `if test -f 'misc/lc_locale_func.c'; then $(CYGPATH_W) 'misc/lc_locale_func.c'; else $(CYGPATH_W) '$(srcdir)/misc/lc_locale_func.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libcrtdll_extra_a-lc_locale_func.Tpo misc/$(DEPDIR)/lib32_libcrtdll_extra_a-lc_locale_func.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/lc_locale_func.c' object='misc/lib32_libcrtdll_extra_a-lc_locale_func.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libcrtdll_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib32_libcrtdll_extra_a-lc_locale_func.obj `if test -f 'misc/lc_locale_func.c'; then $(CYGPATH_W) 'misc/lc_locale_func.c'; else $(CYGPATH_W) '$(srcdir)/misc/lc_locale_func.c'; fi`
+
+stdio/lib32_libcrtdll_extra_a-mingw_lock.o: stdio/mingw_lock.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libcrtdll_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/lib32_libcrtdll_extra_a-mingw_lock.o -MD -MP -MF stdio/$(DEPDIR)/lib32_libcrtdll_extra_a-mingw_lock.Tpo -c -o stdio/lib32_libcrtdll_extra_a-mingw_lock.o `test -f 'stdio/mingw_lock.c' || echo '$(srcdir)/'`stdio/mingw_lock.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) stdio/$(DEPDIR)/lib32_libcrtdll_extra_a-mingw_lock.Tpo stdio/$(DEPDIR)/lib32_libcrtdll_extra_a-mingw_lock.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/mingw_lock.c' object='stdio/lib32_libcrtdll_extra_a-mingw_lock.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libcrtdll_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/lib32_libcrtdll_extra_a-mingw_lock.o `test -f 'stdio/mingw_lock.c' || echo '$(srcdir)/'`stdio/mingw_lock.c
+
+stdio/lib32_libcrtdll_extra_a-mingw_lock.obj: stdio/mingw_lock.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libcrtdll_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/lib32_libcrtdll_extra_a-mingw_lock.obj -MD -MP -MF stdio/$(DEPDIR)/lib32_libcrtdll_extra_a-mingw_lock.Tpo -c -o stdio/lib32_libcrtdll_extra_a-mingw_lock.obj `if test -f 'stdio/mingw_lock.c'; then $(CYGPATH_W) 'stdio/mingw_lock.c'; else $(CYGPATH_W) '$(srcdir)/stdio/mingw_lock.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) stdio/$(DEPDIR)/lib32_libcrtdll_extra_a-mingw_lock.Tpo stdio/$(DEPDIR)/lib32_libcrtdll_extra_a-mingw_lock.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/mingw_lock.c' object='stdio/lib32_libcrtdll_extra_a-mingw_lock.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libcrtdll_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/lib32_libcrtdll_extra_a-mingw_lock.obj `if test -f 'stdio/mingw_lock.c'; then $(CYGPATH_W) 'stdio/mingw_lock.c'; else $(CYGPATH_W) '$(srcdir)/stdio/mingw_lock.c'; fi`
 
 libsrc/lib32_libdinput_a-dinput_kbd.o: libsrc/dinput_kbd.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libdinput_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libsrc/lib32_libdinput_a-dinput_kbd.o -MD -MP -MF libsrc/$(DEPDIR)/lib32_libdinput_a-dinput_kbd.Tpo -c -o libsrc/lib32_libdinput_a-dinput_kbd.o `test -f 'libsrc/dinput_kbd.c' || echo '$(srcdir)/'`libsrc/dinput_kbd.c
@@ -69979,6 +70201,7 @@ distclean: distclean-am
 	-rm -f complex/$(DEPDIR)/libarm64_libmingwex_a-ctan.Po
 	-rm -f complex/$(DEPDIR)/libarm64_libmingwex_a-ctanf.Po
 	-rm -f complex/$(DEPDIR)/libarm64_libmingwex_a-ctanl.Po
+	-rm -f crt/$(DEPDIR)/lib32_libcrtdll_extra_a-crtdll_compat.Po
 	-rm -f crt/$(DEPDIR)/lib32_libmingw32_a-CRT_fp10.Po
 	-rm -f crt/$(DEPDIR)/lib32_libmingw32_a-_newmode.Po
 	-rm -f crt/$(DEPDIR)/lib32_libmingw32_a-charmax.Po
@@ -71710,6 +71933,14 @@ distclean: distclean-am
 	-rm -f math/x86/$(DEPDIR)/lib64_libmingwex_a-tanl.Po
 	-rm -f math/x86/$(DEPDIR)/lib64_libmingwex_a-trunc.Po
 	-rm -f math/x86/$(DEPDIR)/lib64_libmingwex_a-truncf.Po
+	-rm -f misc/$(DEPDIR)/lib32_libcrtdll_extra_a-___mb_cur_max_func.Po
+	-rm -f misc/$(DEPDIR)/lib32_libcrtdll_extra_a-__p___argv.Po
+	-rm -f misc/$(DEPDIR)/lib32_libcrtdll_extra_a-__p__acmdln.Po
+	-rm -f misc/$(DEPDIR)/lib32_libcrtdll_extra_a-__p__commode.Po
+	-rm -f misc/$(DEPDIR)/lib32_libcrtdll_extra_a-__p__fmode.Po
+	-rm -f misc/$(DEPDIR)/lib32_libcrtdll_extra_a-__set_app_type.Po
+	-rm -f misc/$(DEPDIR)/lib32_libcrtdll_extra_a-invalid_parameter_handler.Po
+	-rm -f misc/$(DEPDIR)/lib32_libcrtdll_extra_a-lc_locale_func.Po
 	-rm -f misc/$(DEPDIR)/lib32_libmingwex_a-alarm.Po
 	-rm -f misc/$(DEPDIR)/lib32_libmingwex_a-basename.Po
 	-rm -f misc/$(DEPDIR)/lib32_libmingwex_a-btowc.Po
@@ -72267,6 +72498,7 @@ distclean: distclean-am
 	-rm -f secapi/$(DEPDIR)/libarm64_libmsvcrt_extra_a-vsprintf_s.Po
 	-rm -f secapi/$(DEPDIR)/libarm64_libmsvcrt_extra_a-wmemcpy_s.Po
 	-rm -f secapi/$(DEPDIR)/libarm64_libmsvcrt_extra_a-wmemmove_s.Po
+	-rm -f stdio/$(DEPDIR)/lib32_libcrtdll_extra_a-mingw_lock.Po
 	-rm -f stdio/$(DEPDIR)/lib32_libmingwex_a-_Exit.Po
 	-rm -f stdio/$(DEPDIR)/lib32_libmingwex_a-_findfirst64i32.Po
 	-rm -f stdio/$(DEPDIR)/lib32_libmingwex_a-_findnext64i32.Po
@@ -73210,6 +73442,7 @@ maintainer-clean: maintainer-clean-am
 	-rm -f complex/$(DEPDIR)/libarm64_libmingwex_a-ctan.Po
 	-rm -f complex/$(DEPDIR)/libarm64_libmingwex_a-ctanf.Po
 	-rm -f complex/$(DEPDIR)/libarm64_libmingwex_a-ctanl.Po
+	-rm -f crt/$(DEPDIR)/lib32_libcrtdll_extra_a-crtdll_compat.Po
 	-rm -f crt/$(DEPDIR)/lib32_libmingw32_a-CRT_fp10.Po
 	-rm -f crt/$(DEPDIR)/lib32_libmingw32_a-_newmode.Po
 	-rm -f crt/$(DEPDIR)/lib32_libmingw32_a-charmax.Po
@@ -74941,6 +75174,14 @@ maintainer-clean: maintainer-clean-am
 	-rm -f math/x86/$(DEPDIR)/lib64_libmingwex_a-tanl.Po
 	-rm -f math/x86/$(DEPDIR)/lib64_libmingwex_a-trunc.Po
 	-rm -f math/x86/$(DEPDIR)/lib64_libmingwex_a-truncf.Po
+	-rm -f misc/$(DEPDIR)/lib32_libcrtdll_extra_a-___mb_cur_max_func.Po
+	-rm -f misc/$(DEPDIR)/lib32_libcrtdll_extra_a-__p___argv.Po
+	-rm -f misc/$(DEPDIR)/lib32_libcrtdll_extra_a-__p__acmdln.Po
+	-rm -f misc/$(DEPDIR)/lib32_libcrtdll_extra_a-__p__commode.Po
+	-rm -f misc/$(DEPDIR)/lib32_libcrtdll_extra_a-__p__fmode.Po
+	-rm -f misc/$(DEPDIR)/lib32_libcrtdll_extra_a-__set_app_type.Po
+	-rm -f misc/$(DEPDIR)/lib32_libcrtdll_extra_a-invalid_parameter_handler.Po
+	-rm -f misc/$(DEPDIR)/lib32_libcrtdll_extra_a-lc_locale_func.Po
 	-rm -f misc/$(DEPDIR)/lib32_libmingwex_a-alarm.Po
 	-rm -f misc/$(DEPDIR)/lib32_libmingwex_a-basename.Po
 	-rm -f misc/$(DEPDIR)/lib32_libmingwex_a-btowc.Po
@@ -75498,6 +75739,7 @@ maintainer-clean: maintainer-clean-am
 	-rm -f secapi/$(DEPDIR)/libarm64_libmsvcrt_extra_a-vsprintf_s.Po
 	-rm -f secapi/$(DEPDIR)/libarm64_libmsvcrt_extra_a-wmemcpy_s.Po
 	-rm -f secapi/$(DEPDIR)/libarm64_libmsvcrt_extra_a-wmemmove_s.Po
+	-rm -f stdio/$(DEPDIR)/lib32_libcrtdll_extra_a-mingw_lock.Po
 	-rm -f stdio/$(DEPDIR)/lib32_libmingwex_a-_Exit.Po
 	-rm -f stdio/$(DEPDIR)/lib32_libmingwex_a-_findfirst64i32.Po
 	-rm -f stdio/$(DEPDIR)/lib32_libmingwex_a-_findnext64i32.Po
@@ -76260,7 +76502,7 @@ _libm_dummy.c:
 @LIB32_TRUE@@W32API_FALSE@	cp $< $@
 @LIB32_TRUE@@W32API_FALSE@lib32/libmsvcrt-os.a: lib-common/msvcrt-os.mri lib32/libmsvcrt_def.a lib32/libmsvcrt_common.a lib32/libmsvcrt_extra.a
 @LIB32_TRUE@@W32API_FALSE@	cd $(dir $@) && $(AR) -M < $(abspath $<)
-@LIB32_TRUE@@W32API_FALSE@lib32/libcrtdll.a: lib32/crtdll.mri lib32/libcrtdll_def.a lib32/libmsvcrt_common.a
+@LIB32_TRUE@@W32API_FALSE@lib32/libcrtdll.a: lib32/crtdll.mri lib32/libcrtdll_def.a lib32/libmsvcrt_common.a lib32/libcrtdll_extra.a
 @LIB32_TRUE@@W32API_FALSE@	cd $(dir $@) && $(AR) -M < $(abspath $<)
 @LIB32_TRUE@@W32API_FALSE@lib32/libmsvcr80.a: lib-common/msvcr80.mri lib32/libmsvcr80_def.a lib32/libmsvcrt_common.a
 @LIB32_TRUE@@W32API_FALSE@	cd $(dir $@) && $(AR) -M < $(abspath $<)
