@@ -1595,8 +1595,8 @@ am__lib32_libuuid_a_SOURCES_DIST = libsrc/ativscp-uuid.c \
 	libsrc/oleidl-uuid.c libsrc/power-uuid.c \
 	libsrc/powrprof-uuid.c libsrc/uianimation-uuid.c \
 	libsrc/usbcamdi-uuid.c libsrc/usbiodef-uuid.c libsrc/uuid.c \
-	libsrc/vds-uuid.c libsrc/virtdisk-uuid.c libsrc/wia-uuid.c \
-	libsrc/windowscodecs.c
+	libsrc/vds-uuid.c libsrc/virtdisk-uuid.c libsrc/vss-uuid.c \
+	libsrc/wia-uuid.c libsrc/windowscodecs.c
 am__objects_42 = libsrc/lib32_libuuid_a-ativscp-uuid.$(OBJEXT) \
 	libsrc/lib32_libuuid_a-atsmedia-uuid.$(OBJEXT) \
 	libsrc/lib32_libuuid_a-bth-uuid.$(OBJEXT) \
@@ -1640,6 +1640,7 @@ am__objects_42 = libsrc/lib32_libuuid_a-ativscp-uuid.$(OBJEXT) \
 	libsrc/lib32_libuuid_a-uuid.$(OBJEXT) \
 	libsrc/lib32_libuuid_a-vds-uuid.$(OBJEXT) \
 	libsrc/lib32_libuuid_a-virtdisk-uuid.$(OBJEXT) \
+	libsrc/lib32_libuuid_a-vss-uuid.$(OBJEXT) \
 	libsrc/lib32_libuuid_a-wia-uuid.$(OBJEXT) \
 	libsrc/lib32_libuuid_a-windowscodecs.$(OBJEXT)
 @LIB32_TRUE@am_lib32_libuuid_a_OBJECTS = $(am__objects_42)
@@ -2892,8 +2893,8 @@ am__lib64_libuuid_a_SOURCES_DIST = libsrc/ativscp-uuid.c \
 	libsrc/oleidl-uuid.c libsrc/power-uuid.c \
 	libsrc/powrprof-uuid.c libsrc/uianimation-uuid.c \
 	libsrc/usbcamdi-uuid.c libsrc/usbiodef-uuid.c libsrc/uuid.c \
-	libsrc/vds-uuid.c libsrc/virtdisk-uuid.c libsrc/wia-uuid.c \
-	libsrc/windowscodecs.c
+	libsrc/vds-uuid.c libsrc/virtdisk-uuid.c libsrc/vss-uuid.c \
+	libsrc/wia-uuid.c libsrc/windowscodecs.c
 am__objects_86 = libsrc/lib64_libuuid_a-ativscp-uuid.$(OBJEXT) \
 	libsrc/lib64_libuuid_a-atsmedia-uuid.$(OBJEXT) \
 	libsrc/lib64_libuuid_a-bth-uuid.$(OBJEXT) \
@@ -2937,6 +2938,7 @@ am__objects_86 = libsrc/lib64_libuuid_a-ativscp-uuid.$(OBJEXT) \
 	libsrc/lib64_libuuid_a-uuid.$(OBJEXT) \
 	libsrc/lib64_libuuid_a-vds-uuid.$(OBJEXT) \
 	libsrc/lib64_libuuid_a-virtdisk-uuid.$(OBJEXT) \
+	libsrc/lib64_libuuid_a-vss-uuid.$(OBJEXT) \
 	libsrc/lib64_libuuid_a-wia-uuid.$(OBJEXT) \
 	libsrc/lib64_libuuid_a-windowscodecs.$(OBJEXT)
 @LIB64_TRUE@am_lib64_libuuid_a_OBJECTS = $(am__objects_86)
@@ -4186,8 +4188,8 @@ am__libarm32_libuuid_a_SOURCES_DIST = libsrc/ativscp-uuid.c \
 	libsrc/oleidl-uuid.c libsrc/power-uuid.c \
 	libsrc/powrprof-uuid.c libsrc/uianimation-uuid.c \
 	libsrc/usbcamdi-uuid.c libsrc/usbiodef-uuid.c libsrc/uuid.c \
-	libsrc/vds-uuid.c libsrc/virtdisk-uuid.c libsrc/wia-uuid.c \
-	libsrc/windowscodecs.c
+	libsrc/vds-uuid.c libsrc/virtdisk-uuid.c libsrc/vss-uuid.c \
+	libsrc/wia-uuid.c libsrc/windowscodecs.c
 am__objects_131 = libsrc/libarm32_libuuid_a-ativscp-uuid.$(OBJEXT) \
 	libsrc/libarm32_libuuid_a-atsmedia-uuid.$(OBJEXT) \
 	libsrc/libarm32_libuuid_a-bth-uuid.$(OBJEXT) \
@@ -4231,6 +4233,7 @@ am__objects_131 = libsrc/libarm32_libuuid_a-ativscp-uuid.$(OBJEXT) \
 	libsrc/libarm32_libuuid_a-uuid.$(OBJEXT) \
 	libsrc/libarm32_libuuid_a-vds-uuid.$(OBJEXT) \
 	libsrc/libarm32_libuuid_a-virtdisk-uuid.$(OBJEXT) \
+	libsrc/libarm32_libuuid_a-vss-uuid.$(OBJEXT) \
 	libsrc/libarm32_libuuid_a-wia-uuid.$(OBJEXT) \
 	libsrc/libarm32_libuuid_a-windowscodecs.$(OBJEXT)
 @LIBARM32_TRUE@am_libarm32_libuuid_a_OBJECTS = $(am__objects_131)
@@ -5365,8 +5368,8 @@ am__libarm64_libuuid_a_SOURCES_DIST = libsrc/ativscp-uuid.c \
 	libsrc/oleidl-uuid.c libsrc/power-uuid.c \
 	libsrc/powrprof-uuid.c libsrc/uianimation-uuid.c \
 	libsrc/usbcamdi-uuid.c libsrc/usbiodef-uuid.c libsrc/uuid.c \
-	libsrc/vds-uuid.c libsrc/virtdisk-uuid.c libsrc/wia-uuid.c \
-	libsrc/windowscodecs.c
+	libsrc/vds-uuid.c libsrc/virtdisk-uuid.c libsrc/vss-uuid.c \
+	libsrc/wia-uuid.c libsrc/windowscodecs.c
 am__objects_171 = libsrc/libarm64_libuuid_a-ativscp-uuid.$(OBJEXT) \
 	libsrc/libarm64_libuuid_a-atsmedia-uuid.$(OBJEXT) \
 	libsrc/libarm64_libuuid_a-bth-uuid.$(OBJEXT) \
@@ -5410,6 +5413,7 @@ am__objects_171 = libsrc/libarm64_libuuid_a-ativscp-uuid.$(OBJEXT) \
 	libsrc/libarm64_libuuid_a-uuid.$(OBJEXT) \
 	libsrc/libarm64_libuuid_a-vds-uuid.$(OBJEXT) \
 	libsrc/libarm64_libuuid_a-virtdisk-uuid.$(OBJEXT) \
+	libsrc/libarm64_libuuid_a-vss-uuid.$(OBJEXT) \
 	libsrc/libarm64_libuuid_a-wia-uuid.$(OBJEXT) \
 	libsrc/libarm64_libuuid_a-windowscodecs.$(OBJEXT)
 @LIBARM64_TRUE@am_libarm64_libuuid_a_OBJECTS = $(am__objects_171)
@@ -6978,6 +6982,7 @@ am__depfiles_remade = ./$(DEPDIR)/lib32_libm_a-_libm_dummy.Po \
 	libsrc/$(DEPDIR)/lib32_libuuid_a-uuid.Po \
 	libsrc/$(DEPDIR)/lib32_libuuid_a-vds-uuid.Po \
 	libsrc/$(DEPDIR)/lib32_libuuid_a-virtdisk-uuid.Po \
+	libsrc/$(DEPDIR)/lib32_libuuid_a-vss-uuid.Po \
 	libsrc/$(DEPDIR)/lib32_libuuid_a-wia-uuid.Po \
 	libsrc/$(DEPDIR)/lib32_libuuid_a-windowscodecs.Po \
 	libsrc/$(DEPDIR)/lib32_libwbemuuid_a-wbemuuid.Po \
@@ -7061,6 +7066,7 @@ am__depfiles_remade = ./$(DEPDIR)/lib32_libm_a-_libm_dummy.Po \
 	libsrc/$(DEPDIR)/lib64_libuuid_a-uuid.Po \
 	libsrc/$(DEPDIR)/lib64_libuuid_a-vds-uuid.Po \
 	libsrc/$(DEPDIR)/lib64_libuuid_a-virtdisk-uuid.Po \
+	libsrc/$(DEPDIR)/lib64_libuuid_a-vss-uuid.Po \
 	libsrc/$(DEPDIR)/lib64_libuuid_a-wia-uuid.Po \
 	libsrc/$(DEPDIR)/lib64_libuuid_a-windowscodecs.Po \
 	libsrc/$(DEPDIR)/lib64_libwbemuuid_a-wbemuuid.Po \
@@ -7143,6 +7149,7 @@ am__depfiles_remade = ./$(DEPDIR)/lib32_libm_a-_libm_dummy.Po \
 	libsrc/$(DEPDIR)/libarm32_libuuid_a-uuid.Po \
 	libsrc/$(DEPDIR)/libarm32_libuuid_a-vds-uuid.Po \
 	libsrc/$(DEPDIR)/libarm32_libuuid_a-virtdisk-uuid.Po \
+	libsrc/$(DEPDIR)/libarm32_libuuid_a-vss-uuid.Po \
 	libsrc/$(DEPDIR)/libarm32_libuuid_a-wia-uuid.Po \
 	libsrc/$(DEPDIR)/libarm32_libuuid_a-windowscodecs.Po \
 	libsrc/$(DEPDIR)/libarm32_libwbemuuid_a-wbemuuid.Po \
@@ -7225,6 +7232,7 @@ am__depfiles_remade = ./$(DEPDIR)/lib32_libm_a-_libm_dummy.Po \
 	libsrc/$(DEPDIR)/libarm64_libuuid_a-uuid.Po \
 	libsrc/$(DEPDIR)/libarm64_libuuid_a-vds-uuid.Po \
 	libsrc/$(DEPDIR)/libarm64_libuuid_a-virtdisk-uuid.Po \
+	libsrc/$(DEPDIR)/libarm64_libuuid_a-vss-uuid.Po \
 	libsrc/$(DEPDIR)/libarm64_libuuid_a-wia-uuid.Po \
 	libsrc/$(DEPDIR)/libarm64_libuuid_a-windowscodecs.Po \
 	libsrc/$(DEPDIR)/libarm64_libwbemuuid_a-wbemuuid.Po \
@@ -10251,7 +10259,7 @@ src_libuuid = \
   libsrc/ntddser-uuid.c   libsrc/ntddstor-uuid.c    libsrc/ntddvdeo-uuid.c    libsrc/oaidl-uuid.c     libsrc/objidl-uuid.c   \
   libsrc/objsafe-uuid.c   libsrc/ocidl-uuid.c       libsrc/oleacc-uuid.c      libsrc/olectlid-uuid.c  libsrc/oleidl-uuid.c   \
   libsrc/power-uuid.c     libsrc/powrprof-uuid.c    libsrc/uianimation-uuid.c libsrc/usbcamdi-uuid.c  libsrc/usbiodef-uuid.c \
-  libsrc/uuid.c           libsrc/vds-uuid.c         libsrc/virtdisk-uuid.c    libsrc/wia-uuid.c \
+  libsrc/uuid.c           libsrc/vds-uuid.c         libsrc/virtdisk-uuid.c    libsrc/vss-uuid.c       libsrc/wia-uuid.c \
   libsrc/windowscodecs.c
 
 src_libws2_32 = libsrc/ws2_32.c \
@@ -14824,6 +14832,8 @@ libsrc/lib32_libuuid_a-vds-uuid.$(OBJEXT): libsrc/$(am__dirstamp) \
 	libsrc/$(DEPDIR)/$(am__dirstamp)
 libsrc/lib32_libuuid_a-virtdisk-uuid.$(OBJEXT):  \
 	libsrc/$(am__dirstamp) libsrc/$(DEPDIR)/$(am__dirstamp)
+libsrc/lib32_libuuid_a-vss-uuid.$(OBJEXT): libsrc/$(am__dirstamp) \
+	libsrc/$(DEPDIR)/$(am__dirstamp)
 libsrc/lib32_libuuid_a-wia-uuid.$(OBJEXT): libsrc/$(am__dirstamp) \
 	libsrc/$(DEPDIR)/$(am__dirstamp)
 libsrc/lib32_libuuid_a-windowscodecs.$(OBJEXT):  \
@@ -16625,6 +16635,8 @@ libsrc/lib64_libuuid_a-vds-uuid.$(OBJEXT): libsrc/$(am__dirstamp) \
 	libsrc/$(DEPDIR)/$(am__dirstamp)
 libsrc/lib64_libuuid_a-virtdisk-uuid.$(OBJEXT):  \
 	libsrc/$(am__dirstamp) libsrc/$(DEPDIR)/$(am__dirstamp)
+libsrc/lib64_libuuid_a-vss-uuid.$(OBJEXT): libsrc/$(am__dirstamp) \
+	libsrc/$(DEPDIR)/$(am__dirstamp)
 libsrc/lib64_libuuid_a-wia-uuid.$(OBJEXT): libsrc/$(am__dirstamp) \
 	libsrc/$(DEPDIR)/$(am__dirstamp)
 libsrc/lib64_libuuid_a-windowscodecs.$(OBJEXT):  \
@@ -18509,6 +18521,8 @@ libsrc/libarm32_libuuid_a-vds-uuid.$(OBJEXT): libsrc/$(am__dirstamp) \
 	libsrc/$(DEPDIR)/$(am__dirstamp)
 libsrc/libarm32_libuuid_a-virtdisk-uuid.$(OBJEXT):  \
 	libsrc/$(am__dirstamp) libsrc/$(DEPDIR)/$(am__dirstamp)
+libsrc/libarm32_libuuid_a-vss-uuid.$(OBJEXT): libsrc/$(am__dirstamp) \
+	libsrc/$(DEPDIR)/$(am__dirstamp)
 libsrc/libarm32_libuuid_a-wia-uuid.$(OBJEXT): libsrc/$(am__dirstamp) \
 	libsrc/$(DEPDIR)/$(am__dirstamp)
 libsrc/libarm32_libuuid_a-windowscodecs.$(OBJEXT):  \
@@ -20168,6 +20182,8 @@ libsrc/libarm64_libuuid_a-vds-uuid.$(OBJEXT): libsrc/$(am__dirstamp) \
 	libsrc/$(DEPDIR)/$(am__dirstamp)
 libsrc/libarm64_libuuid_a-virtdisk-uuid.$(OBJEXT):  \
 	libsrc/$(am__dirstamp) libsrc/$(DEPDIR)/$(am__dirstamp)
+libsrc/libarm64_libuuid_a-vss-uuid.$(OBJEXT): libsrc/$(am__dirstamp) \
+	libsrc/$(DEPDIR)/$(am__dirstamp)
 libsrc/libarm64_libuuid_a-wia-uuid.$(OBJEXT): libsrc/$(am__dirstamp) \
 	libsrc/$(DEPDIR)/$(am__dirstamp)
 libsrc/libarm64_libuuid_a-windowscodecs.$(OBJEXT):  \
@@ -22049,6 +22065,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/lib32_libuuid_a-uuid.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/lib32_libuuid_a-vds-uuid.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/lib32_libuuid_a-virtdisk-uuid.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/lib32_libuuid_a-vss-uuid.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/lib32_libuuid_a-wia-uuid.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/lib32_libuuid_a-windowscodecs.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/lib32_libwbemuuid_a-wbemuuid.Po@am__quote@ # am--include-marker
@@ -22132,6 +22149,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/lib64_libuuid_a-uuid.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/lib64_libuuid_a-vds-uuid.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/lib64_libuuid_a-virtdisk-uuid.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/lib64_libuuid_a-vss-uuid.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/lib64_libuuid_a-wia-uuid.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/lib64_libuuid_a-windowscodecs.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/lib64_libwbemuuid_a-wbemuuid.Po@am__quote@ # am--include-marker
@@ -22214,6 +22232,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/libarm32_libuuid_a-uuid.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/libarm32_libuuid_a-vds-uuid.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/libarm32_libuuid_a-virtdisk-uuid.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/libarm32_libuuid_a-vss-uuid.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/libarm32_libuuid_a-wia-uuid.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/libarm32_libuuid_a-windowscodecs.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/libarm32_libwbemuuid_a-wbemuuid.Po@am__quote@ # am--include-marker
@@ -22296,6 +22315,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/libarm64_libuuid_a-uuid.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/libarm64_libuuid_a-vds-uuid.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/libarm64_libuuid_a-virtdisk-uuid.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/libarm64_libuuid_a-vss-uuid.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/libarm64_libuuid_a-wia-uuid.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/libarm64_libuuid_a-windowscodecs.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libsrc/$(DEPDIR)/libarm64_libwbemuuid_a-wbemuuid.Po@am__quote@ # am--include-marker
@@ -35777,6 +35797,20 @@ libsrc/lib32_libuuid_a-virtdisk-uuid.obj: libsrc/virtdisk-uuid.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libuuid_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libsrc/lib32_libuuid_a-virtdisk-uuid.obj `if test -f 'libsrc/virtdisk-uuid.c'; then $(CYGPATH_W) 'libsrc/virtdisk-uuid.c'; else $(CYGPATH_W) '$(srcdir)/libsrc/virtdisk-uuid.c'; fi`
 
+libsrc/lib32_libuuid_a-vss-uuid.o: libsrc/vss-uuid.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libuuid_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libsrc/lib32_libuuid_a-vss-uuid.o -MD -MP -MF libsrc/$(DEPDIR)/lib32_libuuid_a-vss-uuid.Tpo -c -o libsrc/lib32_libuuid_a-vss-uuid.o `test -f 'libsrc/vss-uuid.c' || echo '$(srcdir)/'`libsrc/vss-uuid.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libsrc/$(DEPDIR)/lib32_libuuid_a-vss-uuid.Tpo libsrc/$(DEPDIR)/lib32_libuuid_a-vss-uuid.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libsrc/vss-uuid.c' object='libsrc/lib32_libuuid_a-vss-uuid.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libuuid_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libsrc/lib32_libuuid_a-vss-uuid.o `test -f 'libsrc/vss-uuid.c' || echo '$(srcdir)/'`libsrc/vss-uuid.c
+
+libsrc/lib32_libuuid_a-vss-uuid.obj: libsrc/vss-uuid.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libuuid_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libsrc/lib32_libuuid_a-vss-uuid.obj -MD -MP -MF libsrc/$(DEPDIR)/lib32_libuuid_a-vss-uuid.Tpo -c -o libsrc/lib32_libuuid_a-vss-uuid.obj `if test -f 'libsrc/vss-uuid.c'; then $(CYGPATH_W) 'libsrc/vss-uuid.c'; else $(CYGPATH_W) '$(srcdir)/libsrc/vss-uuid.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libsrc/$(DEPDIR)/lib32_libuuid_a-vss-uuid.Tpo libsrc/$(DEPDIR)/lib32_libuuid_a-vss-uuid.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libsrc/vss-uuid.c' object='libsrc/lib32_libuuid_a-vss-uuid.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libuuid_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libsrc/lib32_libuuid_a-vss-uuid.obj `if test -f 'libsrc/vss-uuid.c'; then $(CYGPATH_W) 'libsrc/vss-uuid.c'; else $(CYGPATH_W) '$(srcdir)/libsrc/vss-uuid.c'; fi`
+
 libsrc/lib32_libuuid_a-wia-uuid.o: libsrc/wia-uuid.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libuuid_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libsrc/lib32_libuuid_a-wia-uuid.o -MD -MP -MF libsrc/$(DEPDIR)/lib32_libuuid_a-wia-uuid.Tpo -c -o libsrc/lib32_libuuid_a-wia-uuid.o `test -f 'libsrc/wia-uuid.c' || echo '$(srcdir)/'`libsrc/wia-uuid.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libsrc/$(DEPDIR)/lib32_libuuid_a-wia-uuid.Tpo libsrc/$(DEPDIR)/lib32_libuuid_a-wia-uuid.Po
@@ -45884,6 +45918,20 @@ libsrc/lib64_libuuid_a-virtdisk-uuid.obj: libsrc/virtdisk-uuid.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libsrc/virtdisk-uuid.c' object='libsrc/lib64_libuuid_a-virtdisk-uuid.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libuuid_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libsrc/lib64_libuuid_a-virtdisk-uuid.obj `if test -f 'libsrc/virtdisk-uuid.c'; then $(CYGPATH_W) 'libsrc/virtdisk-uuid.c'; else $(CYGPATH_W) '$(srcdir)/libsrc/virtdisk-uuid.c'; fi`
+
+libsrc/lib64_libuuid_a-vss-uuid.o: libsrc/vss-uuid.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libuuid_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libsrc/lib64_libuuid_a-vss-uuid.o -MD -MP -MF libsrc/$(DEPDIR)/lib64_libuuid_a-vss-uuid.Tpo -c -o libsrc/lib64_libuuid_a-vss-uuid.o `test -f 'libsrc/vss-uuid.c' || echo '$(srcdir)/'`libsrc/vss-uuid.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libsrc/$(DEPDIR)/lib64_libuuid_a-vss-uuid.Tpo libsrc/$(DEPDIR)/lib64_libuuid_a-vss-uuid.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libsrc/vss-uuid.c' object='libsrc/lib64_libuuid_a-vss-uuid.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libuuid_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libsrc/lib64_libuuid_a-vss-uuid.o `test -f 'libsrc/vss-uuid.c' || echo '$(srcdir)/'`libsrc/vss-uuid.c
+
+libsrc/lib64_libuuid_a-vss-uuid.obj: libsrc/vss-uuid.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libuuid_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libsrc/lib64_libuuid_a-vss-uuid.obj -MD -MP -MF libsrc/$(DEPDIR)/lib64_libuuid_a-vss-uuid.Tpo -c -o libsrc/lib64_libuuid_a-vss-uuid.obj `if test -f 'libsrc/vss-uuid.c'; then $(CYGPATH_W) 'libsrc/vss-uuid.c'; else $(CYGPATH_W) '$(srcdir)/libsrc/vss-uuid.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libsrc/$(DEPDIR)/lib64_libuuid_a-vss-uuid.Tpo libsrc/$(DEPDIR)/lib64_libuuid_a-vss-uuid.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libsrc/vss-uuid.c' object='libsrc/lib64_libuuid_a-vss-uuid.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libuuid_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libsrc/lib64_libuuid_a-vss-uuid.obj `if test -f 'libsrc/vss-uuid.c'; then $(CYGPATH_W) 'libsrc/vss-uuid.c'; else $(CYGPATH_W) '$(srcdir)/libsrc/vss-uuid.c'; fi`
 
 libsrc/lib64_libuuid_a-wia-uuid.o: libsrc/wia-uuid.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libuuid_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libsrc/lib64_libuuid_a-wia-uuid.o -MD -MP -MF libsrc/$(DEPDIR)/lib64_libuuid_a-wia-uuid.Tpo -c -o libsrc/lib64_libuuid_a-wia-uuid.o `test -f 'libsrc/wia-uuid.c' || echo '$(srcdir)/'`libsrc/wia-uuid.c
@@ -56343,6 +56391,20 @@ libsrc/libarm32_libuuid_a-virtdisk-uuid.obj: libsrc/virtdisk-uuid.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libuuid_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libsrc/libarm32_libuuid_a-virtdisk-uuid.obj `if test -f 'libsrc/virtdisk-uuid.c'; then $(CYGPATH_W) 'libsrc/virtdisk-uuid.c'; else $(CYGPATH_W) '$(srcdir)/libsrc/virtdisk-uuid.c'; fi`
 
+libsrc/libarm32_libuuid_a-vss-uuid.o: libsrc/vss-uuid.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libuuid_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libsrc/libarm32_libuuid_a-vss-uuid.o -MD -MP -MF libsrc/$(DEPDIR)/libarm32_libuuid_a-vss-uuid.Tpo -c -o libsrc/libarm32_libuuid_a-vss-uuid.o `test -f 'libsrc/vss-uuid.c' || echo '$(srcdir)/'`libsrc/vss-uuid.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libsrc/$(DEPDIR)/libarm32_libuuid_a-vss-uuid.Tpo libsrc/$(DEPDIR)/libarm32_libuuid_a-vss-uuid.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libsrc/vss-uuid.c' object='libsrc/libarm32_libuuid_a-vss-uuid.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libuuid_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libsrc/libarm32_libuuid_a-vss-uuid.o `test -f 'libsrc/vss-uuid.c' || echo '$(srcdir)/'`libsrc/vss-uuid.c
+
+libsrc/libarm32_libuuid_a-vss-uuid.obj: libsrc/vss-uuid.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libuuid_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libsrc/libarm32_libuuid_a-vss-uuid.obj -MD -MP -MF libsrc/$(DEPDIR)/libarm32_libuuid_a-vss-uuid.Tpo -c -o libsrc/libarm32_libuuid_a-vss-uuid.obj `if test -f 'libsrc/vss-uuid.c'; then $(CYGPATH_W) 'libsrc/vss-uuid.c'; else $(CYGPATH_W) '$(srcdir)/libsrc/vss-uuid.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libsrc/$(DEPDIR)/libarm32_libuuid_a-vss-uuid.Tpo libsrc/$(DEPDIR)/libarm32_libuuid_a-vss-uuid.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libsrc/vss-uuid.c' object='libsrc/libarm32_libuuid_a-vss-uuid.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libuuid_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libsrc/libarm32_libuuid_a-vss-uuid.obj `if test -f 'libsrc/vss-uuid.c'; then $(CYGPATH_W) 'libsrc/vss-uuid.c'; else $(CYGPATH_W) '$(srcdir)/libsrc/vss-uuid.c'; fi`
+
 libsrc/libarm32_libuuid_a-wia-uuid.o: libsrc/wia-uuid.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libuuid_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libsrc/libarm32_libuuid_a-wia-uuid.o -MD -MP -MF libsrc/$(DEPDIR)/libarm32_libuuid_a-wia-uuid.Tpo -c -o libsrc/libarm32_libuuid_a-wia-uuid.o `test -f 'libsrc/wia-uuid.c' || echo '$(srcdir)/'`libsrc/wia-uuid.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libsrc/$(DEPDIR)/libarm32_libuuid_a-wia-uuid.Tpo libsrc/$(DEPDIR)/libarm32_libuuid_a-wia-uuid.Po
@@ -65737,6 +65799,20 @@ libsrc/libarm64_libuuid_a-virtdisk-uuid.obj: libsrc/virtdisk-uuid.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libuuid_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libsrc/libarm64_libuuid_a-virtdisk-uuid.obj `if test -f 'libsrc/virtdisk-uuid.c'; then $(CYGPATH_W) 'libsrc/virtdisk-uuid.c'; else $(CYGPATH_W) '$(srcdir)/libsrc/virtdisk-uuid.c'; fi`
 
+libsrc/libarm64_libuuid_a-vss-uuid.o: libsrc/vss-uuid.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libuuid_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libsrc/libarm64_libuuid_a-vss-uuid.o -MD -MP -MF libsrc/$(DEPDIR)/libarm64_libuuid_a-vss-uuid.Tpo -c -o libsrc/libarm64_libuuid_a-vss-uuid.o `test -f 'libsrc/vss-uuid.c' || echo '$(srcdir)/'`libsrc/vss-uuid.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libsrc/$(DEPDIR)/libarm64_libuuid_a-vss-uuid.Tpo libsrc/$(DEPDIR)/libarm64_libuuid_a-vss-uuid.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libsrc/vss-uuid.c' object='libsrc/libarm64_libuuid_a-vss-uuid.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libuuid_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libsrc/libarm64_libuuid_a-vss-uuid.o `test -f 'libsrc/vss-uuid.c' || echo '$(srcdir)/'`libsrc/vss-uuid.c
+
+libsrc/libarm64_libuuid_a-vss-uuid.obj: libsrc/vss-uuid.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libuuid_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libsrc/libarm64_libuuid_a-vss-uuid.obj -MD -MP -MF libsrc/$(DEPDIR)/libarm64_libuuid_a-vss-uuid.Tpo -c -o libsrc/libarm64_libuuid_a-vss-uuid.obj `if test -f 'libsrc/vss-uuid.c'; then $(CYGPATH_W) 'libsrc/vss-uuid.c'; else $(CYGPATH_W) '$(srcdir)/libsrc/vss-uuid.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libsrc/$(DEPDIR)/libarm64_libuuid_a-vss-uuid.Tpo libsrc/$(DEPDIR)/libarm64_libuuid_a-vss-uuid.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libsrc/vss-uuid.c' object='libsrc/libarm64_libuuid_a-vss-uuid.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libuuid_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libsrc/libarm64_libuuid_a-vss-uuid.obj `if test -f 'libsrc/vss-uuid.c'; then $(CYGPATH_W) 'libsrc/vss-uuid.c'; else $(CYGPATH_W) '$(srcdir)/libsrc/vss-uuid.c'; fi`
+
 libsrc/libarm64_libuuid_a-wia-uuid.o: libsrc/wia-uuid.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libuuid_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libsrc/libarm64_libuuid_a-wia-uuid.o -MD -MP -MF libsrc/$(DEPDIR)/libarm64_libuuid_a-wia-uuid.Tpo -c -o libsrc/libarm64_libuuid_a-wia-uuid.o `test -f 'libsrc/wia-uuid.c' || echo '$(srcdir)/'`libsrc/wia-uuid.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libsrc/$(DEPDIR)/libarm64_libuuid_a-wia-uuid.Tpo libsrc/$(DEPDIR)/libarm64_libuuid_a-wia-uuid.Po
@@ -70797,6 +70873,7 @@ distclean: distclean-am
 	-rm -f libsrc/$(DEPDIR)/lib32_libuuid_a-uuid.Po
 	-rm -f libsrc/$(DEPDIR)/lib32_libuuid_a-vds-uuid.Po
 	-rm -f libsrc/$(DEPDIR)/lib32_libuuid_a-virtdisk-uuid.Po
+	-rm -f libsrc/$(DEPDIR)/lib32_libuuid_a-vss-uuid.Po
 	-rm -f libsrc/$(DEPDIR)/lib32_libuuid_a-wia-uuid.Po
 	-rm -f libsrc/$(DEPDIR)/lib32_libuuid_a-windowscodecs.Po
 	-rm -f libsrc/$(DEPDIR)/lib32_libwbemuuid_a-wbemuuid.Po
@@ -70880,6 +70957,7 @@ distclean: distclean-am
 	-rm -f libsrc/$(DEPDIR)/lib64_libuuid_a-uuid.Po
 	-rm -f libsrc/$(DEPDIR)/lib64_libuuid_a-vds-uuid.Po
 	-rm -f libsrc/$(DEPDIR)/lib64_libuuid_a-virtdisk-uuid.Po
+	-rm -f libsrc/$(DEPDIR)/lib64_libuuid_a-vss-uuid.Po
 	-rm -f libsrc/$(DEPDIR)/lib64_libuuid_a-wia-uuid.Po
 	-rm -f libsrc/$(DEPDIR)/lib64_libuuid_a-windowscodecs.Po
 	-rm -f libsrc/$(DEPDIR)/lib64_libwbemuuid_a-wbemuuid.Po
@@ -70962,6 +71040,7 @@ distclean: distclean-am
 	-rm -f libsrc/$(DEPDIR)/libarm32_libuuid_a-uuid.Po
 	-rm -f libsrc/$(DEPDIR)/libarm32_libuuid_a-vds-uuid.Po
 	-rm -f libsrc/$(DEPDIR)/libarm32_libuuid_a-virtdisk-uuid.Po
+	-rm -f libsrc/$(DEPDIR)/libarm32_libuuid_a-vss-uuid.Po
 	-rm -f libsrc/$(DEPDIR)/libarm32_libuuid_a-wia-uuid.Po
 	-rm -f libsrc/$(DEPDIR)/libarm32_libuuid_a-windowscodecs.Po
 	-rm -f libsrc/$(DEPDIR)/libarm32_libwbemuuid_a-wbemuuid.Po
@@ -71044,6 +71123,7 @@ distclean: distclean-am
 	-rm -f libsrc/$(DEPDIR)/libarm64_libuuid_a-uuid.Po
 	-rm -f libsrc/$(DEPDIR)/libarm64_libuuid_a-vds-uuid.Po
 	-rm -f libsrc/$(DEPDIR)/libarm64_libuuid_a-virtdisk-uuid.Po
+	-rm -f libsrc/$(DEPDIR)/libarm64_libuuid_a-vss-uuid.Po
 	-rm -f libsrc/$(DEPDIR)/libarm64_libuuid_a-wia-uuid.Po
 	-rm -f libsrc/$(DEPDIR)/libarm64_libuuid_a-windowscodecs.Po
 	-rm -f libsrc/$(DEPDIR)/libarm64_libwbemuuid_a-wbemuuid.Po
@@ -74038,6 +74118,7 @@ maintainer-clean: maintainer-clean-am
 	-rm -f libsrc/$(DEPDIR)/lib32_libuuid_a-uuid.Po
 	-rm -f libsrc/$(DEPDIR)/lib32_libuuid_a-vds-uuid.Po
 	-rm -f libsrc/$(DEPDIR)/lib32_libuuid_a-virtdisk-uuid.Po
+	-rm -f libsrc/$(DEPDIR)/lib32_libuuid_a-vss-uuid.Po
 	-rm -f libsrc/$(DEPDIR)/lib32_libuuid_a-wia-uuid.Po
 	-rm -f libsrc/$(DEPDIR)/lib32_libuuid_a-windowscodecs.Po
 	-rm -f libsrc/$(DEPDIR)/lib32_libwbemuuid_a-wbemuuid.Po
@@ -74121,6 +74202,7 @@ maintainer-clean: maintainer-clean-am
 	-rm -f libsrc/$(DEPDIR)/lib64_libuuid_a-uuid.Po
 	-rm -f libsrc/$(DEPDIR)/lib64_libuuid_a-vds-uuid.Po
 	-rm -f libsrc/$(DEPDIR)/lib64_libuuid_a-virtdisk-uuid.Po
+	-rm -f libsrc/$(DEPDIR)/lib64_libuuid_a-vss-uuid.Po
 	-rm -f libsrc/$(DEPDIR)/lib64_libuuid_a-wia-uuid.Po
 	-rm -f libsrc/$(DEPDIR)/lib64_libuuid_a-windowscodecs.Po
 	-rm -f libsrc/$(DEPDIR)/lib64_libwbemuuid_a-wbemuuid.Po
@@ -74203,6 +74285,7 @@ maintainer-clean: maintainer-clean-am
 	-rm -f libsrc/$(DEPDIR)/libarm32_libuuid_a-uuid.Po
 	-rm -f libsrc/$(DEPDIR)/libarm32_libuuid_a-vds-uuid.Po
 	-rm -f libsrc/$(DEPDIR)/libarm32_libuuid_a-virtdisk-uuid.Po
+	-rm -f libsrc/$(DEPDIR)/libarm32_libuuid_a-vss-uuid.Po
 	-rm -f libsrc/$(DEPDIR)/libarm32_libuuid_a-wia-uuid.Po
 	-rm -f libsrc/$(DEPDIR)/libarm32_libuuid_a-windowscodecs.Po
 	-rm -f libsrc/$(DEPDIR)/libarm32_libwbemuuid_a-wbemuuid.Po
@@ -74285,6 +74368,7 @@ maintainer-clean: maintainer-clean-am
 	-rm -f libsrc/$(DEPDIR)/libarm64_libuuid_a-uuid.Po
 	-rm -f libsrc/$(DEPDIR)/libarm64_libuuid_a-vds-uuid.Po
 	-rm -f libsrc/$(DEPDIR)/libarm64_libuuid_a-virtdisk-uuid.Po
+	-rm -f libsrc/$(DEPDIR)/libarm64_libuuid_a-vss-uuid.Po
 	-rm -f libsrc/$(DEPDIR)/libarm64_libuuid_a-wia-uuid.Po
 	-rm -f libsrc/$(DEPDIR)/libarm64_libuuid_a-windowscodecs.Po
 	-rm -f libsrc/$(DEPDIR)/libarm64_libwbemuuid_a-wbemuuid.Po
