@@ -484,6 +484,7 @@ am__lib32_libcrtdll_extra_a_SOURCES_DIST = crt/crtdll_compat.c \
 	misc/___mb_cur_max_func.c misc/__p___argv.c misc/__p__acmdln.c \
 	misc/__p__commode.c misc/__p__fmode.c misc/__set_app_type.c \
 	misc/invalid_parameter_handler.c misc/lc_locale_func.c \
+	misc/seterrno.c stdio/_scprintf.c stdio/_vscprintf.c \
 	stdio/mingw_lock.c
 am__objects_4 = crt/lib32_libcrtdll_extra_a-crtdll_compat.$(OBJEXT) \
 	misc/lib32_libcrtdll_extra_a-___mb_cur_max_func.$(OBJEXT) \
@@ -494,6 +495,9 @@ am__objects_4 = crt/lib32_libcrtdll_extra_a-crtdll_compat.$(OBJEXT) \
 	misc/lib32_libcrtdll_extra_a-__set_app_type.$(OBJEXT) \
 	misc/lib32_libcrtdll_extra_a-invalid_parameter_handler.$(OBJEXT) \
 	misc/lib32_libcrtdll_extra_a-lc_locale_func.$(OBJEXT) \
+	misc/lib32_libcrtdll_extra_a-seterrno.$(OBJEXT) \
+	stdio/lib32_libcrtdll_extra_a-_scprintf.$(OBJEXT) \
+	stdio/lib32_libcrtdll_extra_a-_vscprintf.$(OBJEXT) \
 	stdio/lib32_libcrtdll_extra_a-mingw_lock.$(OBJEXT)
 @LIB32_TRUE@@W32API_FALSE@am_lib32_libcrtdll_extra_a_OBJECTS =  \
 @LIB32_TRUE@@W32API_FALSE@	$(am__objects_4)
@@ -8142,6 +8146,7 @@ am__depfiles_remade = ./$(DEPDIR)/lib32_libm_a-_libm_dummy.Po \
 	misc/$(DEPDIR)/lib32_libcrtdll_extra_a-__set_app_type.Po \
 	misc/$(DEPDIR)/lib32_libcrtdll_extra_a-invalid_parameter_handler.Po \
 	misc/$(DEPDIR)/lib32_libcrtdll_extra_a-lc_locale_func.Po \
+	misc/$(DEPDIR)/lib32_libcrtdll_extra_a-seterrno.Po \
 	misc/$(DEPDIR)/lib32_libmingwex_a-alarm.Po \
 	misc/$(DEPDIR)/lib32_libmingwex_a-basename.Po \
 	misc/$(DEPDIR)/lib32_libmingwex_a-btowc.Po \
@@ -8699,6 +8704,8 @@ am__depfiles_remade = ./$(DEPDIR)/lib32_libm_a-_libm_dummy.Po \
 	secapi/$(DEPDIR)/libarm64_libmsvcrt_extra_a-vsprintf_s.Po \
 	secapi/$(DEPDIR)/libarm64_libmsvcrt_extra_a-wmemcpy_s.Po \
 	secapi/$(DEPDIR)/libarm64_libmsvcrt_extra_a-wmemmove_s.Po \
+	stdio/$(DEPDIR)/lib32_libcrtdll_extra_a-_scprintf.Po \
+	stdio/$(DEPDIR)/lib32_libcrtdll_extra_a-_vscprintf.Po \
 	stdio/$(DEPDIR)/lib32_libcrtdll_extra_a-mingw_lock.Po \
 	stdio/$(DEPDIR)/lib32_libmingwex_a-_Exit.Po \
 	stdio/$(DEPDIR)/lib32_libmingwex_a-_findfirst64i32.Po \
@@ -10506,6 +10513,9 @@ src_crtdll = \
   misc/__set_app_type.c \
   misc/invalid_parameter_handler.c \
   misc/lc_locale_func.c \
+  misc/seterrno.c \
+  stdio/_scprintf.c \
+  stdio/_vscprintf.c \
   stdio/mingw_lock.c
 
 src_msvcr120_app = \
@@ -13213,12 +13223,18 @@ misc/lib32_libcrtdll_extra_a-invalid_parameter_handler.$(OBJEXT):  \
 	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 misc/lib32_libcrtdll_extra_a-lc_locale_func.$(OBJEXT):  \
 	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
+misc/lib32_libcrtdll_extra_a-seterrno.$(OBJEXT): misc/$(am__dirstamp) \
+	misc/$(DEPDIR)/$(am__dirstamp)
 stdio/$(am__dirstamp):
 	@$(MKDIR_P) stdio
 	@: > stdio/$(am__dirstamp)
 stdio/$(DEPDIR)/$(am__dirstamp):
 	@$(MKDIR_P) stdio/$(DEPDIR)
 	@: > stdio/$(DEPDIR)/$(am__dirstamp)
+stdio/lib32_libcrtdll_extra_a-_scprintf.$(OBJEXT):  \
+	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
+stdio/lib32_libcrtdll_extra_a-_vscprintf.$(OBJEXT):  \
+	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
 stdio/lib32_libcrtdll_extra_a-mingw_lock.$(OBJEXT):  \
 	stdio/$(am__dirstamp) stdio/$(DEPDIR)/$(am__dirstamp)
 
@@ -23251,6 +23267,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libcrtdll_extra_a-__set_app_type.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libcrtdll_extra_a-invalid_parameter_handler.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libcrtdll_extra_a-lc_locale_func.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libcrtdll_extra_a-seterrno.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmingwex_a-alarm.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmingwex_a-basename.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmingwex_a-btowc.Po@am__quote@ # am--include-marker
@@ -23808,6 +23825,8 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@secapi/$(DEPDIR)/libarm64_libmsvcrt_extra_a-vsprintf_s.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@secapi/$(DEPDIR)/libarm64_libmsvcrt_extra_a-wmemcpy_s.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@secapi/$(DEPDIR)/libarm64_libmsvcrt_extra_a-wmemmove_s.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib32_libcrtdll_extra_a-_scprintf.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib32_libcrtdll_extra_a-_vscprintf.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib32_libcrtdll_extra_a-mingw_lock.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib32_libmingwex_a-_Exit.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@stdio/$(DEPDIR)/lib32_libmingwex_a-_findfirst64i32.Po@am__quote@ # am--include-marker
@@ -26686,6 +26705,48 @@ misc/lib32_libcrtdll_extra_a-lc_locale_func.obj: misc/lc_locale_func.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/lc_locale_func.c' object='misc/lib32_libcrtdll_extra_a-lc_locale_func.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libcrtdll_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib32_libcrtdll_extra_a-lc_locale_func.obj `if test -f 'misc/lc_locale_func.c'; then $(CYGPATH_W) 'misc/lc_locale_func.c'; else $(CYGPATH_W) '$(srcdir)/misc/lc_locale_func.c'; fi`
+
+misc/lib32_libcrtdll_extra_a-seterrno.o: misc/seterrno.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libcrtdll_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libcrtdll_extra_a-seterrno.o -MD -MP -MF misc/$(DEPDIR)/lib32_libcrtdll_extra_a-seterrno.Tpo -c -o misc/lib32_libcrtdll_extra_a-seterrno.o `test -f 'misc/seterrno.c' || echo '$(srcdir)/'`misc/seterrno.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libcrtdll_extra_a-seterrno.Tpo misc/$(DEPDIR)/lib32_libcrtdll_extra_a-seterrno.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/seterrno.c' object='misc/lib32_libcrtdll_extra_a-seterrno.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libcrtdll_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib32_libcrtdll_extra_a-seterrno.o `test -f 'misc/seterrno.c' || echo '$(srcdir)/'`misc/seterrno.c
+
+misc/lib32_libcrtdll_extra_a-seterrno.obj: misc/seterrno.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libcrtdll_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libcrtdll_extra_a-seterrno.obj -MD -MP -MF misc/$(DEPDIR)/lib32_libcrtdll_extra_a-seterrno.Tpo -c -o misc/lib32_libcrtdll_extra_a-seterrno.obj `if test -f 'misc/seterrno.c'; then $(CYGPATH_W) 'misc/seterrno.c'; else $(CYGPATH_W) '$(srcdir)/misc/seterrno.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libcrtdll_extra_a-seterrno.Tpo misc/$(DEPDIR)/lib32_libcrtdll_extra_a-seterrno.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/seterrno.c' object='misc/lib32_libcrtdll_extra_a-seterrno.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libcrtdll_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib32_libcrtdll_extra_a-seterrno.obj `if test -f 'misc/seterrno.c'; then $(CYGPATH_W) 'misc/seterrno.c'; else $(CYGPATH_W) '$(srcdir)/misc/seterrno.c'; fi`
+
+stdio/lib32_libcrtdll_extra_a-_scprintf.o: stdio/_scprintf.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libcrtdll_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/lib32_libcrtdll_extra_a-_scprintf.o -MD -MP -MF stdio/$(DEPDIR)/lib32_libcrtdll_extra_a-_scprintf.Tpo -c -o stdio/lib32_libcrtdll_extra_a-_scprintf.o `test -f 'stdio/_scprintf.c' || echo '$(srcdir)/'`stdio/_scprintf.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) stdio/$(DEPDIR)/lib32_libcrtdll_extra_a-_scprintf.Tpo stdio/$(DEPDIR)/lib32_libcrtdll_extra_a-_scprintf.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/_scprintf.c' object='stdio/lib32_libcrtdll_extra_a-_scprintf.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libcrtdll_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/lib32_libcrtdll_extra_a-_scprintf.o `test -f 'stdio/_scprintf.c' || echo '$(srcdir)/'`stdio/_scprintf.c
+
+stdio/lib32_libcrtdll_extra_a-_scprintf.obj: stdio/_scprintf.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libcrtdll_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/lib32_libcrtdll_extra_a-_scprintf.obj -MD -MP -MF stdio/$(DEPDIR)/lib32_libcrtdll_extra_a-_scprintf.Tpo -c -o stdio/lib32_libcrtdll_extra_a-_scprintf.obj `if test -f 'stdio/_scprintf.c'; then $(CYGPATH_W) 'stdio/_scprintf.c'; else $(CYGPATH_W) '$(srcdir)/stdio/_scprintf.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) stdio/$(DEPDIR)/lib32_libcrtdll_extra_a-_scprintf.Tpo stdio/$(DEPDIR)/lib32_libcrtdll_extra_a-_scprintf.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/_scprintf.c' object='stdio/lib32_libcrtdll_extra_a-_scprintf.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libcrtdll_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/lib32_libcrtdll_extra_a-_scprintf.obj `if test -f 'stdio/_scprintf.c'; then $(CYGPATH_W) 'stdio/_scprintf.c'; else $(CYGPATH_W) '$(srcdir)/stdio/_scprintf.c'; fi`
+
+stdio/lib32_libcrtdll_extra_a-_vscprintf.o: stdio/_vscprintf.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libcrtdll_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/lib32_libcrtdll_extra_a-_vscprintf.o -MD -MP -MF stdio/$(DEPDIR)/lib32_libcrtdll_extra_a-_vscprintf.Tpo -c -o stdio/lib32_libcrtdll_extra_a-_vscprintf.o `test -f 'stdio/_vscprintf.c' || echo '$(srcdir)/'`stdio/_vscprintf.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) stdio/$(DEPDIR)/lib32_libcrtdll_extra_a-_vscprintf.Tpo stdio/$(DEPDIR)/lib32_libcrtdll_extra_a-_vscprintf.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/_vscprintf.c' object='stdio/lib32_libcrtdll_extra_a-_vscprintf.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libcrtdll_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/lib32_libcrtdll_extra_a-_vscprintf.o `test -f 'stdio/_vscprintf.c' || echo '$(srcdir)/'`stdio/_vscprintf.c
+
+stdio/lib32_libcrtdll_extra_a-_vscprintf.obj: stdio/_vscprintf.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libcrtdll_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/lib32_libcrtdll_extra_a-_vscprintf.obj -MD -MP -MF stdio/$(DEPDIR)/lib32_libcrtdll_extra_a-_vscprintf.Tpo -c -o stdio/lib32_libcrtdll_extra_a-_vscprintf.obj `if test -f 'stdio/_vscprintf.c'; then $(CYGPATH_W) 'stdio/_vscprintf.c'; else $(CYGPATH_W) '$(srcdir)/stdio/_vscprintf.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) stdio/$(DEPDIR)/lib32_libcrtdll_extra_a-_vscprintf.Tpo stdio/$(DEPDIR)/lib32_libcrtdll_extra_a-_vscprintf.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='stdio/_vscprintf.c' object='stdio/lib32_libcrtdll_extra_a-_vscprintf.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libcrtdll_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o stdio/lib32_libcrtdll_extra_a-_vscprintf.obj `if test -f 'stdio/_vscprintf.c'; then $(CYGPATH_W) 'stdio/_vscprintf.c'; else $(CYGPATH_W) '$(srcdir)/stdio/_vscprintf.c'; fi`
 
 stdio/lib32_libcrtdll_extra_a-mingw_lock.o: stdio/mingw_lock.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libcrtdll_extra_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT stdio/lib32_libcrtdll_extra_a-mingw_lock.o -MD -MP -MF stdio/$(DEPDIR)/lib32_libcrtdll_extra_a-mingw_lock.Tpo -c -o stdio/lib32_libcrtdll_extra_a-mingw_lock.o `test -f 'stdio/mingw_lock.c' || echo '$(srcdir)/'`stdio/mingw_lock.c
@@ -72179,6 +72240,7 @@ distclean: distclean-am
 	-rm -f misc/$(DEPDIR)/lib32_libcrtdll_extra_a-__set_app_type.Po
 	-rm -f misc/$(DEPDIR)/lib32_libcrtdll_extra_a-invalid_parameter_handler.Po
 	-rm -f misc/$(DEPDIR)/lib32_libcrtdll_extra_a-lc_locale_func.Po
+	-rm -f misc/$(DEPDIR)/lib32_libcrtdll_extra_a-seterrno.Po
 	-rm -f misc/$(DEPDIR)/lib32_libmingwex_a-alarm.Po
 	-rm -f misc/$(DEPDIR)/lib32_libmingwex_a-basename.Po
 	-rm -f misc/$(DEPDIR)/lib32_libmingwex_a-btowc.Po
@@ -72736,6 +72798,8 @@ distclean: distclean-am
 	-rm -f secapi/$(DEPDIR)/libarm64_libmsvcrt_extra_a-vsprintf_s.Po
 	-rm -f secapi/$(DEPDIR)/libarm64_libmsvcrt_extra_a-wmemcpy_s.Po
 	-rm -f secapi/$(DEPDIR)/libarm64_libmsvcrt_extra_a-wmemmove_s.Po
+	-rm -f stdio/$(DEPDIR)/lib32_libcrtdll_extra_a-_scprintf.Po
+	-rm -f stdio/$(DEPDIR)/lib32_libcrtdll_extra_a-_vscprintf.Po
 	-rm -f stdio/$(DEPDIR)/lib32_libcrtdll_extra_a-mingw_lock.Po
 	-rm -f stdio/$(DEPDIR)/lib32_libmingwex_a-_Exit.Po
 	-rm -f stdio/$(DEPDIR)/lib32_libmingwex_a-_findfirst64i32.Po
@@ -75432,6 +75496,7 @@ maintainer-clean: maintainer-clean-am
 	-rm -f misc/$(DEPDIR)/lib32_libcrtdll_extra_a-__set_app_type.Po
 	-rm -f misc/$(DEPDIR)/lib32_libcrtdll_extra_a-invalid_parameter_handler.Po
 	-rm -f misc/$(DEPDIR)/lib32_libcrtdll_extra_a-lc_locale_func.Po
+	-rm -f misc/$(DEPDIR)/lib32_libcrtdll_extra_a-seterrno.Po
 	-rm -f misc/$(DEPDIR)/lib32_libmingwex_a-alarm.Po
 	-rm -f misc/$(DEPDIR)/lib32_libmingwex_a-basename.Po
 	-rm -f misc/$(DEPDIR)/lib32_libmingwex_a-btowc.Po
@@ -75989,6 +76054,8 @@ maintainer-clean: maintainer-clean-am
 	-rm -f secapi/$(DEPDIR)/libarm64_libmsvcrt_extra_a-vsprintf_s.Po
 	-rm -f secapi/$(DEPDIR)/libarm64_libmsvcrt_extra_a-wmemcpy_s.Po
 	-rm -f secapi/$(DEPDIR)/libarm64_libmsvcrt_extra_a-wmemmove_s.Po
+	-rm -f stdio/$(DEPDIR)/lib32_libcrtdll_extra_a-_scprintf.Po
+	-rm -f stdio/$(DEPDIR)/lib32_libcrtdll_extra_a-_vscprintf.Po
 	-rm -f stdio/$(DEPDIR)/lib32_libcrtdll_extra_a-mingw_lock.Po
 	-rm -f stdio/$(DEPDIR)/lib32_libmingwex_a-_Exit.Po
 	-rm -f stdio/$(DEPDIR)/lib32_libmingwex_a-_findfirst64i32.Po
