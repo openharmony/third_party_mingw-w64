@@ -10925,33 +10925,33 @@ src_intrincsarm64 =
 @LIB32_TRUE@	lib32/libwdsclientapi.a lib32/libwdscore.a \
 @LIB32_TRUE@	lib32/libwdscsl.a lib32/libwdsimage.a \
 @LIB32_TRUE@	lib32/libwdstptc.a lib32/libwdsupgcompl.a \
-@LIB32_TRUE@	lib32/libwdsutil.a lib32/libwebsocket.a \
-@LIB32_TRUE@	lib32/libwecapi.a lib32/libwer.a \
-@LIB32_TRUE@	lib32/libwevtapi.a lib32/libwevtfwd.a \
-@LIB32_TRUE@	lib32/libwiadss.a lib32/libwimgapi.a \
-@LIB32_TRUE@	lib32/libwin32k.a lib32/libwin32spl.a \
-@LIB32_TRUE@	lib32/libwinhttp.a lib32/libwininet.a \
-@LIB32_TRUE@	lib32/libwinmm.a lib32/libwinscard.a \
-@LIB32_TRUE@	lib32/libwinspool.a lib32/libwinstrm.a \
-@LIB32_TRUE@	lib32/libwintrust.a lib32/libwinusb.a \
-@LIB32_TRUE@	lib32/libwkscli.a lib32/libwlanapi.a \
-@LIB32_TRUE@	lib32/libwlanui.a lib32/libwlanutil.a \
-@LIB32_TRUE@	lib32/libwldap32.a lib32/libwmilib.a \
-@LIB32_TRUE@	lib32/libwofutil.a lib32/libwow32.a \
-@LIB32_TRUE@	lib32/libwsdapi.a lib32/libwsnmp32.a \
-@LIB32_TRUE@	lib32/libwsock32.a lib32/libwst.a \
-@LIB32_TRUE@	lib32/libwtsapi32.a lib32/libx3daudio1_2.a \
-@LIB32_TRUE@	lib32/libx3daudio1_3.a lib32/libx3daudio1_4.a \
-@LIB32_TRUE@	lib32/libx3daudio1_5.a lib32/libx3daudio1_6.a \
-@LIB32_TRUE@	lib32/libx3daudio1_7.a lib32/libx3daudiod1_7.a \
-@LIB32_TRUE@	lib32/libxapofx1_0.a lib32/libxapofx1_1.a \
-@LIB32_TRUE@	lib32/libxapofx1_2.a lib32/libxapofx1_3.a \
-@LIB32_TRUE@	lib32/libxapofx1_4.a lib32/libxapofx1_5.a \
-@LIB32_TRUE@	lib32/libxapofxd1_5.a lib32/libxaudio2_8.a \
-@LIB32_TRUE@	lib32/libxinput1_1.a lib32/libxinput1_2.a \
-@LIB32_TRUE@	lib32/libxinput1_3.a lib32/libxinput1_4.a \
-@LIB32_TRUE@	lib32/libxinput9_1_0.a lib32/libwindowsapp.a \
-@LIB32_TRUE@	$(am__append_9)
+@LIB32_TRUE@	lib32/libwdsutil.a lib32/libwebauthn.a \
+@LIB32_TRUE@	lib32/libwebsocket.a lib32/libwecapi.a \
+@LIB32_TRUE@	lib32/libwer.a lib32/libwevtapi.a \
+@LIB32_TRUE@	lib32/libwevtfwd.a lib32/libwiadss.a \
+@LIB32_TRUE@	lib32/libwimgapi.a lib32/libwin32k.a \
+@LIB32_TRUE@	lib32/libwin32spl.a lib32/libwinhttp.a \
+@LIB32_TRUE@	lib32/libwininet.a lib32/libwinmm.a \
+@LIB32_TRUE@	lib32/libwinscard.a lib32/libwinspool.a \
+@LIB32_TRUE@	lib32/libwinstrm.a lib32/libwintrust.a \
+@LIB32_TRUE@	lib32/libwinusb.a lib32/libwkscli.a \
+@LIB32_TRUE@	lib32/libwlanapi.a lib32/libwlanui.a \
+@LIB32_TRUE@	lib32/libwlanutil.a lib32/libwldap32.a \
+@LIB32_TRUE@	lib32/libwmilib.a lib32/libwofutil.a \
+@LIB32_TRUE@	lib32/libwow32.a lib32/libwsdapi.a \
+@LIB32_TRUE@	lib32/libwsnmp32.a lib32/libwsock32.a \
+@LIB32_TRUE@	lib32/libwst.a lib32/libwtsapi32.a \
+@LIB32_TRUE@	lib32/libx3daudio1_2.a lib32/libx3daudio1_3.a \
+@LIB32_TRUE@	lib32/libx3daudio1_4.a lib32/libx3daudio1_5.a \
+@LIB32_TRUE@	lib32/libx3daudio1_6.a lib32/libx3daudio1_7.a \
+@LIB32_TRUE@	lib32/libx3daudiod1_7.a lib32/libxapofx1_0.a \
+@LIB32_TRUE@	lib32/libxapofx1_1.a lib32/libxapofx1_2.a \
+@LIB32_TRUE@	lib32/libxapofx1_3.a lib32/libxapofx1_4.a \
+@LIB32_TRUE@	lib32/libxapofx1_5.a lib32/libxapofxd1_5.a \
+@LIB32_TRUE@	lib32/libxaudio2_8.a lib32/libxinput1_1.a \
+@LIB32_TRUE@	lib32/libxinput1_2.a lib32/libxinput1_3.a \
+@LIB32_TRUE@	lib32/libxinput1_4.a lib32/libxinput9_1_0.a \
+@LIB32_TRUE@	lib32/libwindowsapp.a $(am__append_9)
 @LIB32_TRUE@lib32_libbits_a_SOURCES = $(src_libbits)
 @LIB32_TRUE@lib32_libbits_a_CPPFLAGS = $(CPPFLAGS32) $(sysincludes)
 @LIB32_TRUE@lib32_libshell32_a_SOURCES = $(src_libshell32)
@@ -11423,53 +11423,54 @@ src_intrincsarm64 =
 @LIB64_TRUE@	lib64/libw3tp.a lib64/libwab32.a lib64/libwabimp.a \
 @LIB64_TRUE@	lib64/libwamreg.a lib64/libwbemcore.a \
 @LIB64_TRUE@	lib64/libwbemupgd.a lib64/libwdigest.a \
-@LIB64_TRUE@	lib64/libwdmaud.a lib64/libwebcheck.a \
-@LIB64_TRUE@	lib64/libwebclnt.a lib64/libwebhits.a \
-@LIB64_TRUE@	lib64/libwebsocket.a lib64/libwiadss.a \
-@LIB64_TRUE@	lib64/libwiarpc.a lib64/libwiaservc.a \
-@LIB64_TRUE@	lib64/libwiashext.a lib64/libwinfax.a \
-@LIB64_TRUE@	lib64/libwinhvemulation.a lib64/libwinhvplatform.a \
-@LIB64_TRUE@	lib64/libwininet.a lib64/libwinipsec.a \
-@LIB64_TRUE@	lib64/libwinmm.a lib64/libwinrnr.a \
-@LIB64_TRUE@	lib64/libwinscard.a lib64/libwinspool.a \
-@LIB64_TRUE@	lib64/libwinsrv.a lib64/libwinsta.a \
-@LIB64_TRUE@	lib64/libwintrust.a lib64/libwkssvc.a \
-@LIB64_TRUE@	lib64/libwldap32.a lib64/libwlnotify.a \
-@LIB64_TRUE@	lib64/libwlstore.a lib64/libwmi2xml.a \
-@LIB64_TRUE@	lib64/libwmiaprpl.a lib64/libwmi.a \
-@LIB64_TRUE@	lib64/libwmilib.a lib64/libwmiprop.a \
-@LIB64_TRUE@	lib64/libwmisvc.a lib64/libwow64cpu.a \
-@LIB64_TRUE@	lib64/libwow64.a lib64/libwow64mib.a \
-@LIB64_TRUE@	lib64/libwow64win.a lib64/libwpd_ci.a \
-@LIB64_TRUE@	lib64/libws2help.a lib64/libwscsvc.a \
-@LIB64_TRUE@	lib64/libwshatm.a lib64/libwshbth.a \
-@LIB64_TRUE@	lib64/libwsock32.a lib64/libzoneoc.a \
-@LIB64_TRUE@	lib64/libnormaliz.a lib64/libclfsw32.a \
-@LIB64_TRUE@	lib64/libdwmapi.a lib64/libntoskrnl.a \
-@LIB64_TRUE@	lib64/libuxtheme.a lib64/libwtsapi32.a \
-@LIB64_TRUE@	lib64/libbcrypt.a lib64/libbthprops.a \
-@LIB64_TRUE@	lib64/libdhcpcsvc6.a lib64/libdxva2.a \
-@LIB64_TRUE@	lib64/libeappcfg.a lib64/libeappgnui.a \
-@LIB64_TRUE@	lib64/libeapphost.a lib64/libeappprxy.a \
-@LIB64_TRUE@	lib64/libevr.a lib64/libiscsidsc.a \
-@LIB64_TRUE@	lib64/libktmw32.a lib64/libmf.a lib64/libmfcore.a \
-@LIB64_TRUE@	lib64/libmfplat.a lib64/libmfplay.a \
-@LIB64_TRUE@	lib64/libmsdrm.a lib64/libncrypt.a \
-@LIB64_TRUE@	lib64/libwecapi.a lib64/libwevtapi.a \
-@LIB64_TRUE@	lib64/libwevtfwd.a lib64/libqutil.a \
-@LIB64_TRUE@	lib64/libconnect.a lib64/libfwpuclnt.a \
-@LIB64_TRUE@	lib64/libndfapi.a lib64/libp2p.a \
-@LIB64_TRUE@	lib64/libp2pcollab.a lib64/libp2pgraph.a \
-@LIB64_TRUE@	lib64/libwdstptc.a lib64/libcscapi.a \
-@LIB64_TRUE@	lib64/librstrtmgr.a lib64/libqwave.a \
-@LIB64_TRUE@	lib64/libwsdapi.a lib64/libvfw32.a \
-@LIB64_TRUE@	lib64/librpcdiag.a lib64/librpchttp.a \
-@LIB64_TRUE@	lib64/libresutil.a lib64/libslwga.a lib64/libslc.a \
-@LIB64_TRUE@	lib64/libslcext.a lib64/libmsctfmonitor.a \
-@LIB64_TRUE@	lib64/libtbs.a lib64/libtdh.a lib64/libtxfw32.a \
-@LIB64_TRUE@	lib64/libwlanui.a lib64/libwlanapi.a \
-@LIB64_TRUE@	lib64/libwlanutil.a lib64/libwer.a lib64/libndis.a \
-@LIB64_TRUE@	lib64/libd2d1.a lib64/libwdscsl.a lib64/libpcwum.a \
+@LIB64_TRUE@	lib64/libwdmaud.a lib64/libwebauthn.a \
+@LIB64_TRUE@	lib64/libwebcheck.a lib64/libwebclnt.a \
+@LIB64_TRUE@	lib64/libwebhits.a lib64/libwebsocket.a \
+@LIB64_TRUE@	lib64/libwiadss.a lib64/libwiarpc.a \
+@LIB64_TRUE@	lib64/libwiaservc.a lib64/libwiashext.a \
+@LIB64_TRUE@	lib64/libwinfax.a lib64/libwinhvemulation.a \
+@LIB64_TRUE@	lib64/libwinhvplatform.a lib64/libwininet.a \
+@LIB64_TRUE@	lib64/libwinipsec.a lib64/libwinmm.a \
+@LIB64_TRUE@	lib64/libwinrnr.a lib64/libwinscard.a \
+@LIB64_TRUE@	lib64/libwinspool.a lib64/libwinsrv.a \
+@LIB64_TRUE@	lib64/libwinsta.a lib64/libwintrust.a \
+@LIB64_TRUE@	lib64/libwkssvc.a lib64/libwldap32.a \
+@LIB64_TRUE@	lib64/libwlnotify.a lib64/libwlstore.a \
+@LIB64_TRUE@	lib64/libwmi2xml.a lib64/libwmiaprpl.a \
+@LIB64_TRUE@	lib64/libwmi.a lib64/libwmilib.a \
+@LIB64_TRUE@	lib64/libwmiprop.a lib64/libwmisvc.a \
+@LIB64_TRUE@	lib64/libwow64cpu.a lib64/libwow64.a \
+@LIB64_TRUE@	lib64/libwow64mib.a lib64/libwow64win.a \
+@LIB64_TRUE@	lib64/libwpd_ci.a lib64/libws2help.a \
+@LIB64_TRUE@	lib64/libwscsvc.a lib64/libwshatm.a \
+@LIB64_TRUE@	lib64/libwshbth.a lib64/libwsock32.a \
+@LIB64_TRUE@	lib64/libzoneoc.a lib64/libnormaliz.a \
+@LIB64_TRUE@	lib64/libclfsw32.a lib64/libdwmapi.a \
+@LIB64_TRUE@	lib64/libntoskrnl.a lib64/libuxtheme.a \
+@LIB64_TRUE@	lib64/libwtsapi32.a lib64/libbcrypt.a \
+@LIB64_TRUE@	lib64/libbthprops.a lib64/libdhcpcsvc6.a \
+@LIB64_TRUE@	lib64/libdxva2.a lib64/libeappcfg.a \
+@LIB64_TRUE@	lib64/libeappgnui.a lib64/libeapphost.a \
+@LIB64_TRUE@	lib64/libeappprxy.a lib64/libevr.a \
+@LIB64_TRUE@	lib64/libiscsidsc.a lib64/libktmw32.a \
+@LIB64_TRUE@	lib64/libmf.a lib64/libmfcore.a lib64/libmfplat.a \
+@LIB64_TRUE@	lib64/libmfplay.a lib64/libmsdrm.a \
+@LIB64_TRUE@	lib64/libncrypt.a lib64/libwecapi.a \
+@LIB64_TRUE@	lib64/libwevtapi.a lib64/libwevtfwd.a \
+@LIB64_TRUE@	lib64/libqutil.a lib64/libconnect.a \
+@LIB64_TRUE@	lib64/libfwpuclnt.a lib64/libndfapi.a \
+@LIB64_TRUE@	lib64/libp2p.a lib64/libp2pcollab.a \
+@LIB64_TRUE@	lib64/libp2pgraph.a lib64/libwdstptc.a \
+@LIB64_TRUE@	lib64/libcscapi.a lib64/librstrtmgr.a \
+@LIB64_TRUE@	lib64/libqwave.a lib64/libwsdapi.a \
+@LIB64_TRUE@	lib64/libvfw32.a lib64/librpcdiag.a \
+@LIB64_TRUE@	lib64/librpchttp.a lib64/libresutil.a \
+@LIB64_TRUE@	lib64/libslwga.a lib64/libslc.a lib64/libslcext.a \
+@LIB64_TRUE@	lib64/libmsctfmonitor.a lib64/libtbs.a \
+@LIB64_TRUE@	lib64/libtdh.a lib64/libtxfw32.a lib64/libwlanui.a \
+@LIB64_TRUE@	lib64/libwlanapi.a lib64/libwlanutil.a \
+@LIB64_TRUE@	lib64/libwer.a lib64/libndis.a lib64/libd2d1.a \
+@LIB64_TRUE@	lib64/libwdscsl.a lib64/libpcwum.a \
 @LIB64_TRUE@	lib64/libwdscore.a lib64/libcryptsp.a \
 @LIB64_TRUE@	lib64/libwdsclient.a lib64/libwdsupgcompl.a \
 @LIB64_TRUE@	lib64/libwdsclientapi.a lib64/libwdsutil.a \
@@ -12158,8 +12159,8 @@ src_intrincsarm64 =
 @LIBARM32_TRUE@	libarm32/libwcneappeerproxy.a libarm32/libwdc.a \
 @LIBARM32_TRUE@	libarm32/libwdiasqmmodule.a libarm32/libwdi.a \
 @LIBARM32_TRUE@	libarm32/libwdigest.a libarm32/libwdscore.a \
-@LIBARM32_TRUE@	libarm32/libwebclnt.a libarm32/libwebio.a \
-@LIBARM32_TRUE@	libarm32/libwebservices.a \
+@LIBARM32_TRUE@	libarm32/libwebauthn.a libarm32/libwebclnt.a \
+@LIBARM32_TRUE@	libarm32/libwebio.a libarm32/libwebservices.a \
 @LIBARM32_TRUE@	libarm32/libwebsocket.a libarm32/libwecapi.a \
 @LIBARM32_TRUE@	libarm32/libwecsvc.a libarm32/libwerconcpl.a \
 @LIBARM32_TRUE@	libarm32/libwercplsupport.a libarm32/libwer.a \
@@ -12519,24 +12520,24 @@ src_intrincsarm64 =
 @LIBARM64_TRUE@	libarm64/libuxtheme.a libarm64/libversion.a \
 @LIBARM64_TRUE@	libarm64/libvirtdisk.a libarm64/libw32time.a \
 @LIBARM64_TRUE@	libarm64/libw32topl.a libarm64/libwdigest.a \
-@LIBARM64_TRUE@	libarm64/libwebclnt.a libarm64/libwebsocket.a \
-@LIBARM64_TRUE@	libarm64/libwecapi.a libarm64/libwevtapi.a \
-@LIBARM64_TRUE@	libarm64/libwiashext.a libarm64/libwimgapi.a \
-@LIBARM64_TRUE@	libarm64/libwindowsapp.a libarm64/libwinhttp.a \
-@LIBARM64_TRUE@	libarm64/libwininet.a libarm64/libwinmm.a \
-@LIBARM64_TRUE@	libarm64/libwinrnr.a libarm64/libwinscard.a \
-@LIBARM64_TRUE@	libarm64/libwinspool.a libarm64/libwinsrv.a \
-@LIBARM64_TRUE@	libarm64/libwinusb.a libarm64/libwkscli.a \
-@LIBARM64_TRUE@	libarm64/libwkssvc.a libarm64/libwlanapi.a \
-@LIBARM64_TRUE@	libarm64/libwlanui.a libarm64/libwlanutil.a \
-@LIBARM64_TRUE@	libarm64/libwldap32.a libarm64/libwmi.a \
-@LIBARM64_TRUE@	libarm64/libwmiprop.a libarm64/libwofutil.a \
-@LIBARM64_TRUE@	libarm64/libwpd_ci.a libarm64/libws2help.a \
-@LIBARM64_TRUE@	libarm64/libwscapi.a libarm64/libwscsvc.a \
-@LIBARM64_TRUE@	libarm64/libwshbth.a libarm64/libwslapi.a \
-@LIBARM64_TRUE@	libarm64/libwsock32.a libarm64/libwtsapi32.a \
-@LIBARM64_TRUE@	libarm64/libxaudio2_8.a libarm64/libxinput1_4.a \
-@LIBARM64_TRUE@	$(am__append_24)
+@LIBARM64_TRUE@	libarm64/libwebauthn.a libarm64/libwebclnt.a \
+@LIBARM64_TRUE@	libarm64/libwebsocket.a libarm64/libwecapi.a \
+@LIBARM64_TRUE@	libarm64/libwevtapi.a libarm64/libwiashext.a \
+@LIBARM64_TRUE@	libarm64/libwimgapi.a libarm64/libwindowsapp.a \
+@LIBARM64_TRUE@	libarm64/libwinhttp.a libarm64/libwininet.a \
+@LIBARM64_TRUE@	libarm64/libwinmm.a libarm64/libwinrnr.a \
+@LIBARM64_TRUE@	libarm64/libwinscard.a libarm64/libwinspool.a \
+@LIBARM64_TRUE@	libarm64/libwinsrv.a libarm64/libwinusb.a \
+@LIBARM64_TRUE@	libarm64/libwkscli.a libarm64/libwkssvc.a \
+@LIBARM64_TRUE@	libarm64/libwlanapi.a libarm64/libwlanui.a \
+@LIBARM64_TRUE@	libarm64/libwlanutil.a libarm64/libwldap32.a \
+@LIBARM64_TRUE@	libarm64/libwmi.a libarm64/libwmiprop.a \
+@LIBARM64_TRUE@	libarm64/libwofutil.a libarm64/libwpd_ci.a \
+@LIBARM64_TRUE@	libarm64/libws2help.a libarm64/libwscapi.a \
+@LIBARM64_TRUE@	libarm64/libwscsvc.a libarm64/libwshbth.a \
+@LIBARM64_TRUE@	libarm64/libwslapi.a libarm64/libwsock32.a \
+@LIBARM64_TRUE@	libarm64/libwtsapi32.a libarm64/libxaudio2_8.a \
+@LIBARM64_TRUE@	libarm64/libxinput1_4.a $(am__append_24)
 @LIBARM64_TRUE@libarm64_libbits_a_SOURCES = $(src_libbits)
 @LIBARM64_TRUE@libarm64_libbits_a_CPPFLAGS = $(CPPFLAGSARM64) $(sysincludes)
 @LIBARM64_TRUE@libarm64_libshell32_a_SOURCES = $(src_libshell32)
