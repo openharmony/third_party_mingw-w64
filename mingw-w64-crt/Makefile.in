@@ -11697,11 +11697,12 @@ src_intrincsarm64 =
 @LIBARM32_TRUE@	libarm32/libbootmenuux.a libarm32/libbootvid.a \
 @LIBARM32_TRUE@	libarm32/libbrokerlib.a libarm32/libbrowcli.a \
 @LIBARM32_TRUE@	libarm32/libbrowser.a libarm32/libbthci.a \
-@LIBARM32_TRUE@	libarm32/libbthpanapi.a libarm32/libbthsqm.a \
-@LIBARM32_TRUE@	libarm32/libcabinet.a libarm32/libcabview.a \
-@LIBARM32_TRUE@	libarm32/libcapisp.a libarm32/libcatsrv.a \
-@LIBARM32_TRUE@	libarm32/libcatsrvut.a libarm32/libcertca.a \
-@LIBARM32_TRUE@	libarm32/libcertcli.a libarm32/libcertenroll.a \
+@LIBARM32_TRUE@	libarm32/libbthpanapi.a libarm32/libbthprops.a \
+@LIBARM32_TRUE@	libarm32/libbthsqm.a libarm32/libcabinet.a \
+@LIBARM32_TRUE@	libarm32/libcabview.a libarm32/libcapisp.a \
+@LIBARM32_TRUE@	libarm32/libcatsrv.a libarm32/libcatsrvut.a \
+@LIBARM32_TRUE@	libarm32/libcertca.a libarm32/libcertcli.a \
+@LIBARM32_TRUE@	libarm32/libcertenroll.a \
 @LIBARM32_TRUE@	libarm32/libcertenrollui.a \
 @LIBARM32_TRUE@	libarm32/libcertpoleng.a libarm32/libcertprop.a \
 @LIBARM32_TRUE@	libarm32/libcfgbkend.a libarm32/libcfgmgr32.a \
@@ -12372,13 +12373,13 @@ src_intrincsarm64 =
 @LIBARM64_TRUE@	libarm64/libbluetoothapis.a \
 @LIBARM64_TRUE@	libarm64/libbootvid.a libarm64/libbrowcli.a \
 @LIBARM64_TRUE@	libarm64/libbrowser.a libarm64/libbthci.a \
-@LIBARM64_TRUE@	libarm64/libcabinet.a libarm64/libcabview.a \
-@LIBARM64_TRUE@	libarm64/libcfgbkend.a libarm64/libcfgmgr32.a \
-@LIBARM64_TRUE@	libarm64/libclbcatq.a libarm64/libclb.a \
-@LIBARM64_TRUE@	libarm64/libcliconfg.a libarm64/libclusapi.a \
-@LIBARM64_TRUE@	libarm64/libcnvfat.a libarm64/libcolbact.a \
-@LIBARM64_TRUE@	libarm64/libcomctl32.a libarm64/libcomdlg32.a \
-@LIBARM64_TRUE@	libarm64/libcompstui.a \
+@LIBARM64_TRUE@	libarm64/libbthprops.a libarm64/libcabinet.a \
+@LIBARM64_TRUE@	libarm64/libcabview.a libarm64/libcfgbkend.a \
+@LIBARM64_TRUE@	libarm64/libcfgmgr32.a libarm64/libclbcatq.a \
+@LIBARM64_TRUE@	libarm64/libclb.a libarm64/libcliconfg.a \
+@LIBARM64_TRUE@	libarm64/libclusapi.a libarm64/libcnvfat.a \
+@LIBARM64_TRUE@	libarm64/libcolbact.a libarm64/libcomctl32.a \
+@LIBARM64_TRUE@	libarm64/libcomdlg32.a libarm64/libcompstui.a \
 @LIBARM64_TRUE@	libarm64/libcomputecore.a \
 @LIBARM64_TRUE@	libarm64/libcomputenetwork.a \
 @LIBARM64_TRUE@	libarm64/libcomputestorage.a \
