@@ -151,7 +151,7 @@ PRE_UNINSTALL = :
 POST_UNINSTALL = :
 build_triplet = @build@
 host_triplet = @host@
-@DLLTOOL_HAS_TEMP_PREFIX_TRUE@am__append_1 = --temp-prefix $$(basename $@ .a)
+@DLLTOOL_HAS_TEMP_PREFIX_TRUE@am__append_1 = --temp-prefix $(basename $@)
 @DELAY_IMPORT_LIBS_TRUE@am__append_2 = --output-delaylib $@.delayimp.a
 @ENABLE_SOFTMATH_FALSE@am__append_3 = \
 @ENABLE_SOFTMATH_FALSE@  math/arm/exp2.S \
