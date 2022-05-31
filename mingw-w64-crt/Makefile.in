@@ -11049,6 +11049,7 @@ src_intrincsarm64 =
 #lib32_DATA += lib32/libkernel32.a  # Handled by custom rule
 #lib32_DATA += lib32/libksuser.a    # Handled by custom rule
 #lib32_DATA += lib32/libmsvcp60.a     # Specialized for W32API conditional
+#lib32_DATA += lib32/libntoskrnl.a    # libntoskrnl.a is provided by a custom rule in the main Makefile.am
 #lib32_DATA += lib32/libshell32.a    # Handled by custom rule
 #lib32_DATA += lib32/libws2_32.a      # Handled by custom rule
 @LIB32_TRUE@lib32_DATA = $(am__append_6) lib32/libaclui.a \
@@ -11156,33 +11157,32 @@ src_intrincsarm64 =
 @LIB32_TRUE@	lib32/libnewdev.a lib32/libnormaliz.a \
 @LIB32_TRUE@	lib32/libntdll.a lib32/libntdllcrt.a \
 @LIB32_TRUE@	lib32/libntdsapi.a lib32/libntmsapi.a \
-@LIB32_TRUE@	lib32/libntoskrnl.a lib32/libntquery.a \
-@LIB32_TRUE@	lib32/libodbc32.a lib32/libodbccp32.a \
-@LIB32_TRUE@	lib32/libole32.a lib32/liboleacc.a \
-@LIB32_TRUE@	lib32/liboleaut32.a lib32/libolecli32.a \
-@LIB32_TRUE@	lib32/liboledlg.a lib32/libolepro32.a \
-@LIB32_TRUE@	lib32/libolesvr32.a lib32/libolethk32.a \
-@LIB32_TRUE@	lib32/libopends60.a lib32/libopengl32.a \
-@LIB32_TRUE@	lib32/libp2p.a lib32/libp2pcollab.a \
-@LIB32_TRUE@	lib32/libp2pgraph.a lib32/libpathcch.a \
-@LIB32_TRUE@	lib32/libpcwum.a lib32/libpdh.a lib32/libpdhui.a \
-@LIB32_TRUE@	lib32/libpenwin32.a lib32/libpkpd32.a \
-@LIB32_TRUE@	lib32/libpowrprof.a lib32/libprntvpt.a \
-@LIB32_TRUE@	lib32/libpropsys.a lib32/libpsapi.a \
-@LIB32_TRUE@	lib32/libquartz.a lib32/libquery.a \
-@LIB32_TRUE@	lib32/libqutil.a lib32/libqwave.a lib32/librapi.a \
-@LIB32_TRUE@	lib32/librasapi32.a lib32/librasdlg.a \
-@LIB32_TRUE@	lib32/libresutil.a lib32/librpcdce4.a \
-@LIB32_TRUE@	lib32/librpcdiag.a lib32/librpchttp.a \
-@LIB32_TRUE@	lib32/librpcns4.a lib32/librpcrt4.a \
-@LIB32_TRUE@	lib32/librstrtmgr.a lib32/librtm.a \
-@LIB32_TRUE@	lib32/librtutils.a lib32/libsamcli.a \
-@LIB32_TRUE@	lib32/libschannel.a lib32/libschedcli.a \
-@LIB32_TRUE@	lib32/libscsiport.a lib32/libsecur32.a \
-@LIB32_TRUE@	lib32/libsecurity.a lib32/libsetupapi.a \
-@LIB32_TRUE@	lib32/libshcore.a lib32/libshfolder.a \
-@LIB32_TRUE@	lib32/libshlwapi.a lib32/libslc.a \
-@LIB32_TRUE@	lib32/libslcext.a lib32/libslwga.a \
+@LIB32_TRUE@	lib32/libntquery.a lib32/libodbc32.a \
+@LIB32_TRUE@	lib32/libodbccp32.a lib32/libole32.a \
+@LIB32_TRUE@	lib32/liboleacc.a lib32/liboleaut32.a \
+@LIB32_TRUE@	lib32/libolecli32.a lib32/liboledlg.a \
+@LIB32_TRUE@	lib32/libolepro32.a lib32/libolesvr32.a \
+@LIB32_TRUE@	lib32/libolethk32.a lib32/libopends60.a \
+@LIB32_TRUE@	lib32/libopengl32.a lib32/libp2p.a \
+@LIB32_TRUE@	lib32/libp2pcollab.a lib32/libp2pgraph.a \
+@LIB32_TRUE@	lib32/libpathcch.a lib32/libpcwum.a lib32/libpdh.a \
+@LIB32_TRUE@	lib32/libpdhui.a lib32/libpenwin32.a \
+@LIB32_TRUE@	lib32/libpkpd32.a lib32/libpowrprof.a \
+@LIB32_TRUE@	lib32/libprntvpt.a lib32/libpropsys.a \
+@LIB32_TRUE@	lib32/libpsapi.a lib32/libquartz.a \
+@LIB32_TRUE@	lib32/libquery.a lib32/libqutil.a lib32/libqwave.a \
+@LIB32_TRUE@	lib32/librapi.a lib32/librasapi32.a \
+@LIB32_TRUE@	lib32/librasdlg.a lib32/libresutil.a \
+@LIB32_TRUE@	lib32/librpcdce4.a lib32/librpcdiag.a \
+@LIB32_TRUE@	lib32/librpchttp.a lib32/librpcns4.a \
+@LIB32_TRUE@	lib32/librpcrt4.a lib32/librstrtmgr.a \
+@LIB32_TRUE@	lib32/librtm.a lib32/librtutils.a \
+@LIB32_TRUE@	lib32/libsamcli.a lib32/libschannel.a \
+@LIB32_TRUE@	lib32/libschedcli.a lib32/libscsiport.a \
+@LIB32_TRUE@	lib32/libsecur32.a lib32/libsecurity.a \
+@LIB32_TRUE@	lib32/libsetupapi.a lib32/libshcore.a \
+@LIB32_TRUE@	lib32/libshfolder.a lib32/libshlwapi.a \
+@LIB32_TRUE@	lib32/libslc.a lib32/libslcext.a lib32/libslwga.a \
 @LIB32_TRUE@	lib32/libsnmpapi.a lib32/libspoolss.a \
 @LIB32_TRUE@	lib32/libsrvcli.a lib32/libsspicli.a \
 @LIB32_TRUE@	lib32/libsvrapi.a lib32/libsxs.a \
