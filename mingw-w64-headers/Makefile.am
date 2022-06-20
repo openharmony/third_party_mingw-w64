@@ -10,6 +10,9 @@ wrlheaddir = $(baseheaddir)/wrl
 wrlwrappersheaddir = $(baseheaddir)/wrl/wrappers
 mingwhelperheaddir = $(baseheaddir)/psdk_inc
 sdksheaddir = $(baseheaddir)/sdks
+pythonheaddir = $(baseheaddir)/python3.10
+pythoninternalheaddir = $(baseheaddir)/python3.10/internal
+pythoncpythonheaddir = $(baseheaddir)/python3.10/cpython
 
 basehead_HEADERS = @BASEHEAD_LIST@
 syshead_HEADERS = @SYSHEAD_LIST@
@@ -21,6 +24,9 @@ gdiplushead_HEADERS = @GDIPLUSHEAD_LIST@
 wrlhead_HEADERS = @WRLHEAD_LIST@
 wrlwrappershead_HEADERS = @WRLWRAPPERSHEAD_LIST@
 mingwhelperhead_HEADERS = @MINGWHELPERHEAD_LIST@
+pythonhead_HEADERS = @PYTHONHEAD_LIST@
+pythoninternalhead_HEADERS = @PYTHONINTERNALHEAD_LIST@
+pythoncpythonhead_HEADERS = @PYTHONCPYTHONHEAD_LIST@
 nodist_sdkshead_HEADERS = _mingw_directx.h _mingw_ddk.h
 noinst_HEADERS = crt/sdks/_mingw_directx.h.in crt/sdks/_mingw_ddk.h.in
 
