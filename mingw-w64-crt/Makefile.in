@@ -11181,6 +11181,7 @@ src_intrincsarm64 =
 @LIB32_TRUE@	lib32/libsamcli.a lib32/libschannel.a \
 @LIB32_TRUE@	lib32/libschedcli.a lib32/libscsiport.a \
 @LIB32_TRUE@	lib32/libsecur32.a lib32/libsecurity.a \
+@LIB32_TRUE@	lib32/libsensapi.a lib32/libsens.a \
 @LIB32_TRUE@	lib32/libsetupapi.a lib32/libshcore.a \
 @LIB32_TRUE@	lib32/libshfolder.a lib32/libshlwapi.a \
 @LIB32_TRUE@	lib32/libslc.a lib32/libslcext.a lib32/libslwga.a \
