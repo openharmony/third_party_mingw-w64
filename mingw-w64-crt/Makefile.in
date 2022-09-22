@@ -78245,15 +78245,15 @@ _libm_dummy.c:
 @LIB32_TRUE@@W32API_FALSE@	cd $(dir $@) && $(AR) -M < $(abspath $<)
 @LIB32_TRUE@@W32API_FALSE@lib32/libcrtdll.a: lib32/crtdll.mri lib32/libcrtdll_def.a lib32/libmsvcrt_common.a lib32/libcrtdll_extra.a
 @LIB32_TRUE@@W32API_FALSE@	cd $(dir $@) && $(AR) -M < $(abspath $<)
-@LIB32_TRUE@@W32API_FALSE@lib32/libmsvcrt10.a: lib32/msvcrt10.mri lib32/libmsvcrt10_def.a lib32/libmsvcrt_common.a
+@LIB32_TRUE@@W32API_FALSE@lib32/libmsvcrt10.a: lib32/msvcrt10.mri lib32/libmsvcrt10_def.a lib32/libmsvcrt_common.a lib32/libmsvcrt10_extra.a
 @LIB32_TRUE@@W32API_FALSE@	cd $(dir $@) && $(AR) -M < $(abspath $<)
-@LIB32_TRUE@@W32API_FALSE@lib32/libmsvcrt20.a: lib32/msvcrt20.mri lib32/libmsvcrt20_def.a lib32/libmsvcrt_common.a
+@LIB32_TRUE@@W32API_FALSE@lib32/libmsvcrt20.a: lib32/msvcrt20.mri lib32/libmsvcrt20_def.a lib32/libmsvcrt_common.a lib32/libmsvcrt20_extra.a
 @LIB32_TRUE@@W32API_FALSE@	cd $(dir $@) && $(AR) -M < $(abspath $<)
-@LIB32_TRUE@@W32API_FALSE@lib32/libmsvcrt40.a: lib32/msvcrt40.mri lib32/libmsvcrt40_def.a lib32/libmsvcrt_common.a
+@LIB32_TRUE@@W32API_FALSE@lib32/libmsvcrt40.a: lib32/msvcrt40.mri lib32/libmsvcrt40_def.a lib32/libmsvcrt_common.a lib32/libmsvcrt40_extra.a
 @LIB32_TRUE@@W32API_FALSE@	cd $(dir $@) && $(AR) -M < $(abspath $<)
-@LIB32_TRUE@@W32API_FALSE@lib32/libmsvcr70.a: lib32/msvcr70.mri lib32/libmsvcr70_def.a lib32/libmsvcrt_common.a
+@LIB32_TRUE@@W32API_FALSE@lib32/libmsvcr70.a: lib32/msvcr70.mri lib32/libmsvcr70_def.a lib32/libmsvcrt_common.a lib32/libmsvcr70_extra.a
 @LIB32_TRUE@@W32API_FALSE@	cd $(dir $@) && $(AR) -M < $(abspath $<)
-@LIB32_TRUE@@W32API_FALSE@lib32/libmsvcr71.a: lib32/msvcr71.mri lib32/libmsvcr71_def.a lib32/libmsvcrt_common.a
+@LIB32_TRUE@@W32API_FALSE@lib32/libmsvcr71.a: lib32/msvcr71.mri lib32/libmsvcr71_def.a lib32/libmsvcrt_common.a lib32/libmsvcr71_extra.a
 @LIB32_TRUE@@W32API_FALSE@	cd $(dir $@) && $(AR) -M < $(abspath $<)
 @LIB32_TRUE@@W32API_FALSE@lib32/libmsvcr80.a: lib-common/msvcr80.mri lib32/libmsvcr80_def.a lib32/libmsvcrt_common.a
 @LIB32_TRUE@@W32API_FALSE@	cd $(dir $@) && $(AR) -M < $(abspath $<)
