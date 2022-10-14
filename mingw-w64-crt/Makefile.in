@@ -11389,7 +11389,8 @@ src_intrincsarm64 =
 @LIB32_TRUE@	lib32/libxaudio2_8.a lib32/libxinput1_1.a \
 @LIB32_TRUE@	lib32/libxinput1_2.a lib32/libxinput1_3.a \
 @LIB32_TRUE@	lib32/libxinput1_4.a lib32/libxinput9_1_0.a \
-@LIB32_TRUE@	lib32/libwindowsapp.a $(am__append_10)
+@LIB32_TRUE@	lib32/libxmllite.a lib32/libwindowsapp.a \
+@LIB32_TRUE@	$(am__append_10)
 @LIB32_TRUE@lib32_libbits_a_SOURCES = $(src_libbits)
 @LIB32_TRUE@lib32_libbits_a_CPPFLAGS = $(CPPFLAGS32) $(sysincludes)
 @LIB32_TRUE@lib32_libshell32_a_SOURCES = $(src_libshell32)
@@ -11971,7 +11972,7 @@ src_intrincsarm64 =
 @LIB64_TRUE@	lib64/libruntimeobject.a \
 @LIB64_TRUE@	lib64/libsynchronization.a lib64/libwindowsapp.a \
 @LIB64_TRUE@	lib64/libwscapi.a lib64/libwslapi.a \
-@LIB64_TRUE@	$(am__append_15)
+@LIB64_TRUE@	lib64/libxmllite.a $(am__append_15)
 @LIB64_TRUE@lib64_libbits_a_SOURCES = $(src_libbits)
 @LIB64_TRUE@lib64_libbits_a_CPPFLAGS = $(CPPFLAGS64) $(sysincludes)
 @LIB64_TRUE@lib64_libshell32_a_SOURCES = $(src_libshell32)
@@ -13004,7 +13005,7 @@ src_intrincsarm64 =
 @LIBARM64_TRUE@	libarm64/libwshbth.a libarm64/libwslapi.a \
 @LIBARM64_TRUE@	libarm64/libwsock32.a libarm64/libwtsapi32.a \
 @LIBARM64_TRUE@	libarm64/libxaudio2_8.a libarm64/libxinput1_4.a \
-@LIBARM64_TRUE@	$(am__append_25)
+@LIBARM64_TRUE@	libarm64/libxmllite.a $(am__append_25)
 @LIBARM64_TRUE@libarm64_libbits_a_SOURCES = $(src_libbits)
 @LIBARM64_TRUE@libarm64_libbits_a_CPPFLAGS = $(CPPFLAGSARM64) $(sysincludes)
 @LIBARM64_TRUE@libarm64_libshell32_a_SOURCES = $(src_libshell32)
