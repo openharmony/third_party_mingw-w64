@@ -852,18 +852,18 @@ am__lib32_libmingwex_a_SOURCES_DIST = cfguard/mingw_cfguard_support.c \
 	misc/mingw_mbwc_convert.c misc/mingw_usleep.c \
 	misc/mingw_wcstod.c misc/mingw_wcstof.c misc/mingw_wcstold.c \
 	misc/mkstemp.c misc/sleep.c misc/strnlen.c misc/strsafe.c \
-	misc/strtoimax.c misc/strtoumax.c misc/tdelete.c misc/tfind.c \
-	misc/tsearch.c misc/twalk.c misc/wcsnlen.c misc/wcstof.c \
-	misc/wcstoimax.c misc/wcstold.c misc/wcstoumax.c misc/wctob.c \
-	misc/wctrans.c misc/wctype.c misc/wdirent.c \
-	misc/winbs_uint64.c misc/winbs_ulong.c misc/winbs_ushort.c \
-	misc/wmemchr.c misc/wmemcmp.c misc/wmemcpy.c misc/wmemmove.c \
-	misc/wmempcpy.c misc/wmemset.c misc/ftw.c misc/ftw64.c \
-	misc/mingw-access.c ssp/chk_fail.c ssp/memcpy_chk.c \
-	ssp/memmove_chk.c ssp/mempcpy_chk.c ssp/memset_chk.c \
-	ssp/stack_chk_fail.c ssp/stack_chk_guard.c ssp/strcat_chk.c \
-	ssp/stpcpy_chk.c ssp/strcpy_chk.c ssp/strncat_chk.c \
-	ssp/strncpy_chk.c stdio/mingw_pformat.h \
+	misc/strtoimax.c misc/strtoumax.c misc/tdelete.c \
+	misc/tdestroy.c misc/tfind.c misc/tsearch.c misc/twalk.c \
+	misc/wcsnlen.c misc/wcstof.c misc/wcstoimax.c misc/wcstold.c \
+	misc/wcstoumax.c misc/wctob.c misc/wctrans.c misc/wctype.c \
+	misc/wdirent.c misc/winbs_uint64.c misc/winbs_ulong.c \
+	misc/winbs_ushort.c misc/wmemchr.c misc/wmemcmp.c \
+	misc/wmemcpy.c misc/wmemmove.c misc/wmempcpy.c misc/wmemset.c \
+	misc/ftw.c misc/ftw64.c misc/mingw-access.c ssp/chk_fail.c \
+	ssp/memcpy_chk.c ssp/memmove_chk.c ssp/mempcpy_chk.c \
+	ssp/memset_chk.c ssp/stack_chk_fail.c ssp/stack_chk_guard.c \
+	ssp/strcat_chk.c ssp/stpcpy_chk.c ssp/strcpy_chk.c \
+	ssp/strncat_chk.c ssp/strncpy_chk.c stdio/mingw_pformat.h \
 	stdio/scanf2-argcount-char.c stdio/scanf2-argcount-wchar.c \
 	stdio/vfscanf2.S stdio/vfwscanf2.S stdio/vscanf2.S \
 	stdio/vsscanf2.S stdio/vswscanf2.S stdio/vwscanf2.S \
@@ -1144,6 +1144,7 @@ am__objects_23 =  \
 	misc/lib32_libmingwex_a-strtoimax.$(OBJEXT) \
 	misc/lib32_libmingwex_a-strtoumax.$(OBJEXT) \
 	misc/lib32_libmingwex_a-tdelete.$(OBJEXT) \
+	misc/lib32_libmingwex_a-tdestroy.$(OBJEXT) \
 	misc/lib32_libmingwex_a-tfind.$(OBJEXT) \
 	misc/lib32_libmingwex_a-tsearch.$(OBJEXT) \
 	misc/lib32_libmingwex_a-twalk.$(OBJEXT) \
@@ -2272,18 +2273,18 @@ am__lib64_libmingwex_a_SOURCES_DIST = cfguard/mingw_cfguard_support.c \
 	misc/mingw_mbwc_convert.c misc/mingw_usleep.c \
 	misc/mingw_wcstod.c misc/mingw_wcstof.c misc/mingw_wcstold.c \
 	misc/mkstemp.c misc/sleep.c misc/strnlen.c misc/strsafe.c \
-	misc/strtoimax.c misc/strtoumax.c misc/tdelete.c misc/tfind.c \
-	misc/tsearch.c misc/twalk.c misc/wcsnlen.c misc/wcstof.c \
-	misc/wcstoimax.c misc/wcstold.c misc/wcstoumax.c misc/wctob.c \
-	misc/wctrans.c misc/wctype.c misc/wdirent.c \
-	misc/winbs_uint64.c misc/winbs_ulong.c misc/winbs_ushort.c \
-	misc/wmemchr.c misc/wmemcmp.c misc/wmemcpy.c misc/wmemmove.c \
-	misc/wmempcpy.c misc/wmemset.c misc/ftw.c misc/ftw64.c \
-	misc/mingw-access.c ssp/chk_fail.c ssp/memcpy_chk.c \
-	ssp/memmove_chk.c ssp/mempcpy_chk.c ssp/memset_chk.c \
-	ssp/stack_chk_fail.c ssp/stack_chk_guard.c ssp/strcat_chk.c \
-	ssp/stpcpy_chk.c ssp/strcpy_chk.c ssp/strncat_chk.c \
-	ssp/strncpy_chk.c stdio/mingw_pformat.h \
+	misc/strtoimax.c misc/strtoumax.c misc/tdelete.c \
+	misc/tdestroy.c misc/tfind.c misc/tsearch.c misc/twalk.c \
+	misc/wcsnlen.c misc/wcstof.c misc/wcstoimax.c misc/wcstold.c \
+	misc/wcstoumax.c misc/wctob.c misc/wctrans.c misc/wctype.c \
+	misc/wdirent.c misc/winbs_uint64.c misc/winbs_ulong.c \
+	misc/winbs_ushort.c misc/wmemchr.c misc/wmemcmp.c \
+	misc/wmemcpy.c misc/wmemmove.c misc/wmempcpy.c misc/wmemset.c \
+	misc/ftw.c misc/ftw64.c misc/mingw-access.c ssp/chk_fail.c \
+	ssp/memcpy_chk.c ssp/memmove_chk.c ssp/mempcpy_chk.c \
+	ssp/memset_chk.c ssp/stack_chk_fail.c ssp/stack_chk_guard.c \
+	ssp/strcat_chk.c ssp/stpcpy_chk.c ssp/strcpy_chk.c \
+	ssp/strncat_chk.c ssp/strncpy_chk.c stdio/mingw_pformat.h \
 	stdio/scanf2-argcount-char.c stdio/scanf2-argcount-wchar.c \
 	stdio/vfscanf2.S stdio/vfwscanf2.S stdio/vscanf2.S \
 	stdio/vsscanf2.S stdio/vswscanf2.S stdio/vwscanf2.S \
@@ -2564,6 +2565,7 @@ am__objects_75 =  \
 	misc/lib64_libmingwex_a-strtoimax.$(OBJEXT) \
 	misc/lib64_libmingwex_a-strtoumax.$(OBJEXT) \
 	misc/lib64_libmingwex_a-tdelete.$(OBJEXT) \
+	misc/lib64_libmingwex_a-tdestroy.$(OBJEXT) \
 	misc/lib64_libmingwex_a-tfind.$(OBJEXT) \
 	misc/lib64_libmingwex_a-tsearch.$(OBJEXT) \
 	misc/lib64_libmingwex_a-twalk.$(OBJEXT) \
@@ -3562,18 +3564,18 @@ am__libarm32_libmingwex_a_SOURCES_DIST =  \
 	misc/mingw_mbwc_convert.c misc/mingw_usleep.c \
 	misc/mingw_wcstod.c misc/mingw_wcstof.c misc/mingw_wcstold.c \
 	misc/mkstemp.c misc/sleep.c misc/strnlen.c misc/strsafe.c \
-	misc/strtoimax.c misc/strtoumax.c misc/tdelete.c misc/tfind.c \
-	misc/tsearch.c misc/twalk.c misc/wcsnlen.c misc/wcstof.c \
-	misc/wcstoimax.c misc/wcstold.c misc/wcstoumax.c misc/wctob.c \
-	misc/wctrans.c misc/wctype.c misc/wdirent.c \
-	misc/winbs_uint64.c misc/winbs_ulong.c misc/winbs_ushort.c \
-	misc/wmemchr.c misc/wmemcmp.c misc/wmemcpy.c misc/wmemmove.c \
-	misc/wmempcpy.c misc/wmemset.c misc/ftw.c misc/ftw64.c \
-	misc/mingw-access.c ssp/chk_fail.c ssp/memcpy_chk.c \
-	ssp/memmove_chk.c ssp/mempcpy_chk.c ssp/memset_chk.c \
-	ssp/stack_chk_fail.c ssp/stack_chk_guard.c ssp/strcat_chk.c \
-	ssp/stpcpy_chk.c ssp/strcpy_chk.c ssp/strncat_chk.c \
-	ssp/strncpy_chk.c stdio/mingw_pformat.h \
+	misc/strtoimax.c misc/strtoumax.c misc/tdelete.c \
+	misc/tdestroy.c misc/tfind.c misc/tsearch.c misc/twalk.c \
+	misc/wcsnlen.c misc/wcstof.c misc/wcstoimax.c misc/wcstold.c \
+	misc/wcstoumax.c misc/wctob.c misc/wctrans.c misc/wctype.c \
+	misc/wdirent.c misc/winbs_uint64.c misc/winbs_ulong.c \
+	misc/winbs_ushort.c misc/wmemchr.c misc/wmemcmp.c \
+	misc/wmemcpy.c misc/wmemmove.c misc/wmempcpy.c misc/wmemset.c \
+	misc/ftw.c misc/ftw64.c misc/mingw-access.c ssp/chk_fail.c \
+	ssp/memcpy_chk.c ssp/memmove_chk.c ssp/mempcpy_chk.c \
+	ssp/memset_chk.c ssp/stack_chk_fail.c ssp/stack_chk_guard.c \
+	ssp/strcat_chk.c ssp/stpcpy_chk.c ssp/strcpy_chk.c \
+	ssp/strncat_chk.c ssp/strncpy_chk.c stdio/mingw_pformat.h \
 	stdio/scanf2-argcount-char.c stdio/scanf2-argcount-wchar.c \
 	stdio/vfscanf2.S stdio/vfwscanf2.S stdio/vscanf2.S \
 	stdio/vsscanf2.S stdio/vswscanf2.S stdio/vwscanf2.S \
@@ -3859,6 +3861,7 @@ am__objects_121 =  \
 	misc/libarm32_libmingwex_a-strtoimax.$(OBJEXT) \
 	misc/libarm32_libmingwex_a-strtoumax.$(OBJEXT) \
 	misc/libarm32_libmingwex_a-tdelete.$(OBJEXT) \
+	misc/libarm32_libmingwex_a-tdestroy.$(OBJEXT) \
 	misc/libarm32_libmingwex_a-tfind.$(OBJEXT) \
 	misc/libarm32_libmingwex_a-tsearch.$(OBJEXT) \
 	misc/libarm32_libmingwex_a-twalk.$(OBJEXT) \
@@ -4899,18 +4902,18 @@ am__libarm64_libmingwex_a_SOURCES_DIST =  \
 	misc/mingw_mbwc_convert.c misc/mingw_usleep.c \
 	misc/mingw_wcstod.c misc/mingw_wcstof.c misc/mingw_wcstold.c \
 	misc/mkstemp.c misc/sleep.c misc/strnlen.c misc/strsafe.c \
-	misc/strtoimax.c misc/strtoumax.c misc/tdelete.c misc/tfind.c \
-	misc/tsearch.c misc/twalk.c misc/wcsnlen.c misc/wcstof.c \
-	misc/wcstoimax.c misc/wcstold.c misc/wcstoumax.c misc/wctob.c \
-	misc/wctrans.c misc/wctype.c misc/wdirent.c \
-	misc/winbs_uint64.c misc/winbs_ulong.c misc/winbs_ushort.c \
-	misc/wmemchr.c misc/wmemcmp.c misc/wmemcpy.c misc/wmemmove.c \
-	misc/wmempcpy.c misc/wmemset.c misc/ftw.c misc/ftw64.c \
-	misc/mingw-access.c ssp/chk_fail.c ssp/memcpy_chk.c \
-	ssp/memmove_chk.c ssp/mempcpy_chk.c ssp/memset_chk.c \
-	ssp/stack_chk_fail.c ssp/stack_chk_guard.c ssp/strcat_chk.c \
-	ssp/stpcpy_chk.c ssp/strcpy_chk.c ssp/strncat_chk.c \
-	ssp/strncpy_chk.c stdio/mingw_pformat.h \
+	misc/strtoimax.c misc/strtoumax.c misc/tdelete.c \
+	misc/tdestroy.c misc/tfind.c misc/tsearch.c misc/twalk.c \
+	misc/wcsnlen.c misc/wcstof.c misc/wcstoimax.c misc/wcstold.c \
+	misc/wcstoumax.c misc/wctob.c misc/wctrans.c misc/wctype.c \
+	misc/wdirent.c misc/winbs_uint64.c misc/winbs_ulong.c \
+	misc/winbs_ushort.c misc/wmemchr.c misc/wmemcmp.c \
+	misc/wmemcpy.c misc/wmemmove.c misc/wmempcpy.c misc/wmemset.c \
+	misc/ftw.c misc/ftw64.c misc/mingw-access.c ssp/chk_fail.c \
+	ssp/memcpy_chk.c ssp/memmove_chk.c ssp/mempcpy_chk.c \
+	ssp/memset_chk.c ssp/stack_chk_fail.c ssp/stack_chk_guard.c \
+	ssp/strcat_chk.c ssp/stpcpy_chk.c ssp/strcpy_chk.c \
+	ssp/strncat_chk.c ssp/strncpy_chk.c stdio/mingw_pformat.h \
 	stdio/scanf2-argcount-char.c stdio/scanf2-argcount-wchar.c \
 	stdio/vfscanf2.S stdio/vfwscanf2.S stdio/vscanf2.S \
 	stdio/vsscanf2.S stdio/vswscanf2.S stdio/vwscanf2.S \
@@ -5162,6 +5165,7 @@ am__objects_167 =  \
 	misc/libarm64_libmingwex_a-strtoimax.$(OBJEXT) \
 	misc/libarm64_libmingwex_a-strtoumax.$(OBJEXT) \
 	misc/libarm64_libmingwex_a-tdelete.$(OBJEXT) \
+	misc/libarm64_libmingwex_a-tdestroy.$(OBJEXT) \
 	misc/libarm64_libmingwex_a-tfind.$(OBJEXT) \
 	misc/libarm64_libmingwex_a-tsearch.$(OBJEXT) \
 	misc/libarm64_libmingwex_a-twalk.$(OBJEXT) \
@@ -8462,6 +8466,7 @@ am__depfiles_remade = ./$(DEPDIR)/lib32_libm_a-_libm_dummy.Po \
 	misc/$(DEPDIR)/lib32_libmingwex_a-strtoimax.Po \
 	misc/$(DEPDIR)/lib32_libmingwex_a-strtoumax.Po \
 	misc/$(DEPDIR)/lib32_libmingwex_a-tdelete.Po \
+	misc/$(DEPDIR)/lib32_libmingwex_a-tdestroy.Po \
 	misc/$(DEPDIR)/lib32_libmingwex_a-tfind.Po \
 	misc/$(DEPDIR)/lib32_libmingwex_a-tsearch.Po \
 	misc/$(DEPDIR)/lib32_libmingwex_a-twalk.Po \
@@ -8581,6 +8586,7 @@ am__depfiles_remade = ./$(DEPDIR)/lib32_libm_a-_libm_dummy.Po \
 	misc/$(DEPDIR)/lib64_libmingwex_a-strtoimax.Po \
 	misc/$(DEPDIR)/lib64_libmingwex_a-strtoumax.Po \
 	misc/$(DEPDIR)/lib64_libmingwex_a-tdelete.Po \
+	misc/$(DEPDIR)/lib64_libmingwex_a-tdestroy.Po \
 	misc/$(DEPDIR)/lib64_libmingwex_a-tfind.Po \
 	misc/$(DEPDIR)/lib64_libmingwex_a-tsearch.Po \
 	misc/$(DEPDIR)/lib64_libmingwex_a-twalk.Po \
@@ -8684,6 +8690,7 @@ am__depfiles_remade = ./$(DEPDIR)/lib32_libm_a-_libm_dummy.Po \
 	misc/$(DEPDIR)/libarm32_libmingwex_a-strtoimax.Po \
 	misc/$(DEPDIR)/libarm32_libmingwex_a-strtoumax.Po \
 	misc/$(DEPDIR)/libarm32_libmingwex_a-tdelete.Po \
+	misc/$(DEPDIR)/libarm32_libmingwex_a-tdestroy.Po \
 	misc/$(DEPDIR)/libarm32_libmingwex_a-tfind.Po \
 	misc/$(DEPDIR)/libarm32_libmingwex_a-tsearch.Po \
 	misc/$(DEPDIR)/libarm32_libmingwex_a-twalk.Po \
@@ -8780,6 +8787,7 @@ am__depfiles_remade = ./$(DEPDIR)/lib32_libm_a-_libm_dummy.Po \
 	misc/$(DEPDIR)/libarm64_libmingwex_a-strtoimax.Po \
 	misc/$(DEPDIR)/libarm64_libmingwex_a-strtoumax.Po \
 	misc/$(DEPDIR)/libarm64_libmingwex_a-tdelete.Po \
+	misc/$(DEPDIR)/libarm64_libmingwex_a-tdestroy.Po \
 	misc/$(DEPDIR)/libarm64_libmingwex_a-tfind.Po \
 	misc/$(DEPDIR)/libarm64_libmingwex_a-tsearch.Po \
 	misc/$(DEPDIR)/libarm64_libmingwex_a-twalk.Po \
@@ -11032,18 +11040,18 @@ src_libmingwex = cfguard/mingw_cfguard_support.c crt/dllentry.c \
 	misc/mingw_mbwc_convert.c misc/mingw_usleep.c \
 	misc/mingw_wcstod.c misc/mingw_wcstof.c misc/mingw_wcstold.c \
 	misc/mkstemp.c misc/sleep.c misc/strnlen.c misc/strsafe.c \
-	misc/strtoimax.c misc/strtoumax.c misc/tdelete.c misc/tfind.c \
-	misc/tsearch.c misc/twalk.c misc/wcsnlen.c misc/wcstof.c \
-	misc/wcstoimax.c misc/wcstold.c misc/wcstoumax.c misc/wctob.c \
-	misc/wctrans.c misc/wctype.c misc/wdirent.c \
-	misc/winbs_uint64.c misc/winbs_ulong.c misc/winbs_ushort.c \
-	misc/wmemchr.c misc/wmemcmp.c misc/wmemcpy.c misc/wmemmove.c \
-	misc/wmempcpy.c misc/wmemset.c misc/ftw.c misc/ftw64.c \
-	misc/mingw-access.c ssp/chk_fail.c ssp/memcpy_chk.c \
-	ssp/memmove_chk.c ssp/mempcpy_chk.c ssp/memset_chk.c \
-	ssp/stack_chk_fail.c ssp/stack_chk_guard.c ssp/strcat_chk.c \
-	ssp/stpcpy_chk.c ssp/strcpy_chk.c ssp/strncat_chk.c \
-	ssp/strncpy_chk.c stdio/mingw_pformat.h \
+	misc/strtoimax.c misc/strtoumax.c misc/tdelete.c \
+	misc/tdestroy.c misc/tfind.c misc/tsearch.c misc/twalk.c \
+	misc/wcsnlen.c misc/wcstof.c misc/wcstoimax.c misc/wcstold.c \
+	misc/wcstoumax.c misc/wctob.c misc/wctrans.c misc/wctype.c \
+	misc/wdirent.c misc/winbs_uint64.c misc/winbs_ulong.c \
+	misc/winbs_ushort.c misc/wmemchr.c misc/wmemcmp.c \
+	misc/wmemcpy.c misc/wmemmove.c misc/wmempcpy.c misc/wmemset.c \
+	misc/ftw.c misc/ftw64.c misc/mingw-access.c ssp/chk_fail.c \
+	ssp/memcpy_chk.c ssp/memmove_chk.c ssp/mempcpy_chk.c \
+	ssp/memset_chk.c ssp/stack_chk_fail.c ssp/stack_chk_guard.c \
+	ssp/strcat_chk.c ssp/stpcpy_chk.c ssp/strcpy_chk.c \
+	ssp/strncat_chk.c ssp/strncpy_chk.c stdio/mingw_pformat.h \
 	stdio/scanf2-argcount-char.c stdio/scanf2-argcount-wchar.c \
 	stdio/vfscanf2.S stdio/vfwscanf2.S stdio/vscanf2.S \
 	stdio/vsscanf2.S stdio/vswscanf2.S stdio/vwscanf2.S \
@@ -14546,6 +14554,8 @@ misc/lib32_libmingwex_a-strtoumax.$(OBJEXT): misc/$(am__dirstamp) \
 	misc/$(DEPDIR)/$(am__dirstamp)
 misc/lib32_libmingwex_a-tdelete.$(OBJEXT): misc/$(am__dirstamp) \
 	misc/$(DEPDIR)/$(am__dirstamp)
+misc/lib32_libmingwex_a-tdestroy.$(OBJEXT): misc/$(am__dirstamp) \
+	misc/$(DEPDIR)/$(am__dirstamp)
 misc/lib32_libmingwex_a-tfind.$(OBJEXT): misc/$(am__dirstamp) \
 	misc/$(DEPDIR)/$(am__dirstamp)
 misc/lib32_libmingwex_a-tsearch.$(OBJEXT): misc/$(am__dirstamp) \
@@ -16519,6 +16529,8 @@ misc/lib64_libmingwex_a-strtoumax.$(OBJEXT): misc/$(am__dirstamp) \
 	misc/$(DEPDIR)/$(am__dirstamp)
 misc/lib64_libmingwex_a-tdelete.$(OBJEXT): misc/$(am__dirstamp) \
 	misc/$(DEPDIR)/$(am__dirstamp)
+misc/lib64_libmingwex_a-tdestroy.$(OBJEXT): misc/$(am__dirstamp) \
+	misc/$(DEPDIR)/$(am__dirstamp)
 misc/lib64_libmingwex_a-tfind.$(OBJEXT): misc/$(am__dirstamp) \
 	misc/$(DEPDIR)/$(am__dirstamp)
 misc/lib64_libmingwex_a-tsearch.$(OBJEXT): misc/$(am__dirstamp) \
@@ -18283,6 +18295,8 @@ misc/libarm32_libmingwex_a-strtoimax.$(OBJEXT): misc/$(am__dirstamp) \
 misc/libarm32_libmingwex_a-strtoumax.$(OBJEXT): misc/$(am__dirstamp) \
 	misc/$(DEPDIR)/$(am__dirstamp)
 misc/libarm32_libmingwex_a-tdelete.$(OBJEXT): misc/$(am__dirstamp) \
+	misc/$(DEPDIR)/$(am__dirstamp)
+misc/libarm32_libmingwex_a-tdestroy.$(OBJEXT): misc/$(am__dirstamp) \
 	misc/$(DEPDIR)/$(am__dirstamp)
 misc/libarm32_libmingwex_a-tfind.$(OBJEXT): misc/$(am__dirstamp) \
 	misc/$(DEPDIR)/$(am__dirstamp)
@@ -20216,6 +20230,8 @@ misc/libarm64_libmingwex_a-strtoimax.$(OBJEXT): misc/$(am__dirstamp) \
 misc/libarm64_libmingwex_a-strtoumax.$(OBJEXT): misc/$(am__dirstamp) \
 	misc/$(DEPDIR)/$(am__dirstamp)
 misc/libarm64_libmingwex_a-tdelete.$(OBJEXT): misc/$(am__dirstamp) \
+	misc/$(DEPDIR)/$(am__dirstamp)
+misc/libarm64_libmingwex_a-tdestroy.$(OBJEXT): misc/$(am__dirstamp) \
 	misc/$(DEPDIR)/$(am__dirstamp)
 misc/libarm64_libmingwex_a-tfind.$(OBJEXT): misc/$(am__dirstamp) \
 	misc/$(DEPDIR)/$(am__dirstamp)
@@ -24118,6 +24134,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmingwex_a-strtoimax.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmingwex_a-strtoumax.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmingwex_a-tdelete.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmingwex_a-tdestroy.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmingwex_a-tfind.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmingwex_a-tsearch.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmingwex_a-twalk.Po@am__quote@ # am--include-marker
@@ -24237,6 +24254,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmingwex_a-strtoimax.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmingwex_a-strtoumax.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmingwex_a-tdelete.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmingwex_a-tdestroy.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmingwex_a-tfind.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmingwex_a-tsearch.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmingwex_a-twalk.Po@am__quote@ # am--include-marker
@@ -24340,6 +24358,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm32_libmingwex_a-strtoimax.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm32_libmingwex_a-strtoumax.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm32_libmingwex_a-tdelete.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm32_libmingwex_a-tdestroy.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm32_libmingwex_a-tfind.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm32_libmingwex_a-tsearch.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm32_libmingwex_a-twalk.Po@am__quote@ # am--include-marker
@@ -24436,6 +24455,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm64_libmingwex_a-strtoimax.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm64_libmingwex_a-strtoumax.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm64_libmingwex_a-tdelete.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm64_libmingwex_a-tdestroy.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm64_libmingwex_a-tfind.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm64_libmingwex_a-tsearch.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm64_libmingwex_a-twalk.Po@am__quote@ # am--include-marker
@@ -32490,6 +32510,20 @@ misc/lib32_libmingwex_a-tdelete.obj: misc/tdelete.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/tdelete.c' object='misc/lib32_libmingwex_a-tdelete.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib32_libmingwex_a-tdelete.obj `if test -f 'misc/tdelete.c'; then $(CYGPATH_W) 'misc/tdelete.c'; else $(CYGPATH_W) '$(srcdir)/misc/tdelete.c'; fi`
+
+misc/lib32_libmingwex_a-tdestroy.o: misc/tdestroy.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libmingwex_a-tdestroy.o -MD -MP -MF misc/$(DEPDIR)/lib32_libmingwex_a-tdestroy.Tpo -c -o misc/lib32_libmingwex_a-tdestroy.o `test -f 'misc/tdestroy.c' || echo '$(srcdir)/'`misc/tdestroy.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libmingwex_a-tdestroy.Tpo misc/$(DEPDIR)/lib32_libmingwex_a-tdestroy.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/tdestroy.c' object='misc/lib32_libmingwex_a-tdestroy.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib32_libmingwex_a-tdestroy.o `test -f 'misc/tdestroy.c' || echo '$(srcdir)/'`misc/tdestroy.c
+
+misc/lib32_libmingwex_a-tdestroy.obj: misc/tdestroy.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libmingwex_a-tdestroy.obj -MD -MP -MF misc/$(DEPDIR)/lib32_libmingwex_a-tdestroy.Tpo -c -o misc/lib32_libmingwex_a-tdestroy.obj `if test -f 'misc/tdestroy.c'; then $(CYGPATH_W) 'misc/tdestroy.c'; else $(CYGPATH_W) '$(srcdir)/misc/tdestroy.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libmingwex_a-tdestroy.Tpo misc/$(DEPDIR)/lib32_libmingwex_a-tdestroy.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/tdestroy.c' object='misc/lib32_libmingwex_a-tdestroy.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib32_libmingwex_a-tdestroy.obj `if test -f 'misc/tdestroy.c'; then $(CYGPATH_W) 'misc/tdestroy.c'; else $(CYGPATH_W) '$(srcdir)/misc/tdestroy.c'; fi`
 
 misc/lib32_libmingwex_a-tfind.o: misc/tfind.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libmingwex_a-tfind.o -MD -MP -MF misc/$(DEPDIR)/lib32_libmingwex_a-tfind.Tpo -c -o misc/lib32_libmingwex_a-tfind.o `test -f 'misc/tfind.c' || echo '$(srcdir)/'`misc/tfind.c
@@ -43369,6 +43403,20 @@ misc/lib64_libmingwex_a-tdelete.obj: misc/tdelete.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib64_libmingwex_a-tdelete.obj `if test -f 'misc/tdelete.c'; then $(CYGPATH_W) 'misc/tdelete.c'; else $(CYGPATH_W) '$(srcdir)/misc/tdelete.c'; fi`
 
+misc/lib64_libmingwex_a-tdestroy.o: misc/tdestroy.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib64_libmingwex_a-tdestroy.o -MD -MP -MF misc/$(DEPDIR)/lib64_libmingwex_a-tdestroy.Tpo -c -o misc/lib64_libmingwex_a-tdestroy.o `test -f 'misc/tdestroy.c' || echo '$(srcdir)/'`misc/tdestroy.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib64_libmingwex_a-tdestroy.Tpo misc/$(DEPDIR)/lib64_libmingwex_a-tdestroy.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/tdestroy.c' object='misc/lib64_libmingwex_a-tdestroy.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib64_libmingwex_a-tdestroy.o `test -f 'misc/tdestroy.c' || echo '$(srcdir)/'`misc/tdestroy.c
+
+misc/lib64_libmingwex_a-tdestroy.obj: misc/tdestroy.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib64_libmingwex_a-tdestroy.obj -MD -MP -MF misc/$(DEPDIR)/lib64_libmingwex_a-tdestroy.Tpo -c -o misc/lib64_libmingwex_a-tdestroy.obj `if test -f 'misc/tdestroy.c'; then $(CYGPATH_W) 'misc/tdestroy.c'; else $(CYGPATH_W) '$(srcdir)/misc/tdestroy.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib64_libmingwex_a-tdestroy.Tpo misc/$(DEPDIR)/lib64_libmingwex_a-tdestroy.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/tdestroy.c' object='misc/lib64_libmingwex_a-tdestroy.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib64_libmingwex_a-tdestroy.obj `if test -f 'misc/tdestroy.c'; then $(CYGPATH_W) 'misc/tdestroy.c'; else $(CYGPATH_W) '$(srcdir)/misc/tdestroy.c'; fi`
+
 misc/lib64_libmingwex_a-tfind.o: misc/tfind.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib64_libmingwex_a-tfind.o -MD -MP -MF misc/$(DEPDIR)/lib64_libmingwex_a-tfind.Tpo -c -o misc/lib64_libmingwex_a-tfind.o `test -f 'misc/tfind.c' || echo '$(srcdir)/'`misc/tfind.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib64_libmingwex_a-tfind.Tpo misc/$(DEPDIR)/lib64_libmingwex_a-tfind.Po
@@ -53308,6 +53356,20 @@ misc/libarm32_libmingwex_a-tdelete.obj: misc/tdelete.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/tdelete.c' object='misc/libarm32_libmingwex_a-tdelete.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/libarm32_libmingwex_a-tdelete.obj `if test -f 'misc/tdelete.c'; then $(CYGPATH_W) 'misc/tdelete.c'; else $(CYGPATH_W) '$(srcdir)/misc/tdelete.c'; fi`
+
+misc/libarm32_libmingwex_a-tdestroy.o: misc/tdestroy.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/libarm32_libmingwex_a-tdestroy.o -MD -MP -MF misc/$(DEPDIR)/libarm32_libmingwex_a-tdestroy.Tpo -c -o misc/libarm32_libmingwex_a-tdestroy.o `test -f 'misc/tdestroy.c' || echo '$(srcdir)/'`misc/tdestroy.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/libarm32_libmingwex_a-tdestroy.Tpo misc/$(DEPDIR)/libarm32_libmingwex_a-tdestroy.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/tdestroy.c' object='misc/libarm32_libmingwex_a-tdestroy.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/libarm32_libmingwex_a-tdestroy.o `test -f 'misc/tdestroy.c' || echo '$(srcdir)/'`misc/tdestroy.c
+
+misc/libarm32_libmingwex_a-tdestroy.obj: misc/tdestroy.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/libarm32_libmingwex_a-tdestroy.obj -MD -MP -MF misc/$(DEPDIR)/libarm32_libmingwex_a-tdestroy.Tpo -c -o misc/libarm32_libmingwex_a-tdestroy.obj `if test -f 'misc/tdestroy.c'; then $(CYGPATH_W) 'misc/tdestroy.c'; else $(CYGPATH_W) '$(srcdir)/misc/tdestroy.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/libarm32_libmingwex_a-tdestroy.Tpo misc/$(DEPDIR)/libarm32_libmingwex_a-tdestroy.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/tdestroy.c' object='misc/libarm32_libmingwex_a-tdestroy.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/libarm32_libmingwex_a-tdestroy.obj `if test -f 'misc/tdestroy.c'; then $(CYGPATH_W) 'misc/tdestroy.c'; else $(CYGPATH_W) '$(srcdir)/misc/tdestroy.c'; fi`
 
 misc/libarm32_libmingwex_a-tfind.o: misc/tfind.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/libarm32_libmingwex_a-tfind.o -MD -MP -MF misc/$(DEPDIR)/libarm32_libmingwex_a-tfind.Tpo -c -o misc/libarm32_libmingwex_a-tfind.o `test -f 'misc/tfind.c' || echo '$(srcdir)/'`misc/tfind.c
@@ -64060,6 +64122,20 @@ misc/libarm64_libmingwex_a-tdelete.obj: misc/tdelete.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/tdelete.c' object='misc/libarm64_libmingwex_a-tdelete.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/libarm64_libmingwex_a-tdelete.obj `if test -f 'misc/tdelete.c'; then $(CYGPATH_W) 'misc/tdelete.c'; else $(CYGPATH_W) '$(srcdir)/misc/tdelete.c'; fi`
+
+misc/libarm64_libmingwex_a-tdestroy.o: misc/tdestroy.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/libarm64_libmingwex_a-tdestroy.o -MD -MP -MF misc/$(DEPDIR)/libarm64_libmingwex_a-tdestroy.Tpo -c -o misc/libarm64_libmingwex_a-tdestroy.o `test -f 'misc/tdestroy.c' || echo '$(srcdir)/'`misc/tdestroy.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/libarm64_libmingwex_a-tdestroy.Tpo misc/$(DEPDIR)/libarm64_libmingwex_a-tdestroy.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/tdestroy.c' object='misc/libarm64_libmingwex_a-tdestroy.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/libarm64_libmingwex_a-tdestroy.o `test -f 'misc/tdestroy.c' || echo '$(srcdir)/'`misc/tdestroy.c
+
+misc/libarm64_libmingwex_a-tdestroy.obj: misc/tdestroy.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/libarm64_libmingwex_a-tdestroy.obj -MD -MP -MF misc/$(DEPDIR)/libarm64_libmingwex_a-tdestroy.Tpo -c -o misc/libarm64_libmingwex_a-tdestroy.obj `if test -f 'misc/tdestroy.c'; then $(CYGPATH_W) 'misc/tdestroy.c'; else $(CYGPATH_W) '$(srcdir)/misc/tdestroy.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/libarm64_libmingwex_a-tdestroy.Tpo misc/$(DEPDIR)/libarm64_libmingwex_a-tdestroy.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/tdestroy.c' object='misc/libarm64_libmingwex_a-tdestroy.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/libarm64_libmingwex_a-tdestroy.obj `if test -f 'misc/tdestroy.c'; then $(CYGPATH_W) 'misc/tdestroy.c'; else $(CYGPATH_W) '$(srcdir)/misc/tdestroy.c'; fi`
 
 misc/libarm64_libmingwex_a-tfind.o: misc/tfind.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmingwex_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/libarm64_libmingwex_a-tfind.o -MD -MP -MF misc/$(DEPDIR)/libarm64_libmingwex_a-tfind.Tpo -c -o misc/libarm64_libmingwex_a-tfind.o `test -f 'misc/tfind.c' || echo '$(srcdir)/'`misc/tfind.c
@@ -74834,6 +74910,7 @@ distclean: distclean-am
 	-rm -f misc/$(DEPDIR)/lib32_libmingwex_a-strtoimax.Po
 	-rm -f misc/$(DEPDIR)/lib32_libmingwex_a-strtoumax.Po
 	-rm -f misc/$(DEPDIR)/lib32_libmingwex_a-tdelete.Po
+	-rm -f misc/$(DEPDIR)/lib32_libmingwex_a-tdestroy.Po
 	-rm -f misc/$(DEPDIR)/lib32_libmingwex_a-tfind.Po
 	-rm -f misc/$(DEPDIR)/lib32_libmingwex_a-tsearch.Po
 	-rm -f misc/$(DEPDIR)/lib32_libmingwex_a-twalk.Po
@@ -74953,6 +75030,7 @@ distclean: distclean-am
 	-rm -f misc/$(DEPDIR)/lib64_libmingwex_a-strtoimax.Po
 	-rm -f misc/$(DEPDIR)/lib64_libmingwex_a-strtoumax.Po
 	-rm -f misc/$(DEPDIR)/lib64_libmingwex_a-tdelete.Po
+	-rm -f misc/$(DEPDIR)/lib64_libmingwex_a-tdestroy.Po
 	-rm -f misc/$(DEPDIR)/lib64_libmingwex_a-tfind.Po
 	-rm -f misc/$(DEPDIR)/lib64_libmingwex_a-tsearch.Po
 	-rm -f misc/$(DEPDIR)/lib64_libmingwex_a-twalk.Po
@@ -75056,6 +75134,7 @@ distclean: distclean-am
 	-rm -f misc/$(DEPDIR)/libarm32_libmingwex_a-strtoimax.Po
 	-rm -f misc/$(DEPDIR)/libarm32_libmingwex_a-strtoumax.Po
 	-rm -f misc/$(DEPDIR)/libarm32_libmingwex_a-tdelete.Po
+	-rm -f misc/$(DEPDIR)/libarm32_libmingwex_a-tdestroy.Po
 	-rm -f misc/$(DEPDIR)/libarm32_libmingwex_a-tfind.Po
 	-rm -f misc/$(DEPDIR)/libarm32_libmingwex_a-tsearch.Po
 	-rm -f misc/$(DEPDIR)/libarm32_libmingwex_a-twalk.Po
@@ -75152,6 +75231,7 @@ distclean: distclean-am
 	-rm -f misc/$(DEPDIR)/libarm64_libmingwex_a-strtoimax.Po
 	-rm -f misc/$(DEPDIR)/libarm64_libmingwex_a-strtoumax.Po
 	-rm -f misc/$(DEPDIR)/libarm64_libmingwex_a-tdelete.Po
+	-rm -f misc/$(DEPDIR)/libarm64_libmingwex_a-tdestroy.Po
 	-rm -f misc/$(DEPDIR)/libarm64_libmingwex_a-tfind.Po
 	-rm -f misc/$(DEPDIR)/libarm64_libmingwex_a-tsearch.Po
 	-rm -f misc/$(DEPDIR)/libarm64_libmingwex_a-twalk.Po
@@ -78206,6 +78286,7 @@ maintainer-clean: maintainer-clean-am
 	-rm -f misc/$(DEPDIR)/lib32_libmingwex_a-strtoimax.Po
 	-rm -f misc/$(DEPDIR)/lib32_libmingwex_a-strtoumax.Po
 	-rm -f misc/$(DEPDIR)/lib32_libmingwex_a-tdelete.Po
+	-rm -f misc/$(DEPDIR)/lib32_libmingwex_a-tdestroy.Po
 	-rm -f misc/$(DEPDIR)/lib32_libmingwex_a-tfind.Po
 	-rm -f misc/$(DEPDIR)/lib32_libmingwex_a-tsearch.Po
 	-rm -f misc/$(DEPDIR)/lib32_libmingwex_a-twalk.Po
@@ -78325,6 +78406,7 @@ maintainer-clean: maintainer-clean-am
 	-rm -f misc/$(DEPDIR)/lib64_libmingwex_a-strtoimax.Po
 	-rm -f misc/$(DEPDIR)/lib64_libmingwex_a-strtoumax.Po
 	-rm -f misc/$(DEPDIR)/lib64_libmingwex_a-tdelete.Po
+	-rm -f misc/$(DEPDIR)/lib64_libmingwex_a-tdestroy.Po
 	-rm -f misc/$(DEPDIR)/lib64_libmingwex_a-tfind.Po
 	-rm -f misc/$(DEPDIR)/lib64_libmingwex_a-tsearch.Po
 	-rm -f misc/$(DEPDIR)/lib64_libmingwex_a-twalk.Po
@@ -78428,6 +78510,7 @@ maintainer-clean: maintainer-clean-am
 	-rm -f misc/$(DEPDIR)/libarm32_libmingwex_a-strtoimax.Po
 	-rm -f misc/$(DEPDIR)/libarm32_libmingwex_a-strtoumax.Po
 	-rm -f misc/$(DEPDIR)/libarm32_libmingwex_a-tdelete.Po
+	-rm -f misc/$(DEPDIR)/libarm32_libmingwex_a-tdestroy.Po
 	-rm -f misc/$(DEPDIR)/libarm32_libmingwex_a-tfind.Po
 	-rm -f misc/$(DEPDIR)/libarm32_libmingwex_a-tsearch.Po
 	-rm -f misc/$(DEPDIR)/libarm32_libmingwex_a-twalk.Po
@@ -78524,6 +78607,7 @@ maintainer-clean: maintainer-clean-am
 	-rm -f misc/$(DEPDIR)/libarm64_libmingwex_a-strtoimax.Po
 	-rm -f misc/$(DEPDIR)/libarm64_libmingwex_a-strtoumax.Po
 	-rm -f misc/$(DEPDIR)/libarm64_libmingwex_a-tdelete.Po
+	-rm -f misc/$(DEPDIR)/libarm64_libmingwex_a-tdestroy.Po
 	-rm -f misc/$(DEPDIR)/libarm64_libmingwex_a-tfind.Po
 	-rm -f misc/$(DEPDIR)/libarm64_libmingwex_a-tsearch.Po
 	-rm -f misc/$(DEPDIR)/libarm64_libmingwex_a-twalk.Po
