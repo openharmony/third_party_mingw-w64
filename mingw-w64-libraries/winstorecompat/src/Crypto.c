@@ -22,7 +22,9 @@
     DEALINGS IN THE SOFTWARE.
 */
 
+#ifndef _WIN32_WINNT
 #define _WIN32_WINNT 0x602
+#endif
 
 #define CryptAcquireContextW __CryptAcquireContextW
 #define CryptAcquireContextA __CryptAcquireContextA
@@ -33,6 +35,7 @@
 #include <windef.h>
 #include <windows.h>
 #include <windows.security.cryptography.h>
+#include <windows.storage.streams.h>
 #include <winstring.h>
 #include <roapi.h>
 #undef CertOpenSystemStore
@@ -41,7 +44,7 @@
 #undef CryptAcquireContextA
 #undef CryptAcquireContextW
 
-#define HCRYPTPROV ICryptographicBufferStatics *
+#define HCRYPTPROV __x_ABI_CWindows_CSecurity_CCryptography_CICryptographicBufferStatics*
 
 BOOL WINAPI CryptAcquireContextW(HCRYPTPROV *phProv, LPCTSTR pszContainer, LPCTSTR pszProvider, DWORD dwProvType, DWORD dwFlags)
 {
@@ -56,8 +59,8 @@ BOOL WINAPI CryptAcquireContextW(HCRYPTPROV *phProv, LPCTSTR pszContainer, LPCTS
         return FALSE;
     }
 
-    ICryptographicBufferStatics *cryptoStatics = NULL;
-    hr = RoGetActivationFactory(hClassName, &IID_ICryptographicBufferStatics, (void**)&cryptoStatics);
+    __x_ABI_CWindows_CSecurity_CCryptography_CICryptographicBufferStatics *cryptoStatics = NULL;
+    hr = RoGetActivationFactory(hClassName, &IID___x_ABI_CWindows_CSecurity_CCryptography_CICryptographicBufferStatics, (void**)&cryptoStatics);
     WindowsDeleteString(hClassName);
 
     if (FAILED(hr))
@@ -75,39 +78,39 @@ BOOL WINAPI CryptAcquireContextA(HCRYPTPROV *phProv, LPCTSTR pszContainer, LPCTS
 
 BOOL WINAPI CryptReleaseContext(HCRYPTPROV phProv, DWORD dwFlags)
 {
-    HRESULT hr = ICryptographicBufferStatics_Release(phProv);
+    HRESULT hr = __x_ABI_CWindows_CSecurity_CCryptography_CICryptographicBufferStatics_Release(phProv);
     return SUCCEEDED(hr) && dwFlags==0;
 }
 
 BOOL WINAPI CryptGenRandom(HCRYPTPROV phProv, DWORD dwLen, BYTE *pbBuffer)
 {
-    IBuffer *buffer = NULL;
-    HRESULT hr = ICryptographicBufferStatics_GenerateRandom(phProv, dwLen, &buffer);
+    __x_ABI_CWindows_CStorage_CStreams_CIBuffer *buffer = NULL;
+    HRESULT hr = __x_ABI_CWindows_CSecurity_CCryptography_CICryptographicBufferStatics_GenerateRandom(phProv, dwLen, &buffer);
     if (FAILED(hr)) {
         return FALSE;
     }
 
     UINT32 olength;
     unsigned char *rnd = NULL;
-    hr = ICryptographicBufferStatics_CopyToByteArray(phProv, buffer, &olength, (BYTE**)&rnd);
+    hr = __x_ABI_CWindows_CSecurity_CCryptography_CICryptographicBufferStatics_CopyToByteArray(phProv, buffer, &olength, (BYTE**)&rnd);
     if (FAILED(hr)) {
-        IBuffer_Release(buffer);
+        __x_ABI_CWindows_CStorage_CStreams_CIBuffer_Release(buffer);
         return FALSE;
     }
     memcpy(pbBuffer, rnd, dwLen);
 
-    IBuffer_Release(buffer);
+    __x_ABI_CWindows_CStorage_CStreams_CIBuffer_Release(buffer);
     return TRUE;
 }
 
 #ifdef _X86_
-BOOL (WINAPI *__MINGW_IMP_SYMBOL(CryptAcquireContextW))(HCRYPTPROV*, LPCTSTR, LPCTSTR, DWORD, DWORD) asm("__imp__CryptAcquireContextW@20") = CryptAcquireContextW;
-BOOL (WINAPI *__MINGW_IMP_SYMBOL(CryptAcquireContextA))(HCRYPTPROV*, LPCTSTR, LPCTSTR, DWORD, DWORD) asm("__imp__CryptAcquireContextA@20") = CryptAcquireContextA;
-BOOL (WINAPI *__MINGW_IMP_SYMBOL(CryptReleaseContext))(HCRYPTPROV, DWORD) asm("__imp__CryptReleaseContext@8") = CryptReleaseContext;
-BOOL (WINAPI *__MINGW_IMP_SYMBOL(CryptGenRandom))(HCRYPTPROV, DWORD, BYTE*) asm("__imp__CryptGenRandom@12") = CryptGenRandom;
+BOOL (WINAPI *__MINGW_IMP_SYMBOL(CryptAcquireContextW))(HCRYPTPROV*, LPCTSTR, LPCTSTR, DWORD, DWORD) __asm__("__imp__CryptAcquireContextW@20") = CryptAcquireContextW;
+BOOL (WINAPI *__MINGW_IMP_SYMBOL(CryptAcquireContextA))(HCRYPTPROV*, LPCTSTR, LPCTSTR, DWORD, DWORD) __asm__("__imp__CryptAcquireContextA@20") = CryptAcquireContextA;
+BOOL (WINAPI *__MINGW_IMP_SYMBOL(CryptReleaseContext))(HCRYPTPROV, DWORD) __asm__("__imp__CryptReleaseContext@8") = CryptReleaseContext;
+BOOL (WINAPI *__MINGW_IMP_SYMBOL(CryptGenRandom))(HCRYPTPROV, DWORD, BYTE*) __asm__("__imp__CryptGenRandom@12") = CryptGenRandom;
 #else
-BOOL (WINAPI *__MINGW_IMP_SYMBOL(CryptAcquireContextW))(HCRYPTPROV*, LPCTSTR, LPCTSTR, DWORD, DWORD) asm("__imp_CryptAcquireContextW") = CryptAcquireContextW;
-BOOL (WINAPI *__MINGW_IMP_SYMBOL(CryptAcquireContextA))(HCRYPTPROV*, LPCTSTR, LPCTSTR, DWORD, DWORD) asm("__imp_CryptAcquireContextA") = CryptAcquireContextA;
-BOOL (WINAPI *__MINGW_IMP_SYMBOL(CryptReleaseContext))(HCRYPTPROV, DWORD) asm("__imp_CryptReleaseContext") = CryptReleaseContext;
-BOOL (WINAPI *__MINGW_IMP_SYMBOL(CryptGenRandom))(HCRYPTPROV, DWORD, BYTE*) asm("__imp_CryptGenRandom") = CryptGenRandom;
+BOOL (WINAPI *__MINGW_IMP_SYMBOL(CryptAcquireContextW))(HCRYPTPROV*, LPCTSTR, LPCTSTR, DWORD, DWORD) __asm__("__imp_CryptAcquireContextW") = CryptAcquireContextW;
+BOOL (WINAPI *__MINGW_IMP_SYMBOL(CryptAcquireContextA))(HCRYPTPROV*, LPCTSTR, LPCTSTR, DWORD, DWORD) __asm__("__imp_CryptAcquireContextA") = CryptAcquireContextA;
+BOOL (WINAPI *__MINGW_IMP_SYMBOL(CryptReleaseContext))(HCRYPTPROV, DWORD) __asm__("__imp_CryptReleaseContext") = CryptReleaseContext;
+BOOL (WINAPI *__MINGW_IMP_SYMBOL(CryptGenRandom))(HCRYPTPROV, DWORD, BYTE*) __asm__("__imp_CryptGenRandom") = CryptGenRandom;
 #endif

@@ -1369,6 +1369,7 @@ inline ENUMTYPE &operator ^= (ENUMTYPE &a, ENUMTYPE b) { return (ENUMTYPE &)(((i
 #define STATUS_FLOAT_MULTIPLE_FAULTS ((DWORD)0xC00002B4)
 #define STATUS_FLOAT_MULTIPLE_TRAPS ((DWORD)0xC00002B5)
 #define STATUS_REG_NAT_CONSUMPTION ((DWORD)0xC00002C9)
+#define STATUS_HEAP_CORRUPTION ((DWORD)0xC0000374)
 #define STATUS_STACK_BUFFER_OVERRUN ((DWORD)0xC0000409)
 #define STATUS_INVALID_CRUNTIME_PARAMETER ((DWORD)0xC0000417)
 #define STATUS_ASSERTION_FAILURE ((DWORD)0xC0000420)
@@ -1845,6 +1846,9 @@ extern "C" {
 #define InterlockedCompareExchangePointerAcquire _InterlockedCompareExchangePointer
 #define InterlockedCompareExchangePointerRelease _InterlockedCompareExchangePointer
 
+#define YieldProcessor() __asm__ __volatile__("dmb ishst\n\tyield":::"memory")
+#define MemoryBarrier() __asm__ __volatile__("dmb":::"memory")
+
 #ifdef __cplusplus
   }
 #endif
@@ -2053,6 +2057,9 @@ extern "C" {
 #define InterlockedCompareExchangePointer _InterlockedCompareExchangePointer
 #define InterlockedCompareExchangePointerAcquire _InterlockedCompareExchangePointer
 #define InterlockedCompareExchangePointerRelease _InterlockedCompareExchangePointer
+
+#define YieldProcessor() __asm__ __volatile__("dmb ishst\n\tyield":::"memory")
+#define MemoryBarrier() __asm__ __volatile__("dmb sy":::"memory")
 
 #ifdef __cplusplus
   }
@@ -4173,6 +4180,44 @@ __buildmemorybarrier()
       PVOID UmsCompletionList;
     } UMS_CREATE_THREAD_ATTRIBUTES,*PUMS_CREATE_THREAD_ATTRIBUTES;
 
+#define COMPONENT_KTM 0x01
+#define COMPONENT_VALID_FLAGS COMPONENT_KTM
+
+    typedef struct _COMPONENT_FILTER {
+      DWORD ComponentFlags;
+    } COMPONENT_FILTER,*PCOMPONENT_FILTER;
+
+#define DYNAMIC_EH_CONTINUATION_TARGET_ADD 0x00000001
+#define DYNAMIC_EH_CONTINUATION_TARGET_PROCESSED 0x00000002
+
+    typedef struct _PROCESS_DYNAMIC_EH_CONTINUATION_TARGET {
+      ULONG_PTR TargetAddress;
+      ULONG_PTR Flags;
+    } PROCESS_DYNAMIC_EH_CONTINUATION_TARGET,*PPROCESS_DYNAMIC_EH_CONTINUATION_TARGET;
+
+    typedef struct _PROCESS_DYNAMIC_EH_CONTINUATION_TARGETS_INFORMATION {
+      WORD NumberOfTargets;
+      WORD Reserved;
+      DWORD Reserved2;
+      PPROCESS_DYNAMIC_EH_CONTINUATION_TARGET Targets;
+    } PROCESS_DYNAMIC_EH_CONTINUATION_TARGETS_INFORMATION,*PPROCESS_DYNAMIC_EH_CONTINUATION_TARGETS_INFORMATION;
+
+#define DYNAMIC_ENFORCED_ADDRESS_RANGE_ADD 0x00000001
+#define DYNAMIC_ENFORCED_ADDRESS_RANGE_PROCESSED 0x00000002
+
+    typedef struct _PROCESS_DYNAMIC_ENFORCED_ADDRESS_RANGE {
+      ULONG_PTR BaseAddress;
+      SIZE_T Size;
+      DWORD Flags;
+    } PROCESS_DYNAMIC_ENFORCED_ADDRESS_RANGE,*PPROCESS_DYNAMIC_ENFORCED_ADDRESS_RANGE;
+
+    typedef struct _PROCESS_DYNAMIC_ENFORCED_ADDRESS_RANGES_INFORMATION {
+      WORD NumberOfRanges;
+      WORD Reserved;
+      DWORD Reserved2;
+      PPROCESS_DYNAMIC_ENFORCED_ADDRESS_RANGE Ranges;
+    } PROCESS_DYNAMIC_ENFORCED_ADDRESS_RANGES_INFORMATION,*PPROCESS_DYNAMIC_ENFORCED_ADDRESS_RANGES_INFORMATION;
+
     typedef struct _QUOTA_LIMITS {
       SIZE_T PagedPoolLimit;
       SIZE_T NonPagedPoolLimit;
@@ -4241,6 +4286,12 @@ __buildmemorybarrier()
       ProcessSignaturePolicy,
       ProcessFontDisablePolicy,
       ProcessImageLoadPolicy,
+      ProcessSystemCallFilterPolicy,
+      ProcessPayloadRestrictionPolicy,
+      ProcessChildProcessPolicy,
+      ProcessSideChannelIsolationPolicy,
+      ProcessUserShadowStackPolicy,
+      ProcessRedirectionTrustPolicy,
       MaxProcessMitigationPolicy
     } PROCESS_MITIGATION_POLICY,*PPROCESS_MITIGATION_POLICY;
 
@@ -4358,6 +4409,92 @@ __buildmemorybarrier()
         };
       };
     } PROCESS_MITIGATION_IMAGE_LOAD_POLICY, *PPROCESS_MITIGATION_IMAGE_LOAD_POLICY;
+
+    typedef struct _PROCESS_MITIGATION_SYSTEM_CALL_FILTER_POLICY {
+      __C89_NAMELESS union {
+        DWORD Flags;
+        __C89_NAMELESS struct {
+          DWORD FilterId  :4;
+          DWORD ReservedFlags  :28;
+        };
+      };
+    } PROCESS_MITIGATION_SYSTEM_CALL_FILTER_POLICY, *PPROCESS_MITIGATION_SYSTEM_CALL_FILTER_POLICY;
+
+    typedef struct _PROCESS_MITIGATION_PAYLOAD_RESTRICTION_POLICY {
+      __C89_NAMELESS union {
+        DWORD Flags;
+        __C89_NAMELESS struct {
+          DWORD EnableExportAddressFilter  :1;
+          DWORD AuditExportAddressFilter  :1;
+          DWORD EnableExportAddressFilterPlus  :1;
+          DWORD AuditExportAddressFilterPlus  :1;
+          DWORD EnableImportAddressFilter  :1;
+          DWORD AuditImportAddressFilter  :1;
+          DWORD EnableRopStackPivot  :1;
+          DWORD AuditRopStackPivot  :1;
+          DWORD EnableRopCallerCheck  :1;
+          DWORD AuditRopCallerCheck  :1;
+          DWORD EnableRopSimExec  :1;
+          DWORD AuditRopSimExec  :1;
+          DWORD ReservedFlags  :20;
+        };
+      };
+    } PROCESS_MITIGATION_PAYLOAD_RESTRICTION_POLICY, *PPROCESS_MITIGATION_PAYLOAD_RESTRICTION_POLICY;
+
+    typedef struct _PROCESS_MITIGATION_CHILD_PROCESS_POLICY {
+      __C89_NAMELESS union {
+        DWORD Flags;
+        __C89_NAMELESS struct {
+          DWORD NoChildProcessCreation  :1;
+          DWORD AuditNoChildProcessCreation  :1;
+          DWORD AllowSecureProcessCreation  :1;
+          DWORD ReservedFlags  :29;
+        };
+      };
+    } PROCESS_MITIGATION_CHILD_PROCESS_POLICY, *PPROCESS_MITIGATION_CHILD_PROCESS_POLICY;
+
+    typedef struct _PROCESS_MITIGATION_SIDE_CHANNEL_ISOLATION_POLICY {
+      __C89_NAMELESS union {
+        DWORD Flags;
+        __C89_NAMELESS struct {
+          DWORD SmtBranchTargetIsolation  :1;
+          DWORD IsolateSecurityDomain  :1;
+          DWORD DisablePageCombine  :1;
+          DWORD SpeculativeStoreBypassDisable  :1;
+          DWORD ReservedFlags  :28;
+        };
+      };
+    } PROCESS_MITIGATION_SIDE_CHANNEL_ISOLATION_POLICY, *PPROCESS_MITIGATION_SIDE_CHANNEL_ISOLATION_POLICY;
+
+    typedef struct _PROCESS_MITIGATION_USER_SHADOW_STACK_POLICY {
+      __C89_NAMELESS union {
+        DWORD Flags;
+        __C89_NAMELESS struct {
+          DWORD EnableUserShadowStack : 1;
+          DWORD AuditUserShadowStack : 1;
+          DWORD SetContextIpValidation : 1;
+          DWORD AuditSetContextIpValidation : 1;
+          DWORD EnableUserShadowStackStrictMode : 1;
+          DWORD BlockNonCetBinaries : 1;
+          DWORD BlockNonCetBinariesNonEhcont : 1;
+          DWORD AuditBlockNonCetBinaries : 1;
+          DWORD CetDynamicApisOutOfProcOnly : 1;
+          DWORD SetContextIpValidationRelaxedMode : 1;
+          DWORD ReservedFlags : 22;
+        };
+      };
+    } PROCESS_MITIGATION_USER_SHADOW_STACK_POLICY, *PPROCESS_MITIGATION_USER_SHADOW_STACK_POLICY;
+
+    typedef struct _PROCESS_MITIGATION_REDIRECTION_TRUST_POLICY {
+      __C89_NAMELESS union {
+        DWORD Flags;
+        __C89_NAMELESS struct {
+          DWORD EnforceRedirectionTrust : 1;
+          DWORD AuditRedirectionTrust : 1;
+          DWORD ReservedFlags : 30;
+        };
+      };
+    } PROCESS_MITIGATION_REDIRECTION_TRUST_POLICY, *PPROCESS_MITIGATION_REDIRECTION_TRUST_POLICY;
 
     typedef struct _JOBOBJECT_BASIC_ACCOUNTING_INFORMATION {
       LARGE_INTEGER TotalUserTime;
@@ -4691,6 +4828,16 @@ __buildmemorybarrier()
       DWORD64 CycleTime;
     } SYSTEM_PROCESSOR_CYCLE_TIME_INFORMATION,*PSYSTEM_PROCESSOR_CYCLE_TIME_INFORMATION;
 
+    typedef struct _SYSTEM_SUPPORTED_PROCESSOR_ARCHITECTURES_INFORMATION {
+      DWORD Machine : 16;
+      DWORD KernelMode : 1;
+      DWORD UserMode : 1;
+      DWORD Native : 1;
+      DWORD Process : 1;
+      DWORD WoW64Container : 1;
+      DWORD ReservedZero0 : 11;
+    } SYSTEM_SUPPORTED_PROCESSOR_ARCHITECTURES_INFORMATION,*PSYSTEM_SUPPORTED_PROCESSOR_ARCHITECTURES_INFORMATION;
+
 #define PROCESSOR_INTEL_386 386
 #define PROCESSOR_INTEL_486 486
 #define PROCESSOR_INTEL_PENTIUM 586
@@ -4767,19 +4914,58 @@ __buildmemorybarrier()
 #define PF_ARM_V8_CRC32_INSTRUCTIONS_AVAILABLE 31
 #define PF_RDTSCP_INSTRUCTION_AVAILABLE 32
 #define PF_RDPID_INSTRUCTION_AVAILABLE 33
+#define PF_ARM_V81_ATOMIC_INSTRUCTIONS_AVAILABLE 34
+#define PF_MONITORX_INSTRUCTION_AVAILABLE 35
+#define PF_SSSE3_INSTRUCTIONS_AVAILABLE 36
+#define PF_SSE4_1_INSTRUCTIONS_AVAILABLE 37
+#define PF_SSE4_2_INSTRUCTIONS_AVAILABLE 38
+#define PF_AVX_INSTRUCTIONS_AVAILABLE 39
+#define PF_AVX2_INSTRUCTIONS_AVAILABLE 40
+#define PF_AVX512F_INSTRUCTIONS_AVAILABLE 41
+#define PF_ERMS_AVAILABLE 42
+#define PF_ARM_V82_DP_INSTRUCTIONS_AVAILABLE 43
+#define PF_ARM_V83_JSCVT_INSTRUCTIONS_AVAILABLE 44
 
 #define XSTATE_LEGACY_FLOATING_POINT (0)
 #define XSTATE_LEGACY_SSE (1)
 #define XSTATE_GSSE (2)
 #define XSTATE_AVX (XSTATE_GSSE)
+#define XSTATE_MPX_BNDREGS (3)
+#define XSTATE_MPX_BNDCSR (4)
+#define XSTATE_AVX512_KMASK (5)
+#define XSTATE_AVX512_ZMM_H (6)
+#define XSTATE_AVX512_ZMM (7)
+#define XSTATE_IPT (8)
+#define XSTATE_PASID (10)
+#define XSTATE_CET_U (11)
+#define XSTATE_CET_S (12)
+#define XSTATE_AMX_TILE_CONFIG (17)
+#define XSTATE_AMX_TILE_DATA (18)
+#define XSTATE_LWP (62)
+#define MAXIMUM_XSTATE_FEATURES (64)
 
 #define XSTATE_MASK_LEGACY_FLOATING_POINT (1ULL << (XSTATE_LEGACY_FLOATING_POINT))
 #define XSTATE_MASK_LEGACY_SSE (1ULL << (XSTATE_LEGACY_SSE))
 #define XSTATE_MASK_LEGACY (XSTATE_MASK_LEGACY_FLOATING_POINT | XSTATE_MASK_LEGACY_SSE)
 #define XSTATE_MASK_GSSE (1LLU << (XSTATE_GSSE))
 #define XSTATE_MASK_AVX (XSTATE_MASK_GSSE)
-
-#define MAXIMUM_XSTATE_FEATURES (64)
+#define XSTATE_MASK_MPX ((1LLU << (XSTATE_MPX_BNDREGS)) | (1LLU << (XSTATE_MPX_BNDCSR)))
+#define XSTATE_MASK_AVX512 ((1LLU << (XSTATE_AVX512_KMASK)) | (1LLU << (XSTATE_AVX512_ZMM_H)) | (1LLU << (XSTATE_AVX512_ZMM)))
+#define XSTATE_MASK_IPT (1LLU << (XSTATE_IPT))
+#define XSTATE_MASK_PASID (1LLU << (XSTATE_PASID))
+#define XSTATE_MASK_CET_U (1LLU << (XSTATE_CET_U))
+#define XSTATE_MASK_CET_S (1LLU << (XSTATE_CET_S))
+#define XSTATE_MASK_AMX_TILE_CONFIG (1LLU << (XSTATE_AMX_TILE_CONFIG))
+#define XSTATE_MASK_AMX_TILE_DATA (1LLU << (XSTATE_AMX_TILE_DATA))
+#define XSTATE_MASK_LWP (1LLU << (XSTATE_LWP))
+#if defined(_AMD64_) || defined(__x86_64__)
+#define XSTATE_MASK_ALLOWED (XSTATE_MASK_LEGACY | XSTATE_MASK_AVX | XSTATE_MASK_MPX | XSTATE_MASK_AVX512 | XSTATE_MASK_IPT | XSTATE_MASK_PASID | XSTATE_MASK_CET_U | XSTATE_MASK_AMX_TILE_CONFIG | XSTATE_MASK_AMX_TILE_DATA | XSTATE_MASK_LWP)
+#elif defined(_X86_) || defined(__i386__)
+#define XSTATE_MASK_ALLOWED (XSTATE_MASK_LEGACY | XSTATE_MASK_AVX | XSTATE_MASK_MPX | XSTATE_MASK_AVX512 | XSTATE_MASK_IPT | XSTATE_MASK_CET_U | XSTATE_MASK_LWP)
+#endif
+#define XSTATE_MASK_PERSISTENT ((1LLU << (XSTATE_MPX_BNDCSR)) | XSTATE_MASK_LWP)
+#define XSTATE_MASK_USER_VISIBLE_SUPERVISOR (XSTATE_MASK_CET_U)
+#define XSTATE_MASK_LARGE_FEATURES (XSTATE_MASK_AMX_TILE_DATA)
 
     typedef struct _XSTATE_FEATURE {
       DWORD Offset;
@@ -4826,6 +5012,15 @@ __buildmemorybarrier()
       DWORD __alignment2;
     } MEMORY_BASIC_INFORMATION64,*PMEMORY_BASIC_INFORMATION64;
 
+#define CFG_CALL_TARGET_VALID 0x01
+#define CFG_CALL_TARGET_PROCESSED 0x02
+#define CFG_CALL_TARGET_CONVERT_EXPORT_SUPPRESSED_TO_VALID 0x04
+
+  typedef struct _CFG_CALL_TARGET_INFO {
+    ULONG_PTR Offset;
+    ULONG_PTR Flags;
+  } CFG_CALL_TARGET_INFO, *PCFG_CALL_TARGET_INFO;
+
 #define SECTION_QUERY 0x0001
 #define SECTION_MAP_WRITE 0x0002
 #define SECTION_MAP_READ 0x0004
@@ -4851,6 +5046,20 @@ __buildmemorybarrier()
 #define PAGE_GUARD 0x100
 #define PAGE_NOCACHE 0x200
 #define PAGE_WRITECOMBINE 0x400
+#define PAGE_GRAPHICS_NOACCESS 0x0800
+#define PAGE_GRAPHICS_READONLY 0x1000
+#define PAGE_GRAPHICS_READWRITE 0x2000
+#define PAGE_GRAPHICS_EXECUTE 0x4000
+#define PAGE_GRAPHICS_EXECUTE_READ 0x8000
+#define PAGE_GRAPHICS_EXECUTE_READWRITE 0x10000
+#define PAGE_GRAPHICS_COHERENT 0x20000
+#define PAGE_ENCLAVE_THREAD_CONTROL 0x80000000
+#define PAGE_REVERT_TO_FILE_MAP 0x80000000
+#define PAGE_TARGETS_NO_UPDATE 0x40000000
+#define PAGE_TARGETS_INVALID 0x40000000
+#define PAGE_ENCLAVE_UNVALIDATED 0x20000000
+#define PAGE_ENCLAVE_DECOMMIT 0x10000000
+
 #define MEM_COMMIT 0x1000
 #define MEM_RESERVE 0x2000
 #define MEM_DECOMMIT 0x4000
@@ -4863,8 +5072,52 @@ __buildmemorybarrier()
 #define MEM_WRITE_WATCH 0x200000
 #define MEM_PHYSICAL 0x400000
 #define MEM_ROTATE 0x800000
+#define MEM_DIFFERENT_IMAGE_BASE_OK 0x800000
+#define MEM_RESET_UNDO 0x1000000
 #define MEM_LARGE_PAGES 0x20000000
 #define MEM_4MB_PAGES 0x80000000
+#define MEM_64K_PAGES (MEM_LARGE_PAGES | MEM_PHYSICAL)
+
+  typedef struct _MEM_ADDRESS_REQUIREMENTS {
+    PVOID LowestStartingAddress;
+    PVOID HighestEndingAddress;
+    SIZE_T Alignment;
+  } MEM_ADDRESS_REQUIREMENTS, *PMEM_ADDRESS_REQUIREMENTS;
+
+#define MEM_EXTENDED_PARAMETER_GRAPHICS 0x01
+#define MEM_EXTENDED_PARAMETER_NONPAGED 0x02
+#define MEM_EXTENDED_PARAMETER_ZERO_PAGES_OPTIONAL 0x04
+#define MEM_EXTENDED_PARAMETER_NONPAGED_LARGE 0x08
+#define MEM_EXTENDED_PARAMETER_NONPAGED_HUGE 0x10
+
+  typedef enum MEM_EXTENDED_PARAMETER_TYPE {
+    MemExtendedParameterInvalidType = 0,
+    MemExtendedParameterAddressRequirements,
+    MemExtendedParameterNumaNode,
+    MemExtendedParameterPartitionHandle,
+    MemExtendedParameterUserPhysicalHandle,
+    MemExtendedParameterAttributeFlags,
+    MemExtendedParameterMax
+  } MEM_EXTENDED_PARAMETER_TYPE, *PMEM_EXTENDED_PARAMETER_TYPE;
+
+#define MEM_EXTENDED_PARAMETER_TYPE_BITS 8
+
+  typedef struct DECLSPEC_ALIGN(8) MEM_EXTENDED_PARAMETER {
+    __C89_NAMELESS struct {
+        DWORD64 Type : MEM_EXTENDED_PARAMETER_TYPE_BITS;
+        DWORD64 Reserved : 64 - MEM_EXTENDED_PARAMETER_TYPE_BITS;
+    };
+    __C89_NAMELESS union {
+        DWORD64 ULong64;
+        PVOID Pointer;
+        SIZE_T Size;
+        HANDLE Handle;
+        DWORD ULong;
+    };
+  } MEM_EXTENDED_PARAMETER, *PMEM_EXTENDED_PARAMETER;
+
+#define SEC_PARTITION_OWNER_HANDLE 0x40000
+#define SEC_64K_PAGES 0x80000
 #define SEC_FILE 0x800000
 #define SEC_IMAGE 0x1000000
 #define SEC_PROTECTED_IMAGE 0x2000000
@@ -4873,8 +5126,15 @@ __buildmemorybarrier()
 #define SEC_NOCACHE 0x10000000
 #define SEC_WRITECOMBINE 0x40000000
 #define SEC_LARGE_PAGES 0x80000000
-
 #define SEC_IMAGE_NO_EXECUTE (SEC_IMAGE | SEC_NOCACHE)
+
+  typedef enum MEM_SECTION_EXTENDED_PARAMETER_TYPE {
+    MemSectionExtendedParameterInvalidType = 0,
+    MemSectionExtendedParameterUserPhysicalFlags,
+    MemSectionExtendedParameterNumaNode,
+    MemSectionExtendedParameterMax
+  } MEM_SECTION_EXTENDED_PARAMETER_TYPE, *PMEM_SECTION_EXTENDED_PARAMETER_TYPE;
+
 #define MEM_IMAGE SEC_IMAGE
 #define WRITE_WATCH_FLAG_RESET 0x01
 #define MEM_UNMAP_WITH_TRANSIENT_BOOST 0x01
@@ -7571,8 +7831,10 @@ __buildmemorybarrier()
     } IMAGE_COR20_HEADER,*PIMAGE_COR20_HEADER;
 #endif
 
-#if WINAPI_FAMILY_PARTITION (WINAPI_PARTITION_DESKTOP)
+#if WINAPI_FAMILY_PARTITION (WINAPI_PARTITION_APP)
     NTSYSAPI WORD NTAPI RtlCaptureStackBackTrace (DWORD FramesToSkip, DWORD FramesToCapture, PVOID *BackTrace, PDWORD BackTraceHash);
+#endif
+#if WINAPI_FAMILY_PARTITION (WINAPI_PARTITION_DESKTOP)
     NTSYSAPI VOID NTAPI RtlCaptureContext (PCONTEXT ContextRecord);
     NTSYSAPI SIZE_T NTAPI RtlCompareMemory (const VOID *Source1, const VOID *Source2, SIZE_T Length);
 #if defined (__x86_64__)
@@ -7585,7 +7847,6 @@ __buildmemorybarrier()
     NTSYSAPI BOOLEAN __cdecl RtlDeleteFunctionTable (PRUNTIME_FUNCTION FunctionTable);
     NTSYSAPI BOOLEAN __cdecl RtlInstallFunctionTableCallback (DWORD64 TableIdentifier, DWORD64 BaseAddress, DWORD Length, PGET_RUNTIME_FUNCTION_CALLBACK Callback, PVOID Context, PCWSTR OutOfProcessCallbackDll);
     NTSYSAPI VOID __cdecl RtlRestoreContext (PCONTEXT ContextRecord, struct _EXCEPTION_RECORD *ExceptionRecord);
-    NTSYSAPI PEXCEPTION_ROUTINE NTAPI RtlVirtualUnwind (DWORD HandlerType, DWORD64 ImageBase, DWORD64 ControlPc, PRUNTIME_FUNCTION FunctionEntry, PCONTEXT ContextRecord, PVOID *HandlerData, PDWORD64 EstablisherFrame, PKNONVOLATILE_CONTEXT_POINTERS ContextPointers);
 #endif
 #if defined (__arm__)
 #if _WIN32_WINNT >= 0x0602
@@ -7597,7 +7858,6 @@ __buildmemorybarrier()
     NTSYSAPI BOOLEAN __cdecl RtlDeleteFunctionTable (PRUNTIME_FUNCTION FunctionTable);
     NTSYSAPI BOOLEAN __cdecl RtlInstallFunctionTableCallback (DWORD TableIdentifier, DWORD BaseAddress, DWORD Length, PGET_RUNTIME_FUNCTION_CALLBACK Callback, PVOID Context, PCWSTR OutOfProcessCallbackDll);
     NTSYSAPI VOID __cdecl RtlRestoreContext (PCONTEXT ContextRecord, struct _EXCEPTION_RECORD *ExceptionRecord);
-    NTSYSAPI PEXCEPTION_ROUTINE NTAPI RtlVirtualUnwind (DWORD HandlerType, DWORD ImageBase, DWORD ControlPc, PRUNTIME_FUNCTION FunctionEntry, PCONTEXT ContextRecord, PVOID *HandlerData, PDWORD EstablisherFrame, PKNONVOLATILE_CONTEXT_POINTERS ContextPointers);
 #endif
 #if defined (__aarch64__)
     NTSYSAPI DWORD NTAPI RtlAddGrowableFunctionTable (PVOID *DynamicTable, PRUNTIME_FUNCTION FunctionTable, DWORD EntryCount, DWORD MaximumEntryCount, ULONG_PTR RangeBase, ULONG_PTR RangeEnd);
@@ -7607,14 +7867,12 @@ __buildmemorybarrier()
     NTSYSAPI BOOLEAN __cdecl RtlDeleteFunctionTable (PRUNTIME_FUNCTION FunctionTable);
     NTSYSAPI BOOLEAN __cdecl RtlInstallFunctionTableCallback (ULONG_PTR TableIdentifier, ULONG_PTR BaseAddress, DWORD Length, PGET_RUNTIME_FUNCTION_CALLBACK Callback, PVOID Context, PCWSTR OutOfProcessCallbackDll);
     NTSYSAPI VOID __cdecl RtlRestoreContext (PCONTEXT ContextRecord, struct _EXCEPTION_RECORD *ExceptionRecord);
-    NTSYSAPI PEXCEPTION_ROUTINE NTAPI RtlVirtualUnwind (DWORD HandlerType, ULONG_PTR ImageBase, ULONG_PTR ControlPc, PRUNTIME_FUNCTION FunctionEntry, PCONTEXT ContextRecord, PVOID *HandlerData, PULONG_PTR EstablisherFrame, PKNONVOLATILE_CONTEXT_POINTERS ContextPointers);
 #endif
 #if defined (__ia64__)
     NTSYSAPI BOOLEAN NTAPI RtlAddFunctionTable (PRUNTIME_FUNCTION FunctionTable, DWORD EntryCount, ULONGLONG BaseAddress, ULONGLONG TargetGp);
     NTSYSAPI BOOLEAN NTAPI RtlDeleteFunctionTable (PRUNTIME_FUNCTION FunctionTable);
     NTSYSAPI BOOLEAN NTAPI RtlInstallFunctionTableCallback (DWORD64 TableIdentifier, DWORD64 BaseAddress, DWORD Length, DWORD64 TargetGp, PGET_RUNTIME_FUNCTION_CALLBACK Callback, PVOID Context, PCWSTR OutOfProcessCallbackDll);
     NTSYSAPI VOID NTAPI RtlRestoreContext (PCONTEXT ContextRecord, struct _EXCEPTION_RECORD *ExceptionRecord);
-    NTSYSAPI ULONGLONG NTAPI RtlVirtualUnwind (ULONGLONG ImageBase, ULONGLONG ControlPc, PRUNTIME_FUNCTION FunctionEntry, PCONTEXT ContextRecord, PBOOLEAN InFunction, PFRAME_POINTERS EstablisherFrame, PKNONVOLATILE_CONTEXT_POINTERS ContextPointers);
 #endif
 
 #endif
@@ -7625,18 +7883,22 @@ __buildmemorybarrier()
 #if defined (__x86_64__)
     NTSYSAPI PRUNTIME_FUNCTION NTAPI RtlLookupFunctionEntry (DWORD64 ControlPc, PDWORD64 ImageBase, PUNWIND_HISTORY_TABLE HistoryTable);
     NTSYSAPI VOID NTAPI RtlUnwindEx (PVOID TargetFrame, PVOID TargetIp, PEXCEPTION_RECORD ExceptionRecord, PVOID ReturnValue, PCONTEXT ContextRecord, PUNWIND_HISTORY_TABLE HistoryTable);
+    NTSYSAPI PEXCEPTION_ROUTINE NTAPI RtlVirtualUnwind (DWORD HandlerType, DWORD64 ImageBase, DWORD64 ControlPc, PRUNTIME_FUNCTION FunctionEntry, PCONTEXT ContextRecord, PVOID *HandlerData, PDWORD64 EstablisherFrame, PKNONVOLATILE_CONTEXT_POINTERS ContextPointers);
 #endif
 #if defined (__arm__)
     NTSYSAPI PRUNTIME_FUNCTION NTAPI RtlLookupFunctionEntry (ULONG_PTR ControlPc, PDWORD ImageBase, PUNWIND_HISTORY_TABLE HistoryTable);
     NTSYSAPI VOID NTAPI RtlUnwindEx (PVOID TargetFrame, PVOID TargetIp, PEXCEPTION_RECORD ExceptionRecord, PVOID ReturnValue, PCONTEXT ContextRecord, PUNWIND_HISTORY_TABLE HistoryTable);
+    NTSYSAPI PEXCEPTION_ROUTINE NTAPI RtlVirtualUnwind (DWORD HandlerType, DWORD ImageBase, DWORD ControlPc, PRUNTIME_FUNCTION FunctionEntry, PCONTEXT ContextRecord, PVOID *HandlerData, PDWORD EstablisherFrame, PKNONVOLATILE_CONTEXT_POINTERS ContextPointers);
 #endif
 #if defined (__aarch64__)
     NTSYSAPI PRUNTIME_FUNCTION NTAPI RtlLookupFunctionEntry (ULONG_PTR ControlPc, PULONG_PTR ImageBase, PUNWIND_HISTORY_TABLE HistoryTable);
     NTSYSAPI VOID NTAPI RtlUnwindEx (PVOID TargetFrame, PVOID TargetIp, PEXCEPTION_RECORD ExceptionRecord, PVOID ReturnValue, PCONTEXT ContextRecord, PUNWIND_HISTORY_TABLE HistoryTable);
+    NTSYSAPI PEXCEPTION_ROUTINE NTAPI RtlVirtualUnwind (DWORD HandlerType, ULONG_PTR ImageBase, ULONG_PTR ControlPc, PRUNTIME_FUNCTION FunctionEntry, PCONTEXT ContextRecord, PVOID *HandlerData, PULONG_PTR EstablisherFrame, PKNONVOLATILE_CONTEXT_POINTERS ContextPointers);
 #endif
 #if defined (__ia64__)
     NTSYSAPI PRUNTIME_FUNCTION NTAPI RtlLookupFunctionEntry (ULONGLONG ControlPc, PULONGLONG ImageBase, PULONGLONG TargetGp);
     NTSYSAPI VOID NTAPI RtlUnwindEx (FRAME_POINTERS TargetFrame, PVOID TargetIp, PEXCEPTION_RECORD ExceptionRecord, PVOID ReturnValue, PCONTEXT ContextRecord, PUNWIND_HISTORY_TABLE HistoryTable);
+    NTSYSAPI ULONGLONG NTAPI RtlVirtualUnwind (ULONGLONG ImageBase, ULONGLONG ControlPc, PRUNTIME_FUNCTION FunctionEntry, PCONTEXT ContextRecord, PBOOLEAN InFunction, PFRAME_POINTERS EstablisherFrame, PKNONVOLATILE_CONTEXT_POINTERS ContextPointers);
 #endif
 #endif
 

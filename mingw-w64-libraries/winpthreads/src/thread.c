@@ -54,7 +54,15 @@ static size_t idListCnt = 0;
 static size_t idListMax = 0;
 static pthread_t idListNextId = 0;
 
-#if !defined(_MSC_VER) || defined (USE_VEH_FOR_MSC_SETTHREADNAME)
+#if !defined(_MSC_VER)
+#define USE_VEH_FOR_MSC_SETTHREADNAME
+#endif
+#if !WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
+/* forbidden RemoveVectoredExceptionHandler/AddVectoredExceptionHandler APIs */
+#undef USE_VEH_FOR_MSC_SETTHREADNAME
+#endif
+
+#if defined(USE_VEH_FOR_MSC_SETTHREADNAME)
 static void *SetThreadName_VEH_handle = NULL;
 
 static LONG __stdcall
@@ -101,7 +109,11 @@ SetThreadName (DWORD dwThreadID, LPCSTR szThreadName)
    /* Without a debugger we *must* have an exception handler,
     * otherwise raising an exception will crash the process.
     */
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
    if ((!IsDebuggerPresent ()) && (SetThreadName_VEH_handle == NULL))
+#else
+   if (!IsDebuggerPresent ())
+#endif
      return;
 
    RaiseException (EXCEPTION_SET_THREAD_NAME, 0, infosize, (ULONG_PTR *) &info);
@@ -419,7 +431,7 @@ __dyn_tls_pthread (HANDLE hDllHandle, DWORD dwReason, LPVOID lpreserved)
 
   if (dwReason == DLL_PROCESS_DETACH)
     {
-#if !defined(_MSC_VER) || defined (USE_VEH_FOR_MSC_SETTHREADNAME)
+#if defined(USE_VEH_FOR_MSC_SETTHREADNAME)
       if (lpreserved == NULL && SetThreadName_VEH_handle != NULL)
         {
           RemoveVectoredExceptionHandler (SetThreadName_VEH_handle);
@@ -430,7 +442,7 @@ __dyn_tls_pthread (HANDLE hDllHandle, DWORD dwReason, LPVOID lpreserved)
     }
   else if (dwReason == DLL_PROCESS_ATTACH)
     {
-#if !defined(_MSC_VER) || defined (USE_VEH_FOR_MSC_SETTHREADNAME)
+#if defined(USE_VEH_FOR_MSC_SETTHREADNAME)
       SetThreadName_VEH_handle = AddVectoredExceptionHandler (1, &SetThreadName_VEH);
       /* Can't do anything on error anyway, check for NULL later */
 #endif
@@ -1026,7 +1038,7 @@ pthread_self (void)
 
 /* Internal helper for getting event handle of thread T.  */
 void *
-pthread_getevent ()
+pthread_getevent (void)
 {
   _pthread_v *t = __pthread_self_lite ();
   return (!t ? NULL : t->evStart);
@@ -1244,7 +1256,9 @@ pthread_cancel (pthread_t t)
 #else
 #error Unsupported architecture
 #endif
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 	  SetThreadContext (tv->h, &ctxt);
+#endif
 
 	  /* Also try deferred Cancelling */
 	  tv->cancelled = 1;
@@ -1381,6 +1395,22 @@ pthread_attr_getscope (const pthread_attr_t *a, int *flag)
 }
 
 int
+pthread_attr_getstack (const pthread_attr_t *attr, void **stack, size_t *size)
+{
+  *stack = (char *) attr->stack - attr->s_size;
+  *size = attr->s_size;
+  return 0;
+}
+
+int
+pthread_attr_setstack (pthread_attr_t *attr, void *stack, size_t size)
+{
+  attr->s_size = size;
+  attr->stack = (char *) stack + size;
+  return 0;
+}
+
+int
 pthread_attr_getstackaddr (const pthread_attr_t *attr, void **stack)
 {
   *stack = attr->stack;
@@ -1461,6 +1491,8 @@ pthread_setcanceltype (int type, int *oldtype)
   return 0;
 }
 
+void _fpreset (void);
+
 #if defined(__i386__)
 /* Align ESP on 16-byte boundaries. */
 #  if __GNUC__ > 4 || (__GNUC__ == 4 && __GNUC_MINOR__ >= 2)
@@ -1472,6 +1504,8 @@ pthread_create_wrapper (void *args)
 {
   unsigned rslt = 0;
   struct _pthread_v *tv = (struct _pthread_v *)args;
+
+  _fpreset();
 
   pthread_mutex_lock (&mtx_pthr_locked);
   pthread_mutex_lock (&tv->p_clock);

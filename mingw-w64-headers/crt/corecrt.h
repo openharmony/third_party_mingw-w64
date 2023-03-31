@@ -15,11 +15,6 @@
 #pragma pack(push,_CRT_PACKING)
 #endif
 
-#if !defined(_UCRT) && ((__MSVCRT_VERSION__ >= 0x1400) || (__MSVCRT_VERSION__ >= 0xE00 && __MSVCRT_VERSION__ < 0x1000))
-// Allow both 0x1400 and 0xE00 to identify UCRT
-#define _UCRT
-#endif
-
 #ifdef __ERRCODE_DEFINED_MS
 /* #define __ERRCODE_DEFINED_MS */
 typedef int errcode;
@@ -490,6 +485,17 @@ typedef struct threadlocaleinfostruct {
 #ifndef __crt_typefix
 #define __crt_typefix(ctype)
 #endif
+
+#ifndef _CRT_USE_WINAPI_FAMILY_DESKTOP_APP
+#ifdef WINAPI_FAMILY
+#include <winapifamily.h>
+#if WINAPI_FAMILY_PARTITION (WINAPI_PARTITION_DESKTOP)
+#define _CRT_USE_WINAPI_FAMILY_DESKTOP_APP
+#endif
+#else /* !WINAPI_FAMILY */
+#define _CRT_USE_WINAPI_FAMILY_DESKTOP_APP
+#endif /* !WINAPI_FAMILY */
+#endif /* _CRT_USE_WINAPI_FAMILY_DESKTOP_APP */
 
 #ifndef __WIDL__
 #pragma pack(pop)

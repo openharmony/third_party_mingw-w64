@@ -18,12 +18,6 @@ extern "C" {
 
 #pragma pack(push,_CRT_PACKING)
 
-#if defined (SPECIAL_CRTEXE) && (defined (_DLL) || defined (__GNUC__))
-  extern int _commode;
-#else
-  __declspec(dllimport) extern int _commode;
-#endif
-
 #define __IOINFO_TM_ANSI 0
 #define __IOINFO_TM_UTF8 1
 #define __IOINFO_TM_UTF16LE 2
@@ -107,7 +101,7 @@ extern wchar_t *** __MINGW_IMP_SYMBOL(__winitenv);
 #define __winitenv (* __MINGW_IMP_SYMBOL(__winitenv))
 #endif
 
-#if !defined(__initenv) && !defined(__arm__)
+#if !defined(__initenv)
 extern char *** __MINGW_IMP_SYMBOL(__initenv);
 #define __initenv (* __MINGW_IMP_SYMBOL(__initenv))
 #endif

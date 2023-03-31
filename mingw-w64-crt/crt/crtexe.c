@@ -9,10 +9,6 @@
 #define _DLL
 #endif
 
-#ifdef HAVE_CONFIG_H
-#include "config.h"
-#endif
-
 #define SPECIAL_CRTEXE
 
 #include <oscalls.h>
@@ -34,7 +30,7 @@ extern wchar_t *** __MINGW_IMP_SYMBOL(__winitenv);
 #define __winitenv (* __MINGW_IMP_SYMBOL(__winitenv))
 #endif
 
-#if !defined(__initenv) && !defined(__arm__) && !defined(__aarch64__)
+#if !defined(__initenv)
 extern char *** __MINGW_IMP_SYMBOL(__initenv);
 #define __initenv (* __MINGW_IMP_SYMBOL(__initenv))
 #endif
@@ -50,13 +46,11 @@ extern void _fpreset (void);
 #define SPACECHAR _T(' ')
 #define DQUOTECHAR _T('\"')
 
-extern int * __MINGW_IMP_SYMBOL(_fmode);
-extern int * __MINGW_IMP_SYMBOL(_commode);
+int *__cdecl __p__commode(void);
 
 #undef _fmode
 extern int _fmode;
-extern int * __MINGW_IMP_SYMBOL(_commode);
-#define _commode (* __MINGW_IMP_SYMBOL(_commode))
+extern int _commode;
 extern int _dowildcard;
 
 extern _CRTIMP void __cdecl _initterm(_PVFV *, _PVFV *);
@@ -68,17 +62,11 @@ extern _CRTALLOC(".CRT$XIZ") _PIFV __xi_z[];
 extern _CRTALLOC(".CRT$XCA") _PVFV __xc_a[];
 extern _CRTALLOC(".CRT$XCZ") _PVFV __xc_z[];
 
-#ifndef HAVE_CTOR_LIST
-__attribute__ (( __section__ (".ctors"), __used__ , aligned(sizeof(void *)))) const void * __CTOR_LIST__ = (void *) -1;
-__attribute__ (( __section__ (".dtors"), __used__ , aligned(sizeof(void *)))) const void * __DTOR_LIST__ = (void *) -1;
-__attribute__ (( __section__ (".ctors.99999"), __used__ , aligned(sizeof(void *)))) const void * __CTOR_END__ = (void *) 0;
-__attribute__ (( __section__ (".dtors.99999"), __used__ , aligned(sizeof(void *)))) const void * __DTOR_END__ = (void *) 0;
-#endif
 
 /* TLS initialization hook.  */
 extern const PIMAGE_TLS_CALLBACK __dyn_tls_init_callback;
 
-extern int mingw_app_type;
+extern int __mingw_app_type;
 
 HINSTANCE __mingw_winmain_hInstance;
 _TCHAR *__mingw_winmain_lpCmdLine;
@@ -111,8 +99,8 @@ static void duplicate_ppstrings (int ac, char ***av);
 
 static int __cdecl pre_c_init (void);
 static void __cdecl pre_cpp_init (void);
-_CRTALLOC(".CRT$XIAA") _PIFV mingw_pcinit = pre_c_init;
-_CRTALLOC(".CRT$XCAA") _PVFV mingw_pcppinit = pre_cpp_init;
+_CRTALLOC(".CRT$XIAA") _PIFV __mingw_pcinit = pre_c_init;
+_CRTALLOC(".CRT$XCAA") _PVFV __mingw_pcppinit = pre_cpp_init;
 
 extern int _MINGW_INSTALL_DEBUG_MATHERR;
 
@@ -138,13 +126,13 @@ static int __cdecl
 pre_c_init (void)
 {
   managedapp = check_managed_app ();
-  if (mingw_app_type)
+  if (__mingw_app_type)
     __set_app_type(_GUI_APP);
   else
     __set_app_type (_CONSOLE_APP);
 
   * __p__fmode() = _fmode;
-  * __MINGW_IMP_SYMBOL(_commode) = _commode;
+  * __p__commode() = _commode;
 
 #ifdef WPRFLAG
   _wsetargv();
@@ -182,27 +170,25 @@ int WinMainCRTStartup (void)
 {
   int ret = 255;
 #ifdef SEH_INLINE_ASM
-  asm ("\t.l_startw:\n"
+  asm ("\t.l_startw:\n");
+#endif
+  __mingw_app_type = 1;
+  ret = __tmainCRTStartup ();
+#ifdef SEH_INLINE_ASM
+  asm ("\tnop\n"
+    "\t.l_endw: nop\n"
     "\t.seh_handler __C_specific_handler, @except\n"
     "\t.seh_handlerdata\n"
     "\t.long 1\n"
     "\t.rva .l_startw, .l_endw, _gnu_exception_handler ,.l_endw\n"
-    "\t.text"
-    );
-#endif
-  mingw_app_type = 1;
-  __security_init_cookie ();
-  ret = __tmainCRTStartup ();
-#ifdef SEH_INLINE_ASM
-  asm ("\tnop\n"
-    "\t.l_endw: nop\n");
+    "\t.text");
 #endif
   return ret;
 }
 
 int mainCRTStartup (void);
 
-#ifdef _WIN64
+#if defined(__x86_64__) && !defined(__SEH__)
 int __mingw_init_ehandler (void);
 #endif
 
@@ -210,20 +196,18 @@ int mainCRTStartup (void)
 {
   int ret = 255;
 #ifdef SEH_INLINE_ASM
-  asm ("\t.l_start:\n"
+  asm ("\t.l_start:\n");
+#endif
+  __mingw_app_type = 0;
+  ret = __tmainCRTStartup ();
+#ifdef SEH_INLINE_ASM
+  asm ("\tnop\n"
+    "\t.l_end: nop\n"
     "\t.seh_handler __C_specific_handler, @except\n"
     "\t.seh_handlerdata\n"
     "\t.long 1\n"
     "\t.rva .l_start, .l_end, _gnu_exception_handler ,.l_end\n"
-    "\t.text"
-    );
-#endif
-  mingw_app_type = 0;
-  __security_init_cookie ();
-  ret = __tmainCRTStartup ();
-#ifdef SEH_INLINE_ASM
-  asm ("\tnop\n"
-    "\t.l_end: nop\n");
+    "\t.text");
 #endif
   return ret;
 }
@@ -242,7 +226,7 @@ __tmainCRTStartup (void)
   WINBOOL inDoubleQuote = FALSE;
   memset (&StartupInfo, 0, sizeof (STARTUPINFO));
 
-  if (mingw_app_type)
+  if (__mingw_app_type)
     GetStartupInfo (&StartupInfo);
   {
     void *lock_free = NULL;
@@ -284,7 +268,7 @@ __tmainCRTStartup (void)
     
     _pei386_runtime_relocator ();
     __mingw_oldexcpt_handler = SetUnhandledExceptionFilter (_gnu_exception_handler);
-#ifdef __x86_64__
+#if defined(__x86_64__) && !defined(__SEH__)
     __mingw_init_ehandler ();
 #endif
     _set_invalid_parameter_handler (__mingw_invalidParameterHandler);
@@ -320,7 +304,7 @@ __tmainCRTStartup (void)
 	__mingw_winmain_lpCmdLine = lpszCommandLine;
       }
 
-    if (mingw_app_type)
+    if (__mingw_app_type)
       {
 	__mingw_winmain_nShowCmd = StartupInfo.dwFlags & STARTF_USESHOWWINDOW ?
 				    StartupInfo.wShowWindow : SW_SHOWDEFAULT;
@@ -333,9 +317,7 @@ __tmainCRTStartup (void)
        gcc inserts this call automatically for a function called main, but not for wmain.  */
     mainret = wmain (argc, argv, envp);
 #else
-#if !defined(__arm__) && !defined(__aarch64__)
     __initenv = envp;
-#endif
     mainret = main (argc, argv, envp);
 #endif
     if (!managedapp)
@@ -347,10 +329,9 @@ __tmainCRTStartup (void)
   return mainret;
 }
 
-extern int mingw_initltsdrot_force;
-extern int mingw_initltsdyn_force;
-extern int mingw_initltssuo_force;
-extern int mingw_initcharmax;
+extern int __mingw_initltsdrot_force;
+extern int __mingw_initltsdyn_force;
+extern int __mingw_initltssuo_force;
 
 static int __cdecl
 check_managed_app (void)
@@ -361,10 +342,9 @@ check_managed_app (void)
   PIMAGE_OPTIONAL_HEADER64 pNTHeader64;
 
   /* Force to be linked.  */
-  mingw_initltsdrot_force=1;
-  mingw_initltsdyn_force=1;
-  mingw_initltssuo_force=1;
-  mingw_initcharmax=1;
+  __mingw_initltsdrot_force=1;
+  __mingw_initltsdyn_force=1;
+  __mingw_initltssuo_force=1;
 
   pDOSHeader = (PIMAGE_DOS_HEADER) &__ImageBase;
   if (pDOSHeader->e_magic != IMAGE_DOS_SIGNATURE)

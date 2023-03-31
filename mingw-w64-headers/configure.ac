@@ -1,7 +1,7 @@
 #                                               -*- Autoconf -*-
 # Process this file with autoconf to produce a configure script.
 
-AC_PREREQ([2.69])
+AC_PREREQ([2.71])
 AC_INIT([mingw-w64-headers],[4.0b],[mingw-w64-public@lists.sourceforge.net])
 AC_CONFIG_SRCDIR([crt/_mingw.h.in])
 AC_CONFIG_AUX_DIR([build-aux])
@@ -41,10 +41,9 @@ AM_CONDITIONAL([HAVE_WIDL],[AS_VAR_TEST_SET([WIDL])])
 
 BASEHEAD_LIST="crt/_bsd_types.h crt/_cygwin.h crt/_mingw.h crt/_mingw_mac.h crt/_mingw_secapi.h crt/_mingw_unicode.h crt/_timeval.h crt/crtdefs.h crt/corecrt.h crt/excpt.h crt/intrin.h crt/vadefs.h crt/tchar.h "$srcdir/include/*.h
 SECHEAD_LIST="$srcdir/crt/sec_api/stralign_s.h"
-for i in c dlg h16 hxx rh ver; do
+for i in c inl dlg h16 hxx rh ver; do
   BASEHEAD_LIST="$BASEHEAD_LIST "$srcdir/include/*.$i
 done
-#FIXME: Add in base directx
 
 AC_MSG_CHECKING([whether to build a w32api package for Cygwin])
 AC_ARG_ENABLE([w32api],
@@ -81,6 +80,9 @@ WRLWRAPPERSHEAD_LIST=$srcdir/include/wrl/wrappers/*.h
 GLHEAD_LIST=$srcdir/include/GL/*.h
 KHRHEAD_LIST=$srcdir/include/KHR/*.h
 MINGWHELPERHEAD_LIST=$srcdir/include/psdk_inc/*.h
+PYTHONHEAD_LIST=$srcdir/include/python3.10/*.h
+PYTHONINTERNALHEAD_LIST=$srcdir/include/python3.10/internal/*.h
+PYTHONCPYTHONHEAD_LIST=$srcdir/include/python3.10/cpython/*.h
 AC_SUBST([BASEHEAD_LIST])
 AC_SUBST([GDIPLUSHEAD_LIST])
 AC_SUBST([WRLHEAD_LIST])
@@ -91,35 +93,28 @@ AC_SUBST([MINGWHELPERHEAD_LIST])
 AC_SUBST([SYSHEAD_LIST])
 AC_SUBST([SECHEAD_LIST])
 AC_SUBST([SECSYSHEAD_LIST])
+AC_SUBST([PYTHONHEAD_LIST])
+AC_SUBST([PYTHONINTERNALHEAD_LIST])
+AC_SUBST([PYTHONCPYTHONHEAD_LIST])
 
 AC_MSG_CHECKING([for optional sdk headers])
 AC_ARG_ENABLE([sdk],
   [AS_HELP_STRING([--enable-sdk=ARG],
-    [Add the desired SDK, where ARG can be one of ddk, directx, no or all.  Default is all.])],
+    [Add the desired SDK, where ARG can be one of ddk, no or all.  Default is all.])],
   [],
   [AS_VAR_SET([enable_sdk],[all])])
 
 AS_CASE([$enable_sdk],
   [all|yes],[
-    AS_VAR_SET([enable_sdk],[ddk,directx])
-    AS_VAR_SET([enable_ddk],[yes])
-    AS_VAR_SET([enable_directx],[yes])],
+    AS_VAR_SET([enable_sdk],[ddk])
+    AS_VAR_SET([enable_ddk],[yes])],
   [ddk],[
     AS_VAR_SET([enable_ddk],[yes])],
   [directx],[
-    AS_VAR_SET([enable_directx],[yes])],
+    AC_MSG_WARN([Deprecated option: directx.  directx headers are always enabled.])],
   [no],[],
-  [AC_MSG_ERROR([Invalid option: $enable_sdk.  Please choose one of ddk, directx, no or all.])])
+  [AC_MSG_ERROR([Invalid option: $enable_sdk.  Please choose one of ddk, no or all.])])
 AC_MSG_RESULT([$enable_sdk])
-
-AS_VAR_IF([enable_directx],[yes],[
-    DXHEAD_LIST=$srcdir/direct-x/include/*.[[hi]]*
-    MINGW_HAS_DX=1
-  ],[
-    MINGW_HAS_DX=0
-  ])
-AC_SUBST([DXHEAD_LIST])
-AC_SUBST([MINGW_HAS_DX])
 
 AS_VAR_IF([enable_ddk],[yes],[
     DDKHEAD_LIST=$srcdir/ddk/include/ddk/*.h
@@ -145,9 +140,9 @@ AC_SUBST([IDLHEAD_LIST])
 AC_MSG_CHECKING([default _WIN32_WINNT version])
 AC_ARG_WITH([default-win32-winnt],
   [AS_HELP_STRING([--with-default-win32-winnt=VER],
-    [Default value of _WIN32_WINNT (default: 0x502)])],
+    [Default value of _WIN32_WINNT (default: 0xa00)])],
   [],
-  [with_default_win32_winnt=0x502])
+  [with_default_win32_winnt=0xa00])
 AC_MSG_RESULT([$with_default_win32_winnt])
 AS_VAR_SET([DEFAULT_WIN32_WINNT],[$with_default_win32_winnt])
 AC_SUBST([DEFAULT_WIN32_WINNT])
@@ -159,6 +154,21 @@ AC_ARG_WITH([default-msvcrt],
   [],
   [with_default_msvcrt=msvcrt])
 case $with_default_msvcrt in
+msvcrt10*)
+  default_msvcrt_version=0x100
+  ;;
+msvcrt20*)
+  default_msvcrt_version=0x200
+  ;;
+msvcrt40*)
+  default_msvcrt_version=0x400
+  ;;
+msvcr70*)
+  default_msvcrt_version=0x700
+  ;;
+msvcr71*)
+  default_msvcrt_version=0x701
+  ;;
 msvcr80*)
   default_msvcrt_version=0x800
   ;;
