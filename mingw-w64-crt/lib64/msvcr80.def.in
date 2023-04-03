@@ -373,6 +373,7 @@ _local_unwind
 _localtime64
 localtime == _localtime64
 _lock
+_lock_file
 _locking
 _logb
 _logbf
@@ -482,6 +483,7 @@ _scprintf
 _scwprintf
 _searchenv
 _set_error_mode
+_set_invalid_parameter_handler
 _set_sbh_threshold
 _seterrormode
 _setjmp
@@ -519,6 +521,7 @@ _strerror
 _stricmp
 _stricoll
 _strlwr
+strlwr == _strlwr
 _strncoll
 _strnicmp
 _strnicoll
@@ -550,12 +553,12 @@ _ungetwch
 _unlink
 _unloaddll
 _unlock
+_unlock_file
 _utime
 _utime64
 _vscprintf
 _vscwprintf
 _vsnprintf
-vsnprintf == _vsnprintf
 _vsnwprintf
 _waccess
 _wasctime
@@ -569,6 +572,7 @@ _wcserror
 _wcsicmp
 _wcsicoll
 _wcslwr
+wcslwr == _wcslwr
 _wcsncoll
 _wcsnicmp
 _wcsnicoll
@@ -657,6 +661,30 @@ _wutime64
 _y0
 _y1
 _yn
+_fclose_nolock
+_fflush_nolock
+_fgetwc_nolock
+_getwc_nolock == _fgetwc_nolock
+_fputwc_nolock
+_fread_nolock
+_fread_nolock_s
+_fseek_nolock
+_fseeki64_nolock
+_ftell_nolock
+_ftelli64_nolock
+_fwrite_nolock
+_getch_nolock
+_getche_nolock
+_getdcwd_nolock
+_getwch_nolock
+_getwche_nolock
+_putch_nolock
+_putwch_nolock
+_ungetc_nolock
+_ungetch_nolock
+_ungetwc_nolock
+_ungetwch_nolock
+_wgetdcwd_nolock
 abort
 abs
 acos
@@ -704,6 +732,7 @@ fmod
 fmodf
 fopen
 fprintf
+__ms_fprintf == fprintf
 fputc
 fputs
 fputwc
@@ -713,6 +742,7 @@ free
 freopen
 frexp DATA
 fscanf
+__ms_fscanf == fscanf
 fseek
 fsetpos
 ftell
@@ -720,6 +750,7 @@ fwprintf
 __ms_fwprintf == fwprintf
 fwrite
 fwscanf
+__ms_fwscanf == fwscanf
 getc
 getchar
 getenv
@@ -779,6 +810,7 @@ perror
 ;pow
 ;powf
 printf
+__ms_printf == printf
 putc
 putchar
 puts
@@ -794,6 +826,7 @@ remove
 rename
 rewind
 scanf
+__ms_scanf == scanf
 setbuf
 setjmp
 setlocale
@@ -804,10 +837,12 @@ sinf
 sinh
 sinhf
 sprintf
+__ms_sprintf == sprintf
 sqrt DATA
 sqrtf DATA
 srand
 sscanf
+__ms_sscanf == sscanf
 strcat
 strchr
 strcmp
@@ -830,7 +865,9 @@ strtol
 strtoul
 strxfrm
 swprintf
+__ms_swprintf == swprintf
 swscanf
+__ms_swscanf == swscanf
 system
 tan
 tanf
@@ -845,11 +882,17 @@ towupper
 ungetc
 ungetwc
 vfprintf
+__ms_vfprintf == vfprintf
 vfwprintf
+__ms_vfwprintf == vfwprintf
 vprintf
+__ms_vprintf == vprintf
 vsprintf
+__ms_vsprintf == vsprintf
 vswprintf
+__ms_vswprintf == vswprintf
 vwprintf
+__ms_vwprintf == vwprintf
 wcscat
 wcschr
 wcscmp
@@ -873,4 +916,6 @@ wcstoul
 wcsxfrm
 wctomb
 wprintf
+__ms_wprintf == wprintf
 wscanf
+__ms_wscanf == wscanf

@@ -1,7 +1,10 @@
-LIBRARY "api-ms-win-core-synch-l1-2-0.dll"
+LIBRARY api-ms-win-core-synch-l1-2-0
+
 EXPORTS
+
 AcquireSRWLockExclusive
 AcquireSRWLockShared
+CancelWaitableTimer
 CreateEventA
 CreateEventExA
 CreateEventExW
@@ -11,6 +14,7 @@ CreateMutexExA
 CreateMutexExW
 CreateMutexW
 CreateSemaphoreExW
+CreateWaitableTimerExW
 DeleteCriticalSection
 EnterCriticalSection
 InitializeConditionVariable
@@ -27,6 +31,7 @@ OpenEventA
 OpenEventW
 OpenMutexW
 OpenSemaphoreW
+OpenWaitableTimerW
 ReleaseMutex
 ReleaseSemaphore
 ReleaseSRWLockExclusive
@@ -34,6 +39,9 @@ ReleaseSRWLockShared
 ResetEvent
 SetCriticalSectionSpinCount
 SetEvent
+SetWaitableTimer
+SetWaitableTimerEx
+SignalObjectAndWait
 Sleep
 SleepConditionVariableCS
 SleepConditionVariableSRW
@@ -49,4 +57,3 @@ WakeAllConditionVariable
 WakeByAddressAll
 WakeByAddressSingle
 WakeConditionVariable
-

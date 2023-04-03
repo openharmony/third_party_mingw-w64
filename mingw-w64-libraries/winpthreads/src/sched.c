@@ -89,18 +89,13 @@ int pthread_attr_getschedpolicy (const pthread_attr_t *attr, int *pol)
 static int pthread_check(pthread_t t)
 {
   struct _pthread_v *pv;
-  DWORD dwFlags;
+
   if (!t)
     return ESRCH;
   pv = __pth_gpointer_locked (t);
-  if (!(pv->h) || pv->h == INVALID_HANDLE_VALUE)
-  {
-  	if (pv->ended == 0)
-  	  return 0;
-        return ESRCH;
-  }
-  else if ((!GetHandleInformation(pv->h, &dwFlags) && pv->ended))
-        return ESRCH;
+  if (pv->ended == 0)
+    return 0;
+  CHECK_OBJECT(pv, ESRCH);
   return 0;
 }
 

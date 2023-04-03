@@ -30,12 +30,21 @@
 
 BOOL WINAPI VirtualProtect(LPVOID lpAddress, SIZE_T dwSize, DWORD flNewProtect, PDWORD lpflOldProtect)
 {
+#if _WIN32_WINNT >= _WIN32_WINNT_WIN10
+    ULONG OldProtection;
+    BOOL res = VirtualProtectFromApp(lpAddress, dwSize, flNewProtect,
+                                     lpflOldProtect ? &OldProtection : NULL);
+    if (lpflOldProtect)
+        *lpflOldProtect = OldProtection;
+    return res;
+#else /* _WIN32_WINNT < _WIN32_WINNT_WIN10 */
     SetLastError(ERROR_ACCESS_DENIED);
     return FALSE;
+#endif /* _WIN32_WINNT < _WIN32_WINNT_WIN10 */
 }
 
 #ifdef _X86_
-BOOL (WINAPI *__MINGW_IMP_SYMBOL(VirtualProtect))(LPVOID lpAddress, SIZE_T dwSize, DWORD flNewProtect, PDWORD lpflOldProtect) asm("__imp__VirtualProtect@16") = VirtualProtect;
+BOOL (WINAPI *__MINGW_IMP_SYMBOL(VirtualProtect))(LPVOID lpAddress, SIZE_T dwSize, DWORD flNewProtect, PDWORD lpflOldProtect) __asm__("__imp__VirtualProtect@16") = VirtualProtect;
 #else
-BOOL (WINAPI *__MINGW_IMP_SYMBOL(VirtualProtect))(LPVOID lpAddress, SIZE_T dwSize, DWORD flNewProtect, PDWORD lpflOldProtect) asm("__imp_VirtualProtect") = VirtualProtect;
+BOOL (WINAPI *__MINGW_IMP_SYMBOL(VirtualProtect))(LPVOID lpAddress, SIZE_T dwSize, DWORD flNewProtect, PDWORD lpflOldProtect) __asm__("__imp_VirtualProtect") = VirtualProtect;
 #endif
