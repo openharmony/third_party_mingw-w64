@@ -1526,9 +1526,7 @@ lib32_libmsvcrt_common_a_AR = $(AR) $(ARFLAGS)
 lib32_libmsvcrt_common_a_LIBADD =
 am__lib32_libmsvcrt_common_a_SOURCES_DIST = misc/mbrtowc.c \
 	misc/mbsinit.c misc/onexit_table.c misc/register_tls_atexit.c \
-	misc/uchar_c16rtomb.c misc/uchar_c32rtomb.c \
-	misc/uchar_mbrtoc16.c misc/uchar_mbrtoc32.c misc/wcrtomb.c \
-	stdio/_getc_nolock.c stdio/_getwc_nolock.c \
+	misc/wcrtomb.c stdio/_getc_nolock.c stdio/_getwc_nolock.c \
 	stdio/_putc_nolock.c stdio/_putwc_nolock.c stdio/_strtof_l.c \
 	stdio/_wcstof_l.c stdio/acrt_iob_func.c stdio/strtof.c \
 	stdio/snprintf_alias.c stdio/vsnprintf_alias.c math/frexp.c
@@ -1536,10 +1534,6 @@ am__objects_38 = misc/lib32_libmsvcrt_common_a-mbrtowc.$(OBJEXT) \
 	misc/lib32_libmsvcrt_common_a-mbsinit.$(OBJEXT) \
 	misc/lib32_libmsvcrt_common_a-onexit_table.$(OBJEXT) \
 	misc/lib32_libmsvcrt_common_a-register_tls_atexit.$(OBJEXT) \
-	misc/lib32_libmsvcrt_common_a-uchar_c16rtomb.$(OBJEXT) \
-	misc/lib32_libmsvcrt_common_a-uchar_c32rtomb.$(OBJEXT) \
-	misc/lib32_libmsvcrt_common_a-uchar_mbrtoc16.$(OBJEXT) \
-	misc/lib32_libmsvcrt_common_a-uchar_mbrtoc32.$(OBJEXT) \
 	misc/lib32_libmsvcrt_common_a-wcrtomb.$(OBJEXT) \
 	stdio/lib32_libmsvcrt_common_a-_getc_nolock.$(OBJEXT) \
 	stdio/lib32_libmsvcrt_common_a-_getwc_nolock.$(OBJEXT) \
@@ -2889,9 +2883,7 @@ lib64_libmsvcrt_common_a_AR = $(AR) $(ARFLAGS)
 lib64_libmsvcrt_common_a_LIBADD =
 am__lib64_libmsvcrt_common_a_SOURCES_DIST = misc/mbrtowc.c \
 	misc/mbsinit.c misc/onexit_table.c misc/register_tls_atexit.c \
-	misc/uchar_c16rtomb.c misc/uchar_c32rtomb.c \
-	misc/uchar_mbrtoc16.c misc/uchar_mbrtoc32.c misc/wcrtomb.c \
-	stdio/_getc_nolock.c stdio/_getwc_nolock.c \
+	misc/wcrtomb.c stdio/_getc_nolock.c stdio/_getwc_nolock.c \
 	stdio/_putc_nolock.c stdio/_putwc_nolock.c stdio/_strtof_l.c \
 	stdio/_wcstof_l.c stdio/acrt_iob_func.c stdio/strtof.c \
 	stdio/snprintf_alias.c stdio/vsnprintf_alias.c math/frexp.c
@@ -2899,10 +2891,6 @@ am__objects_90 = misc/lib64_libmsvcrt_common_a-mbrtowc.$(OBJEXT) \
 	misc/lib64_libmsvcrt_common_a-mbsinit.$(OBJEXT) \
 	misc/lib64_libmsvcrt_common_a-onexit_table.$(OBJEXT) \
 	misc/lib64_libmsvcrt_common_a-register_tls_atexit.$(OBJEXT) \
-	misc/lib64_libmsvcrt_common_a-uchar_c16rtomb.$(OBJEXT) \
-	misc/lib64_libmsvcrt_common_a-uchar_c32rtomb.$(OBJEXT) \
-	misc/lib64_libmsvcrt_common_a-uchar_mbrtoc16.$(OBJEXT) \
-	misc/lib64_libmsvcrt_common_a-uchar_mbrtoc32.$(OBJEXT) \
 	misc/lib64_libmsvcrt_common_a-wcrtomb.$(OBJEXT) \
 	stdio/lib64_libmsvcrt_common_a-_getc_nolock.$(OBJEXT) \
 	stdio/lib64_libmsvcrt_common_a-_getwc_nolock.$(OBJEXT) \
@@ -4175,9 +4163,7 @@ libarm32_libmsvcrt_common_a_AR = $(AR) $(ARFLAGS)
 libarm32_libmsvcrt_common_a_LIBADD =
 am__libarm32_libmsvcrt_common_a_SOURCES_DIST = misc/mbrtowc.c \
 	misc/mbsinit.c misc/onexit_table.c misc/register_tls_atexit.c \
-	misc/uchar_c16rtomb.c misc/uchar_c32rtomb.c \
-	misc/uchar_mbrtoc16.c misc/uchar_mbrtoc32.c misc/wcrtomb.c \
-	stdio/_getc_nolock.c stdio/_getwc_nolock.c \
+	misc/wcrtomb.c stdio/_getc_nolock.c stdio/_getwc_nolock.c \
 	stdio/_putc_nolock.c stdio/_putwc_nolock.c stdio/_strtof_l.c \
 	stdio/_wcstof_l.c stdio/acrt_iob_func.c stdio/strtof.c \
 	stdio/snprintf_alias.c stdio/vsnprintf_alias.c math/frexp.c
@@ -4185,10 +4171,6 @@ am__objects_138 = misc/libarm32_libmsvcrt_common_a-mbrtowc.$(OBJEXT) \
 	misc/libarm32_libmsvcrt_common_a-mbsinit.$(OBJEXT) \
 	misc/libarm32_libmsvcrt_common_a-onexit_table.$(OBJEXT) \
 	misc/libarm32_libmsvcrt_common_a-register_tls_atexit.$(OBJEXT) \
-	misc/libarm32_libmsvcrt_common_a-uchar_c16rtomb.$(OBJEXT) \
-	misc/libarm32_libmsvcrt_common_a-uchar_c32rtomb.$(OBJEXT) \
-	misc/libarm32_libmsvcrt_common_a-uchar_mbrtoc16.$(OBJEXT) \
-	misc/libarm32_libmsvcrt_common_a-uchar_mbrtoc32.$(OBJEXT) \
 	misc/libarm32_libmsvcrt_common_a-wcrtomb.$(OBJEXT) \
 	stdio/libarm32_libmsvcrt_common_a-_getc_nolock.$(OBJEXT) \
 	stdio/libarm32_libmsvcrt_common_a-_getwc_nolock.$(OBJEXT) \
@@ -5407,9 +5389,7 @@ libarm64_libmsvcrt_common_a_AR = $(AR) $(ARFLAGS)
 libarm64_libmsvcrt_common_a_LIBADD =
 am__libarm64_libmsvcrt_common_a_SOURCES_DIST = misc/mbrtowc.c \
 	misc/mbsinit.c misc/onexit_table.c misc/register_tls_atexit.c \
-	misc/uchar_c16rtomb.c misc/uchar_c32rtomb.c \
-	misc/uchar_mbrtoc16.c misc/uchar_mbrtoc32.c misc/wcrtomb.c \
-	stdio/_getc_nolock.c stdio/_getwc_nolock.c \
+	misc/wcrtomb.c stdio/_getc_nolock.c stdio/_getwc_nolock.c \
 	stdio/_putc_nolock.c stdio/_putwc_nolock.c stdio/_strtof_l.c \
 	stdio/_wcstof_l.c stdio/acrt_iob_func.c stdio/strtof.c \
 	stdio/snprintf_alias.c stdio/vsnprintf_alias.c math/frexp.c
@@ -5417,10 +5397,6 @@ am__objects_183 = misc/libarm64_libmsvcrt_common_a-mbrtowc.$(OBJEXT) \
 	misc/libarm64_libmsvcrt_common_a-mbsinit.$(OBJEXT) \
 	misc/libarm64_libmsvcrt_common_a-onexit_table.$(OBJEXT) \
 	misc/libarm64_libmsvcrt_common_a-register_tls_atexit.$(OBJEXT) \
-	misc/libarm64_libmsvcrt_common_a-uchar_c16rtomb.$(OBJEXT) \
-	misc/libarm64_libmsvcrt_common_a-uchar_c32rtomb.$(OBJEXT) \
-	misc/libarm64_libmsvcrt_common_a-uchar_mbrtoc16.$(OBJEXT) \
-	misc/libarm64_libmsvcrt_common_a-uchar_mbrtoc32.$(OBJEXT) \
 	misc/libarm64_libmsvcrt_common_a-wcrtomb.$(OBJEXT) \
 	stdio/libarm64_libmsvcrt_common_a-_getc_nolock.$(OBJEXT) \
 	stdio/libarm64_libmsvcrt_common_a-_getwc_nolock.$(OBJEXT) \
@@ -8638,10 +8614,6 @@ am__depfiles_remade = ./$(DEPDIR)/lib32_libm_a-_libm_dummy.Po \
 	misc/$(DEPDIR)/lib32_libmsvcrt_common_a-mbsinit.Po \
 	misc/$(DEPDIR)/lib32_libmsvcrt_common_a-onexit_table.Po \
 	misc/$(DEPDIR)/lib32_libmsvcrt_common_a-register_tls_atexit.Po \
-	misc/$(DEPDIR)/lib32_libmsvcrt_common_a-uchar_c16rtomb.Po \
-	misc/$(DEPDIR)/lib32_libmsvcrt_common_a-uchar_c32rtomb.Po \
-	misc/$(DEPDIR)/lib32_libmsvcrt_common_a-uchar_mbrtoc16.Po \
-	misc/$(DEPDIR)/lib32_libmsvcrt_common_a-uchar_mbrtoc32.Po \
 	misc/$(DEPDIR)/lib32_libmsvcrt_common_a-wcrtomb.Po \
 	misc/$(DEPDIR)/lib32_libmsvcrt_extra_a-___mb_cur_max_func.Po \
 	misc/$(DEPDIR)/lib32_libmsvcrt_extra_a-_configthreadlocale.Po \
@@ -8740,10 +8712,6 @@ am__depfiles_remade = ./$(DEPDIR)/lib32_libm_a-_libm_dummy.Po \
 	misc/$(DEPDIR)/lib64_libmsvcrt_common_a-mbsinit.Po \
 	misc/$(DEPDIR)/lib64_libmsvcrt_common_a-onexit_table.Po \
 	misc/$(DEPDIR)/lib64_libmsvcrt_common_a-register_tls_atexit.Po \
-	misc/$(DEPDIR)/lib64_libmsvcrt_common_a-uchar_c16rtomb.Po \
-	misc/$(DEPDIR)/lib64_libmsvcrt_common_a-uchar_c32rtomb.Po \
-	misc/$(DEPDIR)/lib64_libmsvcrt_common_a-uchar_mbrtoc16.Po \
-	misc/$(DEPDIR)/lib64_libmsvcrt_common_a-uchar_mbrtoc32.Po \
 	misc/$(DEPDIR)/lib64_libmsvcrt_common_a-wcrtomb.Po \
 	misc/$(DEPDIR)/lib64_libmsvcrt_extra_a-__p___argv.Po \
 	misc/$(DEPDIR)/lib64_libmsvcrt_extra_a-__p__acmdln.Po \
@@ -8836,10 +8804,6 @@ am__depfiles_remade = ./$(DEPDIR)/lib32_libm_a-_libm_dummy.Po \
 	misc/$(DEPDIR)/libarm32_libmsvcrt_common_a-mbsinit.Po \
 	misc/$(DEPDIR)/libarm32_libmsvcrt_common_a-onexit_table.Po \
 	misc/$(DEPDIR)/libarm32_libmsvcrt_common_a-register_tls_atexit.Po \
-	misc/$(DEPDIR)/libarm32_libmsvcrt_common_a-uchar_c16rtomb.Po \
-	misc/$(DEPDIR)/libarm32_libmsvcrt_common_a-uchar_c32rtomb.Po \
-	misc/$(DEPDIR)/libarm32_libmsvcrt_common_a-uchar_mbrtoc16.Po \
-	misc/$(DEPDIR)/libarm32_libmsvcrt_common_a-uchar_mbrtoc32.Po \
 	misc/$(DEPDIR)/libarm32_libmsvcrt_common_a-wcrtomb.Po \
 	misc/$(DEPDIR)/libarm32_libmsvcrt_extra_a-__p___argv.Po \
 	misc/$(DEPDIR)/libarm32_libmsvcrt_extra_a-__p__acmdln.Po \
@@ -8928,10 +8892,6 @@ am__depfiles_remade = ./$(DEPDIR)/lib32_libm_a-_libm_dummy.Po \
 	misc/$(DEPDIR)/libarm64_libmsvcrt_common_a-mbsinit.Po \
 	misc/$(DEPDIR)/libarm64_libmsvcrt_common_a-onexit_table.Po \
 	misc/$(DEPDIR)/libarm64_libmsvcrt_common_a-register_tls_atexit.Po \
-	misc/$(DEPDIR)/libarm64_libmsvcrt_common_a-uchar_c16rtomb.Po \
-	misc/$(DEPDIR)/libarm64_libmsvcrt_common_a-uchar_c32rtomb.Po \
-	misc/$(DEPDIR)/libarm64_libmsvcrt_common_a-uchar_mbrtoc16.Po \
-	misc/$(DEPDIR)/libarm64_libmsvcrt_common_a-uchar_mbrtoc32.Po \
 	misc/$(DEPDIR)/libarm64_libmsvcrt_common_a-wcrtomb.Po \
 	misc/$(DEPDIR)/libarm64_libmsvcrt_extra_a-__p___argv.Po \
 	misc/$(DEPDIR)/libarm64_libmsvcrt_extra_a-__p__acmdln.Po \
@@ -10853,10 +10813,6 @@ src_msvcrt_common = \
   misc/mbsinit.c \
   misc/onexit_table.c \
   misc/register_tls_atexit.c \
-  misc/uchar_c16rtomb.c \
-  misc/uchar_c32rtomb.c \
-  misc/uchar_mbrtoc16.c \
-  misc/uchar_mbrtoc32.c \
   misc/wcrtomb.c \
   stdio/_getc_nolock.c \
   stdio/_getwc_nolock.c \
@@ -15399,14 +15355,6 @@ misc/lib32_libmsvcrt_common_a-onexit_table.$(OBJEXT):  \
 	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 misc/lib32_libmsvcrt_common_a-register_tls_atexit.$(OBJEXT):  \
 	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
-misc/lib32_libmsvcrt_common_a-uchar_c16rtomb.$(OBJEXT):  \
-	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
-misc/lib32_libmsvcrt_common_a-uchar_c32rtomb.$(OBJEXT):  \
-	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
-misc/lib32_libmsvcrt_common_a-uchar_mbrtoc16.$(OBJEXT):  \
-	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
-misc/lib32_libmsvcrt_common_a-uchar_mbrtoc32.$(OBJEXT):  \
-	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 misc/lib32_libmsvcrt_common_a-wcrtomb.$(OBJEXT): misc/$(am__dirstamp) \
 	misc/$(DEPDIR)/$(am__dirstamp)
 stdio/lib32_libmsvcrt_common_a-_getc_nolock.$(OBJEXT):  \
@@ -17293,14 +17241,6 @@ misc/lib64_libmsvcrt_common_a-onexit_table.$(OBJEXT):  \
 	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 misc/lib64_libmsvcrt_common_a-register_tls_atexit.$(OBJEXT):  \
 	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
-misc/lib64_libmsvcrt_common_a-uchar_c16rtomb.$(OBJEXT):  \
-	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
-misc/lib64_libmsvcrt_common_a-uchar_c32rtomb.$(OBJEXT):  \
-	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
-misc/lib64_libmsvcrt_common_a-uchar_mbrtoc16.$(OBJEXT):  \
-	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
-misc/lib64_libmsvcrt_common_a-uchar_mbrtoc32.$(OBJEXT):  \
-	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 misc/lib64_libmsvcrt_common_a-wcrtomb.$(OBJEXT): misc/$(am__dirstamp) \
 	misc/$(DEPDIR)/$(am__dirstamp)
 stdio/lib64_libmsvcrt_common_a-_getc_nolock.$(OBJEXT):  \
@@ -19132,14 +19072,6 @@ misc/libarm32_libmsvcrt_common_a-onexit_table.$(OBJEXT):  \
 	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 misc/libarm32_libmsvcrt_common_a-register_tls_atexit.$(OBJEXT):  \
 	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
-misc/libarm32_libmsvcrt_common_a-uchar_c16rtomb.$(OBJEXT):  \
-	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
-misc/libarm32_libmsvcrt_common_a-uchar_c32rtomb.$(OBJEXT):  \
-	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
-misc/libarm32_libmsvcrt_common_a-uchar_mbrtoc16.$(OBJEXT):  \
-	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
-misc/libarm32_libmsvcrt_common_a-uchar_mbrtoc32.$(OBJEXT):  \
-	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 misc/libarm32_libmsvcrt_common_a-wcrtomb.$(OBJEXT):  \
 	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 stdio/libarm32_libmsvcrt_common_a-_getc_nolock.$(OBJEXT):  \
@@ -20844,14 +20776,6 @@ misc/libarm64_libmsvcrt_common_a-mbsinit.$(OBJEXT):  \
 misc/libarm64_libmsvcrt_common_a-onexit_table.$(OBJEXT):  \
 	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 misc/libarm64_libmsvcrt_common_a-register_tls_atexit.$(OBJEXT):  \
-	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
-misc/libarm64_libmsvcrt_common_a-uchar_c16rtomb.$(OBJEXT):  \
-	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
-misc/libarm64_libmsvcrt_common_a-uchar_c32rtomb.$(OBJEXT):  \
-	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
-misc/libarm64_libmsvcrt_common_a-uchar_mbrtoc16.$(OBJEXT):  \
-	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
-misc/libarm64_libmsvcrt_common_a-uchar_mbrtoc32.$(OBJEXT):  \
 	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
 misc/libarm64_libmsvcrt_common_a-wcrtomb.$(OBJEXT):  \
 	misc/$(am__dirstamp) misc/$(DEPDIR)/$(am__dirstamp)
@@ -24537,10 +24461,6 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmsvcrt_common_a-mbsinit.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmsvcrt_common_a-onexit_table.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmsvcrt_common_a-register_tls_atexit.Po@am__quote@ # am--include-marker
-@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmsvcrt_common_a-uchar_c16rtomb.Po@am__quote@ # am--include-marker
-@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmsvcrt_common_a-uchar_c32rtomb.Po@am__quote@ # am--include-marker
-@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmsvcrt_common_a-uchar_mbrtoc16.Po@am__quote@ # am--include-marker
-@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmsvcrt_common_a-uchar_mbrtoc32.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmsvcrt_common_a-wcrtomb.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmsvcrt_extra_a-___mb_cur_max_func.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib32_libmsvcrt_extra_a-_configthreadlocale.Po@am__quote@ # am--include-marker
@@ -24639,10 +24559,6 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmsvcrt_common_a-mbsinit.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmsvcrt_common_a-onexit_table.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmsvcrt_common_a-register_tls_atexit.Po@am__quote@ # am--include-marker
-@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmsvcrt_common_a-uchar_c16rtomb.Po@am__quote@ # am--include-marker
-@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmsvcrt_common_a-uchar_c32rtomb.Po@am__quote@ # am--include-marker
-@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmsvcrt_common_a-uchar_mbrtoc16.Po@am__quote@ # am--include-marker
-@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmsvcrt_common_a-uchar_mbrtoc32.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmsvcrt_common_a-wcrtomb.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmsvcrt_extra_a-__p___argv.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/lib64_libmsvcrt_extra_a-__p__acmdln.Po@am__quote@ # am--include-marker
@@ -24735,10 +24651,6 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm32_libmsvcrt_common_a-mbsinit.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm32_libmsvcrt_common_a-onexit_table.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm32_libmsvcrt_common_a-register_tls_atexit.Po@am__quote@ # am--include-marker
-@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm32_libmsvcrt_common_a-uchar_c16rtomb.Po@am__quote@ # am--include-marker
-@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm32_libmsvcrt_common_a-uchar_c32rtomb.Po@am__quote@ # am--include-marker
-@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm32_libmsvcrt_common_a-uchar_mbrtoc16.Po@am__quote@ # am--include-marker
-@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm32_libmsvcrt_common_a-uchar_mbrtoc32.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm32_libmsvcrt_common_a-wcrtomb.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm32_libmsvcrt_extra_a-__p___argv.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm32_libmsvcrt_extra_a-__p__acmdln.Po@am__quote@ # am--include-marker
@@ -24827,10 +24739,6 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm64_libmsvcrt_common_a-mbsinit.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm64_libmsvcrt_common_a-onexit_table.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm64_libmsvcrt_common_a-register_tls_atexit.Po@am__quote@ # am--include-marker
-@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm64_libmsvcrt_common_a-uchar_c16rtomb.Po@am__quote@ # am--include-marker
-@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm64_libmsvcrt_common_a-uchar_c32rtomb.Po@am__quote@ # am--include-marker
-@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm64_libmsvcrt_common_a-uchar_mbrtoc16.Po@am__quote@ # am--include-marker
-@AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm64_libmsvcrt_common_a-uchar_mbrtoc32.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm64_libmsvcrt_common_a-wcrtomb.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm64_libmsvcrt_extra_a-__p___argv.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@misc/$(DEPDIR)/libarm64_libmsvcrt_extra_a-__p__acmdln.Po@am__quote@ # am--include-marker
@@ -36132,62 +36040,6 @@ misc/lib32_libmsvcrt_common_a-register_tls_atexit.obj: misc/register_tls_atexit.
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcrt_common_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib32_libmsvcrt_common_a-register_tls_atexit.obj `if test -f 'misc/register_tls_atexit.c'; then $(CYGPATH_W) 'misc/register_tls_atexit.c'; else $(CYGPATH_W) '$(srcdir)/misc/register_tls_atexit.c'; fi`
 
-misc/lib32_libmsvcrt_common_a-uchar_c16rtomb.o: misc/uchar_c16rtomb.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcrt_common_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libmsvcrt_common_a-uchar_c16rtomb.o -MD -MP -MF misc/$(DEPDIR)/lib32_libmsvcrt_common_a-uchar_c16rtomb.Tpo -c -o misc/lib32_libmsvcrt_common_a-uchar_c16rtomb.o `test -f 'misc/uchar_c16rtomb.c' || echo '$(srcdir)/'`misc/uchar_c16rtomb.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libmsvcrt_common_a-uchar_c16rtomb.Tpo misc/$(DEPDIR)/lib32_libmsvcrt_common_a-uchar_c16rtomb.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/uchar_c16rtomb.c' object='misc/lib32_libmsvcrt_common_a-uchar_c16rtomb.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcrt_common_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib32_libmsvcrt_common_a-uchar_c16rtomb.o `test -f 'misc/uchar_c16rtomb.c' || echo '$(srcdir)/'`misc/uchar_c16rtomb.c
-
-misc/lib32_libmsvcrt_common_a-uchar_c16rtomb.obj: misc/uchar_c16rtomb.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcrt_common_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libmsvcrt_common_a-uchar_c16rtomb.obj -MD -MP -MF misc/$(DEPDIR)/lib32_libmsvcrt_common_a-uchar_c16rtomb.Tpo -c -o misc/lib32_libmsvcrt_common_a-uchar_c16rtomb.obj `if test -f 'misc/uchar_c16rtomb.c'; then $(CYGPATH_W) 'misc/uchar_c16rtomb.c'; else $(CYGPATH_W) '$(srcdir)/misc/uchar_c16rtomb.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libmsvcrt_common_a-uchar_c16rtomb.Tpo misc/$(DEPDIR)/lib32_libmsvcrt_common_a-uchar_c16rtomb.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/uchar_c16rtomb.c' object='misc/lib32_libmsvcrt_common_a-uchar_c16rtomb.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcrt_common_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib32_libmsvcrt_common_a-uchar_c16rtomb.obj `if test -f 'misc/uchar_c16rtomb.c'; then $(CYGPATH_W) 'misc/uchar_c16rtomb.c'; else $(CYGPATH_W) '$(srcdir)/misc/uchar_c16rtomb.c'; fi`
-
-misc/lib32_libmsvcrt_common_a-uchar_c32rtomb.o: misc/uchar_c32rtomb.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcrt_common_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libmsvcrt_common_a-uchar_c32rtomb.o -MD -MP -MF misc/$(DEPDIR)/lib32_libmsvcrt_common_a-uchar_c32rtomb.Tpo -c -o misc/lib32_libmsvcrt_common_a-uchar_c32rtomb.o `test -f 'misc/uchar_c32rtomb.c' || echo '$(srcdir)/'`misc/uchar_c32rtomb.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libmsvcrt_common_a-uchar_c32rtomb.Tpo misc/$(DEPDIR)/lib32_libmsvcrt_common_a-uchar_c32rtomb.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/uchar_c32rtomb.c' object='misc/lib32_libmsvcrt_common_a-uchar_c32rtomb.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcrt_common_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib32_libmsvcrt_common_a-uchar_c32rtomb.o `test -f 'misc/uchar_c32rtomb.c' || echo '$(srcdir)/'`misc/uchar_c32rtomb.c
-
-misc/lib32_libmsvcrt_common_a-uchar_c32rtomb.obj: misc/uchar_c32rtomb.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcrt_common_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libmsvcrt_common_a-uchar_c32rtomb.obj -MD -MP -MF misc/$(DEPDIR)/lib32_libmsvcrt_common_a-uchar_c32rtomb.Tpo -c -o misc/lib32_libmsvcrt_common_a-uchar_c32rtomb.obj `if test -f 'misc/uchar_c32rtomb.c'; then $(CYGPATH_W) 'misc/uchar_c32rtomb.c'; else $(CYGPATH_W) '$(srcdir)/misc/uchar_c32rtomb.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libmsvcrt_common_a-uchar_c32rtomb.Tpo misc/$(DEPDIR)/lib32_libmsvcrt_common_a-uchar_c32rtomb.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/uchar_c32rtomb.c' object='misc/lib32_libmsvcrt_common_a-uchar_c32rtomb.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcrt_common_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib32_libmsvcrt_common_a-uchar_c32rtomb.obj `if test -f 'misc/uchar_c32rtomb.c'; then $(CYGPATH_W) 'misc/uchar_c32rtomb.c'; else $(CYGPATH_W) '$(srcdir)/misc/uchar_c32rtomb.c'; fi`
-
-misc/lib32_libmsvcrt_common_a-uchar_mbrtoc16.o: misc/uchar_mbrtoc16.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcrt_common_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libmsvcrt_common_a-uchar_mbrtoc16.o -MD -MP -MF misc/$(DEPDIR)/lib32_libmsvcrt_common_a-uchar_mbrtoc16.Tpo -c -o misc/lib32_libmsvcrt_common_a-uchar_mbrtoc16.o `test -f 'misc/uchar_mbrtoc16.c' || echo '$(srcdir)/'`misc/uchar_mbrtoc16.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libmsvcrt_common_a-uchar_mbrtoc16.Tpo misc/$(DEPDIR)/lib32_libmsvcrt_common_a-uchar_mbrtoc16.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/uchar_mbrtoc16.c' object='misc/lib32_libmsvcrt_common_a-uchar_mbrtoc16.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcrt_common_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib32_libmsvcrt_common_a-uchar_mbrtoc16.o `test -f 'misc/uchar_mbrtoc16.c' || echo '$(srcdir)/'`misc/uchar_mbrtoc16.c
-
-misc/lib32_libmsvcrt_common_a-uchar_mbrtoc16.obj: misc/uchar_mbrtoc16.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcrt_common_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libmsvcrt_common_a-uchar_mbrtoc16.obj -MD -MP -MF misc/$(DEPDIR)/lib32_libmsvcrt_common_a-uchar_mbrtoc16.Tpo -c -o misc/lib32_libmsvcrt_common_a-uchar_mbrtoc16.obj `if test -f 'misc/uchar_mbrtoc16.c'; then $(CYGPATH_W) 'misc/uchar_mbrtoc16.c'; else $(CYGPATH_W) '$(srcdir)/misc/uchar_mbrtoc16.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libmsvcrt_common_a-uchar_mbrtoc16.Tpo misc/$(DEPDIR)/lib32_libmsvcrt_common_a-uchar_mbrtoc16.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/uchar_mbrtoc16.c' object='misc/lib32_libmsvcrt_common_a-uchar_mbrtoc16.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcrt_common_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib32_libmsvcrt_common_a-uchar_mbrtoc16.obj `if test -f 'misc/uchar_mbrtoc16.c'; then $(CYGPATH_W) 'misc/uchar_mbrtoc16.c'; else $(CYGPATH_W) '$(srcdir)/misc/uchar_mbrtoc16.c'; fi`
-
-misc/lib32_libmsvcrt_common_a-uchar_mbrtoc32.o: misc/uchar_mbrtoc32.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcrt_common_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libmsvcrt_common_a-uchar_mbrtoc32.o -MD -MP -MF misc/$(DEPDIR)/lib32_libmsvcrt_common_a-uchar_mbrtoc32.Tpo -c -o misc/lib32_libmsvcrt_common_a-uchar_mbrtoc32.o `test -f 'misc/uchar_mbrtoc32.c' || echo '$(srcdir)/'`misc/uchar_mbrtoc32.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libmsvcrt_common_a-uchar_mbrtoc32.Tpo misc/$(DEPDIR)/lib32_libmsvcrt_common_a-uchar_mbrtoc32.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/uchar_mbrtoc32.c' object='misc/lib32_libmsvcrt_common_a-uchar_mbrtoc32.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcrt_common_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib32_libmsvcrt_common_a-uchar_mbrtoc32.o `test -f 'misc/uchar_mbrtoc32.c' || echo '$(srcdir)/'`misc/uchar_mbrtoc32.c
-
-misc/lib32_libmsvcrt_common_a-uchar_mbrtoc32.obj: misc/uchar_mbrtoc32.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcrt_common_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libmsvcrt_common_a-uchar_mbrtoc32.obj -MD -MP -MF misc/$(DEPDIR)/lib32_libmsvcrt_common_a-uchar_mbrtoc32.Tpo -c -o misc/lib32_libmsvcrt_common_a-uchar_mbrtoc32.obj `if test -f 'misc/uchar_mbrtoc32.c'; then $(CYGPATH_W) 'misc/uchar_mbrtoc32.c'; else $(CYGPATH_W) '$(srcdir)/misc/uchar_mbrtoc32.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libmsvcrt_common_a-uchar_mbrtoc32.Tpo misc/$(DEPDIR)/lib32_libmsvcrt_common_a-uchar_mbrtoc32.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/uchar_mbrtoc32.c' object='misc/lib32_libmsvcrt_common_a-uchar_mbrtoc32.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcrt_common_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib32_libmsvcrt_common_a-uchar_mbrtoc32.obj `if test -f 'misc/uchar_mbrtoc32.c'; then $(CYGPATH_W) 'misc/uchar_mbrtoc32.c'; else $(CYGPATH_W) '$(srcdir)/misc/uchar_mbrtoc32.c'; fi`
-
 misc/lib32_libmsvcrt_common_a-wcrtomb.o: misc/wcrtomb.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib32_libmsvcrt_common_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib32_libmsvcrt_common_a-wcrtomb.o -MD -MP -MF misc/$(DEPDIR)/lib32_libmsvcrt_common_a-wcrtomb.Tpo -c -o misc/lib32_libmsvcrt_common_a-wcrtomb.o `test -f 'misc/wcrtomb.c' || echo '$(srcdir)/'`misc/wcrtomb.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib32_libmsvcrt_common_a-wcrtomb.Tpo misc/$(DEPDIR)/lib32_libmsvcrt_common_a-wcrtomb.Po
@@ -46618,62 +46470,6 @@ misc/lib64_libmsvcrt_common_a-register_tls_atexit.obj: misc/register_tls_atexit.
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcrt_common_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib64_libmsvcrt_common_a-register_tls_atexit.obj `if test -f 'misc/register_tls_atexit.c'; then $(CYGPATH_W) 'misc/register_tls_atexit.c'; else $(CYGPATH_W) '$(srcdir)/misc/register_tls_atexit.c'; fi`
 
-misc/lib64_libmsvcrt_common_a-uchar_c16rtomb.o: misc/uchar_c16rtomb.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcrt_common_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib64_libmsvcrt_common_a-uchar_c16rtomb.o -MD -MP -MF misc/$(DEPDIR)/lib64_libmsvcrt_common_a-uchar_c16rtomb.Tpo -c -o misc/lib64_libmsvcrt_common_a-uchar_c16rtomb.o `test -f 'misc/uchar_c16rtomb.c' || echo '$(srcdir)/'`misc/uchar_c16rtomb.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib64_libmsvcrt_common_a-uchar_c16rtomb.Tpo misc/$(DEPDIR)/lib64_libmsvcrt_common_a-uchar_c16rtomb.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/uchar_c16rtomb.c' object='misc/lib64_libmsvcrt_common_a-uchar_c16rtomb.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcrt_common_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib64_libmsvcrt_common_a-uchar_c16rtomb.o `test -f 'misc/uchar_c16rtomb.c' || echo '$(srcdir)/'`misc/uchar_c16rtomb.c
-
-misc/lib64_libmsvcrt_common_a-uchar_c16rtomb.obj: misc/uchar_c16rtomb.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcrt_common_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib64_libmsvcrt_common_a-uchar_c16rtomb.obj -MD -MP -MF misc/$(DEPDIR)/lib64_libmsvcrt_common_a-uchar_c16rtomb.Tpo -c -o misc/lib64_libmsvcrt_common_a-uchar_c16rtomb.obj `if test -f 'misc/uchar_c16rtomb.c'; then $(CYGPATH_W) 'misc/uchar_c16rtomb.c'; else $(CYGPATH_W) '$(srcdir)/misc/uchar_c16rtomb.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib64_libmsvcrt_common_a-uchar_c16rtomb.Tpo misc/$(DEPDIR)/lib64_libmsvcrt_common_a-uchar_c16rtomb.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/uchar_c16rtomb.c' object='misc/lib64_libmsvcrt_common_a-uchar_c16rtomb.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcrt_common_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib64_libmsvcrt_common_a-uchar_c16rtomb.obj `if test -f 'misc/uchar_c16rtomb.c'; then $(CYGPATH_W) 'misc/uchar_c16rtomb.c'; else $(CYGPATH_W) '$(srcdir)/misc/uchar_c16rtomb.c'; fi`
-
-misc/lib64_libmsvcrt_common_a-uchar_c32rtomb.o: misc/uchar_c32rtomb.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcrt_common_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib64_libmsvcrt_common_a-uchar_c32rtomb.o -MD -MP -MF misc/$(DEPDIR)/lib64_libmsvcrt_common_a-uchar_c32rtomb.Tpo -c -o misc/lib64_libmsvcrt_common_a-uchar_c32rtomb.o `test -f 'misc/uchar_c32rtomb.c' || echo '$(srcdir)/'`misc/uchar_c32rtomb.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib64_libmsvcrt_common_a-uchar_c32rtomb.Tpo misc/$(DEPDIR)/lib64_libmsvcrt_common_a-uchar_c32rtomb.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/uchar_c32rtomb.c' object='misc/lib64_libmsvcrt_common_a-uchar_c32rtomb.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcrt_common_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib64_libmsvcrt_common_a-uchar_c32rtomb.o `test -f 'misc/uchar_c32rtomb.c' || echo '$(srcdir)/'`misc/uchar_c32rtomb.c
-
-misc/lib64_libmsvcrt_common_a-uchar_c32rtomb.obj: misc/uchar_c32rtomb.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcrt_common_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib64_libmsvcrt_common_a-uchar_c32rtomb.obj -MD -MP -MF misc/$(DEPDIR)/lib64_libmsvcrt_common_a-uchar_c32rtomb.Tpo -c -o misc/lib64_libmsvcrt_common_a-uchar_c32rtomb.obj `if test -f 'misc/uchar_c32rtomb.c'; then $(CYGPATH_W) 'misc/uchar_c32rtomb.c'; else $(CYGPATH_W) '$(srcdir)/misc/uchar_c32rtomb.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib64_libmsvcrt_common_a-uchar_c32rtomb.Tpo misc/$(DEPDIR)/lib64_libmsvcrt_common_a-uchar_c32rtomb.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/uchar_c32rtomb.c' object='misc/lib64_libmsvcrt_common_a-uchar_c32rtomb.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcrt_common_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib64_libmsvcrt_common_a-uchar_c32rtomb.obj `if test -f 'misc/uchar_c32rtomb.c'; then $(CYGPATH_W) 'misc/uchar_c32rtomb.c'; else $(CYGPATH_W) '$(srcdir)/misc/uchar_c32rtomb.c'; fi`
-
-misc/lib64_libmsvcrt_common_a-uchar_mbrtoc16.o: misc/uchar_mbrtoc16.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcrt_common_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib64_libmsvcrt_common_a-uchar_mbrtoc16.o -MD -MP -MF misc/$(DEPDIR)/lib64_libmsvcrt_common_a-uchar_mbrtoc16.Tpo -c -o misc/lib64_libmsvcrt_common_a-uchar_mbrtoc16.o `test -f 'misc/uchar_mbrtoc16.c' || echo '$(srcdir)/'`misc/uchar_mbrtoc16.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib64_libmsvcrt_common_a-uchar_mbrtoc16.Tpo misc/$(DEPDIR)/lib64_libmsvcrt_common_a-uchar_mbrtoc16.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/uchar_mbrtoc16.c' object='misc/lib64_libmsvcrt_common_a-uchar_mbrtoc16.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcrt_common_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib64_libmsvcrt_common_a-uchar_mbrtoc16.o `test -f 'misc/uchar_mbrtoc16.c' || echo '$(srcdir)/'`misc/uchar_mbrtoc16.c
-
-misc/lib64_libmsvcrt_common_a-uchar_mbrtoc16.obj: misc/uchar_mbrtoc16.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcrt_common_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib64_libmsvcrt_common_a-uchar_mbrtoc16.obj -MD -MP -MF misc/$(DEPDIR)/lib64_libmsvcrt_common_a-uchar_mbrtoc16.Tpo -c -o misc/lib64_libmsvcrt_common_a-uchar_mbrtoc16.obj `if test -f 'misc/uchar_mbrtoc16.c'; then $(CYGPATH_W) 'misc/uchar_mbrtoc16.c'; else $(CYGPATH_W) '$(srcdir)/misc/uchar_mbrtoc16.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib64_libmsvcrt_common_a-uchar_mbrtoc16.Tpo misc/$(DEPDIR)/lib64_libmsvcrt_common_a-uchar_mbrtoc16.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/uchar_mbrtoc16.c' object='misc/lib64_libmsvcrt_common_a-uchar_mbrtoc16.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcrt_common_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib64_libmsvcrt_common_a-uchar_mbrtoc16.obj `if test -f 'misc/uchar_mbrtoc16.c'; then $(CYGPATH_W) 'misc/uchar_mbrtoc16.c'; else $(CYGPATH_W) '$(srcdir)/misc/uchar_mbrtoc16.c'; fi`
-
-misc/lib64_libmsvcrt_common_a-uchar_mbrtoc32.o: misc/uchar_mbrtoc32.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcrt_common_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib64_libmsvcrt_common_a-uchar_mbrtoc32.o -MD -MP -MF misc/$(DEPDIR)/lib64_libmsvcrt_common_a-uchar_mbrtoc32.Tpo -c -o misc/lib64_libmsvcrt_common_a-uchar_mbrtoc32.o `test -f 'misc/uchar_mbrtoc32.c' || echo '$(srcdir)/'`misc/uchar_mbrtoc32.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib64_libmsvcrt_common_a-uchar_mbrtoc32.Tpo misc/$(DEPDIR)/lib64_libmsvcrt_common_a-uchar_mbrtoc32.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/uchar_mbrtoc32.c' object='misc/lib64_libmsvcrt_common_a-uchar_mbrtoc32.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcrt_common_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib64_libmsvcrt_common_a-uchar_mbrtoc32.o `test -f 'misc/uchar_mbrtoc32.c' || echo '$(srcdir)/'`misc/uchar_mbrtoc32.c
-
-misc/lib64_libmsvcrt_common_a-uchar_mbrtoc32.obj: misc/uchar_mbrtoc32.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcrt_common_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib64_libmsvcrt_common_a-uchar_mbrtoc32.obj -MD -MP -MF misc/$(DEPDIR)/lib64_libmsvcrt_common_a-uchar_mbrtoc32.Tpo -c -o misc/lib64_libmsvcrt_common_a-uchar_mbrtoc32.obj `if test -f 'misc/uchar_mbrtoc32.c'; then $(CYGPATH_W) 'misc/uchar_mbrtoc32.c'; else $(CYGPATH_W) '$(srcdir)/misc/uchar_mbrtoc32.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib64_libmsvcrt_common_a-uchar_mbrtoc32.Tpo misc/$(DEPDIR)/lib64_libmsvcrt_common_a-uchar_mbrtoc32.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/uchar_mbrtoc32.c' object='misc/lib64_libmsvcrt_common_a-uchar_mbrtoc32.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcrt_common_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/lib64_libmsvcrt_common_a-uchar_mbrtoc32.obj `if test -f 'misc/uchar_mbrtoc32.c'; then $(CYGPATH_W) 'misc/uchar_mbrtoc32.c'; else $(CYGPATH_W) '$(srcdir)/misc/uchar_mbrtoc32.c'; fi`
-
 misc/lib64_libmsvcrt_common_a-wcrtomb.o: misc/wcrtomb.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lib64_libmsvcrt_common_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/lib64_libmsvcrt_common_a-wcrtomb.o -MD -MP -MF misc/$(DEPDIR)/lib64_libmsvcrt_common_a-wcrtomb.Tpo -c -o misc/lib64_libmsvcrt_common_a-wcrtomb.o `test -f 'misc/wcrtomb.c' || echo '$(srcdir)/'`misc/wcrtomb.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/lib64_libmsvcrt_common_a-wcrtomb.Tpo misc/$(DEPDIR)/lib64_libmsvcrt_common_a-wcrtomb.Po
@@ -56908,62 +56704,6 @@ misc/libarm32_libmsvcrt_common_a-register_tls_atexit.obj: misc/register_tls_atex
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_common_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/libarm32_libmsvcrt_common_a-register_tls_atexit.obj `if test -f 'misc/register_tls_atexit.c'; then $(CYGPATH_W) 'misc/register_tls_atexit.c'; else $(CYGPATH_W) '$(srcdir)/misc/register_tls_atexit.c'; fi`
 
-misc/libarm32_libmsvcrt_common_a-uchar_c16rtomb.o: misc/uchar_c16rtomb.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_common_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/libarm32_libmsvcrt_common_a-uchar_c16rtomb.o -MD -MP -MF misc/$(DEPDIR)/libarm32_libmsvcrt_common_a-uchar_c16rtomb.Tpo -c -o misc/libarm32_libmsvcrt_common_a-uchar_c16rtomb.o `test -f 'misc/uchar_c16rtomb.c' || echo '$(srcdir)/'`misc/uchar_c16rtomb.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/libarm32_libmsvcrt_common_a-uchar_c16rtomb.Tpo misc/$(DEPDIR)/libarm32_libmsvcrt_common_a-uchar_c16rtomb.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/uchar_c16rtomb.c' object='misc/libarm32_libmsvcrt_common_a-uchar_c16rtomb.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_common_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/libarm32_libmsvcrt_common_a-uchar_c16rtomb.o `test -f 'misc/uchar_c16rtomb.c' || echo '$(srcdir)/'`misc/uchar_c16rtomb.c
-
-misc/libarm32_libmsvcrt_common_a-uchar_c16rtomb.obj: misc/uchar_c16rtomb.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_common_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/libarm32_libmsvcrt_common_a-uchar_c16rtomb.obj -MD -MP -MF misc/$(DEPDIR)/libarm32_libmsvcrt_common_a-uchar_c16rtomb.Tpo -c -o misc/libarm32_libmsvcrt_common_a-uchar_c16rtomb.obj `if test -f 'misc/uchar_c16rtomb.c'; then $(CYGPATH_W) 'misc/uchar_c16rtomb.c'; else $(CYGPATH_W) '$(srcdir)/misc/uchar_c16rtomb.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/libarm32_libmsvcrt_common_a-uchar_c16rtomb.Tpo misc/$(DEPDIR)/libarm32_libmsvcrt_common_a-uchar_c16rtomb.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/uchar_c16rtomb.c' object='misc/libarm32_libmsvcrt_common_a-uchar_c16rtomb.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_common_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/libarm32_libmsvcrt_common_a-uchar_c16rtomb.obj `if test -f 'misc/uchar_c16rtomb.c'; then $(CYGPATH_W) 'misc/uchar_c16rtomb.c'; else $(CYGPATH_W) '$(srcdir)/misc/uchar_c16rtomb.c'; fi`
-
-misc/libarm32_libmsvcrt_common_a-uchar_c32rtomb.o: misc/uchar_c32rtomb.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_common_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/libarm32_libmsvcrt_common_a-uchar_c32rtomb.o -MD -MP -MF misc/$(DEPDIR)/libarm32_libmsvcrt_common_a-uchar_c32rtomb.Tpo -c -o misc/libarm32_libmsvcrt_common_a-uchar_c32rtomb.o `test -f 'misc/uchar_c32rtomb.c' || echo '$(srcdir)/'`misc/uchar_c32rtomb.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/libarm32_libmsvcrt_common_a-uchar_c32rtomb.Tpo misc/$(DEPDIR)/libarm32_libmsvcrt_common_a-uchar_c32rtomb.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/uchar_c32rtomb.c' object='misc/libarm32_libmsvcrt_common_a-uchar_c32rtomb.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_common_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/libarm32_libmsvcrt_common_a-uchar_c32rtomb.o `test -f 'misc/uchar_c32rtomb.c' || echo '$(srcdir)/'`misc/uchar_c32rtomb.c
-
-misc/libarm32_libmsvcrt_common_a-uchar_c32rtomb.obj: misc/uchar_c32rtomb.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_common_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/libarm32_libmsvcrt_common_a-uchar_c32rtomb.obj -MD -MP -MF misc/$(DEPDIR)/libarm32_libmsvcrt_common_a-uchar_c32rtomb.Tpo -c -o misc/libarm32_libmsvcrt_common_a-uchar_c32rtomb.obj `if test -f 'misc/uchar_c32rtomb.c'; then $(CYGPATH_W) 'misc/uchar_c32rtomb.c'; else $(CYGPATH_W) '$(srcdir)/misc/uchar_c32rtomb.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/libarm32_libmsvcrt_common_a-uchar_c32rtomb.Tpo misc/$(DEPDIR)/libarm32_libmsvcrt_common_a-uchar_c32rtomb.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/uchar_c32rtomb.c' object='misc/libarm32_libmsvcrt_common_a-uchar_c32rtomb.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_common_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/libarm32_libmsvcrt_common_a-uchar_c32rtomb.obj `if test -f 'misc/uchar_c32rtomb.c'; then $(CYGPATH_W) 'misc/uchar_c32rtomb.c'; else $(CYGPATH_W) '$(srcdir)/misc/uchar_c32rtomb.c'; fi`
-
-misc/libarm32_libmsvcrt_common_a-uchar_mbrtoc16.o: misc/uchar_mbrtoc16.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_common_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/libarm32_libmsvcrt_common_a-uchar_mbrtoc16.o -MD -MP -MF misc/$(DEPDIR)/libarm32_libmsvcrt_common_a-uchar_mbrtoc16.Tpo -c -o misc/libarm32_libmsvcrt_common_a-uchar_mbrtoc16.o `test -f 'misc/uchar_mbrtoc16.c' || echo '$(srcdir)/'`misc/uchar_mbrtoc16.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/libarm32_libmsvcrt_common_a-uchar_mbrtoc16.Tpo misc/$(DEPDIR)/libarm32_libmsvcrt_common_a-uchar_mbrtoc16.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/uchar_mbrtoc16.c' object='misc/libarm32_libmsvcrt_common_a-uchar_mbrtoc16.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_common_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/libarm32_libmsvcrt_common_a-uchar_mbrtoc16.o `test -f 'misc/uchar_mbrtoc16.c' || echo '$(srcdir)/'`misc/uchar_mbrtoc16.c
-
-misc/libarm32_libmsvcrt_common_a-uchar_mbrtoc16.obj: misc/uchar_mbrtoc16.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_common_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/libarm32_libmsvcrt_common_a-uchar_mbrtoc16.obj -MD -MP -MF misc/$(DEPDIR)/libarm32_libmsvcrt_common_a-uchar_mbrtoc16.Tpo -c -o misc/libarm32_libmsvcrt_common_a-uchar_mbrtoc16.obj `if test -f 'misc/uchar_mbrtoc16.c'; then $(CYGPATH_W) 'misc/uchar_mbrtoc16.c'; else $(CYGPATH_W) '$(srcdir)/misc/uchar_mbrtoc16.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/libarm32_libmsvcrt_common_a-uchar_mbrtoc16.Tpo misc/$(DEPDIR)/libarm32_libmsvcrt_common_a-uchar_mbrtoc16.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/uchar_mbrtoc16.c' object='misc/libarm32_libmsvcrt_common_a-uchar_mbrtoc16.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_common_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/libarm32_libmsvcrt_common_a-uchar_mbrtoc16.obj `if test -f 'misc/uchar_mbrtoc16.c'; then $(CYGPATH_W) 'misc/uchar_mbrtoc16.c'; else $(CYGPATH_W) '$(srcdir)/misc/uchar_mbrtoc16.c'; fi`
-
-misc/libarm32_libmsvcrt_common_a-uchar_mbrtoc32.o: misc/uchar_mbrtoc32.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_common_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/libarm32_libmsvcrt_common_a-uchar_mbrtoc32.o -MD -MP -MF misc/$(DEPDIR)/libarm32_libmsvcrt_common_a-uchar_mbrtoc32.Tpo -c -o misc/libarm32_libmsvcrt_common_a-uchar_mbrtoc32.o `test -f 'misc/uchar_mbrtoc32.c' || echo '$(srcdir)/'`misc/uchar_mbrtoc32.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/libarm32_libmsvcrt_common_a-uchar_mbrtoc32.Tpo misc/$(DEPDIR)/libarm32_libmsvcrt_common_a-uchar_mbrtoc32.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/uchar_mbrtoc32.c' object='misc/libarm32_libmsvcrt_common_a-uchar_mbrtoc32.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_common_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/libarm32_libmsvcrt_common_a-uchar_mbrtoc32.o `test -f 'misc/uchar_mbrtoc32.c' || echo '$(srcdir)/'`misc/uchar_mbrtoc32.c
-
-misc/libarm32_libmsvcrt_common_a-uchar_mbrtoc32.obj: misc/uchar_mbrtoc32.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_common_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/libarm32_libmsvcrt_common_a-uchar_mbrtoc32.obj -MD -MP -MF misc/$(DEPDIR)/libarm32_libmsvcrt_common_a-uchar_mbrtoc32.Tpo -c -o misc/libarm32_libmsvcrt_common_a-uchar_mbrtoc32.obj `if test -f 'misc/uchar_mbrtoc32.c'; then $(CYGPATH_W) 'misc/uchar_mbrtoc32.c'; else $(CYGPATH_W) '$(srcdir)/misc/uchar_mbrtoc32.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/libarm32_libmsvcrt_common_a-uchar_mbrtoc32.Tpo misc/$(DEPDIR)/libarm32_libmsvcrt_common_a-uchar_mbrtoc32.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/uchar_mbrtoc32.c' object='misc/libarm32_libmsvcrt_common_a-uchar_mbrtoc32.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_common_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/libarm32_libmsvcrt_common_a-uchar_mbrtoc32.obj `if test -f 'misc/uchar_mbrtoc32.c'; then $(CYGPATH_W) 'misc/uchar_mbrtoc32.c'; else $(CYGPATH_W) '$(srcdir)/misc/uchar_mbrtoc32.c'; fi`
-
 misc/libarm32_libmsvcrt_common_a-wcrtomb.o: misc/wcrtomb.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm32_libmsvcrt_common_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/libarm32_libmsvcrt_common_a-wcrtomb.o -MD -MP -MF misc/$(DEPDIR)/libarm32_libmsvcrt_common_a-wcrtomb.Tpo -c -o misc/libarm32_libmsvcrt_common_a-wcrtomb.o `test -f 'misc/wcrtomb.c' || echo '$(srcdir)/'`misc/wcrtomb.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/libarm32_libmsvcrt_common_a-wcrtomb.Tpo misc/$(DEPDIR)/libarm32_libmsvcrt_common_a-wcrtomb.Po
@@ -66638,62 +66378,6 @@ misc/libarm64_libmsvcrt_common_a-register_tls_atexit.obj: misc/register_tls_atex
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_common_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/libarm64_libmsvcrt_common_a-register_tls_atexit.obj `if test -f 'misc/register_tls_atexit.c'; then $(CYGPATH_W) 'misc/register_tls_atexit.c'; else $(CYGPATH_W) '$(srcdir)/misc/register_tls_atexit.c'; fi`
 
-misc/libarm64_libmsvcrt_common_a-uchar_c16rtomb.o: misc/uchar_c16rtomb.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_common_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/libarm64_libmsvcrt_common_a-uchar_c16rtomb.o -MD -MP -MF misc/$(DEPDIR)/libarm64_libmsvcrt_common_a-uchar_c16rtomb.Tpo -c -o misc/libarm64_libmsvcrt_common_a-uchar_c16rtomb.o `test -f 'misc/uchar_c16rtomb.c' || echo '$(srcdir)/'`misc/uchar_c16rtomb.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/libarm64_libmsvcrt_common_a-uchar_c16rtomb.Tpo misc/$(DEPDIR)/libarm64_libmsvcrt_common_a-uchar_c16rtomb.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/uchar_c16rtomb.c' object='misc/libarm64_libmsvcrt_common_a-uchar_c16rtomb.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_common_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/libarm64_libmsvcrt_common_a-uchar_c16rtomb.o `test -f 'misc/uchar_c16rtomb.c' || echo '$(srcdir)/'`misc/uchar_c16rtomb.c
-
-misc/libarm64_libmsvcrt_common_a-uchar_c16rtomb.obj: misc/uchar_c16rtomb.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_common_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/libarm64_libmsvcrt_common_a-uchar_c16rtomb.obj -MD -MP -MF misc/$(DEPDIR)/libarm64_libmsvcrt_common_a-uchar_c16rtomb.Tpo -c -o misc/libarm64_libmsvcrt_common_a-uchar_c16rtomb.obj `if test -f 'misc/uchar_c16rtomb.c'; then $(CYGPATH_W) 'misc/uchar_c16rtomb.c'; else $(CYGPATH_W) '$(srcdir)/misc/uchar_c16rtomb.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/libarm64_libmsvcrt_common_a-uchar_c16rtomb.Tpo misc/$(DEPDIR)/libarm64_libmsvcrt_common_a-uchar_c16rtomb.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/uchar_c16rtomb.c' object='misc/libarm64_libmsvcrt_common_a-uchar_c16rtomb.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_common_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/libarm64_libmsvcrt_common_a-uchar_c16rtomb.obj `if test -f 'misc/uchar_c16rtomb.c'; then $(CYGPATH_W) 'misc/uchar_c16rtomb.c'; else $(CYGPATH_W) '$(srcdir)/misc/uchar_c16rtomb.c'; fi`
-
-misc/libarm64_libmsvcrt_common_a-uchar_c32rtomb.o: misc/uchar_c32rtomb.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_common_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/libarm64_libmsvcrt_common_a-uchar_c32rtomb.o -MD -MP -MF misc/$(DEPDIR)/libarm64_libmsvcrt_common_a-uchar_c32rtomb.Tpo -c -o misc/libarm64_libmsvcrt_common_a-uchar_c32rtomb.o `test -f 'misc/uchar_c32rtomb.c' || echo '$(srcdir)/'`misc/uchar_c32rtomb.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/libarm64_libmsvcrt_common_a-uchar_c32rtomb.Tpo misc/$(DEPDIR)/libarm64_libmsvcrt_common_a-uchar_c32rtomb.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/uchar_c32rtomb.c' object='misc/libarm64_libmsvcrt_common_a-uchar_c32rtomb.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_common_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/libarm64_libmsvcrt_common_a-uchar_c32rtomb.o `test -f 'misc/uchar_c32rtomb.c' || echo '$(srcdir)/'`misc/uchar_c32rtomb.c
-
-misc/libarm64_libmsvcrt_common_a-uchar_c32rtomb.obj: misc/uchar_c32rtomb.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_common_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/libarm64_libmsvcrt_common_a-uchar_c32rtomb.obj -MD -MP -MF misc/$(DEPDIR)/libarm64_libmsvcrt_common_a-uchar_c32rtomb.Tpo -c -o misc/libarm64_libmsvcrt_common_a-uchar_c32rtomb.obj `if test -f 'misc/uchar_c32rtomb.c'; then $(CYGPATH_W) 'misc/uchar_c32rtomb.c'; else $(CYGPATH_W) '$(srcdir)/misc/uchar_c32rtomb.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/libarm64_libmsvcrt_common_a-uchar_c32rtomb.Tpo misc/$(DEPDIR)/libarm64_libmsvcrt_common_a-uchar_c32rtomb.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/uchar_c32rtomb.c' object='misc/libarm64_libmsvcrt_common_a-uchar_c32rtomb.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_common_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/libarm64_libmsvcrt_common_a-uchar_c32rtomb.obj `if test -f 'misc/uchar_c32rtomb.c'; then $(CYGPATH_W) 'misc/uchar_c32rtomb.c'; else $(CYGPATH_W) '$(srcdir)/misc/uchar_c32rtomb.c'; fi`
-
-misc/libarm64_libmsvcrt_common_a-uchar_mbrtoc16.o: misc/uchar_mbrtoc16.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_common_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/libarm64_libmsvcrt_common_a-uchar_mbrtoc16.o -MD -MP -MF misc/$(DEPDIR)/libarm64_libmsvcrt_common_a-uchar_mbrtoc16.Tpo -c -o misc/libarm64_libmsvcrt_common_a-uchar_mbrtoc16.o `test -f 'misc/uchar_mbrtoc16.c' || echo '$(srcdir)/'`misc/uchar_mbrtoc16.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/libarm64_libmsvcrt_common_a-uchar_mbrtoc16.Tpo misc/$(DEPDIR)/libarm64_libmsvcrt_common_a-uchar_mbrtoc16.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/uchar_mbrtoc16.c' object='misc/libarm64_libmsvcrt_common_a-uchar_mbrtoc16.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_common_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/libarm64_libmsvcrt_common_a-uchar_mbrtoc16.o `test -f 'misc/uchar_mbrtoc16.c' || echo '$(srcdir)/'`misc/uchar_mbrtoc16.c
-
-misc/libarm64_libmsvcrt_common_a-uchar_mbrtoc16.obj: misc/uchar_mbrtoc16.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_common_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/libarm64_libmsvcrt_common_a-uchar_mbrtoc16.obj -MD -MP -MF misc/$(DEPDIR)/libarm64_libmsvcrt_common_a-uchar_mbrtoc16.Tpo -c -o misc/libarm64_libmsvcrt_common_a-uchar_mbrtoc16.obj `if test -f 'misc/uchar_mbrtoc16.c'; then $(CYGPATH_W) 'misc/uchar_mbrtoc16.c'; else $(CYGPATH_W) '$(srcdir)/misc/uchar_mbrtoc16.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/libarm64_libmsvcrt_common_a-uchar_mbrtoc16.Tpo misc/$(DEPDIR)/libarm64_libmsvcrt_common_a-uchar_mbrtoc16.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/uchar_mbrtoc16.c' object='misc/libarm64_libmsvcrt_common_a-uchar_mbrtoc16.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_common_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/libarm64_libmsvcrt_common_a-uchar_mbrtoc16.obj `if test -f 'misc/uchar_mbrtoc16.c'; then $(CYGPATH_W) 'misc/uchar_mbrtoc16.c'; else $(CYGPATH_W) '$(srcdir)/misc/uchar_mbrtoc16.c'; fi`
-
-misc/libarm64_libmsvcrt_common_a-uchar_mbrtoc32.o: misc/uchar_mbrtoc32.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_common_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/libarm64_libmsvcrt_common_a-uchar_mbrtoc32.o -MD -MP -MF misc/$(DEPDIR)/libarm64_libmsvcrt_common_a-uchar_mbrtoc32.Tpo -c -o misc/libarm64_libmsvcrt_common_a-uchar_mbrtoc32.o `test -f 'misc/uchar_mbrtoc32.c' || echo '$(srcdir)/'`misc/uchar_mbrtoc32.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/libarm64_libmsvcrt_common_a-uchar_mbrtoc32.Tpo misc/$(DEPDIR)/libarm64_libmsvcrt_common_a-uchar_mbrtoc32.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/uchar_mbrtoc32.c' object='misc/libarm64_libmsvcrt_common_a-uchar_mbrtoc32.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_common_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/libarm64_libmsvcrt_common_a-uchar_mbrtoc32.o `test -f 'misc/uchar_mbrtoc32.c' || echo '$(srcdir)/'`misc/uchar_mbrtoc32.c
-
-misc/libarm64_libmsvcrt_common_a-uchar_mbrtoc32.obj: misc/uchar_mbrtoc32.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_common_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/libarm64_libmsvcrt_common_a-uchar_mbrtoc32.obj -MD -MP -MF misc/$(DEPDIR)/libarm64_libmsvcrt_common_a-uchar_mbrtoc32.Tpo -c -o misc/libarm64_libmsvcrt_common_a-uchar_mbrtoc32.obj `if test -f 'misc/uchar_mbrtoc32.c'; then $(CYGPATH_W) 'misc/uchar_mbrtoc32.c'; else $(CYGPATH_W) '$(srcdir)/misc/uchar_mbrtoc32.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/libarm64_libmsvcrt_common_a-uchar_mbrtoc32.Tpo misc/$(DEPDIR)/libarm64_libmsvcrt_common_a-uchar_mbrtoc32.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='misc/uchar_mbrtoc32.c' object='misc/libarm64_libmsvcrt_common_a-uchar_mbrtoc32.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_common_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o misc/libarm64_libmsvcrt_common_a-uchar_mbrtoc32.obj `if test -f 'misc/uchar_mbrtoc32.c'; then $(CYGPATH_W) 'misc/uchar_mbrtoc32.c'; else $(CYGPATH_W) '$(srcdir)/misc/uchar_mbrtoc32.c'; fi`
-
 misc/libarm64_libmsvcrt_common_a-wcrtomb.o: misc/wcrtomb.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarm64_libmsvcrt_common_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT misc/libarm64_libmsvcrt_common_a-wcrtomb.o -MD -MP -MF misc/$(DEPDIR)/libarm64_libmsvcrt_common_a-wcrtomb.Tpo -c -o misc/libarm64_libmsvcrt_common_a-wcrtomb.o `test -f 'misc/wcrtomb.c' || echo '$(srcdir)/'`misc/wcrtomb.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) misc/$(DEPDIR)/libarm64_libmsvcrt_common_a-wcrtomb.Tpo misc/$(DEPDIR)/libarm64_libmsvcrt_common_a-wcrtomb.Po
@@ -75763,10 +75447,6 @@ distclean: distclean-am
 	-rm -f misc/$(DEPDIR)/lib32_libmsvcrt_common_a-mbsinit.Po
 	-rm -f misc/$(DEPDIR)/lib32_libmsvcrt_common_a-onexit_table.Po
 	-rm -f misc/$(DEPDIR)/lib32_libmsvcrt_common_a-register_tls_atexit.Po
-	-rm -f misc/$(DEPDIR)/lib32_libmsvcrt_common_a-uchar_c16rtomb.Po
-	-rm -f misc/$(DEPDIR)/lib32_libmsvcrt_common_a-uchar_c32rtomb.Po
-	-rm -f misc/$(DEPDIR)/lib32_libmsvcrt_common_a-uchar_mbrtoc16.Po
-	-rm -f misc/$(DEPDIR)/lib32_libmsvcrt_common_a-uchar_mbrtoc32.Po
 	-rm -f misc/$(DEPDIR)/lib32_libmsvcrt_common_a-wcrtomb.Po
 	-rm -f misc/$(DEPDIR)/lib32_libmsvcrt_extra_a-___mb_cur_max_func.Po
 	-rm -f misc/$(DEPDIR)/lib32_libmsvcrt_extra_a-_configthreadlocale.Po
@@ -75865,10 +75545,6 @@ distclean: distclean-am
 	-rm -f misc/$(DEPDIR)/lib64_libmsvcrt_common_a-mbsinit.Po
 	-rm -f misc/$(DEPDIR)/lib64_libmsvcrt_common_a-onexit_table.Po
 	-rm -f misc/$(DEPDIR)/lib64_libmsvcrt_common_a-register_tls_atexit.Po
-	-rm -f misc/$(DEPDIR)/lib64_libmsvcrt_common_a-uchar_c16rtomb.Po
-	-rm -f misc/$(DEPDIR)/lib64_libmsvcrt_common_a-uchar_c32rtomb.Po
-	-rm -f misc/$(DEPDIR)/lib64_libmsvcrt_common_a-uchar_mbrtoc16.Po
-	-rm -f misc/$(DEPDIR)/lib64_libmsvcrt_common_a-uchar_mbrtoc32.Po
 	-rm -f misc/$(DEPDIR)/lib64_libmsvcrt_common_a-wcrtomb.Po
 	-rm -f misc/$(DEPDIR)/lib64_libmsvcrt_extra_a-__p___argv.Po
 	-rm -f misc/$(DEPDIR)/lib64_libmsvcrt_extra_a-__p__acmdln.Po
@@ -75961,10 +75637,6 @@ distclean: distclean-am
 	-rm -f misc/$(DEPDIR)/libarm32_libmsvcrt_common_a-mbsinit.Po
 	-rm -f misc/$(DEPDIR)/libarm32_libmsvcrt_common_a-onexit_table.Po
 	-rm -f misc/$(DEPDIR)/libarm32_libmsvcrt_common_a-register_tls_atexit.Po
-	-rm -f misc/$(DEPDIR)/libarm32_libmsvcrt_common_a-uchar_c16rtomb.Po
-	-rm -f misc/$(DEPDIR)/libarm32_libmsvcrt_common_a-uchar_c32rtomb.Po
-	-rm -f misc/$(DEPDIR)/libarm32_libmsvcrt_common_a-uchar_mbrtoc16.Po
-	-rm -f misc/$(DEPDIR)/libarm32_libmsvcrt_common_a-uchar_mbrtoc32.Po
 	-rm -f misc/$(DEPDIR)/libarm32_libmsvcrt_common_a-wcrtomb.Po
 	-rm -f misc/$(DEPDIR)/libarm32_libmsvcrt_extra_a-__p___argv.Po
 	-rm -f misc/$(DEPDIR)/libarm32_libmsvcrt_extra_a-__p__acmdln.Po
@@ -76053,10 +75725,6 @@ distclean: distclean-am
 	-rm -f misc/$(DEPDIR)/libarm64_libmsvcrt_common_a-mbsinit.Po
 	-rm -f misc/$(DEPDIR)/libarm64_libmsvcrt_common_a-onexit_table.Po
 	-rm -f misc/$(DEPDIR)/libarm64_libmsvcrt_common_a-register_tls_atexit.Po
-	-rm -f misc/$(DEPDIR)/libarm64_libmsvcrt_common_a-uchar_c16rtomb.Po
-	-rm -f misc/$(DEPDIR)/libarm64_libmsvcrt_common_a-uchar_c32rtomb.Po
-	-rm -f misc/$(DEPDIR)/libarm64_libmsvcrt_common_a-uchar_mbrtoc16.Po
-	-rm -f misc/$(DEPDIR)/libarm64_libmsvcrt_common_a-uchar_mbrtoc32.Po
 	-rm -f misc/$(DEPDIR)/libarm64_libmsvcrt_common_a-wcrtomb.Po
 	-rm -f misc/$(DEPDIR)/libarm64_libmsvcrt_extra_a-__p___argv.Po
 	-rm -f misc/$(DEPDIR)/libarm64_libmsvcrt_extra_a-__p__acmdln.Po
@@ -79169,10 +78837,6 @@ maintainer-clean: maintainer-clean-am
 	-rm -f misc/$(DEPDIR)/lib32_libmsvcrt_common_a-mbsinit.Po
 	-rm -f misc/$(DEPDIR)/lib32_libmsvcrt_common_a-onexit_table.Po
 	-rm -f misc/$(DEPDIR)/lib32_libmsvcrt_common_a-register_tls_atexit.Po
-	-rm -f misc/$(DEPDIR)/lib32_libmsvcrt_common_a-uchar_c16rtomb.Po
-	-rm -f misc/$(DEPDIR)/lib32_libmsvcrt_common_a-uchar_c32rtomb.Po
-	-rm -f misc/$(DEPDIR)/lib32_libmsvcrt_common_a-uchar_mbrtoc16.Po
-	-rm -f misc/$(DEPDIR)/lib32_libmsvcrt_common_a-uchar_mbrtoc32.Po
 	-rm -f misc/$(DEPDIR)/lib32_libmsvcrt_common_a-wcrtomb.Po
 	-rm -f misc/$(DEPDIR)/lib32_libmsvcrt_extra_a-___mb_cur_max_func.Po
 	-rm -f misc/$(DEPDIR)/lib32_libmsvcrt_extra_a-_configthreadlocale.Po
@@ -79271,10 +78935,6 @@ maintainer-clean: maintainer-clean-am
 	-rm -f misc/$(DEPDIR)/lib64_libmsvcrt_common_a-mbsinit.Po
 	-rm -f misc/$(DEPDIR)/lib64_libmsvcrt_common_a-onexit_table.Po
 	-rm -f misc/$(DEPDIR)/lib64_libmsvcrt_common_a-register_tls_atexit.Po
-	-rm -f misc/$(DEPDIR)/lib64_libmsvcrt_common_a-uchar_c16rtomb.Po
-	-rm -f misc/$(DEPDIR)/lib64_libmsvcrt_common_a-uchar_c32rtomb.Po
-	-rm -f misc/$(DEPDIR)/lib64_libmsvcrt_common_a-uchar_mbrtoc16.Po
-	-rm -f misc/$(DEPDIR)/lib64_libmsvcrt_common_a-uchar_mbrtoc32.Po
 	-rm -f misc/$(DEPDIR)/lib64_libmsvcrt_common_a-wcrtomb.Po
 	-rm -f misc/$(DEPDIR)/lib64_libmsvcrt_extra_a-__p___argv.Po
 	-rm -f misc/$(DEPDIR)/lib64_libmsvcrt_extra_a-__p__acmdln.Po
@@ -79367,10 +79027,6 @@ maintainer-clean: maintainer-clean-am
 	-rm -f misc/$(DEPDIR)/libarm32_libmsvcrt_common_a-mbsinit.Po
 	-rm -f misc/$(DEPDIR)/libarm32_libmsvcrt_common_a-onexit_table.Po
 	-rm -f misc/$(DEPDIR)/libarm32_libmsvcrt_common_a-register_tls_atexit.Po
-	-rm -f misc/$(DEPDIR)/libarm32_libmsvcrt_common_a-uchar_c16rtomb.Po
-	-rm -f misc/$(DEPDIR)/libarm32_libmsvcrt_common_a-uchar_c32rtomb.Po
-	-rm -f misc/$(DEPDIR)/libarm32_libmsvcrt_common_a-uchar_mbrtoc16.Po
-	-rm -f misc/$(DEPDIR)/libarm32_libmsvcrt_common_a-uchar_mbrtoc32.Po
 	-rm -f misc/$(DEPDIR)/libarm32_libmsvcrt_common_a-wcrtomb.Po
 	-rm -f misc/$(DEPDIR)/libarm32_libmsvcrt_extra_a-__p___argv.Po
 	-rm -f misc/$(DEPDIR)/libarm32_libmsvcrt_extra_a-__p__acmdln.Po
@@ -79459,10 +79115,6 @@ maintainer-clean: maintainer-clean-am
 	-rm -f misc/$(DEPDIR)/libarm64_libmsvcrt_common_a-mbsinit.Po
 	-rm -f misc/$(DEPDIR)/libarm64_libmsvcrt_common_a-onexit_table.Po
 	-rm -f misc/$(DEPDIR)/libarm64_libmsvcrt_common_a-register_tls_atexit.Po
-	-rm -f misc/$(DEPDIR)/libarm64_libmsvcrt_common_a-uchar_c16rtomb.Po
-	-rm -f misc/$(DEPDIR)/libarm64_libmsvcrt_common_a-uchar_c32rtomb.Po
-	-rm -f misc/$(DEPDIR)/libarm64_libmsvcrt_common_a-uchar_mbrtoc16.Po
-	-rm -f misc/$(DEPDIR)/libarm64_libmsvcrt_common_a-uchar_mbrtoc32.Po
 	-rm -f misc/$(DEPDIR)/libarm64_libmsvcrt_common_a-wcrtomb.Po
 	-rm -f misc/$(DEPDIR)/libarm64_libmsvcrt_extra_a-__p___argv.Po
 	-rm -f misc/$(DEPDIR)/libarm64_libmsvcrt_extra_a-__p__acmdln.Po
