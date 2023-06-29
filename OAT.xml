@@ -72,6 +72,24 @@ Note:If the text contains special characters, please escape them according to th
                 <policyitem type="compatibility" name="LGPLStyleLicense" path="mingw-w64-headers/direct-x/.*" desc="头文件，其对应库为动态链接，符合LGPL协议头文件/动态库链接使用要求"/>
                 <policyitem type="compatibility" name="ZopePublicLicense" path="mingw-w64-crt/.*" desc="协议友好，使用满足协议要求"/>
                 <policyitem type="compatibility" name="ZopePublicLicense" path="mingw-w64-headers/.*" desc="协议友好，使用满足协议要求"/>
+                <policyitem type="compatibility" name="InvalidLicense" path="mingw-w64-crt/.*" desc="上游原生文件携带许可证，符合使用要求"/>
+                <policyitem type="compatibility" name="InvalidLicense" path="mingw-w64-headers/include/python3.10/.*" desc="上游原生文件携带许可证，符合使用要求"/>
+                <policyitem type="compatibility" name="InvalidLicense" path="mingw-w64-python/3.10/lib/ctypes/macholib/.*" desc="上游原生文件携带许可证，符合使用要求"/>
+                <policyitem type="compatibility" name="InvalidLicense" path="mingw-w64-tools/gendef/.*" desc="上游原生文件携带许可证，符合使用要求"/>
+                <policyitem type="compatibility" name="GPLStyleLicense" path="mingw-w64-tools/gendef/.*" desc="上游原生文件携带许可证，符合使用要求"/>
+                <policyitem type="compatibility" name="GPL-3.0+" path="mingw-w64-tools/gendef/.*" desc="上游原生文件携带许可证，符合使用要求"/>
+                <policyitem type="compatibility" name="GPL-3.0+" path="mingw-w64-tools/genidl/.*" desc="上游原生文件携带许可证，符合使用要求"/>
+                <policyitem type="compatibility" name="GPLStyleLicense" path="mingw-w64-tools/genidl/.*" desc="上游原生文件携带许可证，符合使用要求"/>
+                <policyitem type="compatibility" name="GPLStyleLicense" path="mingw-w64-tools/genlib/.*" desc="上游原生文件携带许可证，符合使用要求"/>
+                <policyitem type="compatibility" name="GPL-3.0+" path="mingw-w64-tools/genlib/.*" desc="上游原生文件携带许可证，符合使用要求"/>
+                <policyitem type="compatibility" name="GPL-3.0+" path="mingw-w64-tools/genpeimg/.*" desc="上游原生文件携带许可证，符合使用要求"/>
+                <policyitem type="compatibility" name="GPLStyleLicense" path="mingw-w64-tools/genpeimg/.*" desc="上游原生文件携带许可证，符合使用要求"/>
+                <policyitem type="compatibility" name="GPL-3.0+" path="mingw-w64-tools/genstubdll/.*" desc="上游原生文件携带许可证，符合使用要求"/>
+                <policyitem type="compatibility" name="GPL-2.0+" path="mingw-w64-tools/widl/.*" desc="上游原生文件携带许可证，符合使用要求"/>
+                <policyitem type="compatibility" name="GPL-3.0-or-later" path="mingw-w64-tools/widl/.*" desc="上游原生文件携带许可证，符合使用要求"/>
+                <policyitem type="compatibility" name="InvalidLicense" path="mingw-w64-tools/widl/.*" desc="上游原生文件携带许可证，符合使用要求"/>
+                <policyitem type="compatibility" name="GPLStyleLicense" path="mingw-w64-tools/widl/.*" desc="上游原生文件携带许可证，符合使用要求"/>
+                <policyitem type="compatibility" name="LGPLStyleLicense" path="mingw-w64-tools/widl/.*" desc="上游原生文件携带许可证，符合使用要求"/>
             </policy>
         </policylist>
 		<filefilterlist>
