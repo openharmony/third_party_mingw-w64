@@ -1,5 +1,5 @@
 {
-    "name": "@ohos/mingw_w64",
+    "name": "@ohos/mingw-w64",
     "description": "Mingw-w64 is an advancement of the original mingw.org project, created to support the GCC compiler on Windows systems. It has forked it in 2007 in order to provide support for 64 bits and new APIs. It has since then gained widespread use and distribution.",
     "version": "3.1",
     "license": "Zope Public License V2.1",
@@ -14,11 +14,11 @@
         "en": ""
     },
     "component": {
-        "name": "thirdparty_mingw_w64",
-        "subsystem": "",
+        "name": "mingw-w64",
+        "subsystem": "thirdparty",
         "syscap": [],
         "features": [],
-        "adapted_system_type": [],
+        "adapted_system_type": [ "standard" ],
         "rom": "",
         "ram": "",
         "deps": {
