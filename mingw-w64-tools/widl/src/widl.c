@@ -28,12 +28,8 @@
 #include <string.h>
 #include <assert.h>
 #include <ctype.h>
-#include <signal.h>
 #include <limits.h>
 #include <sys/types.h>
-#ifdef HAVE_SYS_SYSCTL_H
-# include <sys/sysctl.h>
-#endif
 
 #include "widl.h"
 #include "utils.h"
@@ -135,7 +131,8 @@ char *server_token;
 char *regscript_name;
 char *regscript_token;
 static char *idfile_name;
-char *temp_name;
+struct strarray temp_files = { 0 };
+const char *temp_dir = NULL;
 const char *prefix_client = "";
 const char *prefix_server = "";
 static const char *includedir;
@@ -143,8 +140,6 @@ static const char *dlldir;
 static struct strarray dlldirs;
 static char *output_name;
 static const char *sysroot = "";
-
-int line_number = 1;
 
 static FILE *idfile;
 
@@ -482,25 +477,11 @@ void write_id_data(const statement_list_t *stmts)
 
 static void init_argv0_dir( const char *argv0 )
 {
-#ifndef _WIN32
-    char *dir;
+    char *dir = get_argv0_dir( argv0 );
 
-#if defined(__linux__) || defined(__FreeBSD_kernel__) || defined(__NetBSD__)
-    dir = realpath( "/proc/self/exe", NULL );
-#elif defined (__FreeBSD__) || defined(__DragonFly__)
-    static int pathname[] = { CTL_KERN, KERN_PROC, KERN_PROC_PATHNAME, -1 };
-    size_t path_size = PATH_MAX;
-    char *path = malloc( path_size );
-    if (path && !sysctl( pathname, sizeof(pathname)/sizeof(pathname[0]), path, &path_size, NULL, 0 ))
-        dir = realpath( path, NULL );
-    free( path );
-#else
-    dir = realpath( argv0, NULL );
-#endif
     if (!dir) return;
-    includedir = strmake( "%s/%s", get_dirname( dir ), BIN_TO_INCLUDEDIR );
-    dlldir = strmake( "%s/%s", get_dirname( dir ), BIN_TO_DLLDIR );
-#endif
+    includedir = strmake( "%s/%s", dir, BIN_TO_INCLUDEDIR );
+    dlldir = strmake( "%s/%s", dir, BIN_TO_DLLDIR );
 }
 
 static void option_callback( int optc, char *optarg )
@@ -687,8 +668,8 @@ int open_typelib( const char *name )
         {
             int namelen = strlen( name );
             if (strendswith( name, ".dll" )) namelen -= 4;
-            TRYOPEN( strmake( "%.*s/%.*s/%s", (int)strlen(dlldirs.str[i]) - 2, dlldirs.str[i],
-                              namelen, name, name ));
+            TRYOPEN( strmake( "%.*s/%.*s%s/%s", (int)strlen(dlldirs.str[i]) - 2, dlldirs.str[i],
+                              namelen, name, pe_dir, name ));
         }
         else
         {
@@ -710,7 +691,7 @@ int open_typelib( const char *name )
             TRYOPEN( strmake( "%s%s/%s", default_dirs[i], pe_dir, name ));
         }
     }
-    return -1;
+    error( "cannot find %s\n", name );
 #undef TRYOPEN
 }
 
@@ -720,11 +701,7 @@ int main(int argc,char *argv[])
   int ret = 0;
   struct strarray files;
 
-  signal( SIGTERM, exit_on_signal );
-  signal( SIGINT, exit_on_signal );
-#ifdef SIGHUP
-  signal( SIGHUP, exit_on_signal );
-#endif
+  init_signals( exit_on_signal );
   init_argv0_dir( argv[0] );
   target = init_argv0_target( argv[0] );
 
@@ -849,49 +826,13 @@ int main(int argc,char *argv[])
   wpp_add_cmdline_define("_WIN32=1");
 
   atexit(rm_tempfile);
-  if (!no_preprocess)
-  {
-    chat("Starting preprocess\n");
-
-    if (!preprocess_only)
-    {
-        FILE *output;
-        int fd;
-        char *name;
-
-        fd = make_temp_file( header_name, NULL, &name );
-        temp_name = name;
-        if (!(output = fdopen(fd, "wt")))
-            error("Could not open fd %s for writing\n", name);
-
-        ret = wpp_parse( input_name, output );
-        fclose( output );
-    }
-    else
-    {
-        ret = wpp_parse( input_name, stdout );
-    }
-
-    if(ret) exit(1);
-    if(preprocess_only) exit(0);
-    if(!(parser_in = fopen(temp_name, "r"))) {
-      fprintf(stderr, "Could not open %s for input\n", temp_name);
-      return 1;
-    }
-  }
-  else {
-    if(!(parser_in = fopen(input_name, "r"))) {
-      fprintf(stderr, "Could not open %s for input\n", input_name);
-      return 1;
-    }
-  }
+  if (preprocess_only) exit( wpp_parse( input_name, stdout ) );
+  parser_in = open_input_file( input_name );
 
   header_token = make_token(header_name);
 
   init_types();
   ret = parser_parse();
-
-  fclose(parser_in);
 
   if(ret) {
     exit(1);
@@ -906,9 +847,6 @@ int main(int argc,char *argv[])
 
 static void rm_tempfile(void)
 {
-  abort_import();
-  if(temp_name)
-    unlink(temp_name);
   if (do_header)
     unlink(header_name);
   if (local_stubs_name)
@@ -925,4 +863,38 @@ static void rm_tempfile(void)
     unlink(proxy_name);
   if (do_typelib)
     unlink(typelib_name);
+  remove_temp_files();
+}
+
+char *find_input_file( const char *name, const char *parent )
+{
+    char *path;
+
+    /* don't search for a file name with a path in the include directories, for compatibility with MIDL */
+    if (strchr( name, '/' ) || strchr( name, '\\' )) path = xstrdup( name );
+    else if (!(path = wpp_find_include( name, parent ))) error_loc( "Unable to open include file %s\n", name );
+
+    return path;
+}
+
+FILE *open_input_file( const char *path )
+{
+    FILE *file;
+    char *name;
+    int ret;
+
+    if (no_preprocess)
+    {
+        if (!(file = fopen( path, "r" ))) error_loc( "Unable to open %s\n", path );
+        return file;
+    }
+
+    name = make_temp_file( "widl", NULL );
+    if (!(file = fopen( name, "wt" ))) error_loc( "Could not open %s for writing\n", name );
+    ret = wpp_parse( path, file );
+    fclose( file );
+    if (ret) exit( 1 );
+
+    if (!(file = fopen( name, "r" ))) error_loc( "Unable to open %s\n", name );
+    return file;
 }
