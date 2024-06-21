@@ -96,7 +96,9 @@ IDL_SRCS = \
   include/comadmin.idl \
   include/commoncontrols.idl \
   include/control.idl \
+  include/credentialprovider.idl \
   include/ctfutb.idl \
+  include/ctxtcall.idl \
   include/d3d10.idl \
   include/d3d10_1.idl \
   include/d3d10sdklayers.idl \
@@ -162,6 +164,7 @@ IDL_SRCS = \
   include/iketypes.idl \
   include/inputscope.idl \
   include/inspectable.idl \
+  include/ivectorchangedeventargs.idl \
   include/locationapi.idl \
   include/oaidl.idl \
   include/ocidl.idl \
@@ -183,6 +186,8 @@ IDL_SRCS = \
   include/mshtmhst.idl \
   include/msopc.idl \
   include/msxml.idl \
+  include/msxml2.idl \
+  include/msxml6.idl \
   include/napcertrelyingparty.idl \
   include/napcommon.idl \
   include/napenforcementclient.idl \
@@ -218,6 +223,7 @@ IDL_SRCS = \
   include/spellcheck.idl \
   include/strmif.idl \
   include/structuredquerycondition.idl \
+  include/systemmediatransportcontrolsinterop.idl \
   include/taskschd.idl \
   include/textstor.idl \
   include/thumbcache.idl \
@@ -235,6 +241,7 @@ IDL_SRCS = \
   include/urlhist.idl \
   include/urlmon.idl \
   include/vdslun.idl \
+  include/vidcap.idl \
   include/vsadmin.idl \
   include/vsbackup.idl \
   include/vsmgmt.idl \
@@ -254,6 +261,7 @@ IDL_SRCS = \
   include/qedit.idl \
   include/qnetwork.idl \
   include/relogger.idl \
+  include/robuffer.idl \
   include/rtworkq.idl \
   include/vmr9.idl \
   include/wincodec.idl \
@@ -273,15 +281,44 @@ IDL_SRCS = \
   include/wsdxml.idl \
   include/wsmandisp.idl \
   include/wtypesbase.idl \
+  include/windows.devices.enumeration.idl \
+  include/windows.devices.haptics.idl \
+  include/windows.devices.power.idl \
   include/windows.foundation.idl \
   include/windows.foundation.collections.idl \
+  include/windows.foundation.metadata.idl \
+  include/windows.foundation.numerics.idl \
+  include/windows.gaming.input.idl \
+  include/windows.gaming.input.custom.idl \
+  include/windows.gaming.input.forcefeedback.idl \
+  include/windows.gaming.ui.idl \
+  include/windows.globalization.idl \
+  include/windows.graphics.capture.idl \
+  include/windows.graphics.directx.idl \
+  include/windows.graphics.directx.direct3d11.idl \
+  include/windows.graphics.effects.idl \
+  include/windows.graphics.holographic.idl \
   include/windows.media.idl \
+  include/windows.media.closedcaptioning.idl \
+  include/windows.media.devices.idl \
+  include/windows.media.speechrecognition.idl \
   include/windows.media.speechsynthesis.idl \
+  include/windows.perception.spatial.idl \
+  include/windows.perception.spatial.surfaces.idl \
+  include/windows.security.credentials.idl \
   include/windows.security.cryptography.idl \
   include/windows.storage.idl \
   include/windows.storage.streams.idl \
   include/windows.system.idl \
+  include/windows.system.power.idl \
+  include/windows.system.profile.systemmanufacturers.idl \
   include/windows.system.threading.idl \
+  include/windows.system.userprofile.idl \
+  include/windows.ui.idl \
+  include/windows.ui.composition.idl \
+  include/windows.ui.composition.interop.idl \
+  include/windows.ui.core.idl \
+  include/windows.ui.viewmanagement.idl \
   include/windowscontracts.idl \
   include/wmcodecdsp.idl \
   include/wmdrmsdk.idl \

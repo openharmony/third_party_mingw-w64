@@ -20,11 +20,11 @@ else
 endif
 
 AM_CPPFLAGS=$(sysincludes)
-AM_CFLAGS=-pipe -std=gnu99 -D_CRTBLD -D_WIN32_WINNT=0x0f00 -D__MSVCRT_VERSION__=0x700 -D__USE_MINGW_ANSI_STDIO=0 @ADD_C_CXX_WARNING_FLAGS@ @ADD_C_ONLY_WARNING_FLAGS@
+AM_CFLAGS=-pipe -std=gnu99 -D_CRTBLD -D_WIN32_WINNT=0x0f00 -D__MSVCRT_VERSION__=0x700 -D__USE_MINGW_ANSI_STDIO=0 @CFGUARD_CFLAGS@ @ADD_C_CXX_WARNING_FLAGS@ @ADD_C_ONLY_WARNING_FLAGS@
 AM_CXXFLAGS=@ADD_C_CXX_WARNING_FLAGS@ @ADD_CXX_ONLY_WARNING_FLAGS@
 CPPFLAGSARM32=-mfpu=vfpv3
-CPPFLAGS32=-m32
-CPPFLAGS64=-m64
+CPPFLAGS32=-m32 -masm=att
+CPPFLAGS64=-m64 -masm=att
 if WITH_GENLIB
   AM_DLLTOOLFLAGS=-o $@
   DLLTOOLFLAGSARM32=-a arm
@@ -47,7 +47,7 @@ else
   DTDEF64=$(DLLTOOL) $(DLLTOOLFLAGS64) $(AM_DLLTOOLFLAGS) --input-def
 endif
 if DLLTOOL_HAS_TEMP_PREFIX
-  AM_DLLTOOLFLAGS += --temp-prefix $$(basename $@ .a)
+  AM_DLLTOOLFLAGS += --temp-prefix $(basename $@)
 endif
 if DELAY_IMPORT_LIBS
   AM_DLLTOOLFLAGS += --output-delaylib $@.delayimp.a
@@ -102,6 +102,8 @@ src_libdmoguids=libsrc/dmoguids.c
 src_libdxerr8=libsrc/dxerr8.c libsrc/dxerr8w.c
 src_libdxerr9=libsrc/dxerr9.c libsrc/dxerr9w.c
 src_libmfuuid=libsrc/mfuuid.c
+src_libmsxml2=libsrc/msxml2.c
+src_libmsxml6=libsrc/msxml6.c
 src_libamstrmid=libsrc/amstrmid.c
 src_libwbemuuid=libsrc/wbemuuid.c
 src_libwmcodecdspuuid=libsrc/wmcodecdspuuid.c
@@ -116,10 +118,11 @@ src_libsensorsapi=libsrc/sensorsapi.c
 src_libportabledeviceguids=libsrc/portabledeviceguids.c
 src_libtaskschd=libsrc/taskschd.c
 src_libntoskrnl=libsrc/memcmp.c
+src_libdloadhelper=libsrc/dloadhelper.c misc/delay-f.c
 
 src_libmingw32=include/oscalls.h include/internal.h include/sect_attribs.h \
-  crt/crt0_c.c        crt/dll_argv.c  crt/gccmain.c     crt/natstart.c  crt/pseudo-reloc-list.c  crt/wildcard.c \
-  crt/charmax.c       crt/crt0_w.c         crt/dllargv.c   crt/_newmode.c  crt/tlssup.c             crt/xncommod.c \
+  crt/crtexewin.c     crt/dll_argv.c  crt/gccmain.c     crt/natstart.c  crt/pseudo-reloc-list.c  crt/wildcard.c \
+  crt/charmax.c       crt/ucrtexewin.c crt/dllargv.c    crt/_newmode.c  crt/tlssup.c             crt/xncommod.c \
   crt/cinitexe.c      crt/merr.c      crt/pesect.c      crt/udllargc.c  crt/xthdloc.c            crt/CRT_fp10.c \
   crt/mingw_custom.c  crt/mingw_helpers.c  \
   crt/pseudo-reloc.c  crt/udll_argv.c      \
@@ -139,6 +142,7 @@ src_adsiid=libsrc/activeds-uuid.c
 
 src_libuuid=\
   libsrc/ativscp-uuid.c   libsrc/atsmedia-uuid.c    libsrc/bth-uuid.c         libsrc/cguid-uuid.c     libsrc/comcat-uuid.c   \
+  libsrc/ctxtcall-uuid.c \
   libsrc/devguid.c        libsrc/docobj-uuid.c      libsrc/dxva-uuid.c        libsrc/exdisp-uuid.c    libsrc/extras-uuid.c   \
   libsrc/fwp-uuid.c       libsrc/guid_nul.c         libsrc/hlguids-uuid.c     libsrc/hlink-uuid.c     libsrc/mlang-uuid.c    \
   libsrc/msctf-uuid.c     libsrc/mshtmhst-uuid.c    libsrc/mshtml-uuid.c      libsrc/msxml-uuid.c     libsrc/netcfg-uuid.c   \
@@ -170,22 +174,22 @@ src_msvcrt_common=\
   misc/mbsinit.c \
   misc/onexit_table.c \
   misc/register_tls_atexit.c \
-  misc/uchar_c16rtomb.c \
-  misc/uchar_c32rtomb.c \
-  misc/uchar_mbrtoc16.c \
-  misc/uchar_mbrtoc32.c \
   misc/wcrtomb.c \
   stdio/_getc_nolock.c \
   stdio/_getwc_nolock.c \
   stdio/_putc_nolock.c \
   stdio/_putwc_nolock.c \
+  stdio/_strtof_l.c \
+  stdio/_wcstof_l.c \
   stdio/acrt_iob_func.c \
+  stdio/strtof.c \
   stdio/snprintf_alias.c \
   stdio/vsnprintf_alias.c \
   math/frexp.c
 
 src_msvcrt=\
   misc/_configthreadlocale.c \
+  misc/imaxdiv.c \
   misc/invalid_parameter_handler.c \
   misc/output_format.c \
   misc/purecall.c \
@@ -239,6 +243,7 @@ src_ucrtbase=\
   crt/ucrtbase_compat.c \
   math/_huge.c \
   misc/__initenv.c \
+  misc/ucrt-access.c \
   stdio/ucrt_fprintf.c \
   stdio/ucrt_fscanf.c \
   stdio/ucrt_fwprintf.c \
@@ -283,6 +288,7 @@ src_msvcrt32=\
   misc/_create_locale.c \
   misc/_free_locale.c \
   misc/_get_current_locale.c \
+  misc/imaxabs.c \
   misc/lc_locale_func.c \
   misc/seterrno.c \
   misc/wassert.c \
@@ -409,6 +415,9 @@ src_msvcrtarm64=\
   stdio/_setmaxstdio.c \
   stdio/gets.c
 
+src_msvcr80_32=\
+  misc/imaxabs.c
+
 src_msvcr80_64=\
   misc/__p___argv.c \
   misc/__p__acmdln.c \
@@ -426,11 +435,16 @@ src_crtdll=\
   misc/__p__fmode.c \
   misc/__set_app_type.c \
   misc/dummy__setusermatherr.c \
+  misc/imaxabs.c \
+  misc/imaxdiv.c \
   misc/invalid_parameter_handler.c \
   misc/lc_locale_func.c \
   misc/seterrno.c \
+  misc/strtoimax.c \
+  misc/strtoumax.c \
   stdio/_scprintf.c \
   stdio/_vscprintf.c \
+  stdio/atoll.c \
   stdio/mingw_dummy__lock.c \
   stdio/mingw_lock.c
 
@@ -443,11 +457,16 @@ src_msvcrt10=\
   misc/__p__fmode.c \
   misc/__set_app_type.c \
   misc/dummy__setusermatherr.c \
+  misc/imaxabs.c \
+  misc/imaxdiv.c \
   misc/invalid_parameter_handler.c \
   misc/lc_locale_func.c \
   misc/seterrno.c \
+  misc/strtoimax.c \
+  misc/strtoumax.c \
   stdio/_scprintf.c \
   stdio/_vscprintf.c \
+  stdio/atoll.c \
   stdio/mingw_dummy__lock.c \
   stdio/mingw_lock.c
 
@@ -455,31 +474,51 @@ src_msvcrt20=\
   misc/___mb_cur_max_func.c \
   misc/__set_app_type.c \
   misc/dummy__setusermatherr.c \
+  misc/imaxabs.c \
+  misc/imaxdiv.c \
   misc/invalid_parameter_handler.c \
   misc/lc_locale_func.c \
   misc/seterrno.c \
+  misc/strtoimax.c \
+  misc/strtoumax.c \
   stdio/_scprintf.c \
   stdio/_vscprintf.c \
+  stdio/atoll.c \
   stdio/mingw_dummy__lock.c \
   stdio/mingw_lock.c
 
 src_msvcrt40=\
   misc/___mb_cur_max_func.c \
+  misc/imaxabs.c \
+  misc/imaxdiv.c \
   misc/invalid_parameter_handler.c \
   misc/lc_locale_func.c \
   misc/seterrno.c \
+  misc/strtoimax.c \
+  misc/strtoumax.c \
   stdio/_scprintf.c \
   stdio/_vscprintf.c \
+  stdio/atoll.c \
   stdio/mingw_dummy__lock.c \
   stdio/mingw_lock.c
 
 src_msvcr70=\
+  misc/imaxabs.c \
+  misc/imaxdiv.c \
   misc/invalid_parameter_handler.c \
   stdio/mingw_lock.c
 
 src_msvcr71=\
+  misc/imaxabs.c \
+  misc/imaxdiv.c \
   misc/invalid_parameter_handler.c \
   stdio/mingw_lock.c
+
+src_msvcr80=\
+  misc/imaxdiv.c
+
+src_msvcr90=\
+  misc/imaxdiv.c
 
 src_msvcr120_app=\
   misc/__set_app_type.c \
@@ -487,6 +526,8 @@ src_msvcr120_app=\
 
 # These mingwex sources are target independent:
 src_libmingwex=\
+  cfguard/mingw_cfguard_support.c \
+  \
   crt/dllentry.c        crt/dllmain.c \
   \
   complex/_cabs.c    complex/cabs.c   complex/cabsf.c   complex/cabsl.c   complex/cacos.c   complex/cacosf.c   \
@@ -533,7 +574,7 @@ src_libmingwex=\
   math/sqrtf.c          math/sqrtl.c       math/tanhf.c          math/tanhl.c         math/tgamma.c        \
   math/tgammaf.c        math/tgammal.c     math/truncl.c         \
   math/powi.def.h       math/sqrt.def.h       \
-  math/cephes_mconf.h   math/fp_consts.h   math/abs64.c \
+  math/cephes_mconf.h   math/fp_consts.h   \
   \
   misc/mb_wc_common.h \
   misc/mingw_longjmp.S \
@@ -545,19 +586,24 @@ src_libmingwex=\
   misc/feclearexcept.c   misc/fegetenv.c            misc/fegetexceptflag.c  misc/fegetround.c            misc/feholdexcept.c    \
   misc/feraiseexcept.c   misc/fesetenv.c            misc/fesetexceptflag.c  misc/fesetround.c            misc/fetestexcept.c    \
   misc/feupdateenv.c     misc/ftruncate.c           misc/fwide.c            misc/getlogin.c              misc/getopt.c          \
-  misc/gettimeofday.c    misc/imaxabs.c             misc/imaxdiv.c          misc/isblank.c               misc/iswblank.c        \
+  misc/gettimeofday.c    misc/isblank.c             misc/iswblank.c        \
   misc/mempcpy.c         misc/mingw-aligned-malloc.c \
   misc/mingw_matherr.c   misc/mingw_mbwc_convert.c  misc/mingw_usleep.c     misc/mingw_wcstod.c          misc/mingw_wcstof.c    \
   misc/mingw_wcstold.c \
   misc/mkstemp.c         misc/sleep.c           \
   misc/strnlen.c         misc/strsafe.c         \
-  misc/strtoimax.c       misc/strtoumax.c        misc/tdelete.c               misc/tfind.c           \
+  misc/tdelete.c         misc/tdestroy.c            misc/tfind.c           \
   misc/tsearch.c         misc/twalk.c           \
   misc/wcsnlen.c         misc/wcstof.c          \
   misc/wcstoimax.c       misc/wcstold.c             misc/wcstoumax.c        misc/wctob.c                 misc/wctrans.c         \
   misc/wctype.c          misc/wdirent.c             misc/winbs_uint64.c     misc/winbs_ulong.c           misc/winbs_ushort.c    \
   misc/wmemchr.c         misc/wmemcmp.c             misc/wmemcpy.c          misc/wmemmove.c              misc/wmempcpy.c        \
   misc/wmemset.c         misc/ftw.c                 misc/ftw64.c            misc/mingw-access.c          \
+  \
+  ssp/chk_fail.c         ssp/gets_chk.c             ssp/memcpy_chk.c        ssp/memmove_chk.c \
+  ssp/mempcpy_chk.c \
+  ssp/memset_chk.c       ssp/stack_chk_fail.c       ssp/stack_chk_guard.c   ssp/strcat_chk.c \
+  ssp/stpcpy_chk.c       ssp/strcpy_chk.c           ssp/strncat_chk.c       ssp/strncpy_chk.c \
   \
   stdio/mingw_pformat.h    \
   stdio/scanf2-argcount-char.c stdio/scanf2-argcount-wchar.c \
@@ -566,7 +612,7 @@ src_libmingwex=\
   stdio/_Exit.c            stdio/_findfirst64i32.c   stdio/_findnext64i32.c   stdio/_fstat.c \
   stdio/_fstat64i32.c      stdio/_ftime.c       \
   stdio/_stat.c            stdio/_stat64i32.c        stdio/_wfindfirst64i32.c stdio/_wfindnext64i32.c \
-  stdio/_wstat.c           stdio/_wstat64i32.c       stdio/asprintf.c         stdio/atoll.c             stdio/fgetpos64.c       \
+  stdio/_wstat.c           stdio/_wstat64i32.c       stdio/asprintf.c         stdio/fgetpos64.c       \
   stdio/fopen64.c          stdio/fseeko32.c          stdio/fseeko64.c         stdio/fsetpos64.c         stdio/ftello.c          \
   stdio/ftello64.c         stdio/ftruncate64.c       stdio/lltoa.c            stdio/lltow.c             stdio/lseek64.c         \
   stdio/mingw_fprintf.c    stdio/mingw_fprintfw.c    stdio/mingw_fscanf.c     stdio/mingw_fwscanf.c     stdio/mingw_pformat.c   \
@@ -574,10 +620,16 @@ src_libmingwex=\
   stdio/mingw_snprintfw.c  stdio/mingw_sprintf.c     stdio/mingw_sprintfw.c   stdio/mingw_sscanf.c      stdio/mingw_swscanf.c   \
   stdio/mingw_vfprintf.c   stdio/mingw_vfprintfw.c   stdio/mingw_vfscanf.c    stdio/mingw_vprintf.c     stdio/mingw_vprintfw.c  \
   stdio/mingw_vsnprintf.c  stdio/mingw_vsnprintfw.c  stdio/mingw_vsprintf.c   stdio/mingw_vsprintfw.c   stdio/mingw_wscanf.c    \
-  stdio/mingw_wvfscanf.c   stdio/snprintf.c          stdio/snwprintf.c        stdio/strtof.c            stdio/truncate.c        \
+  stdio/mingw_wvfscanf.c   stdio/snprintf.c          stdio/snwprintf.c        stdio/truncate.c        \
   stdio/ulltoa.c           stdio/ulltow.c            stdio/vasprintf.c        stdio/vfscanf.c           stdio/vfwscanf.c        \
   stdio/vscanf.c           stdio/vsnprintf.c         stdio/vsnwprintf.c        stdio/vsscanf.c         \
   stdio/vswscanf.c         stdio/vwscanf.c           stdio/wtoll.c            stdio/mingw_asprintf.c    stdio/mingw_vasprintf.c
+
+# Include the default load config struct only for Control Flow Guard support.
+if CFGUARD
+src_libmingwex+=\
+  cfguard/mingw_cfguard_loadcfg.S
+endif
 
 # these go into both 32 and 64 bit x86 versions:
 src_libmingwex_x86=\
@@ -780,6 +832,14 @@ lib32_LIBRARIES += lib32/libdxerr9.a
 lib32_libdxerr9_a_SOURCES = $(src_libdxerr9)
 lib32_libdxerr9_a_CPPFLAGS=$(CPPFLAGS32) $(sysincludes)
 
+lib32_LIBRARIES += lib32/libmsxml2.a
+lib32_libmsxml2_a_SOURCES = $(src_libmsxml2)
+lib32_libmsxml2_a_CPPFLAGS = $(CPPFLAGS32) $(sysincludes)
+
+lib32_LIBRARIES += lib32/libmsxml6.a
+lib32_libmsxml6_a_SOURCES = $(src_libmsxml6)
+lib32_libmsxml6_a_CPPFLAGS = $(CPPFLAGS32) $(sysincludes)
+
 lib32_LIBRARIES += lib32/libmfuuid.a
 lib32_libmfuuid_a_SOURCES = $(src_libmfuuid)
 lib32_libmfuuid_a_CPPFLAGS = $(CPPFLAGS32) $(sysincludes)
@@ -870,6 +930,10 @@ lib32_LIBRARIES += lib32/libadsiid.a
 lib32_libadsiid_a_SOURCES = $(src_adsiid)
 lib32_libadsiid_a_CPPFLAGS=$(CPPFLAGS32) $(sysincludes)
 
+lib32_LIBRARIES += lib32/libdloadhelper.a
+lib32_libdloadhelper_a_SOURCES = $(src_libdloadhelper)
+lib32_libdloadhelper_a_CPPFLAGS=$(CPPFLAGS32) $(sysincludes)
+
 if !W32API
 lib32_LIBRARIES += lib32/libdelayimp.a
 lib32_libdelayimp_a_SOURCES =
@@ -905,7 +969,8 @@ lib32_LIBRARIES += lib32/libmingwthrd.a
 lib32_libmingwthrd_a_SOURCES = $(src_libmingwthrd)
 lib32_libmingwthrd_a_CPPFLAGS=$(CPPFLAGS32) $(sysincludes)
 
-processed_defs += lib32/msvcrt.def lib32/msvcr80.def lib32/msvcr90.def lib32/msvcr90d.def lib32/msvcr100.def lib32/msvcr110.def lib32/msvcr120.def lib32/msvcr120d.def \
+processed_defs += lib32/crtdll.def lib32/msvcrt10.def lib32/msvcrt20.def lib32/msvcrt40.def lib32/msvcrt.def lib32/msvcr70.def lib32/msvcr71.def \
+				  lib32/msvcr80.def lib32/msvcr90.def lib32/msvcr90d.def lib32/msvcr100.def lib32/msvcr110.def lib32/msvcr120.def lib32/msvcr120d.def \
 				  lib32/msvcr120_app.def lib32/msvcp120_app.def lib32/ucrtbase.def \
 				  lib32/api-ms-win-crt-math-l1-1-0.def lib32/api-ms-win-crt-private-l1-1-0.def lib32/api-ms-win-crt-runtime-l1-1-0.def \
 				  lib32/vcruntime140_app.def
@@ -922,35 +987,35 @@ lib32/libcrtdll.a: lib32/crtdll.mri lib32/libcrtdll_def.a lib32/libmsvcrt_common
 	cd $(dir $@) && $(AR) -M < $(abspath $<)
 
 lib32_DATA += lib32/libmsvcrt10.a
-lib32/libmsvcrt10.a: lib32/msvcrt10.mri lib32/libmsvcrt10_def.a lib32/libmsvcrt_common.a
+lib32/libmsvcrt10.a: lib32/msvcrt10.mri lib32/libmsvcrt10_def.a lib32/libmsvcrt_common.a lib32/libmsvcrt10_extra.a
 	cd $(dir $@) && $(AR) -M < $(abspath $<)
 
 lib32_DATA += lib32/libmsvcrt20.a
-lib32/libmsvcrt20.a: lib32/msvcrt20.mri lib32/libmsvcrt20_def.a lib32/libmsvcrt_common.a
+lib32/libmsvcrt20.a: lib32/msvcrt20.mri lib32/libmsvcrt20_def.a lib32/libmsvcrt_common.a lib32/libmsvcrt20_extra.a
 	cd $(dir $@) && $(AR) -M < $(abspath $<)
 
 lib32_DATA += lib32/libmsvcrt40.a
-lib32/libmsvcrt40.a: lib32/msvcrt40.mri lib32/libmsvcrt40_def.a lib32/libmsvcrt_common.a
+lib32/libmsvcrt40.a: lib32/msvcrt40.mri lib32/libmsvcrt40_def.a lib32/libmsvcrt_common.a lib32/libmsvcrt40_extra.a
 	cd $(dir $@) && $(AR) -M < $(abspath $<)
 
 lib32_DATA += lib32/libmsvcr70.a
-lib32/libmsvcr70.a: lib32/msvcr70.mri lib32/libmsvcr70_def.a lib32/libmsvcrt_common.a
+lib32/libmsvcr70.a: lib32/msvcr70.mri lib32/libmsvcr70_def.a lib32/libmsvcrt_common.a lib32/libmsvcr70_extra.a
 	cd $(dir $@) && $(AR) -M < $(abspath $<)
 
 lib32_DATA += lib32/libmsvcr71.a
-lib32/libmsvcr71.a: lib32/msvcr71.mri lib32/libmsvcr71_def.a lib32/libmsvcrt_common.a
+lib32/libmsvcr71.a: lib32/msvcr71.mri lib32/libmsvcr71_def.a lib32/libmsvcrt_common.a lib32/libmsvcr71_extra.a
 	cd $(dir $@) && $(AR) -M < $(abspath $<)
 
 lib32_DATA += lib32/libmsvcr80.a
-lib32/libmsvcr80.a: lib-common/msvcr80.mri lib32/libmsvcr80_def.a lib32/libmsvcrt_common.a
+lib32/libmsvcr80.a: lib-common/msvcr80.mri lib32/libmsvcr80_def.a lib32/libmsvcrt_common.a lib32/libmsvcr80_extra.a
 	cd $(dir $@) && $(AR) -M < $(abspath $<)
 
 lib32_DATA += lib32/libmsvcr90.a
-lib32/libmsvcr90.a: lib-common/msvcr90.mri lib32/libmsvcr90_def.a lib32/libmsvcrt_common.a
+lib32/libmsvcr90.a: lib-common/msvcr90.mri lib32/libmsvcr90_def.a lib32/libmsvcrt_common.a lib32/libmsvcr90_extra.a
 	cd $(dir $@) && $(AR) -M < $(abspath $<)
 
 lib32_DATA += lib32/libmsvcr90d.a
-lib32/libmsvcr90d.a: lib-common/msvcr90d.mri lib32/libmsvcr90d_def.a lib32/libmsvcrt_common.a
+lib32/libmsvcr90d.a: lib-common/msvcr90d.mri lib32/libmsvcr90d_def.a lib32/libmsvcrt_common.a lib32/libmsvcr90_extra.a
 	cd $(dir $@) && $(AR) -M < $(abspath $<)
 
 lib32_DATA += lib32/libmsvcr100.a
@@ -978,7 +1043,7 @@ lib32/libucrtbase.a: lib-common/ucrtbase.mri lib32/libucrtbase_def.a lib32/libuc
 	cd $(dir $@) && $(AR) -M < $(abspath $<)
 
 lib32_DATA += lib32/libucrt.a lib32/libucrtapp.a
-noinst_LIBRARIES += lib32/libcrtdll_extra.a lib32/libmsvcrt10_extra.a lib32/libmsvcrt20_extra.a lib32/libmsvcrt40_extra.a lib32/libmsvcrt_common.a lib32/libmsvcrt_extra.a lib32/libmsvcr70_extra.a lib32/libmsvcr71_extra.a lib32/libmsvcr120_app_extra.a lib32/libucrt_extra.a lib32/libucrtapp_extra.a
+noinst_LIBRARIES += lib32/libcrtdll_extra.a lib32/libmsvcrt10_extra.a lib32/libmsvcrt20_extra.a lib32/libmsvcrt40_extra.a lib32/libmsvcrt_common.a lib32/libmsvcrt_extra.a lib32/libmsvcr70_extra.a lib32/libmsvcr71_extra.a lib32/libmsvcr80_extra.a lib32/libmsvcr90_extra.a lib32/libmsvcr120_app_extra.a lib32/libucrt_extra.a lib32/libucrtapp_extra.a
 lib32_libcrtdll_extra_a_SOURCES = $(src_crtdll)
 lib32_libcrtdll_extra_a_CPPFLAGS = $(CPPFLAGS32) -D__LIBMSVCRT__ $(extra_include) $(sysincludes)
 lib32_libmsvcrt10_extra_a_SOURCES = $(src_msvcrt10)
@@ -995,6 +1060,10 @@ lib32_libmsvcr70_extra_a_SOURCES = $(src_msvcr70)
 lib32_libmsvcr70_extra_a_CPPFLAGS = $(CPPFLAGS32) -D__LIBMSVCRT__ $(extra_include) $(sysincludes)
 lib32_libmsvcr71_extra_a_SOURCES = $(src_msvcr71)
 lib32_libmsvcr71_extra_a_CPPFLAGS = $(CPPFLAGS32) -D__LIBMSVCRT__ $(extra_include) $(sysincludes)
+lib32_libmsvcr80_extra_a_SOURCES = $(src_msvcr80) $(src_msvcr80_32)
+lib32_libmsvcr80_extra_a_CPPFLAGS = $(CPPFLAGS32) -D__LIBMSVCRT__ $(extra_include) $(sysincludes)
+lib32_libmsvcr90_extra_a_SOURCES = $(src_msvcr90)
+lib32_libmsvcr90_extra_a_CPPFLAGS = $(CPPFLAGS32) -D__LIBMSVCRT__ $(extra_include) $(sysincludes)
 lib32_libmsvcr120_app_extra_a_SOURCES = $(src_msvcr120_app)
 lib32_libmsvcr120_app_extra_a_CPPFLAGS=$(CPPFLAGS32) -D__LIBMSVCRT__ $(extra_include) $(sysincludes)
 lib32_libucrt_extra_a_SOURCES = $(src_ucrtbase)
@@ -1141,6 +1210,14 @@ lib64_LIBRARIES += lib64/libdxerr9.a
 lib64_libdxerr9_a_SOURCES = $(src_libdxerr9)
 lib64_libdxerr9_a_CPPFLAGS=$(CPPFLAGS64) $(sysincludes)
 
+lib64_LIBRARIES += lib64/libmsxml2.a
+lib64_libmsxml2_a_SOURCES = $(src_libmsxml2)
+lib64_libmsxml2_a_CPPFLAGS = $(CPPFLAGS64) $(sysincludes)
+
+lib64_LIBRARIES += lib64/libmsxml6.a
+lib64_libmsxml6_a_SOURCES = $(src_libmsxml6)
+lib64_libmsxml6_a_CPPFLAGS = $(CPPFLAGS64) $(sysincludes)
+
 lib64_LIBRARIES += lib64/libmfuuid.a
 lib64_libmfuuid_a_SOURCES = $(src_libmfuuid)
 lib64_libmfuuid_a_CPPFLAGS = $(CPPFLAGS64) $(sysincludes)
@@ -1227,6 +1304,10 @@ lib64_LIBRARIES += lib64/libadsiid.a
 lib64_libadsiid_a_SOURCES = $(src_adsiid)
 lib64_libadsiid_a_CPPFLAGS=$(CPPFLAGS64) $(sysincludes)
 
+lib64_LIBRARIES += lib64/libdloadhelper.a
+lib64_libdloadhelper_a_SOURCES = $(src_libdloadhelper)
+lib64_libdloadhelper_a_CPPFLAGS=$(CPPFLAGS64) $(sysincludes)
+
 if !W32API
 lib64_LIBRARIES += lib64/libdelayimp.a
 lib64_libdelayimp_a_SOURCES =
@@ -1278,15 +1359,15 @@ if !W32API
 lib64_DATA += lib64/libmsvcp60.a lib64/libmsvcp120_app.a
 
 lib64_DATA += lib64/libmsvcr80.a
-lib64/libmsvcr80.a: lib-common/msvcr80_64.mri lib64/libmsvcr80_def.a lib64/libmsvcrt_common.a lib64/libmsvcr80_extra.a
+lib64/libmsvcr80.a: lib-common/msvcr80.mri lib64/libmsvcr80_def.a lib64/libmsvcrt_common.a lib64/libmsvcr80_extra.a
 	cd $(dir $@) && $(AR) -M < $(abspath $<)
 
 lib64_DATA += lib64/libmsvcr90.a
-lib64/libmsvcr90.a: lib-common/msvcr90.mri lib64/libmsvcr90_def.a lib64/libmsvcrt_common.a
+lib64/libmsvcr90.a: lib-common/msvcr90.mri lib64/libmsvcr90_def.a lib64/libmsvcrt_common.a lib64/libmsvcr90_extra.a
 	cd $(dir $@) && $(AR) -M < $(abspath $<)
 
 lib64_DATA += lib64/libmsvcr90d.a
-lib64/libmsvcr90d.a: lib-common/msvcr90d.mri lib64/libmsvcr90d_def.a lib64/libmsvcrt_common.a
+lib64/libmsvcr90d.a: lib-common/msvcr90d.mri lib64/libmsvcr90d_def.a lib64/libmsvcrt_common.a lib64/libmsvcr90_extra.a
 	cd $(dir $@) && $(AR) -M < $(abspath $<)
 
 lib64_DATA += lib64/libmsvcr100.a
@@ -1314,13 +1395,15 @@ lib64/libucrtbase.a: lib-common/ucrtbase.mri lib64/libucrtbase_def.a lib64/libuc
 	cd $(dir $@) && $(AR) -M < $(abspath $<)
 
 lib64_DATA += lib64/libucrt.a lib64/libucrtapp.a
-noinst_LIBRARIES += lib64/libmsvcrt_common.a lib64/libmsvcrt_extra.a lib64/libmsvcr80_extra.a lib64/libmsvcr120_app_extra.a lib64/libucrt_extra.a lib64/libucrtapp_extra.a
+noinst_LIBRARIES += lib64/libmsvcrt_common.a lib64/libmsvcrt_extra.a lib64/libmsvcr80_extra.a lib64/libmsvcr90_extra.a lib64/libmsvcr120_app_extra.a lib64/libucrt_extra.a lib64/libucrtapp_extra.a
 lib64_libmsvcrt_common_a_SOURCES = $(src_msvcrt_common)
 lib64_libmsvcrt_common_a_CPPFLAGS=$(CPPFLAGS64) -D__LIBMSVCRT__ $(extra_include) $(sysincludes)
 lib64_libmsvcrt_extra_a_SOURCES = $(src_msvcrt64)
 lib64_libmsvcrt_extra_a_CPPFLAGS=$(CPPFLAGS64) -D__LIBMSVCRT__ -D__LIBMSVCRT_OS__ $(extra_include) $(sysincludes)
-lib64_libmsvcr80_extra_a_SOURCES = $(src_msvcr80_64)
+lib64_libmsvcr80_extra_a_SOURCES = $(src_msvcr80) $(src_msvcr80_64)
 lib64_libmsvcr80_extra_a_CPPFLAGS=$(CPPFLAGS64) -D__LIBMSVCRT__ $(extra_include) $(sysincludes)
+lib64_libmsvcr90_extra_a_SOURCES = $(src_msvcr90)
+lib64_libmsvcr90_extra_a_CPPFLAGS=$(CPPFLAGS64) -D__LIBMSVCRT__ $(extra_include) $(sysincludes)
 lib64_libmsvcr120_app_extra_a_SOURCES = $(src_msvcr120_app)
 lib64_libmsvcr120_app_extra_a_CPPFLAGS=$(CPPFLAGS64) -D__LIBMSVCRT__ $(extra_include) $(sysincludes)
 lib64_libucrt_extra_a_SOURCES = $(src_ucrtbase)
@@ -1475,6 +1558,14 @@ libarm32_LIBRARIES += libarm32/libdxerr9.a
 libarm32_libdxerr9_a_SOURCES = $(src_libdxerr9)
 libarm32_libdxerr9_a_CPPFLAGS=$(CPPFLAGSARM32) $(sysincludes)
 
+libarm32_LIBRARIES += libarm32/libmsxml2.a
+libarm32_libmsxml2_a_SOURCES = $(src_libmsxml2)
+libarm32_libmsxml2_a_CPPFLAGS = $(CPPFLAGSARM32) $(sysincludes)
+
+libarm32_LIBRARIES += libarm32/libmsxml6.a
+libarm32_libmsxml6_a_SOURCES = $(src_libmsxml6)
+libarm32_libmsxml6_a_CPPFLAGS = $(CPPFLAGSARM32) $(sysincludes)
+
 libarm32_LIBRARIES += libarm32/libmfuuid.a
 libarm32_libmfuuid_a_SOURCES = $(src_libmfuuid)
 libarm32_libmfuuid_a_CPPFLAGS = $(CPPFLAGSARM32) $(sysincludes)
@@ -1556,6 +1647,10 @@ EXTRA_libarm32_libws2_32_a_DEPENDENCIES=libarm32/ws2_32.def
 libarm32_LIBRARIES += libarm32/libadsiid.a
 libarm32_libadsiid_a_SOURCES = $(src_adsiid)
 libarm32_libadsiid_a_CPPFLAGS=$(CPPFLAGSARM32) $(sysincludes)
+
+libarm32_LIBRARIES += libarm32/libdloadhelper.a
+libarm32_libdloadhelper_a_SOURCES = $(src_libdloadhelper)
+libarm32_libdloadhelper_a_CPPFLAGS=$(CPPFLAGSARM32) $(sysincludes)
 
 if !W32API
 libarm32_LIBRARIES += libarm32/libdelayimp.a
@@ -1757,6 +1852,14 @@ libarm64_LIBRARIES += libarm64/libdxerr9.a
 libarm64_libdxerr9_a_SOURCES = $(src_libdxerr9)
 libarm64_libdxerr9_a_CPPFLAGS=$(CPPFLAGSARM64) $(sysincludes)
 
+libarm64_LIBRARIES += libarm64/libmsxml2.a
+libarm64_libmsxml2_a_SOURCES = $(src_libmsxml2)
+libarm64_libmsxml2_a_CPPFLAGS = $(CPPFLAGSARM64) $(sysincludes)
+
+libarm64_LIBRARIES += libarm64/libmsxml6.a
+libarm64_libmsxml6_a_SOURCES = $(src_libmsxml6)
+libarm64_libmsxml6_a_CPPFLAGS = $(CPPFLAGSARM64) $(sysincludes)
+
 libarm64_LIBRARIES += libarm64/libmfuuid.a
 libarm64_libmfuuid_a_SOURCES = $(src_libmfuuid)
 libarm64_libmfuuid_a_CPPFLAGS = $(CPPFLAGSARM64) $(sysincludes)
@@ -1838,6 +1941,10 @@ EXTRA_libarm64_libws2_32_a_DEPENDENCIES=libarm64/ws2_32.def
 libarm64_LIBRARIES += libarm64/libadsiid.a
 libarm64_libadsiid_a_SOURCES = $(src_adsiid)
 libarm64_libadsiid_a_CPPFLAGS=$(CPPFLAGSARM64) $(sysincludes)
+
+libarm64_LIBRARIES += libarm64/libdloadhelper.a
+libarm64_libdloadhelper_a_SOURCES = $(src_libdloadhelper)
+libarm64_libdloadhelper_a_CPPFLAGS=$(CPPFLAGSARM64) $(sysincludes)
 
 if !W32API
 libarm64_LIBRARIES += libarm64/libdelayimp.a
@@ -2033,6 +2140,7 @@ endif
 		%/libbcrypt.a \
 		%/libcabinet.a \
 		%/libcrypt32.a \
+		%/libcryptbase.a \
 		%/libcryptnet.a \
 		%/libdnsapi.a \
 		%/libiphlpapi.a \
@@ -2225,6 +2333,7 @@ endif
 		%/libapi-ms-win-security-provider-l1-1-0.a \
 		%/libapi-ms-win-security-sddl-ansi-l1-1-0.a \
 		%/libapi-ms-win-security-sddl-l1-1-0.a \
+		%/libapi-ms-win-security-systemfunctions-l1-1-0.a \
 		%/libapi-ms-win-shcore-obsolete-l1-1-0.a
 	rm -f $@
 	cd $(dir $@) && $(AR) -M < $(abspath $<)
