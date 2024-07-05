@@ -2905,10 +2905,6 @@ WRLWRAPPERSHEAD_LIST=$srcdir/include/wrl/wrappers/*.h
 GLHEAD_LIST=$srcdir/include/GL/*.h
 KHRHEAD_LIST=$srcdir/include/KHR/*.h
 MINGWHELPERHEAD_LIST=$srcdir/include/psdk_inc/*.h
-PYTHONHEAD_LIST=$srcdir/include/python3.10/*.h
-PYTHONINTERNALHEAD_LIST=$srcdir/include/python3.10/internal/*.h
-PYTHONCPYTHONHEAD_LIST=$srcdir/include/python3.10/cpython/*.h
-
 
 
 
