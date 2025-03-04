@@ -101,12 +101,12 @@ Note:If the text contains special characters, please escape them according to th
                 <filteritem type="filepath" name="mingw-w64-crt/profile/.*" desc="包含Cygwin license协议，其中包含red hat exception以免除使用被GPL协议影响。使用符合该exception"/>
                 <filteritem type="filepath" name="mingw-w64-headers/include/ChangeLog.2011" desc="ChangeLog文件，无License"/>
                 <filteritem type="filepath" name="mingw-w64-libraries/pseh/INSTALL" desc="doc文件，无License"/>
-                <filteritem type="filepath" name="mingw-w64-libraries/pseh/src/i386/.*" desc="包含License不对使用及分发作任何限制"/>
+
                 <filteritem type="filepath" name="mingw-w64-headers/include/GL/.*" desc="包含License不对使用及分发作任何限制"/>
                 <filteritem type="filepath" name="mingw-w64-headers/include/KHR/khrplatform.h" desc="包含License不对使用及分发作任何限制"/>
                 <filteritem type="filepath" name="mingw-w64-headers/include/msdrm.h" desc="public domain"/>
                 <filteritem type="filepath" name="mingw-w64-headers/include/slpublic.h" desc="public domain"/>
-                <filteritem type="filepath" name="mingw-w64-crt/libsrc/.*" desc="包含License不对使用及分发作任何限制"/>
+
                 <filteritem type="filepath" name="mingw-w64-crt/misc/.*" desc="包含License不对使用及分发作任何限制"/>
                 <filteritem type="filepath" name="mingw-w64-crt/gdtoa/.*" desc="包含License不对使用及分发作任何限制"/>
                 <filteritem type="filepath" name="mingw-w64-headers/ddk/.*" desc="包含License不对使用及分发作任何限制或public domain"/>
@@ -181,6 +181,9 @@ Note:If the text contains special characters, please escape them according to th
                 <filteritem type="filepath" name="mingw-w64-crt/stdio/mingw_sprintf.c" desc="包含License不对使用及分发作任何限制"/>
                 <filteritem type="filepath" name="mingw-w64-crt/stdio/mingw_printf.c" desc="包含License不对使用及分发作任何限制"/>
                 <filteritem type="filepath" name="mingw-w64-crt/stdio/mingw_pformat.c" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-headers/tlb/oleacc.dll.tlb" desc="包含License不对使用及分发作任何限制"/>
+                <filteritem type="filepath" name="mingw-w64-headers/tlb/oleacc.dll.idl" desc="包含License不对使用及分发作任何限制/>
+                <filteritem type="filepath" name="mingw-w64-crt/lib64/libpython3.10.dll.a" desc="python 3.10动态链接库的导入库文件，无License/>
 			</filefilter>
             <filefilter name="binaryFileTypePolicyFilter" desc="Filters for binary header policies" >
                 <filteritem type="filepath" name="mingw-w64-libraries/libmangle/html/doxygen.png" desc="三方图片二进制不涉及License"/>
